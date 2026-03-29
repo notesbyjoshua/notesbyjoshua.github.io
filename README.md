@@ -1,2 +1,2 @@
-# JBNotes
-Study website for JBNotes
+# notesbyjoshua
+Study website created by me!

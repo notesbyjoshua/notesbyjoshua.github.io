@@ -3,6 +3,19 @@ layout: home
 title: Home
 ---
 
-# Welcome
+# Joshua Bie
 
-This is my notes website.
+Welcome to my digital notebook.
+
+I use this site to document:
+- 📚 Physics and math notes
+- 🧠 Problem-solving strategies
+- ✍️ Thoughts and essays
+
+---
+
+## Featured
+
+- [Physics Notes](/notes/physics)
+- [Math Notes](/notes/math)
+- [Blog](/blog)

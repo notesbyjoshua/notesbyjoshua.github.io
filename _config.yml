@@ -1,2 +1,19 @@
-theme: just-the-docs
 title: Notes by Joshua
+description: Math, Physics, and Thoughts
+theme: just-the-docs
+
+url: "https://notesbyjoshua.github.io"
+
+aux_links:
+  "GitHub":
+    - "https://github.com/notesbyjoshua"
+
+nav:
+  - title: Home
+    url: /
+  - title: Notes
+    url: /notes/
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about/

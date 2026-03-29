@@ -1,6 +1,9 @@
 title: Notes by Joshua
 description: Math, Physics, and Thoughts
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
 
 url: "https://notesbyjoshua.github.io"
 

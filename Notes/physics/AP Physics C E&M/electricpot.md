@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Electrostatics
+title: Electric Potential
 parent: Physics
-permalink: /notes/physics/electrostatics/
+permalink: /notes/physics/electropot/
 ---
 
 # Electric Forces and Fields

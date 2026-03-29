@@ -15,15 +15,15 @@ Broader physics notes (including mechanics and E&M topics) live on the [Physics 
 
 ## AP Chemistry
 
-- Atomic Structure and Properties
-- Compound Structure and Properties
-- Substances and Mixtures
-- Chemical Reactions
-- Kinetics
-- Thermochemistry
-- Equilibrium
-- Acid-Base Equilibrium
-- Thermodynamics and Electrochemistry
+- [Atomic Structure and Properties]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})
+- [Compound Structure and Properties]({{ '/notes/ap/chem/compounds/' | relative_url }})
+- [Substances and Mixtures]({{ '/notes/ap/chem/submix/' | relative_url }})
+- [Chemical Reactions]({{ '/notes/ap/chem/chemrxns/' | relative_url }})
+- [Kinetics]({{ '/notes/ap/chem/kinetics/' | relative_url }})
+- [Thermochemistry]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})
+- [Equilibrium]({{ '/notes/ap/chem/equilibrium/' | relative_url }})
+- [Acid-Base Equilibrium]({{ '/notes/ap/chem/acidbase/' | relative_url }})
+- [Thermodynamics and Electrochemistry]({{ '/notes/ap/chem/thermoelectro/' | relative_url }})
 
 ## AP Statistics
 

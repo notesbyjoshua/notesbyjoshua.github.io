@@ -242,5 +242,3 @@ Works best for **high symmetry**:
 - Infinite planes  
 
 👉 Trick: choose Gaussian surface so $E$ is constant
-
----

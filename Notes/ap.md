@@ -27,6 +27,6 @@ Broader physics notes (including mechanics and E&M topics) live on the [Physics 
 
 ## AP Statistics
 
-##AP Calculus BC
+## AP Calculus BC
 
 AP Calculus BC preparation. If you are looking for AB preparation, just use all the files in BC except the ones labeled "BC-only"

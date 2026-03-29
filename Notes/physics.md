@@ -2,6 +2,7 @@
 layout: default
 title: Physics
 parent: Notes
+permalink: /notes/physics/
 ---
 
 # Physics Notes

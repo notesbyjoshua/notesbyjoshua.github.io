@@ -2,6 +2,7 @@
 layout: default
 title: Math
 parent: Notes
+permalink: /notes/math/
 ---
 
 # Math Notes

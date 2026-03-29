@@ -2,6 +2,7 @@
 layout: default
 title: Electrostatics
 parent: Physics
+permalink: /notes/physics/electrostatics/
 ---
 
 # Electrostatics

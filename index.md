@@ -5,17 +5,16 @@ title: Home
 
 # Joshua Bie
 
-Welcome to my digital notebook.
+Welcome to my digital notebook. Currently it is in alpha-1 phase.
 
 I use this site to document:
 - 📚 Physics and math notes
 - 🧠 Problem-solving strategies
-- ✍️ Thoughts and essays
-
+- AP Help as well!
 ---
 
 ## Featured
 
-- [Physics Notes](/notes/physics)
-- [Math Notes](/notes/math)
-- [Blog](/blog)
+- [Physics Notes]({{ '/notes/physics' | relative_url }})
+- [Math Notes]({{ '/notes/math' | relative_url }})
+- [Blog]({{ '/blog' | relative_url }})

@@ -15,6 +15,7 @@ I use this site to document:
 
 ## Featured
 
-- [Physics Notes]({{ '/notes/physics' | relative_url }})
-- [Math Notes]({{ '/notes/math' | relative_url }})
-- [Blog]({{ '/blog' | relative_url }})
+- [Physics Notes]({{ '/notes/physics/' | relative_url }})
+- [Math Notes]({{ '/notes/math/' | relative_url }})
+- [AP Notes]({{ '/notes/ap/' | relative_url }})
+- [Blog]({{ '/blog/' | relative_url }})

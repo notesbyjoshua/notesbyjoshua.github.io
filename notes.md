@@ -12,3 +12,4 @@ Here are my notes! Feel free to look through them to find what you like 😁!
 
 - [Physics Notes]({{ '/notes/physics/' | relative_url }})
 - [Math Notes]({{ '/notes/math/' | relative_url }})
+- [AP Notes]({{ '/notes/ap/' | relative_url }})

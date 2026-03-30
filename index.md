@@ -20,6 +20,6 @@ I use this site to document:
 - [AP Notes]({{ '/notes/ap/' | relative_url }})
 - [Blog]({{ '/blog/' | relative_url }})
 
-##Contact
+## Contact
 
 If you have any inquiries, questions, or suggestions, please reach out to me at joshuabie2010@gmail.com!

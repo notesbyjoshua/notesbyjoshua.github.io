@@ -21,11 +21,11 @@ Here you will find notes for AP Calculus BC and Competition Math. Note that comp
 
 ## Geometry
 
-###Olympiad Geo
+### Olympiad Geo
 - Circles
 - Inversion
 - Homothety
 
-##Number Theory
+## Number Theory
 - Fermat's Little Theorem
 - Lifting the Exponent (LTE) Lemma

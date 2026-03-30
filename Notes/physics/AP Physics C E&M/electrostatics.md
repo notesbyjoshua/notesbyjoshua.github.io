@@ -103,7 +103,9 @@ Force between two point charges is given by:
 
 $$
 \vec{F} = k \frac{q_1 q_2}{r^2} \hat{r}
-$$, where $$k = 8.99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2$$
+$$, 
+
+where $$k = 8.99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2$$
 
 A positive force (like charges) indicates repulsion, while a negative force (opposite charges) indicates attraction. The Coulombic force follow very similarly like the Law of Universal Gravitation, and follows the inverse-square law.
 
@@ -134,8 +136,8 @@ Strategy:
 Electric field describes how a charge affects space around it.
 
 $$
-\vec{E} = \frac{\vec{F}}{q} (Units: N/C)
-$$
+\vec{E} = \frac{\vec{F}}{q}
+$$ (Units: N/C)
 
 For a point charge:
 

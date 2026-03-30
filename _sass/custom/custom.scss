@@ -6,9 +6,14 @@ $custom-body-font: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "S
 // --- Text color ---
 $custom-body-color: #000;
 
+// Global type scale (~15% larger than default 16px root): body, headings, nav, etc. use rem.
+html {
+  font-size: 115%;
+}
+
 body {
   font-family: $custom-body-font;
-  font-size: 16px;
+  font-size: 1rem;
   color: $custom-body-color;
 }
 
@@ -26,18 +31,18 @@ a {
   text-decoration: none;
 }
 
-// Sidebar: theme uses smaller type on md+; bump nav labels for readability
+// Sidebar: slightly larger than theme defaults (still rem-based)
 .nav-list .nav-list-item {
-  font-size: 0.9375rem;
+  font-size: 1rem;
 
   @include mq(md) {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
 }
 
 .nav-category {
   @include mq(md) {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 }
 

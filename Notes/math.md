@@ -16,7 +16,7 @@ Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Mat
 
 **NOTE**: Since AP Precalculus is pretty bare, this section will also encompass extra material, most of which is derived from my notes in taking Honor Precalculus at school.
 
--IDK something about honors precalc ig?
+- IDK something about honors precalc ig?
 
 ---
 
@@ -37,7 +37,7 @@ Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Mat
 
 ---
 
-##Competition Math
+## Competition Math
 
 Through my years of preparing for AMC 10/12, AIME, and USAJMO, here are some important concepts for competition math, list in order of increasing difficulty. On each topic, I will write the difficulty of the topic inside of the notes.
 

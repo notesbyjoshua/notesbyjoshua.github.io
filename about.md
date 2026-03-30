@@ -6,11 +6,12 @@ nav_order: 4
 
 # About Me
 
-Hi, I'm Joshua.
+Hi, I'm Joshua. This site is where I document what I learn.
 
-I'm interested in:
-- Physics (USAPhO)
-- Mathematics
-- Problem solving
+## My Mission
 
-This site is where I document what I learn.
+To spread knowledge throughout the community and help the people who need it.
+
+## Peer Tutoring
+
+Please sign up for peer tutoring no one signs up and I am sad.

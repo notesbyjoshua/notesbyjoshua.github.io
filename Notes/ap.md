@@ -9,9 +9,11 @@ permalink: /notes/ap/
 
 These notes will roughly follow a AP curriculum but might have some extra stuff on it. Note that I will not take every single AP so if something isn't on here please feel free to contribute by contacting me.
 
-## AP Physics C Mech/E&M
+## AP Biology
 
-If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
+## AP Calculus AB/BC
+
+If you are looking for AP Calculus AB/BC notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.
 
 ## AP Chemistry
 
@@ -27,8 +29,12 @@ If you are looking for AP Physics C mechanics and E&M topics, please look on the
 - [Unit 8: Acid-Base Equilibrium]({{ '/notes/ap/chem/acidbase/' | relative_url }})
 - [Unit 9: Thermodynamics and Electrochemistry]({{ '/notes/ap/chem/thermoelectro/' | relative_url }})
 
+## AP Physics C Mech/E&M
+
+If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
+
+## AP Precalculus
+
+If you are looking for AP Precalculus notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.
+
 ## AP Statistics
-
-## AP Calculus AB/BC
-
-If you are looking for AP Calculus AB/BC notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.

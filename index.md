@@ -14,13 +14,13 @@ I use this site to document:
 
 ---
 
-## Featured
+## Quick Shortcuts
 
-- [Physics Notes]({{ '/notes/physics/' | relative_url }})
-- [Math Notes]({{ '/notes/math/' | relative_url }})
 - [AP Notes]({{ '/notes/ap/' | relative_url }})
+- [Math Notes]({{ '/notes/math/' | relative_url }})
+- [Physics Notes]({{ '/notes/physics/' | relative_url }})
+- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }})
 - [Blog]({{ '/blog/' | relative_url }})
-- Practice Problems({{ '/practiceproblems/practice/' | relative_url }})
 
 ---
 

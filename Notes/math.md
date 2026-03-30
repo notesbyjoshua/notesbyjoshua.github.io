@@ -21,7 +21,7 @@ Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Mat
 
 **Note**: If you are only looking for AP Calculus AB prep, do NOT look at the files/sections labeled "BC-only".
 
-- Bum bum bum sahur imagine needing help with calc lol
+- Bum bum bum sahur
 - L^Hospital rule lmao
 
 ---

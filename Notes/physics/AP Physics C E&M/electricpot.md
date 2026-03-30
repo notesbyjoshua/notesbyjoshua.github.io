@@ -45,12 +45,14 @@ $$
 W = Vq
 $$
 
+Note that this work is defined differently based on perspective. ADD MORE TO TS
+
 ---
 
 ### Relationship with Electric Field
 
 $$
-V = -\int \vec{E} \cdot d\vec{r}
+V = -\int \vec{E} \cdot d\vec{r} = -Ed (for a constant E)
 $$
 
 Note that electric field lines will always point towards a lower potential, since objects tend to go from higher to lower voltage to be more stable (think of it like a ball always wanting to drop to minimize gravitational potential energy)
@@ -67,8 +69,10 @@ Equipotential lines are lines in an electric field that have the same voltage, a
 
 A unit of energy:
 
+One electron volt (eV) is the energy gained by an electron moving through a potential of 1 V. It is equal to:
+
 $$
 1 \, \text{eV} = 1.6 \times 10^{-19} \, \text{J}
 $$
 
-👉 Energy gained by an electron moving through 1 V. Note that 1 eV is a very very small voltage, so it is usually seen in the form of MeV (Mega electron volts) where $$1 MeV = 1 \times 10^{6} eV$$.
+ Note that 1 eV is a very very small voltage, so it is usually seen in the form of MeV (Mega electron volts) where $$1 MeV = 1 \times 10^{6} eV$$.

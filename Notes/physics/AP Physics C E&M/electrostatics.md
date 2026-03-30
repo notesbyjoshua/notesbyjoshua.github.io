@@ -163,9 +163,12 @@ $$
 
 A more useful rewrite of this is:
 
-$$dE = \frac{k dq}{r^2}$$,
+$$
+dE = \frac{k dq}{r^2}
+$$,
 
 where you take a small $$dr$$ on your object and calculate $$dE$$ based on how much charge is in that $$dr$$ (Usually it will be in the form of $$\lambda dr$$, $$\sigma dA$$, etc.)
+
 ---
 
 ## Electric Field Lines

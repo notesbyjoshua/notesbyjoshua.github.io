@@ -1,5 +1,7 @@
 // --- Font family ---
-$custom-body-font: Georgia, "Times New Roman", Times, serif;
+// Inter + system UI sans (Notion-style); requires Inter link in head_custom.html
+$custom-body-font: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // --- Text color ---
 $custom-body-color: #000;

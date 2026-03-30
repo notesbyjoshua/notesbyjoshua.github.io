@@ -2,6 +2,7 @@
 layout: default
 title: Math
 parent: Notes
+nav_order: 2
 permalink: /notes/math/
 ---
 

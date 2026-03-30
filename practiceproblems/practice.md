@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Practice Problems
-parent: practiceproblems
+nav_order: 3
 permalink: /practiceproblems/practice/
 ---
 
@@ -14,6 +14,7 @@ Find practice problem based on subject! The solutions can be found on each subje
 - AP Biology
 - AP Calculus AB/BC
 - AP Chemistry
+- AP Computer Science A
 - AP Physics C Mechanics
 - AP Physics C E&M
 - AP Precalculus

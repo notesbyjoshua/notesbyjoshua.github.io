@@ -15,7 +15,9 @@ nav:
   - title: Home
     url: /
   - title: Notes
-    url: /notes/
+    url: /Notes/notes/
+  - title: Practice Problems
+    url: /practiceproblems/practice/
   - title: Blog
     url: /blog/
   - title: About

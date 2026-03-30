@@ -2,6 +2,7 @@
 layout: default
 title: Physics
 parent: Notes
+nav_order: 3
 permalink: /notes/physics/
 ---
 # Overview

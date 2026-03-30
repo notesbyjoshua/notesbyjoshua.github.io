@@ -25,3 +25,18 @@ h3 {
 a {
   text-decoration: none;
 }
+
+// Sidebar: theme uses smaller type on md+; bump nav labels for readability
+.nav-list .nav-list-item {
+  font-size: 0.9375rem;
+
+  @include mq(md) {
+    font-size: 1rem;
+  }
+}
+
+.nav-category {
+  @include mq(md) {
+    font-size: 0.8125rem;
+  }
+}

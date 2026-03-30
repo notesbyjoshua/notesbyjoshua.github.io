@@ -1,0 +1,6 @@
+---
+layout: default
+title: Problem Solving Techniques
+parent: Physics
+permalink: /notes/physics/techniques/
+---

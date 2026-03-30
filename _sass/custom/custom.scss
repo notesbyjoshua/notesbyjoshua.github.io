@@ -6,14 +6,8 @@ $custom-body-font: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "S
 // --- Text color ---
 $custom-body-color: #000;
 
-// Global type scale (~15% larger than default 16px root): body, headings, nav, etc. use rem.
-html {
-  font-size: 115%;
-}
-
 body {
   font-family: $custom-body-font;
-  font-size: 1rem;
   color: $custom-body-color;
 }
 

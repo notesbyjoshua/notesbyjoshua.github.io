@@ -17,7 +17,7 @@ I use this site to document:
 
 ## News
 
-**3/29**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted
+**3/29**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted. Keep tuned for more information!
 
 ---
 
@@ -39,6 +39,6 @@ I use this site to document:
 
 ---
 
-## Contact
+## Feedback and Requests
 
-If you have any inquiries, questions, or suggestions, please reach out to me at joshuabie2010@gmail.com!
+If you have any inquiries, questions, or suggestions, please submit a request [here]({{ '/feedback/' | relative_url }}).

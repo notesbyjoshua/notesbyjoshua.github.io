@@ -208,15 +208,19 @@ where $$h$$ is Planck’s constant, approximately $$6.626 \times 10^{-34} \text{
 
 Normally, when solving problems regarding quantum energy, you always take the difference between two energy levels. As a consequence, sometimes when heated, elements will burn a certain color which can be helpful in their determination (see flame test for more details).
 
-**Photoelectric effect**: The photoelectric effect occurs when electrons are emitted from a surface (usually metal) when light is shone on it, increasing with the frequency of the wave. (IDK I need more on ts)
-
 **de Broglie wavelength**: In 1924, de Broglie formulated that all matter can take the form of waves. The de Broglie wavelength models the wavelength of any particle, and is given by
 
 $$
 \lambda = \frac{h}{mv}.
 $$
 
-Photoelectron spectroscopy: A tool to show the energy held by each electron and the number of electrons with a certain binding energy.
+---
+
+## The Photoelectric effect and Photoelectron spectroscopy
+
+**Photoelectric effect**: The photoelectric effect occurs when electrons are emitted from a surface (usually metal) when light is shone on it, increasing with the frequency of the wave. (IDK I need more on ts)
+
+**Photoelectron spectroscopy**: A tool to show the energy held by each electron and the number of electrons with a certain binding energy.
 
 ---
 

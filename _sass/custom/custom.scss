@@ -25,8 +25,59 @@ a {
   text-decoration: none;
 }
 
+// Site title link: theme uses fs-6 (!important) inside a fixed-height .site-header on md+.
+// Global $font-size scaling made the title overflow; allow wrapping and restore pre-scale sizes.
+.site-header {
+  @include mq(md) {
+    height: auto;
+    min-height: $header-height;
+    max-height: none;
+  }
+}
+
+.site-title {
+  min-width: 0;
+  flex-shrink: 1;
+  overflow-wrap: break-word;
+  font-size: 1.125rem !important;
+  line-height: 1.25 !important;
+
+  @include mq(sm) {
+    font-size: 1.5rem !important;
+  }
+}
+
+// Sidebar nav: custom link colors (scoped to .side-bar so aux nav / breadcrumbs unchanged).
+// !important beats theme .nav-category-list and shared :hover/.active rules.
+.side-bar {
+  .nav-list-link {
+    color: #374151 !important;
+
+    &.active {
+      color: #2563eb !important;
+      font-weight: 600 !important;
+    }
+
+    &:hover:not(.active) {
+      color: #111827 !important;
+    }
+
+    &.active:hover {
+      color: #2563eb !important;
+    }
+  }
+
+  .nav-list-expander {
+    color: #374151;
+
+    &:hover {
+      color: #111827;
+    }
+  }
+}
+
 // Sidebar: slightly larger than theme defaults (still rem-based)
-.nav-list .nav-list-item {
+.side-bar .nav-list .nav-list-item {
   font-size: 1rem;
 
   @include mq(md) {

@@ -1,0 +1,45 @@
+<style id="jtd-site-sidebar-overrides">
+  /*
+    Inlined so nested URLs (/notes/..., /notes/ap/...) never miss this sheet.
+    Theme nests .nav-list-link rules with higher specificity than a flat header…nav a:link selector.
+    #site-nav + :not(.active) covers all depths (Notes → Math → AP, etc.).
+  */
+  .side-bar #site-nav a.nav-list-link:not(.active) {
+    color: #374151 !important;
+  }
+
+  .side-bar #site-nav a.nav-list-link.active {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+  }
+
+  .side-bar #site-nav a.nav-list-link:hover:not(.active) {
+    color: #111827 !important;
+  }
+
+  .side-bar #site-nav a.nav-list-link.active:hover {
+    color: #2563eb !important;
+  }
+
+  .side-bar #site-nav button.nav-list-expander {
+    color: #374151 !important;
+  }
+
+  .side-bar #site-nav button.nav-list-expander:hover {
+    color: #111827 !important;
+  }
+
+  .side-bar #site-nav .nav-list .nav-list-item {
+    font-size: 0.8125rem !important;
+  }
+
+  @media (min-width: 62rem) {
+    .side-bar #site-nav .nav-list .nav-list-item {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  .side-bar .nav-category {
+    font-size: 0.6875rem !important;
+  }
+</style>

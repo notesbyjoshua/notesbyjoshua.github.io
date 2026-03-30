@@ -47,49 +47,7 @@ a {
   }
 }
 
-// Sidebar nav: custom link colors (scoped to .side-bar so aux nav / breadcrumbs unchanged).
-// !important beats theme .nav-category-list and shared :hover/.active rules.
-.side-bar {
-  .nav-list-link {
-    color: #374151 !important;
-
-    &.active {
-      color: #2563eb !important;
-      font-weight: 600 !important;
-    }
-
-    &:hover:not(.active) {
-      color: #111827 !important;
-    }
-
-    &.active:hover {
-      color: #2563eb !important;
-    }
-  }
-
-  .nav-list-expander {
-    color: #374151;
-
-    &:hover {
-      color: #111827;
-    }
-  }
-}
-
-// Sidebar: slightly larger than theme defaults (still rem-based)
-.side-bar .nav-list .nav-list-item {
-  font-size: 1rem;
-
-  @include mq(md) {
-    font-size: 1.0625rem;
-  }
-}
-
-.nav-category {
-  @include mq(md) {
-    font-size: 0.875rem;
-  }
-}
+// Sidebar nav colors + type size: see assets/css/sidebar-overrides.css (loaded last in head).
 
 // Embedded Google Form on /feedback/
 .feedback-form-embed {

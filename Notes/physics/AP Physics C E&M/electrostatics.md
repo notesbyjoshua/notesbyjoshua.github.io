@@ -48,7 +48,7 @@ Total charge in an isolated system is constant:
 - Charge cannot be created or destroyed  
 - Only transferred between objects  
 
-This is one of the most important conservation laws in physics, and can be used to derive many of the formulas that come up later.
+This is one of the most important conservation laws in physics, and can be used to derive many of the formulas that come up
 
 ---
 

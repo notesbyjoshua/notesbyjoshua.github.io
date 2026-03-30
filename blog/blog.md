@@ -8,3 +8,5 @@ permalink: /blog/
 # Blog
 
 - Coming soon...
+
+---

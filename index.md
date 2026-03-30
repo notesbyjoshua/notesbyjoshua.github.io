@@ -11,6 +11,7 @@ I use this site to document:
 - 📚 Physics and math notes
 - 🧠 Problem-solving strategies
 - AP Help as well!
+
 ---
 
 ## Featured
@@ -19,6 +20,9 @@ I use this site to document:
 - [Math Notes]({{ '/notes/math/' | relative_url }})
 - [AP Notes]({{ '/notes/ap/' | relative_url }})
 - [Blog]({{ '/blog/' | relative_url }})
+- Practice Problems({{ '/practiceproblems/practice/' | relative_url }})
+
+---
 
 ## Contact
 

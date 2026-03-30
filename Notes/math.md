@@ -7,25 +7,55 @@ permalink: /notes/math/
 
 # Math Notes (Work in progress)
 
-Here you will find notes for AP Calculus BC and Competition Math. Note that competition math will not include calculus, but is still good to know calculus to excel at competition math.
+Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Math. Note that competition math will not include calculus, but is still good to know calculus to excel at competition math.
 
-##AP Calculus AB/BC
+---
+
+## AP Precalculus
+
+-IDK something about honors precalc ig?
+
+---
+
+## AP Calculus AB/BC
 
 **Note**: If you are only looking for AP Calculus AB prep, do NOT look at the files/sections labeled "BC-only".
 
 - Bum bum bum sahur imagine needing help with calc lol
+- L^Hospital rule lmao
 
-## Algebra
+---
+
+##Competition Math
+
+Through my years of preparing for AMC 10/12, AIME, and USAJMO, here are some important concepts for competition math, list in order of increasing difficulty. On each topic, I will write the difficulty of the topic inside of the notes.
+
+---
+
+### Algebra
+
 - Inequalities
 - Functional equations
 
-## Geometry
+---
 
-### Olympiad Geo
+### Geometry
+
 - Circles
 - Inversion
 - Homothety
 
-## Number Theory
+---
+
+### Number Theory
+
 - Fermat's Little Theorem
+- Wilson's Theorem
 - Lifting the Exponent (LTE) Lemma
+- Fermat's Christmas Theorem
+
+---
+
+### Combinatorics
+
+- Expected Value

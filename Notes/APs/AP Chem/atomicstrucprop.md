@@ -121,7 +121,7 @@ The total number of electrons that have been removed from an element.
 - For uncombined elements (e.g. $$ \text{O}_2 $$) the oxidation state is $$0$$.  
 - For monatomic ions (e.g. $$\text{Na}^+$$) the oxidation state is its charge.  
 - For oxygen ($$\text{O}$$) the oxidation state is usually $$-2$$unless it is in a peroxide ($$\text{H}_2\text{O}_2$$), in which it is $$-1$$.  
-- For hydrogen ($$\text{H}$$) the oxidation state is usually $$+1$$ unless paired with metal in hydrides (e.g. $$\text{NaH}$$), in which case it is $$-1$$.  
+- For hydrogen ($$\text{H}$$) the oxidation state is usually $$+1$$ unless paired with metal in hydrides (metal + hydrogen), in which case it is $$-1$$.  
 - For fluorine ($$\text{F}$$), it is always $$-1$$, and other halogens have oxidation state $$-1$$
  unless bound to a more electronegative element.
 
@@ -204,7 +204,7 @@ $$
 E = nh\nu = \frac{hc}{\lambda},
 $$
 
-where $$h$$ is Planck’s constant, approximately $$6.626 \times 10^{-34} \text{ J} \codt \text{ s}$$, and $$c$$ is the speed of light.
+where $$h$$ is Planck’s constant, approximately $$6.626 \times 10^{-34} \text{ J} \cdot \text{ s}$$, and $$c$$ is the speed of light.
 
 Normally, when solving problems regarding quantum energy, you always take the difference between two energy levels. As a consequence, sometimes when heated, elements will burn a certain color which can be helpful in their determination (see flame test for more details).
 

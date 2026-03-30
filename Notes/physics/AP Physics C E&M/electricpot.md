@@ -2,19 +2,28 @@
 layout: default
 title: Electric Potential
 parent: Physics
-permalink: /notes/physics/electropot/
+permalink: /notes/physics/electricpot/
 ---
 
-# Electric Forces and Fields
+# Electric Potential
 
 Test text
 
 ---
 
+## Electric Potential Energy
+
+Similarly to gravitational potential energy (Universal Gravitation, not local gravitation), the electric potential energy is defined as:
+
+$$
+\Delta U = \frac{kQq}{r}
+$$
+
+---
 
 ## Electric Potential (Voltage)
 
-Electric potential is **energy per unit charge**:
+Electric potential is the potential energy per unit charge:
 
 $$
 V = \frac{\Delta U}{q}
@@ -26,23 +35,14 @@ $$
 V = \frac{kQ}{r}
 $$
 
----
-
-### Key Ideas
-
-- Scalar (no direction)  
-- Easier than forces in many problems  
+The potential is a scalar component (no direction), and it is preferred to use potential rather than forces in many electrostatic problems.
 
 ---
 
-### Work and Energy
+### Work and Energy (ADD MORE)
 
 $$
 W = Vq
-$$
-
-$$
-\Delta U = \frac{kQq}{r}
 $$
 
 ---
@@ -53,16 +53,13 @@ $$
 V = -\int \vec{E} \cdot d\vec{r}
 $$
 
-👉 Field points in direction of **decreasing potential**
+Note that electric field lines will always point towards a lower potential, since objects tend to go from higher to lower voltage to be more stable (think of it like a ball always wanting to drop to minimize gravitational potential energy)
 
 ---
 
 ## Equipotential Lines
 
-- Points with same voltage  
-- No work required to move along them  
-
-💡 Always perpendicular to electric field lines
+Equipotential lines are lines in an electric field that have the same voltage, and thus no work is required to move along them. TGhese lines are always perpendicular to electric field lines.
 
 ---
 
@@ -74,4 +71,4 @@ $$
 1 \, \text{eV} = 1.6 \times 10^{-19} \, \text{J}
 $$
 
-👉 Energy gained by an electron moving through 1 V
+👉 Energy gained by an electron moving through 1 V. Note that 1 eV is a very very small voltage, so it is usually seen in the form of MeV (Mega electron volts) where $$1 MeV = 1 \times 10^{6} eV$$.

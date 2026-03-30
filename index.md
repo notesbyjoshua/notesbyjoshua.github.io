@@ -19,3 +19,7 @@ I use this site to document:
 - [Math Notes]({{ '/notes/math/' | relative_url }})
 - [AP Notes]({{ '/notes/ap/' | relative_url }})
 - [Blog]({{ '/blog/' | relative_url }})
+
+##Contact
+
+If you have any inquiries, questions, or suggestions, please reach out to me at joshuabie2010@gmail.com!

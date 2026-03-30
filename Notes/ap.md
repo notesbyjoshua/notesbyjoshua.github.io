@@ -9,24 +9,26 @@ permalink: /notes/ap/
 
 These notes will roughly follow a AP curriculum but might have some extra stuff on it. Note that I will not take every single AP so if something isn't on here please feel free to contribute by contacting me.
 
-## AP Physics
+## AP Physics C Mech/E&M
 
-Broader physics notes (including mechanics and E&M topics) live on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page. If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
+If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
 
 ## AP Chemistry
 
-- [Atomic Structure and Properties]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})
-- [Compound Structure and Properties]({{ '/notes/ap/chem/compounds/' | relative_url }})
-- [Substances and Mixtures]({{ '/notes/ap/chem/submix/' | relative_url }})
-- [Chemical Reactions]({{ '/notes/ap/chem/chemrxns/' | relative_url }})
-- [Kinetics]({{ '/notes/ap/chem/kinetics/' | relative_url }})
-- [Thermochemistry]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})
-- [Equilibrium]({{ '/notes/ap/chem/equilibrium/' | relative_url }})
-- [Acid-Base Equilibrium]({{ '/notes/ap/chem/acidbase/' | relative_url }})
-- [Thermodynamics and Electrochemistry]({{ '/notes/ap/chem/thermoelectro/' | relative_url }})
+(ADD OVERVIEW)
+
+- [**Unit 1: Atomic Structure and Properties**]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})
+- [**Unit 2: Compound Structure and Properties**]({{ '/notes/ap/chem/compounds/' | relative_url }})
+- [**Unit 3: Substances and Mixtures**]({{ '/notes/ap/chem/submix/' | relative_url }})
+- [**Unit 4: Chemical Reactions**]({{ '/notes/ap/chem/chemrxns/' | relative_url }})
+- [**Unit 5: Kinetics**]({{ '/notes/ap/chem/kinetics/' | relative_url }})
+- [**Unit 6: Thermochemistry**]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})
+- [**Unit 7: Equilibrium**]({{ '/notes/ap/chem/equilibrium/' | relative_url }})
+- [**Unit 8: Acid-Base Equilibrium**]({{ '/notes/ap/chem/acidbase/' | relative_url }})
+- [**Unit 9: Thermodynamics and Electrochemistry**]({{ '/notes/ap/chem/thermoelectro/' | relative_url }})
 
 ## AP Statistics
 
-## AP Calculus BC
+## AP Calculus AB/BC
 
-AP Calculus BC preparation. If you are looking for AB preparation, just use all the files in BC except the ones labeled "BC-only"
+If you are looking for AP Calculus AB/BC notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.

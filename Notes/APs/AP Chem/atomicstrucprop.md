@@ -21,16 +21,16 @@ Significant figures (sig figs) are important for rounding purposes. They are not
 - Leading zeros: Never significant  
 - Zero in the middle: Significant (if last digit is nonzero)  
 
-Trailing zeros:
+**Trailing zeros rule**:
 
 - If decimal: significant after decimal  
 - If no decimal: Never significant  
 
-Exact numbers: Infinite sig figs (e.g. 4 from the answer how many apples are in the basket is an exact number)  
+**Exact numbers**: Infinite sig figs (e.g. 4 from the answer how many apples are in the basket is an exact number)  
 
-Addition/subtraction: Answer’s decimal places (after decimal) is equal to the smallest of the numbers being added/subtracted  
+**Addition/subtraction**: Answer’s decimal places (after decimal) is equal to the smallest of the numbers being added/subtracted  
 
-Multiplication/division: Answer has the same number of sig figs as the number with the least number of sig figs  
+**Multiplication/division**: Answer has the same number of sig figs as the number with the least number of sig figs  
 
 ---
 
@@ -118,95 +118,14 @@ Mass spectrometry: A tool to measure the mass of each isotope of an element, wit
 
 The total number of electrons that have been removed from an element.
 
-- For uncombined elements (e.g. 
-
-$$
-\text{O}_2
-$$
-
-) the oxidation state is 
-
-$$
-0
-$$
-
-.  
-- For monatomic ions (e.g. 
-
-$$
-\text{Na}^+
-$$
-
-) the oxidation state is its charge.  
-- For oxygen (
-
-$$
-\text{O}
-$$
-
-) the oxidation state is usually 
-
-$$
--2
-$$
-
- unless it is in a peroxide (
-
-$$
-\text{H}_2\text{O}_2
-$$
-
-), in which it is 
-
-$$
--1
-$$
-
-.  
-- For hydrogen (
-
-$$
-\text{H}
-$$
-
-) the oxidation state is usually 
-
-$$
-+1
-$$
-
- unless paired with metal in hydrides (e.g. 
-
-$$
-\text{NaH}
-$$
-
-), in which case it is 
-
-$$
--1
-$$
-
-.  
-- For fluorine (
-
-$$
-\text{F}
-$$
-
-), it is always 
-
-$$
--1
-$$
-
-, and other halogens have oxidation state 
-
-$$
--1
-$$
-
+- For uncombined elements (e.g. $$ \text{O}_2 $$) the oxidation state is $$0$$.  
+- For monatomic ions (e.g. $$\text{Na}^+$$) the oxidation state is its charge.  
+- For oxygen ($$\text{O}$$) the oxidation state is usually $$-2$$unless it is in a peroxide ($$\text{H}_2\text{O}_2$$), in which it is $$-1$$.  
+- For hydrogen ($$\text{H}$$) the oxidation state is usually $$+1$$ unless paired with metal in hydrides (e.g. $$\text{NaH}$$), in which case it is $$-1$$.  
+- For fluorine ($$\text{F}$$), it is always $$-1$$, and other halogens have oxidation state $$-1$$
  unless bound to a more electronegative element.
+
+More electronegative elements get priority in assigning oxidation states.
 
 ---
 
@@ -216,143 +135,19 @@ $$
 
 There are many different values that determine the orbital of an electron.
 
-Principal quantum number (
-
-$$
-n
-$$
-
-): Describes the quantum state of an electron (the size and overall energy of the orbital) (must be a non-negative integer).
-
-Angular momentum / azimuthal quantum number (
-
-$$
-l
-$$
-
-): Indicates the shape of the orbital (must be from 
-
-$$
-0
-$$
-
- to 
-
-$$
-n - 1
-$$
-
-).
-
-- 
-
-$$
-l = 0
-$$
-
- → s orbital  
-- 
-
-$$
-l = 1
-$$
-
- → p orbital  
-- 
-
-$$
-l = 2
-$$
-
- → d orbital  
-- 
-
-$$
-l = 3
-$$
-
- → f orbital  
-- 
-
-$$
-l = 4
-$$
-
- → g orbital (mostly theoretical)  
-
-Spin quantum number (
-
-$$
-m_s
-$$
-
-): Spin of electron (up/down) (must be 
-
-$$
-+\frac{1}{2}
-$$
-
- or 
-
-$$
--\frac{1}{2}
-$$
-
-).
-
-Magnetic quantum number (
-
-$$
-m_l
-$$
-
-): Indicates orientation of orbital (must be from 
-
-$$
--l
-$$
-
- to 
-
-$$
-+l
-$$
-
-).
+- Principal quantum number ($$n$$): Describes the quantum state of an electron (the size and overall energy of the orbital) (must be a non-negative integer).
+- Angular momentum / azimuthal quantum number ($$l$$): Indicates the shape of the orbital (must be from $$0$$ to $$n - 1$$).
+    - $$l = 0$$ → s orbital
+    - $$l = 1$$ → p orbital
+    - $$l = 2$$ → d orbital  
+    - $$l = 3$$ → f orbital  
+    - $$l = 4$$ → g orbital (mostly theoretical)  
+- Spin quantum number ($$m_s$$): Spin of electron (up/down) (must be $$+\frac{1}{2}$$ or $$-\frac{1}{2}$$).
+- Magnetic quantum number ($$m_l$$): Indicates orientation of orbital (must be from $$-l$$ to $$+l$$).
 
 ---
 
-**Aufbau principle**: When filling electron orbitals, fill in the lowest energy orbital before moving out. Some notable exceptions to the Aufbau principle are chromium (
-
-$$
-\text{Cr}
-$$
-
-), copper (
-
-$$
-\text{Cu}
-$$
-
-), molybdenum (
-
-$$
-\text{Mo}
-$$
-
-), silver, gold, niobium, ruthenium, palladium, platinum, plus some lanthanides and actinides (
-
-$$
-d^5
-$$
-
- and 
-
-$$
-d^{10}
-$$
-
- are especially stable but violate the Aufbau rule), which is why transition metals have variable charges.
+**Aufbau principle**: When filling electron orbitals, fill in the lowest energy orbital before moving out. Some notable exceptions to the Aufbau principle are chromium ($$\text{Cr}$$), copper ($$\text{Cu}$$), molybdenum ($$\text{Mo}$$), silver ($$\text{Ag}$$), gold ($$\text{Au}$$), niobium ($$\text{Nb}$$), ruthenium ($$\text{Ru}$$), palladium ($$\text{Pd}$$), platinum ($$\text{Pt}$$), plus some lanthanides and actinides ($$d^5$$ and $$d^{10}$$ are especially stable but violate the Aufbau rule), which is why transition metals have variable charges.
 
 ---
 
@@ -368,41 +163,11 @@ $$
 
 ---
 
-**Abbreviated electron configurations**: When writing out electron configurations, we can write them as [noble gas] + rest of configuration (e.g. 
-
-$$
-\text{Cs} = [\text{Xe}]\, 6s^1
-$$
-
-).
+**Abbreviated electron configurations**: When writing out electron configurations, we can write them as [noble gas] + rest of configuration (e.g. $$\text{Cs} = [\text{Xe}]\, 6s^1$$).
 
 ---
 
-**Isoelectronic configurations**: Two ions are isoelectronic if they have the same configuration (e.g. 
-
-$$
-\text{Br}^-
-$$
-
- and 
-
-$$
-\text{Se}^{2-}
-$$
-
- are isoelectronic). The more protons an isoelectronic ion has, the smaller it is (e.g. 
-
-$$
-\text{F}^-
-$$
-
- is larger than 
-
-$$
-\text{Na}^+
-$$
-
-).
+**Isoelectronic configurations**: Two ions are isoelectronic if they have the same configuration (e.g. $$\text{Br}^-$$ and $$\text{Se}^{2-}$$ are isoelectronic). The more protons an isoelectronic ion has, the smaller it is (e.g. $$\text{F}^-$$ is larger than $$\text{Na}^+$$).
 
 ---
 
@@ -414,69 +179,22 @@ $$
 
 **Waves and energy**
 
-Wavelength (
+**Wavelength ($$\lambda$$)**: Distance between two peaks/troughs of a wave.
 
-$$
-\lambda
-$$
+**Frequency ($$\nu$$ or $$f$$)**: Rate at which a wave vibrates (units: Hz, $$1/\text{s}$$).
 
-): Distance between two peaks/troughs of a wave.
-
-Frequency (
-
-$$
-\nu
-$$
-
- or 
-
-$$
-f
-$$
-
-): Rate at which a wave vibrates (units: Hz, 
-
-$$
-1/\text{s}
-$$
-
-).
-
-The wavelength and frequency of a photon (light) are related by
-
-$$
-c = \nu \lambda,
-$$
-
-where 
-
-$$
-c
-$$
-
- is the speed of light, approximately 
-
-$$
-3 \times 10^{8} \text{ m/s}
-$$
-
-.
+The wavelength and frequency of a photon (light) are related by $$c = \nu \lambda,$$ where $$c$$ is the speed of light, approximately $$
+3 \times 10^{8} \text{ m/s}$$.
 
 ---
 
-Energy of an electron: The energy of an electron is different at each orbit, and is given by the equation
+**Energy of an electron**: The energy of an electron is different at each orbit, and is given by the equation
 
 $$
 E = -2.178 \times 10^{-18} \frac{1}{n^2} \text{ J},
 $$
 
-where 
-
-$$
-n
-$$
-
- is the principal quantum number of the orbit.
+where $$n$$ is the principal quantum number of the orbit.
 
 ---
 
@@ -486,25 +204,7 @@ $$
 E = nh\nu = \frac{hc}{\lambda},
 $$
 
-where 
-
-$$
-h
-$$
-
- is Planck’s constant, approximately 
-
-$$
-6.626 \times 10^{-34} \text{ J s}
-$$
-
-, and 
-
-$$
-c
-$$
-
- is the speed of light.
+where $$h$$ is Planck’s constant, approximately $$6.626 \times 10^{-34} \text{ J} \codt \text{ s}$$, and $$c$$ is the speed of light.
 
 Normally, when solving problems regarding quantum energy, you always take the difference between two energy levels. As a consequence, sometimes when heated, elements will burn a certain color which can be helpful in their determination (see flame test for more details).
 
@@ -524,45 +224,15 @@ Photoelectron spectroscopy: A tool to show the energy held by each electron and 
 
 Spectrum of how much energy a photon has and what type it is.
 
-Visible light range: 
-
-$$
-380\text{ nm}
-$$
-
-–
-
-$$
-760\text{ nm}
-$$
-
- (ADD PHOTO LATER)
+Visible light range: $$380\text{ nm}$$ – $$760\text{ nm}$$ (ADD PHOTO LATER)
 
 ---
 
 ## Orbitals and shielding
 
-Orbital shapes: Orbital shapes are the possible regions an electron can be in (
+Orbital shapes: Orbital shapes are the possible regions an electron can be in ($$\#\text{ nodes} = n - 1$$).
 
-$$
-\#\text{ nodes} = n - 1
-$$
-
-).
-
-The energy of the orbitals is as follows: 
-
-$$
-s < p < d < f
-$$
-
- (within the same 
-
-$$
-n
-$$
-
- levels).
+The energy of the orbitals is as follows: $$s < p < d < f$$ (within the same $$n$$ levels).
 
 Shielding: When electrons are more condensed, the outer electron(s) are more attracted to the nucleus (bad shielding), and if the electrons are spread out (more electron shells), the outer electron(s) are weakly attracted (strong shielding).
 

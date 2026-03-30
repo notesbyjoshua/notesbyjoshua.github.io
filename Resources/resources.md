@@ -33,5 +33,3 @@ This section compiles a list of resources that I found very helpful throughout m
 2. [Kevin Zhou](https://knzhou.github.io/), a past coach for the US National Physics Team, has a wonderful catalog of teaching notes designed for olympiad physics. Note that these tend to be a bit hard for USAPhO, but are quite explanatory and great for learning new topics. He also has helpfully compiled a bunch of practice problems for each subtopic.
 3. For past F=ma and USAPhO problems, I recommend visiting [AAPT's official website](**ADD LINK**), where you can find all past F=ma and USAPhO problems.
 4. For older USAPhO problems, I recommend using [Physics with Stefan](https://physicswithstefan.com/usapho-papers/) collection of USAPhO papers, since the older versions are harder to find online.
-
----

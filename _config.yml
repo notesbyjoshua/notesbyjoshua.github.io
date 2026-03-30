@@ -7,6 +7,17 @@ plugins:
 
 url: "https://notesbyjoshua.github.io"
 
+# Google Form embedded on /feedback/ — paste the iframe src from Form → Send → <> embed
+# (must include ?embedded=true). Link the form’s Responses tab to a Google Sheet.
+feedback_form_embed_url: ""
+
+# Just the Docs: suppress bottom child-page TOC under Notes (sidebar has links).
+defaults:
+  - scope:
+      path: "Notes"
+    values:
+      has_toc: false
+
 aux_links:
   "GitHub":
     - "https://github.com/notesbyjoshua"
@@ -22,5 +33,7 @@ nav:
     url: /blog/
   - title: Resources
     url: /Resources/resources/
+  - title: Feedback
+    url: /feedback/
   - title: About
     url: /about/

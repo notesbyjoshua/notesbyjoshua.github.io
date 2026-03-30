@@ -40,3 +40,25 @@ a {
     font-size: 0.8125rem;
   }
 }
+
+// Embedded Google Form on /feedback/
+.feedback-form-embed {
+  margin-top: 1.25rem;
+  width: 100%;
+  max-width: 40rem;
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 56rem;
+    border: 0;
+    border-radius: 4px;
+  }
+}
+
+.feedback-form-placeholder {
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  font-size: 0.9375rem;
+}

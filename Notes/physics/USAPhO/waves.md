@@ -5,4 +5,8 @@ parent: Physics
 permalink: /notes/physics/waves/
 ---
 
-# Waves and Optics
+# Waves
+
+Note that this section will be split up into two, one section about waves and one about optics.
+
+# Optics

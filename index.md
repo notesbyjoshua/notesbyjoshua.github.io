@@ -15,16 +15,16 @@ I use this site to document:
 
 ---
 
+## News
+
+**3/29**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted
+
+---
+
 ## 🚀 Start Here
 - New? → Read [How to Use These Notes] (Add this section)
 - Studying AP? → Go to [AP Notes]({{ '/notes/ap/' | relative_url }})
 - Practicing? → Try [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }})
-
----
-
-## 🆕 Recently Updated
-- Limits (updated Mar 2026)
-- Projectile Motion
 
 ---
 

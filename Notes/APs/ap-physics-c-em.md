@@ -1,6 +1,7 @@
 ---
 layout: default
-title: AP Physics C E&M
+title: AP Physics C E&M — open Physics hub
+nav_title: AP Physics C E&M
 parent: AP
 permalink: /notes/ap/ap-physics-c-em/
 nav_order: 4

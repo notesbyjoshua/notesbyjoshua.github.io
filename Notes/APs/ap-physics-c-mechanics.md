@@ -1,6 +1,7 @@
 ---
 layout: default
-title: AP Physics C Mechanics
+title: AP Physics C Mechanics — open Physics hub
+nav_title: AP Physics C Mechanics
 parent: AP
 permalink: /notes/ap/ap-physics-c-mechanics/
 nav_order: 3

@@ -10,6 +10,8 @@ nav_order: 2
 
 (ADD OVERVIEW)
 
+---
+
 ## Units
 
 - [Unit 1: Atomic Structure and Properties]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})
@@ -21,3 +23,15 @@ nav_order: 2
 - [Unit 7: Equilibrium]({{ '/notes/ap/chem/equilibrium/' | relative_url }})
 - [Unit 8: Acid-Base Equilibrium]({{ '/notes/ap/chem/acidbase/' | relative_url }})
 - [Unit 9: Thermodynamics and Electrochemistry]({{ '/notes/ap/chem/thermoelectro/' | relative_url }})
+
+---
+
+## Practice Problems
+
+- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for Chemistry when problem sets are linked here.
+
+---
+
+## Resources
+
+- [Resources]({{ '/Resources/resources/' | relative_url }}) — general AP prep links, College Board, and books.

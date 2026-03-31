@@ -8,6 +8,8 @@ nav_order: 5
 
 # AP Physics C E&M
 
+---
+
 ## Units
 
 - [Unit 1: Electric Charges and Fields]({{ '/notes/physics/electrostatics/' | relative_url }})
@@ -16,3 +18,15 @@ nav_order: 5
 - [Unit 4: Circuits]({{ '/notes/physics/circuits/' | relative_url }})
 - [Unit 5: Magnetic fields and Electromagnetism]({{ '/notes/physics/magnetism/' | relative_url }})
 - [Unit 6: Electromagnetic Induction]({{ '/notes/physics/eminduction/' | relative_url }})
+
+---
+
+## Practice Problems
+
+- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for E&M when problem sets are linked here.
+
+---
+
+## Resources
+
+- [Resources]({{ '/Resources/resources/' | relative_url }}) — general AP prep links, College Board, and books.

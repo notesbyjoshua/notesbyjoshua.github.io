@@ -1,6 +1,6 @@
 /*
   Plain CSS loaded after Just the Docs so dark mode applies even if SCSS merge fails.
-  Keep link accents (blue); body/headings use muted off-white.
+  Keep link accents (blue); body/headings use light off-white (readable on #2e2e30).
 */
 html {
   color-scheme: dark;
@@ -10,7 +10,7 @@ body {
   font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #2e2e30 !important;
-  color: #c4c4bf !important;
+  color: #e6e6e2 !important;
 }
 
 .side-bar {
@@ -32,11 +32,11 @@ body {
 .main-content h5,
 .main-content h6,
 #toctitle {
-  color: #d6d6d2 !important;
+  color: #f2f2ef !important;
 }
 
 .site-title {
-  color: #d6d6d2 !important;
+  color: #f2f2ef !important;
 }
 
 .main-header,
@@ -47,7 +47,7 @@ body {
 
 .search-input {
   background-color: #36363a !important;
-  color: #e6e1e8 !important;
+  color: #f7f5f8 !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .breadcrumb-nav-list-item::after {
-  color: #959396 !important;
+  color: #b5b5b1 !important;
 }
 
 hr {
@@ -84,12 +84,12 @@ tbody tr:nth-child(even) {
 }
 
 .nav-category {
-  color: #d6d6d2 !important;
+  color: #f2f2ef !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .site-footer {
-  color: #b8b8b3 !important;
+  color: #d2d2cd !important;
 }
 
 .icon {
@@ -97,7 +97,7 @@ tbody tr:nth-child(even) {
 }
 
 mjx-container[jax="CHTML"] {
-  color: #c4c4bf !important;
+  color: #e6e6e2 !important;
 }
 
 .highlight,
@@ -112,14 +112,14 @@ figure.highlight {
 
 code {
   background-color: rgba(255, 255, 255, 0.06) !important;
-  color: #e6e1e8 !important;
+  color: #f4f2f6 !important;
 }
 
 .footnotes,
 .page-content,
 .sect1,
 .sect2 {
-  color: #c4c4bf;
+  color: #e6e6e2;
 }
 
 /* --- Sidebar nav: spacing + overlap (expander is absolute; nested ul needs clear separation) --- */

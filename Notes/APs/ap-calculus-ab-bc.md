@@ -10,6 +10,8 @@ nav_order: 1
 
 **Note**: If you are only looking for AP Calculus AB prep, do NOT look at the files/sections labeled "BC-only".
 
+---
+
 ## Units
 
 - [Unit 1: Limits and Continuity]({{ '/notes/math/limits/' | relative_url }})
@@ -22,3 +24,15 @@ nav_order: 1
 - [Unit 8: Applications of Integration]({{ '/notes/math/appintegration/' | relative_url }})
 - [Unit 9: Parametric, Polar, and Vector-Valued Functions (**BC-only**)]({{ '/notes/math/ppvvfunc/' | relative_url }})
 - [Unit 10: Infinite Sums and Series (**BC-only**)]({{ '/notes/math/infsumseries/' | relative_url }})
+
+---
+
+## Practice Problems
+
+- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for Calculus when problem sets are linked here.
+
+---
+
+## Resources
+
+- [Resources]({{ '/Resources/resources/' | relative_url }}) — general AP prep links, College Board, and books.

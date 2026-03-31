@@ -17,7 +17,7 @@ I use this site to document:
 
 ## For Starters
 
-- New? → Read [How to Use These Notes] (Add this section)
+- New? → Read [How to use these notes]({{ '/how-to-use-these-notes/' | relative_url }})
 - Studying AP? → Go to [AP Notes]({{ '/notes/ap/' | relative_url }})
 - Practicing? → Try [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }})
 

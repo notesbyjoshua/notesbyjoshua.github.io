@@ -26,6 +26,8 @@ aux_links:
 nav:
   - title: Home
     url: /
+  - title: How to use these notes
+    url: /how-to-use-these-notes/
   - title: Notes
     url: /Notes/notes/
   - title: Practice Problems

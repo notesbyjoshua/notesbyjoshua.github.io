@@ -14,9 +14,7 @@ Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Mat
 
 ## AP Precalculus
 
-**NOTE**: Since AP Precalculus is pretty bare, this section will also encompass extra material, most of which is derived from my notes in taking Honor Precalculus at school.
-
-- IDK something about honors precalc ig?
+Unit notes are listed on the [AP Precalculus hub] (**UPDATE ACCORDINGLY**)
 
 ---
 

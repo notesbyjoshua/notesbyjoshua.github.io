@@ -18,7 +18,18 @@ These notes will roughly follow a AP curriculum but might have some extra stuff 
 
 ## AP Calculus AB/BC
 
-If you are looking for AP Calculus AB/BC notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.
+**Note**: If you are only looking for AP Calculus AB prep, do NOT look at the files/sections labeled "BC-only".
+
+- [Unit 1: Limits and Continuity]({{ '/notes/math/limits/' | relative_url }})
+- [Unit 2: Differentiation: Definition and Fundamental Properties]({{ '/notes/math/diffdeffund/' | relative_url }})
+- [Unit 3: Differentiation: Composite, Implicit, and Inverse Differentiation]({{ '/notes/math/diffcomplex/' | relative_url }})
+- [Unit 4: Contextual Applications of Differentiation]({{ '/notes/math/contextappdiff/' | relative_url }})
+- [Unit 5: Analytical Applications of Differentiation]({{ '/notes/math/analyticalappdiff/' | relative_url }})
+- [Unit 6: Integration and Accumulation of Change]({{ '/notes/math/integration/' | relative_url }})
+- [Unit 7: Differential Equations]({{ '/notes/math/diffeq/' | relative_url }})
+- [Unit 8: Applications of Integration]({{ '/notes/math/appintegration/' | relative_url }})
+- [Unit 9: Parametric, Polar, and Vector-Valued Functions (**BC-only**)]({{ '/notes/math/ppvvfunc/' | relative_url }})
+- [Unit 10: Infinite Sums and Series (**BC-only**)]({{ '/notes/math/infsumseries/' | relative_url }})
 
 ---
 
@@ -44,17 +55,19 @@ If you are looking for AP Calculus AB/BC notes, please look on the [Math notes](
 
 ## AP Physics C Mechanics
 
-These notes live on the Physics hub: [AP Physics C Mechanics]({{ '/notes/physics/ap-physics-c-mechanics/' | relative_url }}). The sidebar entry **AP → AP Physics C Mechanics** opens the same page (via a short redirect).
+- [AP Physics C Mechanics hub]({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url }})
 
 ## AP Physics C E&M
 
-[AP Physics C E&M]({{ '/notes/physics/ap-physics-c-em/' | relative_url }}) on the Physics hub — also **AP → AP Physics C E&M** in the sidebar.
+- [AP Physics C E&M hub]({{ '/notes/ap/ap-physics-c-em/' | relative_url }})
 
 ---
 
 ## AP Precalculus
 
-If you are looking for AP Precalculus notes, please look on the [Math notes]({{ '/notes/math/' | relative_url }}) page.
+**NOTE**: Since AP Precalculus is pretty bare, this section will also encompass extra material, most of which is derived from my notes in taking Honor Precalculus at school.
+
+- IDK something about honors precalc ig?
 
 ---
 

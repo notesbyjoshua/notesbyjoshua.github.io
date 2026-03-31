@@ -7,28 +7,16 @@ permalink: /notes/physics/
 ---
 # Overview
 
-This page is a collection of my physics notes, from AP material to competition physics.
+This page is a collection of my physics notes for competition physics. If you are looking for AP material, please click the links to be redirected to the AP section.
 
 # AP Physics C Material
 
-## AP Physics C Mechanics
+AP Physics C Mechanics and E&M are organized under [AP Notes]({{ '/notes/ap/' | relative_url }}):
 
-- [Unit 1: 1D and 2D Kinematics]({{ '/notes/physics/kinematics/' | relative_url }})
-- [Unit 2: Force and Translational Dynamics]({{ '/notes/physics/forces/' | relative_url }})
-- [Unit 3: Work, Energy, and Power]({{ '/notes/physics/work/' | relative_url }})
-- [Unit 4: Linear Momentum and Impulse]({{ '/notes/physics/linearmomentum/' | relative_url }})
-- [Unit 5: Torque and Rotational Dynamics]({{ '/notes/physics/torque/' | relative_url }})
-- [Unit 6: Energy and Momentum of Rotating Systems]({{ '/notes/physics/rotationalmomentum/' | relative_url }})
-- [Unit 7: Oscillations]({{ '/notes/physics/oscillations/' | relative_url }})
+- [AP Physics C Mechanics]({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url }}) (the old Physics hub URL still works and forwards here)
+- [AP Physics C E&M]({{ '/notes/ap/ap-physics-c-em/' | relative_url }})
 
-## AP Physics C E&M
-
-- [Unit 1: Electric Charges and Fields]({{ '/notes/physics/electrostatics/' | relative_url }})
-- [Unit 2: Electric Potential]({{ '/notes/physics/electricpot/' | relative_url }})
-- [Unit 3: Conductors and Capacitors]({{ '/notes/physics/condcap/' | relative_url }})
-- [Unit 4: Circuits]({{ '/notes/physics/circuits/' | relative_url }})
-- [Unit 5: Magnetic fields and Electromagnetism]({{ '/notes/physics/magnetism/' | relative_url }})
-- [Unit 6: Electromagnetic Induction]({{ '/notes/physics/eminduction/' | relative_url }})
+Unit pages keep their existing URLs (for example `/notes/physics/kinematics/`).
 
 # F=ma and USAPhO Material
 

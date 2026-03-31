@@ -1,20 +1,14 @@
 ---
 layout: default
-title: AP Physics C Mechanics
+title: AP Physics C Mechanics (redirect)
+nav_title: AP Physics C Mechanics
 parent: Physics
 nav_order: 1
 permalink: /notes/physics/ap-physics-c-mechanics/
 ---
 
-# AP Physics C Mechanics
+<script>
+  window.location.replace({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url | jsonify }});
+</script>
 
-## Units
-
-- [Unit 1: 1D and 2D Kinematics]({{ '/notes/physics/kinematics/' | relative_url }})
-- [Unit 2: Force and Translational Dynamics]({{ '/notes/physics/forces/' | relative_url }})
-- [Unit 3: Work, Energy, and Power]({{ '/notes/physics/work/' | relative_url }})
-- [Unit 4: Linear Momentum and Impulse]({{ '/notes/physics/linearmomentum/' | relative_url }})
-- [Unit 5: Torque and Rotational Dynamics]({{ '/notes/physics/torque/' | relative_url }})
-- [Unit 6: Energy and Momentum of Rotating Systems]({{ '/notes/physics/rotationalmomentum/' | relative_url }})
-- [Unit 7: Oscillations]({{ '/notes/physics/oscillations/' | relative_url }})
-
+This material lives under [AP Notes]({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url }}). [Continue to AP Physics C Mechanics]({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url }})…

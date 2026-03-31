@@ -28,7 +28,7 @@ nav_order: 2
 
 ## Practice Problems
 
-- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for Chemistry when problem sets are linked here.
+- idk
 
 ---
 

@@ -29,7 +29,7 @@ nav_order: 1
 
 ## Practice Problems
 
-- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for Calculus when problem sets are linked here.
+- Practice? Never heard of it.
 
 ---
 

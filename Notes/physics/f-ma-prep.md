@@ -14,3 +14,11 @@ permalink: /notes/physics/f-ma/
 - [Problem-Solving Techniques]({{ '/notes/physics/techniques/' | relative_url }})
 - [Fluid Dynamics]({{ '/notes/physics/fluiddynamics/' | relative_url }})
 
+---
+
+## Practice Problems
+
+---
+
+## Resources
+

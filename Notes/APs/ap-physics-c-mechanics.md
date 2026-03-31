@@ -24,7 +24,7 @@ nav_order: 4
 
 ## Practice Problems
 
-- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for Mechanics when problem sets are linked here.
+- Practice lol
 
 ---
 

@@ -7,7 +7,7 @@ permalink: /notes/ap/chem/atomicstrucprop/
 
 # Unit 1: Atomic Structure and Properties
 
-## Variables to know for this unit:
+## Useful Variables
 
 ADD TO THIS LATER
 
@@ -54,33 +54,35 @@ In the periodic table, the horizontal rows are called periods and the vertical c
 
 There are also two rows beneath the periodic table, the lanthanides and actinides, the rare Earth elements, or inner transition metals.
 
-Reading an element: On the picture below, $$A$$ represents the number of protons and neutrons in the nucleus (mass number) and $$Z$$ represents the number of protons in the nucleus (atomic number).
+Reading an element: On the picture below, $$A$$ represents the number of protons and neutrons in the nucleus (mass number) and $$Z$$ represents the number of protons in the nucleus (atomic number). **REMEMBER TO PUT PICTURE HERE**
 
 ---
 
 ## Ions
 
-Ions are atoms with a charge. A cation is a positively charged ion and an anion is a negatively charged ion.
+Ions are atoms with a charge. A cation is a positively charged ion and an anion is a negatively charged ion. All cations (most likely metals/metalloids), are located to the **left** of the staircase, while all anions (most likely non-metals) are located to the **right** of the staircase. Note that most of the transition metals have a variable charge, but are always cations.
 
 ---
 
-## Avogadro’s Number
+## Avogadro’s Number and Molar Mass
+
+Avogadro's number is one of the most important numbers in chemistry. It defines a mole, which is
 
 $$
-6.022 \times 10^{23} \text{ entities} = 1 \text{ mole}
-$$,
+1 \text{ mole} = 6.022 \times 10^{23} \text{ entities}
+$$ (Avogadro's Number)
 
-which has a mass of the atomic mass grams of an element (shown below the element symbol).
+A mole has a mass of the atomic mass units (AMU) of an element, just converted to grams (Think of Avogadro's Number as a conversion from AMU to grams). The mass of 1 mole of an element is called that element's **molar mass**, and the molar mass of an object can be represented as the sums of each element's molar mass. To calculate how much mass is in a compound, you can use the formula:
+
+$$
+\% \text{ element} = \frac{\text{mass of element in 1 mol of compound}}{\text{molar mass of compound}} \times 100\%
+$$
 
 ---
 
 ## Percent Equations
 
 These equations aren't seen often, but are very important in the context of lab work and error analysis.
-
-$$
-\% \text{ element} = \frac{\text{mass of element in 1 mol of compound}}{\text{molar mass of compound}} \times 100\%
-$$
 
 $$
 \% \text{ yield} = \frac{\text{actual}}{\text{theoretical}} \times 100\%
@@ -93,6 +95,8 @@ $$
 $$
 \text{Efficiency} = \frac{\text{useful energy output}}{\text{energy input}} \times 100\%
 $$
+
+Each equation has its own use case: When calculating efficiency, you use $$\% \text{ yield}$$ for production efficiency, and $$Efficiency$$ in terms of thermodynamic contexts. You will usually always use $$\% \text{ error}$$ in error analysis.
 
 ---
 
@@ -244,6 +248,8 @@ Shielding: When electrons are more condensed, the outer electron(s) are more att
 
 ## Effective nuclear charge
 
+The effective nuclear charge
+
 $$
 Z_{\text{eff}} = Z - S
 $$
@@ -264,20 +270,32 @@ Shielding constant increases as you go down the periodic table.
 - **Electron affinity**: Energy change when an atom gains an electron  
 - **Atomic radius**: Distance from the outermost orbital to the nucleus  
 - **Nonmetallic character**: Tendency of an element to gain electrons  
-- **Metallic character**: Tendency of an element to lose electrons  
+- **Metallic character**: Tendency of an element to lose electrons
+
+The general trends for all of the properties listed above can be summarized in the image below:
+
+**IMAGE**
+
+Note that there will be exceptions to these trends.
 
 ---
 
 ## Electrostatics
 
-Electrostatic energy:
-
-$$
-E = \frac{k Q_1 Q_2}{r}
-$$
+Electrostatics is the study of electric charges at rest. For AP Chemistry, electrostatics describe the energy and forces that act on an ion, given its charge. 
 
 Coulomb’s law:
 
 $$
 F = \frac{k Q_1 Q_2}{r^2}
 $$
+
+This law describes the attraction between two ions, with $$Q_1$$ and $$Q_2$$ being the charges of the ions and $$r$$ being the radius between the two ions. $$k$$ is a constant, and is approximately equal to $$8.99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2$$.
+
+Electric potential energy:
+
+$$
+E = \frac{k Q_1 Q_2}{r}
+$$
+
+This equation describes the potential energy between two ions. This will be more useful in Unit 2.

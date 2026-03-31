@@ -17,3 +17,11 @@ permalink: /notes/physics/usapho/
 - [Thermodynamics]({{ '/notes/physics/thermodynamics/' | relative_url }})
 - [Waves/Optics]({{ '/notes/physics/waves/' | relative_url }})
 
+---
+
+## Practice Problems
+
+---
+
+## Resources
+

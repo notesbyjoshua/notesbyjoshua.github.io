@@ -1,0 +1,123 @@
+/*
+  Plain CSS loaded after Just the Docs so dark mode applies even if SCSS merge fails.
+  Keep link accents (blue); body/headings use muted off-white.
+*/
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #2e2e30 !important;
+  color: #c4c4bf !important;
+}
+
+.side-bar {
+  background-color: #2e2e30 !important;
+}
+
+.main {
+  background-color: #2e2e30 !important;
+}
+
+.main-content-wrap {
+  background-color: #2e2e30 !important;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+#toctitle {
+  color: #d6d6d2 !important;
+}
+
+.site-title {
+  color: #d6d6d2 !important;
+}
+
+.main-header,
+.site-header {
+  background-color: #2e2e30 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.search-input {
+  background-color: #36363a !important;
+  color: #e6e1e8 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.search {
+  background-color: #2e2e30 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.aux-nav a {
+  color: #5c9eff !important;
+}
+
+.breadcrumb-nav-list-item::after {
+  color: #959396 !important;
+}
+
+hr {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+blockquote {
+  border-left-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+table,
+th,
+td {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+thead,
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.nav-category {
+  color: #d6d6d2 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.site-footer {
+  color: #b8b8b3 !important;
+}
+
+.icon {
+  color: #5c9eff !important;
+}
+
+mjx-container[jax="CHTML"] {
+  color: #c4c4bf !important;
+}
+
+.highlight,
+div.highlighter-rouge,
+figure.highlight {
+  background-color: #0d1117 !important;
+}
+
+.highlight .highlight {
+  background-color: transparent !important;
+}
+
+code {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #e6e1e8 !important;
+}
+
+.footnotes,
+.page-content,
+.sect1,
+.sect2 {
+  color: #c4c4bf;
+}

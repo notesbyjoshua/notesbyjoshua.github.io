@@ -1,31 +1,9 @@
 // --- Font family ---
-// Inter + system UI sans (Notion-style); requires Inter link in head_custom.html
 $custom-body-font: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// --- Dark surfaces + dull off-white body text (links & accents stay theme defaults) ---
-$dm-bg: #2e2e30;
-$dm-text: #c4c4bf;
-$dm-heading: #d6d6d2;
-
 body {
   font-family: $custom-body-font;
-  background-color: $dm-bg;
-  color: $dm-text;
-}
-
-.side-bar {
-  background-color: $dm-bg;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-#toctitle {
-  color: $dm-heading;
 }
 
 h1,
@@ -38,13 +16,7 @@ a {
   text-decoration: none;
 }
 
-// MathJax (CHTML) defaults to dark ink; match muted body text
-mjx-container[jax="CHTML"] {
-  color: $dm-text !important;
-}
-
-// Site title link: theme uses fs-6 (!important) inside a fixed-height .site-header on md+.
-// Global $font-size scaling made the title overflow; allow wrapping and restore pre-scale sizes.
+// Site title: allow wrapping (theme fixed-height header).
 .site-header {
   @include mq(md) {
     height: auto;
@@ -59,16 +31,15 @@ mjx-container[jax="CHTML"] {
   overflow-wrap: break-word;
   font-size: 1.125rem !important;
   line-height: 1.25 !important;
-  color: $dm-heading;
 
   @include mq(sm) {
     font-size: 1.5rem !important;
   }
 }
 
-// Sidebar nav: `_includes/sidebar-nav-custom.html` (loaded from head_custom).
+// Sidebar: `_includes/sidebar-nav-custom.html` + `assets/css/dark-overrides.css`.
 
-// Accordion sidebar (sibling collapse: `_includes/js/custom.js`)
+// Accordion panels (behavior: `_includes/js/custom.js`)
 #site-nav .nav-list .nav-list-expander svg {
   transition: transform 0.18s ease;
 }
@@ -81,7 +52,6 @@ mjx-container[jax="CHTML"] {
   overflow: hidden;
 }
 
-// Second tier only (e.g. AP, Math under Notes) — deeper levels stay flat for readability
 #site-nav > .nav-list > .nav-list-item > .nav-list > .nav-list-item {
   margin-bottom: $sp-1;
   border-radius: 3px;
@@ -94,7 +64,6 @@ mjx-container[jax="CHTML"] {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-// Embedded Google Form on /feedback/
 .feedback-form-embed {
   margin-top: 1.25rem;
   width: 100%;

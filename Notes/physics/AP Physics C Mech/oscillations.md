@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Oscillations
-parent: Physics
+parent: AP Physics C Material
+nav_order: 7
 permalink: /notes/physics/oscillations/
 ---
 

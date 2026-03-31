@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Waves and Optics
-parent: Physics
+parent: "F=ma and USAPhO"
+nav_order: 9
 permalink: /notes/physics/waves/
 ---
 

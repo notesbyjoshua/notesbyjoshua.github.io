@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Torque and Rotational Dynamics
-parent: Physics
+parent: AP Physics C Material
+nav_order: 5
 permalink: /notes/physics/torque/
 ---
 

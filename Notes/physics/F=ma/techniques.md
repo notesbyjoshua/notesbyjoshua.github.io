@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Problem Solving Techniques
-parent: Physics
+parent: "F=ma and USAPhO"
+nav_order: 2
 permalink: /notes/physics/techniques/
 ---
 

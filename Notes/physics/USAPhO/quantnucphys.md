@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Quantum and Modern Physics
-parent: Physics
+parent: "F=ma and USAPhO"
+nav_order: 5
 permalink: /notes/physics/quantnucphys/
 ---
 

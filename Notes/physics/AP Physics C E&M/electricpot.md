@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Electric Potential
-parent: Physics
+parent: AP Physics C Material
+nav_order: 9
 permalink: /notes/physics/electricpot/
 ---
 

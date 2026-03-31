@@ -12,6 +12,7 @@ This page is a collection of my physics notes, from AP material to competition p
 # AP Physics C Material
 
 ## AP Physics C Mechanics
+{: #ap-physics-c-mechanics}
 
 - [Unit 1: 1D and 2D Kinematics]({{ '/notes/physics/kinematics/' | relative_url }})
 - [Unit 2: Force and Translational Dynamics]({{ '/notes/physics/forces/' | relative_url }})
@@ -22,6 +23,7 @@ This page is a collection of my physics notes, from AP material to competition p
 - [Unit 7: Oscillations]({{ '/notes/physics/oscillations/' | relative_url }})
 
 ## AP Physics C E&M
+{: #ap-physics-c-em}
 
 - [Unit 1: Electric Charges and Fields]({{ '/notes/physics/electrostatics/' | relative_url }})
 - [Unit 2: Electric Potential]({{ '/notes/physics/electricpot/' | relative_url }})
@@ -46,3 +48,7 @@ This page is a collection of my physics notes, from AP material to competition p
 - [Stellar Physics]({{ '/notes/physics/stellarphys/' | relative_url }})
 - [Thermodynamics]({{ '/notes/physics/thermodynamics/' | relative_url }})
 - [Waves/Optics]({{ '/notes/physics/waves/' | relative_url }})
+
+## Physics Cheat Sheet
+
+- [Cheat Sheet]({{ '/notes/physics/cheatsheet/' | relative_url }})

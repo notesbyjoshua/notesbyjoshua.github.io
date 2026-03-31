@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Energy and Momentum of Rotating Systems
-parent: Physics
+parent: AP Physics C Material
+nav_order: 6
 permalink: /notes/physics/rotationalmomentum/
 ---
 

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Uncertainty
-parent: Physics
+parent: "F=ma and USAPhO"
+nav_order: 1
 permalink: /notes/physics/uncertainty/
 ---
 

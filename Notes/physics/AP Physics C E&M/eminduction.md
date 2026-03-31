@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Electromagnetic Induction
-parent: Physics
+parent: AP Physics C Material
+nav_order: 13
 permalink: /notes/physics/eminduction/
 ---
 

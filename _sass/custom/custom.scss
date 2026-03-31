@@ -39,29 +39,14 @@ a {
 
 // Sidebar: `_includes/sidebar-nav-custom.html` + `assets/css/dark-overrides.css`.
 
-// Accordion panels (behavior: `_includes/js/custom.js`)
+// Accordion: logic in `_includes/js/custom.js`. No “cards” — borders/overflow
+// overlapped nested rows (e.g. Notes + AP). Only chevron motion + vertical rhythm.
 #site-nav .nav-list .nav-list-expander svg {
   transition: transform 0.18s ease;
 }
 
-#site-nav > .nav-list > .nav-list-item {
+#site-nav > .nav-list > .nav-list-item:not(:last-child) {
   margin-bottom: $sp-2;
-  border-radius: $border-radius;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(0, 0, 0, 0.12);
-  overflow: hidden;
-}
-
-#site-nav > .nav-list > .nav-list-item > .nav-list > .nav-list-item {
-  margin-bottom: $sp-1;
-  border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-}
-
-#site-nav > .nav-list > .nav-list-item.active > .nav-list {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .feedback-form-embed {

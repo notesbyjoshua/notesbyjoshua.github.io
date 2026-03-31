@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1D and 2D Kinematics
-parent: Physics
+parent: AP Physics C Mechanics
 permalink: /notes/physics/kinematics/
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Electromagnetic Induction
-parent: Physics
+parent: AP Physics C E&M
 permalink: /notes/physics/eminduction/
 ---
 

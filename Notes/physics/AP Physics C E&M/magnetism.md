@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Magnetic Fields and Electromagnetism
-parent: Physics
+parent: AP Physics C E&M
 permalink: /notes/physics/magnetism/
 ---
 

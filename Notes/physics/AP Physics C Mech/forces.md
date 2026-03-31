@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Force and Translational Dynamics
-parent: Physics
+parent: AP Physics C Mechanics
 permalink: /notes/physics/forces/
 ---
 

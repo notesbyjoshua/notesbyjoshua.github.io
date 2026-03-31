@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Math Tricks
-parent: Physics
+parent: USAPhO Prep
 permalink: /notes/physics/mathtricks/
 ---
 

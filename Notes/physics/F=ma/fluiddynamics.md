@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Fluid Dynamics
-parent: Physics
+parent: F=ma Prep
 permalink: /notes/physics/fluiddynamics/
 ---
 

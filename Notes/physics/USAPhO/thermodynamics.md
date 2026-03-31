@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thermodynamics
-parent: Physics
+parent: USAPhO Prep
 permalink: /notes/physics/thermodynamics/
 ---
 

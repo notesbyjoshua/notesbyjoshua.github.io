@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Circuits
-parent: Physics
+parent: AP Physics C E&M
 permalink: /notes/physics/circuits/
 ---
 

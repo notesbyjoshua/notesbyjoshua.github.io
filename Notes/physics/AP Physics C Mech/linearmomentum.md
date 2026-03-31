@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Linear Momentum and Impulse
-parent: Physics
+parent: AP Physics C Mechanics
 permalink: /notes/physics/linearmomentum/
 ---
 

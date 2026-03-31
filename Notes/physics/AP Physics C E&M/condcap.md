@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conductors and Capacitors
-parent: Physics
+parent: AP Physics C E&M
 permalink: /notes/physics/condcap/
 ---
 

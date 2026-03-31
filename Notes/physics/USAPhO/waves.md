@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Waves and Optics
-parent: Physics
+parent: USAPhO Prep
 permalink: /notes/physics/waves/
 ---
 

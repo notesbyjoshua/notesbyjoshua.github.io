@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Problem Solving Techniques
-parent: Physics
+parent: F=ma Prep
 permalink: /notes/physics/techniques/
 ---
 

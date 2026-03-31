@@ -2,6 +2,7 @@
 layout: default
 title: Electric Fields and Forces
 parent: AP Physics C E&M
+nav_order: 1
 permalink: /notes/physics/electrostatics/
 ---
 

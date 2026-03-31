@@ -2,6 +2,7 @@
 layout: default
 title: Uncertainty
 parent: F=ma Prep
+nav_order: 1
 permalink: /notes/physics/uncertainty/
 ---
 

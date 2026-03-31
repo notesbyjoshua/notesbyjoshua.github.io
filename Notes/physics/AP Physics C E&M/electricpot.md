@@ -2,6 +2,7 @@
 layout: default
 title: Electric Potential
 parent: AP Physics C E&M
+nav_order: 2
 permalink: /notes/physics/electricpot/
 ---
 

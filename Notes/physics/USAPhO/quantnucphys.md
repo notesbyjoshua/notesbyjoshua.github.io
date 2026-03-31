@@ -2,6 +2,7 @@
 layout: default
 title: Quantum and Modern Physics
 parent: USAPhO Prep
+nav_order: 2
 permalink: /notes/physics/quantnucphys/
 ---
 

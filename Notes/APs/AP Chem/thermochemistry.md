@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 6 - Thermochemistry
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/thermochemistry/
 ---
 

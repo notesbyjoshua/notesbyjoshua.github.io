@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 4: Probability, Random Variables, and Probability Distributions"
-parent: Statistics
+parent: AP Statistics
 nav_order: 4
 permalink: /notes/ap/stats/probandrand/
 ---

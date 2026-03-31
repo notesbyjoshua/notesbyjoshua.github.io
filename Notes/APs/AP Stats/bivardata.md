@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 2: Exploring Bivariate Data"
-parent: Statistics
+parent: AP Statistics
 nav_order: 2
 permalink: /notes/ap/stats/bivardata/
 ---

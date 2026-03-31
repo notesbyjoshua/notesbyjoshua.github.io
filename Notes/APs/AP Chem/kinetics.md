@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 5 - Kinetics
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/kinetics/
 ---
 

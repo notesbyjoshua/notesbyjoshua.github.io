@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 9 - Thermodynamics & Electrochemistry
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/thermoelectro/
 ---
 

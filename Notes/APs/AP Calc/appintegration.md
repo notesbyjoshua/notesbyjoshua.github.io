@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 8: Applications of Integration"
-parent: Math
+parent: "AP Calculus AB/BC"
 nav_order: 8
 permalink: /notes/math/appintegration/
 ---

@@ -3,7 +3,7 @@ layout: default
 title: AP Physics C Mechanics
 parent: AP
 permalink: /notes/ap/ap-physics-c-mechanics/
-nav_order: 3
+nav_order: 4
 ---
 
 # AP Physics C Mechanics

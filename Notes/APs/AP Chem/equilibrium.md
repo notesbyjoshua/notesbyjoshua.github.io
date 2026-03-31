@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 7 - Equilibrium
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/equilibrium/
 ---
 

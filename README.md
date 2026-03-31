@@ -5,10 +5,10 @@ Study website created by me! Currently in alpha-1 phase.
 
 - Dark mode DONE
 - Collapsible accordion sidebar DONE
-- Fix sidebar spacing
+- Fix sidebar spacing DONE
 - Add a favicon
 - Add a how to use these notes section
-- Add breadcrumbs/shortcuts to home page
+- Add breadcrumbs/shortcuts to home page DONE
 - Start adding more notes
 - Better search bar prominence?
 

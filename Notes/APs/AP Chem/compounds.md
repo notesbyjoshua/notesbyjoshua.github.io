@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 2 - Bonding
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/compounds/
 ---
 

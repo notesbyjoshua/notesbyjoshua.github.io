@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 6: Inference for Categorical Data: Proportions"
-parent: Statistics
+parent: AP Statistics
 nav_order: 6
 permalink: /notes/ap/stats/catprop/
 ---

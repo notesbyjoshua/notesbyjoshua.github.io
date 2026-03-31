@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 4 - Reactions
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/chemrxns/
 ---
 

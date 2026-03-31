@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 3: Collecting Data"
-parent: Statistics
+parent: AP Statistics
 nav_order: 3
 permalink: /notes/ap/stats/collectingdata/
 ---

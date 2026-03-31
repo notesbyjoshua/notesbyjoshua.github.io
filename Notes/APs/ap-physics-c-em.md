@@ -3,7 +3,7 @@ layout: default
 title: AP Physics C E&M
 parent: AP
 permalink: /notes/ap/ap-physics-c-em/
-nav_order: 4
+nav_order: 5
 ---
 
 # AP Physics C E&M

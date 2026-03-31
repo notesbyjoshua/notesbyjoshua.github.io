@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Unit 7: Differential Equations"
-parent: Math
+parent: "AP Calculus AB/BC"
 nav_order: 7
 permalink: /notes/math/diffeq/
 ---

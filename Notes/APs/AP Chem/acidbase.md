@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 8 - Acids and Bases
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/acidbase/
 ---
 

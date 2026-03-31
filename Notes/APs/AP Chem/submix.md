@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Unit 3 - Properties of Substances & Mixtures
-parent: Chemistry
+parent: AP Chemistry
 permalink: /notes/ap/chem/submix/
 ---
 

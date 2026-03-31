@@ -44,7 +44,7 @@ If you are looking for AP Calculus AB/BC notes, please look on the [Math notes](
 
 ## AP Physics C Mech/E&M
 
-Use the sidebar entries **AP Physics C Mechanics** and **AP Physics C E&amp;M** (they jump to the right section on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page), or open the [Physics overview]({{ '/notes/physics/' | relative_url }}) directly.
+If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
 
 ---
 

@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Relativity
-parent: "F=ma and USAPhO"
-nav_order: 6
+parent: Physics
 permalink: /notes/physics/relativity/
 ---
 

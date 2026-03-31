@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Work, Energy, and Power
-parent: AP Physics C Material
-nav_order: 3
+parent: Physics
 permalink: /notes/physics/work/
 ---
 

@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Stellar Physics
-parent: "F=ma and USAPhO"
-nav_order: 7
+parent: Physics
 permalink: /notes/physics/stellarphys/
 ---
 

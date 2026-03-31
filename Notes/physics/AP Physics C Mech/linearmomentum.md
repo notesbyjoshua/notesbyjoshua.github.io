@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Linear Momentum and Impulse
-parent: AP Physics C Material
-nav_order: 4
+parent: Physics
 permalink: /notes/physics/linearmomentum/
 ---
 

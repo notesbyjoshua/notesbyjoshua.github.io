@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Fluid Dynamics
-parent: "F=ma and USAPhO"
-nav_order: 3
+parent: Physics
 permalink: /notes/physics/fluiddynamics/
 ---
 

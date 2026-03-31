@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Circuits
-parent: AP Physics C Material
-nav_order: 11
+parent: Physics
 permalink: /notes/physics/circuits/
 ---
 

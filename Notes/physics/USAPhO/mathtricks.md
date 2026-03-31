@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Math Tricks
-parent: "F=ma and USAPhO"
-nav_order: 4
+parent: Physics
 permalink: /notes/physics/mathtricks/
 ---
 

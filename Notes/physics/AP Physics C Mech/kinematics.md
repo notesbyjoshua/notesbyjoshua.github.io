@@ -1,24 +1,8 @@
 ---
 layout: default
 title: 1D and 2D Kinematics
-parent: AP Physics C Material
-nav_order: 1
+parent: Physics
 permalink: /notes/physics/kinematics/
 ---
 
 # 1D and 2D Kinematics
-
-In this section, we will learn the basics of kinematics in 1D and 2D. We will also introduce some concepts that will be very useful throughout your physics journey.
-
-## Useful Variables
-
-- $$t$$ = time (Units: seconds ($$s$$))
-- $$x$$ or $$s$$ = displacement (Units: meters ($$m$$))
-- $$v$$ = velocity (Units $$\frac{m}{s}$$)
-- $$a$$ = acceleration (Units $$\frac{m}{s^2}$$)
-- $$g$$ = acceleration due to Earth's gravity = $$9.8 \frac{m}{s^2}$$
-- $$h$$ = height (Units: $$m$$)
-- $$R$$ = range (Units: $$m$$)
-
-
-## Kinematics Introduction

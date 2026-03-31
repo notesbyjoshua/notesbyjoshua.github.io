@@ -3,16 +3,29 @@
 $custom-body-font: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// --- Text color ---
-$custom-body-color: #000;
+// --- Dark surfaces + dull off-white body text (links & accents stay theme defaults) ---
+$dm-bg: #2e2e30;
+$dm-text: #c4c4bf;
+$dm-heading: #d6d6d2;
 
 body {
   font-family: $custom-body-font;
-  color: $custom-body-color;
+  background-color: $dm-bg;
+  color: $dm-text;
 }
 
-.main-content {
-  color: $custom-body-color;
+.side-bar {
+  background-color: $dm-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#toctitle {
+  color: $dm-heading;
 }
 
 h1,
@@ -23,6 +36,11 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+// MathJax (CHTML) defaults to dark ink; match muted body text
+mjx-container[jax="CHTML"] {
+  color: $dm-text !important;
 }
 
 // Site title link: theme uses fs-6 (!important) inside a fixed-height .site-header on md+.
@@ -41,13 +59,40 @@ a {
   overflow-wrap: break-word;
   font-size: 1.125rem !important;
   line-height: 1.25 !important;
+  color: $dm-heading;
 
   @include mq(sm) {
     font-size: 1.5rem !important;
   }
 }
 
-// Sidebar nav colors + type size: see assets/css/sidebar-overrides.css (loaded last in head).
+// Sidebar nav: `_includes/sidebar-nav-custom.html` (loaded from head_custom).
+
+// Accordion sidebar (sibling collapse: `_includes/js/custom.js`)
+#site-nav .nav-list .nav-list-expander svg {
+  transition: transform 0.18s ease;
+}
+
+#site-nav > .nav-list > .nav-list-item {
+  margin-bottom: $sp-2;
+  border-radius: $border-radius;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+// Second tier only (e.g. AP, Math under Notes) — deeper levels stay flat for readability
+#site-nav > .nav-list > .nav-list-item > .nav-list > .nav-list-item {
+  margin-bottom: $sp-1;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+#site-nav > .nav-list > .nav-list-item.active > .nav-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
 
 // Embedded Google Form on /feedback/
 .feedback-form-embed {
@@ -66,7 +111,7 @@ a {
 
 .feedback-form-placeholder {
   padding: 1rem 1.25rem;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 4px;
   font-size: 0.9375rem;
 }

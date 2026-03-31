@@ -2,8 +2,8 @@
 $content-width: 62rem;
 $search-results-width: $content-width - $nav-width;
 
-// Nested sidebar links use their own rule with high specificity; align with site palette.
-$nav-child-link-color: #374151;
+// Nested sidebar links: overridden in head (sidebar-nav-custom.html); dark scheme sets base nav.
+$nav-child-link-color: #b8b8b3;
 
 // Typography: Just the Docs sets html { font-size: … !important } (fs-4 mixin), so
 // raising font size must happen here by scaling the theme’s $font-size-* variables.

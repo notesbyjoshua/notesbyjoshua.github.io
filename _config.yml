@@ -1,6 +1,7 @@
 title: Notes by Joshua
 description: Math, Physics, and Thoughts
 remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
 
 plugins:
   - jekyll-remote-theme

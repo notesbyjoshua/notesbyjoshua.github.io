@@ -36,7 +36,7 @@ I use this site to document:
 
 ## News
 
-**3/29**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted. Keep tuned for more information!
+**March 29th, 2026**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted. Keep tuned for more information!
 
 ---
 

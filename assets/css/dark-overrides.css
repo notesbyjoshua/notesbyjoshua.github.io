@@ -1,6 +1,6 @@
 /*
   Plain CSS loaded after Just the Docs so dark mode applies even if SCSS merge fails.
-  Keep link accents (blue); body/headings use light off-white (readable on #2e2e30).
+  Light sky-blue link accents; body/headings use light off-white (readable on #2e2e30).
 */
 html {
   color-scheme: dark;
@@ -53,12 +53,10 @@ body {
 
 /* In-body links: keep accent; visited slightly softer */
 .main-content a,
-.main-content a:link {
-  color: #5c9eff !important;
-}
-
-.main-content a:visited {
-  color: #8eb8ff !important;
+.main-content a:link,
+.main-content a:visited,
+.main-content a:active {
+  color: #7dd3fc !important;
 }
 
 /* Bottom-of-page child nav / TOC snippets */
@@ -72,7 +70,7 @@ body {
 }
 
 .breadcrumb-nav a {
-  color: #5c9eff !important;
+  color: #7dd3fc !important;
 }
 
 .search-results-list .search-result-doc,
@@ -113,7 +111,7 @@ body {
 }
 
 .aux-nav a {
-  color: #5c9eff !important;
+  color: #7dd3fc !important;
 }
 
 .breadcrumb-nav-list-item::after {
@@ -149,7 +147,17 @@ tbody tr:nth-child(even) {
 }
 
 .icon {
-  color: #5c9eff !important;
+  color: #7dd3fc !important;
+}
+
+/* Theme-built links not covered above (search, footer, heading anchor icons) */
+.search-results .search-results-list a,
+.site-footer a {
+  color: #7dd3fc !important;
+}
+
+.main-content .anchor-heading svg {
+  color: #7dd3fc !important;
 }
 
 mjx-container[jax="CHTML"] {

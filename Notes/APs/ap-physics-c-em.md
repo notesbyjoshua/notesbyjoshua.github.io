@@ -23,7 +23,7 @@ nav_order: 5
 
 ## Practice Problems
 
-- [Practice Problems]({{ '/practiceproblems/practice/' | relative_url }}) — use the AP section for E&M when problem sets are linked here.
+- Bum bum bum sahur
 
 ---
 

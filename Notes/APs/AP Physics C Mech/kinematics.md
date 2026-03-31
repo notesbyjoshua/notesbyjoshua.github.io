@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 1D and 2D Kinematics
+nav_title: "Unit 1: 1D and 2D Kinematics"
 parent: AP Physics C Mechanics
 nav_order: 1
 permalink: /notes/physics/kinematics/
@@ -9,6 +10,8 @@ permalink: /notes/physics/kinematics/
 # 1D and 2D Kinematics
 
 In this section, we will learn the basics of kinematics in 1D and 2D. We will also introduce some concepts that will be very useful throughout your physics journey. Note that from here on out, I will assume that you know all about calculus and are familiar with calculus notations (like derivatives and integrals).
+
+---
 
 ## Useful Variables
 
@@ -20,6 +23,7 @@ In this section, we will learn the basics of kinematics in 1D and 2D. We will al
 - $$h$$ = height (Units: $$m$$)
 - $$R$$ = range (Units: $$m$$)
 
+---
 
 ## Kinematics Introduction
 

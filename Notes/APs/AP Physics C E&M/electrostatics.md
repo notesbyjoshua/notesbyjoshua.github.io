@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Electric Fields and Forces
+nav_title: "Unit 1: Electric Charges and Fields"
 parent: AP Physics C E&M
 nav_order: 1
 permalink: /notes/physics/electrostatics/

@@ -10,7 +10,7 @@ body {
   font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #2e2e30 !important;
-  color: #e6e6e2 !important;
+  color: #ecece8 !important;
 }
 
 .side-bar {
@@ -25,6 +25,62 @@ body {
   background-color: #2e2e30 !important;
 }
 
+/* Main column: Just the Docs sets $body-text-color in bundled CSS; force bright text here. */
+.main-content-wrap,
+.main .main-content,
+.main-content {
+  color: #ecece8 !important;
+}
+
+.main-content p,
+.main-content li,
+.main-content dt,
+.main-content dd,
+.main-content td,
+.main-content th,
+.main-content blockquote,
+.main-content address,
+.main-content summary,
+.main-content figcaption {
+  color: #ecece8 !important;
+}
+
+/* List markers (theme uses dark grey bullets/numbers) */
+.main-content ul > li::before,
+.main-content ol > li::before {
+  color: #c8c8c4 !important;
+}
+
+/* In-body links: keep accent; visited slightly softer */
+.main-content a,
+.main-content a:link {
+  color: #5c9eff !important;
+}
+
+.main-content a:visited {
+  color: #8eb8ff !important;
+}
+
+/* Bottom-of-page child nav / TOC snippets */
+.main #markdown-toc,
+.main .text-delta {
+  color: #ecece8 !important;
+}
+
+.breadcrumb-nav {
+  color: #ecece8 !important;
+}
+
+.breadcrumb-nav a {
+  color: #5c9eff !important;
+}
+
+.search-results-list .search-result-doc,
+.search-results-list .search-result-preview,
+.search-results-list .search-result-doc .search-result-highlight {
+  color: #ecece8 !important;
+}
+
 .main-content h1,
 .main-content h2,
 .main-content h3,
@@ -32,11 +88,11 @@ body {
 .main-content h5,
 .main-content h6,
 #toctitle {
-  color: #f2f2ef !important;
+  color: #f6f6f3 !important;
 }
 
 .site-title {
-  color: #f2f2ef !important;
+  color: #f6f6f3 !important;
 }
 
 .main-header,
@@ -84,7 +140,7 @@ tbody tr:nth-child(even) {
 }
 
 .nav-category {
-  color: #f2f2ef !important;
+  color: #f6f6f3 !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -97,7 +153,7 @@ tbody tr:nth-child(even) {
 }
 
 mjx-container[jax="CHTML"] {
-  color: #e6e6e2 !important;
+  color: #ecece8 !important;
 }
 
 .highlight,
@@ -119,7 +175,14 @@ code {
 .page-content,
 .sect1,
 .sect2 {
-  color: #e6e6e2;
+  color: #ecece8 !important;
+}
+
+thead,
+tbody,
+tbody td,
+tbody th {
+  color: #ecece8 !important;
 }
 
 /* --- Sidebar nav: spacing + overlap (expander is absolute; nested ul needs clear separation) --- */

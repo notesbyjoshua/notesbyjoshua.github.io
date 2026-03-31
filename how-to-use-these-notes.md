@@ -8,7 +8,7 @@ permalink: /how-to-use-these-notes/
 
 ## Navigation
 
-Use the **sidebar** on the left to move between sections. Topics are grouped (for example **Notes** → **AP** → a specific course). Tap the arrows next to a heading to expand or collapse a group. On small screens, open the menu from the top bar.
+Use the **sidebar** on the left to move between sections. Topics are grouped (for example **Notes** → **AP** → a specific course). Tap the arrows next to a heading to expand or collapse a group. On small screens, open the menu from the top bar. There is also a **search bar** at the top of the website if you need anything specific.
 
 ## What you will find
 
@@ -23,7 +23,7 @@ Scan the **headings** on the page to jump to a topic. Many pages build from defi
 
 ## Feedback
 
-Spot an error or want a topic added? Use **[Feedback]({{ '/feedback/' | relative_url }})** so requests stay in one place.
+Spot an error or want a topic added? Use the [Feedback and Requests]({{ '/feedback/' | relative_url }}) page so requests stay in one place.
 
 ---
 

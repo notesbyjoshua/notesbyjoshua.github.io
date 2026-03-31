@@ -14,7 +14,7 @@ Here you will find notes for AP Precalculus, Calculus AB/BC, and Competition Mat
 
 ## AP Precalculus
 
-Unit notes are listed on the [AP Precalculus hub] (**UPDATE ACCORDINGLY**)
+Unit notes are listed on the [AP Precalculus hub]({{ '/notes/ap/precalculus/' | relative_url }})
 
 ---
 

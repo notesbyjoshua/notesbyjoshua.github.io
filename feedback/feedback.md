@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Feedback
+title: Feedback and Requests
 nav_order: 6
 permalink: /feedback/
 ---

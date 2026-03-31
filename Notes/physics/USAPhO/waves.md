@@ -8,6 +8,6 @@ permalink: /notes/physics/waves/
 
 # Waves
 
-Note that this section will be split up into two, one section about waves and one about optics.
+**Note**: This section will be split up into two, one section about waves and one about optics.
 
 # Optics

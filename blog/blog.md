@@ -7,6 +7,6 @@ permalink: /blog/
 
 # Blog
 
-- Coming soon...
+Bum bum bum sahur.
 
 ---

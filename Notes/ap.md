@@ -26,10 +26,6 @@ This article is a stub. Feel free to contribute to it!
 
 - ### [AP Physics C E&M hub]({{ '/notes/ap/ap-physics-c-em/' | relative_url }})
 
-- ### AP Precalculus
-
-**NOTE**: Since AP Precalculus is pretty bare, this section will also encompass extra material, most of which is derived from my notes in taking Honor Precalculus at school.
-
-- IDK something about honors precalc ig?
+- ### [AP Precalculus hub]({{ '/notes/ap/precalculus/' | relative_url }})
 
 - ### [AP Statistics hub]({{ '/notes/ap/statistics/' | relative_url }})

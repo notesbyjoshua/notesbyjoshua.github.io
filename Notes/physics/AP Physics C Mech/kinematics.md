@@ -8,7 +8,7 @@ permalink: /notes/physics/kinematics/
 
 # 1D and 2D Kinematics
 
-In this section, we will learn the basics of kinematics in 1D and 2D. We will also introduce some concepts that will be very useful throughout your physics journey.
+In this section, we will learn the basics of kinematics in 1D and 2D. We will also introduce some concepts that will be very useful throughout your physics journey. Note that from here on out, I will assume that you know all about calculus and are familiar with calculus notations (like derivatives and integrals).
 
 ## Useful Variables
 
@@ -27,11 +27,26 @@ First, we have to define a couple of variables.
 
 - A **scalar** is a quantity that only has magnitude (e.g. speed). By contract, a **vector** is a quantity that has both magnitude and direction (e.g. velocity).
 - **Velocity** is defined as the rate of change of speed over time. It can be described as 
+
 $$
 v = \frac{\Delta x}{\Delta t}
 $$
+
 Instantaneous velocity is defined as the velocity of an object at a certain instant, which is equivalent to taking the derivative of a function $$x(t)$$ that describes position. It can be described as 
+
 $$
 v = \frac{dx}{dt}
 $$
-- **Acceleration** is defined as the rate of change of velocity over time. It can be 
+
+- **Acceleration** is defined as the rate of change of velocity over time. It can be described as
+
+$$
+a = \frac{\Delta v}{\Delta t}
+$$
+
+Instantaneous velocity is defined as the velocity of an object at a certain instant, which is equivalent to taking the derivative of a function $$x(t)$$ that describes position. It can be described as 
+
+$$
+a = \frac{dv}{dt} = \frac{d^2x}{dt^2}
+$$
+

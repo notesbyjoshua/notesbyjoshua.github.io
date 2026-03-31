@@ -42,9 +42,13 @@ If you are looking for AP Calculus AB/BC notes, please look on the [Math notes](
 
 ---
 
-## AP Physics C Mech/E&M
+## AP Physics C Mechanics
 
-If you are looking for AP Physics C mechanics and E&M topics, please look on the [Physics notes]({{ '/notes/physics/' | relative_url }}) page.
+These notes live on the Physics hub: [AP Physics C Mechanics]({{ '/notes/physics/ap-physics-c-mechanics/' | relative_url }}). The sidebar entry **AP → AP Physics C Mechanics** opens the same page (via a short redirect).
+
+## AP Physics C E&M
+
+[AP Physics C E&M]({{ '/notes/physics/ap-physics-c-em/' | relative_url }}) on the Physics hub — also **AP → AP Physics C E&M** in the sidebar.
 
 ---
 

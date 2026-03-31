@@ -121,3 +121,30 @@ code {
 .sect2 {
   color: #c4c4bf;
 }
+
+/* --- Sidebar nav: spacing + overlap (expander is absolute; nested ul needs clear separation) --- */
+.side-bar #site-nav .nav-list-item {
+  position: relative;
+  /* avoid margin collapse between parent <li> and nested <ul> */
+  padding-bottom: 1px;
+}
+
+.side-bar #site-nav .nav-list-item > .nav-list-expander {
+  top: 0 !important;
+  z-index: 2;
+}
+
+.side-bar #site-nav .nav-list-item > .nav-list-link {
+  position: relative;
+  z-index: 1;
+}
+
+.side-bar #site-nav .nav-list-item > .nav-list {
+  margin-top: 0.35rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.side-bar #site-nav > .nav-list > .nav-list-item:not(:last-child) {
+  margin-bottom: 0.75rem;
+}

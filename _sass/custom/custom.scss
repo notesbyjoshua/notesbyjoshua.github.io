@@ -39,14 +39,9 @@ a {
 
 // Sidebar: `_includes/sidebar-nav-custom.html` + `assets/css/dark-overrides.css`.
 
-// Accordion: logic in `_includes/js/custom.js`. No “cards” — borders/overflow
-// overlapped nested rows (e.g. Notes + AP). Only chevron motion + vertical rhythm.
+// Accordion: `_includes/js/custom.js`. Chevron motion; spacing/layout in `dark-overrides.css`.
 #site-nav .nav-list .nav-list-expander svg {
   transition: transform 0.18s ease;
-}
-
-#site-nav > .nav-list > .nav-list-item:not(:last-child) {
-  margin-bottom: $sp-2;
 }
 
 .feedback-form-embed {

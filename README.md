@@ -3,8 +3,9 @@ Study website created by me! Currently in alpha-1 phase.
 
 ## TODO for Alpha-1 Phase
 
-- Dark mode
-- Collapsible accordion sidebar
+- Dark mode DONE
+- Collapsible accordion sidebar DONE
+- Fix sidebar spacing
 - Add a favicon
 - Add a how to use these notes section
 - Add breadcrumbs/shortcuts to home page

@@ -7,10 +7,6 @@ permalink: /notes/ap/chem/atomicstrucprop/
 
 # Unit 1: Atomic Structure and Properties
 
-## Useful Variables
-
-ADD TO THIS LATER
-
 ---
 
 ## Significant Figures Rules
@@ -61,6 +57,8 @@ Reading an element: On the picture below, $$A$$ represents the number of protons
 ## Ions
 
 Ions are atoms with a charge. A cation is a positively charged ion and an anion is a negatively charged ion. All cations (most likely metals/metalloids), are located to the **left** of the staircase, while all anions (most likely non-metals) are located to the **right** of the staircase. Note that most of the transition metals have a variable charge, but are always cations.
+
+### Polyatomic Ions
 
 ---
 

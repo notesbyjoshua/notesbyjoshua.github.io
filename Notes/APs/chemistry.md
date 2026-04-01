@@ -34,4 +34,5 @@ nav_order: 2
 
 ## Resources
 
-- [Resources]({{ '/Resources/resources/' | relative_url }}) — general AP prep links, College Board, and books.
+- [AP Chemistry Formula Sheet](https://apcentral.collegeboard.org/media/pdf/ap-chemistry-equations-sheet.pdf)
+- 

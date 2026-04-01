@@ -40,23 +40,23 @@ When you describe a scatterplot, organize your comments around three ideas: **sh
 
 ### Direction
 
-**Direction** describes how \(y\) tends to move as \(x\) increases. An upward direction is positive association and a downward direction is negative association. Clouds with no clear trend show weak or no linear association (correlation near zero is possible even when a strong nonlinear pattern exists, which is one reason you always look at the plot).
+**Direction** describes how $$y$$ tends to move as$$x$$ increases. An upward direction is positive association and a downward direction is negative association. Clouds with no clear trend show weak or no linear association (correlation near zero is possible even when a strong nonlinear pattern exists, which is one reason you always look at the plot).
 
 ### Strength
 
-**Strength** describes how tightly points follow the trend. If you imagine a line or smooth curve through the cloud, strength is about how far points deviate from that trend. Tight clouds imply strong association; wide vertical scatter implies weak association. Outliers can stand away from the bulk of the data in \(x\), in \(y\), or in both.
+**Strength** describes how tightly points follow the trend. If you imagine a line or smooth curve through the cloud, strength is about how far points deviate from that trend. Tight clouds imply strong association; wide vertical scatter implies weak association. Outliers can stand away from the bulk of the data in $$x$$, in $$y$$, or in both.
 
 ---
 
 ## Pearson’s correlation coefficient
 
-Pearson’s correlation coefficient (often called the correlation) is a number that measures the direction and strength of a linear relationship between two quantitative variables. It is denoted \(\rho\) for a population and \(r\) for a sample.
+Pearson’s correlation coefficient (often called the correlation) is a number that measures the direction and strength of a linear relationship between two quantitative variables. It is denoted $$\rho$$ for a population and $$r$$ for a sample.
 
 $$
 -1 \le r \le 1
 $$
 
-The sign of \(r\) matches the direction of the linear trend: \(r > 0\) for positive association, \(r < 0\) for negative association. The magnitude \(|r|\) relates to strength for linear association only.
+The sign of $$r$$ matches the direction of the linear trend: $$r > 0$$ for positive association, $$r < 0$$ for negative association. The magnitude $$|r|$$ relates to strength for linear association only.
 
 ### Formula
 
@@ -68,9 +68,9 @@ $$
 
 Intuitively, \(r\) compares covariation (do \(x\) and \(y\) tend to be on the same side of their means together?) to how spread out \(x\) and \(y\) are individually.
 
-### Interpreting \(|r|\)
+### Interpreting $$|r|$$
 
-Values with \(|r| = 1\) mean all points fall exactly on a single straight line (perfect linear fit). As \(|r|\) moves toward 0, the linear trend weakens.
+Values with $$|r| = 1$$ mean all points fall exactly on a single straight line (perfect linear fit). As $$|r|$$ moves toward 0, the linear trend weakens.
 
 Textbooks sometimes give rough cutoffs such as $$|r| < 0.1$$ as very weak, 0.1 to 0.5 as weak-to-moderate, 0.5 to 0.85 as strong, and |r| > 0.85 as very strong. Treat these as rules of thumb, not laws: context, sample size, and outliers matter. Sometimes a $$|r|$$ value of 0.4 can be classified as strong, and sometimes a $$|r|$$ value of 0.8 may be classified as weak. Correlation is not causation; confounding and lurking variables can produce strong $$|r|$$ without a direct cause-and-effect link.
 
@@ -88,13 +88,13 @@ $$
 Y = \beta_0 + \beta_1 X + \epsilon
 $$
 
-Here \(\beta_0\) is the y-intercept, \(\beta_1\) is the slope, and \(\epsilon\) captures everything the straight line misses: measurement noise, other variables, and genuine nonlinearity. The errors \(\epsilon\) are what we hope stay small and behave reasonably once we estimate the line from data.
+Here $$beta_0$$ is the y-intercept, $$beta_1$$ is the slope, and $$\epsilon$$ captures everything the straight line misses: measurement noise, other variables, and genuine nonlinearity. The errors $$\epsilon$$ are what we hope stay small and behave reasonably once we estimate the line from data.
 
-From a sample, we write estimated coefficients (often \(b_0\) and \(b_1\), or \(\hat{\beta}_0\) and \(\hat{\beta}_1\)) and a fitted line used for prediction.
+From a sample, we write estimated coefficients (often $$b_0$$ and $$b_1$$, or $$\hat{\beta}_0$$ and $$\hat{\beta}_1$$) and a fitted line used for prediction.
 
 ### Predicted values and residuals
 
-For a chosen \(x\), the predicted value \(\hat{y}\) is the height of the regression line at that \(x\). A common form is
+For a chosen $$x$$, the predicted value $$\hat{y}$$ is the height of the regression line at that $$x$$. A common form is
 
 $$
 \hat{y} = b_0 + b_1 x
@@ -105,7 +105,7 @@ using the least-squares estimates \(b_0\) and \(b_1\) from your data (notation v
 The residual for that case is
 
 $$
-e = y - \hat{y}
+\epsilon = y - \hat{y}
 $$
 
 the observed response minus the predicted response. Residuals are the data’s way of telling you where the line was too high or too low. A positive residual means the point lies above the line, and a negative residual means it lies below.
@@ -116,7 +116,7 @@ The least-squares regression line is the line that minimizes the sum of squared 
 
 Useful facts for AP work:
 
-- The least-squares line always passes through \((\bar{x}, \bar{y})\), the point of means.
+- The least-squares line always passes through ($$\bar{x}, \bar{y}$$), the point of means.
 - The slope satisfies
 
 $$
@@ -127,9 +127,9 @@ where \(s_x\) and \(s_y\) are the sample standard deviations of \(x\) and \(y\).
 
 ### Coefficient of determination
 
-The coefficient of determination, \(R^2\), reports the fraction of the variability in \(y\) that is accounted for by the linear model using \(x\). In simple linear regression with one \(x\), \(R^2\) equals \(r^2\) and lies between 0 and 1. Values near 1 mean the points hug the line; values near 0 mean the line explains little of how \(y\) moves. $$R^2$$ is typically used instead of $$r$$ because it does not depend on direction, so it only shows the correlation.
+The coefficient of determination, $$R^2$$, reports the fraction of the variability in $$y$$ that is accounted for by the linear model using $$x$$. In simple linear regression with one $$x$$, $$R^2$$ equals $$r^2$$ and lies between 0 and 1. Values near 1 mean the points hug the line; values near 0 mean the line explains little of how $$y$$ moves. $$R^2$$ is typically used instead of $$r$$ because it does not depend on direction, so it only shows the correlation.
 
-High \(R^2\) does not prove the model is appropriate (nonlinearity can still hide in residual plots), and it does not prove causation.
+High $$R^2$$ does not prove the model is appropriate (nonlinearity can still hide in residual plots), and it does not prove causation.
 
 ### Influential observations and outliers
 
@@ -141,7 +141,7 @@ An outlier in regression is often a point with an unusually large residual: the 
 
 A residual plot graphs residuals (usually on the vertical axis) against either the predicted values \(\hat{y}\) or the explanatory variable \(x\). The purpose is to diagnose the fit of a linear model.
 
-What you hope to see is a formless cloud: points scattered randomly around the horizontal axis at \(e = 0\), with roughly constant spread across values of \(x\) or \(\hat{y}\).
+What you hope to see is a formless cloud: points scattered randomly around the horizontal axis at $$\epsilon = 0$$, with roughly constant spread across values of \(x\) or \(\hat{y}\).
 
 Curved patterns mean the relationship is probably nonlinear; a linear model is a poor summary. Fan shapes (spread grows or shrinks as \(x\) changes) suggest nonconstant variance, which matters more when you move into formal inference, but is still worth mentioning when you describe real data.
 
@@ -151,13 +151,13 @@ Curved patterns mean the relationship is probably nonlinear; a linear model is a
 
 When a scatterplot shows a nonlinear trend, one strategy is to transform one or both variables so that the new relationship is more nearly linear. You then fit the line to the transformed scale and interpret conclusions in original units when you report results.
 
-Example: if \(y\) grows exponentially with \(x\), plotting \(\ln(y)\) against \(x\) may straighten the cloud. Symbolically, if \(y = a e^{kx}\) in an idealized world, then \(\ln y = \ln a + kx\) is linear in \(x\).
+Example: if \(y\) grows exponentially with \(x\), plotting \(\ln(y)\) against \(x\) may straighten the cloud. Symbolically, if $$y = a e^{kx}$$ in an idealized world, then $$ln(y) = ln(a) + kx$$ is linear in $$x$$.
 
 ### Common transformations
 
-- Log transformation: \(z = \ln(y)\) or \(\log_{10}(y)\) for right-skewed positive responses or multiplicative growth patterns.
-- Square root transformation: \(z = \sqrt{y}\) for count data or mild right skew where logs feel too aggressive.
-- Reciprocal transformation: \(z = 1/y\) when larger \(x\) corresponds to smaller \(y\) in a rate-like way.
+- Log transformation: $$z = ln(y)$$ or $$z = log_{10}(y)$$ for right-skewed positive responses or multiplicative growth patterns.
+- Square root transformation: $$z = \sqrt{y}$$ for count data or mild right skew where logs feel too aggressive.
+- Reciprocal transformation: $$z = 1/y$$ when larger $$x$$ corresponds to smaller $$y$$ in a rate-like way.
 
 Always check a residual plot after transforming; the goal is a linear trend with well-behaved residuals, not a cosmetic change on the scatterplot alone.
 
@@ -165,15 +165,15 @@ Always check a residual plot after transforming; the goal is a linear trend with
 
 ## Two-way tables and categorical association
 
-When both variables are categorical, we organize counts in a two-way table (also called a contingency table): \(r\) rows for one variable’s categories and \(c\) columns for the other’s. Each cell count tells how many cases fall in that row category and column category together.
+When both variables are categorical, we organize counts in a two-way table (also called a contingency table): $$r$$ rows for one variable’s categories and $$c$$ columns for the other’s. Each cell count tells how many cases fall in that row category and column category together.
 
 ### Marginal distributions
 
-Marginal frequencies (or marginal relative frequencies) come from row totals and column totals printed in the margins of the table. They describe each variable ignoring the other—how often each category of \(X\) occurs overall, and how often each category of \(Y\) occurs overall.
+Marginal frequencies (or marginal relative frequencies) come from row totals and column totals printed in the margins of the table. They describe each variable ignoring the other—how often each category of $$X$$ occurs overall, and how often each category of $$Y$$ occurs overall.
 
 ### Conditional distributions
 
-Conditional relative frequencies restrict attention to one row or one column at a time: among cases in that row, what fraction falls in each column? The answer is \(P(\text{column category} \mid \text{row category})\). Comparing conditional distributions across rows (or across columns) is the standard way to describe association between two categorical variables.
+Conditional relative frequencies restrict attention to one row or one column at a time: among cases in that row, what fraction falls in each column? The answer is $$P(\text{column category} \mid \text{row category})$$. Comparing conditional distributions across rows (or across columns) is the standard way to describe association between two categorical variables.
 
 ### Association versus independence
 

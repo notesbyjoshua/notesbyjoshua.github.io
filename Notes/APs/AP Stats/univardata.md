@@ -25,12 +25,6 @@ A **quantitative variable** takes numerical values where arithmetic is meaningfu
 - **Discrete** variables: countable “jumps” between values (number of siblings, number of text messages in a day). Usually this comes in the forms of integers, but is not limited to them.
 - **Continuous** variables: in principle could take any value in an interval (height, time, temperature), though what we record is usually still rounded or binned (partitioned based on value).
 
-### Univariate versus Bivariate data
-
-**Univariate data** means one variable per case—for example, recording only the height of each child in a sample.
-
-**Bivariate data** means two variables per case—for example, height *and* weight for each child. We treat bivariate exploration in Unit 2 ([Exploring Bivariate Data]({{ '/notes/ap/stats/bivardata/' | relative_url }})).
-
 ---
 
 ## Types of Descriptive Methods
@@ -43,8 +37,8 @@ A **quantitative variable** takes numerical values where arithmetic is meaningfu
 
 Tables are the natural home for **frequency**: how often each value or category appears.
 
-- Let \(n\) be the number of observations (the sample size, or size of the dataset).
-- The **frequency** of a value is how many times it occurs; it is often denoted \(f\).
+- Let $$n$$ be the number of observations (the sample size, or size of the dataset).
+- The **frequency** of a value is how many times it occurs; it is often denoted $$f$$.
 
 The **relative frequency** compares a category’s frequency to the whole dataset:
 

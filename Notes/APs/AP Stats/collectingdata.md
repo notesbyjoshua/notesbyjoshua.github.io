@@ -8,142 +8,144 @@ permalink: /notes/ap/stats/collectingdata/
 
 # Unit 3: Collecting Data
 
-# Basic Terms and Concepts of Data Collection
-
-A population is the entire group of individuals or items that we are interested in  
-
-A frame (or sampling frame) is a list of all the members from which the sample is to be taken. This is usually, but not always, the same as the population  
-
-A sample is the part of the population that is actually being examined  
-
-A census is the process of collecting information from all the units in a population. It is feasible to do a census if the population is small and the process of generating information does not destroy or modify units of the population  
+How you collect data decides what you can conclude. This unit separates vocabulary for populations and samples, contrasts experiments with observational studies, names common sources of bias, and introduces standard sampling designs and experimental layouts used on the AP Statistics exam.
 
 ---
 
-# Experiments and Observational Studies
+## Basic terms: population, frame, sample, census
 
-An experiment is a planned activity that results in measurements (data or observations). In an experiment, the experimenter creates differences in the variables involved in the study and then observes the effects of such differences on the resulting measurements (Basically a researchers designs a specific setting and changes thing to test a hypothesis). One of the problems with experiments is that it might be impossible, impractical, or unethical to conduct an experiment.  
+- The **population** is the entire group of individuals, objects, or cases you want to learn about. In practice, “population” means whatever group your research question specifies, with clear inclusion rules.
 
-An observational study is an activity in which the experimenter observes the relationships among variables rather than creating them (Basically a researchers just observes what is happening rather than designer their own experiments). One of the problems with observational studies is that their results often cannot be generalized to a population because many observational studies use samples and aren’t representative of the population of interest.  
+- The **sampling frame** (often shortened to **frame**) is the list (or practical roster) you draw from when you select a sample. Ideally the frame matches the population, but it often does not: outdated lists, duplicates, or missing groups create gaps between the population you care about and the population you can actually reach.
 
----
+- A **sample** is the part of the population you actually measure. We use sample statistics to estimate unknown population quantities; the quality of those estimates depends on how the sample was chosen and how measurements were taken.
 
-## Confounding Factor
-
-A confounding factor is a third factor which is related to the two variables of interest, causing a false correlation between the two  
+- A **census** collects data from every unit in the population. A census is realistic when the population is small, listing is complete, and measurement does not destroy or alter units. For large or hidden populations, a census is usually too expensive, too slow, or impossible (like the US Census, which is expensive and slow), so we rely on samples instead.
 
 ---
 
-# Biased Sampling
+## Experiments and observational studies
 
-Bias sampling results in values that are systematically different from the population values or systematically favor certain outcomes.  
+- An **experiment** deliberately imposes **treatments** (conditions the investigator controls) on **experimental units**, then records outcomes. The point is to compare results across treatment groups and, when the design is strong, to support **cause-and-effect** claims about the factor being manipulated. However, experiments can be impossible, impractical, or unethical: you cannot randomly assign people to “smoke for twenty years,” and some interventions are too risky. When we cannot manipulate variables, we fall back on observation.
 
-Judgmental sampling uses a nonrandom approach to determine which items from the population are selected for the sample. The approach is entirely based on the judgment of the person selecting the sample (hence the name)  
+- An **observational study** measures variables as they exist; the researcher does not assign treatments. You can describe **association** and identify patterns, but confounding often blocks clean causal interpretation. Many observational studies also rely on weak sampling (volunteers, convenience groups), which limits **generalizability** to a wider population.
 
-Using a sample of convenience is another method that can result in biased outcomes. Samples of convenience are easy to obtain but are not representative of the population  
+### Confounding factor
 
-Volunteer samples, in which subjects choose to be part of the sample, may also result in biased outcomes. For example, answer negatively to a sensitive question may be a reason for many people to not sign up for the sample, leading to bias in the sample  
-
----
-
-# Simple Random Sampling
-
-Simple random sampling (also known as random sampling) is a process of obtaining a sample from a population in which each member has an equal chance of being selected. Random samples can be chosen using a random number generator/a random number table. Of course, real-life methods are never truly random (even random number generators are not random)  
+A **confounding factor** is a third variable tied to both the explanatory variable and the response in a way that makes a link  between two variables misleading. The factor “mixes” with the story you think you are telling, so association between the two variables of interest may be partly or wholly explained by that third variable.
 
 ---
 
-# Other Methods of Random Sampling
+## Biased sampling
 
-In a systematic sampling procedure, the first item is selected at random from the first \( k \) items in a frame, then every \( k \)th item is included in the sample.  
+**Bias** means systematic error: estimates or conclusions tend to land in the same wrong direction, not just randomly off target. **Biased sampling** produces samples that are not representative of the population in a repeatable way.
 
-In stratified random sampling, the population is divided into groups called strata, and a single random sample is selected from each stratum. Strata are homogenous groups of population units — that is, units in a given stratum are similar in some characteristics, whereas those in different strata differ in their characteristics (e.g. students grouped by major)  
+- **Judgmental sampling** picks units according to someone’s discretion rather than a chance mechanism. Even expert judgment can accidentally favor certain kinds of cases.
 
-In proportional sampling, the population is divided into groups called strata, and a simple random sample of size proportional to the stratum size is selected from each stratum. Proportional sampling is the preferred method of stratified sampling  
+- A **convenience sample** takes units that are easy to reach (the first thirty students in the cafeteria, whoever answers the email). Convenience is cheap; representativeness is not guaranteed.
 
-In cluster sampling, a population is divided into existing, non-homogeneous groups called clusters. A random sample of clusters is obtained, and all individuals within the selected cluster should be representative of the population as a whole. (e.g. if I wanted to survey a sample of high school teachers, you would select some schools and then survey all teachers in those schools)  
+- **Volunteer samples** (self-selected samples) attract people who choose to participate. Sensitive topics, strong opinions, or extra time can skew who opts in, so the sample may differ systematically from those who decline.
 
----
-
-# Bias in Surveys
-
-A survey is biased if it systematically favors certain outcomes  
-
-Response Bias occurs when a respondent provides an answer that is either factually wrong or does not accurately reflect his/her true belief/opinion. It may be caused by the behavior of the interviewer or the respondent/outside influence.  
-
-Nonresponse bias may occur if the person selected for an interview cannot be contacted or refuses to answer. If such individuals are different, as a group, from those who are eventually interviewed, then the results may not accurately reflect the whole population.  
-
-Undercoverage bias may occur if a part of the population is left out of the selection process (e.g. in a telephone survey in a country with 4% telephone usage rate, much of the population is left out of the sample, and the sample used may not be representative)  
-
-Wording effect bias may occur if confusing or leading questions are asked. (e.g. “The American Dental Association recommends brushing your teeth three times a day. How often do you brush your teeth on a typical day?” may induce the respondent to give an answer of three or more (even if they don’t brush that often))  
+Most sampling is biased! For example, most surveys/polls are volunteer samples, as with most clinical trials.
 
 ---
 
-# Terms and Concepts of Planning and Conducting Experiments
+## Simple random sampling
 
-A dependent or a response variable is the variable measured in the experiment. An independent or explanatory variable is a variable that might explain the differences in the response.  
+**Simple random sampling** gives every population unit listed in the frame the same chance of being selected, and every possible sample of a fixed size the same chance of occurring (in the usual equal-probability formulation). In practice we approximate this with random digits, software, or a random number table.
 
-A confounding variable is a variable whose effect on the response cannot be separated from the effect of the explanatory variable (as explained before)  
-
-A factor is a variable whose effect on the response is of interest to the experiment. There are two types: qualitative and quantitative (as defined previously)  
-
-Levels are the values of a factor used in an experiment. An experiment can have one or more factors, and the number of levels per factor varies. Treatments are the factor-level combinations used in the experiment. If the experiment only has one factor, then all the levels of that factor are considered treatments of the experiment (e.g. in a market of 3 anxiety-controlling medicines and 2 breathing exercises, there are 2 factor, 3 levels in the first factor and 2 in the other, and 6 (3 \times 2) possible treatments)  
+True physical randomness is hard to achieve: pseudo-random generators have limitations, and implementation mistakes break fairness, but the goal is that **sampling bias** from selection is controlled.
 
 ---
 
-## Control Group and Placebo
+## Other probability sampling designs
 
-A control group is a group of experimental units similar to all the other experimental units except that it is not given any treatment. It is used to establish the baseline response expected from experimental units if no treatment is given  
+### Systematic sampling
 
-A placebo group is a control group that receives a treatment that looks and feels similar to an experimental treatment but is expected to have no effect. Basically, it’s trying to see if thinking you took medicine gives you a confirmation bias  
+In **systematic sampling**, choose a random starting point among the first $$k$$ units in an ordered frame, then take every $$k$$th unit after that. The spacing $$k$$ is chosen so the sample size hits the target. Systematic samples are simple to carry out, but hidden **periodicity** in the frame (for example, listing households by block pattern) can accidentally align with $$k$$ and introduce bias.
 
----
+### Stratified random sampling
 
-## Blinded Experiments
+- In **stratified random sampling**, divide the population into non-overlapping subgroups called **strata** (singular **stratum**). Strata are built so units inside a stratum are alike on a **stratifying variable** you care about, and strata differ from each other. You draw a separate simple random sample within each stratum, then combine the pieces.
 
-It is possible that the measurements or subject interaction will be biased if the person taking the measurements knows whether a patient received a placebo or not.  
+- **Proportional sampling** (a common stratified plan) chooses sample sizes from each stratum in proportion to stratum size, so larger strata contribute more observations. Stratification often improves **precision** for group comparisons and for overall estimates when strata are homogeneous internally.
 
-In a single-blind experiment, either the paitent doesn’t know or the person measuring the patient’s reaction doesn’t know.  
+### Cluster sampling
 
-In a double-blind experiment, both parties do not know what treatment the patient was given.  
+In **cluster sampling**, the population is partitioned into **clusters** (often pre-existing groups such as schools, city blocks, or hospitals). You randomly select some clusters, then measure all units in the chosen clusters (one-stage cluster sampling), or subsample within them (multistage designs in more advanced courses).
 
----
-
-## Randomization
-
-The technique of randomization is used to average the effects of extraneous factors (factors you cannot see) in responses. For example, which group receives treatment should be random, order should be random, etc.  
+Clusters are usually heterogeneous inside (e.g. people within a school differ from each other) which is fine, since the random selection of clusters is what justifies inference to the larger population when the frame is good. Poor cluster choice or too few clusters can still yield misleading results.
 
 ---
 
-## Blocking
+## Bias in surveys
 
-The technique of blocking is used to controll effects of known factors (factors you can see). A block is a group of homogeneous experimental units, where each block share the same characteristics (e.g. separating male patients from female patients).  
+A survey is **biased** when design or execution systematically favors particular answers or kinds of respondents.
 
----
+- **Response bias** arises when answers are inaccurate—because of interviewer tone, social pressure, memory errors, or question sensitivity—even if the sample frame was fine.
 
-## Replication
+- **Nonresponse bias** appears when people who cannot be reached or who refuse to participate differ from those who respond. Heavy nonresponse can skew results even when the initial sample was random.
 
-Replication refers to the process of giving a certain treatment numerous times in an experiment or of applying it to a number of different experimental units. Replication reduces chance of variation among results and allows us to estimate chance variation among results.  
+- **Undercoverage** means part of the population never had a real chance to be selected (no listing, outdated contact information, or a mode that excludes groups). A telephone-only survey in a population with uneven phone access is a classic illustration.
 
----
-
-# Types of Experiment Designs
-
-## Completely Randomized Design
-
-In a completely randomized design, treatments are assigned randomly to all experimental units, or experimental units are assigned randomly to all treatments  
+- **Wording bias** (or **leading questions**) steers respondents toward an answer by framing, loaded language, or embedded claims. Even subtle wording changes can shift measured percentages.
 
 ---
 
-## Randomized Block Design
+## Planning experiments: variables, factors, treatments
 
-If the treatments are the only systematic differences present in the experiment, then the completely randomized design is the best for comparing the responses. But often there are other factors affecting responses. In a randomized block design, all experimental units are grouped by certain characteristics to form homogenous blocks, and then a completely randomized design is applied within each block  
+- The **response variable** (dependent variable) is what you measure after treatments are applied. The **explanatory variable** (independent variable) is what you manipulate or use to explain changes in the response.
+
+- A **confounding variable** affects the response in a way that cannot be separated from the explanatory variable’s effect with the current design. Random assignment is the main tool for spreading out confounders across groups; blocking handles confounders you can name and measure.
+
+- A **factor** is an explanatory variable whose effect you study. Factors can be categorical or quantitative, just as in exploratory data analysis. **Levels** are the specific values or categories of a factor used in the study.
+
+- **Treatments** are the distinct conditions applied to experimental units—formally, combinations of factor levels. With two factors, the number of possible treatments is the product of level counts. For example, three drug doses and two exercise types give this many treatment combinations:
+
+$$
+3 \times 2 = 6
+$$ (assuming each treatment is made of one dose and one exercise)
+
+When there is only one factor, each level is a treatment.
 
 ---
 
-## Matched-Pairs Design
+## Control, placebo, and blinding
 
-If there are only two treatments to be compared in the presence of a blocking factor, then you should use a randomized paired comparison design. This can be designed in two different ways:  
+- A **control group** receives no active treatment (or a baseline condition) so you can compare the response under treatment to a reference level.
 
-Form two or more blocks of two experimental units each. Experimental units within each block should be matched by some relevant characteristics. Within each block, the two treatments are assigned randomly. Each block will have one experimental and one control unit. This type of experiment is called a matched-pairs design  
+- A **placebo** looks like the real treatment but lacks the active ingredient or mechanism; the **placebo group** helps separate biological or mechanical effects from psychological effects of receiving something labeled as treatment.
 
-Alternatively, each experimental unit can be used as its own block. Assign both treatments to each experimental unit, but in random order. To control the effect of the order of treatment, randomly determine the order.  
+If subjects know which treatment they received, behavior and reporting can shift. If evaluators know, measurements can tilt. So, researches sometimes perform a **blinded experiment**, where either the subject or the experimenter (who's collecting data) (or both) don't know if the subject got the placebo or not.
+
+- In a **single-blind** study, either the subjects or the people collecting outcome data do not know who received which treatment.
+
+- In a **double-blind** study, neither subjects nor outcome assessors know the assignment; only those managing randomization (and safety oversight) keep that information until the study is analyzed.
+
+Note that in rare studies with inanimate objects, they can't be blinded, since they couldn't see in the first place!
+
+---
+
+## Randomization, blocking, replication
+
+- **Randomization** assigns treatments to units by chance so that **lurking variables** tend to balance across groups on average. Random assignment supports causal claims about differences observed in the experiment, whilerandom sampling supports generalizing to a population. Designs can include one, both, or neither.
+
+- **Blocking** sorts experimental units into **blocks** of similar units (same sex, similar baseline pain scores, same litter of animals), then randomizes treatments within each block. Blocking controls known sources of variability and can make comparisons more precise than a single completely pooled randomization.
+
+- **Replication** means repeating treatments on many units (or repeating runs). Without replication, a single unusual unit can dominate the story; with replication, you can estimate how much responses vary within a treatment group.
+
+---
+
+## Types of experimental design
+
+### Completely randomized design
+
+In a **completely randomized design**, experimental units are assigned to treatments entirely at random, with no blocking step. This is the cleanest layout when no strong **nuisance factor** is obvious.
+
+### Randomized block design
+
+A **randomized block design** first forms blocks of similar units, then runs a completely randomized design inside each block. You compare treatments after removing block-to-block drift. If an important factor is ignored and left to vary freely, it can inflate variability or mimic treatment effects.
+
+### Matched-pairs design
+
+A **matched-pairs design** is a specialized block design for comparing two treatments: each block has two units matched on relevant characteristics, and treatments are randomized within the pair. Alternatively, the same unit can receive both treatments in **random order** (a crossover-style idea), with randomization of order controlling **order effects**. The second version uses each subject as its own block; **carryover effects** must be considered when treatments could permanently change the unit.

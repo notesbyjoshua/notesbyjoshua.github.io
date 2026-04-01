@@ -42,11 +42,11 @@ Odds are a ratio, not a probability; you can recover probabilities from odds wit
 
 ## Events: complement, disjoint, union, intersection
 
--The **complement** of an event $$A$$ is the event that $$A$$ does not occur. It includes every outcome in $$S$$ that is not in $$A$$. Notation includes $$A'$$ and $$A^C$$.
--**Disjoint** events (also called **mutually exclusive** events) cannot both occur on the same trial: they share no outcomes, so $$P(A \cap B) = 0$$ when $$A$$ and $$B$$ are disjoint.
--The **union** $$A \cup B$$ is “$$A$$ or $$B$$ or both”—at least one of the two events happens.
--The **intersection** $$A \cap B$$ is “$$A$$ and $$B$$ both” happen.
--**Conditional probability** “$$A$$ given $$B$$” restricts attention to outcomes where $$B$$ occurred. The notation is
+- The **complement** of an event $$A$$ is the event that $$A$$ does not occur. It includes every outcome in $$S$$ that is not in $$A$$. Notation includes $$A'$$ and $$A^C$$.
+- **Disjoint** events (also called **mutually exclusive** events) cannot both occur on the same trial: they share no outcomes, so $$P(A \cap B) = 0$$ when $$A$$ and $$B$$ are disjoint.
+- The **union** $$A \cup B$$ is “$$A$$ or $$B$$ or both”—at least one of the two events happens.
+- The **intersection** $$A \cap B$$ is “$$A$$ and $$B$$ both” happen.
+- **Conditional probability** “$$A$$ given $$B$$” restricts attention to outcomes where $$B$$ occurred. The notation is
 
 $$
 A \mid B

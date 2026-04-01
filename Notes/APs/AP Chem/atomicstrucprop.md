@@ -8,293 +8,308 @@ permalink: /notes/ap/chem/atomicstrucprop/
 
 # Unit 1: Atomic Structure and Properties
 
----
-
-## Significant Figures Rules
-
-Significant figures (sig figs) are important for rounding purposes. They are not very significant (pun intended) for the AP but are important for future science endeavors. Below are some rules for sig figs:
-
-- Nonzero digits: Significant  
-- Leading zeros: Never significant  
-- Zero in the middle: Significant (if last digit is nonzero)  
-
-**Trailing zeros rule**:
-
-- If decimal: significant after decimal  
-- If no decimal: Never significant  
-
-**Exact numbers**: Infinite sig figs (e.g. 4 from the answer how many apples are in the basket is an exact number)  
-
-**Addition/subtraction**: Answer’s decimal places (after decimal) is equal to the smallest of the numbers being added/subtracted  
-
-**Multiplication/division**: Answer has the same number of sig figs as the number with the least number of sig figs  
+Unit 1 establishes the vocabulary and models used everywhere else in chemistry: how we count and report measurements, how the **periodic table** organizes the elements, how **electrons** occupy **orbitals**, and how atomic-scale structure shows up in macroscopic trends. It also sets up basic definition and rules that you will use for the rest of chemistry.
 
 ---
 
-## Matter
+## Significant figures
 
-Anything that has space and has mass (chart below) (Make sure to put image when time comes)
+**Significant figures** are the digits in a measurement that carry meaning—every digit we are entitled to report given how well we know the quantity. They matter whenever you round a calculated result so it does not pretend to be more precise than the data that produced it. On the AP exam they appear mainly in lab-style questions; in research they are non-negotiable.
+
+- Nonzero digits are always significant. **Leading zeros** (as in $$0.0045$$) are not significant; they only locate the decimal point. **Captive zeros** between nonzero digits are significant ($$1.05$$ has three significant figures). 
+- **Trailing zeros** require care: if a decimal point is shown, trailing zeros are significant ($$12.0$$ has three); if there is no decimal, trailing zeros are ambiguous in plain notation ($$1200$$ might be two, three, or four figures—scientific notation removes that ambiguity).
+- **Exact numbers**—such as a counted dozen eggs or a defined conversion within a system—have effectively unlimited significant figures and do not limit your result. 
+- For **addition and subtraction**, round the result to the same number of **decimal places** as the term with the fewest. For **multiplication and division**, round to the same number of **significant figures** as the factor with the fewest.
 
 ---
 
-## Reading the Periodic Table
+## Matter and its classification
 
-In the periodic table, the horizontal rows are called periods and the vertical columns are called groups. Groups can be numbered in Roman numerals or simply as 1–18, but some are also named, like:
+**Matter** is anything that has mass and occupies volume. Chemists classify it first by **composition**. A **pure substance** has fixed composition; **elements** are made of one kind of atom, and **compounds** contain two or more elements combined in definite proportion. A **mixture** combines substances without fixed proportion; **homogeneous** mixtures (solutions) are uniform on a macroscopic scale, while **heterogeneous** mixtures are not.
 
-- Group IA/1 — Alkali Metals  
-- Group IIA/2 — Alkaline Earth Metals  
-- Group B/3–12 — Transition Metals  
-- Group VA/15 — Pnictogens  
-- Group VIA/16 — Chalcogens  
-- Group VIIA/17 — Halogens  
-- Group VIIIA/18 — Noble Gases  
+**ADD FLOWCHART**
 
-There are also two rows beneath the periodic table, the lanthanides and actinides, the rare Earth elements, or inner transition metals.
+---
 
-Reading an element: On the picture below, $$A$$ represents the number of protons and neutrons in the nucleus (mass number) and $$Z$$ represents the number of protons in the nucleus (atomic number). **REMEMBER TO PUT PICTURE HERE**
+## Reading the periodic table
+
+The **periodic table** arranges elements by increasing **atomic number** $$Z$$. Horizontal rows are **periods**; vertical columns are **groups** (or families). Groups may be labeled $$1$$–$$18$$ or with Roman numerals and letters in older notation. Several families have traditional names that appear frequency:
+
+- **Alkali metals** (group 1, excluding hydrogen in most trend discussions)  
+- **Alkaline earth metals** (group 2)  
+- **Transition metals** (groups 3–12)  
+- **Pnictogens** (group 15)  
+- **Chalcogens** (group 16)  
+- **Halogens** (group 17)  
+- **Noble gases** (group 18)  
+
+Below the main block, the **lanthanides** and **actinides** are the **inner transition metals** (often called **rare-earth metals** in informal usage for the lanthanides).
+
+For any entry, the atomic number $$Z$$ is the number of **protons** in the nucleus and defines the element. The **mass number** $$A$$ counts protons plus **neutrons** in a given **isotope**:
+
+$$
+A = Z + N
+$$
+
+where $$N$$ is the neutron count. Isotopes of the same element share $$Z$$ but differ in $$A$$ and therefore in **neutron** number.
 
 ---
 
 ## Ions
 
-Ions are atoms with a charge. A cation is a positively charged ion and an anion is a negatively charged ion. All cations (most likely metals/metalloids), are located to the **left** of the staircase, while all anions (most likely non-metals) are located to the **right** of the staircase. Note that most of the transition metals have a variable charge, but are always cations.
+An **ion** is an atom or group of atoms with a net **electric charge** from gain or loss of electrons. A **cation** is positive (fewer electrons than protons); an **anion** is negative (more electrons than protons). In broad periodic terms, **metals** tend to form cations and **nonmetals** tend to form anions, consistent with their positions relative to the **metalloid** (metalloids are elements that in between metal and nonmetal) “staircase.” Many **transition metals** exhibit **variable charge** in compounds because several **oxidation states** are comparably stable (Mentioned later in more detail).
 
-### Polyatomic Ions
+### Polyatomic ions
 
----
+**Polyatomic ions** are charged **covalent** units that behave as a single piece in **ionic compounds**—for example, **nitrate** ($$\text{NO}_3^-$$), **sulfate** ($$\text{SO}_4^{2-}$$), and **ammonium** ($$\text{NH}_4^+$$).
 
-## Avogadro’s Number and Molar Mass
-
-Avogadro's number is one of the most important numbers in chemistry. It defines a mole, which is
-
-$$
-1 \text{ mole} = 6.022 \times 10^{23} \text{ entities}
-$$ (Avogadro's Number)
-
-A mole has a mass of the atomic mass units (AMU) of an element, just converted to grams (Think of Avogadro's Number as a conversion from AMU to grams). The mass of 1 mole of an element is called that element's **molar mass**, and the molar mass of an object can be represented as the sums of each element's molar mass. To calculate how much mass is in a compound, you can use the formula:
-
-$$
-\% \text{ element} = \frac{\text{mass of element in 1 mol of compound}}{\text{molar mass of compound}} \times 100\%
-$$
+**ADD PICTURE**
 
 ---
 
-## Percent Equations
+## Avogadro’s number, the mole, and molar mass
 
-These equations aren't seen often, but are very important in the context of lab work and error analysis.
+- The **mole** is the chemist’s unit of **counting**: one mole contains **Avogadro’s number** (sometimes denoted as $$N_A$$) of specified **entities** (atoms, molecules, ions, formula units, etc.):
 
 $$
-\% \text{ yield} = \frac{\text{actual}}{\text{theoretical}} \times 100\%
+1 \text{ mol} = 6.022 \times 10^{23} \text{ entities}
 $$
+
+The **molar mass** of an element is the mass of one mole of its atoms, numerically equal (in $$\text{g/mol}$$) to the **average atomic mass** listed on the periodic table (which weights **isotopes** by natural **abundance**). For a **compound**, add the molar masses of all atoms in the formula to obtain the compound’s molar mass.
+
+The **mass percent** of an element in a compound compares the mass of that element in one mole of compound to the molar mass of the whole:
+
+$$
+\% \text{ element} = \frac{\text{mass of element in } 1 \text{ mol of compound}}{\text{molar mass of compound}} \times 100\%
+$$
+
+---
+
+## Mass spectrometry
+
+**Mass spectrometry** separates ions by **mass-to-charge ratio** $$\frac{m}{z}$$. A typical spectrum plots **relative abundance** (or detector **intensity**) on the vertical axis against $$\frac{m}{z}$$ on the horizontal axis. For an element, the pattern of peaks reveals **isotope** masses and their approximate **natural abundances**; for molecules, **fragmentation** patterns can support **structure** assignment in advanced work.
+
+**ADD MORE**
+
+---
+
+## Percent yield, percent error, and efficiency
+
+In laboratory work, **theoretical yield** is the amount of product predicted from **stoichiometry** assuming complete conversion. **Actual yield** is what you isolate. **Percent yield** measures how much of the theoretical amount you obtained:
+
+$$
+\% \text{ yield} = \frac{\text{actual yield}}{\text{theoretical yield}} \times 100\%
+$$
+
+**Percent error** compares a measured value to an accepted or theoretical value:
 
 $$
 \% \text{ error} = \left| \frac{\text{actual} - \text{theoretical}}{\text{theoretical}} \right| \times 100\%
 $$
 
+**Efficiency** in an energy context is the fraction of input energy that appears as useful output:
+
 $$
-\text{Efficiency} = \frac{\text{useful energy output}}{\text{energy input}} \times 100\%
+\text{efficiency} = \frac{\text{useful energy output}}{\text{energy input}} \times 100\%
 $$
 
-Each equation has its own use case: When calculating efficiency, you use $$\% \text{ yield}$$ for production efficiency, and $$Efficiency$$ in terms of thermodynamic contexts. You will usually always use $$\% \text{ error}$$ in error analysis.
+Do not confuse percent yield (a mass or mole recovery for a reaction) with **thermodynamic efficiency** (an energy ratio). Use percent error when judging how far a measurement sits from a reference value.
 
 ---
 
 ## Molarity
 
-Molarity is a measure of concentration, and is given by:
+**Molarity** ($$M$$) expresses concentration as moles of solute per liter of solution:
 
 $$
 M = \frac{\text{moles of solute}}{\text{liters of solution}} = \frac{\text{mol}}{L}
 $$
 
-Molarity is temperature and volume dependent, but is independent of the mass of the solution (as long as it stays at the same mol : liter ratio).
+Because volume changes with temperature, molarity is **temperature-dependent**. It depends on the amount of solute per volume of solution, not on the total mass of the solution by itself.
 
 ---
 
-## Mass Spectrometry
+## Oxidation numbers
 
-Mass spectrometry: A tool to measure the mass of each isotope of an element, with relative abundance (intensity) on the $$y\text{-axis}$$ and mass-to-charge ratio on the $$x\text{-axis}$$.
+An **oxidation number** (oxidation state) is a formal bookkeeping charge assigned to an atom in a compound or ion, as if electrons in every bond belonged entirely to the more **electronegative** partner. It tracks how electron density shifts relative to the element in its standard state.
 
----
+Useful conventions include:
 
-## Oxidation State
+- Any **element** in its elemental form (e.g. $$\text{O}_2$$, $$\text{Na}$$) has oxidation number $$0$$.  
+- A **monatomic ion** matches its charge (e.g. $$\text{Na}^+$$ is $$+1$$).  
+- **Oxygen** is usually $$-2$$ except in **peroxides** such as $$\text{H}_2\text{O}_2$$ ($$-1$$ for O) and in compounds with fluorine.  
+- **Hydrogen** is usually $$+1$$ except in **metal hydrides** (e.g. $$\text{NaH}$$), where it is $$-1$$.  
+- **Fluorine** is $$-1$$ in all compounds. Other **halogens** are $$-1$$ unless bonded to a more electronegative element (such as oxygen).  
 
-The total number of electrons that have been removed from an element.
-
-- For uncombined elements (e.g. $$ \text{O}_2 $$) the oxidation state is $$0$$.  
-- For monatomic ions (e.g. $$\text{Na}^+$$) the oxidation state is its charge.  
-- For oxygen ($$\text{O}$$) the oxidation state is usually $$-2$$unless it is in a peroxide ($$\text{H}_2\text{O}_2$$), in which it is $$-1$$.  
-- For hydrogen ($$\text{H}$$) the oxidation state is usually $$+1$$ unless paired with metal in hydrides (metal + hydrogen), in which case it is $$-1$$.  
-- For fluorine ($$\text{F}$$), it is always $$-1$$, and other halogens have oxidation state $$-1$$
- unless bound to a more electronegative element.
-
-More electronegative elements get priority in assigning oxidation states.
+When atoms tie, use structure or further rules; the guiding idea is that more electronegative atoms receive the negative assignment in a bond.
 
 ---
 
-## Electron Configurations
+## Electron configuration and quantum numbers
 
-### Quantum Numbers
+Each electron in an atom is described by four **quantum numbers** that arise from the **wave-mechanical** model.
 
-There are many different values that determine the orbital of an electron.
+The **principal quantum number** $$n$$ is a positive integer ($$n = 1, 2, 3, \ldots$$). It sets the shell and is the main contributor to orbital energy for hydrogen-like atoms.
 
-- Principal quantum number ($$n$$): Describes the quantum state of an electron (the size and overall energy of the orbital) (must be a non-negative integer).
-- Angular momentum / azimuthal quantum number ($$l$$): Indicates the shape of the orbital (must be from $$0$$ to $$n - 1$$).
-    - $$l = 0$$ → s orbital
-    - $$l = 1$$ → p orbital
-    - $$l = 2$$ → d orbital  
-    - $$l = 3$$ → f orbital  
-    - $$l = 4$$ → g orbital (mostly theoretical)  
-- Spin quantum number ($$m_s$$): Spin of electron (up/down) (must be $$+\frac{1}{2}$$ or $$-\frac{1}{2}$$).
-- Magnetic quantum number ($$m_l$$): Indicates orientation of orbital (must be from $$-l$$ to $$+l$$).
+The **azimuthal** (or **angular momentum**) quantum number $$l$$ runs from $$0$$ to $$n - 1$$ and labels subshell shape:
 
----
+- $$l = 0$$ → **s** orbital  
+- $$l = 1$$ → **p** orbital  
+- $$l = 2$$ → **d** orbital  
+- $$l = 3$$ → **f** orbital  
 
-**Aufbau principle**: When filling electron orbitals, fill in the lowest energy orbital before moving out. Some notable exceptions to the Aufbau principle are chromium ($$\text{Cr}$$), copper ($$\text{Cu}$$), molybdenum ($$\text{Mo}$$), silver ($$\text{Ag}$$), gold ($$\text{Au}$$), niobium ($$\text{Nb}$$), ruthenium ($$\text{Ru}$$), palladium ($$\text{Pd}$$), platinum ($$\text{Pt}$$), plus some lanthanides and actinides ($$d^5$$ and $$d^{10}$$ are especially stable but violate the Aufbau rule), which is why transition metals have variable charges.
+The **magnetic quantum number** $$m_l$$ takes integer values from $$-l$$ to $$+l$$ and distinguishes **orientations** of a subshell in space.
 
----
+The **spin quantum number** $$m_s$$ is $$+\frac{1}{2}$$ or $$-\frac{1}{2}$$ for the two **spin** states of a single electron.
 
-**Hund’s rule**: Electrons will occupy empty orbitals (in the same orbital type) first, then pair up if everything else is full. Electrons in the same orbital will also have opposite spins to minimize repulsion.
+The **Pauli exclusion principle** states that no two electrons in the same atom may share the same set of four quantum numbers, so at most two electrons occupy any one atomic orbital, and they must have **opposite spin**.
 
----
+The **Aufbau principle** directs you to fill orbitals in order of increasing energy. The familiar $$n s$$, $$(n-1) d$$, $$(n-2) f$$ crossing is why the periodic table has its shape. Exceptions (e.g. chromium $$\text{Cr}$$, copper $$\text{Cu}$$, and several heavier transition metals) reflect especially stable $$d^5$$ or $$d^{10}$$ arrangements; those same stability patterns contribute to **variable** metal oxidation states in compounds.
 
-**Pauli exclusion principle**: No two electrons can have the same quantum state.
+**Hund’s rule** favors placing electrons singly in degenerate orbitals of a subshell before pairing, with **parallel spins** where possible, to reduce **electron–electron repulsion**.
 
----
+**Heisenberg’s uncertainty principle** limits how sharply **position** and **momentum** can be known simultaneously for a quantum particle—a conceptual foundation for why we speak in terms of orbitals (probability distributions) rather than classical orbits.
 
-**Heisenberg’s uncertainty principle**: You cannot know the position and momentum of a quantum object at the same time.
-
----
-
-**Abbreviated electron configurations**: When writing out electron configurations, we can write them as [noble gas] + rest of configuration (e.g. $$\text{Cs} = [\text{Xe}]\, 6s^1$$).
-
----
-
-**Isoelectronic configurations**: Two ions are isoelectronic if they have the same configuration (e.g. $$\text{Br}^-$$ and $$\text{Se}^{2-}$$ are isoelectronic). The more protons an isoelectronic ion has, the smaller it is (e.g. $$\text{F}^-$$ is larger than $$\text{Na}^+$$).
-
----
-
-## Energy and Quantization
-
-**Bohr's model of the atom**: Niels Bohr believed that electrons can only exist in certain energy states (which is correct), but incorrectly believed that electrons orbit the nucleus.
-
----
-
-**Waves and energy**
-
-**Wavelength ($$\lambda$$)**: Distance between two peaks/troughs of a wave.
-
-**Frequency ($$\nu$$ or $$f$$)**: Rate at which a wave vibrates (units: Hz, $$1/\text{s}$$).
-
-The wavelength and frequency of a photon (light) are related by $$c = \nu \lambda,$$ where $$c$$ is the speed of light, approximately $$
-3 \times 10^{8} \text{ m/s}$$.
-
----
-
-**Energy of an electron**: The energy of an electron is different at each orbit, and is given by the equation
+**Abbreviated configurations** use the previous noble gas core in brackets, e.g.
 
 $$
-E = -2.178 \times 10^{-18} \frac{1}{n^2} \text{ J},
+\text{Cs}:\; [\text{Xe}]\, 6s^1
 $$
 
-where $$n$$ is the principal quantum number of the orbit.
+Two species are **isoelectronic** if they have the same electron configuration (e.g. $$\text{Br}^-$$ and $$\text{Se}^{2-}$$). Among isoelectronic ions, **ionic radius** decreases as **nuclear charge** increases because the same electron count is pulled closer by more protons (e.g. $$\text{Na}^+$$ is smaller than $$\text{F}^-$$).
 
 ---
 
-**Photons and energy quantization**: Max Planck discovered that energy comes in discrete packets called photons. He formulated that
+## Energy, light, and quantization
+
+**Bohr’s model** correctly emphasized that an electron in an atom can occupy only certain allowed energies (**quantization**), but the picture of electrons in circular orbits is obsolete; **quantum mechanics** replaces orbits with orbitals.
+
+For **electromagnetic radiation** (for AP Chemistry this is just light), **wavelength** $$\lambda$$ and **frequency** $$\nu$$ (or $$f$$) are related by
 
 $$
-E = nh\nu = \frac{hc}{\lambda},
+c = \nu \lambda,
 $$
 
-where $$h$$ is Planck’s constant, approximately $$6.626 \times 10^{-34} \text{ J} \cdot \text{ s}$$, and $$c$$ is the speed of light.
+where $$c \approx 3.00 \times 10^8 \text{ m/s}$$ is the **speed of light** in vacuum. **Frequency** is measured in **hertz** ($$\text{Hz}$$, or $$\text{s}^{-1}$$).
 
-Normally, when solving problems regarding quantum energy, you always take the difference between two energy levels. As a consequence, sometimes when heated, elements will burn a certain color which can be helpful in their determination (see flame test for more details).
-
-**de Broglie wavelength**: In 1924, de Broglie formulated that all matter can take the form of waves. The de Broglie wavelength models the wavelength of any particle, and is given by
+For the hydrogen atom, the energy of level $$n$$ is often written
 
 $$
-\lambda = \frac{h}{mv}.
+E_n = -2.178 \times 10^{-18} \frac{1}{n^2} \text{ J},
 $$
+
+with $$n$$ the **principal quantum number**. Spectroscopy probes **transitions** $$\Delta E$$ between levels and **emission** lines appear when an electron falls to a lower level and releases a photon (light particle).
+
+**Planck** related photon energy to frequency:
+
+$$
+E = h\nu = \frac{hc}{\lambda},
+$$
+
+with **Planck’s constant** $$h \approx 6.626 \times 10^{-34} \text{ J}\cdot\text{s}$$. That relation explains **atomic spectra** and **line colors** in **flame tests** and discharge tubes: each transition corresponds to a specific $$\Delta E$$ and therefore a characteristic photon energy.
+
+**de Broglie** associated a wavelength with any particle of momentum $$p$$:
+
+$$
+\lambda = \frac{h}{p} = \frac{h}{mv}
+$$
+
+for nonrelativistic speeds, linking particle and wave descriptions (wave-particle duality) at the quantum scale.
 
 ---
 
-## The Photoelectric effect and Photoelectron spectroscopy
+## Photoelectric effect and photoelectron spectroscopy
 
-**Photoelectric effect**: The photoelectric effect occurs when electrons are emitted from a surface (usually metal) when light is shone on it, increasing with the frequency of the wave. (IDK I need more on ts)
+In the **photoelectric effect**, photons eject electrons from a metal surface only when the photon energy exceeds a threshold set by the material’s **work function** $$\Phi$$. Increasing frequency increases the maximum kinetic energy of emitted electrons according to
 
-**Photoelectron spectroscopy**: A tool to show the energy held by each electron and the number of electrons with a certain binding energy.
+$$
+K_{\max} = h\nu - \Phi,
+$$ (for all purposes, memorizing this equation is not necessary for the AP Chemistry exam)
+
+while increasing **intensity** at fixed frequency increases the number of ejected electrons, not their maximum **kinetic energy**.
+
+**Photoelectron spectroscopy** (**PES**) measures how much energy must be supplied to remove electrons from subshells in atoms or molecules. Peaks appear at **binding energies** characteristic of each orbital type; **relative peak areas** (after accounting for ionization cross sections) reflect electron counts in those subshells.
+
+**VERIFY THIS**
 
 ---
 
-## Electromagnetic Spectrum
+## Electromagnetic spectrum
 
-Spectrum of how much energy a photon has and what type it is.
+The **electromagnetic spectrum** orders all **electromagnetic radiation** by **photon energy** (equivalently frequency or wavelength). **Visible light** spans roughly
 
-Visible light range: $$380\text{ nm}$$ – $$760\text{ nm}$$ (ADD PHOTO LATER)
+$$
+380\text{ nm} \text{ to } 760\text{ nm},
+$$
+
+a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**).
+
+**ADD IMAGE**
 
 ---
 
-## Orbitals and shielding
+## Orbitals, nodes, shielding, and penetration
 
-Orbital shapes: Orbital shapes are the possible regions an electron can be in ($$\#\text{ nodes} = n - 1$$).
+An **atomic orbital** is a three-dimensional region where the probability of finding an electron exceeds some threshold. The total number of **nodes** for a hydrogen-like orbital is $$n - 1$$, split between **radial** and **angular** contributions according to $$n$$ and $$l$$.
 
-The energy of the orbitals is as follows: $$s < p < d < f$$ (within the same $$n$$ levels).
+For a given $$n$$ in many-electron atoms, subshell energies usually follow
 
-Shielding: When electrons are more condensed, the outer electron(s) are more attracted to the nucleus (bad shielding), and if the electrons are spread out (more electron shells), the outer electron(s) are weakly attracted (strong shielding).
+$$
+E_{ns} < E_{np} < E_{nd} < E_{nf},
+$$
+
+because **s** orbitals **penetrate** closer to the nucleus and experience less **shielding** from inner electrons than **p**, **d**, or **f** orbitals at comparable $$n$$.
+
+**Shielding** (screening) means inner and same-shell electrons reduce the **full nuclear charge** $$Z$$ felt by an electron of interest. More effective shielding lowers **effective nuclear charge** and stabilizes outer electrons less. **Penetration** explains why an $$ns$$ electron can be more tightly bound than an $$(n-1)d$$ electron despite the larger $$n$$ in the label—leading to the **aufbau** order you use when writing configurations.
 
 ---
 
 ## Effective nuclear charge
 
-The effective nuclear charge
+**Effective nuclear charge** $$Z_{\text{eff}}$$ is the net positive charge experienced by an electron in a many-electron atom after shielding. A simple textbook form is
 
 $$
-Z_{\text{eff}} = Z - S
+Z_{\text{eff}} = Z - S,
 $$
 
-Ordering of penetration:
+where $$S$$ is a **shielding constant** summarizing electron–electron repulsion. **Slater’s rules** and more advanced models give numerical estimates; qualitatively, $$S$$ grows as you add **inner shells**, so going **down a group** increases shielding even though $$Z$$ increases.
+
+**Penetration** order among subshell types at comparable $$n$$ is often summarized as
 
 $$
-s > p > d > f
+s > p > d > f,
 $$
 
-Shielding constant increases as you go down the periodic table.
+meaning **s** electrons “see” more of the nucleus and are stabilized relative to **p**, **d**, and **f** in the same shell.
 
 ---
 
-## Periodic trends (put picture later)
+## Periodic trends
 
-- **Ionization energy**: Energy needed to remove an electron  
-- **Electron affinity**: Energy change when an atom gains an electron  
-- **Atomic radius**: Distance from the outermost orbital to the nucleus  
-- **Nonmetallic character**: Tendency of an element to gain electrons  
-- **Metallic character**: Tendency of an element to lose electrons
+**Ionization energy** is the energy required to remove an electron from a gaseous atom or ion (first, second, … ionization energies for successive removals). **Electron affinity** is the energy change when an electron is added; **more exothermic** addition corresponds to a **more favorable** affinity in the usual sign convention used in textbooks (check your table’s sign choice).
 
-The general trends for all of the properties listed above can be summarized in the image below:
+**Atomic radius** gauges the size of the **electron cloud** (often defined by metallic or covalent radii in different contexts). **Metallic character** is the tendency to lose electrons and behave as a metal (cations); **nonmetallic character** is the tendency to gain or share electrons with nonmetals (anions).
 
-**IMAGE**
+Broad patterns: **atomic radius** increases **down a group** (new shells, more shielding) and decreases **across a period** (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite **horizontal** trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at **boron** or the **electron affinity** anomaly for **nitrogen**, appear when subshell structure or pairing changes the cost of removing or adding an electron.
 
-Note that there will be exceptions to these trends.
+**INSERT GRAPH**
 
 ---
 
-## Electrostatics
+## Electrostatics and Coulomb’s law
 
-Electrostatics is the study of electric charges at rest. For AP Chemistry, electrostatics describe the energy and forces that act on an ion, given its charge. 
-
-Coulomb’s law:
+**Electrostatics** describes forces and **potential energies** between charges at rest. The **Coulomb force** between two point charges is
 
 $$
-F = \frac{k Q_1 Q_2}{r^2}
+F = k \frac{Q_1 Q_2}{r^2},
 $$
 
-This law describes the attraction between two ions, with $$Q_1$$ and $$Q_2$$ being the charges of the ions and $$r$$ being the radius between the two ions. $$k$$ is a constant, and is approximately equal to $$8.99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2$$.
+where $$r$$ is their separation, $$Q_1$$ and $$Q_2$$ carry signs, and $$k \approx 8.99 \times 10^9 \,\text{N}\cdot\text{m}^2/\text{C}^2$$. Like charges repel; opposite charges attract.
 
-Electric potential energy:
+The **electric potential energy** of the pair is
 
 $$
-E = \frac{k Q_1 Q_2}{r}
+U = k \frac{Q_1 Q_2}{r}.
 $$
 
-This equation describes the potential energy between two ions. This will be more useful in Unit 2.
+These expressions reappear when you interpret **lattice energy**, **bond** formation, and **ionic** attraction in [Unit 2]({{ '/notes/ap/chem/compounds/' | relative_url }}): same inverse dependence on distance, same sensitivity to charge magnitude.

@@ -47,8 +47,9 @@ Here is a list of notes I will add (in order)!
 1. AP Stats Unit 4
 2. AP Chem Units 2-4
 3. AP Precalc Unit 1-3
+4. Adding Pictures/Graphs
 
-More notes are coming soon!
+More notes and updates are coming soon!
 
 ---
 

@@ -15,11 +15,8 @@ How you collect data decides what you can conclude. This unit separates vocabula
 ## Basic terms: population, frame, sample, census
 
 - The **population** is the entire group of individuals, objects, or cases you want to learn about. In practice, “population” means whatever group your research question specifies, with clear inclusion rules.
-
 - The **sampling frame** (often shortened to **frame**) is the list (or practical roster) you draw from when you select a sample. Ideally the frame matches the population, but it often does not: outdated lists, duplicates, or missing groups create gaps between the population you care about and the population you can actually reach.
-
 - A **sample** is the part of the population you actually measure. We use sample statistics to estimate unknown population quantities; the quality of those estimates depends on how the sample was chosen and how measurements were taken.
-
 - A **census** collects data from every unit in the population. A census is realistic when the population is small, listing is complete, and measurement does not destroy or alter units. For large or hidden populations, a census is usually too expensive, too slow, or impossible (like the US Census, which is expensive and slow), so we rely on samples instead.
 
 ---
@@ -27,7 +24,6 @@ How you collect data decides what you can conclude. This unit separates vocabula
 ## Experiments and observational studies
 
 - An **experiment** deliberately imposes **treatments** (conditions the investigator controls) on **experimental units**, then records outcomes. The point is to compare results across treatment groups and, when the design is strong, to support **cause-and-effect** claims about the factor being manipulated. However, experiments can be impossible, impractical, or unethical: you cannot randomly assign people to “smoke for twenty years,” and some interventions are too risky. When we cannot manipulate variables, we fall back on observation.
-
 - An **observational study** measures variables as they exist; the researcher does not assign treatments. You can describe **association** and identify patterns, but confounding often blocks clean causal interpretation. Many observational studies also rely on weak sampling (volunteers, convenience groups), which limits **generalizability** to a wider population.
 
 ### Confounding factor
@@ -41,9 +37,7 @@ A **confounding factor** is a third variable tied to both the explanatory variab
 **Bias** means systematic error: estimates or conclusions tend to land in the same wrong direction, not just randomly off target. **Biased sampling** produces samples that are not representative of the population in a repeatable way.
 
 - **Judgmental sampling** picks units according to someone’s discretion rather than a chance mechanism. Even expert judgment can accidentally favor certain kinds of cases.
-
 - A **convenience sample** takes units that are easy to reach (the first thirty students in the cafeteria, whoever answers the email). Convenience is cheap; representativeness is not guaranteed.
-
 - **Volunteer samples** (self-selected samples) attract people who choose to participate. Sensitive topics, strong opinions, or extra time can skew who opts in, so the sample may differ systematically from those who decline.
 
 Most sampling is biased! For example, most surveys/polls are volunteer samples, as with most clinical trials.
@@ -67,7 +61,6 @@ In **systematic sampling**, choose a random starting point among the first $$k$$
 ### Stratified random sampling
 
 - In **stratified random sampling**, divide the population into non-overlapping subgroups called **strata** (singular **stratum**). Strata are built so units inside a stratum are alike on a **stratifying variable** you care about, and strata differ from each other. You draw a separate simple random sample within each stratum, then combine the pieces.
-
 - **Proportional sampling** (a common stratified plan) chooses sample sizes from each stratum in proportion to stratum size, so larger strata contribute more observations. Stratification often improves **precision** for group comparisons and for overall estimates when strata are homogeneous internally.
 
 ### Cluster sampling
@@ -83,11 +76,8 @@ Clusters are usually heterogeneous inside (e.g. people within a school differ fr
 A survey is **biased** when design or execution systematically favors particular answers or kinds of respondents.
 
 - **Response bias** arises when answers are inaccurate—because of interviewer tone, social pressure, memory errors, or question sensitivity—even if the sample frame was fine.
-
 - **Nonresponse bias** appears when people who cannot be reached or who refuse to participate differ from those who respond. Heavy nonresponse can skew results even when the initial sample was random.
-
 - **Undercoverage** means part of the population never had a real chance to be selected (no listing, outdated contact information, or a mode that excludes groups). A telephone-only survey in a population with uneven phone access is a classic illustration.
-
 - **Wording bias** (or **leading questions**) steers respondents toward an answer by framing, loaded language, or embedded claims. Even subtle wording changes can shift measured percentages.
 
 ---
@@ -95,11 +85,8 @@ A survey is **biased** when design or execution systematically favors particular
 ## Planning experiments: variables, factors, treatments
 
 - The **response variable** (dependent variable) is what you measure after treatments are applied. The **explanatory variable** (independent variable) is what you manipulate or use to explain changes in the response.
-
 - A **confounding variable** affects the response in a way that cannot be separated from the explanatory variable’s effect with the current design. Random assignment is the main tool for spreading out confounders across groups; blocking handles confounders you can name and measure.
-
 - A **factor** is an explanatory variable whose effect you study. Factors can be categorical or quantitative, just as in exploratory data analysis. **Levels** are the specific values or categories of a factor used in the study.
-
 - **Treatments** are the distinct conditions applied to experimental units—formally, combinations of factor levels. With two factors, the number of possible treatments is the product of level counts. For example, three drug doses and two exercise types give this many treatment combinations:
 
 $$
@@ -113,13 +100,11 @@ When there is only one factor, each level is a treatment.
 ## Control, placebo, and blinding
 
 - A **control group** receives no active treatment (or a baseline condition) so you can compare the response under treatment to a reference level.
-
 - A **placebo** looks like the real treatment but lacks the active ingredient or mechanism; the **placebo group** helps separate biological or mechanical effects from psychological effects of receiving something labeled as treatment.
 
 If subjects know which treatment they received, behavior and reporting can shift. If evaluators know, measurements can tilt. So, researches sometimes perform a **blinded experiment**, where either the subject or the experimenter (who's collecting data) (or both) don't know if the subject got the placebo or not.
 
 - In a **single-blind** study, either the subjects or the people collecting outcome data do not know who received which treatment.
-
 - In a **double-blind** study, neither subjects nor outcome assessors know the assignment; only those managing randomization (and safety oversight) keep that information until the study is analyzed.
 
 Note that in rare studies with inanimate objects, they can't be blinded, since they couldn't see in the first place!
@@ -129,9 +114,7 @@ Note that in rare studies with inanimate objects, they can't be blinded, since t
 ## Randomization, blocking, replication
 
 - **Randomization** assigns treatments to units by chance so that **lurking variables** tend to balance across groups on average. Random assignment supports causal claims about differences observed in the experiment, whilerandom sampling supports generalizing to a population. Designs can include one, both, or neither.
-
 - **Blocking** sorts experimental units into **blocks** of similar units (same sex, similar baseline pain scores, same litter of animals), then randomizes treatments within each block. Blocking controls known sources of variability and can make comparisons more precise than a single completely pooled randomization.
-
 - **Replication** means repeating treatments on many units (or repeating runs). Without replication, a single unusual unit can dominate the story; with replication, you can estimate how much responses vary within a treatment group.
 
 ---

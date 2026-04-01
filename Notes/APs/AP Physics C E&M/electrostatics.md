@@ -9,212 +9,188 @@ permalink: /notes/physics/electrostatics/
 
 # Electric Forces and Fields
 
-This is also sometimes called electrostatics
+This unit is the foundation of electricity: how charge produces forces, how we describe those forces with fields, and how symmetry lets us compute fields efficiently. The subject is often called electrostatics when charges are at rest and magnetic effects from motion are absent or treated separately.
 
 ---
 
-## Electric Charge
+## Electric charge
 
-Electric charge is a fundamental property of matter.
-
-- Protons carry positive charge  
-- Electrons carry negative charge  
-- Magnitude of charge: $$e = 1.60 \times 10^{-19} \, \text{C}$$ (Take positive charge for proton, negative charge for electron)
-
----
-
-### Key Ideas
-
-- Charge is **transferred via electrons** (protons are NEVER transferred)
-- Positive charge = lack of electrons  
-- Negative charge = excess electrons
-
----
-
-### Quantization of Charge
-
-Max Planck correctly formulated that energy was quantized. Later, experimenters like Robert Millikan (and his infamous oil drop experiment) proved that charge comes in discrete units, with the fundamental unit of charge being the charge of an electron. So, all charged objects have charge:
+Charge is a fundamental property of matter. **Protons** carry a positive charge and **electrons** a negative charge of the same magnitude. The elementary charge has magnitude
 
 $$
-q = ne, \quad n \in \mathbb{Z}
+e = 1.602 \times 10^{-19} \text{ C}.
 $$
 
-You can never have a fractional multiple smaller than $e$. Charge always comes in integer amounts in relation to $e$!
+By convention, the proton’s charge is $$+e$$ and the electron’s is $$-e$$. The SI unit of charge is the coulomb (C).
+
+In ordinary matter, charge is transferred by **moving electrons**; ion cores (with protons) do not hop between objects in classroom electrostatics. A positively charged object has lost electrons; a negatively charged one has gained them.
+
+### Quantization of charge
+
+Experiments (notably Millikan’s oil-drop work) show that the charge on any isolated object occurs in discrete steps. **Quantization of charge** means the total charge $$q$$ on a body satisfies
+
+$$
+q = n e, \quad n \in \mathbb{Z}.
+$$
+
+There is no known stable macroscopic object with charge that is a fraction of an electrons since $$n$$ is an integer. (Quarks carry fractional charge, but they are confined (meaning they have to be in pairs/trios); net observable charge remains integer multiples of $$e$$.)
 
 ---
 
-## Conservation of Charge
+## Conservation of charge
 
-Total charge in an isolated system is constant:
-
-- Charge cannot be created or destroyed  
-- Only transferred between objects  
-
-This is one of the most important conservation laws in physics, and can be used to derive many of the formulas that come up later.
+**Conservation of charge** states that the total charge in an isolated system stays constant over time. Charge is not created or destroyed; it is redistributed. Together with conservation of energy and momentum, this principle constrains what reactions and contact processes are possible and underlies much of circuit and field reasoning later in the course.
 
 ---
 
-## Electroscopes
+## Electroscopes, grounding, and charging
 
-Electroscopes detect charge using metal leaves that repel each other. (INSERT PICTURE)
+An **electroscope** uses thin metal leaves (or a similar mechanical indicator) that repel when they receive the same sign of charge, giving a rough measure of whether charge is present and sometimes how much.
 
----
-
-### Grounding
-
-Grounding connects an object to the Earth:
-
-- Excess charge flows to/from Earth  
-- Object becomes neutral  
-
-The Earth can be treated infinite charge reservoir, and will always replenish/take the necessary amounts of electrons to make the object neutral.
-
----
-
-### Charging by Conduction
-
-1. Touch charged object to electroscope (originally neutral) 
-2. Charge transfers directly  
-3. By Conservation of Charge, both objects end with **same sign**
-
-### Charging by Induction (EXPLAIN MORE)
-
-1. Bring charged object nearby  
-2. Ground the electroscope  
-3. Remove ground, then remove object  
-4. The electroscope ends with **opposite charge**
+- **Grounding** connects a conductor to the Earth (or another large reservoir). The Earth supplies or accepts electrons until the conductor reaches a common potential with the ground; in practice, a grounded object is often treated as neutral after the process finishes.
+- **Charging by conduction** means direct contact. If a charged rod touches a neutral electroscope, charge shares between them; by conservation of charge, both end up with net charge of the same sign (not necessarily equal magnitude unless capacitances match, but the sign is shared in the simple picture).
+- **Charging by induction** needs no transfer of charge from the rod to the electroscope if the rod never touches the scope. A charged object is brought near, polarizing the conductor; while the influence is present, the electroscope is grounded so charge can leave or enter; the ground connection is broken first, then the inducing object is removed. The electroscope retains a net charge opposite in sign to the inducer, because electrons were driven by the external field and then trapped when the path to ground was removed.
 
 ---
 
 ## Polarization
 
-A charged object can rearrange charges in a neutral object.
-
-Example:
-- Negative balloon near wall  
-- Electrons in wall move away  
-- Positive side faces balloon  
-
-👉 This causes **attraction without net charge**
+**Polarization** is the separation of positive and negative charge within a neutral object when a charged object is brought nearby. A charged object can polarize a neutral insulator or conductor: internal charge shifts so that one side of the material presents a net excess closer to the inducer. For example, a negative balloon near a wall pushes electrons in the wall slightly away, so the nearer surface acts more positive. The balloon and wall can attract even though the wall’s net charge is still zero—attraction without net charge on the neutral object is the usual signature of polarization.
 
 ---
 
-## Coulomb's Law
+## Coulomb’s law
 
-Force between two point charges is given by:
+The force between two point charges in vacuum (or air, approximately) is given by **Coulomb’s law**:
 
 $$
-\vec{F} = k \frac{q_1 q_2}{r^2} \hat{r}
-$$, 
+\vec{F} = k \frac{q_1 q_2}{r^2} \hat{r},
+$$
 
-where $$k = 8.99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2$$
+where $$\hat{r}$$ points from the charge exerting the force to the charge experiencing it (or from source to test, depending on textbook convention—always check the direction rule your problems use). The Coulomb constant is
 
-A positive force (like charges) indicates repulsion, while a negative force (opposite charges) indicates attraction. The Coulombic force follow very similarly like the Law of Universal Gravitation, and follows the inverse-square law.
+$$
+k = 8.99 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2.
+$$
+
+Like charges give a repulsive force along $$\hat{r}$$; opposite charges attract (force opposite to $$\hat{r}$$ if $$\hat{r}$$ is defined as above). The magnitude falls as $$1/r^2$$, the same inverse-square geometry as Newton’s law of gravitation, but charge can be positive or negative so the force can be attractive or repulsive.
 
 ---
 
-## Permittivity of Free Space
+## Permittivity of free space
 
-We have $$k = \frac{1}{4\pi \varepsilon_0}$$, meaning that $$\varepsilon_0 = 8.85 \times 10^{-12}$$. $$\varepsilon_0$$ represents the permittivity of free space, a measure of how easily electric fields form in vacuum.
+It is convenient to write
+
+$$
+k = \frac{1}{4\pi \varepsilon_0},
+$$
+
+so Coulomb’s law becomes $$\vec{F} = \frac{1}{4\pi \varepsilon_0} \frac{q_1 q_2}{r^2} \hat{r}$$. The constant $$\varepsilon_0$$ is the **permittivity of free space**,
+
+$$
+\varepsilon_0 = 8.85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)
+$$
+
+(equivalently farads per meter, $$\text{F/m}$$). It sets how electric fields in vacuum relate to source charge in SI form.
 
 ---
 
-## Superposition Principle
+## Superposition principle
 
-For multiple charges: Forces can add like vectors.
+The **superposition principle** for electrostatics says that the total force on a charge is the vector sum of the forces from every other charge, computed as if each pair were alone:
 
 $$
-\vec{F}_{\text{net}} = \sum \vec{F}_i
+\vec{F}_{\text{net}} = \sum_i \vec{F}_i.
 $$
 
-Strategy:
-- Draw vectors  
-- Break into components if needed
+In practice: sketch each contribution, resolve into components if the geometry demands it, then add. The principle extends to fields once the field from each source is known.
 
 ---
 
-## Electric Field
+## Electric field
 
-Electric field describes how a charge affects space around it.
-
-$$
-\vec{E} = \frac{\vec{F}}{q}
-$$ (Units: N/C)
-
-For a point charge:
+The **electric field** $$\vec{E}$$ at a point is defined as the force per unit charge on a small positive test charge $$q_0$$:
 
 $$
-\vec{E} = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r^2} \hat{r}
+\vec{E} = \frac{\vec{F}}{q_0}, \qquad \text{units: N/C (or V/m)}.
 $$
 
-This field exists independently of a second charge (called test charge). It's direction is marked by the direction of force on a positive test charge, so if a negative test charge is placed in the field, the force will be pointing the opposite direction of the field.
+The field is attributed to source charges; conceptually it exists whether or not a test charge is present. By convention, $$\vec{E}$$ points in the direction of the force on a positive test charge, so a negative charge in the same field feels a force $$\vec{F} = q\vec{E}$$ opposite to $$\vec{E}$$.
+
+For a single point charge $$Q$$,
+
+$$
+\vec{E} = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r^2} \hat{r}.
+$$
 
 ---
 
-### Continuous Charge Distributions
+## Continuous charge distributions
 
-For a continuous charge distribution, there are 3 types, each applicable to different objects/surfaces:
-
-- Linear charge density:$$\lambda = \frac{q}{L}
-- Area charge density: $$\sigma = \frac{q}{A}$$, 
-- Volume charge density: $$\rho = \frac{q}{V}$$
-
-For a continuous charge distribution, instead of sums, use integrals to calculate electric fields:
+When charge is spread through a line, surface, or volume, describe it with a density:
 
 $$
-\vec{E} = k \int \frac{dq}{r^2}
+\lambda = \frac{dq}{dL} \quad \text{(charge per unit length)},
 $$
 
-A more useful rewrite of this is:
+$$
+\sigma = \frac{dq}{dA} \quad \text{(charge per unit area)},
+$$
 
 $$
-dE = \frac{k dq}{r^2}
-$$,
+\rho = \frac{dq}{dV} \quad \text{(charge per unit volume)}.
+$$
 
-where you take a small $$dr$$ on your object and calculate $$dE$$ based on how much charge is in that $$dr$$ (Usually it will be in the form of $$\lambda dr$$, $$\sigma dA$$, etc.)
+The field obeys superposition in integral form:
+
+$$
+\vec{E} = \frac{1}{4\pi \varepsilon_0} \int \frac{dq}{r^2} \hat{r},
+$$
+
+or, for a scalar magnitude contribution along a chosen axis after symmetry,
+
+$$
+dE = \frac{1}{4\pi \varepsilon_0} \frac{dq}{r^2}
+$$
+
+with $$dq$$ replaced by $$\lambda\, dL$$, $$\sigma\, dA$$, or $$\rho\, dV$$ according to the geometry. Set up coordinates, exploit symmetry, and integrate.
 
 ---
 
-## Electric Field Lines
+## Field lines
 
-Visual representation of fields:
-
-- Start at positive charges  
-- End at negative charges  
-- Density = field strength  
-
-💡 Field lines never cross
+Field lines are a pictorial tool: they leave positive charge, terminate on negative charge, and their spacing indicates field strength (closer lines mean larger $$|\vec{E}|$$). Field lines never cross, because the field at a point has a single direction.
 
 ---
 
-## Gauss's Law and Electric Flux
+## Electric flux and Gauss’s law
 
-Electric flux measures how much field passes through a surface. If you increase area, you get more flux, and a perpindicular field generates the maximum flux possible at a set area. The equation is given by:
-
-$$
-\Phi_E = \vec{E} \cdot \vec{A} = EA \cos \theta
-$$
-
-For any surface, it can be modeled by:
+**Electric flux** measures how much electric field passes through a surface. For a flat area $$\vec{A}$$ (magnitude equal to area, direction along the normal) and uniform $$\vec{E}$$,
 
 $$
-\Phi_E = \oint \vec{E} \cdot d\vec{A}
+\Phi_E = \vec{E} \cdot \vec{A} = EA\cos\theta,
 $$
 
-In addition, Gauss's Law states that for any closed surface,
+where $$\theta$$ is the angle between $$\vec{E}$$ and the normal. When $$\vec{E}$$ is parallel to the surface, flux through that surface is zero; when perpendicular, $$|\Phi_E|$$ is maximal for fixed $$E$$ and $$A$$.
 
-$$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$$
+For a general surface,
 
-This equation related electric fields to enclosed charges.
+$$
+\Phi_E = \int \vec{E} \cdot d\vec{A}.
+$$
 
----
+**Gauss’s law** relates the flux through any closed surface to the charge enclosed:
 
-### When to Use Gauss’s Law
+$$
+\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}.
+$$
 
-Works best for cases of high symmetry:
+The closed surface used in the integral is called a **Gaussian surface**; it is a mathematical construct, not a physical shell. The law is always true; it is computationally powerful when symmetry lets you pull $$|\vec{E}|$$ outside the integral because it is constant on the chosen surface.
 
-- Spheres  
-- Cylinders  
-- Infinite planes
+Gauss’s law is especially efficient for:
 
-For any surface, you can draw a Gaussian surface (Sphere, Cylinder, etc.), which is a surface where the flux is easily calculated from (Usually, you choose one where $E$ is constant). You enclose a section of the surface inside the surface, and use Gauss's Law to solve for the flux/electric field generated from the target surface. 
+- spherically symmetric charge (use a concentric sphere),
+- infinite cylindrical symmetry (use a coaxial cylinder),
+- infinite planar symmetry (use a pillbox).
+
+Choose a surface on which $$E$$ is constant and parallel or perpendicular to $$d\vec{A}$$ on each piece, so the flux reduces to $$E$$ times an area.

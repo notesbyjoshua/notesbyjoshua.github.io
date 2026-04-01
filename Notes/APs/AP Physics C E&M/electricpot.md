@@ -9,72 +9,114 @@ permalink: /notes/physics/electricpot/
 
 # Electric Potential
 
-Test text
+Where [Unit 1]({{ '/notes/physics/electrostatics/' | relative_url }}) emphasized electric field and force, this unit uses **electric potential** and **electric potential energy**: scalar quantities that often simplify multi-charge problems and connect directly to work and circuits. The electrostatic field is **conservative**, so potential is well-defined: path does not matter, only endpoints.
 
 ---
 
-## Electric Potential Energy
+## Electric potential energy
 
-Similarly to gravitational potential energy (Universal Gravitation, not local gravitation), the electric potential energy is defined as:
+For two point charges $$Q$$ and $$q$$ separated by distance $$r$$, with the usual choice that potential energy is zero when the charges are infinitely far apart, the **electric potential energy** of the pair is
 
 $$
-\Delta U = \frac{kQq}{r}
+U = \frac{1}{4\pi \varepsilon_0} \frac{Qq}{r} = k \frac{Qq}{r}.
 $$
+
+If the separation changes from $$r_i$$ to $$r_f$$, the change in potential energy is
+
+$$
+\Delta U = kQq \left( \frac{1}{r_f} - \frac{1}{r_i} \right).
+$$
+
+This mirrors gravitation: the interaction energy depends on $$1/r$$, and you must fix a reference (here, $$U \to 0$$ as $$r \to \infty$$) before speaking of “the” energy at a finite separation.
 
 ---
 
-## Electric Potential (Voltage)
+## Electric potential (voltage)
 
-Electric potential is the potential energy per unit charge:
-
-$$
-V = \frac{\Delta U}{q}
-$$
-
-For a point charge:
+The **electric potential** $$V$$ at a point is potential energy per unit charge for a small positive test charge $$q_0$$ placed at that point:
 
 $$
-V = \frac{kQ}{r}
+V = \frac{U}{q_0}.
 $$
 
-The potential is a scalar component (no direction), and it is preferred to use potential rather than forces in many electrostatic problems.
+Units are volts (V), where $$1 \text{ V} = 1 \text{ J/C}$$. Colloquially, $$V$$ is often called voltage, especially when discussing **potential difference** $$\Delta V$$ between two points.
+
+For a single source point charge $$Q$$, with $$V = 0$$ at infinity,
+
+$$
+V = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r} = \frac{kQ}{r}.
+$$
+
+Potential is a scalar: many-source problems add $$V$$ by ordinary addition (no vector triangles), unlike electric field.
 
 ---
 
-### Work and Energy (ADD MORE)
+## Work, potential difference, and the field
+
+The electrostatic force is conservative. For a charge $$q$$ moving from an initial point $$a$$ to a final point $$b$$, the work done by the electric field relates to the change in potential energy:
 
 $$
-W = Vq
+W_{\text{field}} = -\Delta U.
 $$
 
-Note that this work is defined differently based on perspective. ADD MORE TO TS
+Since $$U = qV$$ for a charge in a fixed external potential (treating $$q$$ as the object being moved),
+
+$$
+\Delta U = q \Delta V,
+$$
+
+so
+
+$$
+W_{\text{field}} = -q \left( V_b - V_a \right) = -q \Delta V.
+$$
+
+If an external agent moves the charge slowly against the field with no change in kinetic energy, the work that agent does is the negative of the field’s work:
+
+$$
+W_{\text{ext}} = -W_{\text{field}} = q \Delta V.
+$$
+
+Signs matter: a positive charge moving toward lower potential loses potential energy; the field does positive work. Always state whether you mean work by the field or by an external agent.
 
 ---
 
-### Relationship with Electric Field
+## Relating potential and electric field
+
+Potential and field are linked by
 
 $$
-V = -\int \vec{E} \cdot d\vec{r} = -Ed (for a constant E)
+\vec{E} = -\nabla V
 $$
 
-Note that electric field lines will always point towards a lower potential, since objects tend to go from higher to lower voltage to be more stable (think of it like a ball always wanting to drop to minimize gravitational potential energy)
+in differential form. Along a path, the line integral gives the potential difference:
+
+$$
+V_b - V_a = -\int_a^b \vec{E} \cdot d\vec{r}.
+$$
+
+For a uniform electric field of magnitude $$E$$ and a displacement $$\vec{d}$$,
+
+$$
+\Delta V = -\vec{E} \cdot \vec{d}.
+$$
+
+If $$\vec{d}$$ points in the direction of $$\vec{E}$$, potential decreases along that direction—consistent with electric field lines pointing from higher to lower potential (for the conventional positive-test-charge picture).
 
 ---
 
-## Equipotential Lines
+## Equipotential surfaces
 
-Equipotential lines are lines in an electric field that have the same voltage, and thus no work is required to move along them. TGhese lines are always perpendicular to electric field lines.
+An **equipotential** is a surface (or curve in 2D diagrams) on which $$V$$ is constant. No work is required to move a charge along an equipotential, because $$\Delta V = 0$$. For that reason, $$\vec{E}$$ is everywhere perpendicular to equipotentials (except where $$\vec{E} = 0$$): a component of $$\vec{E}$$ tangent to the surface would do nonzero work over a small step along the surface, contradicting constant $$V$$.
 
 ---
 
-## Electron Volt (eV)
+## The electron volt
 
-A unit of energy:
-
-One electron volt (eV) is the energy gained by an electron moving through a potential of 1 V. It is equal to:
+The **electron volt** (eV) is a unit of energy, not potential. One electron volt is the energy change of a particle with charge magnitude $$e$$ when it moves through a potential difference of magnitude $$1 \text{ V}$$:
 
 $$
-1 \, \text{eV} = 1.6 \times 10^{-19} \, \text{J}
+1 \text{ eV} = e \cdot (1 \text{ V}) \approx 1.602 \times 10^{-19} \text{ J}.
 $$
 
- Note that 1 eV is a very very small voltage, so it is usually seen in the form of MeV (Mega electron volts) where $$1 MeV = 1 \times 10^{6} eV$$.
+Atomic and nuclear scales use multiples such as keV, MeV, and GeV ($$10^3$$, $$10^6$$, and $$10^9$$ eV). The joule remains the SI energy unit; the eV is a convenience because $$e$$ is the natural charge quantum at microscopic scales.

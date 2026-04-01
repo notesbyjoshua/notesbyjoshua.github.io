@@ -238,25 +238,26 @@ With a **sample**, use \(\bar{x}\) and \(s\) in the same pattern. A z-score answ
 
 ## Effects of Changing Units on Summary Measures
 
-Linear changes to data produce predictable changes to summaries. Suppose we transform each observation \(X_i\) to \(Y_i\).
+Linear changes to data produce predictable changes to summaries. Suppose we transform each observation $$x_i to y_i$$.
 
-Adding a constant\(a\) (for example, converting Celsius to a shifted scale, or adding a bonus point to every score): \(Y_i = X_i + a\).
+Adding a constant $$a$$ (for example, converting Celsius to a shifted scale, or adding a bonus point to every score): $$y_i = x_i + a$$.
 
-- Mean, median and quartiles shift by \(+a\).
+- Mean, median and quartiles shift by $$+a$$.
 - Spread measures that depend only on distances between values (range, IQR, standard deviation) are unchanged.
 
-**Multiplying by a constant** \(b\) (for example, feet to inches): \(Y_i = b X_i\).
+**Multiplying by a constant** $$b$$ (for example, feet to inches): $$y_i = b \times x_i$$.
 
-- Mean, median, and quartiles multiply by \(b\).
-- Range, IQR, and standard deviation multiply by \(|b|\) (absolute value handles a reflection like \(b = -1\)).
+- Mean, median, and quartiles multiply by $$b$$.
+- Range, IQR, and standard deviation multiply by $$|b|$$
 
-| Summary Measure | \( Y_i = X_i + a \) | \( Y_i = bX_i \) |
+
+| Summary Measure | $$y_i = x_i + a$$ | $$y_i = b \times x_i$$ |
 |----------------|-------------------|------------------|
-| Mean | \( +a \) | \( b \) |
-| Median | \( +a \) | \( b \) |
-| Range | unchanged | \( |b| \cdot \text{range} \) |
-| Standard Deviation | unchanged | \( |b| \cdot s \) (or \( \sigma \)) |
-| Quartiles | \( +a \) | \( b \) |
-| Interquartile Range | unchanged | \( |b| \cdot IQR \) |
+| Mean | $$+a$$ | $$\times b$$ |
+| Median | $$+a$$ | $$\times b$$ |
+| Range | unchanged | \$$\times |b|$$ |
+| Standard Deviation | unchanged | $$\times |b|$$ |
+| Quartiles | $$+a$$ | $$\times b$$ |
+| Interquartile Range | unchanged | $$\times |b|$$ |
 
-These rules are worth internalizing: they explain why z-scores are unchanged by shifts and rescaling when you use the matching mean and standard deviation of the transformed data, and they explain many standardization tricks in later units.
+These rules are worth memorizing: they explain why z-scores are unchanged by shifts and rescaling when you use the matching mean and standard deviation of the transformed data, and they explain many standardization tricks in later units.

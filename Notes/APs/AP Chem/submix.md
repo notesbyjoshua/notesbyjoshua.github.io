@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Unit 3 - Properties of Substances & Mixtures
+title: "Unit 3: Substances and Mixtures"
 parent: AP Chemistry
+nav_order: 3
 permalink: /notes/ap/chem/submix/
 ---
 
-# Unit 3: Properties of Substances and Mixtures
+# Unit 3: Substances and Mixtures
 
 ## Intermolecular Forces
 

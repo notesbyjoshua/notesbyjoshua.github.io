@@ -40,6 +40,18 @@ I use this site to document:
 
 ---
 
+## 🚧 To-do List 🚧 
+
+Here is a list of notes I will add (in order)!
+
+1. AP Stats Unit 4
+2. AP Chem Units 2-4
+3. AP Precalc Unit 1-3
+
+More notes are coming soon!
+
+---
+
 ## Feedback and Requests
 
 If you have any inquiries, questions, or suggestions, please submit a request [here]({{ '/feedback/' | relative_url }}).

@@ -1,6 +1,6 @@
 /*
   Plain CSS loaded after Just the Docs so dark mode applies even if SCSS merge fails.
-  Light sky-blue link accents; body/headings use light off-white (readable on #2e2e30).
+  Light sky-blue link accents; body/headings use light off-white (readable on #202123).
 */
 html {
   color-scheme: dark;
@@ -9,20 +9,20 @@ html {
 body {
   font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
   color: #ecece8 !important;
 }
 
 .side-bar {
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
 }
 
 .main {
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
 }
 
 .main-content-wrap {
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
 }
 
 /* Main column: Just the Docs sets $body-text-color in bundled CSS; force bright text here. */
@@ -95,18 +95,18 @@ body {
 
 .main-header,
 .site-header {
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .search-input {
-  background-color: #36363a !important;
+  background-color: #2e2f31 !important;
   color: #f7f5f8 !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 .search {
-  background-color: #2e2e30 !important;
+  background-color: #202123 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 

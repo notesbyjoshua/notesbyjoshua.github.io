@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Unit 1 - Atomic Structure
+title: "Unit 1: Atomic Structure and Properties"
 parent: AP Chemistry
+nav_order: 1
 permalink: /notes/ap/chem/atomicstrucprop/
 ---
 

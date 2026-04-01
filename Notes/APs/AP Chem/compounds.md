@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Unit 2 - Compound Structure and Properties
+title: "Unit 2: Compound Structure and Properties"
 parent: AP Chemistry
+nav_order: 2
 permalink: /notes/ap/chem/compounds/
 ---
 

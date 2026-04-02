@@ -30,8 +30,7 @@ Raising temperature increases $$N$$ (faster motion, more frequent collisions) an
 
 ## Factors affecting rate (summary)
 
-Concentration raises collision frequency $$N$$ and enters the rate law directly. Temperature raises $$N$$ and the energetic fraction $$f_E$$ through the Arrhenius factor. Surface area and physical state (powder versus lump, mixing, phase contact) change how often collisions occur at reactive sites. Catalysts (homogeneous, heterogeneous, or acid–base) lower $$E_a$$ for a catalyzed path, mainly boosting $$f_E$$. Inhibitors or poisons can block active sites or consume intermediates, slowing rate without necessarily appearing in the simplest textbook rate law.
-
+Concentration raises collision frequency $$N$$ and enters the rate law directly. Temperature raises the **amount of collisions and the frequency of effective colisions**. Surface area and physical state (powder versus lump, mixing, phase contact) **increase the rate of collision**. Catalysts (homogeneous, heterogeneous, or acid–base) **increases the frequency of effective collisions**.
 ---
 
 ## Reaction rate
@@ -48,7 +47,7 @@ $$
 \text{rate} = -\frac{1}{a}\frac{d[\text{A}]}{dt} = -\frac{1}{b}\frac{d[\text{B}]}{dt} = +\frac{1}{c}\frac{d[\text{C}]}{dt} = +\frac{1}{d}\frac{d[\text{D}]}{dt}.
 $$
 
-The negative sign on reactants makes rate a positive quantity as written. If you watch one species by itself, the sign of $$d[\text{X}]/dt$$ tells you whether it is being used up (negative for a reactant whose concentration falls) or formed (positive for a product). The stoichiometric factors convert those individual slopes into a single rate for the whole reaction.
+The negative sign on reactants makes rate a positive quantity as written. Note that $$d$$ represents the derivative, or the measure of the rate of change. If you watch one species by itself, the sign of $$d[\text{X}]/dt$$ tells you whether it is being used up (negative for a reactant whose concentration falls) or formed (positive for a product). The stoichiometric factors convert those individual slopes into a single rate for the whole reaction.
 
 In lab data you often measure average rate over an interval (slope of a chord on a concentration–time graph). Instantaneous rate is the slope of the tangent at one time—the limit as $$\Delta t \to 0$$ and the quantity that appears in calculus-based rate laws.
 
@@ -66,7 +65,7 @@ Here $$k$$ is the **rate constant** (units depend on overall order), and $$m, n,
 
 Important distinction: at fixed temperature (and without changing catalyst), $$k$$ does not depend on concentrations or, for gases, on pressure as a separate knob—concentration enters only through the powers $$[\text{A}]^m$$ etc. Changing pressure in a gas-phase system often changes concentrations and therefore rate, but it does not change $$k$$ itself. Temperature and catalysts change $$k$$.
 
-The **method of initial rates** compares initial rates while varying one reactant’s initial concentration at a time. Holding other concentrations fixed, if doubling $$[\text{A}]$$ multiplies the initial rate by $$2^m$$, you read off $$m$$. More generally, for two trials where only $$[\text{A}]$$ changes,
+The **method of initial rates** compares initial rates while varying one reactant’s initial concentration at a time. Holding other concentrations fixed, if doubling $$[\text{A}]$$ multiplies the initial rate by $$2^m$$, $$m$$ is the order of $$A$$. More generally, for two trials where only $$[\text{A}]$$ changes,
 
 $$
 m = \frac{\ln(\text{rate}_1 / \text{rate}_2)}{\ln([\text{A}]_1 / [\text{A}]_2)},
@@ -76,9 +75,11 @@ with nearest-integer order a common simplification on exams when data are clean.
 
 Units of $$k$$ follow from $$\text{rate}$$ in $$\text{M/s}$$ (molarity per second) and the concentration powers. Examples for a single reactant $$\text{A}$$:
 
-- Zero order ($$\text{rate} = k$$): $$k$$ in $$\text{M}\cdot\text{s}^{-1}$$
+- Zeroth order ($$\text{rate} = k$$): $$k$$ in $$\text{M}\cdot\text{s}^{-1}$$
 - First order ($$\text{rate} = k[\text{A}]$$): $$k$$ in $$\text{s}^{-1}$$
 - Second order ($$\text{rate} = k[\text{A}]^2$$): $$k$$ in $$\text{M}^{-1}\cdot\text{s}^{-1}$$
+
+Note that rate always has the units of $$\frac{M}{s}$$ and concentration always has the units of $$M$$.
 
 ---
 
@@ -86,7 +87,7 @@ Units of $$k$$ follow from $$\text{rate}$$ in $$\text{M/s}$$ (molarity per secon
 
 Integrating the differential law links concentration to time. Let $$[\text{A}]_0$$ be the initial concentration of the species tracked in the simplified one-reactant forms below.
 
-Zero order:
+Zeroth order:
 
 $$
 [\text{A}] - [\text{A}]_0 = -kt
@@ -124,7 +125,7 @@ $$
 \text{second:}\quad t_{1/2} = \frac{1}{k[\text{A}]_0}
 $$
 
-For zero order, half-life grows as $$[\text{A}]_0$$ increases. For first order (including many nuclear decay kinetics), $$t_{1/2}$$ is constant throughout the reaction—independent of $$[\text{A}]_0$$. For second order, half-life shrinks as $$[\text{A}]_0$$ increases.
+For zero order, half-life **shrinks** as $$[\text{A}]_0$$ decreases. For first order (including many nuclear decay kinetics), $$t_{1/2}$$ is constant throughout the reaction—independent of $$[\text{A}]_0$$. For second order, half-life **grows** as $$[\text{A}]_0$$ decreases.
 
 ---
 

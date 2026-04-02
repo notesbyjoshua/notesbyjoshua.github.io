@@ -31,6 +31,7 @@ Raising temperature increases $$N$$ (faster motion, more frequent collisions) an
 ## Factors affecting rate (summary)
 
 Concentration raises collision frequency $$N$$ and enters the rate law directly. Temperature raises the **amount of collisions and the frequency of effective colisions**. Surface area and physical state (powder versus lump, mixing, phase contact) **increase the rate of collision**. Catalysts (homogeneous, heterogeneous, or acid–base) **increases the frequency of effective collisions**.
+
 ---
 
 ## Reaction rate

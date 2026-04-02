@@ -138,3 +138,5 @@ When two atoms approach, the **potential energy** of the system typically drops 
 **Bond energy** is related to the depth of that well. Comparing curves for the same bond order (single vs double vs triple) illustrates why higher **bond order** correlates with shorter, stronger bonds.
 
 These same curves also motivate [reaction coordinates]({{ '/notes/ap/chem/kinetics/' | relative_url }}) later: along a reaction path, the system moves on a **potential energy surface** connecting reactants, transition states, and products.
+
+**ADD BORN-HABER CYCLE**

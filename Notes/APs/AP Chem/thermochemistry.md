@@ -72,20 +72,6 @@ with molar enthalpies of fusion and vaporization. A heating curve (temperature v
 
 ---
 
-## Temperature, kinetic energy, and the Maxwell–Boltzmann distribution
-
-Temperature (in Kelvin) is proportional to the average translational kinetic energy of ideal-gas molecules:
-
-$$
-\overline{KE}_{\text{mol}} = \frac{3}{2}RT, \qquad \overline{KE}_{\text{molecule}} = \frac{3}{2} k_B T,
-$$ (as seen also in [Unit 3]({{ '/notes/ap/chem/submix/' | relative_url }}))
-
-with Boltzmann’s constant $$k_B \approx 1.38 \times 10^{-23} \text{ J/K}$$. Individual molecules span a distribution of speeds; a **Maxwell–Boltzmann** curve plots fraction versus speed or energy. Lighter gases at the same $$T$$ have higher average speed, and raising $$T$$ broadens the curve and increases the fraction with energy above a given activation energy.
-
-Macroscopic kinetic energy $$\frac{1}{2}mv^2$$ applies to bulk motion; do not confuse it with thermal motion of molecules inside a sample.
-
----
-
 ## Enthalpy
 
 **Enthalpy** $$H$$ is defined as $$H = U + PV$$. It is a state function. For a process at constant pressure the change in enthalpy becomes:
@@ -97,10 +83,10 @@ $$
 However, you will usually see enthalpy in the context of heat for AP Chemistry problems, so
 
 $$
-\Delta H = - \frac{q_surr}{n}.
+\Delta H = \frac{q_sys}{n}.
 $$
 
-where $$n$$ is the number of moles, and enthalpy is from the perspective of the system. Note taht $$\Delta H$$ will have opposite sign conventions compared to $$q$$ (as defined in an AP context).
+where $$n$$ is the number of moles, and enthalpy is from the perspective of the system. Note that $$\Delta H$$ will have opposite sign conventions compared to $$q$$ (as defined in an AP context).
 
 ### Exothermic versus endothermic
 

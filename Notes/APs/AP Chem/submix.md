@@ -6,15 +6,15 @@ nav_order: 3
 permalink: /notes/ap/chem/submix/
 ---
 
-# Unit 3: Substances and Mixtures This is HALF DONE please add MORE
+# Unit 3: Substances and Mixtures
 
-This unit connects particle-level structure—bonding within molecules and forces between them—to bulk properties (melting, boiling, solubility, conductivity) and to mixtures, especially solutions and gases. Ideas about polarity from [Unit 2]({{ '/notes/ap/chem/compounds/' | relative_url }}) carry directly into **intermolecular forces** and chromatography; moles and concentration from [Unit 1]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }}) are key to the gas laws and **colligative properties**.
+This unit connects particle-level structure (bonding within molecules and forces between them) to bulk properties (melting, boiling, solubility, conductivity) and to mixtures, especially solutions and gases. Ideas about polarity from [Unit 2]({{ '/notes/ap/chem/compounds/' | relative_url }}) carry directly into **intermolecular forces** and chromatography; moles and concentration from [Unit 1]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }}) are key to the gas laws and **colligative properties**.
 
 ---
 
 ## Intermolecular forces
 
-**Intermolecular forces** (IMFs) are attractions *between* molecules or ions. They are much weaker than intramolecular (*within* a molecule) covalent or ionic bonds, but they control many everyday properties: boiling point, melting point, vapor pressure, surface tension, and solubility in a given solvent. Stronger IMFs generally mean higher normal boiling points, lower vapor pressure at a given temperature, and (for similar structures) higher viscosity in liquids.
+**Intermolecular forces** (IMFs) are attractions *between* molecules or ions. They are much weaker than intramolecular (*within* a molecule) covalent or ionic bonds, but they control many everyday properties: boiling point, melting point, vapor pressure, surface tension, and solubility in a given solvent.
 
 ### London dispersion forces
 
@@ -46,11 +46,10 @@ Trends: among similar molecules, greater polarity and stronger IMFs tend to rais
 
 ### Selected bulk properties
 
-**Electrical conductivity** (metallic, ionic melts or solutions, graphite) contrasts with insulating molecular solids. **Malleability** and ductility describe metals deforming without brittle fracture. **Viscosity** is a liquid’s resistance to flow; it rises with stronger IMFs and often with molecular size or hydrogen bonding.
-
-### Crystalline versus amorphous materials
-
-**Crystalline** solids have long-range order and often show sharp melting points. **Amorphous** solids (many glasses) lack that order and soften over a temperature range rather than melting at a single temperature.
+- **Electrical conductivity** is the ability for a substance to conduct electricity, basically meaning they have an active flow of electrons going through
+- **Malleability** and **ductility** describe the ability to deform without brittle fracture
+- **Viscosity** is a liquid’s resistance to flow; it rises with stronger IMFs and often with molecular size or hydrogen bonding
+- **Crystalline** solids have long-range order and often show sharp melting points. **Amorphous** solids (many glasses) lack that order and soften over a temperature range rather than melting at a single temperature.
 
 ---
 
@@ -67,27 +66,43 @@ Chemists often classify solids by the particles at lattice sites and the forces 
 
 ### Identifying the type of solid
 
-The main crystalline types behave differently in simple tests, so a short flowchart can narrow down the classification. Real samples can blur categories (e.g. decomposition before melting, or **covalent network** solids that do not melt in a test tube—see the caveat below).
+The main crystalline types behave differently in simple tests, so a short flowchart can narrow down the classification. Real samples can blur categories, so it is important to do many tests as backups.
 
 1. **Heating in a test tube**: Look first for **condensation** near the cool top of the tube. Water driven off from a crystal can indicate a **hydrated ionic** solid (often you are done after also checking conductivity in water). If there is no such hint and the sample **melts** at modest temperature, it is likely a **molecular** or **metallic** solid; test **electrical conductivity** on the **solid** (and again if you have a melt): **metallic** solids conduct; **molecular** solids do not. Many **ionic** salts do not melt cleanly over a burner, they may sit unchanged or **decompose**, so “does not melt” is not enough to prove molecular.
+
 2. **Solid conductivity**: If the solid conducts electricity, it is **metallic** (or **graphite**, a special **network** solid). If it does not conduct and you already know it melts easily, treat it as **molecular** and go to tests 4–5.
+
 3. **Aqueous Conductivity**: If the solid does not dissolve, skip this step for now. If the **solution** conducts well, the solid is almost certainly **ionic** (anhydrous or hydrated—combine with step 1). If the solid **dissolves** but the solution does **not** conduct (or only very weakly), it is a **molecular** **nonelectrolyte**, usually **polar** (e.g. sugar). This step does not distinguish polar from nonpolar if the solid is **insoluble** in water.
+
 4. **Water solubility (for molecular solids)**: Use only when you have already ruled out **metallic** and **ionic** behavior. **Dissolves** in water → **polar molecular** (for typical neutral molecules). **Does not dissolve** in water → likely **nonpolar molecular**, but **covalent network** solids such as diamond or quartz are also insoluble and non-conducting; they usually **do not melt** in a test tube and are extremely hard—unlike most molecular crystals.
+
 5. **Hexane solubility (confirmation for molecular solids)**: **Hexane** is **nonpolar**. If the solid **dissolves** in hexane, it behaves like a **nonpolar** species (**nonpolar molecular**). If it **does not** dissolve in hexane but **did** dissolve in water, that matches **polar molecular**. If it dissolves in neither, reconsider **ionic** (if it never dissolved), **network** covalent, or a very high–molar-mass molecular solid.
 
-**Caveat:** **Covalent network** solids are easy to confuse with **nonpolar molecular** solids in water/hexane tests alone; hardness, melting behavior, and structure from other evidence matter.
+**Caveat:** **Covalent network** solids are easy to confuse with **nonpolar molecular** solids in water/hexane tests alone: hardness, melting behavior, and structure from other evidence matter.
 
 ---
 
 ## Separating mixtures
 
-**Chromatography** separates components by differential affinity for a mobile phase and a stationary phase based on their differing polarity. It is typically done on cellulose or silica based paper (both polar) and involves dipping the bottom of the paper in a solvent (that is both polar and nonpolar) which allows the components to separate. The **retention factor** is
+**Chromatography** separates components by differential affinity for a mobile phase and a stationary phase based on their differing polarity. It is typically done on cellulose or silica based paper (both polar) and involves dipping the bottom of the paper in a solvent (that is both polar and nonpolar) which allows the components to separate. 
+
+The **retention factor** is
 
 $$
 R_f = \frac{\text{distance traveled by the spot}}{\text{distance traveled by the solvent front}},
 $$
 
-with values between $$0$$ and $$1$$ for typical thin-layer work. Distillation uses differences in boiling point (hence vapor pressure). Evaporation or crystallization removes or concentrates solvent to isolate solute. The retention factor is a measure of how far a molecular moved compared to the solvent, and can determine the polarity of the molecule. Usually (if using polar paper) nonpolar molecules will go higher than polar molecules, since they have a weaker attachment to the paper and thus will move up with the solvent more.
+with values between $$0$$ and $$1$$ for typical thin-layer work. The retention factor is a measure of how far a molecular moved compared to the solvent, and can determine the polarity of the molecule. Usually (if using polar paper) nonpolar molecules will go higher than polar molecules, since they have a weaker attachment to the paper and thus will move up with the solvent more.
+
+Other methods of separation include distillation (uses differences in boiling point (hence vapor pressure)) and evaporation/crystallization (removes or concentrates solvent to isolate solute).
+
+---
+
+## Temperature, kinetic energy, and the Maxwell–Boltzmann distribution
+
+Temperature (in Kelvin) is proportional to the average translational kinetic energy of ideal-gas molecules, but varies per molecule.  However, the KE can be mapped as a distribution (called the **Maxwell-Boltzmann distribution**). A **Maxwell–Boltzmann** curve plots fraction versus speed or energy. Lighter gases at the same $$T$$ have higher average speed, and raising $$T$$ broadens the curve and increases the fraction with energy above a given activation energy. Note that macroscopic kinetic energy $$\frac{1}{2}mv^2$$ applies to bulk motion; do not confuse it with thermal motion of molecules inside a sample. An example of a Maxwell-Boltzmann distribution can be seen below:
+
+**Add image**
 
 ---
 
@@ -95,40 +110,49 @@ with values between $$0$$ and $$1$$ for typical thin-layer work. Distillation us
 
 Kinetic molecular theory sets down some assumptions for an ideal gas:
 
-1. The gas molecules have negligible volume compared to the container
-2. The gas molecules have no intermolecular attractions
-3. The gas molecules perform elastic collisions with each other and the walls of the container
-4. The gas molecules move around in constant, random motion
-5. For one mole of a **monatomic** ideal gas, average translational kinetic energy is
+1. The gas molecules have **negligible volume** compared to the container
+2. The gas molecules have **no IMFs**
+3. The gas molecules perform **elastic collisions** with each other and the walls of the container
+4. The gas molecules move around in **constant, random motion**
+5. For one mole of a **monatomic** ideal gas, average translational kinetic energy (per mole) is
 
 $$
-\overline{KE}_{\text{mol}} = \frac{3}{2}RT.
+KE_{avg} = \frac{3}{2}RT.
 $$
 
-Per molecule, $$\overline{KE} = \frac{3}{2} k_B T$$ with Boltzmann’s constant $$k_B$$ **ADD VALUE**. Temperature in this model is proportional to the mean kinetic energy of random motion. In addition, solving for velocity, the average RMS (root mean square, one way to taking an average) speed of the molcules is:
+Per molecule, the equation becomes 
+$$
+KE_{avg} = \frac{3}{2} k_B T
+$$ 
+
+with Boltzmann’s constant $$k_B = 1.38 \times 10^{-23} \text{ J/K}$$. Temperature in this model is proportional to the mean kinetic energy of random motion. In addition, if you are solving for velocity, the average RMS (root mean square, one way to taking an average) speed of the molcules is:
 
 $$
 v_{RMS} = \sqrt{\frac{3RT}{M}}.
 $$
 
+Always remember that kinetic energy is distributed along a Maxwell-Boltzmann distribution, so we always talk about the **average** kinetic energy and **RMS** velocity.
+
 ---
 
-## Pressure, STP, and the ideal gas law
+## Pressure, STP, and the Ideal Gas Law
 
 Pressure measures force per unit area. Useful conversions include
 
 $$
-1 \text{ atm} = 760 \text{ mmHg} = 760 \text{ torr} = 101.325 \text{ kPa} \approx 14.7 \text{ psi}. 
+1 \text{ atm} = 760 \text{ mmHg} = 760 \text{ torr} = 101.325 \text{ kPa} = 14.7 \text{ psi} = 1.013 \text{bar}
 $$
 
-**ADD BARS**
-**STP** (standard temperature and pressure) is commonly taken as $$0^\circ\text{C}$$ ($$273.15 \text{ K}$$) and $$1 \text{ atm}$$ in introductory courses and one mole of an ideal gas under those conditions occupies about $$22.4 \text{ L}$$ (Modern IUPAC defines a slightly different standard pressure, but for AP chemistry purposes this is the standard pressure). For the remainder of the unit and AP Chemistry, we will use the following notations, along with their standard units:
+**STP** (standard temperature and pressure) is commonly taken as $$0^\circ\text{C}$$ ($$273.15 \text{ K}$$) and $$1 \text{ atm}$$, with  one mole of an ideal gas under those conditions occupies about $$22.4 \text{ L}$$ (Modern IUPAC defines a slightly different standard pressure, but for AP chemistry purposes this is the standard pressure). For the remainder of the unit and AP Chemistry, we will use the following notations, along with their standard units:
 
 - $$P$$ = pressure (in atm, mmHg, torr, kPa, bar, or psi)
 - $$V$$ = volume (L)
 - $$n$$ = number of moles (mol)
 - $$T$$ = temperature (Kelvin)
 
+---
+
+### The Gas Laws and the Ideal Gas Law
 
 There are many gas laws that are useful for the AP exam (Remember to **ALWAYS** use Kelvin!):
 
@@ -137,7 +161,7 @@ There are many gas laws that are useful for the AP exam (Remember to **ALWAYS** 
 - **Gay-Lussac’s law**: $$\frac{P_1}{T_1} = \frac{P_2}{T_2}$$ (or equivalently $$P \propto T$$) at fixed $$n$$ and $$V$$. 
 - **Avogadro’s law**: $$\frac{V_1}{n_1} = \frac{V_2}{n_2}$$ (or equivalently $$V \propto n$$) at fixed $$P$$ and $$T$$.
 
-The combined gas laws can merge to form the **ideal gas law**:
+The combined gas laws can merge to form the **Ideal Gas Law (IGL)**:
 
 $$
 PV = nRT.

@@ -19,9 +19,30 @@ permalink: /notes/ap/chem/chemrxns/
 
 ---
 
-## Representing reactions
+## Representing and balancing reactions
 
-Equations use symbols such as $$(s)$$, $$(l)$$, $$(g)$$, and $$(aq)$$ for solid, liquid, gas, and aqueous species. A balanced equation matches atom counts and (for redox) charge. Stoichiometric coefficients give mole ratios for any calculation of theoretical yield, limiting reactant, or titration.
+A **chemical equation** lists **reactants** (left) and **products** (right), usually separated by a single arrow $$(\longrightarrow)$$ for a reaction treated as one-way in stoichiometry, or $$(\rightleftharpoons)$$ when equilibrium matters ([Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }})). **State symbols** clarify what you are counting:
+
+- $$(s)$$ solid, $$(l)$$ liquid, $$(g)$$ gas, $$(aq)$$ dissolved in water (aqueous).
+
+If an element is a component of the reaction **ALONE**, they are written in their standard/naturally-occuring form (e.g. $$\text{O}_2(g)$$, $$\text{Na}(s)$$, $$\text{Br}_2(l)$$). Otherwise, they can take on any form. Coefficients are the smallest **integers** (or a set of integers) consistent with conservation of atoms: they give **mole ratios** for limiting-reactant work, titrations, and gas-law stoichiometry. Make sure that on each side of a reaction, you start and end with the same number of atoms/moles.
+
+### Balancing by inspection (non-redox and simple cases)
+
+1. **Balance** elements that appear in only one reactant and one product first (often metals or central atoms).  
+2. Treat **unchanged polyatomic ions** (such as $$\text{NO}_3^-$$ or $$\text{SO}_4^{2-}$$) as a unit if they appear intact on both sides (Make sure to include them in brackets, otherwise they do not count as polyatomic ions).  
+3. Balance **hydrogen** and **oxygen** last when they appear in several compounds (common in combustion and acid–base).  
+4. If you temporarily need a **fractional** coefficient to balance an element (e.g. $$\frac{1}{2}\text{O}_2$$), **multiply the entire equation** by the denominator so all coefficients are integers.
+
+The balanced equation conserves **mass** (atom counts). For **ionic** reactions in solution, you may also write:
+
+- **Molecular equation** — Molecular formulas are formulas as written in the bottle/usually stated in the problem (e.g. $$\text{AgNO}_3(aq) + \text{NaCl}(aq)$$)
+
+- **Total ionic equation** — You treat strong electrolytes as **separated ions**, while solids, liquids, weak electrolytes, and gases usually **undissociated** (Check solubility rules below for electrolytes; strong electrolytes are soluble in water)  
+
+- **Net ionic equation** — Write the total ionic equation but cancel **spectator ions** that do not change (Basically anything that can cancel on both sides) and only species that actually react
+
+**Redox** reactions in acidic or basic solution often needs the **half-reaction method** (below) because oxidation numbers change and **electron** and **charge** balance are not handled by atom counting alone.
 
 ---
 
@@ -98,6 +119,28 @@ For halogens, a more reactive halogen displaces the halide ion of a less reactiv
 **Redox** reactions transfer electrons between species. **Oxidation** is loss of electrons (increase in **oxidation number**); **reduction** is gain of electrons (decrease in oxidation number). A very helpful mnemonic is **OIL RIG**: **O**xidation **I**s **L**osing, **R**eduction **I**s **G**aining.
 
 The **reducing agent** is the one being oxidized, and the **oxidizing agent** is the one being reduced. Assigning oxidation states to every atom in a formula is the standard bookkeeping method (refer to [Unit 1]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})). Many combustion, single-displacement, and electrochemical processes are redox; they are often slower in the lab than simple precipitation or strong acid–strong base neutralization because covalent bonds must break and form in the elemental or molecular reactants.
+
+### Half-reactions (oxidation and reduction)
+
+A **half-reaction** shows only the oxidation or only the reduction part of an electron transfer. Electrons $$(e^-)$$ appear as a **product** in the **oxidation** half-reaction (electrons are lost) and as a **reactant** in the **reduction** half-reaction (electrons are gained). After each half-reaction is balanced for **atoms** and **charge**, you **multiply** one or both by integers so the number of electrons lost equals the number gained, then add the half-reactions and cancel duplicated species (including $$e^-$$, $$\text{H}_2\text{O}$$, $$\text{H}^+$$, or $$\text{OH}^-$$).
+
+**Acidic solutions** (common AP setup):
+
+1. Split the net ionic transformation into **oxidation** and **reduction** halves.  
+
+2. Balance all atoms **except** O and H.  
+
+3. Balance **O** with $$\text{H}_2\text{O}$$.  
+
+4. Balance **H** with $$\text{H}^+$$.  
+
+5. Balance **charge** with $$e^-$$ on the correct side.  
+
+6. Equalize electrons; add the halves; simplify.
+
+**Basic solution:** either balance as in acid and then add $$\text{OH}^-$$ to **both sides** in pairs that neutralize $$\text{H}^+$$ as water, or balance using $$\text{H}_2\text{O}$$ and $$\text{OH}^-$$ from the start. The final combined equation should contain **no free $$\text{H}^+$$** if the medium is strongly basic.
+
+Half-reactions are a very important compenents of **galvanic and electrolytic cells** (wiring oxidation at the anode and reduction at the cathode) and of **standard reduction potentials** tabulated for half-reactions written as **reduction** by convention. You will learn more in [Unit 9]({{ '/notes/ap/chem/thermoelectro/' | relative_url }}).
 
 ---
 

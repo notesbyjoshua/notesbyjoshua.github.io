@@ -8,7 +8,7 @@ permalink: /notes/ap/chem/equilibrium/
 
 # Unit 7: Equilibrium
 
-Unit 7 is about **chemical equilibrium**: the state in a **closed system** where a reversible reaction’s **forward** and **reverse** rates are equal, so **macroscopic** concentrations (or partial pressures) stop changing even though reactants and products are still interconverting at the molecular level. You will write **equilibrium constants** ($$K_c$$, $$K_p$$), compare them to the **reaction quotient** ($$Q$$), use **ICE tables** to compute equilibrium compositions, apply **Le Châtelier’s principle** to predict disturbance responses, and extend the same ideas to **solubility** ($$K_{sp}$$), **precipitation**, and **complex-ion** formation ($$K_f$$). These tools connect directly to **thermodynamics** through **Gibbs free energy** and to later work on **acids and bases**, where $$K_a$$ and $$K_b$$ are themselves equilibrium constants.
+Unit 7 is about **chemical equilibrium**: the state in a **closed system** where a reversible reaction’s **forward** and **reverse** rates are equal, so **macroscopic** concentrations (or partial pressures) stop changing even though reactants and products are still interconverting at the molecular level. You will write **equilibrium constants** ($$K_c$$, $$K_p$$), compare them to the **reaction quotient** ($$Q$$), use **ICE tables** to compute equilibrium compositions, apply **Le Châtelier’s principle** to predict disturbance responses, and extend the same ideas to **solubility** ($$K_{sp}$$), **precipitation**, and **complex-ion** formation ($$K_f$$). These tools connect directly to **thermodynamics** through **Gibbs free energy** and the **van’t Hoff equation** (how $$K$$ changes with temperature), and to later work on **acids and bases**, where $$K_a$$ and $$K_b$$ are themselves equilibrium constants.
 
 ---
 
@@ -46,7 +46,7 @@ On the AP exam, $$K$$ is treated as a dimensionless ratio by implicitly comparin
 **Orders of magnitude** help you judge extent (at a given temperature):
 
 - If $$K_c$$ is very large (e.g. $$K_c \gg 1$$, sometimes textbook thresholds like $$K_c > 10^{10}$$), the **forward** reaction is **product-favored** at equilibrium—substantial conversion to products. This usually means that the forward reaction is approximately an **irreversible** reaction
-- If $$K_c$$ is*very small (e.g. $$K_c \ll 1$$, sometimes $$K_c < 10^{-10}$$), the mixture stays **reactant-heavy**, meaning that the reaction basically didn't start at all.
+- If $$K_c$$ is very small (e.g. $$K_c \ll 1$$, sometimes $$K_c < 10^{-10}$$), the mixture stays **reactant-heavy**, meaning that the reaction basically did not start at all.
 
 These cutoffs are rules of thumb; what matters is comparing $$Q$$ to $$K$$ and interpreting $$K$$ relative to $$1$$.
 
@@ -139,6 +139,28 @@ $$
 
 At equilibrium, $$Q = K$$ and $$\Delta G = 0$$, which recovers $$\Delta G^\circ = -RT \ln K$$. Here $$R$$ is the gas constant ($$8.314\ \text{J/(mol·K)}$$ when using joules), and $$T$$ is kelvin.
 
+### The van’t Hoff equation
+
+Le Châtelier’s principle says that $$K$$ changes with **temperature** only, and the **van’t Hoff equation** makes that dependence **quantitative**. It follows from the way $$\Delta G^\circ = -RT\ln K$$ combines with $$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$$ when you ask how $$K$$ must move if $$T$$ changes (treating $$\Delta H^\circ$$ and $$\Delta S^\circ$$ as **approximately constant** over a modest temperature range: a standard AP assumption unless a problem says otherwise).
+
+If $$K_1$$ and $$K_2$$ are equilibrium constants (**same** kind: both $$K_c$$ or both $$K_p$$, matching how the reaction is written) at absolute temperatures $$T_1$$ and $$T_2$$, then
+
+$$
+\ln\frac{K_2}{K_1} = -\frac{\Delta H^\circ}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right) = \frac{\Delta H^\circ}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right).
+$$
+
+Here $$\Delta H^\circ$$ is the **standard enthalpy change** for the reaction **as written** (see [Unit 6: Thermochemistry]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})). Use $$R = 8.314\ \text{J/(mol·K)}$$ when $$\Delta H^\circ$$ is in **joules per mole** of reaction as written.
+
+**Sign check:** if the forward reaction is **endothermic** ($$\Delta H^\circ > 0$$) and $$T_2 > T_1$$, then $$K_2 > K_1$$—warming **increases** $$K$$, matching the picture that **heat** acts like a **reactant** in an endothermic forward process. If the forward reaction is **exothermic** ($$\Delta H^\circ < 0$$), raising $$T$$ **decreases** $$K$$.
+
+The **differential** form (useful conceptually and in derivations) is
+
+$$
+\frac{d\ln K}{dT} = \frac{\Delta H^\circ}{RT^2},
+$$
+
+which shows that sensitivity of $$\ln K$$ to temperature is **larger** when $$|\Delta H^\circ|$$ is large and when $$T$$ is **low** (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
+
 ---
 
 ## Le Châtelier’s principle
@@ -151,7 +173,7 @@ Typical stresses:
 - **Pressure (gases):** Reducing volume increases total pressure; the system shifts toward the side with **fewer moles of gas** (if any). Adding an **inert gas** at **constant volume** does **not** change partial pressures of reactants/products—**no** shift. At **constant pressure**, adding inert gas increases volume and can shift the equilibrium; AP questions usually emphasize the constant-volume case.  
 - **Temperature:** $$K$$ **changes** with temperature. Treat **heat** as part of the reaction: for an **endothermic** forward reaction ($$\Delta H > 0$$), **raising** $$T$$ favors the **forward** direction (larger $$K$$ if the forward reaction is endothermic). For an **exothermic** forward reaction ($$\Delta H < 0$$), **raising** $$T$$ favors the **reverse** direction (smaller $$K$$). **Cooling** favors the exothermic direction.
 
-Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concentration stress when you need a **numerical** $$K$$: use the correct $$K$$ for the new temperature if given, or reason qualitatively from $$\Delta H$$.
+Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concentration stress when you need a **numerical** $$K$$: use the correct $$K$$ for the new temperature if given, compute $$K_2$$ from $$K_1$$ with the **van’t Hoff equation** (previous section), or reason qualitatively from $$\Delta H$$.
 
 **ADD IMAGE**
 
@@ -242,7 +264,7 @@ If one of the ions is already present from another source (**common ion**), its 
 
 ## Complex ions and formation constants
 
-A **complex ion** consists of a **central metal cation** (Lewis acid) bound to **ligands** (Lewis bases) that donate electron pairs (learn more about bases in [Unit 8]({{ '/notes/ap/chem/acidbase/' | relative_url }})). In a solution, stepwise binding equilibria exist; textbooks often emphasize an overall **formation** (stability) constant $$K_f$$ for
+A **complex ion** consists of a **central metal cation** (Lewis acid) bound to **ligands** (Lewis bases) that donate electron pairs (learn more about acids/bases in [Unit 8]({{ '/notes/ap/chem/acidbase/' | relative_url }})). In a solution, stepwise binding equilibria exist; textbooks often emphasize an overall **formation** (stability) constant $$K_f$$ for
 
 $$
 \text{M}^{n+} + x\,\text{L} \rightleftharpoons \text{ML}_x^{n+},
@@ -272,7 +294,7 @@ $$
 2. Write $$K_c$$, $$K_p$$, or $$K_{sp}$$ **omitting pure solids/liquids** (and solvent water in dilute aqueous $$K_c$$ unless specified).  
 3. Compute **$$Q$$** if asked whether the system shifts; compare to $$K$$.  
 4. Use **ICE** for unknown equilibrium concentrations; watch **stoichiometric** multiples of $$x$$.  
-5. Remember **temperature** changes $$K$$; **catalyst** does not.  
+5. Remember **temperature** changes $$K$$; **catalyst** does not. For two temperatures, relate $$K_1$$ and $$K_2$$ with the **van’t Hoff equation** if $$\Delta H^\circ$$ is known (or given).  
 6. For solubility, track **common ions**, **$$Q_{sp}$$ vs $$K_{sp}$$**, and **complex formation**, which can **increase** solubility by tying up a metal ion (e.g. $$\text{AgCl}$$ dissolving more in ammonia).
 
 This unit’s equilibrium constant logic is the same machinery you will reuse for **acid–base** ($$K_a$$, $$K_b$$, $$K_w$$) and **buffers** in the next unit—only the chemical reaction and symbols change.

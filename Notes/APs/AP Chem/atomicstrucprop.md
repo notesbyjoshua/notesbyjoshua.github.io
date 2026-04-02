@@ -85,6 +85,38 @@ $$
 
 ---
 
+## Empirical and molecular formulas
+
+The **molecular formula** gives the **actual numbers** of atoms of each element in one molecule of a molecular compound (or one formula unit of an ionic solid, where “molecule” is not literal). The **empirical formula** gives the **smallest whole-number ratio** of atoms in that substance. Ionic compounds are usually reported by their empirical formula anyway (e.g. $$\text{NaCl}$$, $$\text{CaF}_2$$) because the crystal is an extended lattice, not discrete $$\text{NaCl}$$ molecules.
+
+For a molecular substance, the molecular formula is a **whole-number multiple** of the empirical formula:
+
+$$
+\text{molecular formula} = (\text{empirical formula})_n, \qquad n = 1,\,2,\,3,\,\ldots
+$$
+
+The **empirical formula mass** is the molar mass of the empirical formula as written. If you know the **molar mass** of the compound (from experiment, such as mass spectrometry, or from the problem), then
+
+$$
+n = \frac{M_{\text{compound}}}{M_{\text{empirical}}},
+$$
+
+and you round $$n$$ to the nearest integer when the data allows it (subject to measurement uncertainty).
+
+### From mass percent to the empirical formula
+
+When a problem gives **mass percentages** (or masses of elements in a sample), treat the sample as a sample of **$$100\ \text{g}$$** so each element’s mass in grams equals its **percent** numerically.
+
+1. Convert each element’s mass to moles using its molar mass.  
+
+2. Divide **every** mole amount by the **smallest** mole amount among the elements.
+
+3. If ratios are not whole numbers within reasonable rounding, multiply all subscripts by a small integer ($$2$$, $$3$$, $$\ldots$$) to clear fractions (e.g. $$1 : 1 : 1.33$$ $$\rightarrow$$ multiply by $$3$$). If you see a ratio that is very hard to convert to integers, you likely did something wrong.
+
+That yields the **empirical formula**. **Combustion analysis** problems follow the same logic: measured masses of $$\text{CO}_2$$ and $$\text{H}_2\text{O}$$ produced fix the **carbon** and **hydrogen** in the original sample; any **oxygen** is often obtained by **difference** from the original sample mass if the compound contains only C, H, and O.
+
+---
+
 ## Mass spectrometry
 
 **Mass spectrometry** separates ions by **mass-to-charge ratio** $$\frac{m}{z}$$. A typical spectrum plots **relative abundance** (or detector **intensity**) on the vertical axis against $$\frac{m}{z}$$ on the horizontal axis. For an element, the pattern of peaks reveals **isotope** masses and their approximate **natural abundances**; for molecules, **fragmentation** patterns can support **structure** assignment in advanced work.

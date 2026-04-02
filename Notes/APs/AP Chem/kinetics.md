@@ -170,6 +170,8 @@ If the experimental rate law does not match the stoichiometry of the overall equ
 
 ## Pre-equilibrium and deriving rate laws
 
+**WRITE MORE ON THIS AND ADD CATALYTIC CYCLES**
+
 When the RDS is not the first step, a common pattern is a fast, reversible early step followed by a slow step. The early step sets up **pre-equilibrium**: forward and reverse rates of that step are large, so an equilibrium constant $$K$$ links intermediates to reactant concentrations. You write the rate law from the RDS (using its elementary exponents), then substitute for any intermediate using the equilibrium expression from the fast step so that only overall reactants (and catalysts if present) appear in the final law. A more general **steady-state approximation** treats $$d[\text{intermediate}]/dt \approx 0$$ when the intermediate is consumed as fast as it forms; AP problems often give setups where pre-equilibrium is enough.
 
 ---

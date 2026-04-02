@@ -8,303 +8,150 @@ permalink: /notes/ap/chem/chemrxns/
 
 # Unit 4: Chemical Reactions
 
----
-
-# 1. Chemical vs Physical Change
-
-## Chemical Change
-
-Chemical change: Changes that involve breaking/forming bonds and decomposing/making new elements. The identifiers are shown below:
-
-- Color change  
-- Gas production  
-- Precipitate formation  
-- Temperature change (without heating/cooling it)  
-- Light production  
-- Odor change  
-
-### Key Idea
-Chemical changes involve **rearranging atoms and forming new substances**, meaning the composition is permanently altered.
+**Chemical reactions** convert reactants into products by breaking and forming bonds so that atoms are rearranged into new substances. This unit classifies common patterns you will use everywhere on the AP exam—especially with aqueous ions, acids and bases, and **redox**. **Stoichiometry** rests on conservation of mass (balanced equations) and connects to moles and concentration from [Unit 1]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }}). Polarity, solubility, and solutions tie back to [Unit 3]({{ '/notes/ap/chem/submix/' | relative_url }}).
 
 ---
 
-## Physical Change
+## Physical versus chemical change
 
-Physical change: Changes that don’t involve changing the molecular composition  
-
-- Phase change  
-- Change in size/shape  
-- Dissolving  
-- Reversible change  
-
-### Key Idea
-No new substances are formed — only **physical properties change**.
+- A **chemical change** produces new substances with new chemical identities. Observable clues include a lasting color change, gas evolution (from something other than simple boiling), formation of a precipitate, a large temperature change from the reaction itself, light emission, or a new odor. Those clues are suggestive, not proof; the decisive idea is reorganization at the molecular level (bond breaking and forming).
+- A **physical change** alters state, size, shape, or mixing without creating a new chemical species: melting, boiling, dissolving sugar in water (the sucrose molecules remain intact), or crushing a sample. Dissolving an ionic compound in water is still often grouped with “physical” solution formation in introductory courses, even though the ions separate from the crystal—a distinction worth keeping straight when you discuss conductivity and equilibrium later.
 
 ---
 
-# 2. Double-Replacement (Precipitation) Reactions
+## Representing reactions
 
-Double-Replacement/Precipitation Reactions: A double-replacement (DR) reaction involves a partner swap between two ionic compounds, where the cations and anions swap partners.  
+Equations use symbols such as $$(s)$$, $$(l)$$, $$(g)$$, and $$(aq)$$ for solid, liquid, gas, and aqueous species. A balanced equation matches atom counts and (for redox) charge. Stoichiometric coefficients give mole ratios for any calculation of theoretical yield, limiting reactant, or titration.
 
-If at least ONE product is insoluble in water, the reaction occurs; otherwise no reaction occurs  
+---
 
-## General Form
+## Double-displacement (metathesis) and precipitation
+
+In a **double-displacement** reaction, cations and anions exchange partners, often in solution:
 
 $$
-AB (aq) + CD (aq) \rightarrow AD (aq) + CB (s)
+\text{AB}(aq) + \text{CD}(aq) \longrightarrow \text{AD} (aq) + \text{CB} (s)
 $$
 
-## Precipitate
+If one combination is insoluble (in the example above it is $$CB$$), it forms a **precipitate**, a solid that may appear as cloudiness, flecks, or a settled solid at the bottom of the vessel. Different precipitates will have different colors, which may be useful in determining the contents of the reaction. If all ionic products remain soluble (aqueous), no net reaction occurs.
 
-Precipitate: The solid that forms as a result of a precipitation reaction  
-
-### Indicators
-- Cloudy solution  
-- Solid forming  
-- Solid settling at bottom  
+You predict precipitates with **solubility rules**, which are very important to memorize **ADD TABLE BELOW**.
 
 ---
 
-# 3. Acid-Base (Neutralization) Reactions
+## Acid–base (neutralization) reactions
 
-Acid-base/Neutralization Reactions: An acid-base reaction involves an acid reacting with a base to form water and an ionic salt  
-
-## General Form
+**Neutralization** between a strong acid and strong base yields water and an ionic salt:
 
 $$
-\text{Acid} + \text{Base} \rightarrow \text{Ionic Salt} + \text{Water}
+\text{acid} + \text{base} \longrightarrow \text{salt} + \text{H}_2\text{O}.
 $$
 
-Usually:
-- acids → contain $$ H^+ $$  
-- bases → contain $$ OH^- $$  
+Such proton-transfer reactions are often rapid because water is a very stable product. This is a special form of a double-displacement reaction
 
----
-
-## Important Exception (Carbonates)
-
-Acid + Metal Carbonate → Water + Ionic Salt + Carbon Dioxide  
-
-This happens because:
+Reactions of metal carbonates (and bicarbonates) with acid produce carbon dioxide as well, because carbonic acid is unstable and decomposes:
 
 $$
-H_2CO_3 \rightarrow H_2O + CO_2
+\text{H}_2\text{CO}_3 \longrightarrow \text{H}_2\text{O} + \text{CO}_2.
 $$
 
-(carbonic acid is unstable)
+Metal oxides (basic anhydrides) react with acids like other bases as well, just giving up the oxygen to water instead of hydrogen.
 
 ---
 
-## Key Insight
+## Combination, decomposition, and combustion
 
-- Usually the **fastest reactions**
-- Driven by formation of **stable products (water + salt)**
-
----
-
-# 4. Acid + Metal Oxide Reactions
-
-Acid + Metal Oxide Reactions: An acid-metal oxide reaction is basically a acid-base reaction but with an acid and a metal oxide  
-
-## General Form
+**Synthesis** (combination) builds one product from simpler reactants. Note that all reactants have to be in their **natural state** (e.g. $$O_2 (g)$$ or $$Na (s)$$):
 
 $$
-\text{Acid} + \text{Metal Oxide} \rightarrow \text{Ionic Salt} + \text{Water}
+\text{A} + \text{B} \longrightarrow \text{AB}.
 $$
 
----
-
-# 5. Redox Reactions
-
-Redox Reactions: Redox reactions occur in which electrons are transferred from one reactant to another  
-
-## Definitions
-
-- Oxidation: losing electrons  
-- Reduction: gaining electrons  
-
-Mnemonic:
-
-👉 **OIL RIG**
-- Oxidation Is Losing  
-- Reduction Is Gaining  
-
----
-
-## Agents
-
-- Reducing agent: The molecule that gets oxidized  
-- Oxidizing agent: The molecule that gets reduced  
-
----
-
-## Key Insight
-
-- Use oxidation states to track electron transfer  
-- Slower than DR/acid-base reactions because bonds must be broken and formed  
-
----
-
-# 6. Types of Reactions
-
-## Synthesis
-
-Synthesis: Synthesis reactions occur when elements combine to form a final product  
+**Decomposition** is the reverse picture: one compound breaks into smaller pieces, often with heat or electricity. Note that all products have to be in their **natural state** (e.g. $$N_2 (g)$$ or $$Rb (s)$$):
 
 $$
-A + B \rightarrow AB
+\text{AB} \longrightarrow \text{A} + \text{B}.
 $$
 
----
-
-## Decomposition
-
-Decomposition: Decomposition is essentially the reverse reaction of synthesis  
+**Combustion** of a hydrocarbon in excess oxygen produces carbon dioxide and water (and other products if the fuel contains other elements such as sulfur). Incomplete combustion can yield $$\text{CO}$$ or soot (carbon):
 
 $$
-AB \rightarrow A + B
+\text{Hydrocarbon} + \text{O_2} \longrightarrow \text{CO_2} (g) + \text{H_2O} (g).
 $$
 
+As usual, you should balance coefficients to make a balanced equation.
+
 ---
 
-## Combustion
+## Single-displacement reactions
 
-Combustion: Combustion occurs when a hydrocarbon reacts with oxygen  
+In **single-displacement**, an element in its standard state replaces ions of another element in solution (or in a melt). For metals (and hydrogen in acid), activity order decides whether reaction occurs: a metal higher in the **activity series** reduces the cation of a metal below it. Hydrogen’s position marks which metals react with dilute acid to liberate $$\text{H}_2$$.
+
+**ADD IMAGE**
+
+For halogens, a more reactive halogen displaces the halide ion of a less reactive halogen from solution. Reactivity decreases down the group ($$\text{F}_2 > \text{Cl}_2 > \text{Br}_2 > \text{I}_2$$).
+
+---
+
+## Oxidation–reduction (redox)
+
+**Redox** reactions transfer electrons between species. **Oxidation** is loss of electrons (increase in **oxidation number**); **reduction** is gain of electrons (decrease in oxidation number). A very helpful mnemonic is **OIL RIG**: **O**xidation **I**s **L**osing, **R**eduction **I**s **G**aining.
+
+The **reducing agent** is the one being oxidized, and the **oxidizing agent** is the one being reduced. Assigning oxidation states to every atom in a formula is the standard bookkeeping method (refer to [Unit 1]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})). Many combustion, single-displacement, and electrochemical processes are redox; they are often slower in the lab than simple precipitation or strong acid–strong base neutralization because covalent bonds must break and form in the elemental or molecular reactants.
+
+---
+
+## Solubility and “like dissolves like”
+
+**Solubility** is the maximum amount of solute that dissolves in a given amount of solvent at a specified temperature. Polar and ionic solutes tend to dissolve in polar solvents (usually water); nonpolar solutes tend to dissolve in nonpolar solvents. At the particle level, ion–dipole interactions or hydrogen bonding stabilize ions or polar molecules in water; nonpolar solutes rely mainly on weaker dispersion forces to mix with nonpolar solvents.
+
+By convention, the solvent is the component present in greater amount and the solute is the dissolved component (by convention in dilute lab work, the minor component).
+
+**ADD SOLUBILITY RULES**
+
+---
+
+## Factors affecting solubility
+
+**Common-ion effect**: for a sparingly soluble salt in equilibrium with its solid, adding another source of the same cation or anion shifts equilibrium toward solid, lowering molar solubility. (The full equilibrium lecture is in [Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }}).)
+
+Temperature: the effect on solid solubility depends on the sign of enthalpy of solution: many ionic solids become more soluble as $$T$$ rises, but exceptions exist. Gases in liquids almost always become less soluble as $$T$$ rises (molecular kinetic picture: escape from solution is easier when molecules move faster). Pressure has little effect on solid or liquid solutes but strongly affects gas solubility (**Henry’s law** in [Unit 3]({{ '/notes/ap/chem/submix/' | relative_url }})).
+
+---
+
+## Concentration measures (revisited)
+
+**Molarity** $$M$$ is moles of solute per liter of solution ($$\text{mol/L}$$); it changes slightly with temperature because volume changes.
+
+**Molality** $$m$$ is moles of solute per kilogram of solvent (not kilogram of solution):
 
 $$
-\text{Hydrocarbon} + O_2 \rightarrow CO_2 + H_2O
+m = \frac{\text{moles of solute}}{\text{kilograms of solvent}}.
 $$
 
----
+It is temperature-independent in the sense that it uses mass of solvent, not volume of solution.
 
-# 7. Single-Replacement Reactions
-
-## Metals / Hydrogen
-
-Single-Replacement (Metals/Hydrogen): Occurs when a neutral element replaces ions of another element  
-
-Depends on **activity series**:
-
-- Higher → replaces lower  
-- Lower → no reaction  
-
----
-
-## Halogens
-
-Single-Replacement (Halogens): Same idea but for halogens  
-
-Trend:
-- Reactivity increases **up the periodic table**
-
----
-
-# 8. Solubility (Miscibility)
-
-Solubility (miscibility) (in water):
-
-## Key Rule
-
-👉 Like dissolves like  
-
-- Polar dissolves polar  
-- Nonpolar dissolves nonpolar  
-
----
-
-## Ion Interaction Insight
-
-- If ions are more attracted to each other → insoluble  
-- If ions interact strongly with water → soluble  
-
----
-
-## Terminology
-
-- Solvent: substance present in greater amount  
-- Solute: substance dissolved  
-
----
-
-# 9. Factors Affecting Solubility
-
-## Common-Ion Effect
-
-Adding more ions decreases solubility  
-
----
-
-## Temperature Effects
-
-In exothermic solvation:
-
-- Increasing temperature → decreases solubility  
-- Decreasing temperature → increases solubility  
-
----
-
-# 10. Concentration Units
-
-## Molality
+Mass percent is
 
 $$
-\text{Molality} = \frac{\text{moles of solute}}{\text{mass of solution (kg)}}
+\text{mass \%} = \frac{\text{mass of solute}}{\text{mass of solution}} \times 100\%.
 $$
 
-- Volume and temperature independent  
-- Mass dependent  
+**Parts per million** and **parts per billion** report a mass ratio (or, for dilute aqueous work, often $$\text{mg}$$ solute per $$\text{kg}$$ solution, which is approximately $$\text{mg/L}$$ for water):
+
+$$
+\text{ppm} = \frac{\text{mass of solute}}{\text{mass of sample}} \times 10^6, \qquad
+\text{ppb} = \frac{\text{mass of solute}}{\text{mass of sample}} \times 10^9.
+$$
+
+Do not equate $$\text{ppm}$$ to “$$\text{mass \%} \times 10^6$$”; use the fraction definition above (for example, $$1\%$$ corresponds to $$10^4$$ ppm).
+
+**Normality** $$N$$ (still seen in some labs) is equivalents of reacting species per liter of solution: for acid–base, one equivalent of acid is one mole of $$\text{H}^+$$ donated per mole of formula (so $$\text{H}_2\text{SO}_4$$ can be $$2N$$ when both protons count in that context). On the AP exam, molarity and stoichiometry from the balanced equation are usually enough.
 
 ---
 
-## Mass Percent
+## Colloids
 
-$$
-\text{Mass \%} = \frac{\text{mass solute}}{\text{mass solution}} \times 100\%
-$$
+A **colloid** contains dispersed particles larger than single molecules but small enough to stay suspended (roughly $$1$$–$$1000\ \text{nm}$$ is a common textbook range). Colloids are thermodynamically unstable with respect to bulk phase separation but can be kinetically persistent; charged surfaces and electrostatic repulsion often slow aggregation.
 
----
-
-## Parts Per Million / Billion
-
-$$
-\text{PPM} = \text{mass \%} \times 10^6
-$$
-
-$$
-\text{PPB} = \text{mass \%} \times 10^9
-$$
-
----
-
-## Normality
-
-Normality:
-
-$$
-\text{Normality} = \frac{\text{Equivalent}}{\text{Volume}}
-$$
-
----
-
-# 11. Colloids
-
-Colloid: Anything between a true solution and a suspension  
-
----
-
-## Properties
-
-- Thermodynamically unstable but kinetically stable  
-- Electrostatic repulsion maintains structure  
-
----
-
-## Tyndall Effect
-
-Tyndall effect: Colloid scatter light  
-
----
-
-## Coagulation
-
-Coagulation: by heating or adding electrolytes, colloid will clump and the solute will settle to the bottom  
+The **Tyndall effect** is the scattering of visible light by those particles—a practical way to distinguish many colloids from true solutions. **Coagulation** (heating, adding electrolyte, or mixing) can collapse the dispersion so particles aggregate and settle.

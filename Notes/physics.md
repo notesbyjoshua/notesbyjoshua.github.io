@@ -16,8 +16,6 @@ AP Physics C Mechanics and E&M are organized under [AP Notes]({{ '/notes/ap/' | 
 - [AP Physics C Mechanics]({{ '/notes/ap/ap-physics-c-mechanics/' | relative_url }}) (the old Physics hub URL still works and forwards here)
 - [AP Physics C E&M]({{ '/notes/ap/ap-physics-c-em/' | relative_url }})
 
-Unit pages keep their existing URLs (for example `/notes/physics/kinematics/`).
-
 # F=ma and USAPhO Material
 
 ## F=ma Prep
@@ -29,6 +27,7 @@ Unit pages keep their existing URLs (for example `/notes/physics/kinematics/`).
 ## USAPhO Prep
 
 - [Math Tricks]({{ '/notes/physics/mathtricks/' | relative_url }})
+- [Advanced Mechanics]({{ '/notes/physics/advmech/' | relative_url }})
 - [Quantum/Nuclear Physics]({{ '/notes/physics/quantnucphys/' | relative_url }})
 - [Relativity]({{ '/notes/physics/relativity/' | relative_url }})
 - [Stellar Physics]({{ '/notes/physics/stellarphys/' | relative_url }})

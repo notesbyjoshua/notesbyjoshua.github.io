@@ -27,4 +27,8 @@ Spot an error or want a topic added? Use the [Feedback and Requests]({{ '/feedba
 
 ---
 
+## Seeing a construction sign 🚧
+
+If you see a construction sign, this means that the page is currently under development. Please check back later for updates! Note that all individual note pages will not have a 🚧 sign on it, so look in the *Available Notes* section for more details.
+
 *This site is in active development; new notes and polish are added regularly.*

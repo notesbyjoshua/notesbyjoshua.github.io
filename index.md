@@ -40,6 +40,16 @@ I use this site to document:
 
 ---
 
+## Available Notes
+
+Here is a list of notes that have been added (in completion)!
+
+1. AP Chem Units 1-2
+2. AP Physics C E&M Units 1-2
+3. AP Stats Units 1-4
+
+---
+
 ## 🚧 To-do List 🚧 
 
 Here is a list of notes I will add (in order)!

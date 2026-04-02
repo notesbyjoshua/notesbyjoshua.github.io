@@ -13,6 +13,20 @@ This unit is the foundation of electricity: how charge produces forces, how we d
 
 ---
 
+## Useful Variables
+
+- $$q$$ = charge (Units: Coulombs (C))
+- $$e$$ = the magnitude charge of an electron/proton = $$1.602 \times 10^{-19} \text{ C}$$
+- $$k$$ = Coulomb's constant = $$8.99 \times 10^9 \text{ N}\cdot\text{m}^2/\text{C}^2$$
+- $$\varepsilon_0$$ = permittivity of free space = $$8.85 \times 10^{-12} \text{ C}^2/(\text{N}\cdot\text{m}^2)$$ (Equivalently, the units could also be written as $$\frac{F}{m}$$, F = Farads)
+- $$E$$ = electric field (Units: $$\frac{N}{C}$$)
+-$$\lambda$$ = charge per unit length (Units: $$\frac{C}{m}$$)
+- $$\sigma$$ = charge per unit area (Units: $$\frac{C}{m^2}$$)
+- $$\rho$$ = charge per unit volume (Units: $$\frac{C}{m^3}$$)
+- $$\Phi_E$$ = electric flux (Units: $$\frac{N \times m^2}{C}$$)
+
+---
+
 ## Electric charge
 
 Charge is a fundamental property of matter. **Protons** carry a positive charge and **electrons** a negative charge of the same magnitude. The elementary charge has magnitude

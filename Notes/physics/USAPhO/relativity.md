@@ -2,7 +2,7 @@
 layout: default
 title: Relativity
 parent: USAPhO Prep
-nav_order: 3
+nav_order: 4
 permalink: /notes/physics/relativity/
 ---
 

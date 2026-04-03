@@ -1,34 +1,9 @@
 <style id="jtd-site-sidebar-overrides">
   /*
-    Inlined so nested URLs (/notes/..., /notes/ap/...) never miss this sheet.
-    Theme nests .nav-list-link rules with higher specificity than a flat header…nav a:link selector.
-    #site-nav + :not(.active) covers all depths (Notes → Math → AP, etc.).
+    Font sizes only. Nav colors live in assets/css/dark-overrides.css (theme + data-site-theme).
+    Previous inline link colors used !important and outranked html[data-site-theme] rules, so light
+    mode kept gray/white sidebar text.
   */
-  .side-bar #site-nav a.nav-list-link:not(.active) {
-    color: #d4d4cf !important;
-  }
-
-  .side-bar #site-nav a.nav-list-link.active {
-    color: #5ee1ff !important;
-    font-weight: 600 !important;
-  }
-
-  .side-bar #site-nav a.nav-list-link:hover:not(.active) {
-    color: #f6f6f3 !important;
-  }
-
-  .side-bar #site-nav a.nav-list-link.active:hover {
-    color: #5ee1ff !important;
-  }
-
-  .side-bar #site-nav button.nav-list-expander {
-    color: #d4d4cf !important;
-  }
-
-  .side-bar #site-nav button.nav-list-expander:hover {
-    color: #f6f6f3 !important;
-  }
-
   .side-bar #site-nav .nav-list .nav-list-item {
     font-size: 0.8125rem !important;
   }

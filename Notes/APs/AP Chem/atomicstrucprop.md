@@ -27,7 +27,7 @@ Unit 1 establishes the vocabulary and models used everywhere else in chemistry: 
 
 **Matter** is anything that has mass and occupies volume. Chemists classify it first by **composition**. A **pure substance** has fixed composition; **elements** are made of one kind of atom, and **compounds** contain two or more elements combined in definite proportion. A **mixture** combines substances without fixed proportion; **homogeneous** mixtures (solutions) are uniform on a macroscopic scale, while **heterogeneous** mixtures are not.
 
-**ADD FLOWCHART**
+![Matter Chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/Matter%20Chart.png" | relative_url }})
 
 ---
 
@@ -61,9 +61,9 @@ An **ion** is an atom or group of atoms with a net **electric charge** from gain
 
 ### Polyatomic ions
 
-**Polyatomic ions** are charged **covalent** units that behave as a single piece in **ionic compounds**—for example, **nitrate** ($$\text{NO}_3^-$$), **sulfate** ($$\text{SO}_4^{2-}$$), and **ammonium** ($$\text{NH}_4^+$$).
+**Polyatomic ions** are charged **covalent** units that behave as a single piece in **ionic compounds**: for example, **nitrate** ($$\text{NO}_3^-$$), **sulfate** ($$\text{SO}_4^{2-}$$), and **ammonium** ($$\text{NH}_4^+$$). These are the polyatomic ions you need to memorize:
 
-**ADD PICTURE**
+![Polyatomic Ions]({{ "/assets/APs/AP%20Chem/atomicstrucprop/polyions.png" | relative_url }})
 
 ---
 
@@ -87,7 +87,7 @@ $$
 
 ## Empirical and molecular formulas
 
-The **molecular formula** gives the **actual numbers** of atoms of each element in one molecule of a molecular compound (or one formula unit of an ionic solid, where “molecule” is not literal). The **empirical formula** gives the **smallest whole-number ratio** of atoms in that substance. Ionic compounds are usually reported by their empirical formula anyway (e.g. $$\text{NaCl}$$, $$\text{CaF}_2$$) because the crystal is an extended lattice, not discrete $$\text{NaCl}$$ molecules.
+The **molecular formula** gives the *actual numbers* of atoms of each element in one molecule of a molecular compound (or one formula unit of an ionic solid, where “molecule” is not literal). The **empirical formula** gives the *smallest whole-number ratio* of atoms in that substance. Ionic compounds are usually reported by their empirical formula anyway (e.g. $$\text{NaCl}$$, $$\text{CaF}_2$$) because the crystal is an extended lattice, not discrete $$\text{NaCl}$$ molecules.
 
 For a molecular substance, the molecular formula is a **whole-number multiple** of the empirical formula:
 
@@ -95,7 +95,7 @@ $$
 \text{molecular formula} = (\text{empirical formula})_n, \qquad n = 1,\,2,\,3,\,\ldots
 $$
 
-The **empirical formula mass** is the molar mass of the empirical formula as written. If you know the **molar mass** of the compound (from experiment, such as mass spectrometry, or from the problem), then
+The **empirical formula mass** is the molar mass of the empirical formula as written. If you know the molar mass of the compound (from experiment, such as mass spectrometry, or from the problem), then
 
 $$
 n = \frac{M_{\text{compound}}}{M_{\text{empirical}}},
@@ -105,29 +105,29 @@ and you round $$n$$ to the nearest integer when the data allows it (subject to m
 
 ### From mass percent to the empirical formula
 
-When a problem gives **mass percentages** (or masses of elements in a sample), treat the sample as a sample of **$$100\ \text{g}$$** so each element’s mass in grams equals its **percent** numerically.
+When a problem gives **mass percentages** (or masses of elements in a sample), treat the sample as a sample of *$$100\ \text{g}$$* so each element’s mass in grams equals its *percent* numerically.
 
 1. Convert each element’s mass to moles using its molar mass.  
 
-2. Divide **every** mole amount by the **smallest** mole amount among the elements.
+2. Divide *every* mole amount by the *smallest* mole amount among the elements.
 
 3. If ratios are not whole numbers within reasonable rounding, multiply all subscripts by a small integer ($$2$$, $$3$$, $$\ldots$$) to clear fractions (e.g. $$1 : 1 : 1.33$$ $$\rightarrow$$ multiply by $$3$$). If you see a ratio that is very hard to convert to integers, you likely did something wrong.
 
-That yields the **empirical formula**. **Combustion analysis** problems follow the same logic: measured masses of $$\text{CO}_2$$ and $$\text{H}_2\text{O}$$ produced fix the **carbon** and **hydrogen** in the original sample; any **oxygen** is often obtained by **difference** from the original sample mass if the compound contains only C, H, and O.
+That yields the **empirical formula**. **Combustion analysis** problems follow the same logic: measured masses of $$\text{CO}_2$$ and $$\text{H}_2\text{O}$$ produced fix the carbon and hydrogen in the original sample; any oxygen is often obtained by difference from the original sample mass if the compound contains only C, H, and O.
 
 ---
 
 ## Mass spectrometry
 
-**Mass spectrometry** separates ions by **mass-to-charge ratio** $$\frac{m}{z}$$. A typical spectrum plots **relative abundance** (or detector **intensity**) on the vertical axis against $$\frac{m}{z}$$ on the horizontal axis. For an element, the pattern of peaks reveals **isotope** masses and their approximate **natural abundances**; for molecules, **fragmentation** patterns can support **structure** assignment in advanced work.
+**Mass spectrometry** separates ions by **mass-to-charge ratio** $$\frac{m}{z}$$. A typical spectrum plots *relative abundance* (or detector *intensity*) on the vertical axis against $$\frac{m}{z}$$ on the horizontal axis. For an element, the pattern of peaks reveals isotope masses and their approximate **natural abundances**; for molecules, **fragmentation** patterns can support structure assignment in advanced work. An example of a mass spectrometer chart is shown below:
 
-**ADD MORE**
+![Mass spectrometry chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/Mass%20Spectrometry.png" | relative_url }})
 
 ---
 
 ## Percent yield, percent error, and efficiency
 
-In laboratory work, **theoretical yield** is the amount of product predicted from **stoichiometry** assuming complete conversion. **Actual yield** is what you isolate. **Percent yield** measures how much of the theoretical amount you obtained:
+In laboratory work, **theoretical yield** is the amount of product predicted from stoichiometry assuming complete conversion. **Actual yield** is what you isolate. **Percent yield** measures how much of the theoretical amount you obtained:
 
 $$
 \% \text{ yield} = \frac{\text{actual yield}}{\text{theoretical yield}} \times 100\%
@@ -157,7 +157,7 @@ $$
 M = \frac{\text{moles of solute}}{\text{liters of solution}} = \frac{\text{mol}}{L}
 $$
 
-Because volume changes with temperature, molarity is **temperature-dependent**. It depends on the amount of solute per volume of solution, not on the total mass of the solution by itself.
+Because volume changes with temperature, molarity is *temperature-dependent*. It depends on the amount of solute per volume of solution, not on the total mass of the solution by itself.
 
 ---
 
@@ -179,7 +179,7 @@ When atoms tie, use structure or further rules; the guiding idea is that more el
 
 ## Electron configuration and quantum numbers
 
-Each electron in an atom is described by four **quantum numbers** that arise from the **wave-mechanical** model.
+Each electron in an atom is described by four **quantum numbers** that arise from the *wave-mechanical* model.
 
 The **principal quantum number** $$n$$ is a positive integer ($$n = 1, 2, 3, \ldots$$). It sets the shell and is the main contributor to orbital energy for hydrogen-like atoms.
 
@@ -194,13 +194,13 @@ The **magnetic quantum number** $$m_l$$ takes integer values from $$-l$$ to $$+l
 
 The **spin quantum number** $$m_s$$ is $$+\frac{1}{2}$$ or $$-\frac{1}{2}$$ for the two **spin** states of a single electron.
 
-The **Pauli exclusion principle** states that no two electrons in the same atom may share the same set of four quantum numbers, so at most two electrons occupy any one atomic orbital, and they must have **opposite spin**.
+The **Pauli exclusion principle** states that no two electrons in the same atom may share the same set of four quantum numbers, so at most two electrons occupy any one atomic orbital, and they must have *opposite spin*.
 
-The **Aufbau principle** directs you to fill orbitals in order of increasing energy. The familiar $$n s$$, $$(n-1) d$$, $$(n-2) f$$ crossing is why the periodic table has its shape. Exceptions (e.g. chromium $$\text{Cr}$$, copper $$\text{Cu}$$, and several heavier transition metals) reflect especially stable $$d^5$$ or $$d^{10}$$ arrangements; those same stability patterns contribute to **variable** metal oxidation states in compounds.
+The **Aufbau principle** directs you to fill orbitals in order of increasing energy. The familiar $$n s$$, $$(n-1) d$$, $$(n-2) f$$ crossing is why the periodic table has its shape. Exceptions (e.g. chromium $$\text{Cr}$$, copper $$\text{Cu}$$, and several heavier transition metals) reflect especially stable $$d^5$$ or $$d^{10}$$ arrangements; those same stability patterns contribute to variable metal oxidation states in compounds.
 
-**Hund’s rule** favors placing electrons singly in degenerate orbitals of a subshell before pairing, with **parallel spins** where possible, to reduce **electron–electron repulsion**.
+**Hund’s rule** favors placing electrons singly in degenerate orbitals of a subshell before pairing, with *parallel spins* where possible, to reduce *electron–electron repulsion*.
 
-**Heisenberg’s uncertainty principle** limits how sharply **position** and **momentum** can be known simultaneously for a quantum particle—a conceptual foundation for why we speak in terms of orbitals (probability distributions) rather than classical orbits.
+**Heisenberg’s uncertainty principle** limits how sharply *position* and *momentum* can be known simultaneously for a quantum particle—a conceptual foundation for why we speak in terms of orbitals (probability distributions) rather than classical orbits.
 
 **Abbreviated configurations** use the previous noble gas core in brackets, e.g.
 
@@ -214,7 +214,7 @@ Two species are **isoelectronic** if they have the same electron configuration (
 
 ## Energy, light, and quantization
 
-**Bohr’s model** correctly emphasized that an electron in an atom can occupy only certain allowed energies (**quantization**), but the picture of electrons in circular orbits is obsolete; **quantum mechanics** replaces orbits with orbitals.
+**Bohr’s model** correctly emphasized that an electron in an atom can occupy only certain allowed energies (**quantization**), but the picture of electrons in circular orbits is obsolete; quantum mechanics replaces orbits with orbitals.
 
 For **electromagnetic radiation** (for AP Chemistry this is just light), **wavelength** $$\lambda$$ and **frequency** $$\nu$$ (or $$f$$) are related by
 
@@ -230,7 +230,7 @@ $$
 E_n = -2.178 \times 10^{-18} \frac{1}{n^2} \text{ J},
 $$
 
-with $$n$$ the **principal quantum number**. Spectroscopy probes **transitions** $$\Delta E$$ between levels and **emission** lines appear when an electron falls to a lower level and releases a photon (light particle).
+with $$n$$ the *principal quantum number*. Spectroscopy probes **transitions** $$\Delta E$$ between levels and **emission** lines appear when an electron falls to a lower level and releases a photon (light particle).
 
 **Planck** related photon energy to frequency:
 
@@ -256,13 +256,13 @@ In the **photoelectric effect**, photons eject electrons from a metal surface on
 
 $$
 K_{\max} = h\nu - \Phi,
-$$ (for all purposes, memorizing this equation is not necessary for the AP Chemistry exam)
+$$ 
 
-while increasing **intensity** at fixed frequency increases the number of ejected electrons, not their maximum **kinetic energy**.
+but for all purposes, memorizing this equation is not necessary for the AP Chemistry exam. Increasing *intensity* at fixed frequency increases the number of ejected electrons, not their maximum *kinetic energy*.
 
-**Photoelectron spectroscopy** (**PES**) measures how much energy must be supplied to remove electrons from subshells in atoms or molecules. Peaks appear at **binding energies** characteristic of each orbital type; **relative peak areas** (after accounting for ionization cross sections) reflect electron counts in those subshells.
+**Photoelectron spectroscopy** (**PES**) measures how much energy must be supplied to remove electrons from subshells in atoms or molecules. Peaks appear at **binding energies** characteristic of each orbital type; **relative peak areas** (after accounting for ionization cross sections) reflect electron counts in those subshells. An example problem is shown below, feel free to try it out (Answer on the bottom of the notes page)!
 
-**VERIFY THIS**
+![PES chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/PES.png" | relative_url }})
 
 ---
 
@@ -274,9 +274,9 @@ $$
 380\text{ nm} \text{ to } 760\text{ nm},
 $$
 
-a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**).
+a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**). 
 
-**ADD IMAGE**
+![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/EMSpectrum.png" | relative_url }})
 
 ---
 
@@ -290,9 +290,9 @@ $$
 E_{ns} < E_{np} < E_{nd} < E_{nf},
 $$
 
-because **s** orbitals **penetrate** closer to the nucleus and experience less **shielding** from inner electrons than **p**, **d**, or **f** orbitals at comparable $$n$$.
+because **s** orbitals *penetrate* closer to the nucleus and experience less **shielding** from inner electrons than **p**, **d**, or **f** orbitals at comparable $$n$$.
 
-**Shielding** (screening) means inner and same-shell electrons reduce the **full nuclear charge** $$Z$$ felt by an electron of interest. More effective shielding lowers **effective nuclear charge** and stabilizes outer electrons less. **Penetration** explains why an $$ns$$ electron can be more tightly bound than an $$(n-1)d$$ electron despite the larger $$n$$ in the label—leading to the **aufbau** order you use when writing configurations.
+**Shielding** (screening) means inner and same-shell electrons reduce the **full nuclear charge** $$Z$$ felt by an electron of interest. More effective shielding lowers **effective nuclear charge** and stabilizes outer electrons less. Penetration explains why an $$ns$$ electron can be more tightly bound than an $$(n-1)d$$ electron despite the larger $$n$$ in the label—leading to the *aufbau* order you use when writing configurations.
 
 ---
 
@@ -304,9 +304,9 @@ $$
 Z_{\text{eff}} = Z - S,
 $$
 
-where $$S$$ is a **shielding constant** summarizing electron–electron repulsion. **Slater’s rules** and more advanced models give numerical estimates; qualitatively, $$S$$ grows as you add **inner shells**, so going **down a group** increases shielding even though $$Z$$ increases.
+where $$S$$ is a **shielding constant** summarizing electron–electron repulsion. **Slater’s rules** and more advanced models give numerical estimates; qualitatively, $$S$$ grows as you add *inner shells*, so going *down a group* increases shielding even though $$Z$$ increases.
 
-**Penetration** order among subshell types at comparable $$n$$ is often summarized as
+Penetration order among subshell types at comparable $$n$$ is often summarized as
 
 $$
 s > p > d > f,
@@ -318,13 +318,13 @@ meaning **s** electrons “see” more of the nucleus and are stabilized relativ
 
 ## Periodic trends
 
-**Ionization energy** is the energy required to remove an electron from a gaseous atom or ion (first, second, … ionization energies for successive removals). **Electron affinity** is the energy change when an electron is added; **more exothermic** addition corresponds to a **more favorable** affinity in the usual sign convention used in textbooks (check your table’s sign choice).
+**Ionization energy** is the energy required to remove an electron from a gaseous atom or ion (first, second, … ionization energies for successive removals). **Electron affinity** is the energy change when an electron is added; *more exothermic* addition corresponds to a *more favorable* affinity in the usual sign convention used in textbooks (check your table’s sign choice).
 
 **Atomic radius** gauges the size of the **electron cloud** (often defined by metallic or covalent radii in different contexts). **Metallic character** is the tendency to lose electrons and behave as a metal (cations); **nonmetallic character** is the tendency to gain or share electrons with nonmetals (anions).
 
-Broad patterns: **atomic radius** increases **down a group** (new shells, more shielding) and decreases **across a period** (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite **horizontal** trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at **boron** or the **electron affinity** anomaly for **nitrogen**, appear when subshell structure or pairing changes the cost of removing or adding an electron.
+Broad patterns: **atomic radius** increases *down a group* (new shells, more shielding) and decreases *across a period* (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite **horizontal** trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at boron or the **electron affinity** anomaly for nitrogen, appear when subshell structure or pairing changes the cost of removing or adding an electron.
 
-**INSERT GRAPH**
+![Periodic Trends]({{ "/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png" | relative_url }})
 
 ---
 

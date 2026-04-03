@@ -276,7 +276,7 @@ $$
 
 a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**). 
 
-![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/EMSpectrum.png" | relative_url }})
+![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/em.png" | relative_url }})
 
 ---
 

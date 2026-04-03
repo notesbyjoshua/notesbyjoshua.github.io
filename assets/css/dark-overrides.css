@@ -18,11 +18,6 @@ body a:not([class]):hover {
 
 html {
   --site-link-accent: #0ea5e9;
-  /* Sidebar nav: muted grays (not the blue accent used in main content) */
-  --sidebar-nav-light: #4a4a46;
-  --sidebar-nav-light-emphasis: #2c2c28;
-  --sidebar-nav-dark: #c4c4bf;
-  --sidebar-nav-dark-emphasis: #f0f0eb;
 }
 
 /* One link / accent color in both themes (main content, header chrome, footer, search — not sidebar nav) */
@@ -51,50 +46,11 @@ html[data-site-theme="dark"] .icon {
   color: var(--site-link-accent) !important;
 }
 
-/* Sidebar nav links + categories: gray in light and dark (beats activation CSS via #site-nav) */
-html[data-site-theme="light"] #site-nav a.nav-list-link,
-html[data-site-theme="light"] .side-bar a.nav-list-link {
-  color: var(--sidebar-nav-light) !important;
-}
-
-html[data-site-theme="light"] #site-nav a.nav-list-link:hover,
-html[data-site-theme="light"] #site-nav a.nav-list-link.active,
-html[data-site-theme="light"] .side-bar .nav-list .nav-list-link:hover,
-html[data-site-theme="light"] .side-bar .nav-list .nav-list-link.active,
-html[data-site-theme="light"] .side-bar .nav-list-item.active > .nav-list-link {
-  color: var(--sidebar-nav-light-emphasis) !important;
-}
-
-html[data-site-theme="dark"] #site-nav a.nav-list-link,
-html[data-site-theme="dark"] .side-bar a.nav-list-link {
-  color: var(--sidebar-nav-dark) !important;
-}
-
-html[data-site-theme="dark"] .side-bar .nav-list-link:hover,
-html[data-site-theme="dark"] .side-bar .nav-list-item.active > .nav-list-link,
-html[data-site-theme="dark"] .side-bar .nav-list-link.active {
-  color: var(--sidebar-nav-dark-emphasis) !important;
-}
-
-/* Site title in sidebar: muted like nav (overrides a.site-title accent above) */
-html[data-site-theme="light"] .side-bar a.site-title {
-  color: var(--sidebar-nav-light-emphasis) !important;
-}
-
-html[data-site-theme="dark"] .side-bar a.site-title {
-  color: var(--sidebar-nav-dark-emphasis) !important;
-}
+/* Sidebar nav colors: _includes/sidebar-nav-custom.html (inline, after this sheet) */
 
 /* --- Light theme: black body copy; darker blue links; sidebar matches mode --- */
 html[data-site-theme="light"] {
   color-scheme: light;
-}
-
-/* Sidebar: base inherits muted gray (nav links set above) */
-html[data-site-theme="light"] .side-bar,
-html[data-site-theme="light"] #site-nav,
-html[data-site-theme="light"] .side-bar .site-nav {
-  color: var(--sidebar-nav-light) !important;
 }
 
 html[data-site-theme="light"] .main-header,
@@ -196,15 +152,7 @@ html[data-site-theme="light"] .main-content th code {
   color: #000 !important;
 }
 
-/* Sidebar: category + expander (same gray family as nav links) */
-html[data-site-theme="light"] .nav-category {
-  color: var(--sidebar-nav-light-emphasis) !important;
-}
-
-html[data-site-theme="light"] .nav-list .nav-list-expander {
-  color: var(--sidebar-nav-light) !important;
-}
-
+/* Light sidebar: strip theme gradient “pill”; row hover wash (colors in sidebar-nav-custom.html) */
 html[data-site-theme="light"] .side-bar .nav-list-link {
   background-image: none !important;
 }
@@ -213,11 +161,6 @@ html[data-site-theme="light"] .side-bar .nav-list .nav-list-link:hover,
 html[data-site-theme="light"] .side-bar .nav-list .nav-list-link.active,
 html[data-site-theme="light"] .side-bar .nav-list-item.active > .nav-list-link {
   background-color: rgba(0, 0, 0, 0.06) !important;
-}
-
-html[data-site-theme="light"] .side-bar .nav-list-expander svg {
-  color: var(--sidebar-nav-light) !important;
-  fill: currentColor !important;
 }
 
 html[data-site-theme="light"] .site-theme-switch__btn:focus-visible {
@@ -242,7 +185,7 @@ html[data-site-theme="dark"] .side-bar {
 }
 
 html[data-site-theme="dark"] .nav-list .nav-list-expander {
-  color: var(--sidebar-nav-dark) !important;
+  color: #d8d8d4 !important;
 }
 
 /* Drop light-theme white “pill” / image behind links so text stays readable */
@@ -263,7 +206,7 @@ html[data-site-theme="dark"] .side-bar .nav-list-expander:hover {
 }
 
 html[data-site-theme="dark"] .side-bar .nav-list-expander svg {
-  color: var(--sidebar-nav-dark) !important;
+  color: #d8d8d4 !important;
   fill: currentColor !important;
 }
 
@@ -365,7 +308,7 @@ html[data-site-theme="dark"] tbody tr:nth-child(even) {
 }
 
 html[data-site-theme="dark"] .nav-category {
-  color: var(--sidebar-nav-dark-emphasis) !important;
+  color: #f6f6f3 !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 

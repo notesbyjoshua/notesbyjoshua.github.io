@@ -64,3 +64,20 @@ a {
   border-radius: 4px;
   font-size: 0.9375rem;
 }
+
+// Note figures: use `<img class="note-img note-img--w480">` in Markdown (Kramdown `{: width=…}` is unreliable here).
+.main-content img.note-img {
+  display: block;
+  margin: 1.25rem auto;
+  height: auto;
+}
+
+.main-content img.note-img--w480 {
+  max-width: min(480px, 100%);
+  width: auto;
+}
+
+.main-content img.note-img--w640 {
+  max-width: min(640px, 100%);
+  width: auto;
+}

@@ -27,7 +27,7 @@ Unit 1 establishes the vocabulary and models used everywhere else in chemistry: 
 
 **Matter** is anything that has mass and occupies volume. Chemists classify it first by **composition**. A **pure substance** has fixed composition; **elements** are made of one kind of atom, and **compounds** contain two or more elements combined in definite proportion. A **mixture** combines substances without fixed proportion; **homogeneous** mixtures (solutions) are uniform on a macroscopic scale, while **heterogeneous** mixtures are not.
 
-![Matter Chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/Matter%20Chart.png" | relative_url }})
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/Matter%20Chart.png' | relative_url }}" alt="Matter Chart" loading="lazy" decoding="async" />
 
 ---
 
@@ -63,7 +63,7 @@ An **ion** is an atom or group of atoms with a net **electric charge** from gain
 
 **Polyatomic ions** are charged **covalent** units that behave as a single piece in **ionic compounds**: for example, **nitrate** ($$\text{NO}_3^-$$), **sulfate** ($$\text{SO}_4^{2-}$$), and **ammonium** ($$\text{NH}_4^+$$). These are the polyatomic ions you need to memorize:
 
-![Polyatomic Ions]({{ "/assets/APs/AP%20Chem/atomicstrucprop/polyions.png" | relative_url }})
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/polyions.png' | relative_url }}" alt="Polyatomic Ions" loading="lazy" decoding="async" />
 
 ---
 
@@ -121,7 +121,7 @@ That yields the **empirical formula**. **Combustion analysis** problems follow t
 
 **Mass spectrometry** separates ions by **mass-to-charge ratio** $$\frac{m}{z}$$. A typical spectrum plots *relative abundance* (or detector *intensity*) on the vertical axis against $$\frac{m}{z}$$ on the horizontal axis. For an element, the pattern of peaks reveals isotope masses and their approximate **natural abundances**; for molecules, **fragmentation** patterns can support structure assignment in advanced work. An example of a mass spectrometer chart is shown below:
 
-![Mass spectrometry chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/Mass%20Spectrometry.png" | relative_url }})
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/Mass%20Spectrometry.png' | relative_url }}" alt="Mass spectrometry chart" loading="lazy" decoding="async" />
 
 ---
 
@@ -262,7 +262,7 @@ but for all purposes, memorizing this equation is not necessary for the AP Chemi
 
 **Photoelectron spectroscopy** (**PES**) measures how much energy must be supplied to remove electrons from subshells in atoms or molecules. Peaks appear at **binding energies** characteristic of each orbital type; **relative peak areas** (after accounting for ionization cross sections) reflect electron counts in those subshells. An example problem is shown below, feel free to try it out (Answer on the bottom of the notes page)!
 
-![PES chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/PES.png" | relative_url }}){: width="480" }
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/PES.png' | relative_url }}" alt="PES chart" loading="lazy" decoding="async" />
 
 ---
 
@@ -276,7 +276,7 @@ $$
 
 a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**). 
 
-![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/em.png" | relative_url }}){: width="480" }
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/em.jpg' | relative_url }}" alt="EM Spectrum" loading="lazy" decoding="async" />
 
 ---
 
@@ -324,7 +324,7 @@ meaning **s** electrons “see” more of the nucleus and are stabilized relativ
 
 Broad patterns: **atomic radius** increases *down a group* (new shells, more shielding) and decreases *across a period* (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite **horizontal** trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at boron or the **electron affinity** anomaly for nitrogen, appear when subshell structure or pairing changes the cost of removing or adding an electron.
 
-![Periodic Trends]({{ "/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png" | relative_url }}){: width="480" }
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png' | relative_url }}" alt="Periodic Trends" loading="lazy" decoding="async" />
 
 ---
 

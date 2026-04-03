@@ -123,15 +123,15 @@ $$
 \Delta G^\circ = -RT \ln K,
 $$
 
-where $$K$$ is $$K_c$$ or $$K_p$$ according to how the reaction is expressed, and **must match** the standard-state convention your course uses. For many AP problems, $$K$$ is $$K_c$$ for solution chemistry and $$K_p$$ when all species are gases and the expression is written in pressures. The Gibbs free energy value determines if a reaction is spontaneous, which is talked about more in [Unit 9]({{ '/notes/ap/chem/thermoelectro/' | relative_url }}).
+where $$K$$ is $$K_c$$ or $$K_p$$ according to how the reaction is expressed, and *must match* the standard-state convention your course uses. For many AP problems, $$K$$ is $$K_c$$ for solution chemistry and $$K_p$$ when all species are gases and the expression is written in pressures. The Gibbs free energy value determines if a reaction is spontaneous, which is talked about more in [Unit 9]({{ '/notes/ap/chem/thermoelectro/' | relative_url }}).
 
-**Qualitative connections** (at standard conditions, using $$K$$ relative to $$1$$):
+Qualitative connections (at standard conditions, using $$K$$ relative to $$1$$):
 
 - If $$K > 1$$, then $$\Delta G^\circ < 0$$: the forward reaction is **thermodynamically favorable (spontaneous)** under standard conditions.  
 - If $$K < 1$$, then $$\Delta G^\circ > 0$$: the reverse direction is favored under standard conditions and the forward reaction is **not spontaneous**.  
 - If $$K = 1$$, then $$\Delta G^\circ = 0$$, meaning the reaction is **at equilibrium**.
 
-For **nonstandard** conditions, the reaction quotient enters:
+For *nonstandard* conditions, the reaction quotient enters:
 
 $$
 \Delta G = \Delta G^\circ + RT \ln Q.
@@ -141,17 +141,17 @@ At equilibrium, $$Q = K$$ and $$\Delta G = 0$$, which recovers $$\Delta G^\circ 
 
 ### The van’t Hoff equation
 
-Le Châtelier’s principle says that $$K$$ changes with **temperature** only, and the **van’t Hoff equation** makes that dependence **quantitative**. It follows from the way $$\Delta G^\circ = -RT\ln K$$ combines with $$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$$ when you ask how $$K$$ must move if $$T$$ changes (treating $$\Delta H^\circ$$ and $$\Delta S^\circ$$ as **approximately constant** over a modest temperature range: a standard AP assumption unless a problem says otherwise).
+Le Châtelier’s principle says that $$K$$ changes with *temperature* only, and the **van’t Hoff equation** makes that dependence quantitative. It follows from the way $$\Delta G^\circ = -RT\ln K$$ combines with $$\Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$$ when you ask how $$K$$ must move if $$T$$ changes (treating $$\Delta H^\circ$$ and $$\Delta S^\circ$$ as *approximately constant* over a modest temperature range: a standard AP assumption unless a problem says otherwise).
 
-If $$K_1$$ and $$K_2$$ are equilibrium constants (**same** kind: both $$K_c$$ or both $$K_p$$, matching how the reaction is written) at absolute temperatures $$T_1$$ and $$T_2$$, then
+If $$K_1$$ and $$K_2$$ are equilibrium constants (*same* kind: both $$K_c$$ or both $$K_p$$, matching how the reaction is written) at absolute temperatures $$T_1$$ and $$T_2$$, then
 
 $$
 \ln\frac{K_2}{K_1} = -\frac{\Delta H^\circ}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right) = \frac{\Delta H^\circ}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right).
 $$
 
-Here $$\Delta H^\circ$$ is the **standard enthalpy change** for the reaction **as written** (see [Unit 6: Thermochemistry]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})). Use $$R = 8.314\ \text{J/(mol·K)}$$ when $$\Delta H^\circ$$ is in **joules per mole** of reaction as written.
+Here $$\Delta H^\circ$$ is the *standard enthalpy change* for the reaction as written (see [Unit 6: Thermochemistry]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})). Use $$R = 8.314\ \text{J/(mol·K)}$$ when $$\Delta H^\circ$$ is in **joules per mole** of reaction as written.
 
-**Sign check:** if the forward reaction is **endothermic** ($$\Delta H^\circ > 0$$) and $$T_2 > T_1$$, then $$K_2 > K_1$$—warming **increases** $$K$$, matching the picture that **heat** acts like a **reactant** in an endothermic forward process. If the forward reaction is **exothermic** ($$\Delta H^\circ < 0$$), raising $$T$$ **decreases** $$K$$.
+**Sign check:** if the forward reaction is *endothermic* ($$\Delta H^\circ > 0$$) and $$T_2 > T_1$$, then $$K_2 > K_1$$—warming *increases* $$K$$, matching the picture that heat acts like a *reactant* in an endothermic forward process. If the forward reaction is *exothermic* ($$\Delta H^\circ < 0$$), raising $$T$$ *decreases* $$K$$.
 
 The **differential** form (useful conceptually and in derivations) is
 
@@ -159,7 +159,7 @@ $$
 \frac{d\ln K}{dT} = \frac{\Delta H^\circ}{RT^2},
 $$
 
-which shows that sensitivity of $$\ln K$$ to temperature is **larger** when $$|\Delta H^\circ|$$ is large and when $$T$$ is **low** (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
+which shows that sensitivity of $$\ln K$$ to temperature is *larger* when $$|\Delta H^\circ|$$ is large and when $$T$$ is *low* (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
 
 ---
 
@@ -175,7 +175,7 @@ Typical stresses:
 
 Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concentration stress when you need a **numerical** $$K$$: use the correct $$K$$ for the new temperature if given, compute $$K_2$$ from $$K_1$$ with the **van’t Hoff equation** (previous section), or reason qualitatively from $$\Delta H$$.
 
-**ADD IMAGE**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/equilibrium/lechat.webp' | relative_url }}" alt="Le Chatelier's Principle" loading="lazy" decoding="async" />
 
 ---
 
@@ -197,7 +197,7 @@ Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concent
 - **Small $$K$$** (product-poor): equilibrium lies left; $$x$$ may be negligible compared to initial concentrations—**verify** with the **5% rule** (or exact quadratic) when your course allows.  
 - **Large $$K$$:** equilibrium lies right; sometimes you assume **complete** reaction first, then **back-react** a small amount.
 
-**ADD IMAGE AND CHECK**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/equilibrium/icetable.png' | relative_url }}" alt="ICE Table" loading="lazy" decoding="async" />
 
 ---
 

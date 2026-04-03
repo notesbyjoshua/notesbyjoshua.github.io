@@ -108,7 +108,7 @@ A practical algorithm:
 
 Typical pairings of steric number and lone pairs give names such as **linear**, **trigonal planar**, **tetrahedral**, **trigonal bipyramidal**, and **octahedral** for the electron-domain geometry; **lone pairs** then influence the **molecular geometry** (for example, **bent** instead of **trigonal planar** when one lone pair sits on a central atom with three domains).
 
-<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/VESPR.png' | relative_url }}" alt="VSEPR Model" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/VSEPR.png' | relative_url }}" alt="VSEPR Model" loading="lazy" decoding="async" />
 
 ---
 

@@ -108,7 +108,7 @@ As usual, you should balance coefficients to make a balanced equation.
 
 In **single-displacement**, an element in its standard state replaces ions of another element in solution (or in a melt). For metals (and hydrogen in acid), activity order decides whether reaction occurs: a metal higher in the **activity series** reduces the cation of a metal below it. Hydrogen’s position marks which metals react with dilute acid to liberate $$\text{H}_2$$.
 
-**ADD IMAGE**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/chemrxns/metalAS.png' | relative_url }}" alt="Metal Activity Series" loading="lazy" decoding="async" />
 
 For halogens, a more reactive halogen displaces the halide ion of a less reactive halogen from solution. Reactivity decreases down the group ($$\text{F}_2 > \text{Cl}_2 > \text{Br}_2 > \text{I}_2$$).
 
@@ -150,7 +150,7 @@ Half-reactions are a very important compenents of **galvanic and electrolytic ce
 
 By convention, the solvent is the component present in greater amount and the solute is the dissolved component (by convention in dilute lab work, the minor component).
 
-**ADD SOLUBILITY RULES**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/chemrxns/solubility.jpg' | relative_url }}" alt="Solubility Rules" loading="lazy" decoding="async" />
 
 ---
 

@@ -102,7 +102,7 @@ Other methods of separation include distillation (uses differences in boiling po
 
 Temperature (in Kelvin) is proportional to the average translational kinetic energy of ideal-gas molecules, but varies per molecule.  However, the KE can be mapped as a distribution (called the **Maxwell-Boltzmann distribution**). A **Maxwell–Boltzmann** curve plots fraction versus speed or energy. Lighter gases at the same $$T$$ have higher average speed, and raising $$T$$ broadens the curve and increases the fraction with energy above a given activation energy. Note that macroscopic kinetic energy $$\frac{1}{2}mv^2$$ applies to bulk motion; do not confuse it with thermal motion of molecules inside a sample. An example of a Maxwell-Boltzmann distribution can be seen below:
 
-**Add image**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/submix/maxwellboltzmann.png' | relative_url }}" alt="Maxwell Boltzmann Distribution" loading="lazy" decoding="async" />
 
 ---
 

@@ -242,16 +242,16 @@ Adding a constant $$a$$ (for example, converting Celsius to a shifted scale, or 
 **Multiplying by a constant** $$b$$ (for example, feet to inches): $$y_i = b \times x_i$$.
 
 - Mean, median, and quartiles multiply by $$b$$.
-- Range, IQR, and standard deviation multiply by $$|b|$$
+- Range, IQR, and standard deviation multiply by $$\lvert b \rvert$$
 
 
 | Summary Measure | $$y_i = x_i + a$$ | $$y_i = b \times x_i$$ |
 |----------------|-------------------|------------------|
 | Mean | $$+a$$ | $$\times b$$ |
 | Median | $$+a$$ | $$\times b$$ |
-| Range | unchanged | \$$\times |b|$$ |
-| Standard Deviation | unchanged | $$\times |b|$$ |
+| Range | unchanged | $$\times \lvert b \rvert$$ |
+| Standard Deviation | unchanged | $$\times \lvert b \rvert$$ |
 | Quartiles | $$+a$$ | $$\times b$$ |
-| Interquartile Range | unchanged | $$\times |b|$$ |
+| Interquartile Range | unchanged | $$\times \lvert b \rvert$$ |
 
 These rules are worth memorizing: they explain why z-scores are unchanged by shifts and rescaling when you use the matching mean and standard deviation of the transformed data, and they explain many standardization tricks in later units.

@@ -296,17 +296,6 @@ html[data-site-theme="dark"] blockquote {
   border-left-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-html[data-site-theme="dark"] table,
-html[data-site-theme="dark"] th,
-html[data-site-theme="dark"] td {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-html[data-site-theme="dark"] thead,
-html[data-site-theme="dark"] tbody tr:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.15) !important;
-}
-
 html[data-site-theme="dark"] .nav-category {
   color: #f6f6f3 !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
@@ -347,6 +336,38 @@ html[data-site-theme="dark"] tbody,
 html[data-site-theme="dark"] tbody td,
 html[data-site-theme="dark"] tbody th {
   color: #ecece8 !important;
+}
+
+/* Tables: force dark gray surfaces (light theme sets white cell backgrounds) */
+html[data-site-theme="dark"] .main-content table {
+  background-color: #252628 !important;
+  border-collapse: collapse !important;
+}
+
+html[data-site-theme="dark"] .main-content .table-wrapper {
+  background-color: #252628 !important;
+}
+
+html[data-site-theme="dark"] .main-content th,
+html[data-site-theme="dark"] .main-content td {
+  background-color: #2d2e30 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #ecece8 !important;
+}
+
+html[data-site-theme="dark"] .main-content thead th,
+html[data-site-theme="dark"] .main-content thead td {
+  background-color: #353638 !important;
+}
+
+html[data-site-theme="dark"] .main-content tbody tr:nth-child(even) td,
+html[data-site-theme="dark"] .main-content tbody tr:nth-child(even) th {
+  background-color: #26282a !important;
+}
+
+html[data-site-theme="dark"] .main-content tfoot th,
+html[data-site-theme="dark"] .main-content tfoot td {
+  background-color: #323638 !important;
 }
 
 html[data-site-theme="dark"] .site-theme-switch__btn:focus-visible {

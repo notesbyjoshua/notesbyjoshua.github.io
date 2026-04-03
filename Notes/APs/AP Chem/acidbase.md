@@ -7,358 +7,215 @@ permalink: /notes/ap/chem/acidbase/
 ---
 
 # Unit 8: Acid-Base Equilibrium
----
 
-# 1. Definitions of Acids and Bases
-
-## Arrhenius Definition
-
-Arrhenius:  
-- Acids produce $$ H^+ $$ in aqueous solutions  
-- Bases produce $$ OH^- $$ in aqueous solutions  
-
-(Limited to aqueous acids/bases)
+This unit applies the equilibrium ideas from [Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }}) to proton transfer in water and related solvents. You will classify acids and bases, use $$K_a$$, $$K_b$$, and $$K_w$$, compute pH for strong and weak species, interpret salt solutions, design and analyze buffers, and read titration curves. Nomenclature for common acids appears in [Unit 2]({{ '/notes/ap/chem/compounds/' | relative_url }}); reaction writing and neutralization stoichiometry build on [Unit 4]({{ '/notes/ap/chem/chemrxns/' | relative_url }}).
 
 ---
 
-## Brønsted-Lowry Definition
+## Definitions of acids and bases
 
-Brønsted-Lowry:  
-- Acids are proton ($$ H^+ $$) donors  
-- Bases are proton ($$ H^+ $$) acceptors  
+### Arrhenius Theory
 
-### Key Insight
-- Introduces conjugate acid-base pairs  
-- Explains why $$ NH_3 $$ acts like a base  
+An **Arrhenius acid** increases the concentration of $$\text{H}^+$$ (really $$\text{H}_3\text{O}^+$$ in water) in aqueous solution; an **Arrhenius base** increases $$[\text{OH}^-]$$. The model is useful for water-based chemistry but does not describe ammonia as a base in water without extra bookkeeping, and it does not address nonaqueous systems.
 
----
+### Brønsted–Lowry Theory
 
-## Lewis Definition
-
-Lewis:  
-- Acids are electron pair acceptors (should have an empty shell)  
-- Bases are electron pair donors (should have a lone pair to donate)  
-
-(Most general definition, includes reactions without proton transfer)
-
-Example: $$ BF_3 $$ acts as a Lewis acid  
-
----
-
-# 2. Nomenclature
-
-## Acids
-
-Binary Acid (no oxygen):  
--ide → hydro- + nonmetal + -ic acid  
-
-Oxyacid:  
--ate → -ic acid  
--ite → -ous acid  
-
-(prefix carries on, e.g. hypo-)
-
----
-
-## Bases
-
-Hydroxides:  
-Cation + Hydroxide  
-
-Common bases:  
-- $$ NH_3 $$ — Ammonia  
-- $$ CH_3NH_2 $$ — methylamine  
-- $$ (CH_3)_2NH $$ — dimethylamine  
-
----
-
-# 3. Factors Affecting Acid Strength
-
-- Bond polarity → greater electronegativity difference = stronger acid  
-- Bond strength → weaker bond = easier $$ H^+ $$ donation  
-- Base stability → more stable conjugate base = stronger acid  
-
----
-
-# 4. pH Indicators
-
-pH Indicators: Used to determine acidity/basicity and titration endpoints  
-
-## Common Indicators
-
-Phenolphthalein:  
-- Acid → Colorless  
-- Base → Pink  
-
-Methyl Orange:  
-- Acid → Red  
-- Base → Yellow  
-
-Bromothymol Blue:  
-- Acid → Yellow  
-- Neutral → Green  
-- Base → Blue  
-
----
-
-# 5. Conjugate Acid-Base Pairs
-
-Conjugate Acid + Base:  
-- Conjugate acid = what remains of base after reaction  
-- Conjugate base = what remains of acid  
-
----
-
-# 6. Acid and Base Dissociation Constants
-
-## Acid Dissociation Constant
+A **Brønsted–Lowry acid** is a proton donor; a **Brønsted–Lowry base** is a proton acceptor. When an acid $$\text{HA}$$ donates a proton to water,
 
 $$
-K_a = \frac{[H_3O^+][A^-]}{[HA]}
+\text{HA}(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{H}_3\text{O}^+(aq) + \text{A}^-(aq),
 $$
 
-Reaction:
+the species $$\text{A}^-$$ is the **conjugate base** of $$\text{HA}$$, and $$\text{H}_3\text{O}^+$$ is the **conjugate acid** of $$\text{H}_2\text{O}$$. Every Brønsted acid has a conjugate base, and every base has a conjugate acid, differing by one $$\text{H}^+$$ in the formula and one charge unit. For AP purposes, we will generally use this theory.
 
-$$
-HA(aq) + H_2O(l) \rightleftharpoons H_3O^+(aq) + A^-
-$$
+### Lewis Theory
 
-- Stronger acid → higher $$ K_a $$  
-- $$ pK_a = -\log(K_a) $$  
+A **Lewis acid** accepts an electron pair; a **Lewis base** donates an electron pair. This picture includes reactions without proton transfer (e.g. $$\text{BF}_3$$ with $$\text{NH}_3$$) and matches how metal ions bind ligands in [Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }}) complex-ion formation. This is usually not covered on the AP exam.
 
 ---
 
-## Base Dissociation Constant
+## Nomenclature (summary)
 
-$$
-K_b = \frac{[OH^-][BH^+]}{[B]}
-$$
+**Binary acids** (hydrogen + one other nonmetal): the anion name ending *-ide* becomes *hydro-…-ic acid* (e.g. $$\text{HCl}$$, hydrochloric acid). **Oxyacids** use the oxyanion stem: *-ate* → *-ic acid* ($$\text{NO}_3^-$$ → nitric acid), *-ite* → *-ous acid* ($$\text{NO}_2^-$$ → nitrous acid); prefixes such as *hypo-* and *per-* carry over.
 
-Reaction:
-
-$$
-B(aq) + H_2O(l) \rightleftharpoons OH^-(aq) + BH^+
-$$
-
-- Stronger base → higher $$ K_b $$  
-- $$ pK_b = -\log(K_b) $$  
+Ionic hydroxides are named as cation + hydroxide. Molecular bases include ammonia ($$\text{NH}_3$$), amines (e.g. $$\text{CH}_3\text{NH}_2$$), and related nitrogen compounds that accept protons in water.
 
 ---
 
-# 7. Amphoteric Substances
+## Strength of acids and structural trends
 
-Amphoteric substance: Can act as both acid and base  
+Strong acids and strong bases are treated as complete ionization or dissociation in dilute aqueous solution for stoichiometry and pH estimates. Weak species reach equilibrium between the unionized form and ions.
 
-Example: water  
-
----
-
-# 8. Strong Acids and Bases
-
-## Strong Acids
-
-Strong acids completely dissociate in water  
-
-- $$ K_a > 1 $$  
-- Conjugate base is weak  
-
-### Common Strong Acids
-
-- $$ HCl, HBr, HI $$ (HF is exception)  
-- $$ HNO_3 $$  
-- $$ H_2SO_4 $$ (first proton only)  
-- $$ HClO_4, HClO_3 $$  
+For binary acids $$\text{HX}$$, bond polarity and bond strength both matter: across a period, polarity toward $$\text{X}$$ can strengthen the acid; down a group, longer/weaker $$\text{H–X}$$ often dominates and acidity increases ($$\text{HF}$$ is a weak acid in water; $$\text{HCl}$$, $$\text{HBr}$$, $$\text{HI}$$ are strong). For oxoacids with the same central atom, more electronegative atoms attached to that center or a higher oxidation state generally strengthens the acid. For carboxylic acids, electron-withdrawing groups stabilize the conjugate base and increase $$K_a$$.
 
 ---
 
-## Strong Bases
+## Strong acids and strong bases
 
-Strong bases completely dissociate  
+Common strong acids (memorize for AP): $$\text{HCl}$$, $$\text{HBr}$$, $$\text{HI}$$ (hydrohalic acids), $$\text{HNO}_3$$, $$\text{HClO}_4$$, $$\text{HClO}_3$$, and $$\text{H}_2\text{SO}_4$$ (oxoacids)for the first proton only (the second proton is weak in the dilute-solution sense: $$\text{HSO}_4^-$$ is a weak acid). A notable exception to hydrohalic trend is that $$\text{HF}$$ is weak.
 
-- $$ K_b > 1 $$  
+Strong bases are the group 1 hydroxides ($$\text{LiOH}$$, $$\text{NaOH}$$, $$\text{KOH}$$, …) and the heavier group 2 hydroxides commonly used in lab ($$\text{Ca(OH)}_2$$, $$\text{Sr(OH)}_2$$, $$\text{Ba(OH)}_2$$). $$\text{Mg(OH)}_2$$ is only slightly soluble but what dissolves is essentially fully dissociated.
 
-### Common Strong Bases
-
-- Group IA and IIA hydroxides (except Be, Mg)  
+For a strong acid at moderate concentration, $$[\text{H}_3\text{O}^+] \approx$$ the analytical concentration of the acid (if one proton per formula unit). For a strong diprotic acid such as $$\text{H}_2\text{SO}_4$$, treat the first step as complete and the second with $$K_{a2}$$ if the problem requires it.
 
 ---
 
-# 9. Oxides
+## Weak acids: $$K_a$$ and ICE tables
 
-Oxides: Binary compounds of oxygen  
-
-- Nonmetal oxides → acidic  
-- Metal oxides → basic  
-- Transition metal oxides → amphoteric  
-
----
-
-# 10. Polyprotic Acids
-
-Polyprotic acid: More than one acidic proton  
+For a weak monoprotic acid $$\text{HA}$$,
 
 $$
-K_{a1} > K_{a2} > K_{a3}
+K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]},
 $$
+
+with the usual equilibrium concentrations. The same logic as [Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }}) **ICE** tables applies: define $$x$$ as the amount of $$\text{HA}$$ that ionizes per liter, then solve $$K_a = x^2/(C - x)$$ (or the quadratic if $$x$$ is not negligible). When $$C \gg K_a$$ and $$x \ll C$$, the approximation $$K_a \approx x^2/C$$ is common; check with a percent-ionization or “5%” rule if your course uses it.
+
+$$
+\text{p}K_a = -\log K_a
+$$
+
+Smaller $$\text{p}K_a$$ means a stronger acid (larger $$K_a$$).
 
 ---
 
-# 11. Weak Acids and Bases
+## Weak bases: $$K_b$$
 
-## Weak Acids
-
-- $$ K_a < 1 $$  
-- Partial dissociation  
-
-Examples:
-- $$ CH_3COOH $$  
-- $$ C_6H_5COOH $$  
-- $$ HClO $$  
-- $$ HCN $$  
-- $$ HF $$  
-
----
-
-## Weak Bases
-
-- $$ K_b < 1 $$  
-- Partial dissociation  
-
----
-
-# 12. Water and pH
-
-## Water Dissociation
+For a weak base $$\text{B}$$ (e.g. $$\text{NH}_3$$),
 
 $$
-K_w = [H_3O^+][OH^-] = 1.0 \times 10^{-14}
-$$
-
----
-
-## pH Relationships
-
-$$
-pH = -\log[H^+]
+\text{B}(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{BH}^+(aq) + \text{OH}^-(aq),
 $$
 
 $$
-pOH = -\log[OH^-]
+K_b = \frac{[\text{BH}^+][\text{OH}^-]}{[\text{B}]}, \qquad \text{p}K_b = -\log K_b.
 $$
 
-$$
-pH + pOH = 14
-$$
+ICE setup parallels weak acids, but you solve for $$[\text{OH}^-]$$ and then find pH from $$K_w$$ and pOH.
 
 ---
 
-## Interpretation
+## Conjugate $$K_a$$ and $$K_b$$; $$K_w$$
 
-- $$ pH < 7 $$ → acidic  
-- $$ pH = 7 $$ → neutral  
-- $$ pH > 7 $$ → basic  
+For a conjugate pair $$\text{HA}/\text{A}^-$$ in water at a given temperature,
+
+$$
+K_a \times K_b = K_w,
+$$
+
+where $$K_b$$ refers to $$\text{A}^-$$ acting as a base toward water. Similarly $$\text{p}K_a + \text{p}K_b = \text{p}K_w$$ (at $$25\,^\circ\text{C}$$, $$\text{p}K_w = 14.00$$ when $$K_w = 1.0 \times 10^{-14}$$).
+
+**Autoionization** of water:
+
+$$
+2\,\text{H}_2\text{O}(l) \rightleftharpoons \text{H}_3\text{O}^+(aq) + \text{OH}^-(aq), \qquad K_w = [\text{H}_3\text{O}^+][\text{OH}^-].
+$$
+
+At $$25\,^\circ\text{C}$$, $$K_w = 1.0 \times 10^{-14}$$; $$K_w$$ depends on temperature, so $$\text{pH} + \text{pOH} = 14$$ is not universal outside standard conditions unless $$K_w$$ is updated.
 
 ---
 
-# 13. Calculating pH of Weak Acids
+## pH and pOH
 
-Use ICE tables:
+$$
+\text{pH} = -\log[\text{H}_3\text{O}^+], \qquad \text{pOH} = -\log[\text{OH}^-], \qquad \text{pH} + \text{pOH} = \text{p}K_w.
+$$
 
-- Write balanced equation  
-- Set up $$ K_a $$ expression  
-- Solve for $$ x $$  
+Neutral water at $$25\,^\circ\text{C}$$ has $$\text{pH} = 7.00$$ because $$[\text{H}_3\text{O}^+] = [\text{OH}^-]$$. $$\text{pH} < 7$$ is acidic and $$\text{pH} > 7$$ is basic at that temperature; at other temperatures, neutral pH shifts slightly because $$K_w$$ changes.
 
 ---
 
-# 14. Neutralization
+## Percent ionization
 
-Acid + Base → Water + Salt  
+**Percent ionization** (or **percent dissociation** for a weak acid) is
 
-### Salt Behavior
+$$
+\%\ \text{ionization} = \frac{[\text{H}_3\text{O}^+]_{\text{eq}}}{[\text{HA}]_{\text{initial}}} \times 100\%,
+$$
 
-- Strong acid + strong base → neutral  
-- Weak acid + strong base → basic  
-- Strong acid + weak base → acidic  
+using the initial analytical concentration of $$\text{HA}$$ in the denominator. For a weak base, an analogous expression uses $$[\text{OH}^-]_{\text{eq}}/[\text{B}]_{\text{initial}}$$. Adding common-ion $$\text{A}^-$$ or $$\text{BH}^+$$ suppresses ionization (**Le Châtelier’s principle**), lowering percent ionization.
 
 ---
 
-# 15. Common Ion Effect
+## Polyprotic acids
 
-Common ion effect: Equilibrium shifts to minimize added ion  
-
-- Reduces $$ H^+ $$ concentration  
+A **polyprotic acid** donates more than one proton. Successive $$K_a$$ values usually satisfy $$K_{a1} > K_{a2} > K_{a3}$$ because removing a positive proton from an increasingly negative anion is harder. Many calculations use only $$K_{a1}$$ if later steps are negligible contributors to $$[\text{H}_3\text{O}^+]$$; near the second equivalence point in a titration, the second dissociation matters.
 
 ---
 
-# 16. Percent Dissociation
+## Oxides and acid–base character
 
-$$
-\% \text{acid} = \frac{[H^+]}{[A]} \times 100\%
-$$
-
-$$
-\% \text{base} = \frac{[OH^-]}{[B]} \times 100\%
-$$
+Nonmetal oxides tend to be **acidic anhydrides** (react with water to give acids). Metal oxides, especially ionic ones, tend to be **basic anhydrides** (give hydroxide or raise pH in water). **Amphoteric** oxides/hydroxides (e.g. $$\text{Al}_2\text{O}_3$$, $$\text{Al(OH)}_3$$) react with both strong acid and strong base.
 
 ---
 
-# 17. Buffers
+## Amphoteric species
 
-Buffered solution: Resists changes in pH  
-
-- Weak acid + conjugate base  
-- Weak base + conjugate acid  
+An **amphoteric** substance can act as acid or base. Water is the usual example: it donates a proton to $$\text{NH}_3$$ and accepts one from $$\text{HCl}$$. Polyprotic anions such as $$\text{HCO}_3^-$$ and $$\text{HSO}_4^-$$ can donate or accept a proton depending on what they meet.
 
 ---
 
-## Henderson-Hasselbalch Equation
+## Acid–base properties of salts
 
-$$
-pH = pK_a + \log\left(\frac{[A^-]}{[HA]}\right)
-$$
+Salts dissociate into ions that may **hydrolyze** (react with water). A salt of strong acid + strong base (e.g. $$\text{NaCl}$$) gives neutral pH (neglecting tiny temperature effects). Weak acid + strong base (e.g. $$\text{CH}_3\text{COONa}$$) gives a basic solution because $$\text{A}^-$$ is a base. Strong acid + weak base (e.g. $$\text{NH}_4\text{Cl}$$) gives an acidic solution because $$\text{NH}_4^+$$ is an acid. Weak + weak salts require comparing $$K_a$$ of the cation acid and $$K_b$$ of the anion base.
 
 ---
 
-## Buffer Capacity
+## Buffers
 
-- High capacity → high concentrations  
-- Max stability when:
+A **buffer** resists pH change when modest amounts of strong acid or strong base are added. It contains a weak acid and its conjugate base in comparable amounts (or a weak base + conjugate acid). The **Henderson–Hasselbalch equation** (same assumptions as the small-change approximation from equilibrium) is
 
 $$
-[HA] = [A^-]
+\text{pH} = \text{p}K_a + \log\left(\frac{[\text{A}^-]}{[\text{HA}]}\right),
 $$
+
+with concentrations evaluated after any same-volume mixing (or use moles in the ratio if volume is common to both). The equation is most reliable when both species are present and neither concentration is extremely small.
+
+**Buffer capacity** increases with total concentration of buffer components. When $$[\text{HA}] = [\text{A}^-]$$, $$\text{pH} = \text{p}K_a$$ and the system can absorb equal challenge from added acid or base in a symmetric sense (maximum buffering range is often quoted near $$\text{p}K_a \pm 1$$).
 
 ---
 
-# 18. Titrations
+## Indicators
 
-Titration: Neutralizing acid/base  
-
-- Titrant → known concentration  
-- Analyte → unknown concentration  
+**Acid–base indicators** are weak acids or bases whose conjugate forms have different colors. The **endpoint** is where the color change is observed; it should lie near the **equivalence point** of a titration. Examples: phenolphthalein (colorless in acid, pink in base); methyl orange (red in acid, yellow in base); bromothymol blue (yellow $$\rightarrow$$ blue through green near $$\text{pH} \approx 7$$).
 
 ---
 
-## Curves
+## Titrations
 
-- Strong/strong → equivalence ~7  
-- Weak acid/strong base → basic equivalence  
-- Weak base/strong acid → acidic equivalence  
+In a **titration**, a solution of known concentration (**titrant**) is added from a buret to the **analyte** until reaction is complete. For acid–base work, the **equivalence point** is the stoichiometric point: moles of $$\text{H}^+$$ supplied equal moles of $$\text{OH}^-$$ accepted (account for diprotic acids and stoichiometry).
 
----
+Titration curve shape:
 
-## Half Equivalence Point
+- Strong acid / strong base: equivalence near $$\text{pH} = 7$$ at $$25\,^\circ\text{C}$$, steep vertical jump.  
+- Weak acid / strong base: equivalence $$\text{pH} > 7$$ (conjugate base hydrolysis).  
+- Weak base / strong acid: equivalence $$\text{pH} < 7$$ (conjugate acid).
 
-$$
-pH = pK_a
-$$
-
-$$
-[HA] = [A^-]
-$$
+At the **half-equivalence point** of a weak acid titrated with strong base, $$[\text{HA}] \approx [\text{A}^-]$$ and $$\text{pH} \approx \text{p}K_a$$ (buffer maximum in that sense). Polyprotic acids show multiple equivalence steps and multiple near-plateau regions corresponding to each $$\text{p}K_a$$.
 
 ---
 
-## Polyprotic Titration Curve
+## Common ion effect
 
-Multiple equivalence points 
+The **common ion effect** is the suppression of ionization of a weak electrolyte when a solution already contains one of its ions (from a salt). It is the same Le Châtelier’s principle logic as in [Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }}): added $$\text{A}^-$$ shifts $$\text{HA}$$ ionization left, lowering $$[\text{H}_3\text{O}^+]$$.
+
+---
+
+## Working checklist
+
+1. Identify strong vs weak; write the correct net ionic chemistry.  
+2. Use $$K_w$$, $$K_a$$, and $$K_b$$ at a consistent temperature; link conjugates with $$K_a K_b = K_w$$.  
+3. Use **ICE** tables for weak acids/bases; watch dilution and the **common ion effect**.  
+4. Buffers: **Henderson–Hasselbalch equation** or full equilibrium when assumptions fail.  
+5. Titrations: stoichiometry first, then equilibrium at the **equivalence point** or **half-equivalence point** for $$\text{p}K_a$$.
+
+---
+
+## Reference: common strong acids and bases
+
+| Strong acids (typical list) | Strong bases (typical list) |
+|----------------------------|-----------------------------|
+| $$\text{HCl}$$, $$\text{HBr}$$, $$\text{HI}$$ | $$\text{LiOH}$$, $$\text{NaOH}$$, $$\text{KOH}$$, … |
+| $$\text{HNO}_3$$, $$\text{HClO}_4$$, $$\text{HClO}_3$$ | $$\text{Ca(OH)}_2$$, $$\text{Sr(OH)}_2$$, $$\text{Ba(OH)}_2$$ |
+| $$\text{H}_2\text{SO}_4$$ (first $$\text{H}^+$$ only) | |
+
+$$\text{HF}$$ is weak; $$\text{HSO}_4^-$$ is a weak acid.

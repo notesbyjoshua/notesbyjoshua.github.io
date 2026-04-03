@@ -143,27 +143,36 @@ These same curves also motivate [reaction coordinates]({{ '/notes/ap/chem/kineti
 
 ## The Born–Haber cycle
 
+First, before we begin, here are some important terms:
+
+- $$U_{lattice}$$ = Lattice Energy
+- $$\Delta U$$ = Change in Potential Energy
+- $$\Delta H$$ = Change in Enthalpy
+- $$\Delta H_{\text{ea}}$$ = Enthalpy of Electron Gain
+- $$IE$$ = Ionization Energy
+- $$D_{A-B}$$ = Bond Enthalpy between A and B
+
 The **Born–Haber cycle** is a **Hess’s law** (See more in [Unit 6]({{ '/notes/ap/chem/thermochemistry/' | relative_url }})) construction for an **ionic solid**. It expresses the standard enthalpy of formation $$\Delta H_f^\circ$$ of the compound from its **elements in standard states** as a sum of steps that convert those elements into **gas-phase ions** and then let those ions **crystallize**. Any one unknown step (most often **lattice energy**) can be found if the others are known.
 
 Take a 1:1 alkali halide $$\text{MX}$$, formed from $$\text{M}(s)$$ and $$\tfrac{1}{2}\text{X}_2(g)$$. Imagine the path:
 
-1. **Atomize the metal** (sublimation): $$\text{M}(s) \rightarrow \text{M}(g)$$ with $$\Delta H = \Delta H_{\text{sub}}$$ (usually **endothermic**).  
+1. **Atomize the metal** (sublimation): $$\text{M}(s) \rightarrow \text{M}(g)$$ with $$\Delta H = \Delta H_{\text{sub}}$$ (usually endothermic).  
 
-2. **Ionize the metal**: $$\text{M}(g) \rightarrow \text{M}^+(g) + e^-$$ with $$\Delta H = \text{IE}$$ (**endothermic**; use the correct **successive** ionization energies if more than one electron is lost). 
+2. **Ionize the metal**: $$\text{M}(g) \rightarrow \text{M}^+(g) + e^-$$ with $$\Delta H = \text{IE}$$ (endothermic; use the correct successive ionization energies if more than one electron is lost). 
 
-3. **Atomize the halogen**: $$\tfrac{1}{2}\text{X}_2(g) \rightarrow \text{X}(g)$$ with $$\Delta H = \tfrac{1}{2}D_{\text{X–X}}$$ (**endothermic**; half the $$\text{X–X}$$ bond enthalpy).  
+3. **Atomize the halogen**: $$\tfrac{1}{2}\text{X}_2(g) \rightarrow \text{X}(g)$$ with $$\Delta H = \tfrac{1}{2}D_{\text{X–X}}$$ (endothermic; half the $$\text{X–X}$$ bond enthalpy).  
 
-4. **Attach an electron to the halogen**: $$\text{X}(g) + e^- \rightarrow \text{X}^-(g)$$ with $$\Delta H = \Delta H_{\text{ea}}$$. For halogens this step is **exothermic**, so $$\Delta H_{\text{ea}}$$ is **negative** when reported as an enthalpy change. (If a table lists **electron affinity** with a different sign convention, convert it to $$\Delta H$$ for this step before you add.)  
+4. **Attach an electron to the halogen**: $$\text{X}(g) + e^- \rightarrow \text{X}^-(g)$$ with $$\Delta H = \Delta H_{\text{ea}}$$. For halogens this step is exothermic, so $$\Delta H_{\text{ea}}$$ is negative when reported as an enthalpy change. (If a table lists **electron affinity** with a different sign convention, convert it to $$\Delta H$$ for this step before you add.)  
 
-5. **Form the crystal from gas ions**: $$\text{M}^+(g) + \text{X}^-(g) \rightarrow \text{MX}(s)$$. This step is **strongly exothermic**. Textbooks often define **lattice energy** $$U_{\text{lattice}}$$ as a **positive number** equal to the **endothermic** enthalpy of the **reverse** process—**one mole** of solid separated into **isolated gaseous ions**:
+5. **Form the crystal from gas ions**: $$\text{M}^+(g) + \text{X}^-(g) \rightarrow \text{MX}(s)$$. This step is strongly exothermic. Textbooks often define **lattice energy** $$U_{\text{lattice}}$$ as a positive number equal to the endothermic enthalpy of the **reverse** process: one mole of solid separated into isolated gaseous ions:
 
 $$
 \text{MX}(s) \rightarrow \text{M}^+(g) + \text{X}^-(g) \qquad \Delta H = +U_{\text{lattice}}
 $$
 
-Then step 5 (lattice **formation** from ions) has $$\Delta H = -U_{\text{lattice}}$$.
+Then step 5 (lattice formation from ions) has $$\Delta H = -U_{\text{lattice}}$$.
 
-Because the **overall** enthalpy change from $$\text{M}(s) + \tfrac{1}{2}\text{X}_2(g)$$ to $$\text{MX}(s)$$ is $$\Delta H_f^\circ$$,
+Because the overall enthalpy change from $$\text{M}(s) + \tfrac{1}{2}\text{X}_2(g)$$ to $$\text{MX}(s)$$ is $$\Delta H_f^\circ$$,
 
 $$
 \Delta H_f^\circ(\text{MX},\,s) = \Delta H_{\text{sub}} + \text{IE} + \frac{1}{2}D_{\text{X–X}} + \Delta H_{\text{ea}} - U_{\text{lattice}}.
@@ -175,8 +184,8 @@ $$
 U_{\text{lattice}} = \Delta H_{\text{sub}} + \text{IE} + \frac{1}{2}D_{\text{X–X}} + \Delta H_{\text{ea}} - \Delta H_f^\circ.
 $$
 
-For salts with other stoichiometries (e.g. $$\text{MgCl}_2$$, $$\text{Na}_2\text{O}$$), use the **correct multiple** of atomization, **all** required ionization steps, the appropriate **nonmetal** atomization (e.g. $$\tfrac{1}{2}\text{O}_2$$), and **electron-gain** steps that match the anion charge (second-electron addition to oxygen is **very** endothermic; the **huge** lattice energy of oxides is what makes the **overall** formation from elements favorable). The cycle is still **closed**: the sum of steps along one route equals the sum along any other route between the same two **thermodynamic states**.
+For salts with other stoichiometries (e.g. $$\text{MgCl}_2$$, $$\text{Na}_2\text{O}$$), use the correct multiple of atomization, all required ionization steps, the appropriate nonmetal atomization (e.g. $$\tfrac{1}{2}\text{O}_2$$), and electron-gain steps that match the anion charge (second-electron addition to oxygen is very endothermic; the huge lattice energy of oxides is what makes the overall formation from elements favorable). The cycle is still closed: the sum of steps along one route equals the sum along any other route between the same two **thermodynamic states**.
 
-Qualitatively, **larger** ion charges and **smaller** ions (shorter internuclear distances in the lattice) increase $$U_{\text{lattice}}$$, consistent with **Coulomb** attraction in the lattice and with the trends introduced earlier in this unit.
+Qualitatively, larger ion charges and smaller ions (shorter internuclear distances in the lattice) increase $$U_{\text{lattice}}$$, consistent with Coulomb attraction in the lattice and with the trends introduced earlier in this unit. A picture has been added below for illustrative purposes.
 
 **ADD PICTURE**

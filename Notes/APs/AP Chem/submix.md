@@ -285,7 +285,7 @@ with $$M$$ in $$\text{mol/L}$$ and $$R$$ matched to the units of $$\Pi$$ (common
 
 ## Light and solutions: Beer–Lambert law
 
-**Spectrophotometry** uses the **Beer–Lambert law**: absorbance is proportional to concentration for a fixed path length:
+**Spectrophotometry**/**colorimetry** uses the **Beer–Lambert Law** (Or alternatively **Beer's Law**): absorbance is proportional to concentration for a fixed path length:
 
 $$
 A = \varepsilon l c,
@@ -294,5 +294,7 @@ $$
 where $$\varepsilon$$ is the molar absorptivity, $$l$$ the path length, and $$c$$ the concentration. Transmittance $$T$$ (fraction of light passing) relates to absorbance by
 
 $$
-A = -\log_{10}(T).
-$$
+A = -\log_{10}(T)
+$$,
+
+but transmittance rarely shows up on the AP exam. Beer's law is very applicable for measuring equilibrium/kinetics, since absorbance is directly proportional to concentration. When doing colorimetry, always calibrate beforehand and set the wavelength to the wavelength that is closest to the OPPOSITE of the color of the solution to get maximum absorbance.

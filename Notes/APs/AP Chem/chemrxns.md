@@ -197,4 +197,5 @@ Do not equate $$\text{ppm}$$ to “$$\text{mass \%} \times 10^6$$”; use the fr
 
 A **colloid** contains dispersed particles larger than single molecules but small enough to stay suspended (roughly $$1$$–$$1000\ \text{nm}$$ is a common textbook range). Colloids are thermodynamically unstable with respect to bulk phase separation but can be kinetically persistent; charged surfaces and electrostatic repulsion often slow aggregation.
 
-The **Tyndall effect** is the scattering of visible light by those particles—a practical way to distinguish many colloids from true solutions. **Coagulation** (heating, adding electrolyte, or mixing) can collapse the dispersion so particles aggregate and settle.
+- The **Tyndall effect** is the scattering of visible light by those particles, a practical way to distinguish many colloids from true solutions. For example, milk is a colloid because it scatters light, one reason why it appears white
+- **Coagulation** (heating, adding electrolyte, or mixing) can collapse the dispersion so particles aggregate and settle, just like how milk clumps can settle when milk isn't properly refrigerated

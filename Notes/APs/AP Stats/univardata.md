@@ -239,7 +239,7 @@ Adding a constant $$a$$ (for example, converting Celsius to a shifted scale, or 
 - Mean, median and quartiles shift by $$+a$$.
 - Spread measures that depend only on distances between values (range, IQR, standard deviation) are unchanged.
 
-**Multiplying by a constant** $$b$$ (for example, feet to inches): $$y_i = b \times x_i$$.
+Multiplying by a constant $$b$$ (for example, feet to inches): $$y_i = b \times x_i$$.
 
 - Mean, median, and quartiles multiply by $$b$$.
 - Range, IQR, and standard deviation multiply by $$\lvert b \rvert$$

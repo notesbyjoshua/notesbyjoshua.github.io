@@ -108,7 +108,7 @@ A practical algorithm:
 
 Typical pairings of steric number and lone pairs give names such as **linear**, **trigonal planar**, **tetrahedral**, **trigonal bipyramidal**, and **octahedral** for the electron-domain geometry; **lone pairs** then influence the **molecular geometry** (for example, **bent** instead of **trigonal planar** when one lone pair sits on a central atom with three domains).
 
-**ADD IMAGE OF VSEPR THING**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/VESPR.png' | relative_url }}" alt="VSEPR Model" loading="lazy" decoding="async" />
 
 ---
 
@@ -116,7 +116,7 @@ Typical pairings of steric number and lone pairs give names such as **linear**, 
 
 Atomic orbitals on a bonded atom can mix to form **hybrid orbitals** that are consistent with VESPR. For **carbon** in many organic molecules, four **sigma** frameworks point toward the corners of a tetrahedron, described by $$\text{sp}^3$$ **hybridization**. $$\text{sp}^2$$ hybrids lie in a plane at $$120^\circ$$ (trigonal planar arrangement); $$\text{sp}$$ hybrids are linear at $$180^\circ$$. In addition, $$\text{sp}^3 d$$ hybridization occurs in trigonal bipyramidal configurations, while $$\text{sp}^3 d^2$$ hybridization occurs in an octahedral configuration.
 
-**ADD PICTURE OF HYBRIDIZED ORBITALS**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/Hybrids.jpeg' | relative_url }}" alt="Hybridization" loading="lazy" decoding="async" />
 
 ---
 
@@ -132,7 +132,7 @@ A **sigma bond** ($$\sigma$$) has electron density concentrated along the **inte
 
 When two atoms approach, the **potential energy** of the system typically drops as attractive interactions dominate, passes through a **minimum** at an **equilibrium bond length**, and then rises steeply as **nuclear repulsion** dominates at short distance. 
 
-**ADD IMAGE**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/potenergycurve.jpg' | relative_url }}" alt="Potential Energy Curve" loading="lazy" decoding="async" />
 
 
 **Bond energy** is related to the depth of that well. Comparing curves for the same bond order (single vs double vs triple) illustrates why higher **bond order** correlates with shorter, stronger bonds.
@@ -188,4 +188,4 @@ For salts with other stoichiometries (e.g. $$\text{MgCl}_2$$, $$\text{Na}_2\text
 
 Qualitatively, larger ion charges and smaller ions (shorter internuclear distances in the lattice) increase $$U_{\text{lattice}}$$, consistent with Coulomb attraction in the lattice and with the trends introduced earlier in this unit. A picture has been added below for illustrative purposes.
 
-**ADD PICTURE**
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/compounds/bornhaber.gif' | relative_url }}" alt="Born-Haber Cycle" loading="lazy" decoding="async" />

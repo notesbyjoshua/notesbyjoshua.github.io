@@ -92,7 +92,7 @@ $$
 R_f = \frac{\text{distance traveled by the spot}}{\text{distance traveled by the solvent front}},
 $$
 
-with values between $$0$$ and $$1$$ for typical thin-layer work. The retention factor is a measure of how far a molecular moved compared to the solvent, and can determine the polarity of the molecule. Usually (if using polar paper) nonpolar molecules will go higher than polar molecules, since they have a weaker attachment to the paper and thus will move up with the solvent more.
+with values between $$0$$ and $$1$$ for typical thin-layer work. The retention factor is a measure of how far a molecular moved compared to the solvent, and can determine the polarity of the molecule. Usually (if using polar paper and a polar stationary phase) nonpolar molecules will go higher than polar molecules, since they have a weaker attachment to the paper and thus will move up with the solvent more.
 
 Other methods of separation include distillation (uses differences in boiling point (hence vapor pressure)) and evaporation/crystallization (removes or concentrates solvent to isolate solute).
 

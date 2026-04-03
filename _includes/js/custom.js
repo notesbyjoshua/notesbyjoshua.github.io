@@ -44,3 +44,39 @@
     }
   }
 })();
+
+(function () {
+  var STORAGE_KEY = 'notes-site-theme';
+
+  function syncThemeButtons() {
+    var t = document.documentElement.getAttribute('data-site-theme') || 'light';
+    document.querySelectorAll('.site-theme-switch__btn').forEach(function (btn) {
+      var v = btn.getAttribute('data-site-theme-value');
+      btn.setAttribute('aria-pressed', v === t ? 'true' : 'false');
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.site-theme-switch__btn');
+    if (!btn) return;
+    var v = btn.getAttribute('data-site-theme-value');
+    if (v !== 'dark' && v !== 'light') return;
+    document.documentElement.setAttribute('data-site-theme', v);
+    try {
+      localStorage.setItem(STORAGE_KEY, v);
+    } catch (err) {}
+    syncThemeButtons();
+  });
+
+  function onReady(fn) {
+    if (typeof window.jtd !== 'undefined' && typeof window.jtd.onReady === 'function') {
+      window.jtd.onReady(fn);
+    } else if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
+  }
+
+  onReady(syncThemeButtons);
+})();

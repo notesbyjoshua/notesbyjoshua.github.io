@@ -97,7 +97,7 @@ $$
 **Combustion** of a hydrocarbon in excess oxygen produces carbon dioxide and water (and other products if the fuel contains other elements such as sulfur). Incomplete combustion can yield $$\text{CO}$$ or soot (carbon):
 
 $$
-\text{Hydrocarbon} + \text{O_2} \longrightarrow \text{CO_2} (g) + \text{H_2O} (g).
+\text{Hydrocarbon} + \text{O_2} \longrightarrow \text{CO_2} (g) + \text{H_2O} (g or l).
 $$
 
 As usual, you should balance coefficients to make a balanced equation.

@@ -39,11 +39,11 @@ This site is a peak into all of my notes, and it is ***FREE*** for you all to sh
 
 ---
 
-## Available Notes
+## ✅ Available Notes ✅
 
-Here is a list of notes that have been added (in compeletion)!
+Here is a list of notes that have been added (in completion)!
 
-1. AP Chem Units 1-7
+1. AP Chem Units 1-8
 2. AP Physics C E&M Units 1-2
 3. AP Stats Units 1-4
 4. AP Physics C Mech Unit 1

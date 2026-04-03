@@ -1,3 +1,16 @@
+<script>
+  (function () {
+    var key = "notes-site-theme";
+    try {
+      var t = localStorage.getItem(key);
+      if (t !== "dark" && t !== "light") t = "light";
+      document.documentElement.setAttribute("data-site-theme", t);
+    } catch (e) {
+      document.documentElement.setAttribute("data-site-theme", "light");
+    }
+  })();
+</script>
+
 <link rel="icon" type="image/jpeg" href="{{ '/assets/Images/favicon.jpeg' | relative_url }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

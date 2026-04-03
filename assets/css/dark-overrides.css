@@ -1,202 +1,227 @@
 /*
-  Plain CSS loaded after Just the Docs so dark mode applies even if SCSS merge fails.
-  Light sky-blue link accents; body/headings use light off-white (readable on #202123).
+  Theme overrides for Just the Docs.
+  Default (light): built-in light color_scheme + tweaks below.
+  Dark: same palette as before, toggled via html[data-site-theme="dark"] (see nav footer + custom.js).
 */
-html {
+
+/* --- Light theme: slightly deeper blue accents on white (theme handles most surfaces) --- */
+html[data-site-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-site-theme="light"] .main-content a,
+html[data-site-theme="light"] .main-content a:link,
+html[data-site-theme="light"] .main-content a:visited,
+html[data-site-theme="light"] .main-content a:active,
+html[data-site-theme="light"] .breadcrumb-nav a,
+html[data-site-theme="light"] .aux-nav a,
+html[data-site-theme="light"] .search-results .search-results-list a,
+html[data-site-theme="light"] .site-footer a,
+html[data-site-theme="light"] .main-content .anchor-heading svg,
+html[data-site-theme="light"] .icon {
+  color: #0369a1 !important;
+}
+
+html[data-site-theme="light"] .site-theme-switch__btn:focus-visible {
+  outline: 2px solid #0369a1;
+  outline-offset: 2px;
+}
+
+/* --- Dark theme (previous site-wide overrides) --- */
+html[data-site-theme="dark"] {
   color-scheme: dark;
 }
 
-body {
+html[data-site-theme="dark"] body {
   font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #202123 !important;
   color: #ecece8 !important;
 }
 
-.side-bar {
+html[data-site-theme="dark"] .side-bar {
   background-color: #202123 !important;
 }
 
-.main {
+html[data-site-theme="dark"] .main {
   background-color: #202123 !important;
 }
 
-.main-content-wrap {
+html[data-site-theme="dark"] .main-content-wrap {
   background-color: #202123 !important;
 }
 
-/* Main column: Just the Docs sets $body-text-color in bundled CSS; force bright text here. */
-.main-content-wrap,
-.main .main-content,
-.main-content {
+html[data-site-theme="dark"] .main-content-wrap,
+html[data-site-theme="dark"] .main .main-content,
+html[data-site-theme="dark"] .main-content {
   color: #ecece8 !important;
 }
 
-.main-content p,
-.main-content li,
-.main-content dt,
-.main-content dd,
-.main-content td,
-.main-content th,
-.main-content blockquote,
-.main-content address,
-.main-content summary,
-.main-content figcaption {
+html[data-site-theme="dark"] .main-content p,
+html[data-site-theme="dark"] .main-content li,
+html[data-site-theme="dark"] .main-content dt,
+html[data-site-theme="dark"] .main-content dd,
+html[data-site-theme="dark"] .main-content td,
+html[data-site-theme="dark"] .main-content th,
+html[data-site-theme="dark"] .main-content blockquote,
+html[data-site-theme="dark"] .main-content address,
+html[data-site-theme="dark"] .main-content summary,
+html[data-site-theme="dark"] .main-content figcaption {
   color: #ecece8 !important;
 }
 
-/* List markers (theme uses dark grey bullets/numbers) */
-.main-content ul > li::before,
-.main-content ol > li::before {
+html[data-site-theme="dark"] .main-content ul > li::before,
+html[data-site-theme="dark"] .main-content ol > li::before {
   color: #c8c8c4 !important;
 }
 
-/* In-body links: keep accent; visited slightly softer */
-.main-content a,
-.main-content a:link,
-.main-content a:visited,
-.main-content a:active {
+html[data-site-theme="dark"] .main-content a,
+html[data-site-theme="dark"] .main-content a:link,
+html[data-site-theme="dark"] .main-content a:visited,
+html[data-site-theme="dark"] .main-content a:active {
   color: #7dd3fc !important;
 }
 
-/* Bottom-of-page child nav / TOC snippets */
-.main #markdown-toc,
-.main .text-delta {
+html[data-site-theme="dark"] .main #markdown-toc,
+html[data-site-theme="dark"] .main .text-delta {
   color: #ecece8 !important;
 }
 
-.breadcrumb-nav {
+html[data-site-theme="dark"] .breadcrumb-nav {
   color: #ecece8 !important;
 }
 
-.breadcrumb-nav a {
+html[data-site-theme="dark"] .breadcrumb-nav a {
   color: #7dd3fc !important;
 }
 
-.search-results-list .search-result-doc,
-.search-results-list .search-result-preview,
-.search-results-list .search-result-doc .search-result-highlight {
+html[data-site-theme="dark"] .search-results-list .search-result-doc,
+html[data-site-theme="dark"] .search-results-list .search-result-preview,
+html[data-site-theme="dark"] .search-results-list .search-result-doc .search-result-highlight {
   color: #ecece8 !important;
 }
 
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6,
-#toctitle {
+html[data-site-theme="dark"] .main-content h1,
+html[data-site-theme="dark"] .main-content h2,
+html[data-site-theme="dark"] .main-content h3,
+html[data-site-theme="dark"] .main-content h4,
+html[data-site-theme="dark"] .main-content h5,
+html[data-site-theme="dark"] .main-content h6,
+html[data-site-theme="dark"] #toctitle {
   color: #f6f6f3 !important;
 }
 
-.site-title {
+html[data-site-theme="dark"] .site-title {
   color: #f6f6f3 !important;
 }
 
-.main-header,
-.site-header {
+html[data-site-theme="dark"] .main-header,
+html[data-site-theme="dark"] .site-header {
   background-color: #202123 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-.search-input {
+html[data-site-theme="dark"] .search-input {
   background-color: #2e2f31 !important;
   color: #f7f5f8 !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-.search {
+html[data-site-theme="dark"] .search {
   background-color: #202123 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-.aux-nav a {
+html[data-site-theme="dark"] .aux-nav a {
   color: #7dd3fc !important;
 }
 
-.breadcrumb-nav-list-item::after {
+html[data-site-theme="dark"] .breadcrumb-nav-list-item::after {
   color: #b5b5b1 !important;
 }
 
-hr {
+html[data-site-theme="dark"] hr {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-blockquote {
+html[data-site-theme="dark"] blockquote {
   border-left-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-table,
-th,
-td {
+html[data-site-theme="dark"] table,
+html[data-site-theme="dark"] th,
+html[data-site-theme="dark"] td {
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-thead,
-tbody tr:nth-child(even) {
+html[data-site-theme="dark"] thead,
+html[data-site-theme="dark"] tbody tr:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
-.nav-category {
+html[data-site-theme="dark"] .nav-category {
   color: #f6f6f3 !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.site-footer {
+html[data-site-theme="dark"] .site-footer {
   color: #d2d2cd !important;
 }
 
-.icon {
+html[data-site-theme="dark"] .icon {
   color: #7dd3fc !important;
 }
 
-/* Theme-built links not covered above (search, footer, heading anchor icons) */
-.search-results .search-results-list a,
-.site-footer a {
+html[data-site-theme="dark"] .search-results .search-results-list a,
+html[data-site-theme="dark"] .site-footer a {
   color: #7dd3fc !important;
 }
 
-.main-content .anchor-heading svg {
+html[data-site-theme="dark"] .main-content .anchor-heading svg {
   color: #7dd3fc !important;
 }
 
-mjx-container[jax="CHTML"] {
+html[data-site-theme="dark"] mjx-container[jax="CHTML"] {
   color: #ecece8 !important;
 }
 
-.highlight,
-div.highlighter-rouge,
-figure.highlight {
+html[data-site-theme="dark"] .highlight,
+html[data-site-theme="dark"] div.highlighter-rouge,
+html[data-site-theme="dark"] figure.highlight {
   background-color: #0d1117 !important;
 }
 
-.highlight .highlight {
+html[data-site-theme="dark"] .highlight .highlight {
   background-color: transparent !important;
 }
 
-code {
+html[data-site-theme="dark"] code {
   background-color: rgba(255, 255, 255, 0.06) !important;
   color: #f4f2f6 !important;
 }
 
-.footnotes,
-.page-content,
-.sect1,
-.sect2 {
+html[data-site-theme="dark"] .footnotes,
+html[data-site-theme="dark"] .page-content,
+html[data-site-theme="dark"] .sect1,
+html[data-site-theme="dark"] .sect2 {
   color: #ecece8 !important;
 }
 
-thead,
-tbody,
-tbody td,
-tbody th {
+html[data-site-theme="dark"] thead,
+html[data-site-theme="dark"] tbody,
+html[data-site-theme="dark"] tbody td,
+html[data-site-theme="dark"] tbody th {
   color: #ecece8 !important;
 }
 
-/* --- Sidebar nav: spacing + overlap (expander is absolute; nested ul needs clear separation) --- */
+html[data-site-theme="dark"] .site-theme-switch__btn:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 2px;
+}
+
+/* --- Sidebar nav: spacing (both themes) --- */
 .side-bar #site-nav .nav-list-item {
   position: relative;
-  /* avoid margin collapse between parent <li> and nested <ul> */
   padding-bottom: 1px;
 }
 
@@ -218,4 +243,52 @@ tbody th {
 
 .side-bar #site-nav > .nav-list > .nav-list-item:not(:last-child) {
   margin-bottom: 0.75rem;
+}
+
+/* --- Footer: theme toggle (both themes) --- */
+.nav-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.site-theme-switch {
+  display: inline-flex;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  font-size: 0.75rem;
+}
+
+html[data-site-theme="dark"] .site-theme-switch {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.site-theme-switch__btn {
+  margin: 0;
+  padding: 0.3rem 0.55rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  line-height: 1.2;
+}
+
+.site-theme-switch__btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+html[data-site-theme="dark"] .site-theme-switch__btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.site-theme-switch__btn[aria-pressed="true"] {
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+html[data-site-theme="dark"] .site-theme-switch__btn[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.14);
 }

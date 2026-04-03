@@ -68,7 +68,9 @@ Organic chemistry is the study of compounds built around carbon frameworks. Many
 
 The **octet rule** says that in many compounds, atoms are most stable when they are surrounded by eight valence electrons (four pairs), matching the noble gas configuration of the noble gas in the same period. Hydrogen and helium are exceptions in the strict sense: hydrogen/helium aim for two electrons (a **duet**), not eight.
 
-Some **period 2** elements (notably **boron**, **beryllium**, and **aluminum** in compounds such as $$\text{BF}_3$$) may be **electron-deficient**, with fewer than eight valence electrons on the central atom in a Lewis structure that still matches experiment. Specifically, they aim to have twice the number of valence electrons they currently have in their shell (with the exception of alumninum). **Heavier main-group elements** (the square from **phosphorus** through **astatine** in the $$p$$ block, in the usual textbook treatment) can exhibit **expanded octets**, using $$d$$ orbitals in the hybridization picture to accommodate more than eight valence electrons when they are the central atom in certain compounds.
+Some **period 2** elements (notably **boron**, **beryllium**, and **aluminum** in compounds such as $$\text{BF}_3$$) may be **electron-deficient**, with fewer than eight valence electrons on the central atom in a Lewis structure that still matches experiment. Specifically, they aim to have twice the number of valence electrons they currently have in their shell. 
+
+**Heavier main-group elements** (the square from **phosphorus** through **astatine** in the $$p$$ block, in the usual textbook treatment) can exhibit **expanded octets**, using $$d$$ orbitals in the hybridization picture to accommodate more than eight valence electrons when they are the central atom in certain compounds.
 
 When drawing, always ask whether the central atom is allowed to expand or must remain octet-complete for the story you are telling.
 

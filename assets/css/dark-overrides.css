@@ -43,6 +43,16 @@ html[data-site-theme="dark"] .side-bar {
   background-color: #202123 !important;
 }
 
+html[data-site-theme="dark"] .nav-list .nav-list-link,
+html[data-site-theme="dark"] .nav-list .nav-list-expander {
+  color: #d8d8d4 !important;
+}
+
+html[data-site-theme="dark"] .nav-list .nav-list-link:hover,
+html[data-site-theme="dark"] .nav-list .nav-list-link.active {
+  color: #7dd3fc !important;
+}
+
 html[data-site-theme="dark"] .main {
   background-color: #202123 !important;
 }

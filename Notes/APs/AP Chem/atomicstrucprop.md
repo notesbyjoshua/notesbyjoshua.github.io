@@ -262,7 +262,7 @@ but for all purposes, memorizing this equation is not necessary for the AP Chemi
 
 **Photoelectron spectroscopy** (**PES**) measures how much energy must be supplied to remove electrons from subshells in atoms or molecules. Peaks appear at **binding energies** characteristic of each orbital type; **relative peak areas** (after accounting for ionization cross sections) reflect electron counts in those subshells. An example problem is shown below, feel free to try it out (Answer on the bottom of the notes page)!
 
-![PES chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/PES.png" | relative_url }})
+![PES chart]({{ "/assets/APs/AP%20Chem/atomicstrucprop/PES.png" | relative_url }}){: width="480" }
 
 ---
 
@@ -276,7 +276,7 @@ $$
 
 a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**). 
 
-![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/em.png" | relative_url }})
+![EM Spectrum]({{ "/assets/APs/AP%20Chem/atomicstrucprop/em.png" | relative_url }}){: width="480" }
 
 ---
 
@@ -324,7 +324,7 @@ meaning **s** electrons “see” more of the nucleus and are stabilized relativ
 
 Broad patterns: **atomic radius** increases *down a group* (new shells, more shielding) and decreases *across a period* (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite **horizontal** trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at boron or the **electron affinity** anomaly for nitrogen, appear when subshell structure or pairing changes the cost of removing or adding an electron.
 
-![Periodic Trends]({{ "/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png" | relative_url }})
+![Periodic Trends]({{ "/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png" | relative_url }}){: width="480" }
 
 ---
 

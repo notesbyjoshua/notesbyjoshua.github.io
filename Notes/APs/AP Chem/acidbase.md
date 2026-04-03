@@ -12,6 +12,9 @@ This unit applies the equilibrium ideas from [Unit 7]({{ '/notes/ap/chem/equilib
 
 ---
 
+> Note:
+> This section is not completely finished. To do: Add pictures of titrations, pH calculations, etc.
+
 ## Definitions of acids and bases
 
 ### Arrhenius Theory

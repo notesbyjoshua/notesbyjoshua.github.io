@@ -4,11 +4,118 @@
   Dark: same palette as before, toggled via html[data-site-theme="dark"] (see nav footer + custom.js).
 */
 
-/* --- Light theme: slightly deeper blue accents on white (theme handles most surfaces) --- */
+/* Links: no underline (theme underlines `a:not([class])` for markdown links) */
+body a,
+body a:hover,
+body a:visited,
+body a:active,
+body a:focus,
+body a:not([class]),
+body a:not([class]):hover {
+  text-decoration: none !important;
+  text-underline-offset: unset !important;
+}
+
+/* --- Light theme: black body copy; darker blue links; sidebar matches mode --- */
 html[data-site-theme="light"] {
   color-scheme: light;
 }
 
+/* Main column + chrome: pure black text (theme defaults are gray) */
+html[data-site-theme="light"] body {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .main-content-wrap,
+html[data-site-theme="light"] .main .main-content,
+html[data-site-theme="light"] .main-content {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .main-content p,
+html[data-site-theme="light"] .main-content li,
+html[data-site-theme="light"] .main-content dt,
+html[data-site-theme="light"] .main-content dd,
+html[data-site-theme="light"] .main-content td,
+html[data-site-theme="light"] .main-content th,
+html[data-site-theme="light"] .main-content blockquote,
+html[data-site-theme="light"] .main-content address,
+html[data-site-theme="light"] .main-content summary,
+html[data-site-theme="light"] .main-content figcaption {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .main-content h1,
+html[data-site-theme="light"] .main-content h2,
+html[data-site-theme="light"] .main-content h3,
+html[data-site-theme="light"] .main-content h4,
+html[data-site-theme="light"] .main-content h5,
+html[data-site-theme="light"] .main-content h6,
+html[data-site-theme="light"] #toctitle {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .main-content ul > li::before,
+html[data-site-theme="light"] .main-content ol > li::before {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .main #markdown-toc,
+html[data-site-theme="light"] .main .text-delta {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .breadcrumb-nav {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .breadcrumb-nav-list-item::after {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .search-input {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .search-results-list .search-result-doc,
+html[data-site-theme="light"] .search-results-list .search-result-preview,
+html[data-site-theme="light"] .search-results-list .search-result-doc .search-result-highlight {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .footnotes,
+html[data-site-theme="light"] .page-content,
+html[data-site-theme="light"] .sect1,
+html[data-site-theme="light"] .sect2 {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] thead,
+html[data-site-theme="light"] tbody,
+html[data-site-theme="light"] tbody td,
+html[data-site-theme="light"] tbody th {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .site-footer,
+html[data-site-theme="light"] .nav-footer-inner,
+html[data-site-theme="light"] .nav-footer-credit {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] mjx-container[jax="CHTML"] {
+  color: #000 !important;
+}
+
+/* Inline code only (skip Rouge / highlight blocks) */
+html[data-site-theme="light"] .main-content p code,
+html[data-site-theme="light"] .main-content li code,
+html[data-site-theme="light"] .main-content td code,
+html[data-site-theme="light"] .main-content th code {
+  color: #000 !important;
+}
+
+/* Links: darker blue (body stays black via rules above; links are exceptions) */
 html[data-site-theme="light"] .main-content a,
 html[data-site-theme="light"] .main-content a:link,
 html[data-site-theme="light"] .main-content a:visited,
@@ -19,11 +126,41 @@ html[data-site-theme="light"] .search-results .search-results-list a,
 html[data-site-theme="light"] .site-footer a,
 html[data-site-theme="light"] .main-content .anchor-heading svg,
 html[data-site-theme="light"] .icon {
-  color: #0369a1 !important;
+  color: #075985 !important;
+}
+
+/* Sidebar: black nav text; darker blue on hover / current (not theme gray) */
+html[data-site-theme="light"] .site-title {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .nav-category {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .nav-list .nav-list-link,
+html[data-site-theme="light"] .nav-list .nav-list-expander {
+  color: #000 !important;
+}
+
+html[data-site-theme="light"] .side-bar .nav-list-link {
+  background-image: none !important;
+}
+
+html[data-site-theme="light"] .nav-list .nav-list-link:hover,
+html[data-site-theme="light"] .nav-list .nav-list-link.active,
+html[data-site-theme="light"] .nav-list-item.active > .nav-list-link {
+  background-color: rgba(7, 89, 133, 0.12) !important;
+  color: #0c4a6e !important;
+}
+
+html[data-site-theme="light"] .side-bar .nav-list-expander svg {
+  color: #000 !important;
+  fill: currentColor !important;
 }
 
 html[data-site-theme="light"] .site-theme-switch__btn:focus-visible {
-  outline: 2px solid #0369a1;
+  outline: 2px solid #075985;
   outline-offset: 2px;
 }
 
@@ -48,9 +185,27 @@ html[data-site-theme="dark"] .nav-list .nav-list-expander {
   color: #d8d8d4 !important;
 }
 
-html[data-site-theme="dark"] .nav-list .nav-list-link:hover,
-html[data-site-theme="dark"] .nav-list .nav-list-link.active {
-  color: #7dd3fc !important;
+/* Drop light-theme white “pill” / image behind links so text stays readable */
+html[data-site-theme="dark"] .side-bar .nav-list-link {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+html[data-site-theme="dark"] .side-bar .nav-list-link:hover,
+html[data-site-theme="dark"] .side-bar .nav-list-item.active > .nav-list-link,
+html[data-site-theme="dark"] .side-bar .nav-list-link.active {
+  background-color: #343536 !important;
+  background-image: none !important;
+  color: #f5f5f4 !important;
+}
+
+html[data-site-theme="dark"] .side-bar .nav-list-expander:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html[data-site-theme="dark"] .side-bar .nav-list-expander svg {
+  color: #d8d8d4 !important;
+  fill: currentColor !important;
 }
 
 html[data-site-theme="dark"] .main {

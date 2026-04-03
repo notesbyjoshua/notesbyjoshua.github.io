@@ -6,7 +6,7 @@ nav_order: 1
 
 # Introduction
 
-Welcome to Notes by Joshua! Currently we are in alpha-1 phase.
+Welcome to Notes by Joshua! Currently we are in alpha-2 phase.
 
 This site is a peak into all of my notes, and it is ***FREE*** for you all to share!
 
@@ -33,6 +33,8 @@ This site is a peak into all of my notes, and it is ***FREE*** for you all to sh
 
 ## News
 
+**April 2nd, 2026**: Alpha-2 has officially launched! Check out the newly added AP Chemistry, Physics C E&M, and Statistics notes!
+
 **March 29th, 2026**: Alpha-1 has officially launched! Currently, new notes are being added and the website is still being formatted. Keep tuned for more information!
 
 ---
@@ -41,7 +43,7 @@ This site is a peak into all of my notes, and it is ***FREE*** for you all to sh
 
 Here is a list of notes that have been added (in compeletion)!
 
-1. AP Chem Units 1-2
+1. AP Chem Units 1-7
 2. AP Physics C E&M Units 1-2
 3. AP Stats Units 1-4
 4. AP Physics C Mech Unit 1
@@ -52,9 +54,9 @@ Here is a list of notes that have been added (in compeletion)!
 
 Here is a list of notes I will add (in order)!
 
-1. AP Chem Units 3-7
-2. AP Precalc Units 1-12
-3. AP Calc BC Units 1-3
+1. AP Precalc Units 1-12
+2. AP Calc BC Units 1-10
+4. AP Physics C E&M Units 3-6
 
 More notes and updates are coming soon!
 

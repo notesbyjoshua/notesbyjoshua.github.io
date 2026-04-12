@@ -83,10 +83,14 @@ $$
 However, you will usually see enthalpy in the context of heat for AP Chemistry problems, so
 
 $$
-\Delta H = \frac{q_sys}{n}.
+\Delta H_{\text{rxn}} = \frac{q_{\text{sys}}}{n}.
 $$
 
-where $$n$$ is the number of moles, and enthalpy is from the perspective of the system. Note that $$\Delta H$$ will have opposite sign conventions compared to $$q$$ (as defined in an AP context).
+where $$n$$ is the number of moles, and enthalpy is from the perspective of the system. At constant pressure, $$\Delta H = q_p$$ for the system, so it has the same sign as $$q_{\text{sys}}$$. It has the opposite sign of the heat change measured for the surroundings in a coffee-cup calorimeter:
+
+$$
+q_{\text{rxn}} = q_{\text{sys}} = -q_{\text{surr}}.
+$$
 
 ### Exothermic versus endothermic
 

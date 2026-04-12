@@ -23,7 +23,7 @@ permalink: /notes/ap/chem/chemrxns/
 
 A **chemical equation** lists **reactants** (left) and **products** (right), usually separated by a single arrow $$(\longrightarrow)$$ for a reaction treated as one-way in stoichiometry, or $$(\rightleftharpoons)$$ when equilibrium matters ([Unit 7]({{ '/notes/ap/chem/equilibrium/' | relative_url }})). **State symbols** clarify what you are counting:
 
-- $$(s)$$ solid, $$(l)$$ liquid, $$(g)$$ gas, $$(aq)$$ dissolved in water (aqueous).
+$$(s)$$ solid, $$(l)$$ liquid, $$(g)$$ gas, $$(aq)$$ dissolved in water (aqueous).
 
 If an element is a component of the reaction **ALONE**, they are written in their standard/naturally-occuring form (e.g. $$\text{O}_2(g)$$, $$\text{Na}(s)$$, $$\text{Br}_2(l)$$). Otherwise, they can take on any form. Coefficients are the smallest **integers** (or a set of integers) consistent with conservation of atoms: they give **mole ratios** for limiting-reactant work, titrations, and gas-law stoichiometry. Make sure that on each side of a reaction, you start and end with the same number of atoms/moles.
 
@@ -42,7 +42,7 @@ The balanced equation conserves **mass** (atom counts). For **ionic** reactions 
 
 - **Net ionic equation** — Write the total ionic equation but cancel **spectator ions** that do not change (Basically anything that can cancel on both sides) and only species that actually react
 
-**Redox** reactions in acidic or basic solution often needs the **half-reaction method** (below) because oxidation numbers change and **electron** and **charge** balance are not handled by atom counting alone.
+**Redox** reactions in acidic or basic solution often needs the *half-reaction method* (below) because oxidation numbers change and **electron** and **charge** balance are not handled by atom counting alone.
 
 ---
 
@@ -56,7 +56,25 @@ $$
 
 If one combination is insoluble (in the example above it is $$CB$$), it forms a **precipitate**, a solid that may appear as cloudiness, flecks, or a settled solid at the bottom of the vessel. Different precipitates will have different colors, which may be useful in determining the contents of the reaction. If all ionic products remain soluble (aqueous), no net reaction occurs.
 
-You predict precipitates with **solubility rules**, which are very important to memorize **ADD TABLE BELOW**.
+You predict precipitates with **solubility rules**, which are very important to memorize. These rules are general AP-level shortcuts; a few exceptions exist, and exact solubility is handled later with $$K_{sp}$$.
+
+| Usually soluble | Important exceptions |
+| --- | --- |
+| Group 1 cations and $$\text{NH}_4^+$$ salts | No common exceptions |
+| $$\text{NO}_3^-$$, $$\text{C}_2\text{H}_3\text{O}_2^-$$ / $$\text{CH}_3\text{COO}^-$$, $$\text{ClO}_3^-$$, $$\text{ClO}_4^-$$ | No common exceptions |
+| $$\text{Cl}^-$$, $$\text{Br}^-$$, $$\text{I}^-$$ | Insoluble with $$\text{Ag}^+$$, $$\text{Pb}^{2+}$$, and $$\text{Hg}_2^{2+}$$ |
+| $$\text{SO}_4^{2-}$$ | Insoluble or only slightly soluble with $$\text{Ba}^{2+}$$, $$\text{Sr}^{2+}$$, $$\text{Pb}^{2+}$$, $$\text{Ca}^{2+}$$, and $$\text{Hg}_2^{2+}$$ |
+
+| Usually insoluble | Important exceptions |
+| --- | --- |
+| $$\text{CO}_3^{2-}$$, $$\text{PO}_4^{3-}$$, $$\text{CrO}_4^{2-}$$, $$\text{S}^{2-}$$ | Soluble with Group 1 cations and $$\text{NH}_4^+$$ |
+| $$\text{OH}^-$$ | Soluble with Group 1 cations and $$\text{NH}_4^+$$; $$\text{Ba}^{2+}$$, $$\text{Sr}^{2+}$$, and $$\text{Ca}^{2+}$$ hydroxides are more soluble than most other metal hydroxides |
+
+For a precipitation prediction, swap ion partners, apply the table, and write a net ionic equation only for the solid that forms. Example:
+
+$$
+\text{Ag}^+(aq) + \text{Cl}^-(aq) \longrightarrow \text{AgCl}(s)
+$$
 
 ---
 
@@ -97,7 +115,7 @@ $$
 **Combustion** of a hydrocarbon in excess oxygen produces carbon dioxide and water (and other products if the fuel contains other elements such as sulfur). Incomplete combustion can yield $$\text{CO}$$ or soot (carbon):
 
 $$
-\text{Hydrocarbon} + \text{O_2} \longrightarrow \text{CO_2} (g) + \text{H_2O} (g or l).
+\text{Hydrocarbon} + O_2 \longrightarrow CO_2 (g) + H_2O (g / l).
 $$
 
 As usual, you should balance coefficients to make a balanced equation.
@@ -187,7 +205,7 @@ $$
 \text{ppb} = \frac{\text{mass of solute}}{\text{mass of sample}} \times 10^9.
 $$
 
-Do not equate $$\text{ppm}$$ to “$$\text{mass \%} \times 10^6$$”; use the fraction definition above (for example, $$1\%$$ corresponds to $$10^4$$ ppm).
+Do not equate $$\text{ppm}$$ to “$$mass \% \times 10^6$$”; use the fraction definition above (for example, $$1\%$$ corresponds to $$10^4$$ ppm).
 
 **Normality** $$N$$ (still seen in some labs) is equivalents of reacting species per liter of solution: for acid–base, one equivalent of acid is one mole of $$\text{H}^+$$ donated per mole of formula (so $$\text{H}_2\text{SO}_4$$ can be $$2N$$ when both protons count in that context). On the AP exam, molarity and stoichiometry from the balanced equation are usually enough.
 

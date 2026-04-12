@@ -159,7 +159,7 @@ $$
 \frac{d\ln K}{dT} = \frac{\Delta H^\circ}{RT^2},
 $$
 
-which shows that sensitivity of $$\ln K$$ to temperature is *larger* when $$|\Delta H^\circ|$$ is large and when $$T$$ is *low* (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
+which shows that sensitivity of $$\ln K$$ to temperature is *larger* when $$\Delta H^\circ$$ is large and when $$T$$ is *low* (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
 
 ---
 
@@ -248,9 +248,9 @@ Solve for $$s$$ given $$K_{sp}$$, or $$K_{sp}$$ given $$s$$. In an ICE table, th
 
 The **ion product** $$Q_{sp}$$ uses **current** ion concentrations in the $$K_{sp}$$ expression (same form as $$K_{sp}$$).
 
-- If $$Q_{sp} < K_{sp}$$, the solution is **unsaturated**; more solid can dissolve.  
-- If $$Q_{sp} = K_{sp}$$, the solution is **saturated** (at equilibrium with solid, if present).  
-- If $$Q_{sp} > K_{sp}$$, **precipitation** occurs until $$Q_{sp}$$ drops to $$K_{sp}$$ (assuming equilibrium can be reached).
+- If $$Q_{sp} < K_{sp}$$, the solution is *unsaturated*; more solid can dissolve.
+- If $$Q_{sp} = K_{sp}$$, the solution is *saturated* (at equilibrium with solid, if present).
+- If $$Q_{sp} > K_{sp}$$, *precipitation* occurs until $$Q_{sp}$$ drops to $$K_{sp}$$ (assuming equilibrium can be reached).
 
 ### Common-ion effect
 
@@ -294,7 +294,7 @@ $$
 2. Write $$K_c$$, $$K_p$$, or $$K_{sp}$$ **omitting pure solids/liquids** (and solvent water in dilute aqueous $$K_c$$ unless specified).  
 3. Compute **$$Q$$** if asked whether the system shifts; compare to $$K$$.  
 4. Use **ICE** for unknown equilibrium concentrations; watch **stoichiometric** multiples of $$x$$.  
-5. Remember **temperature** changes $$K$$; **catalyst** does not. For two temperatures, relate $$K_1$$ and $$K_2$$ with the **van’t Hoff equation** if $$\Delta H^\circ$$ is known (or given).  
-6. For solubility, track **common ions**, **$$Q_{sp}$$ vs $$K_{sp}$$**, and **complex formation**, which can **increase** solubility by tying up a metal ion (e.g. $$\text{AgCl}$$ dissolving more in ammonia).
+5. Remember *temperature* changes $$K$$; *catalyst* does not. For two temperatures, relate $$K_1$$ and $$K_2$$ with the **van’t Hoff equation** if $$\Delta H^\circ$$ is known (or given).
+6. For solubility, track **common ions**, **$$Q_{sp}$$ vs $$K_{sp}$$**, and **complex formation**, which can *increase* solubility by tying up a metal ion (e.g. $$\text{AgCl}$$ dissolving more in ammonia).
 
 This unit’s equilibrium constant logic is the same machinery you will reuse for **acid–base** ($$K_a$$, $$K_b$$, $$K_w$$) and **buffers** in the next unit—only the chemical reaction and symbols change.

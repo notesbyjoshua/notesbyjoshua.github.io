@@ -8,7 +8,13 @@ nav_order: 2
 
 # AP Chemistry
 
-(ADD OVERVIEW)
+AP Chemistry connects particle-level models to observable chemical behavior. These notes follow the major AP units: atomic structure, bonding, intermolecular forces, reactions, kinetics, thermochemistry, equilibrium, acids and bases, and thermodynamics/electrochemistry. A strong way to study is to keep asking three questions:
+
+1. What particles are present?
+2. What interactions or reactions are possible?
+3. How do the numbers from the balanced equation, equilibrium expression, or energy relationship support the claim?
+
+AP free-response questions often reward clear particle-level explanations, correct use of units, and linking evidence to a model. Memorized rules help, but they are strongest when paired with reasoning from charge, polarity, energy, and equilibrium.
 
 ---
 
@@ -28,11 +34,14 @@ nav_order: 2
 
 ## Practice Problems
 
-- idk
+- Use released AP Chemistry free-response questions from College Board for timed practice.
+- For each unit, write one-page summaries of the equations, particle diagrams, and common traps.
+- After solving a calculation, check whether the sign, units, and magnitude make chemical sense.
 
 ---
 
 ## Resources
 
 - [AP Chemistry Formula Sheet](https://apcentral.collegeboard.org/media/pdf/ap-chemistry-equations-sheet.pdf)
-- 
+- [AP Chemistry Course Page](https://apstudents.collegeboard.org/courses/ap-chemistry)
+- [Released AP Chemistry Free-Response Questions](https://apcentral.collegeboard.org/courses/ap-chemistry/exam/past-exam-questions)

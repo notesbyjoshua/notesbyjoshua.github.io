@@ -170,9 +170,51 @@ If the experimental rate law does not match the stoichiometry of the overall equ
 
 ## Pre-equilibrium and deriving rate laws
 
-**WRITE MORE ON THIS AND ADD CATALYTIC CYCLES**
-
 When the RDS is not the first step, a common pattern is a fast, reversible early step followed by a slow step. The early step sets up **pre-equilibrium**: forward and reverse rates of that step are large, so an equilibrium constant $$K$$ links intermediates to reactant concentrations. You write the rate law from the RDS (using its elementary exponents), then substitute for any intermediate using the equilibrium expression from the fast step so that only overall reactants (and catalysts if present) appear in the final law. A more general **steady-state approximation** treats $$d[\text{intermediate}]/dt \approx 0$$ when the intermediate is consumed as fast as it forms; AP problems often give setups where pre-equilibrium is enough.
+
+Example mechanism:
+
+1. $$\text{A} + \text{B} \rightleftharpoons \text{I}$$ fast
+2. $$\text{I} + \text{C} \longrightarrow \text{D}$$ slow
+
+The slow elementary step gives
+
+$$
+\text{rate} = k_2[\text{I}][\text{C}].
+$$
+
+Because the intermediate $$\text{I}$$ should not appear in the final experimental rate law, use the fast pre-equilibrium:
+
+$$
+K = \frac{[\text{I}]}{[\text{A}][\text{B}]}
+\qquad\Rightarrow\qquad
+[\text{I}] = K[\text{A}][\text{B}].
+$$
+
+Substitution gives
+
+$$
+\text{rate} = k_2K[\text{A}][\text{B}][\text{C}] = k_{\text{obs}}[\text{A}][\text{B}][\text{C}].
+$$
+
+### Catalytic cycles
+
+A **catalytic cycle** is a mechanism where the catalyst is consumed in an early elementary step and regenerated in a later step. The catalyst cancels from the net equation, but it can still appear in the rate law because its concentration affects how much of the faster pathway is available.
+
+Simple acid-catalyzed pattern:
+
+1. $$\text{S} + \text{H}^+ \rightleftharpoons \text{SH}^+$$ fast
+2. $$\text{SH}^+ \longrightarrow \text{P} + \text{H}^+$$ slow or product-forming
+
+Adding the steps cancels $$\text{H}^+$$, so acid is not consumed overall. However, increasing $$[\text{H}^+]$$ can increase $$[\text{SH}^+]$$ and raise the observed rate.
+
+For heterogeneous catalysts, the same cycle idea happens on a surface:
+
+1. Reactants **adsorb** to active sites.
+2. Bonds weaken or orient correctly on the surface.
+3. Products form and **desorb**, freeing the active site.
+
+Catalyst poisoning occurs when another species binds strongly to active sites and blocks the cycle. Finely divided catalysts usually work faster because they expose more surface area and therefore more active sites.
 
 ---
 

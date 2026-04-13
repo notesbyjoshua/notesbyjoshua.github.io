@@ -12,9 +12,6 @@ This unit applies the equilibrium ideas from [Unit 7]({{ '/notes/ap/chem/equilib
 
 ---
 
-> Note:
-> This section is not completely finished. To do: Add pictures of titrations, pH calculations, etc.
-
 ## Definitions of acids and bases
 
 ### Arrhenius Theory
@@ -50,6 +47,8 @@ Ionic hydroxides are named as cation + hydroxide. Molecular bases include ammoni
 Strong acids and strong bases are treated as complete ionization or dissociation in dilute aqueous solution for stoichiometry and pH estimates. Weak species reach equilibrium between the unionized form and ions.
 
 For binary acids $$\text{HX}$$, bond polarity and bond strength both matter: across a period, polarity toward $$\text{X}$$ can strengthen the acid; down a group, longer/weaker $$\text{H–X}$$ often dominates and acidity increases ($$\text{HF}$$ is a weak acid in water; $$\text{HCl}$$, $$\text{HBr}$$, $$\text{HI}$$ are strong). For oxoacids with the same central atom, more electronegative atoms attached to that center or a higher oxidation state generally strengthens the acid. For carboxylic acids, electron-withdrawing groups stabilize the conjugate base and increase $$K_a$$.
+
+Acid-base reactions favor formation of the **weaker acid** and **weaker base**. A quick way to predict direction is to compare acid strengths: the side with the larger $$K_a$$ acid tends to react toward the side with the smaller $$K_a$$ acid. In $$\text{p}K_a$$ language, reactions tend to go from lower $$\text{p}K_a$$ acid to higher $$\text{p}K_a$$ acid.
 
 ---
 
@@ -125,6 +124,22 @@ $$
 
 Neutral water at $$25\,^\circ\text{C}$$ has $$\text{pH} = 7.00$$ because $$[\text{H}_3\text{O}^+] = [\text{OH}^-]$$. $$\text{pH} < 7$$ is acidic and $$\text{pH} > 7$$ is basic at that temperature; at other temperatures, neutral pH shifts slightly because $$K_w$$ changes.
 
+Because pH is logarithmic, a change of $$1.00$$ pH unit means a tenfold change in $$[\text{H}_3\text{O}^+]$$. A solution with pH $$3$$ has $$100$$ times the hydronium concentration of a solution with pH $$5$$.
+
+Use inverse logarithms to move back from pH or pOH to concentration:
+
+$$
+[\text{H}_3\text{O}^+] = 10^{-\text{pH}}, \qquad [\text{OH}^-] = 10^{-\text{pOH}}.
+$$
+
+### Choosing a pH calculation method
+
+1. **Strong acid or strong base only**: use stoichiometric dissociation first, then pH/pOH.
+2. **Weak acid or weak base only**: write $$K_a$$ or $$K_b$$ and use an ICE table.
+3. **Mixture with strong acid/base reaction**: do limiting-reactant stoichiometry first; then decide what remains.
+4. **Weak acid + conjugate base** or **weak base + conjugate acid**: use buffer logic.
+5. **At a titration equivalence point**: identify the salt left behind and analyze its hydrolysis.
+
 ---
 
 ## Percent ionization
@@ -161,6 +176,27 @@ An **amphoteric** substance can act as acid or base. Water is the usual example:
 
 Salts dissociate into ions that may **hydrolyze** (react with water). A salt of strong acid + strong base (e.g. $$\text{NaCl}$$) gives neutral pH (neglecting tiny temperature effects). Weak acid + strong base (e.g. $$\text{CH}_3\text{COONa}$$) gives a basic solution because $$\text{A}^-$$ is a base. Strong acid + weak base (e.g. $$\text{NH}_4\text{Cl}$$) gives an acidic solution because $$\text{NH}_4^+$$ is an acid. Weak + weak salts require comparing $$K_a$$ of the cation acid and $$K_b$$ of the anion base.
 
+Useful salt classification:
+
+| Salt source | pH prediction | Reason |
+| --- | --- | --- |
+| Strong acid + strong base | Neutral | Neither ion hydrolyzes significantly |
+| Weak acid + strong base | Basic | Conjugate base reacts with water to make $$\text{OH}^-$$ |
+| Strong acid + weak base | Acidic | Conjugate acid reacts with water to make $$\text{H}_3\text{O}^+$$ |
+| Weak acid + weak base | Compare $$K_a$$ and $$K_b$$ | Larger constant dominates |
+
+For an anion from a weak acid,
+
+$$
+\text{A}^-(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{HA}(aq) + \text{OH}^-(aq).
+$$
+
+For a cation from a weak base,
+
+$$
+\text{BH}^+(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{B}(aq) + \text{H}_3\text{O}^+(aq).
+$$
+
 ---
 
 ## Buffers
@@ -175,11 +211,23 @@ with concentrations evaluated after any same-volume mixing (or use moles in the 
 
 **Buffer capacity** increases with total concentration of buffer components. When $$[\text{HA}] = [\text{A}^-]$$, $$\text{pH} = \text{p}K_a$$ and the system can absorb equal challenge from added acid or base in a symmetric sense (maximum buffering range is often quoted near $$\text{p}K_a \pm 1$$).
 
----
+### Buffer stoichiometry before equilibrium
 
-## Indicators
+When a strong acid or strong base is added to a buffer, do the neutralization reaction **before** using Henderson-Hasselbalch.
 
-**Acid–base indicators** are weak acids or bases whose conjugate forms have different colors. The **endpoint** is where the color change is observed; it should lie near the **equivalence point** of a titration. Examples: phenolphthalein (colorless in acid, pink in base); methyl orange (red in acid, yellow in base); bromothymol blue (yellow $$\rightarrow$$ blue through green near $$\text{pH} \approx 7$$).
+Added strong acid consumes conjugate base:
+
+$$
+\text{A}^- + \text{H}_3\text{O}^+ \longrightarrow \text{HA} + \text{H}_2\text{O}.
+$$
+
+Added strong base consumes weak acid:
+
+$$
+\text{HA} + \text{OH}^- \longrightarrow \text{A}^- + \text{H}_2\text{O}.
+$$
+
+After the stoichiometry step, use the new moles of $$\text{HA}$$ and $$\text{A}^-$$ in the Henderson-Hasselbalch ratio. If either buffer component is used up, the solution is no longer a buffer and the excess strong acid/base controls pH. Note that all pH-pKa pairs can be substituted for pOH-pKb pairs.
 
 ---
 
@@ -194,6 +242,34 @@ Titration curve shape:
 - Weak base / strong acid: equivalence $$\text{pH} < 7$$ (conjugate acid).
 
 At the **half-equivalence point** of a weak acid titrated with strong base, $$[\text{HA}] \approx [\text{A}^-]$$ and $$\text{pH} \approx \text{p}K_a$$ (buffer maximum in that sense). Polyprotic acids show multiple equivalence steps and multiple near-plateau regions corresponding to each $$\text{p}K_a$$.
+
+### Titration calculation stages
+
+For a weak acid $$\text{HA}$$ titrated with strong base:
+
+| Region | What controls pH? | Usual method |
+| --- | --- | --- |
+| Before base is added | Weak acid equilibrium | $$K_a$$ ICE table |
+| Before equivalence | Buffer mixture of $$\text{HA}$$ and $$\text{A}^-$$ | Stoichiometry, then Henderson-Hasselbalch |
+| Half-equivalence | $$[\text{HA}] = [\text{A}^-]$$ | $$\text{pH} = \text{p}K_a$$ |
+| Equivalence | Conjugate base $$\text{A}^-$$ | $$K_b = K_w/K_a$$ ICE table |
+| After equivalence | Excess strong base | Stoichiometry for leftover $$\text{OH}^-$$ |
+
+For a weak base titrated with strong acid, swap the acid/base roles: the buffer contains $$\text{B}$$ and $$\text{BH}^+$$, the half-equivalence point gives $$\text{pOH} = \text{p}K_b$$ or $$\text{pH} = \text{p}K_a$$ for $$\text{BH}^+$$, and the equivalence point is acidic.
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/acidbase/titrationcurve.gif' | relative_url }}" alt="Titration curves" loading="lazy" decoding="async" />
+
+If an acid can dissociate more than once, it's titration curve follows a polyprotic titration curve:
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/acidbase/polyprotictitration.jpg' | relative_url }}" alt="Polyprotic titration curve placeholder" loading="lazy" decoding="async" />
+
+### pH Indicators
+
+**Acid–base indicators** are weak acids or bases whose conjugate forms have different colors. The **endpoint** is where the color change is observed; it should lie near the **equivalence point** of a titration.
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/acidbase/phindicator.png' | relative_url }}" alt="pH Indicators" loading="lazy" decoding="async" />
+
+Choose an indicator whose transition range lies within the steep vertical region of the titration curve. A strong acid-strong base titration has a steep jump around pH $$7$$, so many indicators can work. A weak acid-strong base titration has an equivalence point above $$7$$, so phenolphthalein is often better than methyl orange. A weak base-strong acid titration has an equivalence point below $$7$$, so an acidic-range indicator is usually better.
 
 ---
 

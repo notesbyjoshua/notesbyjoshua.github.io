@@ -12,7 +12,7 @@ This unit connects the energy ideas from [Unit 6]({{ '/notes/ap/chem/thermochemi
 
 ---
 
-## Spontaneity and thermodynamic favorability
+## Spontaneity and Thermodynamic favorability
 
 A **spontaneous** process is one that occurs *without continuous external intervention* once the required conditions are present. Spontaneous does not mean fast. Iron rusting is thermodynamically favored under ordinary conditions, but it is slow because its pathway has kinetic barriers.
 
@@ -20,7 +20,7 @@ A process is **thermodynamically favored** when it is spontaneous under the stat
 
 ---
 
-## The second law and entropy
+## The Second law and Entropy
 
 The **Second Law of Thermodynamics** says that for any spontaneous process, the entropy of the universe increases:
 

@@ -8,6 +8,10 @@ nav_order: 3
 
 # AP Statistics
 
+AP Statistics is about collecting data carefully, exploring patterns, and using probability to make justified conclusions from samples. The course moves from descriptive summaries to study design, probability models, sampling distributions, and formal inference.
+
+For AP free-response problems, the calculation is usually only part of the answer. You also need to identify the parameter, check conditions, show correct notation, and write conclusions in context.
+
 ---
 
 ## Units
@@ -26,10 +30,14 @@ nav_order: 3
 
 ## Practice Problems
 
-- stuff
+- Practice released AP Statistics free-response questions from College Board.
+- For inference units, write every solution in the full structure: parameter, hypotheses or interval, conditions, calculation, conclusion.
+- For calculator-heavy procedures, still show the name of the procedure and the inputs.
 
 ---
 
 ## Resources
 
 - [Resources]({{ '/Resources/resources/' | relative_url }}) — general AP prep links, College Board, and books.
+- [AP Statistics Course Page](https://apstudents.collegeboard.org/courses/ap-statistics)
+- [Released AP Statistics Free-Response Questions](https://apcentral.collegeboard.org/courses/ap-statistics/exam/past-exam-questions)

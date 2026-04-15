@@ -32,15 +32,17 @@ If both variables are quantitative and the relationship looks roughly linear, we
 
 A **scatterplot** plots each case as a point $$(x, y)$$ in the plane. Choose scales so that all observed $$x$$- and $$y$$-values fit comfortably, and label axes with variable names and units.
 
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/bivardata/scatterplot-patterns.png' | relative_url }}" alt="Scatterplot patterns placeholder" loading="lazy" decoding="async" />
+
 When you describe a scatterplot, organize your comments around three ideas: **shape**, **direction**, and **strength**.
 
 ### Shape
 
-**Shape** answers whether the overall pattern is linear (points basically fllow a straight line) or nonlinear (curved, piecewise, or scattered without a simple path). Nonlinear patterns are a signal that a straight-line model may be wrong unless you transform a variable first.
+**Shape** answers whether the overall pattern is linear (points basically follow a straight line) or nonlinear (curved, piecewise, or scattered without a simple path). Nonlinear patterns are a signal that a straight-line model may be wrong unless you transform a variable first.
 
 ### Direction
 
-**Direction** describes how $$y$$ tends to move as$$x$$ increases. An upward direction is positive association and a downward direction is negative association. Clouds with no clear trend show weak or no linear association (correlation near zero is possible even when a strong nonlinear pattern exists, which is one reason you always look at the plot).
+**Direction** describes how $$y$$ tends to move as $$x$$ increases. An upward direction is positive association and a downward direction is negative association. Clouds with no clear trend show weak or no linear association (correlation near zero is possible even when a strong nonlinear pattern exists, which is one reason you always look at the plot).
 
 ### Strength
 
@@ -140,6 +142,8 @@ An outlier in regression is often a point with an unusually large residual: the 
 ## Residual plots
 
 A residual plot graphs residuals (usually on the vertical axis) against either the predicted values \(\hat{y}\) or the explanatory variable \(x\). The purpose is to diagnose the fit of a linear model.
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/bivardata/residual-plots.png' | relative_url }}" alt="Residual plots placeholder" loading="lazy" decoding="async" />
 
 What you hope to see is a formless cloud: points scattered randomly around the horizontal axis at $$\epsilon = 0$$, with roughly constant spread across values of \(x\) or \(\hat{y}\).
 

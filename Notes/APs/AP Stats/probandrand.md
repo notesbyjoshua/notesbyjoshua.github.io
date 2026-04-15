@@ -18,6 +18,8 @@ permalink: /notes/ap/stats/probandrand/
 - The sample space, denoted $$S$$, is the set of all possible outcomes of that experiment. An event is any subset of the sample space (a collection of one or more outcomes). The letter $$S$$ is standard notation; individual outcomes are often written as simple labels or ordered pairs when the experiment has multiple stages.
 - A **tree diagram** lists stages of an experiment as branches. Multiply along a path to get the probability of that path when stages are suitably independent or conditional probabilities are marked on branches; add paths that represent the same event. Tree diagrams keep ordered outcomes visible and help avoid double-counting when the experiment is multistep.
 
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/probandrand/tree-diagram.png' | relative_url }}" alt="Probability tree diagram placeholder" loading="lazy" decoding="async" />
+
 ---
 
 ## Basic rules of probability
@@ -157,7 +159,7 @@ $$
 E(X_1 + X_2 + ... + X_n) = E(X_1) + E(X_2) + ... + E(X_n)
 $$
 
-You can learn more in the combinatorics section of competition math(**ADD REFERENCE**)
+This property is useful in games, insurance, and counting problems because it does not require the random variables to be independent. Variance rules, however, do require independence in the simple forms used in AP Statistics.
 
 ---
 
@@ -182,3 +184,21 @@ $$
 $$
 
 This expression appears in the **binomial probability model** (fixed $$n$$ independent trials, same success probability $$p$$, count successes, described in [Unit 5]({{ '/notes/ap/stats/samplingdistr/' | relative_url }})) and in many counting-based probability problems on the exam.
+
+---
+
+## Binomial and geometric models
+
+A **binomial random variable** counts successes in a fixed number of independent trials with the same success probability. If $$X \sim \operatorname{Binomial}(n,p)$$, then
+
+$$
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+$$
+
+A **geometric random variable** counts trials until the first success. If $$X \sim \operatorname{Geometric}(p)$$, then
+
+$$
+P(X=k)=(1-p)^{k-1}p.
+$$
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/probandrand/binomial-geometric.png' | relative_url }}" alt="Binomial and geometric distributions placeholder" loading="lazy" decoding="async" />

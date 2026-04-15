@@ -33,7 +33,7 @@ A **quantitative variable** takes numerical values where arithmetic is meaningfu
 
 ---
 
-### Tabular methods (ADD TABLE/GRAPH)
+### Tabular methods
 
 Tables are the natural home for **frequency**: how often each value or category appears.
 
@@ -51,6 +51,14 @@ Relative frequencies are especially useful when two datasets have different size
 The **cumulative frequency** gives the count of observations less than or equal to a chosen value (or upper endpoint of a class). It is a running total as you move through ordered categories or ordered bins.
 
 A **frequency distribution** lists possible values (or classes) of the variable together with their frequencies (and often relative or cumulative frequencies). Building that table is often the first step before drawing a histogram or cumulative relative frequency graph.
+
+| Value or class | Frequency | Relative frequency | Cumulative frequency |
+| --- | --- | --- | --- |
+| Category/bin 1 | $$f_1$$ | $$f_1/n$$ | $$f_1$$ |
+| Category/bin 2 | $$f_2$$ | $$f_2/n$$ | $$f_1+f_2$$ |
+| Category/bin 3 | $$f_3$$ | $$f_3/n$$ | $$f_1+f_2+f_3$$ |
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/univardata/frequency-displays.png' | relative_url }}" alt="Frequency table and display placeholder" loading="lazy" decoding="async" />
 
 ---
 
@@ -85,6 +93,9 @@ A **stemplot** splits each number into a **stem** (leading digit or digits) and 
 ### Histograms
 
 A **histogram** groups quantitative data into intervals (bins), then draws bars whose heights show frequency or relative frequency (or density, in more advanced courses). Bars touch to show that the horizontal axis is a continuous scale (even though data are binned). The shape of a histogram (symmetric, skewed, unimodal, bimodal) can tell you a lot about the data (talked about later).
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/univardata/histogram-shapes.png' | relative_url }}" alt="Histogram shapes placeholder" loading="lazy" decoding="async" />
+
 ### Cumulative relative frequency graphs (ogives)
 
 An **ogive** plots **cumulative relative frequency** (from 0 to 1, or 0% to 100%) against values or upper class boundaries. Place a point above each boundary at the cumulative percent up to that boundary, then connect points with line segments. The curve rises; its height at a value tells you what fraction of data falls at or below that point.
@@ -92,6 +103,8 @@ An **ogive** plots **cumulative relative frequency** (from 0 to 1, or 0% to 100%
 ### Boxplots
 
 A **boxplot** (box-and-whisker plot) summarizes a quantitative variable using quartiles and the median. Draw a box from the first quartile $$Q_1$$ to the **third quartile** $$Q_3$$; draw a line inside the box at the **median**. The **interquartile range** is $$IQR = Q_3 - Q_1$$. “Whiskers” typically extend to the most extreme values within **1.5 × IQR** of the quartiles; points beyond that range are plotted individually as outliers. Boxplots are ideal for comparing several groups on the same scale.
+
+<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Stats/univardata/boxplot.png' | relative_url }}" alt="Boxplot placeholder" loading="lazy" decoding="async" />
 
 ---
 
@@ -139,7 +152,7 @@ We distinguish **population** and **sample** because notation and formulas track
 - The **population** is the entire group of individuals or instances we want to understand.
 - A **sample** is the part of the population we actually measure.
 
-We compute statistics from a sample to estimate unknown population quantities. Greek letters (for example $$\mu$$, $$\sigma$$) often denote **population** parameters; Roman letters with bars or hats (for example $$\bar(s)$$, $$s$$) denote **sample** statistics.
+We compute statistics from a sample to estimate unknown population quantities. Greek letters (for example $$\mu$$, $$\sigma$$) often denote **population** parameters; Roman letters with bars or hats (for example $$\bar{x}$$, $$s$$, $$\hat{p}$$) denote **sample** statistics.
 
 ---
 
@@ -212,7 +225,7 @@ $$
 l = \frac{(n+1)k}{100}
 $$
 
-If \(l\) is not an integer, interpolate between adjacent ordered values (your calculator or software may use a slightly different conventiona, just be consistentxw).
+If \(l\) is not an integer, interpolate between adjacent ordered values. Calculator or software conventions may differ slightly, so be consistent and explain your method when needed.
 
 **Quartiles** are special percentiles:
 

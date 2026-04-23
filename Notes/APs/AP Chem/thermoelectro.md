@@ -16,7 +16,7 @@ This unit connects the energy ideas from [Unit 6]({{ '/notes/ap/chem/thermochemi
 
 A **spontaneous** process is one that occurs *without continuous external intervention* once the required conditions are present. Spontaneous does not mean fast. Iron rusting is thermodynamically favored under ordinary conditions, but it is slow because its pathway has kinetic barriers.
 
-A process is **thermodynamically favored** when it is spontaneous under the stated conditions. A process can be thermodynamically favored but **kinetically controlled** if it happens slowly because the activation energy is high or the reaction mechanism is difficult. Kinetics answers "how fast"; thermodynamics answers "whether the final state is favored."
+A process is **thermodynamically favored** when it is spontaneous under the stated conditions. A process can be thermodynamically favored but **kinetically controlled** if it happens slowly because the activation energy is high or the reaction mechanism is difficult.
 
 ---
 
@@ -29,7 +29,6 @@ $$
 $$
 
 - **Entropy** $$S$$ is a measure of *energy dispersal* and the number of possible microscopic arrangements available to a system. A common shorthand is "chaos," but the more precise AP idea is that higher entropy means more accessible **microstates**.
-
 - **Microstates** are the *possible arrangements of particles and energy* that produce the same macroscopic state. More particles, more volume, more freedom of motion, and more possible energy distributions usually mean more microstates and therefore higher entropy.
 
 The entropy change for the universe is
@@ -40,11 +39,13 @@ $$
 
 Use this sign test:
 
-| Condition | Meaning |
-| --- | --- |
-| $$\Delta S_{\text{universe}} > 0$$ | Spontaneous in the forward direction |
-| $$\Delta S_{\text{universe}} = 0$$ | Equilibrium |
+
+| Condition                          | Meaning                                              |
+| ---------------------------------- | ---------------------------------------------------- |
+| $$\Delta S_{\text{universe}} > 0$$ | Spontaneous in the forward direction                 |
+| $$\Delta S_{\text{universe}} = 0$$ | Equilibrium                                          |
 | $$\Delta S_{\text{universe}} < 0$$ | Nonspontaneous forward; reverse direction is favored |
+
 
 Heat leaving the system increases surrounding entropy; heat entering the system decreases surrounding entropy. At constant pressure and temperature, the surroundings contribution is often written as
 
@@ -117,26 +118,30 @@ $$
 1\ \text{kJ} = 1000\ \text{J}.
 $$
 
-<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/thermoelectro/gibbschart.jpg' | relative_url }}" alt="Gibbs free energy chart" loading="lazy" decoding="async" />
+
 
 The sign of $$\Delta G$$ determines thermodynamic favorability:
 
-| $$\Delta G$$ | Meaning |
-| --- | --- |
-| $$\Delta G < 0$$ | Spontaneous forward reaction |
-| $$\Delta G = 0$$ | Equilibrium |
+
+| $$\Delta G$$     | Meaning                         |
+| ---------------- | ------------------------------- |
+| $$\Delta G < 0$$ | Spontaneous forward reaction    |
+| $$\Delta G = 0$$ | Equilibrium                     |
 | $$\Delta G > 0$$ | Nonspontaneous forward reaction |
+
 
 ### Enthalpy and entropy drivers
 
 A reaction is **enthalpy-driven** when a large negative $$\Delta H$$ dominates the $$-T\Delta S$$ term. A reaction is **entropy-driven** when a large positive $$\Delta S$$ makes $$-T\Delta S$$ very negative, especially at high temperature.
 
-| $$\Delta H$$ | $$\Delta S$$ | Spontaneity |
-| --- | --- | --- |
-| Negative | Positive | Spontaneous at all temperatures |
-| Positive | Negative | Nonspontaneous at all temperatures |
-| Negative | Negative | Spontaneous at low temperature |
-| Positive | Positive | Spontaneous at high temperature |
+
+| $$\Delta H$$ | $$\Delta S$$ | Spontaneity                        |
+| ------------ | ------------ | ---------------------------------- |
+| Negative     | Positive     | Spontaneous at all temperatures    |
+| Positive     | Negative     | Nonspontaneous at all temperatures |
+| Negative     | Negative     | Spontaneous at low temperature     |
+| Positive     | Positive     | Spontaneous at high temperature    |
+
 
 When $$\Delta G = 0$$, the threshold temperature is
 
@@ -220,20 +225,22 @@ Electrons flow through the external wire from anode to cathode. Ions move throug
 
 ## Galvanic cells
 
-A **galvanic cell** converts a *spontaneous redox reaction* into electrical work by separating oxidation and reduction into different compartments. A battery is one or more galvanic cells connected to provide power. A **fuel cell** is a galvanic cell where reactants are continuously supplied; unlike a sealed battery, it can keep operating as long as fuel and oxidant are replenished.
+A **galvanic cell** converts a *spontaneous redox reaction* into electrical work by separating oxidation and reduction into different compartments. A battery is one or more galvanic cells connected to provide power. A **fuel cell** is a galvanic cell where reactants are continuously supplied; unlike a sealed battery, it can keep operating as long as fuel and oxidant are replenished. All galvanic cells involve having two *separate* compartments, with the cathode (reduction site) in one compartment and the anode (oxidation site) in the other. The two are connected with a salt bridge, which maintains neutrality.
 
 In a galvanic cell:
 
-| Part | Role |
-| --- | --- |
-| **Anode** | Site of *oxidation*; produces electrons; negative in a galvanic cell |
-| **Cathode** | Site of *reduction*; consumes electrons; positive in a galvanic cell |
-| **Salt bridge** | Allows ion flow to maintain charge neutrality |
-| External wire | Allows electron flow from anode to cathode |
+
+| Part            | Role                                                                 |
+| --------------- | -------------------------------------------------------------------- |
+| **Anode**       | Site of *oxidation*; produces electrons; negative in a galvanic cell |
+| **Cathode**     | Site of *reduction*; consumes electrons; positive in a galvanic cell |
+| **Salt bridge** | Allows ion flow to maintain charge neutrality                        |
+| External wire   | Allows electron flow from anode to cathode                           |
+
 
 The **salt bridge** is usually a U-shaped tube or porous barrier containing inert ions. Without it, charge buildup stops electron flow. Anions migrate toward the anode to balance newly produced cations, and cations migrate toward the cathode to replace cations being reduced.
 
-<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/thermoelectro/galvaniccell.jpg' | relative_url }}" alt="Galvanic cell" loading="lazy" decoding="async" />
+
 
 ---
 
@@ -263,18 +270,20 @@ $$
 
 Important sign connection:
 
-| Condition | Meaning |
-| --- | --- |
-| $$E_{\text{cell}} > 0$$ | $$\Delta G < 0$$, spontaneous as written |
-| $$E_{\text{cell}} = 0$$ | $$\Delta G = 0$$, equilibrium |
+
+| Condition               | Meaning                                     |
+| ----------------------- | ------------------------------------------- |
+| $$E_{\text{cell}} > 0$$ | $$\Delta G < 0$$, spontaneous as written    |
+| $$E_{\text{cell}} = 0$$ | $$\Delta G = 0$$, equilibrium               |
 | $$E_{\text{cell}} < 0$$ | $$\Delta G > 0$$, nonspontaneous as written |
+
 
 Cell potential is an **intensive property**, so it does not get multiplied by stoichiometric coefficients. If a half-reaction is doubled, $$\Delta G$$ doubles because $$n$$ doubles, but $$E^\circ$$ stays the same.
 
 The percent efficiency of a cell can be estimated by
 
 $$
-\text{efficiency} = \frac{\text{actual work}}{\text{theoretical maximum work}} \times 100\%.
+\text{efficiency} = \frac{\text{actual work}}{\text{theoretical maximum work}} \times 100
 $$
 
 ---
@@ -306,6 +315,8 @@ E^\circ_{\text{cell}} = E^\circ_{\text{red}} + E^\circ_{\text{ox}},
 $$
 
 then you must reverse the anode half-reaction and change its sign.
+
+Simply stated, you can think of a high cell potential as a river with a lot of electrons, where the more electrons you have the higher the river is. Thus, this river will flow from high to low, just like how electrons will flow from high reduction potential to a low cell potential.
 
 ---
 
@@ -400,14 +411,16 @@ An **electrolytic cell** uses *external electrical energy* to drive a nonspontan
 
 Oxidation still occurs at the anode and reduction still occurs at the cathode. The sign of the electrodes changes compared with galvanic cells:
 
-| Cell type | Anode | Cathode | Spontaneity |
-| --- | --- | --- | --- |
-| Galvanic | Negative | Positive | Spontaneous |
+
+| Cell type    | Anode    | Cathode  | Spontaneity                            |
+| ------------ | -------- | -------- | -------------------------------------- |
+| Galvanic     | Negative | Positive | Spontaneous                            |
 | Electrolytic | Positive | Negative | Nonspontaneous; driven by power source |
+
 
 If both electrodes are in the same compartment and an external battery is driving the reaction, the setup is usually electrolytic. The absence of a salt bridge can also suggest a simple electrolytic setup, though some galvanic cells use porous barriers instead of classic U-shaped bridges. Basically, electrolytics cells are like galvanic cells but reversed.
 
-<img class="note-img note-img--w480" src="{{ '/assets/APs/AP%20Chem/thermoelectro/electrolyticcell.png' | relative_url }}" alt="Electrolytic cell" loading="lazy" decoding="async" />
+
 
 ---
 
@@ -474,18 +487,19 @@ So $$n = 2$$ in the mass equation.
 
 Since this unit is very equation-heavy, below is a list of all important equations for this unit:
 
-| Idea | Equation |
-| --- | --- |
-| Entropy of universe | $$\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}$$ |
-| Surroundings entropy | $$\Delta S_{\text{surroundings}} = -\Delta H_{\text{system}}/T$$ |
-| Standard reaction entropy | $$\Delta S^\circ_{\text{rxn}} = \sum n_p S^\circ_{\text{products}} - \sum n_r S^\circ_{\text{reactants}}$$ |
-| Gibbs free energy | $$\Delta G = \Delta H - T\Delta S$$ |
+
+| Idea                                       | Equation                                                                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Entropy of universe                        | $$\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}$$                               |
+| Surroundings entropy                       | $$\Delta S_{\text{surroundings}} = -\Delta H_{\text{system}}/T$$                                                         |
+| Standard reaction entropy                  | $$\Delta S^\circ_{\text{rxn}} = \sum n_p S^\circ_{\text{products}} - \sum n_r S^\circ_{\text{reactants}}$$               |
+| Gibbs free energy                          | $$\Delta G = \Delta H - T\Delta S$$                                                                                      |
 | Standard free energy from formation values | $$\Delta G^\circ_{\text{rxn}} = \sum n_p\Delta G_f^\circ(\text{products}) - \sum n_r\Delta G_f^\circ(\text{reactants})$$ |
-| Free energy and equilibrium | $$\Delta G^\circ = -RT\ln K$$ |
-| Nonstandard free energy | $$\Delta G = \Delta G^\circ + RT\ln Q$$ |
-| Free energy and cell potential | $$\Delta G = -nFE_{\text{cell}}$$ |
-| Standard cell potential | $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$ |
-| Nernst equation | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln Q$$ |
-| Nernst at $$25^\circ\text{C}$$ | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$$ |
-| Charge | $$q = nF = It$$ |
-| Faraday's law mass form | $$m = \frac{MIt}{nF}$$ |
+| Free energy and equilibrium                | $$\Delta G^\circ = -RT\ln K$$                                                                                            |
+| Nonstandard free energy                    | $$\Delta G = \Delta G^\circ + RT\ln Q$$                                                                                  |
+| Free energy and cell potential             | $$\Delta G = -nFE_{\text{cell}}$$                                                                                        |
+| Standard cell potential                    | $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$                                            |
+| Nernst equation                            | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln Q$$                                                         |
+| Nernst at $$25^\circ\text{C}$$             | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$$                                                     |
+| Charge                                     | $$q = nF = It$$                                                                                                          |
+| Faraday's law mass form                    | $$m = \frac{MIt}{nF}$$                                                                                                   |

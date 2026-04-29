@@ -34,8 +34,10 @@ Through my years of preparing for AMC 10/12, AIME, and USAJMO, here are some imp
 
 - Polynomials
 - Newton's Sums
+- Summations
 - Inequalities
 - Functional equations
+- Recursion
 
 ---
 
@@ -59,5 +61,11 @@ Through my years of preparing for AMC 10/12, AIME, and USAJMO, here are some imp
 ### Combinatorics
 
 - Expected Value
+
+---
+
+### Proof-writing
+
+- How to write your proofs!
 
 ---

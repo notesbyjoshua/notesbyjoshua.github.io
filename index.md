@@ -8,7 +8,7 @@ nav_order: 1
 
 Welcome to Notes by Joshua! Currently we are in alpha-2 phase.
 
-This site is a peak into all of my notes, and it is ***FREE*** for you all to share!
+This site is a peek into all of my notes, and it is ***FREE*** for you all to share!
 
 ---
 
@@ -43,16 +43,16 @@ This site is a peak into all of my notes, and it is ***FREE*** for you all to sh
 
 Here is a list of notes that have been added (in completion)!
 
-1. AP Chem Units 1-8
+1. AP Chem Units 1-9
 2. AP Physics C E&M Units 1-2
-3. AP Stats Units 1-4
+3. AP Stats Units 1-9
 4. AP Physics C Mech Unit 1
 
 ---
 
 ## 🚧 To-do List 🚧 
 
-Here is a list of notes I will add (in order)!
+Here is a list of notes I will add!
 
 1. AP Precalc Units 1-12
 2. AP Calc BC Units 1-10

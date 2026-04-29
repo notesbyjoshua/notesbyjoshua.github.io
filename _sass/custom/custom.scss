@@ -85,3 +85,24 @@ html[data-site-theme="dark"] .feedback-form-placeholder {
   max-width: min(640px, 100%);
   width: auto;
 }
+
+.main-content .theorem-box {
+  margin: 1.25rem 0;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 10px;
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.main-content .theorem-box > :first-child {
+  margin-top: 0;
+}
+
+.main-content .theorem-box > :last-child {
+  margin-bottom: 0;
+}
+
+html[data-site-theme="dark"] .main-content .theorem-box {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(14, 165, 233, 0.12);
+}

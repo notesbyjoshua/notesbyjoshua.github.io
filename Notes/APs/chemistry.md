@@ -18,6 +18,12 @@ AP free-response questions often reward clear particle-level explanations, corre
 
 ---
 
+## Quick Reference
+
+- [AP Chemistry Cheat Sheet]({{ '/notes/ap/chem/cheatsheet/' | relative_url }})
+
+---
+
 ## Units
 
 - [Unit 1: Atomic Structure and Properties]({{ '/notes/ap/chem/atomicstrucprop/' | relative_url }})

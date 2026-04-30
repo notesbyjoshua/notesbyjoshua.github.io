@@ -27,7 +27,7 @@ $$
 $$
 
 $$
-\int \frac{1}{x}\,dx = \ln(\operatorname{abs}(x)) + C
+\int \frac{1}{x}\,dx = \ln(\lvert x \rvert) + C
 $$
 
 $$

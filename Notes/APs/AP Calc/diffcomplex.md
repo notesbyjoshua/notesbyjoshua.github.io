@@ -108,7 +108,7 @@ $$
 $$
 
 $$
-\frac{d}{dx} \ln(\operatorname{abs}(u(x))) = \frac{u'(x)}{u(x)}
+\frac{d}{dx} \ln(\lvert u(x) \rvert) = \frac{u'(x)}{u(x)}
 $$
 
 Logarithmic differentiation is especially helpful when powers and products are mixed or when both base and exponent contain variables.

@@ -103,7 +103,7 @@ $$
 so
 
 $$
--\operatorname{abs}(x) \le x\sin(1/x) \le \operatorname{abs}(x)
+-\lvert x \rvert \le x\sin(1/x) \le \lvert x \rvert
 $$
 
 implies
@@ -166,10 +166,10 @@ For rational functions:
 Useful asymptotic idea:
 
 $$
-\sqrt{x^2 + 1} \sim \operatorname{abs}(x)
+\sqrt{x^2 + 1} \sim \lvert x \rvert
 $$
 
-for large $$\operatorname{abs}(x)$$, but be careful with sign when $$x \to -\infty$$.
+for large $$\lvert x \rvert$$, but be careful with sign when $$x \to -\infty$$.
 
 ---
 

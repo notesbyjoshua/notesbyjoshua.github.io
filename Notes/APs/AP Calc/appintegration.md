@@ -57,7 +57,7 @@ $$
 $$
 
 $$
-\text{total distance} = \int_a^b \operatorname{abs}(v(t))\,dt
+\text{total distance} = \int_a^b \lvert v(t) \rvert\,dt
 $$
 
 Split total distance at sign changes of $$v(t)$$.

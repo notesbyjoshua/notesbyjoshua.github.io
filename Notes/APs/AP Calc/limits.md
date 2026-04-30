@@ -94,7 +94,7 @@ $$
 \lim_{x \to a} f(x) = L.
 $$
 
-Classic BC-style use:
+For example:
 
 $$
 -1 \le \sin(1/x) \le 1
@@ -103,7 +103,7 @@ $$
 so
 
 $$
--|x| \le x\sin(1/x) \le |x|
+-\operatorname{abs}(x) \le x\sin(1/x) \le \operatorname{abs}(x)
 $$
 
 implies
@@ -166,10 +166,10 @@ For rational functions:
 Useful asymptotic idea:
 
 $$
-\sqrt{x^2 + 1} \sim |x|
+\sqrt{x^2 + 1} \sim \operatorname{abs}(x)
 $$
 
-for large $$|x|$$, but be careful with sign when $$x \to -\infty$$.
+for large $$\operatorname{abs}(x)$$, but be careful with sign when $$x \to -\infty$$.
 
 ---
 

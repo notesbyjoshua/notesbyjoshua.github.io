@@ -152,7 +152,7 @@ $$
 a(t) = v'(t) = s''(t)
 $$
 
-Velocity includes sign and direction; speed is $$|v(t)|$$.
+Velocity includes sign and direction; speed is $$\operatorname{abs}(v(t))$$.
 
 When velocity and acceleration have the same sign, speed is increasing. When signs differ, speed is decreasing.
 

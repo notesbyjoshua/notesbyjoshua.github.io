@@ -54,7 +54,7 @@ $$
 \sum_{n=0}^{\infty} ar^n
 $$
 
-converges when $$|r| < 1$$ and then
+converges when $$\operatorname{abs}(r) < 1$$ and then
 
 $$
 \sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}.
@@ -147,12 +147,12 @@ The Alternating Series Test says the series converges if:
 If
 
 $$
-\sum |a_n|
+\sum \operatorname{abs}(a_n)
 $$
 
 converges, then $$\sum a_n$$ converges absolutely.
 
-If $$\sum a_n$$ converges but $$\sum |a_n|$$ diverges, the convergence is conditional.
+If $$\sum a_n$$ converges but $$\sum \operatorname{abs}(a_n)$$ diverges, the convergence is conditional.
 
 ---
 
@@ -161,13 +161,13 @@ If $$\sum a_n$$ converges but $$\sum |a_n|$$ diverges, the convergence is condit
 Ratio Test:
 
 $$
-L = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|
+L = \lim_{n \to \infty} \operatorname{abs}\left(\frac{a_{n+1}}{a_n}\right)
 $$
 
 Root Test:
 
 $$
-L = \lim_{n \to \infty} \sqrt[n]{|a_n|}
+L = \lim_{n \to \infty} \sqrt[n]{\operatorname{abs}(a_n)}
 $$
 
 In either test:
@@ -206,8 +206,8 @@ $$
 
 There is a radius of convergence $$R$$:
 
-- converges for $$|x-c|<R$$,
-- diverges for $$|x-c|>R$$,
+- converges for $$\operatorname{abs}(x-c)<R$$,
+- diverges for $$\operatorname{abs}(x-c)>R$$,
 - endpoints must be checked separately.
 
 > [Image Placeholder: number line showing center, radius, and endpoint testing]
@@ -227,7 +227,7 @@ Maclaurin series is the special case $$c=0$$.
 Core series to memorize:
 
 $$
-\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n, \qquad |x|<1
+\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n, \qquad \operatorname{abs}(x)<1
 $$
 
 $$

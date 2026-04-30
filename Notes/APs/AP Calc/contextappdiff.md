@@ -51,7 +51,7 @@ Interpret carefully:
 
 - $$v(t) > 0$$ means motion in the positive direction,
 - $$v(t) < 0$$ means motion in the negative direction,
-- speed is $$|v(t)|$$.
+- speed is $$\operatorname{abs}(v(t))$$.
 
 Speed increasing:
 

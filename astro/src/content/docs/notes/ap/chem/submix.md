@@ -65,7 +65,7 @@ Chemists often classify solids by the particles at lattice sites and the forces 
 
 ### Identifying the type of solid
 
-The main crystalline types behave differently in simple tests, so a short flowchart can narrow down the classification. Real samples can blur categories, so it is important to do many tests as backups.
+Simple tests help distinguish the main types of crystalline solids, as the flowchart shows. Use several tests to check the classification, since a real sample may not fit every expected property.
 
 1. **Heating in a test tube**: Look first for **condensation** near the cool top of the tube. Water driven off from a crystal can indicate a **hydrated ionic** solid (often you are done after also checking conductivity in water). If there is no such hint and the sample **melts** at modest temperature, it is likely a **molecular** or **metallic** solid; test **electrical conductivity** on the **solid** (and again if you have a melt): **metallic** solids conduct; **molecular** solids do not. Many **ionic** salts do not melt cleanly over a burner, they may sit unchanged or **decompose**, so “does not melt” is not enough to prove molecular.
 

@@ -516,7 +516,7 @@ A good sketch should pass through those points, rise before $$0$$, fall between 
 
 ## Optimization
 
-Optimization problems mix modeling with calculus. The derivative only works after the quantity being optimized is written as a one-variable function. The main goal of most optimization problems is to find a local/absolute minima (e.g. minimizing time) or a local/absolute maxima (e.g. maximizing profit).
+Optimization problems mix modeling with calculus. The derivative only works after the quantity being optimized is written as a one-variable function. Most optimization problems ask for a local or absolute minimum (such as the least time) or maximum (such as the greatest profit).
 
 The hardest part of optimization is usually building the one-variable function. A good setup keeps three pieces separate:
 

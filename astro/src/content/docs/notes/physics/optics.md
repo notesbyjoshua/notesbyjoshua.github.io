@@ -562,7 +562,7 @@ $$
 \Delta L=\frac{m\lambda}{2}.
 $$
 
-Each fringe that passes corresponds to moving the mirror a half-wavelength — a beautifully sensitive ruler.
+Each fringe that passes corresponds to a half-wavelength of mirror motion, so counting fringes measures very small displacements.
 
 Inserting a gas cell of length $$\ell$$ and changing its index by $$\Delta n$$ shifts the fringe count by
 

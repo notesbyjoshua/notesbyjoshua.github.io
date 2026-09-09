@@ -52,7 +52,7 @@ $$
 p_{\text{car}}=(1200)(0.0050)=6.0\ \text{kg}\cdot\text{m/s}.
 $$
 
-They have the same momentum even though their speeds are wildly different. Momentum is not just "fastness"; it is mass times velocity. This is why collisions care so much about both the object's speed and how much matter is moving.
+They have the same momentum even though their speeds are very different. Momentum depends on both mass and velocity, so both matter when analyzing a collision.
 
 Their kinetic energies are very different:
 
@@ -389,7 +389,7 @@ $$
 
 ## Center of Mass
 
-Often times, when dealing with complex shapes or systems of particles, we will often model them using the center of mass. The usefulness is that force, momentum, etc. all depend on the kinematics of the center of mass, so calculations are much easier there.
+The center of mass simplifies the motion of a complex shape or system of particles. Its velocity determines the system’s total momentum, and its acceleration is set by the net external force, so we can study the overall motion without tracking each particle separately.
 
 ```tikz
 \usepackage{tikz}

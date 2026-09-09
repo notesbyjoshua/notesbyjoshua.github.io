@@ -151,9 +151,9 @@ The **center** is a typical or middle value—where much of the data sits. For m
 **Shape** tells us where data pile up and whether the distribution is symmetric or skewed.
 
 - **Symmetric**: the left and right sides are roughly mirror images (like a bell curve or a uniform histogram).
-- **Skewed**: one tail stretches farther than the other. If the right tail is longer (extreme large values pull the tail), the distribution is **right-skewed** (positively skewed). If the left tail is longer, it is **left-skewed** (negatively skewed). When describing skewed distributions, it is important to remember that the skewed direction is always modeled on the *tail* instead of where the majority of the data are.
+- **Skewed**: one tail stretches farther than the other. If the right tail is longer (extreme large values pull the tail), the distribution is **right-skewed** (positively skewed). If the left tail is longer, it is **left-skewed** (negatively skewed). Name the skew by the direction of the *tail*, not by where most of the data are.
 
-Also note that **modality** (one clear peak (**unimodal**), two peaks (**bimodal**), and so on) sometimes suggests there are different subgroups mixed in one variable and are very important to describe.
+Describe the **modality** too: one clear peak is **unimodal**, two peaks are **bimodal**, and so on. Multiple peaks can suggest that the data combine different subgroups.
 
 ### Clusters and gaps
 

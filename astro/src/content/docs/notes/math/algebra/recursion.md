@@ -262,7 +262,7 @@ These are good recursion problems to revisit after you are comfortable with the 
 
 ## Generating Functions
 
-Generating functions are one of the cleanest ways to solve linear recurrences. They are also a powerful summation tool, so this section is adapted from the generating-functions part of the summations handout and placed here because it fits recursion especially well.
+Generating functions turn linear recurrences into algebraic equations and can also help evaluate sums. This section adapts the generating-functions material from the summations handout to recurrence problems.
 
 The basic idea is this: given a sequence $$a_n$$, package it into the formal power series
 

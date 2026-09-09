@@ -13,7 +13,7 @@ sidebar:
 
 ## The semiclassical picture
 
-A full treatment of quantum mechanics needs the Schrödinger equation (beyond the scope of USAPhO), but there is a **semiclassical** regime, historically discovered first, by people like Bohr, that explains an enormous amount with almost no machinery. The idea is to treat a particle as a wave, and demand that the wave fit together consistently.
+A full treatment of quantum mechanics uses the Schrödinger equation, beyond the scope of these USAPhO notes. Earlier **semiclassical** models, including Bohr’s, explain some quantum behavior with simpler methods. Here, we use the particle’s wave properties and require its phase to match after a complete orbit or round trip.
 
 The phase $$\phi$$ of a wave varies in space and time according to its wavenumber and angular frequency,
 

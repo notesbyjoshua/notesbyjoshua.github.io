@@ -345,7 +345,7 @@ At $$500$$ items, revenue is increasing by about $$30$$ dollars per additional i
 
 ## Related rates
 
-Related rates problems are mostly about translation, where two quantities are moving in a related way. The key source equations usually come from:
+In a related rates problem, write an equation connecting quantities that change together. These equations often come from:
 
 - Pythagorean theorem,
 - volume formulas,
@@ -354,7 +354,7 @@ Related rates problems are mostly about translation, where two quantities are mo
 
 If the problem asks how fast a quantity is changing, the final answer should usually be a value of a derivative with units.
 
-Related rates is just an application of implicit differentiation with time as the dThe important idea is that every variable depends on time, even if the equation itself does not visibly contain $$t$$ (unless the problem specifically says otherwise). For example, in $$x^2+y^2=L^2$$, the ladder length $$L$$ is constant, but $$x$$ and $$y$$ change as the ladder slides. That is why differentiating gives rate terms:
+Related rates uses implicit differentiation with respect to time. Treat changing quantities as functions of time, even if the equation does not explicitly contain $$t$$, and keep fixed quantities constant. For example, in $$x^2+y^2=L^2$$, the ladder length $$L$$ is constant, but $$x$$ and $$y$$ change as the ladder slides. That is why differentiating gives rate terms:
 
 $$
 \frac{d}{dt}(x^2+y^2)=\frac{d}{dt}(L^2)
@@ -532,7 +532,7 @@ $$
 f(x)\approx f(a)+f'(a)(x-a).
 $$
 
-It is important to note that linearization only works for small deviations from $$a$$, as the line will eventually diverge from the function as the difference increases.
+Linearization is a local approximation near $$a$$. Farther away, the tangent line may no longer approximate the function well.
 
 </div>
 
@@ -600,13 +600,13 @@ $$
 \lvert dy\rvert=\lvert f'(a)\rvert\lvert \Delta x\rvert.
 $$
 
-Linearization and differentials are very influential not only in calculus, but in other fields as well like physics.
+The same method estimates how measurement errors affect calculated quantities in physics.
 
 ---
 
 ## L'Hôpital's Rule
 
-Sometimes, you when calculating limits, you get indeterminate forms that cannot be solved using algebra. A very useful way to solve is to use L'Hôpital's rule.
+When algebra does not resolve an indeterminate limit, L'Hôpital's Rule may help, provided its conditions are met.
 
 <div class="theorem-box">
 
@@ -682,7 +682,7 @@ So the limit equals $$1$$.
 
 </div>
 
-It is important to note that L'Hôpital's Rule applies to limits that produce
+L'Hôpital's Rule requires a quotient with an indeterminate form:
 
 $$
 \frac{0}{0}

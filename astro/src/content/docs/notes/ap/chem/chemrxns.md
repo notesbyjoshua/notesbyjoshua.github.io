@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-**Chemical reactions** convert reactants into products by breaking and forming bonds so that atoms are rearranged into new substances. This unit classifies common patterns you will use everywhere on the AP exam—especially with aqueous ions, acids and bases, and **redox**. **Stoichiometry** rests on conservation of mass (balanced equations) and connects to moles and concentration from [Unit 1](/notes/ap/chem/atomicstrucprop/). Polarity, solubility, and solutions tie back to [Unit 3](/notes/ap/chem/submix/).
+**Chemical reactions** convert reactants into products by breaking and forming bonds so that atoms are rearranged into new substances. Common reaction patterns involve aqueous ions, acids and bases, and **redox**. **Stoichiometry** rests on conservation of mass (balanced equations) and connects to moles and concentration from [Unit 1](/notes/ap/chem/atomicstrucprop/). Polarity, solubility, and solutions tie back to [Unit 3](/notes/ap/chem/submix/).
 
 ---
 
@@ -81,7 +81,7 @@ $$
 
 When amounts of two or more reactants are given, one usually runs out first and caps how much product forms—the **limiting reactant**. The others are **excess reactants** and have leftover material when the reaction stops. To find the limiting reactant, convert each reactant to moles and divide by its coefficient; the **smallest** of these ratios marks the limiting reactant. Equivalently, pick either reactant, compute how much of the other it *would* require, and compare to how much is actually present.
 
-At the particle level, the limiting reactant is simply the species whose particles are exhausted first, so the remaining excess particles have no partner left to collide and react with in the required ratio.
+At the particle level, the limiting reactant runs out first. Some particles of the excess reactant remain because there are no longer enough particles of the other reactant to react in the required ratio.
 
 ### Percent yield
 
@@ -272,7 +272,7 @@ A **half-reaction** shows only the oxidation or only the reduction part of an el
 
 **Basic solution:** either balance as in acid and then add $$\text{OH}^-$$ to **both sides** in pairs that neutralize $$\text{H}^+$$ as water, or balance using $$\text{H}_2\text{O}$$ and $$\text{OH}^-$$ from the start. The final combined equation should contain **no free $$\text{H}^+$$** if the medium is strongly basic.
 
-Half-reactions are a very important compenents of **galvanic and electrolytic cells** (wiring oxidation at the anode and reduction at the cathode) and of **standard reduction potentials** tabulated for half-reactions written as **reduction** by convention. You will learn more in [Unit 9](/notes/ap/chem/thermoelectro/).
+Half-reactions describe oxidation at the anode and reduction at the cathode in **galvanic and electrolytic cells**. Tables of **standard reduction potentials** list half-reactions written as **reduction** by convention. You will learn more in [Unit 9](/notes/ap/chem/thermoelectro/).
 
 ---
 

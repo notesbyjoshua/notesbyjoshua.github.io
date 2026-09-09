@@ -90,7 +90,7 @@ $$
 
 Here $$k$$ is the **rate constant** (units depend on overall order), and $$m, n, p, \ldots$$ are the orders with respect to each reactant. Those exponents are *not* taken from the balanced equation unless the reaction is a single **elementary step** (see mechanisms below). Overall reaction order is the sum $$m + n + p + \cdots$$.
 
-Important distinction: at fixed temperature (and without changing catalyst), $$k$$ does not depend on concentrations or, for gases, on pressure as a separate knob—concentration enters only through the powers $$[\text{A}]^m$$ etc. Changing pressure in a gas-phase system often changes concentrations and therefore rate, but it does not change $$k$$ itself. Temperature and catalysts change $$k$$.
+At fixed temperature and with the same catalyst, $$k$$ does not depend on concentrations or, for gases, on pressure independently of concentration. Concentration enters through the powers $$[\text{A}]^m$$ etc. Changing pressure in a gas-phase system often changes concentrations and therefore rate, but it does not change $$k$$ itself. Temperature and catalysts change $$k$$.
 
 The **method of initial rates** compares initial rates while varying one reactant’s initial concentration at a time. Holding other concentrations fixed, if doubling $$[\text{A}]$$ multiplies the initial rate by $$2^m$$, $$m$$ is the order of $$A$$. More generally, for two trials where only $$[\text{A}]$$ changes,
 
@@ -325,7 +325,7 @@ A **catalyst** provides an alternative pathway with lower activation energy. It 
 
 ## Kinetics vs equilibrium (preview)
 
-For a reversible elementary reaction, forward and reverse rates balance at equilibrium, linking rate constants to an equilibrium constant in simple cases. The full story belongs with [equilibrium](/notes/ap/chem/equilibrium/); here the essential point is that kinetics answers “how fast” while equilibrium answers “how far” under constant conditions.
+For a reversible elementary reaction, forward and reverse rates balance at equilibrium, linking rate constants to an equilibrium constant in simple cases. The [equilibrium notes](/notes/ap/chem/equilibrium/) develop this connection. Kinetics describes how fast a reaction proceeds; equilibrium describes the composition it approaches under fixed conditions.
 
 ---
 

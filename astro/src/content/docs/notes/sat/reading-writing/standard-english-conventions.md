@@ -273,7 +273,7 @@ Do not add an apostrophe to a noun merely because it is plural.
 
 ### Subject-Verb Agreement
 
-Subject-verb agreement is a very important part of SAT grammar and is often seen as the hardest part. The key point is to find the true subject and ignore intervening phrases:
+For subject-verb agreement, find the true subject and ignore intervening phrases:
 
 > The collection of paintings is valuable.
 

@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-In this section, I will describe some very helpful methods/tools you could use on the F=ma/USAPhO, even though it is very rare that they will be seen on the AP exams. These are not new physics — they are *strategies* that turn an intimidating problem into a routine one. The best competitors reach for them automatically: before grinding through force diagrams, ask "is there a shortcut here?"
+These methods can help with F=ma/USAPhO problems, though they rarely appear on AP exams. They use familiar physics in ways that can shorten a solution. Before starting a long force calculation, check whether a constraint, symmetry, or conservation law can simplify it.
 
 ---
 
@@ -17,7 +17,7 @@ The virtual work method is a way to find equilibrium conditions (or the force ne
 
 > For a system in equilibrium, the total work done by the applied forces under any small displacement consistent with the constraints is zero: $$\;\delta W=0$$.
 
-The magic is that **constraint forces do no virtual work**: normal forces, tensions in inextensible strings, and frictionless contact forces are all perpendicular to the allowed motion (or internal and canceling), so they drop out entirely. You only ever deal with the forces you care about (gravity, applied loads, springs).
+For the ideal constraints considered here, **constraint forces do no virtual work**: normal forces, tensions in inextensible strings, and frictionless contact forces are all perpendicular to the allowed motion (or internal and canceling), so they drop out entirely. You only ever deal with the forces you care about (gravity, applied loads, springs).
 
 :::strategy
 1. Identify the **degrees of freedom** and pick a single coordinate $$q$$ that captures the allowed motion (e.g. rectangular, polar, etc.).
@@ -36,7 +36,7 @@ $$
 \delta W = F_1(a\,\delta\theta)-F_2(b\,\delta\theta)=0\quad\Longrightarrow\quad F_1 a=F_2 b.
 $$
 
-The lever law falls out in one line, no torque diagram needed. The same method instantly gives the mechanical advantage of pulley systems, wedges, gear trains, and hydraulic presses: **the force ratio is the inverse of the displacement ratio**, because the constraint ties the displacements together.
+This gives the lever law directly. The same method gives the mechanical advantage of ideal pulley systems, wedges, gear trains, and hydraulic presses: **the force ratio is the inverse of the displacement ratio**, because the constraint ties the displacements together.
 
 </div>
 
@@ -50,7 +50,7 @@ Before solving, ask what combination of the given quantities even *has the right
 
 **Example.** Derive the formula for the period of a pendulum up to constants.
 
-Suppose you forgot the pendulum formula. The period $$T$$ (units: s) could depend on length $$L$$ (m), mass $$m$$ (kg), and gravity $$g$$ (m/s²). The only way to build a time from these is $$\sqrt{L/g}$$: mass cannot appear, because there's no other mass to cancel its kg. So $$T=C\sqrt{L/g}$$ for some dimensionless $$C$$ (which turns out to be $$2\pi$$). Dimensional analysis got the entire physical content — including the surprising fact that period is mass-independent — for free.
+Suppose you forgot the pendulum formula. The period $$T$$ (units: s) could depend on length $$L$$ (m), mass $$m$$ (kg), and gravity $$g$$ (m/s²). The only way to build a time from these is $$\sqrt{L/g}$$: mass cannot appear, because there's no other mass to cancel its kg. So $$T=C\sqrt{L/g}$$ for some dimensionless $$C$$ (which turns out to be $$2\pi$$). Dimensional analysis gives the dependence on length and gravity and shows that mass drops out. It does not determine the dimensionless constant or any dependence on the swing angle.
 
 </div>
 

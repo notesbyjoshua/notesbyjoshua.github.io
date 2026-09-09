@@ -150,7 +150,7 @@ $$
 
 ### Limits from table of values
 
-Tables help estimate limits when you do not have a formula or graph. The main idea is to look at what the output values approach from the left and from the right.
+When you do not have a formula or graph, use a table to estimate what the outputs approach from each side.
 
 A table does not prove a limit by itself, but it gives strong evidence. It is especially useful for reading calculator-generated data, numerical models, or functions that are hard to simplify by hand.
 
@@ -323,82 +323,14 @@ $$
 
 ---
 
-## Important trig limits
-
-Two key trig limits that appear often are:
-
-$$
-\lim_{x \to 0} \frac{\sin x}{x} = 1,
-$$
-
-$$
-\lim_{x \to 0} \frac{\tan x}{x} = 1.
-$$
-
-They are frequently used after rewriting a trig expression into a form that matches one of these limits. It is important to note that $$\cos x$$ is not part of this list. Since $$\cos x\to1$$ while $$x\to0$$, the quotient $$\frac{\cos x}{x}$$ becomes unbounded. The two-sided limit does not exist.
-
-:::conditions
-These two trig limits are valid only when the angle is measured in **radians**. As an exercise, you can try to derive the corresponding versions when $$x$$ is in degrees.
-:::
-
-<div class="theorem-box">
-
-**Example.** Evaluate $$\displaystyle\lim_{x\to0}\frac{\sin(5x)}{x}.$$
-
-Rewrite the expression to use the standard limit $$\lim_{u\to0}\frac{\sin u}{u}=1$$:
-
-$$
-\lim_{x\to0}\frac{\sin(5x)}{x}
-=
-\lim_{x\to0}5\cdot\frac{\sin(5x)}{5x}.
-$$
-
-As $$x\to0$$, the ratio $$\frac{\sin(5x)}{5x}\to1$$, so the limit equals $$5$$.
-
-</div>
-
-<div class="theorem-box">
-
-**Example.** Evaluate
-
-$$
-\lim_{x\to0}\frac{1-\cos(2x)}{x^2}.
-$$
-
-Use the identity
-
-$$
-1-\cos(2x)=2\sin^2 x.
-$$
-
-Then
-
-$$
-\lim_{x\to0}\frac{1-\cos(2x)}{x^2}
-=
-\lim_{x\to0}\frac{2\sin^2 x}{x^2}
-=
-\lim_{x\to0}2\left(\frac{\sin x}{x}\right)^2.
-$$
-
-As $$x\to0$$, $$\frac{\sin x}{x}\to1$$, so
-
-$$
-\lim_{x\to0}\frac{1-\cos(2x)}{x^2}=2.
-$$
-
-</div>
-
----
-
 ## Indeterminate forms and algebraic techniques
 
-Direct substitution sometimes gives an indeterminate form, which means the algebraic structure must be simplified before the limit can be found. Common indeterminate forms include: $$0/0$$, $$\infty/\infty$$, $$0 \cdot \infty$$, $$\infty - \infty$$, $$1^\infty$$, $$0^0$$, and $$\infty^0$$.
+Direct substitution sometimes gives an indeterminate form, so substitution alone does not determine the limit. You need to simplify the expression or use another limit technique. Common indeterminate forms include: $$0/0$$, $$\infty/\infty$$, $$0 \cdot \infty$$, $$\infty - \infty$$, $$1^\infty$$, $$0^0$$, and $$\infty^0$$.
 
 In AP Calculus AB/BC, most of these are handled with algebra or L'Hôpital's Rule (Unit 4).
 
 :::strategy
-There are many common ways to solve indeterminate forms in limits using algebra:
+For an indeterminate limit, try one of these algebraic methods:
 
 - Factor and cancel a common factor
 - Multiply by a conjugate when radicals are involved
@@ -408,10 +340,10 @@ There are many common ways to solve indeterminate forms in limits using algebra:
 :::
 
 
-Most AP limit work is about recognizing whether direct substitution works or whether the expression hides competing behavior.
+Start by checking whether direct substitution works. If it gives an indeterminate form, choose a method that fits the expression.
 
 :::warning
-If you get a form that is NOT one of these you cannot do any operation to simplify it! For example, if the limit is $$\infty/3$$, it is not an indeterminate form.
+A form that is not indeterminate may already determine the limit. For example, $$\infty/3$$ indicates growth without bound. You can still simplify the expression, but indeterminate-form rules such as L’Hôpital’s Rule do not apply to that form.
 :::
 
 ### Factoring and canceling
@@ -555,56 +487,56 @@ $$
 
 </div>
 
-### Trig rewrites
+### Substitution
 
-Trig limits often become standard limits after rewriting the angle or using an identity. The goal is to create a factor like
+Substitution for limits works like u-substitution for integrals, but the goal is different: you rename a messy inside expression so the limit becomes a standard form. If
 
 $$
-\frac{\sin u}{u}
+u=g(x)
 $$
 
-where $$u\to0$$ (or the equivalent tangent version).
+and $$g(x)\to L$$ as $$x\to a$$, then
+
+$$
+\lim_{x\to a} f(g(x))=\lim_{u\to L}f(u),
+$$
+
+as long as the new limit exists.
+
+:::warning
+Be careful with expressions that approach $$0$$ or $$\infty$$ from only one side, because square roots, logarithms, and absolute values can change the direction of the new variable.
+:::
 
 <div class="theorem-box">
 
 **Example.** Evaluate
 
 $$
-\lim_{x\to0}\frac{\tan(3x)}{\sin(5x)}.
+\lim_{x\to4}\frac{\sqrt{x+5}-3}{x-4}.
 $$
 
-Rewrite the expression so each trig ratio has its own matching angle:
+Let $$u=\sqrt{x+5}$$. As $$x\to4$$, $$u\to3$$. Also,
 
 $$
-\lim_{x\to0}\frac{\tan(3x)}{\sin(5x)}
+u^2=x+5
+\quad\Longrightarrow\quad
+x=u^2-5.
+$$
+
+So
+
+$$
+x-4=u^2-9=(u-3)(u+3).
+$$
+
+The limit becomes
+
+$$
+\lim_{u\to3}\frac{u-3}{(u-3)(u+3)}
 =
-\lim_{x\to0}\frac{\tan(3x)}{3x}\cdot\frac{5x}{\sin(5x)}\cdot\frac{3}{5}.
-$$
-
-As $$x\to0$$,
-
-$$
-\frac{\tan(3x)}{3x}\to1
-\qquad
-\text{and}
-\qquad
-\frac{\sin(5x)}{5x}\to1,
-$$
-
-so
-
-$$
-\frac{5x}{\sin(5x)}\to1.
-$$
-
-Therefore
-
-$$
-\lim_{x\to0}\frac{\tan(3x)}{\sin(5x)}
+\lim_{u\to3}\frac{1}{u+3}
 =
-1\cdot1\cdot\frac35
-=
-\frac35.
+\frac16.
 $$
 
 </div>
@@ -750,7 +682,7 @@ A function is said to be *continuous* at $$x = a$$ when:
 2. $$\lim_{x \to a} f(x)$$ exists,
 3. $$\lim_{x \to a} f(x) = f(a).$$
 
-Continuity means the nearby behavior of the function matches the value at the point.
+Continuity means the nearby behavior of the function matches the value at the point. In a simpler sense, a function is continuous if around that point, you can draw the graph without picking up your pencil. A graph that is continuous without any specifications about location is assumed to be continuous everywhere.
 
 </div>
 
@@ -765,45 +697,130 @@ For piecewise functions, continuity at the switching point is a limit-matching p
 
 <div class="theorem-box">
 
-**Example.** Find $$k$$ so that
+**Example.** Identify all discontinuities of
 
 $$
 f(x)=
 \begin{cases}
-x^2+k, & x<2,\\
-3x, & x\ge 2
+\dfrac{x^2-9}{x-3}, & x<3,\\
+7, & x=3,\\
+2x+1, & 3<x<5,\\
+20, & x=5,\\
+\dfrac{1}{x-6}, & x>5.
 \end{cases}
 $$
 
-is continuous at $$x=2$$.
-
-The right-hand value is controlled by the second branch (since it is fixed):
+At $$x=3$$, the left-hand branch simplifies for $$x\ne3$$:
 
 $$
-f(2)=3(2)=6.
+\frac{x^2-9}{x-3}
+=
+\frac{(x-3)(x+3)}{x-3}
+=
+x+3.
 $$
 
-The left-hand limit comes from the first branch:
+So
 
 $$
-\lim_{x\to2^-}(x^2+k)=4+k.
+\lim_{x\to3^-}f(x)=6.
 $$
 
-For continuity, the left-hand limit must equal the value:
+The right-hand limit comes from $$2x+1$$:
 
 $$
-4+k=6.
+\lim_{x\to3^+}f(x)=7.
 $$
 
-Thus
+Since the one-sided limits differ, $$x=3$$ is a jump discontinuity. The fact that $$f(3)=7$$ does not fix the jump.
+
+At $$x=5$$,
 
 $$
-k=2.
+\lim_{x\to5^-}f(x)=2(5)+1=11.
+$$
+
+For the right-hand side, use the branch $$1/(x-6)$$:
+
+$$
+\lim_{x\to5^+}f(x)=\frac{1}{5-6}=-1.
+$$
+
+The one-sided limits differ, so $$x=5$$ is also a jump discontinuity. The value $$f(5)=20$$ is just the actual point value.
+
+At $$x=6$$, the branch $$1/(x-6)$$ has a vertical asymptote. Since
+
+$$
+\lim_{x\to6^-}\frac{1}{x-6}=-\infty
+\qquad\text{and}\qquad
+\lim_{x\to6^+}\frac{1}{x-6}=\infty,
+$$
+
+there is an infinite discontinuity at $$x=6$$.
+
+Therefore the discontinuities are $$x=3$$, $$x=5$$, and $$x=6$$.
+
+</div>
+
+### Continuity Theorems
+
+<div class="theorem-box">
+
+**Theorem (Continuity of algebraic combinations).** If $$f$$ and $$g$$ are continuous at $$x=a$$, then the following functions are also continuous at $$x=a$$:
+
+- $$f+g$$,
+- $$f-g$$,
+- $$fg$$,
+- $$cf$$ for any constant $$c$$,
+- $$\dfrac{f}{g}$$, as long as $$g(a)\ne0$$.
+
+</div>
+
+// add an example proof for $$fg$$
+
+:::note
+Polynomials, exponential functions, sine, cosine, and rational functions on their domains are continuous everywhere. Root functions, logarithms, tangent, secant, cosecant, cotangent, and inverse trig functions are continuous wherever they are defined (basically excluding asymptotes).
+:::
+
+<div class="theorem-box">
+
+**Theorem (Taking out limits).** // write and prove the theorem that lim x -> a f(g(x)) = f(lim x -> a g(x)) and the conditions in which this is true.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Determine where
+
+$$
+h(x)=\sqrt{\frac{x+1}{x-2}}
+$$
+
+is continuous.
+
+The inside rational expression is continuous wherever $$x\ne2$$. The square root is continuous when its input is nonnegative, so we need
+
+$$
+\frac{x+1}{x-2}\ge0.
+$$
+
+The critical values are $$x=-1$$ and $$x=2$$. A sign chart gives
+
+$$
+\frac{x+1}{x-2}\ge0
+\quad\text{on}\quad
+(-\infty,-1]\cup(2,\infty).
+$$
+
+Therefore $$h$$ is continuous on
+
+$$
+(-\infty,-1]\cup(2,\infty).
 $$
 
 </div>
 
-// add some more stuff and theorems and stuff
+// add a problem where you have two graphs of functions and then you have to find if a composite function or some sort of mix of the two functions as a new function is continuous at two different points, where at one it is and one it isn't. have them justify
 
 ---
 
@@ -849,11 +866,216 @@ $$
 
 </div>
 
+## Solving Trig Limits
+
+Two key trig limits that appear often are:
+
+$$
+\lim_{x \to 0} \frac{\sin x}{x} = 1,
+$$
+
+$$
+\lim_{x \to 0} \frac{\tan x}{x} = 1.
+$$
+
+To use these limits, rewrite the trig expression to match one of these forms. The same result does not hold for $$\cos x$$ in the numerator. Since $$\cos x\to1$$ while $$x\to0$$, the quotient $$\frac{\cos x}{x}$$ becomes unbounded. The two-sided limit does not exist.
+
+:::conditions
+These two trig limits are valid only when the angle is measured in **radians**. As an exercise, you can try to derive the corresponding versions when $$x$$ is in degrees.
+:::
+
+<div class="theorem-box">
+
+**Proof (The limit of sine over angle).** For $$0<x<\frac{\pi}{2}$$, compare three areas in the unit circle: the inner triangle, the circular sector, and the outer tangent triangle.
+
+```tikz
+\usepackage{tikz}
+\begin{tikzpicture}[scale=2.2]
+\draw[->] (-0.1,0) -- (1.35,0) node[right] {$x$};
+\draw[->] (0,-0.1) -- (0,1.2) node[above] {$y$};
+\draw[thick] (0,0) arc[start angle=0,end angle=55,radius=1];
+\draw[thick] (0,0) -- (1,0);
+\draw[thick] (0,0) -- (55:1);
+\draw[dashed] (1,0) -- (1,{tan(55)});
+\draw[thick] (0,0) -- (1,{tan(55)});
+\draw[fill=black] (55:1) circle (0.7pt) node[above left] {$(\cos x,\sin x)$};
+\draw (0.28,0) arc[start angle=0,end angle=55,radius=0.28];
+\node at (0.36,0.18) {$x$};
+\node[below] at (0.5,0) {$1$};
+\node[right] at (1,0.72) {$\tan x$};
+\end{tikzpicture}
+```
+
+For this picture, the inner triangle has area $$\frac12\sin x\cos x$$, the sector has area $$\frac12x$$, and the outer triangle has area $$\frac12\tan x$$. Therefore,
+
+$$
+\frac12\sin x\cos x
+\le
+\frac12x
+\le
+\frac12\tan x.
+$$
+
+Multiply by $$2$$:
+
+$$
+\sin x\cos x\le x\le\tan x.
+$$
+
+Since $$\tan x=\frac{\sin x}{\cos x}$$ and all quantities are positive on $$0<x<\frac{\pi}{2}$$, divide by $$\sin x$$:
+
+$$
+\cos x\le\frac{x}{\sin x}\le\frac{1}{\cos x}.
+$$
+
+Taking reciprocals reverses the useful form:
+
+$$
+\cos x\le\frac{\sin x}{x}\le1.
+$$
+
+As $$x\to0^+$$, both outer expressions approach $$1$$, so the Squeeze Theorem gives
+
+$$
+\lim_{x\to0^+}\frac{\sin x}{x}=1.
+$$
+
+Since $$\sin x/x$$ is an even function, the left-hand limit is also $$1$$. Therefore,
+
+$$
+\lim_{x\to0}\frac{\sin x}{x}=1.
+$$
+
+</div>
+
+Many indeterminate trig limits become standard limits after rewriting the angle or using an identity. Look for a way to create a factor like
+
+$$
+\frac{\sin u}{u}
+$$
+
+where $$u\to0$$ (or the equivalent tangent version) and then cancel it out of the equation. In fact, $$\lim_{x\to0}\frac{\sin u}{u}$$ is often referred to as the "savior" limit since with almost all indeterminate trig limits, $$\frac{\sin x}{x}$$ shows up and can get cancelled. Note that $$\lim_{x\to0}\frac{u}{\sin u}$$ is equivalent to the savior limit (since the reciprocal of $$1$$ is $$1$$.)
+
+<div class="theorem-box">
+
+**Example.** Evaluate
+
+$$
+\lim_{x\to0}\frac{1-\cos(2x)}{x^2}.
+$$
+
+Use the identity
+
+$$
+1-\cos(2x)=2\sin^2 x.
+$$
+
+Then
+
+$$
+\lim_{x\to0}\frac{1-\cos(2x)}{x^2}
+=
+\lim_{x\to0}\frac{2\sin^2 x}{x^2}
+=
+\lim_{x\to0}2\left(\frac{\sin x}{x}\right)^2.
+$$
+
+As $$x\to0$$, $$\frac{\sin x}{x}\to1$$, so
+
+$$
+\lim_{x\to0}\frac{1-\cos(2x)}{x^2}=2.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Evaluate
+
+$$
+\lim_{x\to0}\frac{1-\cos(3x)}{\cos^2(5x)-1}.
+$$
+
+Use the identities
+
+$$
+1-\cos(3x)=2\sin^2\left(\frac{3x}{2}\right)
+$$
+
+and
+
+$$
+\cos^2(5x)-1=-\sin^2(5x).
+$$
+
+Then
+
+$$
+\lim_{x\to0}\frac{1-\cos(3x)}{\cos^2(5x)-1}
+=
+\lim_{x\to0}
+\frac{2\sin^2\left(\frac{3x}{2}\right)}{-\sin^2(5x)}.
+$$
+
+Rewrite the sine factors so each has the form $$\sin u/u$$:
+
+$$
+\lim_{x\to0}
+-2
+\left(\frac{\sin\left(\frac{3x}{2}\right)}{\frac{3x}{2}}\right)^2
+\left(\frac{\frac{3x}{2}}{5x}\right)^2
+\left(\frac{5x}{\sin(5x)}\right)^2.
+$$
+
+The two standard-limit factors approach $$1$$, so the limit is
+
+$$
+-2\left(\frac{3}{10}\right)^2
+=
+-\frac{9}{50}.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Evaluate
+
+$$
+\lim_{x\to0^+}\frac{\sin(1/x)}{1/x}.
+$$
+
+Let $$u=\frac{1}{x}$$. As $$x\to0^+$$, $$u\to\infty$$, so the limit becomes
+
+$$
+\lim_{u\to\infty}\frac{\sin u}{u}.
+$$
+
+The numerator oscillates between $$-1$$ and $$1$$, while the denominator grows without bound. Since
+
+$$
+-\frac{1}{u}\le\frac{\sin u}{u}\le\frac{1}{u}
+$$
+
+for $$u>0$$, and both outer bounds approach $$0$$ as $$u\to\infty$$, the Squeeze Theorem gives
+
+$$
+\lim_{u\to\infty}\frac{\sin u}{u}=0.
+$$
+
+Therefore,
+
+$$
+\lim_{x\to0^+}\frac{\sin(1/x)}{1/x}=0.
+$$
+
+</div>
+
 ---
 
 ## Formal limit definition
 
-For general purposes, the exact formal definition of the limit is not needed, but is good to know. The statement
+We have talked about limits in the general sense, where it maps out the behavior near a point. But how do we formalize it? The statement
 
 $$
 \lim_{x\to a}f(x)=L
@@ -868,8 +1090,6 @@ $$
 \quad\Longrightarrow\quad
 \lvert f(x)-L\rvert<\varepsilon.
 $$
-
-The AP course usually emphasizes the intuition rather than formal proof: limits are about controlling output closeness by controlling input closeness.
 
 The formal definition is also useful for understanding why limit statements are stronger than a graph or table. A table can suggest that the output is approaching $$L$$, but an epsilon-delta proof says that every possible tolerance can be handled.
 

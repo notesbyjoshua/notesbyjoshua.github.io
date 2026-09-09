@@ -50,7 +50,7 @@ $$
 y=(x-1)^2-2.
 $$
 
-The parametric form still gives extra information: as $$t$$ increases, $$x=t+1$$ increases, so the parabola is traced from left to right. Thus, it is always important to always note your endpoints and direction when drawing parametric curves.
+The parametric form still gives extra information: as $$t$$ increases, $$x=t+1$$ increases, so the parabola is traced from left to right. Mark the endpoints and direction of motion when drawing a parametric curve.
 
 ```tikz
 \usepackage{pgfplots}

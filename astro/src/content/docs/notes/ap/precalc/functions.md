@@ -161,7 +161,7 @@ Six parent functions are especially useful to recognize:
 - $$y=\frac{1}{x}$$: reciprocal, a rotated hyperbola with asymptotes $$x=0$$ and $$y=0$$.
 - $$y=\sqrt{x}$$: square-root curve, starting at $$(0,0)$$ and moving right.
 
-Knowing these shapes makes it much easier to sketch transformed functions quickly, and later we will talk about transformations so that most types of problems can be quickly visualized. A chart is shown below, with many of the functions appearing later (exponential, logarithmic, and trig).
+Knowing these shapes helps you sketch the transformed functions covered later. The chart below includes exponential, logarithmic, and trig functions, which also appear in later units.
 
 ```tikz
 \usepackage{pgfplots}

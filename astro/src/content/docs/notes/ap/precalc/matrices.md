@@ -27,7 +27,7 @@ For a system in three variables:
 - no solution means the planes never all meet in one common place,
 - infinitely many solutions usually means the planes overlap along a line or plane.
 
-Algebraically, every method in this unit is trying to answer the same question: can we isolate the variables without changing the set of points that satisfies all the equations?
+Each method isolates the variables while preserving the set of points that satisfies every equation.
 
 ### Substitution and elimination
 
@@ -601,7 +601,7 @@ in general. Sometimes one product is defined and the other is not.
 
 A **square matrix** has the same number of rows and columns. The identity matrix is the matrix version of the number $$1$$.
 
-The identity matrix is important because it does nothing when you multiply by it. It is the matrix version of leaving something unchanged. This gives us a way to talk about "undoing" a matrix.
+Multiplying by the identity matrix leaves a compatible matrix unchanged. An inverse matrix uses this property to "undo" multiplication by another matrix.
 
 For $$2\times 2$$ matrices,
 
@@ -811,7 +811,7 @@ $$
 
 ## Determinants and Cramer's Rule
 
-The determinant is a number attached to a square matrix. At first it may look like a random formula, but its job is very important: it tells us whether the matrix has enough independent information to be invertible.
+The determinant is a number calculated from a square matrix. A nonzero determinant means its rows and columns are linearly independent, so the matrix is invertible.
 
 For a $$2\times 2$$ coefficient matrix
 

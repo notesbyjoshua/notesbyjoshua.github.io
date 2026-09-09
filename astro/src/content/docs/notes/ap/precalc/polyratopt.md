@@ -199,7 +199,7 @@ Examples:
 
 ## Graphing polynomial functions
 
-When graphing a polynomial, start with the broad shape first, then add the important points. The broad shape comes from end behavior; the important points usually come from zeros and their multiplicities. In additino, when graphing polynomials, it is always a good idea to graph some non-zero points as a reference.
+When graphing a polynomial, use end behavior to sketch the broad shape, then mark the zeros and use their multiplicities to decide how the graph behaves there. Plot a few nonzero points as a reference.
 
 ### End behavior
 
@@ -1636,7 +1636,7 @@ $$
 ::::problem
 16. (Bonus, Rational Root Theorem)
 
-   In this unit, we have introduced the Rational Root Theorem as a quick way of finding rational roots. We will now get a chance to prove this theorem.
+   The Rational Root Theorem narrows down the possible rational roots. Prove it below.
 
    Let
 

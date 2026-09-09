@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-This unit connects what atoms are (Unit 1) to how they assemble into **compounds** and what that assembly predicts about structure, bonding, and bulk properties. We will move from qualitative pictures of electrons in bonds to rules for naming and drawing molecules, then to three-dimensional **molecular geometry** and the orbital picture that supports it.
+Atoms join to form **compounds**, and their bonding helps explain molecular structure and bulk properties. Building on Unit 1, these notes cover electrons in bonds, naming and drawing molecules, three-dimensional **molecular geometry**, and the orbitals involved.
 
 ---
 
@@ -220,7 +220,7 @@ $$
 
 For salts with other stoichiometries (e.g. $$\text{MgCl}_2$$, $$\text{Na}_2\text{O}$$), use the correct multiple of atomization, all required ionization steps, the appropriate nonmetal atomization (e.g. $$\tfrac{1}{2}\text{O}_2$$), and electron-gain steps that match the anion charge (second-electron addition to oxygen is very endothermic; the huge lattice energy of oxides is what makes the overall formation from elements favorable). The cycle is still closed: the sum of steps along one route equals the sum along any other route between the same two **thermodynamic states**.
 
-Qualitatively, larger ion charges and smaller ions (shorter internuclear distances in the lattice) increase $$U_{\text{lattice}}$$, consistent with Coulomb attraction in the lattice and with the trends introduced earlier in this unit. A picture has been added below for illustrative purposes.
+Qualitatively, larger ion charges and smaller ions (shorter internuclear distances in the lattice) increase $$U_{\text{lattice}}$$, consistent with Coulomb attraction in the lattice and with the trends introduced earlier in this unit. The diagram below shows the energy changes in the cycle.
 
 
 ```tikz

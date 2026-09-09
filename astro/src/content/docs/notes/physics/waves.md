@@ -32,7 +32,7 @@ $$
 y(x,t) = f(x - vt).
 $$
 
-A wave moving in the $$-x$$ direction is $$f(x+vt)$$. The single most important sinusoidal solution is
+A wave moving in the $$-x$$ direction is $$f(x+vt)$$. A sinusoidal solution is
 
 $$
 y(x,t) = A\sin(kx - \omega t + \phi),

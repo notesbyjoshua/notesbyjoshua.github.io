@@ -223,7 +223,7 @@ $$
 
 The point of contact is instantaneously at rest relative to the ground, meaning that if you take a contact point between the object and the ground, it will not "slide" or move horizontally. Rather, that point "kisses" the ground upon touch and immediately is lifted from the ground by the rotary movement. Since the velocity is technically zero at the contact point, the surfaces are not sliding past each other, so static friction is used instead of kinetic friction. Static friction can provide torque without doing work on an ideal rolling object, and may point uphill or downhill depending on what torque is needed.
 
-Due to the fact that the contact point on the rolling object is instantaneously at rest relative to the ground, so the distance the center moves equals the arc length unwound from the rim:
+Because the contact point is instantaneously at rest relative to the ground, the distance the center moves equals the arc length unwound from the rim:
 
 $$
 \Delta x_{\text{cm}}=R\Delta\theta.

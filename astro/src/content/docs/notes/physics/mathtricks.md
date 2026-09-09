@@ -53,7 +53,7 @@ Often, for small values, you can take an approximation that will simplify the ca
 | $$\tan x$$ | $$x$$ |
 | $$\dfrac{1}{1-x}$$ | $$1+x$$ |
 
-The binomial one, $$(1+x)^n\approx 1+nx$$, is the single most useful approximation in all of physics — it linearizes square roots ($$\sqrt{1+x}\approx 1+\tfrac{x}{2}$$), reciprocals, and the relativistic and gravitational expressions you meet constantly. The trick in practice is to *factor out the large quantity first* so that what remains is genuinely small:
+The binomial one, $$(1+x)^n\approx 1+nx$$, is useful throughout physics: it linearizes square roots ($$\sqrt{1+x}\approx 1+\tfrac{x}{2}$$), reciprocals, and the relativistic and gravitational expressions you meet constantly. In practice, *factor out the large quantity first* so that the expansion parameter is small:
 
 $$
 \frac{1}{\sqrt{R^2+x^2}}=\frac{1}{R}\frac{1}{\sqrt{1+(x/R)^2}}\approx\frac{1}{R}\left(1-\frac{x^2}{2R^2}\right)\quad (x\ll R).

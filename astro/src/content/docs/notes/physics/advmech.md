@@ -226,7 +226,7 @@ $$
 p_i=\text{const}.
 $$
 
-Physically, a cyclic coordinate signals a *symmetry*: if shifting $$q_i$$ leaves $$L$$ unchanged, the system "doesn't care" about that direction, and the associated momentum cannot change. This is the mechanical core of **Noether's theorem**: each continuous symmetry of $$L$$ yields a conserved quantity. Translational invariance $$\longrightarrow$$ linear momentum; rotational invariance (no $$\phi$$ dependence) $$\longrightarrow$$ angular momentum. Spotting a cyclic coordinate is the single most powerful move in Lagrangian problem-solving: it turns a second-order ODE into a first-order conservation law for free, which you should always cash in *before* grinding algebra.
+Physically, a cyclic coordinate signals a *symmetry*: if shifting $$q_i$$ leaves $$L$$ unchanged, the system "doesn't care" about that direction, and the associated momentum cannot change. This is the mechanical core of **Noether's theorem**: each continuous symmetry of $$L$$ yields a conserved quantity. Translational invariance $$\longrightarrow$$ linear momentum; rotational invariance (no $$\phi$$ dependence) $$\longrightarrow$$ angular momentum. Look for cyclic coordinates before solving the equations: each gives a first-order conservation law that can replace a second-order ODE.
 
 <div class="theorem-box">
 
@@ -291,7 +291,7 @@ $$
 E=\tfrac12\mu\dot r^2+\underbrace{\frac{L^2}{2\mu r^2}+V(r)}_{V_{\text{eff}}(r)} .
 $$
 
-The **effective potential** bundles the real potential with a repulsive **centrifugal barrier** $$L^2/2\mu r^2$$. This is the single most important picture in the subject, because it converts a 2D orbit problem into the 1D motion of a "particle" of energy $$E$$ rolling in the well $$V_{\text{eff}}(r)$$:
+The **effective potential** bundles the real potential with a repulsive **centrifugal barrier** $$L^2/2\mu r^2$$. It converts a 2D orbit problem into the 1D motion of a "particle" of energy $$E$$ rolling in the well $$V_{\text{eff}}(r)$$:
 
 - A **minimum** of $$V_{\text{eff}}$$ is a **circular orbit** ($$\dot r=0$$ for all time, so $$r$$ sits at the bottom of the well). The condition $$V_{\text{eff}}'(r_0)=0$$ just says the inward real force supplies exactly the centripetal requirement.
 - If $$E$$ lies between the well bottom and zero, the "particle" oscillates between two **turning points** $$r_{\min}$$ and $$r_{\max}$$ (where $$\dot r=0$$, i.e. $$E=V_{\text{eff}}$$). These are the **perihelion** and **aphelion**; the orbit is **bound**.
@@ -447,7 +447,7 @@ $$
 T^2=\frac{4\pi^2}{G(m_1+m_2)}\,a^3 .
 $$
 
-The single most useful orbital relation in practice is the **vis-viva equation**, which comes straight from energy conservation with $$a=-k/2E$$:
+The **vis-viva equation** relates orbital speed to position and follows from energy conservation with $$a=-k/2E$$:
 
 $$
 \ v^2=GM\!\left(\frac{2}{r}-\frac{1}{a}\right)\ 
@@ -661,7 +661,7 @@ The body diagonal is an **eigenvector**: $$\vec L=\tfrac16 Ma^2\,\vec\omega$$ is
 
 ### Gyroscopic precession
 
-The key rigid-body equation is still $$\vec\tau=d\vec L/dt$$ — but when $$\vec L$$ is large and the torque is *perpendicular* to it, the torque **turns** $$\vec L$$ rather than lengthening it. This is the single most counterintuitive fact in mechanics: a fast-spinning top does not topple under gravity, it goes around.
+The key rigid-body equation is still $$\vec\tau=d\vec L/dt$$ — but when $$\vec L$$ is large and the torque is *perpendicular* to it, the torque **turns** $$\vec L$$ rather than lengthening it. This explains why a fast-spinning top can precess under gravity instead of toppling.
 
 A non-spinning top falls because gravity's torque creates angular momentum *in the direction of the torque* so it starts to tip. A fast-spinning top already has a huge $$\vec L$$ along its axis. Gravity's torque $$\tau=mgr\sin\theta$$ is horizontal, perpendicular to $$\vec L$$, so $$d\vec L=\vec\tau\,dt$$ adds a horizontal sliver perpendicular to $$\vec L$$. Adding a perpendicular vector to $$\vec L$$ *rotates* it without changing its length: the axis swings sideways (azimuthally) instead of dropping. The "falling" tendency is continuously converted into sideways circulation. The faster the spin, the smaller the fractional change $$d\vec L/L$$ per unit time, hence the slower the precession. This explains all of the viral reels/videos about how spinning wheels can withstand gravitational effects while non-spinning wheels can't.
 

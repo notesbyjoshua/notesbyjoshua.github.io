@@ -251,7 +251,7 @@ $$
 d=\frac{1\ \text{AU}}{p}.
 $$
 
-This *defines* the **parsec**: the distance at which $$1\ \text{AU}$$ subtends $$p=1''$$ (one arcsecond). Then the relation is beautifully simple:
+This *defines* the **parsec**: the distance at which $$1\ \text{AU}$$ subtends $$p=1''$$ (one arcsecond). With distance in parsecs and parallax in arcseconds:
 
 $$
 d\,[\text{pc}]=\frac{1}{p\,['']},\qquad 1\ \text{pc}=3.086\times10^{16}\ \text{m}=3.26\ \text{ly}
@@ -440,12 +440,12 @@ $$
 
 </div>
 
-For a star, $$U=-\alpha\,GM^2/R$$ (with $$\alpha$$ an order-unity constant depending on the density profile; $$\alpha=3/5$$ for a uniform sphere) and $$K$$ is the thermal energy of the gas. The consequences are profound:
+For a star, $$U=-\alpha\,GM^2/R$$ (with $$\alpha$$ an order-unity constant depending on the density profile; $$\alpha=3/5$$ for a uniform sphere) and $$K$$ is the thermal energy of the gas. The virial theorem then gives:
 
 - The total energy is $$E=K+U=\tfrac12 U<0$$ — the star is bound.
 - The thermal energy is $$K=-\tfrac12 U>0$$.
 
-The startling corollary: a star has a **negative heat capacity**. If it radiates energy away ($$E$$ decreases, becomes more negative), then $$U$$ decreases, the star *contracts*, and $$K$$ — hence the temperature — *increases*. Losing energy makes a star hotter. This instability drives a contracting gas cloud to heat up until fusion ignites, and it governs the runaway phases of stellar evolution.
+Under these assumptions, a star has a **negative heat capacity**. If it radiates energy away ($$E$$ decreases, becomes more negative), then $$U$$ decreases, the star *contracts*, and $$K$$ — hence the temperature — *increases*. Losing energy makes a star hotter. This instability drives a contracting gas cloud to heat up until fusion ignites, and it governs the runaway phases of stellar evolution.
 
 ### The Kelvin–Helmholtz timescale
 

@@ -118,7 +118,7 @@ An inference is one small logical step from the information in the passage, not 
 4. Choose the answer requiring the fewest assumptions.
 :::
 
-Always remember that the answer choice should be heavily supported by the passage and not require any previous knowledge of jargon. In addition, always remember that *correlation does NOT mean causation*!
+Choose an answer supported by the passage without relying on prior knowledge of technical terms. Also check whether a choice confuses correlation with causation: *correlation does NOT mean causation*!
 
 <div class="theorem-box">
 

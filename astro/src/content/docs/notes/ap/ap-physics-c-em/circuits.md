@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-Circuit analysis translates electric field and potential ideas into networks of elements. In AP Physics C, circuits are not just plug-and-chug resistance problems: you should connect current to charge flow, potential difference to energy per charge, and RC behavior to differential equations.
+Circuit analysis applies electric field and potential ideas to connected components. Current describes charge flow, potential difference measures energy per charge, and differential equations describe how RC circuits change over time.
 
 ---
 

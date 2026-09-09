@@ -462,7 +462,7 @@ $$
 E_x=-\frac{dV}{dx}=\frac{kQx}{(x^2+R^2)^{3/2}} .
 $$
 
-This is the same result the vector field integral gives, with far less work. The lesson generalizes: if you only need $$\vec E$$ along a symmetry axis, compute the scalar $$V$$ first and differentiate. However, it is important to note that $$V$$ has to be a function in order for the derivative to work.
+This matches the vector field integral with less calculation. To find $$\vec E$$ along a symmetry axis, it can be easier to compute the scalar $$V$$ first and differentiate. Keep $$V$$ as a function of position until after taking the derivative.
 
 </div>
 

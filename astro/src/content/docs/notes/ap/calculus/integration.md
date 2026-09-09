@@ -262,7 +262,7 @@ This is because we usually define the definite integral using singed area (talke
 
 ### Signed area vs geometric area
 
-An important distinction between definite integrals pure area is the difference between signed and geometric area. The definite integral gives signed area:
+For bounds ordered from left to right, the definite integral gives signed area:
 
 - area above the $$x$$-axis contributes positively,
 - area below the $$x$$-axis contributes negatively.
@@ -626,7 +626,7 @@ The $$+C$$ is required because every constant has derivative zero, so the antide
 
 ## Integration strategies
 
-Integration is a game of pattern recognition and choosing smart methods. This section presents some of the most useful and widely used integration techniques.
+Before integrating, check the form of the integrand and the bounds. They can suggest a substitution, a symmetry, or another way to simplify the calculation.
 
 ### Integrals of odd and even functions
 

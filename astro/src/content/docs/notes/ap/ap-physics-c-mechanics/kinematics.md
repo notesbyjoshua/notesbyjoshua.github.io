@@ -23,7 +23,7 @@ sidebar:
 
 A **scalar** has magnitude only (examples: speed, distance, time). A **vector** has magnitude and direction (examples: displacement, velocity, acceleration). In one dimension, a sign attached to a scalar component encodes direction along an axis. When solving problems, always choose an origin and a positive direction along each axis. 
 
-**Displacement** $$\Delta x$$ is the change in position regardless of what path you take (can be negative) and **distance** is the length of the path traveled and is always nonnegative. **Average velocity** over an interval is defined as
+**Displacement** $$\Delta x$$ is the change in position, regardless of the path taken, and can be negative. **Distance** is the length of that path and is always nonnegative. **Average velocity** over an interval is defined as
 
 $$
 \bar{v} = \frac{\Delta x}{\Delta t}.
@@ -107,7 +107,7 @@ Graphs of position, velocity, and acceleration versus time are linked by the sam
 ```
 
 - **Slopes go down the list.** The slope of an $$x$$-$$t$$ graph at an instant is the velocity, $$v = dx/dt$$. The slope of a $$v$$-$$t$$ graph is the acceleration, $$a = dv/dt$$. A curving $$x$$-$$t$$ graph therefore means nonzero acceleration, and a straight $$x$$-$$t$$ line means constant velocity.
-- **Areas go up the list.** The signed area under a $$v$$-$$t$$ graph between two times is the displacement, $$\Delta x = \int v\, dt$$. The signed area under an $$a$$-$$t$$ graph is the change in velocity, $$\Delta v = \int a\, dt$$. Note that when we talk about displacement or velocity, we will always use signed area, meaning that we have to take into account negative areas as well.
+- **Areas go up the list.** The signed area under a $$v$$-$$t$$ graph between two times is the displacement, $$\Delta x = \int v\, dt$$. The signed area under an $$a$$-$$t$$ graph is the change in velocity, $$\Delta v = \int a\, dt$$. In both cases, count areas below the time axis as negative.
 
 A maximum or minimum of $$x(t)$$ occurs where $$v = 0$$ (the slope is momentarily flat); the object is speeding up when $$v$$ and $$a$$ have the same sign and slowing down when they have opposite signs; and a horizontal $$v$$-$$t$$ line means zero acceleration even if the velocity itself is large.
 
@@ -340,7 +340,7 @@ The Big Five do not apply because acceleration is not constant. The definitions 
 
 ### Example: Drag acceleration
 
-Air resistance (drag) is one of the most common type of non-constant acceleration that appears on physics problems. Since this is still the kinematics unit, we will model drag as an acceleration directly instead of using forces, even though drag and gravity are both forces. Air resistance occurs when the falling object collide with air molecules, causing friction within each collision, which provides an upward acceleration that opposes gravity.
+Air resistance (drag) often produces nonconstant acceleration. Here, we model its effect directly as an acceleration; the force treatment comes later, though drag and gravity are both forces. A falling object interacts with the surrounding air, producing drag that opposes its motion. For downward motion through still air, the drag acceleration points upward, opposite gravity.
 
 Two common drag models are:
 
@@ -351,7 +351,7 @@ Two common drag models are:
 | Quadratic drag | $$a_d=cv^2$$ | faster motion through air, more realistic for many projectiles |
 :::
 
-For most purposes, linear drag is the used model, since quadratic drag is very hard to mathematically work with. If downward is positive for a falling object, then gravity is positive and drag is negative:
+We use linear drag here because its differential equation is simpler to solve than the quadratic model. If downward is positive for a falling object, then gravity is positive and drag is negative:
 
 $$
 a=\frac{dv}{dt}=g-bv.
@@ -658,13 +658,13 @@ Note that with unequal launch and landing heights the trajectory is no longer sy
 
 ## Relative velocity (introduction)
 
-Sometimes, two objects may be moving at the same time, and we need to look at the motion of one object in the perspective of another. We define two frames: n **inertial frame** (or lab frame) and a **non-inertial frame** (in the frame of the object being analyzed).
+To describe one object’s motion as seen from another, choose a reference frame. An **inertial frame** does not accelerate or rotate relative to another inertial frame; a **non-inertial frame** does. A frame moving with an object can be either, depending on the object’s motion.
 
-When working in the lab frame, it is as if you are standing to the side observing from the ground (for simplicity, we assume that the Earth is not moving), meaning that you are stationary. For example, viewing a F1 race from the stands is considered an inertial frame, since you are not moving.
+We usually treat the ground-based lab frame as approximately inertial, ignoring Earth’s rotation and orbital acceleration. Watching an F1 race from the stands is an example of this lab-frame viewpoint.
 
-When working in the non-inertial frame, we are "moving" along with the object whose frame we have taken. For example, a non-inertial frame would be like you are a racecar driver speeding around a track. To you, you feel stationary while a person in the stands seems to race towards you. Obviously, this is not the case, and it is amazing that our brains are able to decipher this and correctly deduce that you are moving inside the racecar while the spectator is not!
+A frame attached to a racecar is non-inertial while the car speeds up, slows down, or turns. In that frame, the driver is at rest and the spectators move relative to the car. Both descriptions are valid; they use different reference frames.
 
-We will often represent quantities like velocities as vectors, since we can do vector addition. Suppose we define the velocity of object $$A$$ relative to object $$B$$ as $$\vec{v}_{A/B}$$ (it could be any quantity of motion, not just velocity). Suppose we want to analyze object C, while we are working in relative frames. Using vector addition, we can write
+Velocities are vectors, so relative velocities add by vector addition. Define the velocity of object $$A$$ relative to object $$B$$ as $$\vec{v}_{A/B}$$. To find the velocity relative to a third object C, express all vectors using the same axis directions and write
 
 $$
 \vec{v}_{A/C} = \vec{v}_{A/B} + \vec{v}_{B/C}.

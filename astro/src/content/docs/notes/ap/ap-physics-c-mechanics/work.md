@@ -59,7 +59,7 @@ the signed area under the force-position graph.
 
 ### The geometry of the dot product
 
-Since work is a dot product, it is a scalar quantity. However, to indicate the so-called "direction" of work, we can use the geometry of the dot product to our advantage. Due to the fact that $$W = \vec{F}\cdot\Delta\vec{r} = F\,\Delta r\cos\theta$$, the sign of the work is set entirely by the angle $$\theta$$ between the force and the displacement:
+Work is a scalar, so it has a sign but no direction. Since $$W = \vec{F}\cdot\Delta\vec{r} = F\,\Delta r\cos\theta$$, the sign of the work is set entirely by the angle $$\theta$$ between the force and the displacement:
 
 ```tikz
 \usepackage{tikz}

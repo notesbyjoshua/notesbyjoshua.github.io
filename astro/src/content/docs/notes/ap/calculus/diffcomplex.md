@@ -47,7 +47,7 @@ $$
 \frac{dy}{du}\cdot\frac{du}{dx}.
 $$
 
-For all future AP Calculus work, it is very important to remember that derivatives is about small changes, which allows us to do cancellations/simplifications like this. Although the derivative sign is not necessarily a fraction sign in the traditional sense, it can definitely be treated that way.
+The notation makes the chain rule look like canceling fractions. That is a useful way to remember it, but derivatives are limits of ratios, so algebra with derivative notation still needs a rule that justifies it.
 
 AP problems often hide the chain rule inside:
 
@@ -247,7 +247,7 @@ $$
 \frac{d}{dx}(\operatorname{arccot} x) = -\frac{1}{1+x^2}
 $$
 
-For AP work, $$\arcsin$$, $$\arccos$$, and $$\arctan$$ are the most common inverse trig fuctions you will see. All six formulas can be proven easily using the inverse formula, so we will only use one proof as an example.
+For AP work, $$\arcsin$$, $$\arccos$$, and $$\arctan$$ are the most common inverse trig functions. All six formulas follow from the inverse-function derivative formula; one proof is shown below.
 
 <div class="theorem-box">
 

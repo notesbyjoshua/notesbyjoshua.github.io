@@ -21,9 +21,201 @@ sidebar:
 
 A **scalar** has magnitude only (examples: speed, distance, time). A **vector** is a quantity that has magnitude and direction (examples: displacement, velocity, acceleration). 
 
-In one dimension, a sign attached to a scalar component encodes direction along an axis. When solving problems, always choose an origin and a positive direction along each axis. 
+Graphically, a vector is drawn as an arrow. The length of the arrow represents the magnitude, and the direction of the arrow represents the direction of the quantity. You can slide a vector around without changing it as long as its length and direction stay the same. For example, a displacement of $$5\ \text{m}$$ east is the same vector no matter where you draw the arrow on the page.
 
-// Note to self: add more vector stuff
+If a vector $$\vec A$$ makes an angle $$\theta$$ above the positive $$x$$-axis, its components are
+
+$$
+A_x=A\cos\theta,
+\qquad
+A_y=A\sin\theta.
+$$
+
+This comes straight from right-triangle trig: the horizontal component is adjacent to $$\theta$$ and the vertical component is opposite $$\theta$$. If the vector points left or down, the corresponding component should be negative. The trig formulas give the correct signs automatically if $$\theta$$ is measured from the positive $$x$$-axis in standard position. $$A_y$$ is drawn twice to better illustrate the Pythagorean relation.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.95]
+  \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+  \draw[->] (0,-0.2) -- (0,2.8) node[above] {$y$};
+  \draw[->, very thick, blue] (0,0) -- (3.2,2.0) node[above right] {$\vec A$};
+  \draw[dashed] (3.2,2.0) -- (3.2,0);
+  \draw[dashed] (3.2,2.0) -- (0,2.0);
+  \draw[->, very thick, red!75] (0,-0.18) -- (3.2,-0.18) node[midway, below] {$A_x$};
+  \draw[->, very thick, green!55!black] (0,0) -- (0,2.0) node[midway, left] {$A_y$};
+  \draw[->, very thick, green!55!black] (3.2,0) -- (3.2,2.0) node[midway, right] {$A_y$};
+  \draw[->] (0.8,0) arc[start angle=0,end angle=32,radius=0.8];
+  \node at (1.05,0.32) {$\theta$};
+\end{tikzpicture}
+```
+
+If instead you know the components, then the magnitude and direction come from
+
+$$
+A=\sqrt{A_x^2+A_y^2},
+\qquad
+\tan\theta=\frac{A_y}{A_x}.
+$$
+
+Be careful with the angle formula. The value of $$\tan^{-1}(A_y/A_x)$$ may point to the wrong quadrant if $$A_x$$ is negative, so always check the signs of the components.
+
+<div class="theorem-box">
+
+**Example.** A velocity vector has magnitude $$24\ \text{m/s}$$ and points $$35^\circ$$ north of west. Find its $$x$$- and $$y$$-components if east is positive $$x$$ and north is positive $$y$$.
+
+The phrase "north of west" means the vector starts by pointing west, then rotates $$35^\circ$$ toward north. So the $$x$$-component is negative and the $$y$$-component is positive.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.9]
+  \draw[->] (-3.6,0) -- (1.0,0) node[right] {east};
+  \draw[->] (0,-0.5) -- (0,2.6) node[above] {north};
+  \draw[->, very thick, blue] (0,0) -- (-2.6,1.8) node[above left] {$\vec v$};
+  \draw[dashed] (-2.6,1.8) -- (-2.6,0);
+  \draw[->, very thick, red!75] (0,-0.18) -- (-2.6,-0.18) node[midway, below] {$v_x$};
+  \draw[->, very thick, green!55!black] (-2.6,0) -- (-2.6,1.8) node[midway, left] {$v_y$};
+  \draw[->] (-0.8,0) arc[start angle=180,end angle=145,radius=0.8];
+  \node at (-1.15,0.32) {$35^\circ$};
+\end{tikzpicture}
+```
+
+The horizontal component uses cosine because it is adjacent to the $$35^\circ$$ angle:
+
+$$
+v_x=-24\cos35^\circ\approx -19.7\ \text{m/s}.
+$$
+
+The vertical component uses sine because it is opposite the angle:
+
+$$
+v_y=24\sin35^\circ\approx 13.8\ \text{m/s}.
+$$
+
+Thus
+
+$$
+\vec v\approx (-19.7\hat{i}+13.8\hat{j})\ \text{m/s}.
+$$
+
+</div>
+
+### Unit vectors
+
+Using unit vectors, a two-dimensional vector can be written as
+
+$$
+\vec A=A_x\hat{i}+A_y\hat{j},
+$$
+
+where $$\hat{i}$$ points in the positive $$x$$ direction and $$\hat{j}$$ points in the positive $$y$$ direction. In three dimensions, we add $$\hat{k}$$ for the positive $$z$$ direction:
+
+$$
+\vec A=A_x\hat{i}+A_y\hat{j}+A_z\hat{k}.
+$$
+
+<div class="theorem-box">
+
+**Example.** A particle has displacement $$\Delta \vec r=(6\hat{i}-8\hat{j})\ \text{m}$$. Find its displacement magnitude and the unit vector in the direction of the displacement.
+
+The magnitude comes from the Pythagorean theorem:
+
+$$
+\lvert \Delta \vec r\rvert=\sqrt{6^2+(-8)^2}=10\ \text{m}.
+$$
+
+A unit vector keeps the direction but has magnitude $$1$$. Divide the vector by its magnitude:
+
+$$
+\hat{r}=\frac{\Delta \vec r}{\lvert \Delta \vec r\rvert}
+=\frac{6\hat{i}-8\hat{j}}{10}.
+$$
+
+So
+
+$$
+\hat{r}=0.6\hat{i}-0.8\hat{j}.
+$$
+
+This answer has no units because unit vectors describe direction only.
+
+</div>
+
+### Vector addition/subtraction
+
+Vector addition can be done graphically by placing arrows head-to-tail. The resultant points from the tail of the first vector to the head of the last vector. Note that the order of addition doesn't matter and would converge at a point regardless of the addition order.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.95]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (2.5,0.8);
+  \coordinate (B) at (3.5,2.4);
+  \draw[->, very thick, blue] (O) -- (A) node[midway, below] {$\vec A$};
+  \draw[->, very thick, red] (A) -- (B) node[midway, right] {$\vec B$};
+  \draw[->, very thick, purple] (O) -- (B) node[midway, above left] {$\vec A+\vec B$};
+\end{tikzpicture}
+```
+
+You can also add vectors component wise:
+
+$$
+\vec A+\vec B=(A_x+B_x)\hat{i}+(A_y+B_y)\hat{j}.
+$$
+
+Subtraction means adding the opposite vector:
+
+$$
+\vec A-\vec B=\vec A+(-\vec B)=(A_x-B_x)\hat{i}+(A_y-B_y)\hat{j}.
+$$
+
+Note that for subtraction, order *does* matter, since subtraction is not commutative.
+
+In one dimension, a sign attached to a component is enough to encode direction along an axis. For example, if right is positive, then $$v=-3\ \text{m/s}$$ means the object moves left at $$3\ \text{m/s}$$. Before solving any kinematics problem, choose an origin and positive direction for each axis, then keep that convention consistent.
+
+<div class="theorem-box">
+
+**Example.** A vector has magnitude $$10\ \text{m}$$ and points $$30^\circ$$ above the positive $$x$$-axis. Another displacement is $$\vec B=(-2\hat{i}+4\hat{j})\ \text{m}$$. Find $$\vec A+\vec B$$ and its magnitude.
+
+First find the components of $$\vec A$$:
+
+$$
+A_x=10\cos30^\circ=5\sqrt{3},
+\qquad
+A_y=10\sin30^\circ=5.
+$$
+
+So
+
+$$
+\vec A=(5\sqrt{3}\hat{i}+5\hat{j})\ \text{m}.
+$$
+
+Add components:
+
+$$
+\vec A+\vec B=(5\sqrt{3}-2)\hat{i}+(5+4)\hat{j}.
+$$
+
+Thus
+
+$$
+\vec A+\vec B=((5\sqrt{3}-2)\hat{i}+9\hat{j})\ \text{m}.
+$$
+
+The magnitude is
+
+$$
+\lvert \vec A+\vec B\rvert
+=\sqrt{(5\sqrt{3}-2)^2+9^2}
+\approx 11.2\ \text{m}.
+$$
+
+</div>
+
+## Variables of motion
 
 **Displacement** $$\Delta x$$ is the change in position, regardless of the path taken, and can be negative. **Distance** is the length of that path and is always nonnegative. **Average velocity** over an interval is defined as
 
@@ -59,7 +251,7 @@ $$
 
 and similarly position from velocity.
 
-Be careful to distinguish **average** and **instantaneous** quantities. Average velocity over an interval is the single constant velocity that would produce the same displacement in the same time. It depends only on the endpoints, $$\bar{v}=\Delta x/\Delta t$$. 
+Always remember the difference between **average** and **instantaneous** quantities. Average velocity over an interval is the single constant velocity that would produce the same displacement in the same time. It depends only on the endpoints, $$\bar{v}=\Delta x/\Delta t$$. 
 
 Instantaneous velocity is the limit of that ratio as the interval shrinks to zero, $$v=dx/dt$$. The two agree only when velocity is constant, or, for the special case of constant acceleration, the average velocity happens to equal the midpoint value $$\frac{1}{2}(v_0+v_f)$$.
 
@@ -310,7 +502,7 @@ A quick check with equation 5: $$\Delta x = \frac{v_0 + v}{2}t = \frac{25 + 0}{2
 
 ## Non-constant acceleration
 
-The Big Five fail whenever $$a$$ varies, so you fall back on the defining derivatives and choose your integration variable based on what $$a$$ depends on:
+The Big Five only works in constant acceleration, so when you have non-constant $$s$$ you often fall back on the defining derivatives and choose your integration variable based on what $$a$$ depends on:
 
 :::strategy
 - **$$a$$ depends on time, $$a = a(t)$$.** Integrate directly: $$v = v_0 + \int a(t)\, dt$$, then $$x = x_0 + \int v(t)\, dt$$.

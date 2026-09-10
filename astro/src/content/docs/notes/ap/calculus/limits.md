@@ -327,19 +327,6 @@ $$
 
 Direct substitution sometimes gives an indeterminate form, so substitution alone does not determine the limit. You need to simplify the expression or use another limit technique. Common indeterminate forms include: $$0/0$$, $$\infty/\infty$$, $$0 \cdot \infty$$, $$\infty - \infty$$, $$1^\infty$$, $$0^0$$, and $$\infty^0$$.
 
-In AP Calculus AB/BC, most of these are handled with algebra or L'Hôpital's Rule (Unit 4).
-
-:::strategy
-For an indeterminate limit, try one of these algebraic methods:
-
-- Factor and cancel a common factor
-- Multiply by a conjugate when radicals are involved
-- Combine fractions into a single rational expression
-- Use a known trig limit after rewriting the angle
-- Divide by the dominant power of $$x$$ for limits at infinity
-:::
-
-
 Start by checking whether direct substitution works. If it gives an indeterminate form, choose a method that fits the expression.
 
 :::warning
@@ -352,31 +339,51 @@ Factoring is useful when direct substitution gives $$0/0$$ and the numerator and
 
 <div class="theorem-box">
 
-**Example.** Evaluate $$\displaystyle\lim_{x\to3}\frac{x^2-9}{x-3}.$$
-
-Factor the numerator to expose the removable factor:
+**Example.** Evaluate
 
 $$
-\lim_{x\to3}\frac{x^2-9}{x-3}
+\lim_{x\to2}\frac{x^3-6x^2+11x-6}{x-2}.
+$$
+
+Direct substitution gives $$0/0$$, so the numerator must have a factor of $$x-2$$. Since the cubic is not immediately obvious to factor by grouping, use synthetic division with $$2$$:
+
+$$
+\begin{array}{r|rrrr}
+2 & 1 & -6 & 11 & -6 \\
+  &   & 2 & -8 & 6 \\\hline
+  & 1 & -4 & 3 & 0
+\end{array}
+$$
+
+So
+
+$$
+x^3-6x^2+11x-6=(x-2)(x^2-4x+3).
+$$
+
+Cancel the removable factor:
+
+$$
+\lim_{x\to2}\frac{x^3-6x^2+11x-6}{x-2}
 =
-\lim_{x\to3}\frac{(x-3)(x+3)}{x-3},\qquad x\ne3.
+\lim_{x\to2}\frac{(x-2)(x^2-4x+3)}{x-2}.
 $$
 
-Cancelling gives
+For $$x\ne2$$, this simplifies to
 
 $$
-\lim_{x\to3}\frac{x^2-9}{x-3}
+\lim_{x\to2}(x^2-4x+3).
+$$
+
+Now substitute:
+
+$$
+2^2-4(2)+3
 =
-\lim_{x\to3}(x+3).
+-1.
 $$
 
-Now take the limit of the simplified expression:
-
-$$
-\lim_{x\to3}(x+3)=6.
-$$
-
-Since the discontinuity is a removable discontinuity (a hole), the limit exists because both sides approach the same value at $$x=3$$.
+So the limit is $$-1$$. The original function has a removable discontinuity at $$x=2$$, but the nearby behavior is controlled by the quotient polynomial.
 
 </div>
 
@@ -676,7 +683,7 @@ $$
 
 <div class="theorem-box">
 
-A function is said to be *continuous* at $$x = a$$ when:
+**Definition**: A function is said to be *continuous* at $$x = a$$ when:
 
 1. $$f(a)$$ exists,
 2. $$\lim_{x \to a} f(x)$$ exists,
@@ -709,6 +716,8 @@ f(x)=
 \dfrac{1}{x-6}, & x>5.
 \end{cases}
 $$
+
+Justify each case.
 
 At $$x=3$$, the left-hand branch simplifies for $$x\ne3$$:
 
@@ -776,7 +785,35 @@ Therefore the discontinuities are $$x=3$$, $$x=5$$, and $$x=6$$.
 
 </div>
 
-// add an example proof for $$fg$$
+We will prove one example below, as all of them are very similar.
+
+<div class="theorem-box">
+
+**Proof (Product of continuous functions).** Suppose $$f$$ and $$g$$ are continuous at $$x=a$$. Then
+
+$$
+\lim_{x\to a}f(x)=f(a)
+\qquad\text{and}\qquad
+\lim_{x\to a}g(x)=g(a).
+$$
+
+Using the product rule for limits,
+
+$$
+\lim_{x\to a}f(x)g(x)
+=
+\left(\lim_{x\to a}f(x)\right)\left(\lim_{x\to a}g(x)\right).
+$$
+
+So
+
+$$
+\lim_{x\to a}f(x)g(x)=f(a)g(a).
+$$
+
+But $$f(a)g(a)$$ is exactly the value of the product function at $$a$$. Therefore $$fg$$ is continuous at $$x=a$$.
+
+</div>
 
 :::note
 Polynomials, exponential functions, sine, cosine, and rational functions on their domains are continuous everywhere. Root functions, logarithms, tangent, secant, cosecant, cotangent, and inverse trig functions are continuous wherever they are defined (basically excluding asymptotes).
@@ -784,7 +821,35 @@ Polynomials, exponential functions, sine, cosine, and rational functions on thei
 
 <div class="theorem-box">
 
-**Theorem (Taking out limits).** // write and prove the theorem that lim x -> a f(g(x)) = f(lim x -> a g(x)) and the conditions in which this is true.
+**Theorem (Taking out limits).** If
+
+$$
+\lim_{x\to a}g(x)=L
+$$
+
+and $$f$$ is continuous at $$L$$, then
+
+$$
+\lim_{x\to a}f(g(x))
+=
+f\left(\lim_{x\to a}g(x)\right)
+=
+f(L).
+$$
+
+In words, you can move the limit inside $$f$$ only when the outside function is continuous at the value the inside expression approaches.
+
+</div>
+
+<div class="theorem-box">
+
+**Proof (Taking out limits).** Since $$\lim_{x\to a}g(x)=L$$, the expression $$g(x)$$ gets as close to $$L$$ as we want when $$x$$ is close enough to $$a$$. Since $$f$$ is continuous at $$L$$, making the input to $$f$$ close to $$L$$ forces the output of $$f$$ close to $$f(L)$$.
+
+So as $$x\to a$$, the input $$g(x)$$ approaches $$L$$, and then the output $$f(g(x))$$ approaches $$f(L)$$. Therefore,
+
+$$
+\lim_{x\to a}f(g(x))=f(L).
+$$
 
 </div>
 
@@ -820,7 +885,86 @@ $$
 
 </div>
 
-// add a problem where you have two graphs of functions and then you have to find if a composite function or some sort of mix of the two functions as a new function is continuous at two different points, where at one it is and one it isn't. have them justify
+<div class="theorem-box">
+
+**Example.** Let
+
+$$
+f(u)=
+\begin{cases}
+u+2, & u<2,\\
+5, & u=2,\\
+u^2-1, & u>2,
+\end{cases}
+$$
+
+and
+
+$$
+g(x)=
+\begin{cases}
+1+x^2\sin(1/x), & x<0,\\
+1, & x=0,\\
+1+x^2, & 0<x<1,\\
+x, & x\ge1.
+\end{cases}
+$$
+
+Determine whether $$h(x)=f(g(x))$$ is continuous at $$x=0$$ and $$x=2$$. Justify both answers.
+
+At $$x=0$$, the inside function approaches $$1$$ from both sides:
+
+$$
+\lim_{x\to0^-}g(x)
+=
+\lim_{x\to0^-}\left(1+x^2\sin(1/x)\right)
+=
+1
+$$
+
+by the Squeeze Theorem, and
+
+$$
+\lim_{x\to0^+}g(x)
+=
+\lim_{x\to0^+}(1+x^2)
+=
+1.
+$$
+
+Also $$g(0)=1$$. Since $$f(u)=u+2$$ near $$u=1$$, $$f$$ is continuous at $$1$$. Therefore
+
+$$
+\lim_{x\to0}h(x)
+=
+\lim_{x\to0}f(g(x))
+=
+f(1)
+=
+h(0).
+$$
+
+So $$h$$ is continuous at $$x=0$$.
+
+At $$x=2$$, the inside function is simply $$g(x)=x$$ near $$2$$, so $$g(x)\to2$$ and $$g(2)=2$$. But $$f$$ is not continuous at $$u=2$$:
+
+$$
+\lim_{u\to2^-}f(u)=4
+\qquad\text{and}\qquad
+\lim_{u\to2^+}f(u)=3,
+$$
+
+while $$f(2)=5$$. This discontinuity gets passed through the composite:
+
+$$
+\lim_{x\to2^-}h(x)=4
+\qquad\text{and}\qquad
+\lim_{x\to2^+}h(x)=3.
+$$
+
+So $$h$$ is not continuous at $$x=2$$.
+
+</div>
 
 ---
 
@@ -893,7 +1037,7 @@ These two trig limits are valid only when the angle is measured in **radians**. 
 \begin{tikzpicture}[scale=2.2]
 \draw[->] (-0.1,0) -- (1.35,0) node[right] {$x$};
 \draw[->] (0,-0.1) -- (0,1.2) node[above] {$y$};
-\draw[thick] (0,0) arc[start angle=0,end angle=55,radius=1];
+\draw[thick] (1,0) arc[start angle=0,end angle=55,radius=1];
 \draw[thick] (0,0) -- (1,0);
 \draw[thick] (0,0) -- (55:1);
 \draw[dashed] (1,0) -- (1,{tan(55)});
@@ -944,6 +1088,12 @@ Since $$\sin x/x$$ is an even function, the left-hand limit is also $$1$$. There
 
 $$
 \lim_{x\to0}\frac{\sin x}{x}=1.
+$$
+
+Using this result, we have
+
+$$
+\lim_{x\to0}\frac{\tan x}{x} = \lim_{x\to0}\frac{\sin x}{x \cos x} = \lim_{x\to0}\frac{\sin x}{x} \cdot \lim_{x\to0}\frac{1}{\cos x} = 1 \cdot 1 = 1
 $$
 
 </div>
@@ -1196,44 +1346,54 @@ $$
 
 The case $$f(b)<N<f(a)$$ follows by applying the same argument to $$-g(x)$$.
 
+This may seem very jargony, and you will learn more about the notations in linear algebra. For now, the proof is not very important to know.
+
 </div>
 
 
 This theorem guarantees at least one solution, but it does not tell you how many.
 
-## Average rate of change (Introduction to derivatives)
-
-On $$[a,b]$$, the average rate of change is modeled by
-
-$$
-\frac{f(b) - f(a)}{b-a}
-$$
-
-This is also the slope of the secant line (the line connecting the two endpoints). The derivative will be the limit of this expression as the interval shrinks toward a single point. This will be explored more in Unit 2.
-
 <div class="theorem-box">
 
-**Example.** For $$f(x)=x^2$$, compute the average rate of change on $$[1,1.1]$$, $$[1,1.01]$$, and $$[1,1.001]$$ to observe the pattern.
-
-- On $$[1,1.1]$$:
+**Example.** Show that the equation
 
 $$
-\frac{f(1.1)-f(1)}{1.1-1} = \frac{1.21-1}{0.1} = 2.1.
+x^3+x-1=0
 $$
 
-- On $$[1,1.01]$$:
+has at least one solution on the interval $$[0,1]$$.
+
+Let
 
 $$
-\frac{f(1.01)-f(1)}{1.01-1} = \frac{1.0201-1}{0.01} = 2.01.
+f(x)=x^3+x-1.
 $$
 
-- On $$[1,1.001]$$:
+This function is a polynomial, so it is continuous on $$[0,1]$$. Check the endpoint values:
 
 $$
-\frac{f(1.001)-f(1)}{1.001-1} = \frac{1.002001-1}{0.001} = 2.001.
+f(0)=0^3+0-1=-1
 $$
 
-Each secant slope gets closer to $$2$$ as the interval shrinks. This pattern shows how the average rate of change approaches the derivative at $$x=1$$, and for $$f(x)=x^2$$ the derivative is $$f'(x)=2x$$, giving $$f'(1)=2$$. You will learn more about derivatives in the next unit.
+and
+
+$$
+f(1)=1^3+1-1=1.
+$$
+
+Since $$0$$ lies between $$-1$$ and $$1$$, the Intermediate Value Theorem guarantees that there is some number $$c\in(0,1)$$ such that
+
+$$
+f(c)=0.
+$$
+
+That means
+
+$$
+c^3+c-1=0.
+$$
+
+So the equation has at least one solution between $$0$$ and $$1$$. Notice that IVT proves the solution exists, but it does not tell us the exact value of $$c$$.
 
 </div>
 

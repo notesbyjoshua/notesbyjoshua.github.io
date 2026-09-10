@@ -5,8 +5,6 @@ sidebar:
   order: 1
 ---
 
-**ADD PRACTICE TO ALL PHYSICS PAGES**
-
 :::variables
 - $$t$$ = time (Units: seconds ($$s$$))
 - $$x$$ or $$s$$ = displacement (Units: meters ($$m$$))
@@ -19,9 +17,13 @@ sidebar:
 
 ---
 
-## Scalars, vectors, and basic definitions of describing motion
+## Scalars and Vectors
 
-A **scalar** has magnitude only (examples: speed, distance, time). A **vector** has magnitude and direction (examples: displacement, velocity, acceleration). In one dimension, a sign attached to a scalar component encodes direction along an axis. When solving problems, always choose an origin and a positive direction along each axis. 
+A **scalar** has magnitude only (examples: speed, distance, time). A **vector** is a quantity that has magnitude and direction (examples: displacement, velocity, acceleration). 
+
+In one dimension, a sign attached to a scalar component encodes direction along an axis. When solving problems, always choose an origin and a positive direction along each axis. 
+
+// Note to self: add more vector stuff
 
 **Displacement** $$\Delta x$$ is the change in position, regardless of the path taken, and can be negative. **Distance** is the length of that path and is always nonnegative. **Average velocity** over an interval is defined as
 
@@ -110,6 +112,8 @@ Graphs of position, velocity, and acceleration versus time are linked by the sam
 - **Areas go up the list.** The signed area under a $$v$$-$$t$$ graph between two times is the displacement, $$\Delta x = \int v\, dt$$. The signed area under an $$a$$-$$t$$ graph is the change in velocity, $$\Delta v = \int a\, dt$$. In both cases, count areas below the time axis as negative.
 
 A maximum or minimum of $$x(t)$$ occurs where $$v = 0$$ (the slope is momentarily flat); the object is speeding up when $$v$$ and $$a$$ have the same sign and slowing down when they have opposite signs; and a horizontal $$v$$-$$t$$ line means zero acceleration even if the velocity itself is large.
+
+If you are struggling to draw a motion graph, always consider the important components of the graph, like turning points, end behavior, or concavity. Most problems do not require a very detailed/completely accurate motion graph.
 
 <div class="theorem-box">
 
@@ -488,7 +492,7 @@ which matches the limit from $$v(t)$$.
 
 </div>
 
-What if instead of linear drag, we use quadratic drag? However, changing to quadratic drag increases the integration level by a lot, so as an extension and practice to integration, you can try to find $$v(t)$$ for quadratic drag (hint: you may need to use the hyperbolic tangent function).
+What if instead of linear drag, we use quadratic drag? You may think that it is just as simple as linear drag. However, changing to quadratic drag increases the integration level by a lot, so as an extension and practice to integration, you can try to find $$v(t)$$ for quadratic drag (hint: you may need to use the hyperbolic tangent function).
 
 ---
 

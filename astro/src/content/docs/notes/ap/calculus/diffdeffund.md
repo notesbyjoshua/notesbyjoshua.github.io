@@ -5,32 +5,15 @@ sidebar:
   order: 2
 ---
 
-## Definition of the derivative
+## Rates of change and the derivative
 
-<div class="theorem-box">
-
-**Definition.** The derivative of $$f$$ at $$x$$ is defined as
+How do we measure the slope of a tangent line? Before talking about tangent lines, start with something we already know how to measure: the slope of a secant line. If a curve $$y=f(x)$$ passes through the points $$x=a$$ and $$x=b$$, then the secant slope is
 
 $$
-f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+\frac{f(b)-f(a)}{b-a}.
 $$
 
-Equivalently,
-
-$$
-f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}.
-$$
-
-for the derivative at $$x=a$$.
-
-</div>
-
-There are many interpretations of the derivative:
-
-- instantaneous rate of change,
-- slope of the tangent line,
-- limit of secant slopes,
-- local sensitivity of output to input.
+This is the average rate of change on $$[a,b]$$. Geometrically, it is the slope of the line connecting two points on the graph.
 
 ```tikz
 \usepackage{pgfplots}
@@ -55,54 +38,221 @@ There are many interpretations of the derivative:
 \end{tikzpicture}
 ```
 
-<div class="theorem-box">
-
-**Example.** Use the limit definition to find $$f'(x)$$ to find the derivative for $$f(x)=x^2$$.
-
-Start from the definition and substitute $$f(x+h)=(x+h)^2$$:
+To get the slope of the tangent line at $$x=a$$, move the second point closer and closer to $$a$$. Suppose that we want the tangent slope at point $$P = (a, f(a))$$ on $$f(x)$$. Define a point $$Q = (x, f(x))$$ also on $$f(x)$$ and connect the secant line $$PQ$$. The secant line rotates toward the tangent line, so the tangent slope is the limiting value of those secant slopes:
 
 $$
-f'(x)=\lim_{h\to0}\frac{(x+h)^2-x^2}{h}.
+m_{\text{tangent}}
+=
+\lim_{Q\to P}m_{PQ}.
 $$
 
-Expand the numerator:
+The slope of the secant line through $$P$$ and $$Q$$ is
 
 $$
-(x+h)^2-x^2 = x^2+2xh+h^2-x^2 = 2xh+h^2.
+m_{PQ}
+=
+\frac{f(x)-f(a)}{x-a}.
 $$
 
-Divide by $$h$$ (valid since $$h\ne0$$ in the limit):
+When $$Q\to P$$ along the graph, its $$x$$-coordinate approaches the $$x$$-coordinate of $$P$$. In other words, $$x\to a$$. Therefore,
 
 $$
-\frac{2xh+h^2}{h}=2x+h.
+m_{\text{tangent at }x=a}
+=
+\lim_{x\to a}\frac{f(x)-f(a)}{x-a}.
 $$
 
-Now let $$h\to0$$:
+The denominator measures horizontal change (the "run" of the slope formula), and the numerator measures vertical change (the "rise" of the slope formula). The limit asks what that ratio becomes when the two points collapse into one point.
 
-$$
-f'(x)=\lim_{h\to0}(2x+h)=2x.
-$$
-
-So the derivative of $$x^2$$ is $$2x$$.
-
-</div>
-
-### Why the derivative is a limit
-
-The average rate of change on $$[a,a+h]$$ is
+Equivalently, instead of naming the nearby input $$x$$, write it as $$a+h$$, where $$h$$ is the horizontal change from $$a$$. Then the secant slope becomes
 
 $$
 \frac{f(a+h)-f(a)}{h}.
 $$
 
-This is the slope of a secant line. The derivative asks what happens as the second point moves closer and closer to the first point. If the secant slopes approach one stable value, that value is the tangent slope.
+This is known as the **difference quotient**. As the second point moves toward $$a$$, the horizontal change $$h$$ moves toward $$0$$, so the tangent slope is
 
-This is why the derivative can be interpreted in several connected ways:
+$$
+\lim_{h\to0}\frac{f(a+h)-f(a)}{h}.
+$$
 
-- geometrically, it is slope at an instant;
-- numerically, it is the limiting value of nearby average rates;
-- physically, it is instantaneous velocity when $$f$$ is position;
-- locally, it is the coefficient of the best linear approximation.
+The two formulas are equivalent because $$x=a+h$$, so $$h=x-a$$.
+
+<div class="theorem-box">
+
+**Example.** For $$f(x)=x^2+1$$, find the slope of the tangent line at $$x=3$$ using the first method.
+
+Use $$a=3$$:
+
+$$
+\lim_{x\to3}\frac{f(x)-f(3)}{x-3}.
+$$
+
+Since $$f(3)=10$$,
+
+$$
+\lim_{x\to3}\frac{x^2+1-10}{x-3}
+=
+\lim_{x\to3}\frac{x^2-9}{x-3}.
+$$
+
+Factor and cancel:
+
+$$
+\lim_{x\to3}\frac{(x-3)(x+3)}{x-3}
+=
+\lim_{x\to3}(x+3)
+=
+6.
+$$
+
+So the tangent slope at $$x=3$$ is $$6$$.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** For $$f(x)=2x^2-x$$, find the slope of the tangent line at $$x=1$$ using the second method.
+
+Start with
+
+$$
+\lim_{h\to0}\frac{f(1+h)-f(1)}{h}.
+$$
+
+Compute the two function values:
+
+$$
+f(1+h)=2(1+h)^2-(1+h)
+=1+3h+2h^2,
+$$
+
+and
+
+$$
+f(1)=1.
+$$
+
+Then
+
+$$
+\lim_{h\to0}\frac{f(1+h)-f(1)}{h}
+=
+\lim_{h\to0}\frac{1+3h+2h^2-1}{h}.
+$$
+
+Simplify:
+
+$$
+\lim_{h\to0}\frac{3h+2h^2}{h}
+=
+\lim_{h\to0}(3+2h)
+=
+3.
+$$
+
+So the tangent slope at $$x=1$$ is $$3$$.
+
+</div>
+
+### Definition of the derivative
+
+<div class="theorem-box">
+
+**Definition.** The derivative of $$f$$ at $$x$$ is defined as
+
+$$
+f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+$$
+
+Equivalently, for a derivative at $$x=a$$, the derivative becomes the tangent line at $$a$$:
+
+$$
+f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}.
+$$
+
+</div>
+
+There are many interpretations of the derivative:
+
+- instantaneous rate of change,
+- slope of the tangent line,
+- limit of secant slopes,
+- local sensitivity of output to input.
+
+<div class="theorem-box">
+
+**Example.** Use the limit definition to find $$f'(x)$$ to find the derivative for $$f(x)=\frac{2}{x}$$.
+
+Start with the $$h$$ form:
+
+$$
+f'(x)
+=
+\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+$$
+
+Substitute $$f(x)=2/x$$:
+
+$$
+f'(x)
+=
+\lim_{h\to0}\frac{\frac{2}{x+h}-\frac{2}{x}}{h}.
+$$
+
+Combine the fractions in the numerator:
+
+$$
+\frac{2}{x+h}-\frac{2}{x}
+=
+\frac{2x-2(x+h)}{x(x+h)}
+=
+\frac{-2h}{x(x+h)}.
+$$
+
+So
+
+$$
+f'(x)
+=
+\lim_{h\to0}\frac{\frac{-2h}{x(x+h)}}{h}.
+$$
+
+Dividing by $$h$$ is the same as multiplying by $$1/h$$:
+
+$$
+f'(x)
+=
+\lim_{h\to0}\frac{-2h}{x(x+h)}\cdot\frac{1}{h}.
+$$
+
+Cancel $$h$$:
+
+$$
+f'(x)
+=
+\lim_{h\to0}\frac{-2}{x(x+h)}.
+$$
+
+Now let $$h\to0$$:
+
+$$
+f'(x)
+=
+\frac{-2}{x^2}.
+$$
+
+Therefore,
+
+$$
+\frac{d}{dx}\left(\frac{2}{x}\right)
+=
+-\frac{2}{x^2}.
+$$
+
+This formula is valid for $$x\ne0$$, because the original function is not defined at $$x=0$$. Note that $$\frac{d}{dx}$$ is a notation for the derivative.
+
+</div>
 
 ### Notation for derivatives
 

@@ -7,6 +7,7 @@ This repo is a Jekyll notes website. The agent's job is to help track note progr
 - Use `how-to-write-notes.md` as the main style guide for note structure and formatting.
 - Use `README.md` for current project priorities and phase goals.
 - Preserve the voice of the existing notes. These are student-facing study notes, so explanations should be clear, direct, and useful without becoming overly formal.
+- Always apply the `natural-writing` skill when writing, expanding, or revising note prose. Read its `SKILL.md` from the available skills catalog before editing. Leave already-natural wording alone, preserve academic details, and check revised explanations against nearby equations. For wording-only edits, preserve the existing structure. The user's requested scope and `how-to-write-notes.md` still govern the work.
 - Treat existing Markdown/Jekyll conventions in nearby files as stronger guidance than inventing a new pattern.
 
 ## Git Workflow

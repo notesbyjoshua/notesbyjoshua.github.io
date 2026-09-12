@@ -2,7 +2,7 @@
 title: "Stellar Physics"
 description: "Physics notes on stellar physics, including luminosity, spectra, stellar evolution, fusion, blackbody radiation, and classification."
 sidebar:
-  order: 8
+  order: 3
 ---
 
 ---
@@ -13,7 +13,7 @@ sidebar:
 
 ## Light from stars
 
-Almost everything we know about a star comes from the light it sends us. A star's surface radiates very nearly as a **blackbody**, so the thermal-radiation laws are the backbone of observational stellar physics. The microscopic justification (Planck's law, derived from summing photon modes in a cavity) lives in the [Quantum & Nuclear Physics](/notes/physics/quantnucphys/) notes; here we take the macroscopic results and run with them.
+Almost everything we know about a star comes from the light it sends us. A star's surface radiates very nearly as a **blackbody**, so the thermal-radiation laws are the backbone of observational stellar physics. The microscopic justification (Planck's law, derived from summing photon modes in a cavity) lives in the [Quantum & Nuclear Physics](/notes/physics/modern-stellar/quantnucphys/) notes; here we take the macroscopic results and run with them.
 
 ### Blackbody radiation: Stefan–Boltzmann and Wien
 
@@ -75,7 +75,7 @@ The inverse-square falloff is the central difficulty of astronomy: a faint star 
 
 ### Spectral classification and the Doppler shift
 
-A star's spectrum carries more than temperature. Superimposed on the blackbody continuum are dark **absorption lines** from atoms in the cooler outer layers (the reverse of the bright emission lines discussed in [Quantum & Nuclear Physics](/notes/physics/quantnucphys/)). Their pattern identifies the elements present and, through line strengths, the temperature. The classical sequence from hot to cool is **O B A F G K M** (mnemonic: "Oh Be A Fine Guy/Girl, Kiss Me"); the Sun is a G star.
+A star's spectrum carries more than temperature. Superimposed on the blackbody continuum are dark **absorption lines** from atoms in the cooler outer layers (the reverse of the bright emission lines discussed in [Quantum & Nuclear Physics](/notes/physics/modern-stellar/quantnucphys/)). Their pattern identifies the elements present and, through line strengths, the temperature. The classical sequence from hot to cool is **O B A F G K M** (mnemonic: "Oh Be A Fine Guy/Girl, Kiss Me"); the Sun is a G star.
 
 Because lines sit at known rest wavelengths, any shift reveals motion along the line of sight via the **Doppler effect**. For speeds $$v\ll c$$ (so no relativistic effects),
 
@@ -83,7 +83,7 @@ $$
 \frac{\Delta\lambda}{\lambda_0}=\frac{v_r}{c},
 $$
 
-with redshift ($$\Delta\lambda>0$$) for recession and blueshift for approach. This single measurement drives the detection of binary stars, exoplanets (the star wobbles), stellar rotation (lines broaden), and ultimately cosmic expansion (Hubble's law). The relativistic version is in the [Relativity](/notes/physics/relativity/) notes.
+with redshift ($$\Delta\lambda>0$$) for recession and blueshift for approach. This single measurement drives the detection of binary stars, exoplanets (the star wobbles), stellar rotation (lines broaden), and ultimately cosmic expansion (Hubble's law). The relativistic version is in the [Relativity](/notes/physics/modern-stellar/relativity/) notes.
 
 ---
 
@@ -459,7 +459,7 @@ For the Sun this gives $$\sim 3\times10^{7}$$ years. Geology and biology demande
 
 ### Nuclear timescale and the energy source
 
-Fusion of hydrogen into helium converts a fraction $$\epsilon\approx 0.007$$ of the rest-mass energy of the burned hydrogen (via $$E=mc^2$$; the binding-energy details and the Gamow-window tunneling physics are in [Quantum & Nuclear Physics](/notes/physics/quantnucphys/)). If a fraction $$f\sim0.1$$ of the star's mass is available as core hydrogen, the **nuclear timescale** is
+Fusion of hydrogen into helium converts a fraction $$\epsilon\approx 0.007$$ of the rest-mass energy of the burned hydrogen (via $$E=mc^2$$; the binding-energy details and the Gamow-window tunneling physics are in [Quantum & Nuclear Physics](/notes/physics/modern-stellar/quantnucphys/)). If a fraction $$f\sim0.1$$ of the star's mass is available as core hydrogen, the **nuclear timescale** is
 
 $$
 t_{\text{nuc}}\sim\frac{\epsilon f M c^2}{L}.
@@ -589,7 +589,7 @@ In reality, rotating black holes (which comprise most black holes) are harder to
 
 ### Spacetime near the horizon
 
-Several effects are worth knowing qualitatively; the quantitative treatment lives in the [Relativity](/notes/physics/relativity/) notes.
+Several effects are worth knowing qualitatively; the quantitative treatment lives in the [Relativity](/notes/physics/modern-stellar/relativity/) notes.
 
 - **Gravitational time dilation and redshift.** Clocks run slower deeper in a gravitational well. Light climbing out of one loses energy and reddens; at the horizon the redshift becomes infinite, so a distant observer sees an infalling object slow, redden, and freeze at the horizon rather than cross it, since the light past the horizon cannot escape the black hole.
 - **Photon sphere**: At $$r=\tfrac{3}{2}r_s$$, gravity bends light so sharply that photons can orbit the black hole on (unstable) circular paths. This ring is the bright edge around the dark "shadow" in black-hole images.

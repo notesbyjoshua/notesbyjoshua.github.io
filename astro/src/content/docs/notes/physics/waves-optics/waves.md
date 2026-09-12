@@ -2,7 +2,7 @@
 title: "Waves"
 description: "Physics notes on waves, oscillations, sound, standing waves, superposition, interference, resonance, and wave speed."
 sidebar:
-  order: 10
+  order: 1
 ---
 
 ---
@@ -202,7 +202,7 @@ $$
 \delta = \frac{2\pi}{\lambda}\,\Delta r.
 $$
 
-So constructive interference is $$\Delta r = m\lambda$$ and destructive is $$\Delta r = (m+\tfrac12)\lambda$$ for integer $$m$$ — the backbone of all interference problems (and the double-slit on the [Optics](/notes/physics/optics/) page).
+So constructive interference is $$\Delta r = m\lambda$$ and destructive is $$\Delta r = (m+\tfrac12)\lambda$$ for integer $$m$$ — the backbone of all interference problems (and the double-slit on the [Optics](/notes/physics/waves-optics/optics/) page).
 
 ## Standing waves and normal modes
 

@@ -2,7 +2,7 @@
 title: "Optics"
 description: "Physics notes on geometric and wave optics, mirrors, lenses, interference, diffraction, polarization, and image formation."
 sidebar:
-  order: 11
+  order: 2
 ---
 
 ---

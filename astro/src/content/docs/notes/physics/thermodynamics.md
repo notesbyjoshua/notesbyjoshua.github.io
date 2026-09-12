@@ -298,7 +298,7 @@ The same idea extends to any number of layers: just sum all the $$L_i/k_i$$ in t
 
 **Convection** transfers heat through bulk fluid motion: warmed fluid expands, becomes less dense, and rises while cooler fluid sinks, setting up a circulation.
 
-**Radiation** transfers energy by electromagnetic waves, requiring no medium. Every object emits radiation depending on its temperature; the power radiated scales as the fourth power of the Kelvin temperature (see [Stellar Physics](/notes/physics/stellarphys/)). Earth's average temperature levels off near $$300\text{ K}$$ because at that temperature it radiates energy away as fast as it absorbs it from the Sun.
+**Radiation** transfers energy by electromagnetic waves, requiring no medium. Every object emits radiation depending on its temperature; the power radiated scales as the fourth power of the Kelvin temperature (see [Stellar Physics](/notes/physics/modern-stellar/stellarphys/)). Earth's average temperature levels off near $$300\text{ K}$$ because at that temperature it radiates energy away as fast as it absorbs it from the Sun.
 
 ### Heat capacity and latent heat
 

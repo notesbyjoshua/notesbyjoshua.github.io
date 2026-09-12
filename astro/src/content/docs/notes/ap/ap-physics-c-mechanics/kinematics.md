@@ -17,6 +17,8 @@ sidebar:
 
 ---
 
+// move uniform accelerated motion here
+
 ## Scalars and Vectors
 
 A **scalar** has magnitude only (examples: speed, distance, time). A **vector** is a quantity that has magnitude and direction (examples: displacement, velocity, acceleration). 
@@ -534,9 +536,9 @@ The Big Five do not apply because acceleration is not constant. The definitions 
 
 </div>
 
-### Example: Drag acceleration
+### Drag acceleration
 
-Air resistance (drag) often produces nonconstant acceleration. Here, we model its effect directly as an acceleration; the force treatment comes later, though drag and gravity are both forces. A falling object interacts with the surrounding air, producing drag that opposes its motion. For downward motion through still air, the drag acceleration points upward, opposite gravity.
+Drag is a form nonconstant acceleration and is the most comon type of non-constant acceleration found in AP Physics. Here, we model its effect directly as an acceleration, even though it is technically a force. In any fluid (including gases like air), a moving object will collide with particles in the fluid, causing a friction force that opposes the motion of the object. For downward motion through still air, the drag acceleration points upward, opposing gravity.
 
 Two common drag models are:
 

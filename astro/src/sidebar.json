@@ -454,16 +454,25 @@
             "link": "/notes/physics/usapho/"
           },
           {
-            "label": "Math Tricks",
-            "link": "/notes/physics/mathtricks/"
-          },
-          {
-            "label": "Uncertainty",
-            "link": "/notes/physics/uncertainty/"
-          },
-          {
-            "label": "Problem Solving Techniques",
-            "link": "/notes/physics/techniques/"
+            "label": "Problem-Solving Toolkit",
+            "items": [
+              {
+                "label": "Problem-Solving Toolkit Home",
+                "link": "/notes/physics/toolkit/"
+              },
+              {
+                "label": "Math Tricks",
+                "link": "/notes/physics/toolkit/mathtricks/"
+              },
+              {
+                "label": "Uncertainty",
+                "link": "/notes/physics/toolkit/uncertainty/"
+              },
+              {
+                "label": "Problem Solving Techniques",
+                "link": "/notes/physics/toolkit/techniques/"
+              }
+            ]
           },
           {
             "label": "Advanced Mechanics",
@@ -474,28 +483,46 @@
             "link": "/notes/physics/fluiddynamics/"
           },
           {
-            "label": "Modern Physics",
-            "link": "/notes/physics/quantnucphys/"
-          },
-          {
-            "label": "Relativity",
-            "link": "/notes/physics/relativity/"
-          },
-          {
-            "label": "Stellar Physics",
-            "link": "/notes/physics/stellarphys/"
+            "label": "Modern & Stellar Physics",
+            "items": [
+              {
+                "label": "Modern & Stellar Physics Home",
+                "link": "/notes/physics/modern-stellar/"
+              },
+              {
+                "label": "Modern Physics",
+                "link": "/notes/physics/modern-stellar/quantnucphys/"
+              },
+              {
+                "label": "Relativity",
+                "link": "/notes/physics/modern-stellar/relativity/"
+              },
+              {
+                "label": "Stellar Physics",
+                "link": "/notes/physics/modern-stellar/stellarphys/"
+              }
+            ]
           },
           {
             "label": "Thermodynamics",
             "link": "/notes/physics/thermodynamics/"
           },
           {
-            "label": "Waves",
-            "link": "/notes/physics/waves/"
-          },
-          {
-            "label": "Optics",
-            "link": "/notes/physics/optics/"
+            "label": "Waves & Optics",
+            "items": [
+              {
+                "label": "Waves & Optics Home",
+                "link": "/notes/physics/waves-optics/"
+              },
+              {
+                "label": "Waves",
+                "link": "/notes/physics/waves-optics/waves/"
+              },
+              {
+                "label": "Optics",
+                "link": "/notes/physics/waves-optics/optics/"
+              }
+            ]
           },
           {
             "label": "Electricity & Magnetism",

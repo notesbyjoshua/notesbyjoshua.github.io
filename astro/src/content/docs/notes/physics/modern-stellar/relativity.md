@@ -2,7 +2,7 @@
 title: "Relativity"
 description: "Physics notes on special relativity, time dilation, length contraction, spacetime intervals, momentum, and energy."
 sidebar:
-  order: 7
+  order: 2
 ---
 
 ---

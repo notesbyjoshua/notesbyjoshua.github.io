@@ -393,16 +393,140 @@
         "link": "/notes/math/"
       },
       {
-        "label": "Homothety",
-        "link": "/notes/math/geometry/homothety/"
+        "label": "Algebra",
+        "items": [
+          {
+            "label": "Algebraic Identities and Equations",
+            "link": "/notes/math/algebra/algebraic-identities-and-equations/"
+          },
+          {
+            "label": "Polynomials",
+            "link": "/notes/math/algebra/polynomials/"
+          },
+          {
+            "label": "Summations",
+            "link": "/notes/math/algebra/summations/"
+          },
+          {
+            "label": "Complex Numbers",
+            "link": "/notes/math/algebra/complex-numbers/"
+          },
+          {
+            "label": "Inequalities",
+            "link": "/notes/math/algebra/inequalities/"
+          },
+          {
+            "label": "Recursion",
+            "link": "/notes/math/algebra/recursion/"
+          },
+          {
+            "label": "Functional Equations",
+            "link": "/notes/math/algebra/functional-equations/"
+          }
+        ]
       },
       {
-        "label": "Summations",
-        "link": "/notes/math/algebra/summations/"
+        "label": "Geometry",
+        "items": [
+          {
+            "label": "Triangles",
+            "link": "/notes/math/geometry/triangles/"
+          },
+          {
+            "label": "Circles and Cyclic Quadrilaterals",
+            "link": "/notes/math/geometry/circles-and-cyclic-quadrilaterals/"
+          },
+          {
+            "label": "Triangle Centers and Concurrency",
+            "link": "/notes/math/geometry/triangle-centers-and-concurrency/"
+          },
+          {
+            "label": "Coordinate Geometry",
+            "link": "/notes/math/geometry/coordinate-geometry/"
+          },
+          {
+            "label": "Complex Geometry",
+            "link": "/notes/math/geometry/complex-geometry/"
+          },
+          {
+            "label": "Solid (3D) Geometry",
+            "link": "/notes/math/geometry/solid-geometry/"
+          },
+          {
+            "label": "Homothety",
+            "link": "/notes/math/geometry/homothety/"
+          },
+          {
+            "label": "Radical Axes and Inversion",
+            "link": "/notes/math/geometry/radical-axes-and-inversion/"
+          }
+        ]
       },
       {
-        "label": "Recursion",
-        "link": "/notes/math/algebra/recursion/"
+        "label": "Number Theory",
+        "items": [
+          {
+            "label": "Divisibility and Prime Factorization",
+            "link": "/notes/math/number-theory/divisibility-and-prime-factorization/"
+          },
+          {
+            "label": "Modular Arithmetic",
+            "link": "/notes/math/number-theory/modular-arithmetic/"
+          },
+          {
+            "label": "Diophantine Equations",
+            "link": "/notes/math/number-theory/diophantine-equations/"
+          },
+          {
+            "label": "Fermat's Little Theorem and Orders",
+            "link": "/notes/math/number-theory/fermat-euler-and-orders/"
+          },
+          {
+            "label": "Prime Exponents and LTE",
+            "link": "/notes/math/number-theory/prime-exponents-and-lte/"
+          },
+          {
+            "label": "Quadratic Residues",
+            "link": "/notes/math/number-theory/quadratic-residues-and-sums-of-squares/"
+          },
+          {
+            "label": "Advanced Diophantine Equations",
+            "link": "/notes/math/number-theory/infinite-descent-and-diophantine-equations/"
+          }
+        ]
+      },
+      {
+        "label": "Combinatorics",
+        "items": [
+          {
+            "label": "Counting Fundamentals",
+            "link": "/notes/math/combinatorics/counting-fundamentals/"
+          },
+          {
+            "label": "Distributions and Lattice Paths",
+            "link": "/notes/math/combinatorics/distributions-and-lattice-paths/"
+          },
+          {
+            "label": "Principle of Inclusion–Exclusion",
+            "link": "/notes/math/combinatorics/inclusion-exclusion/"
+          },
+          {
+            "label": "Probability and Expected Value",
+            "link": "/notes/math/combinatorics/probability-and-expected-value/"
+          },
+          {
+            "label": "Pigeonhole Principle",
+            "link": "/notes/math/combinatorics/pigeonhole-principle/"
+          },
+          {
+            "label": "Invariants, Coloring, and Games",
+            "link": "/notes/math/combinatorics/invariants-coloring-and-games/"
+          },
+          {
+            "label": "Graph Theory",
+            "link": "/notes/math/combinatorics/graph-theory/"
+          }
+        ]
       },
       {
         "label": "Multivariable Calculus",

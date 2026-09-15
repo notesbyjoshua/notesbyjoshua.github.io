@@ -5,6 +5,16 @@ sidebar:
   order: 5
 ---
 
+<!--
+Topic plan:
+- Arithmetic and geometric series
+- Telescoping and partial fractions
+- Swapping the order of summation
+- Roots of unity filters
+- Sums modulo a prime
+- Multiplicative functions, Dirichlet convolution, and Möbius inversion
+-->
+
 ---
 
 These notes are adapted from Evan Chen's *Summations* handout. I placed the generating functions material on the [Recursion](/notes/math/algebra/recursion/) page, since that technique is especially useful for recurrence relations.

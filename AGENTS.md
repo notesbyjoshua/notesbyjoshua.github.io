@@ -383,7 +383,7 @@ Do not rewrite large sections unless asked. Prefer reporting issues first.
 When making edits:
 - preserve my writing style
 - keep Markdown/Jekyll formatting valid
-- use `$$...$$` for display math
+- use `$$...$$` for both inline and display KaTeX math; never single-dollar delimiters in note prose. Inside fenced TikZ code, retain the single-dollar LaTeX labels required by TikZ.
 - use `\lvert` and `\rvert` instead of vertical bars for absolute value
 - keep spacing around section dividers and theorem boxes
 - leave exactly one blank line above and below every image block, including `<img>` tags and image-generating fenced code blocks such as TikZ; do not leave multiple empty lines

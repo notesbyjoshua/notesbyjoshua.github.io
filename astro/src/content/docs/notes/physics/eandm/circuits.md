@@ -1022,7 +1022,7 @@ Before writing equations for a large symmetric network, identify node orbits und
 
 ## Capacitors in DC circuits
 
-For capacitor geometry and dielectric behavior, see [Conductors & Capacitors](/notes/physics/eandm/conductors-capacitors/). In a DC circuit, the capacitor relation is
+For capacitor geometry and dielectric behavior, see [Capacitors and Dielectrics](/notes/physics/eandm/conductors-capacitors/). In a DC circuit, the capacitor relation is
 
 $$
 q=CV,

@@ -5,8 +5,6 @@ sidebar:
   order: 2
 ---
 
----
-
 With every experiment, there will be a source of error, whether you like it or not. Since we aren't perfect, we need to account for the error, which we call uncertainty. A measurement reported without its uncertainty is almost meaningless: "the period is 2.00 s" is a very different claim from "the period is $$2.00\pm0.05$$ s."
 
 A quantity $$x$$ is written $$x\pm\delta x$$, where $$\delta x$$ is the **absolute uncertainty** (same units as $$x$$). The **relative** (or fractional) uncertainty is $$\delta x/x$$, often quoted as a percentage. The central question of error propagation is: if $$f$$ depends on measured quantities $$x,y,\dots$$, how big is $$\delta f$$?
@@ -28,6 +26,25 @@ $$
 
 Note that this holds for subtraction too since uncertainties never subtract. This is why **subtracting two nearly-equal large numbers is dangerous**: the absolute uncertainty stays the same size while the result shrinks, so the *relative* uncertainty can blow up. (For example, measuring a thin film's thickness as the difference of two large lengths.)
 
+<div class="theorem-box">
+
+**Example.** Independent measurements give an empty container's mass as $$48.20\pm0.05\ \text{g}$$ and its filled mass as $$48.90\pm0.05\ \text{g}$$. Find the sample mass and uncertainty using both conventions.
+
+Subtract the central values, but combine the uncertainties:
+
+$$
+m=48.90-48.20=0.70\ \text{g},
+$$
+
+$$
+\delta m_{\mathrm{quad}}=\sqrt{0.05^2+0.05^2}=0.071\ \text{g},\qquad
+\delta m_{\mathrm{worst}}=0.05+0.05=0.10\ \text{g}.
+$$
+
+Thus the quadrature result is $$0.70\pm0.07\ \text{g}$$; the worst-case result is $$0.70\pm0.10\ \text{g}$$. Although each mass was measured to about $$0.1\%$$, the sample mass has about $$10\%$$ statistical uncertainty. This calculation assumes independent errors; a shared balance offset could cancel in the subtraction.
+
+</div>
+
 ---
 
 ## Multiplication/Division
@@ -40,6 +57,21 @@ $$
 $$
 
 The rule is the same whether you multiply or divide. The practical takeaway: **the least precise factor dominates** the result's precision, so there's no point measuring one quantity to 0.1% if another enters at 5%.
+
+<div class="theorem-box">
+
+**Example.** A cart travels $$1.200\pm0.006\ \text{m}$$ in $$0.800\pm0.008\ \text{s}$$. Treat the uncertainties as independent. Find its average speed and identify which measurement limits the precision.
+
+The speed is $$v=d/t=1.500\ \text{m/s}$$. The relative distance and time uncertainties are $$0.005$$ and $$0.010$$, so
+
+$$
+\frac{\delta v}{v}=\sqrt{0.005^2+0.010^2}=0.01118,\qquad
+\delta v=1.500(0.01118)=0.0168\ \text{m/s}.
+$$
+
+Report $$v=1.500\pm0.017\ \text{m/s}$$. The timing contribution is twice the distance contribution and accounts for $$80\%$$ of the variance; improving the timer helps most. A worst-case linear estimate would give $$\delta v=1.500(0.015)=0.0225\ \text{m/s}$$.
+
+</div>
 
 ---
 
@@ -68,6 +100,29 @@ $$
 $$
 
 about 2%. With $$g=4\pi^2(1.000)/(2.00)^2=9.87\ \text{m/s}^2$$, the result is $$g=9.87\pm0.20\ \text{m/s}^2$$. Notice the *timing* error dominates because $$T$$ enters squared — so to improve the measurement, time many periods at once rather than measuring $$L$$ more carefully.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A uniform cylindrical rod has mass $$m=100.0\pm0.2\ \text{g}$$, radius $$r=0.500\pm0.005\ \text{cm}$$, and length $$L=10.00\pm0.02\ \text{cm}$$. Assuming independent uncertainties, find its density and uncertainty.
+
+Since $$\rho=m/(\pi r^2L)$$, the powers are $$1,-2,-1$$:
+
+$$
+\rho=\frac{100.0}{\pi(0.500)^2(10.00)}
+=12.732\ \text{g/cm}^3,
+$$
+
+$$
+\frac{\delta\rho}{\rho}
+=\sqrt{\left(\frac{0.2}{100.0}\right)^2
++\left(2\frac{0.005}{0.500}\right)^2
++\left(\frac{0.02}{10.00}\right)^2}
+=0.02020.
+$$
+
+Therefore $$\delta\rho=0.257\ \text{g/cm}^3$$, and the result is $$\rho=12.73\pm0.26\ \text{g/cm}^3$$. Squaring the radius doubles its relative-uncertainty contribution; treating the two copies of $$r$$ as independent measurements would give the wrong answer.
 
 </div>
 

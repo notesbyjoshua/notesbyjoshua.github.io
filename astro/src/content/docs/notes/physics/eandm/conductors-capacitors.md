@@ -1,15 +1,13 @@
 ---
-title: "Conductors & Capacitors"
-description: "Physics notes on conductors, capacitors, electric potential, capacitance, dielectrics, and electric field behavior."
+title: "Capacitors and Dielectrics"
+description: "USAPhO notes on capacitance, capacitor geometry and energy, dielectric polarization, bound and free charge, and electric displacement."
 sidebar:
   order: 2
 ---
 
-Capacitors are systems of conductors separated by vacuum or an insulating material. Their behavior connects conductor boundary conditions, electric potential, stored field energy, and the microscopic polarization of matter.
-
 ## Capacitance
 
-A conductor at electrostatic equilibrium is an equipotential. If you put charge $$Q$$ on a fixed isolated conductor, its potential relative to infinity is proportional to $$Q$$, because electrostatics is linear. That motivates **capacitance**:
+A conductor at electrostatic equilibrium is an equipotential surface. If you put charge $$Q$$ on a fixed isolated conductor, its potential relative to infinity is proportional to $$Q$$, because electrostatics is linear. Thus we can define a value of **capacitance**:
 
 $$
 C=\frac{\Delta Q}{\Delta V}.
@@ -29,7 +27,7 @@ Most devices use two conductors carrying equal and opposite charges $$+Q$$ and $
 
 ### Parallel-plate capacitor
 
-For two large parallel conducting plates of area $$A$$ separated by distance $$d$$, ignore edge fringing if $$d$$ is much smaller than the plate dimensions (usually assumed). The charges live mainly on the inner faces, and the field between the plates is approximately uniform:
+For two large parallel conducting plates of area $$A$$ separated by distance $$d$$ (ignoring edge fringing), the field between the two plates is approximately uniform:
 
 $$
 E=\frac{\sigma}{\varepsilon_0}=\frac{Q}{\varepsilon_0 A}.
@@ -47,7 +45,7 @@ $$
 C=\frac{Q}{\Delta V}=\frac{\varepsilon_0 A}{d}.
 $$
 
-Near the edges, the field bulges outward, so the capacitance is slightly larger than $$\varepsilon_0A/d$$, but this is usually ignored for USAPhO problems.
+Near the edges, the field bulges outward, so the capacitance is slightly larger than $$\varepsilon_0A/d$$, but this is usually ignored.
 
 <div class="theorem-box">
 

@@ -17,7 +17,170 @@ sidebar:
 
 ---
 
-// move uniform accelerated motion here
+## Constant acceleration in one dimension
+
+Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five** (holy niche bro)) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
+
+:::key{name="The Big Five"}
+1. Missing $$\Delta x$$: $$v_f = v_0 + at$$
+2. Missing $$v_f$$: $$\Delta x = v_0t + \frac{1}{2}at^2$$
+3. Missing $$v_0$$: $$\Delta x = v_f t - \frac{1}{2}at^2$$
+4. Missing $$t$$: $$v^2 = v_0^2 + 2a\Delta x$$
+5. Missing $$a$$: $$\Delta x = \frac{v_0+v_f}{2}t$$
+:::
+
+These are algebraic consequences of $$a = dv/dt$$ constant and $$v = dx/dt$$.
+
+:::conditions
+- Valid only for **constant acceleration**. For non-constant acceleration you need other methods (talked about later).
+- If $$a=0$$, they reduce to the constant-velocity result $$\Delta x=vt$$.
+:::
+
+<div class="theorem-box">
+
+**Proof (The Big Five).** Start with constant acceleration:
+
+$$
+a=\frac{dv}{dt}.
+$$
+
+Since $$a$$ is constant, integrate from $$0$$ to $$t$$:
+
+$$
+\int_{v_0}^{v}dv=\int_0^t a\,dt.
+$$
+
+This gives
+
+$$
+v-v_0=at,
+$$
+
+so
+
+$$
+v=v_0+at.
+$$
+
+That proves equation 1.
+
+Since velocity is the derivative of position,
+
+$$
+v=\frac{dx}{dt}.
+$$
+
+Using $$v(t)=v_0+at$$,
+
+$$
+\Delta x=\int_0^t v(t)\,dt=\int_0^t (v_0+at)\,dt.
+$$
+
+Therefore
+
+$$
+\Delta x=v_0t+\frac{1}{2}at^2.
+$$
+
+That proves equation 2.
+
+Solve equation 1 for the initial velocity:
+
+$$
+v_0=v-at.
+$$
+
+Substitute into equation 2:
+
+$$
+\Delta x=(v-at)t+\frac{1}{2}at^2.
+$$
+
+So
+
+$$
+\Delta x=vt-\frac{1}{2}at^2.
+$$
+
+That proves equation 3.
+
+To eliminate time, use the chain rule:
+
+$$
+a=\frac{dv}{dt}=\frac{dv}{dx}\frac{dx}{dt}=v\frac{dv}{dx}.
+$$
+
+Then
+
+$$
+a\,dx=v\,dv.
+$$
+
+Integrate from $$x_0$$ to $$x$$ and from $$v_0$$ to $$v$$:
+
+$$
+\int_{x_0}^{x}a\,dx=\int_{v_0}^{v}v\,dv.
+$$
+
+So
+
+$$
+a\Delta x=\frac{1}{2}(v^2-v_0^2),
+$$
+
+which rearranges to
+
+$$
+v^2=v_0^2+2a\Delta x.
+$$
+
+That proves equation 4.
+
+Finally, for constant acceleration, the velocity-time graph is a straight line, so displacement is the area under that graph: a trapezoid with bases $$v_0$$ and $$v$$ and width $$t$$. Thus
+
+$$
+\Delta x=\frac{v_0+v}{2}t.
+$$
+
+That proves equation 5.
+
+</div>
+
+:::tip
+Always check that your signs for $$v_0$$, $$v$$, $$a$$, and $$\Delta x$$ match the coordinate system and stay consistent with your definitions (e.g. if you take up as $$+y$$ then gravity has negative acceleration).
+:::
+
+<div class="theorem-box">
+
+**Example.** A car traveling at $$v_0 = 25\ \text{m/s}$$ brakes with constant deceleration and comes to rest in $$40\ \text{m}$$. Find the acceleration and the time it takes to stop.
+
+The final velocity is $$v = 0$$, and we know $$v_0$$ and $$\Delta x$$ but not $$t$$, so use equation 4 (missing $$t$$):
+
+$$
+v^2 = v_0^2 + 2a\Delta x \;\Rightarrow\; 0 = (25)^2 + 2a(40).
+$$
+
+Solve:
+
+$$
+a = -\frac{625}{80} = -7.8\ \text{m/s}^2.
+$$
+
+The negative sign means the acceleration opposes the motion, as expected for braking. For the time, use equation 1:
+
+$$
+v = v_0 + at \;\Rightarrow\; 0 = 25 + (-7.8)t,
+$$
+
+$$
+t = \frac{25}{7.8} \approx 3.2\ \text{s}.
+$$
+
+A quick check with equation 5: $$\Delta x = \frac{v_0 + v}{2}t = \frac{25 + 0}{2}(3.2) \approx 40\ \text{m}$$, which matches.
+
+</div>
+
+---
 
 ## Scalars and Vectors
 
@@ -337,171 +500,6 @@ So total displacement is $$12 + 2 = 14\ \text{m}$$. Distance traveled adds the m
 
 ---
 
-## Constant acceleration in one dimension
-
-Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five** (holy niche bro)) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
-
-:::key{name="The Big Five"}
-1. Missing $$\Delta x$$: $$v_f = v_0 + at$$
-2. Missing $$v_f$$: $$\Delta x = v_0t + \frac{1}{2}at^2$$
-3. Missing $$v_0$$: $$\Delta x = v_f t - \frac{1}{2}at^2$$
-4. Missing $$t$$: $$v^2 = v_0^2 + 2a\Delta x$$
-5. Missing $$a$$: $$\Delta x = \frac{v_0+v_f}{2}t$$
-:::
-
-These are algebraic consequences of $$a = dv/dt$$ constant and $$v = dx/dt$$.
-
-:::conditions
-- Valid only for **constant acceleration**. For non-constant acceleration you need other methods (talked about later).
-- If $$a=0$$, they reduce to the constant-velocity result $$\Delta x=vt$$.
-:::
-
-<div class="theorem-box">
-
-**Proof (The Big Five).** Start with constant acceleration:
-
-$$
-a=\frac{dv}{dt}.
-$$
-
-Since $$a$$ is constant, integrate from $$0$$ to $$t$$:
-
-$$
-\int_{v_0}^{v}dv=\int_0^t a\,dt.
-$$
-
-This gives
-
-$$
-v-v_0=at,
-$$
-
-so
-
-$$
-v=v_0+at.
-$$
-
-That proves equation 1.
-
-Since velocity is the derivative of position,
-
-$$
-v=\frac{dx}{dt}.
-$$
-
-Using $$v(t)=v_0+at$$,
-
-$$
-\Delta x=\int_0^t v(t)\,dt=\int_0^t (v_0+at)\,dt.
-$$
-
-Therefore
-
-$$
-\Delta x=v_0t+\frac{1}{2}at^2.
-$$
-
-That proves equation 2.
-
-Solve equation 1 for the initial velocity:
-
-$$
-v_0=v-at.
-$$
-
-Substitute into equation 2:
-
-$$
-\Delta x=(v-at)t+\frac{1}{2}at^2.
-$$
-
-So
-
-$$
-\Delta x=vt-\frac{1}{2}at^2.
-$$
-
-That proves equation 3.
-
-To eliminate time, use the chain rule:
-
-$$
-a=\frac{dv}{dt}=\frac{dv}{dx}\frac{dx}{dt}=v\frac{dv}{dx}.
-$$
-
-Then
-
-$$
-a\,dx=v\,dv.
-$$
-
-Integrate from $$x_0$$ to $$x$$ and from $$v_0$$ to $$v$$:
-
-$$
-\int_{x_0}^{x}a\,dx=\int_{v_0}^{v}v\,dv.
-$$
-
-So
-
-$$
-a\Delta x=\frac{1}{2}(v^2-v_0^2),
-$$
-
-which rearranges to
-
-$$
-v^2=v_0^2+2a\Delta x.
-$$
-
-That proves equation 4.
-
-Finally, for constant acceleration, the velocity-time graph is a straight line, so displacement is the area under that graph: a trapezoid with bases $$v_0$$ and $$v$$ and width $$t$$. Thus
-
-$$
-\Delta x=\frac{v_0+v}{2}t.
-$$
-
-That proves equation 5.
-
-</div>
-
-:::tip
-Always check that your signs for $$v_0$$, $$v$$, $$a$$, and $$\Delta x$$ match the coordinate system and stay consistent with your definitions (e.g. if you take up as $$+y$$ then gravity has negative acceleration).
-:::
-
-<div class="theorem-box">
-
-**Example.** A car traveling at $$v_0 = 25\ \text{m/s}$$ brakes with constant deceleration and comes to rest in $$40\ \text{m}$$. Find the acceleration and the time it takes to stop.
-
-The final velocity is $$v = 0$$, and we know $$v_0$$ and $$\Delta x$$ but not $$t$$, so use equation 4 (missing $$t$$):
-
-$$
-v^2 = v_0^2 + 2a\Delta x \;\Rightarrow\; 0 = (25)^2 + 2a(40).
-$$
-
-Solve:
-
-$$
-a = -\frac{625}{80} = -7.8\ \text{m/s}^2.
-$$
-
-The negative sign means the acceleration opposes the motion, as expected for braking. For the time, use equation 1:
-
-$$
-v = v_0 + at \;\Rightarrow\; 0 = 25 + (-7.8)t,
-$$
-
-$$
-t = \frac{25}{7.8} \approx 3.2\ \text{s}.
-$$
-
-A quick check with equation 5: $$\Delta x = \frac{v_0 + v}{2}t = \frac{25 + 0}{2}(3.2) \approx 40\ \text{m}$$, which matches.
-
-</div>
-
----
-
 ## Non-constant acceleration
 
 The Big Five only works in constant acceleration, so when you have non-constant $$s$$ you often fall back on the defining derivatives and choose your integration variable based on what $$a$$ depends on:
@@ -690,7 +688,163 @@ What if instead of linear drag, we use quadratic drag? You may think that it is 
 
 ---
 
-## Two dimensions and projectile motion
+## Circular Motion
+
+Often, we often describe thing as going in circles (or approximately so), whether it be vertical or horizontal. There are two types of circular motion: uniform and non-uniform circular motion.
+
+### Uniform circular motion
+
+In **uniform circular motion**, speed is constant but velocity changes direction. The acceleration points toward the center at every instant and has a magnitude of
+
+$$
+a_c = \frac{v^2}{r}.
+$$
+
+<div class="theorem-box">
+
+**Proof (Centripetal acceleration).** Start with the parameterization for a standard circle centered at $$(a, e)$$
+
+$$
+x(t)=a+b\cos(ct+d),\qquad y(t)=e+b\sin(ct+d),
+$$
+
+where $$a,e$$ are the center coordinates, $$b>0$$ is a length, $$c\ne0$$ has units of inverse time, and $$d$$ is the starting angle. Since
+
+$$
+(x-a)^2+(y-e)^2=b^2,
+$$
+
+the path is a circle of radius $$b$$. Differentiate both components:
+
+$$
+\vec v(t)=-bc\sin(ct+d)\hat i+bc\cos(ct+d)\hat j,
+$$
+
+$$
+\vec a(t)=-bc^2\cos(ct+d)\hat i-bc^2\sin(ct+d)\hat j.
+$$
+
+The magnitude of velocity (speed) is $$v=b\lvert c\rvert$$. The acceleration is $$-c^2$$ times the displacement from the center, so it points inward and has magnitude $$bc^2$$.
+
+A complete revolution changes the phase by $$2\pi$$. Thus the period (time per cycle) and frequency (cycles per second) are
+
+$$
+T=\frac{2\pi}{\lvert c\rvert},\qquad f=\frac{1}{T}=\frac{\lvert c\rvert}{2\pi}.
+$$
+
+We call the signed rate of change of angle the **angular velocity**, $$\omega=c$$: positive for counterclockwise motion and negative for clockwise motion. Its magnitude is the angular speed, $$\lvert\omega\rvert=2\pi f$$. Writing $$b=r$$, $$d=\theta_0$$, and the center as $$(x_c,y_c)$$ gives
+
+$$
+x(t)=x_c+r\cos(\omega t+\theta_0),\qquad
+y(t)=y_c+r\sin(\omega t+\theta_0).
+$$
+
+Using $$v=r\lvert\omega\rvert$$, the inward acceleration magnitude is
+
+$$
+a_c=r\omega^2=\frac{v^2}{r}=\frac{4\pi^2r}{T^2}.
+$$
+
+</div>
+
+The position relative to the center, velocity, and acceleration are related geometrically: velocity is tangent to the circle, while acceleration is opposite the radius/position vector. “Centripetal” (literally meaning "center-seeking") is just the name of the inward component of acceleration.
+
+<div class="theorem-box">
+
+**Example.** A marker attached to a rigid arm of length $$L$$ moves in a horizontal circle. The arm stays at angle $$\theta$$ from the vertical. A camera measures the marker's constant speed $$v$$. Find its period and inward acceleration.
+
+The circle has radius $$r=L\sin\theta$$. One revolution covers the circumference of the traveled circle, so
+
+$$
+T=\frac{2\pi L\sin\theta}{v},\qquad
+a_c=\frac{v^2}{L\sin\theta}.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A point moves according to $$x=2+3\cos(4t)$$ and $$y=-1+3\sin(4t)$$, with distances in meters and time in seconds. Find the center, radius, period, speed, and acceleration vector when $$t=\pi/8\ \text{s}$$.
+
+The center is $$(2,-1)\ \text{m}$$, the radius is $$3\ \text{m}$$, and $$\omega=4\ \text{rad/s}$$. Therefore
+
+$$
+T=\frac{2\pi}{4}=\frac{\pi}{2}\ \text{s},\qquad
+v=3(4)=12\ \text{m/s},\qquad
+a_c=3(4)^2=48\ \text{m/s}^2.
+$$
+
+At the specified time the phase is $$\pi/2$$, so the point is at the top of the circle. Its acceleration points downward:
+
+$$
+\vec a=-48\hat j\ \text{m/s}^2.
+$$
+
+</div>
+
+### Nonuniform circular motion
+
+// note to self: make sure to update this section
+
+What if the speed of the object is changing while moving in a circle? For this **nonuniform circular motion**, acceleration has both radial and tangential components:
+
+$$
+a_r = \frac{v^2}{r},
+$$
+
+$$
+a_t = \frac{dv}{dt}.
+$$
+
+The radial component changes the direction of velocity while the tangential component changes the speed.
+
+<div class="theorem-box">
+
+**Example.** A particle moves counterclockwise on a circle of radius $$R$$, starting at $$\theta(0)=0$$ with speed $$v_0>0$$. Its speed increases according to $$dv/dt=\beta v$$, where $$\beta>0$$ is constant. Given $$v_0<\beta R$$, find when its acceleration first makes a $$45^\circ$$ angle with the inward radius, and find its angular displacement and acceleration vector then.
+
+Separate variables and apply the initial condition:
+
+$$
+\frac{dv}{v}=\beta\,dt
+\quad\Longrightarrow\quad
+v(t)=v_0e^{\beta t}.
+$$
+
+The radial and tangential magnitudes are
+
+$$
+a_c=\frac{v_0^2e^{2\beta t}}{R},\qquad
+a_t=\beta v_0e^{\beta t}.
+$$
+
+The angle is $$45^\circ$$ when these are equal, so the speed must be $$v_*=\beta R$$. Therefore
+
+$$
+t_*=\frac{1}{\beta}\ln\frac{\beta R}{v_0}.
+$$
+
+The angle traveled comes from integrating $$\dot\theta=v/R$$:
+
+$$
+\theta(t)=\frac{v_0}{\beta R}(e^{\beta t}-1),\qquad
+\theta_*=1-\frac{v_0}{\beta R}.
+$$
+
+At this instant both components have magnitude $$\beta^2R$$. Use the outward radial unit vector $$\hat r=(\cos\theta,\sin\theta)$$ and counterclockwise tangent $$\hat\theta=(-\sin\theta,\cos\theta)$$. Thus
+
+$$
+\vec a_*=\beta^2R(-\hat r+\hat\theta)
+=\beta^2R\big[-(\cos\theta_*+\sin\theta_*)\hat i
++(\cos\theta_*-\sin\theta_*)\hat j\big],
+$$
+
+and $$\lvert\vec a_*\rvert=\sqrt2\,\beta^2R$$.
+
+</div>
+
+---
+
+## Kinematics in two dimensions and projectile motion
 
 In 2D, vectors can be broken down into $$x$$- and $$y$$-components. For **projectile motion** with negligible air resistance (meaning you throw something in the air or something is launched), horizontal acceleration is zero and vertical acceleration is $$g$$ downward (again, signs depend on whether you call “up” positive $$y$$ or not). The motions along $$x$$ and $$y$$ are independent except that they share the same time parameter $$t$$.
 
@@ -914,7 +1068,7 @@ The key idea is that the perpendicular components are independent, just as in pr
 
 </div>
 
-You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/advmech/).
+You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/classical-continuum/advmech/).
 
 ---
 

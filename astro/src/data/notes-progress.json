@@ -920,7 +920,7 @@
       "next_step": "Add worked examples"
     },
     {
-      "title": "Conductors & Capacitors",
+      "title": "Capacitors and Dielectrics",
       "route": "/notes/physics/eandm/conductors-capacitors/",
       "course": "Electricity & Magnetism",
       "kind": "unit",
@@ -945,8 +945,8 @@
     },
     {
       "title": "Advanced Mechanics",
-      "route": "/notes/physics/advmech/",
-      "course": "Physics",
+      "route": "/notes/physics/classical-continuum/advmech/",
+      "course": "Classical & Continuum Physics",
       "kind": "unit",
       "status": "developing",
       "progress": 70,
@@ -957,8 +957,8 @@
     },
     {
       "title": "Fluid Dynamics",
-      "route": "/notes/physics/fluiddynamics/",
-      "course": "Physics",
+      "route": "/notes/physics/classical-continuum/fluiddynamics/",
+      "course": "Classical & Continuum Physics",
       "kind": "unit",
       "status": "developing",
       "progress": 70,
@@ -1005,8 +1005,8 @@
     },
     {
       "title": "Thermodynamics",
-      "route": "/notes/physics/thermodynamics/",
-      "course": "Physics",
+      "route": "/notes/physics/classical-continuum/thermodynamics/",
+      "course": "Classical & Continuum Physics",
       "kind": "unit",
       "status": "developing",
       "progress": 70,

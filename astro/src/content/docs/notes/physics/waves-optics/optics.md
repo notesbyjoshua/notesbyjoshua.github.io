@@ -118,39 +118,42 @@ This is how optical fibers trap light and why a diamond ($$n\approx 2.4$$, so $$
 
 ## Thin lenses and ray tracing
 
-A thin lens is a lens that we assumed to ahve no width and one that obeys the **thin-lens equation** (looks exactly like the mirror equation) and magnification:
+A thin lens has thickness small enough to neglect compared with the relevant distances. In the paraxial approximation, it obeys the **thin-lens equation** and magnification relation:
 
 $$
 \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i},
 \qquad
-m = -\frac{d_i}{d_o}=-\frac{h_i}{h_o}.
+m = -\frac{d_i}{d_o}=\frac{h_i}{h_o}.
 $$
 
 $$h_i$$ and $$h_o$$ are the heights of the image and the object, respectively. Note that a negative height/magnitude means the image is inverted. 
 
 <div class="theorem-box">
 
-**Proof (Thin lens equation).** A concave mirror has center of curvature $$C$$ at distance $$R$$ from the vertex. A paraxial ray from an axial object $$O$$ (distance $$d_o$$) strikes the mirror at height $$h$$ and reflects to the image $$I$$ (distance $$d_i$$). Let the ray hit at angle $$\theta$$ to the radius (the local normal). Let $$\alpha,\beta,\gamma$$ be the angles the object ray, image ray, and radius make with the axis:
+**Proof (Thin lens equation).** Consider a converging thin lens at $$x=0$$, a real upright object of height $$h_o$$ at $$x=-d_o$$, and a real image of signed height $$h_i<0$$ at $$x=d_i$$. Work with paraxial rays, close to the axis, and the same medium on both sides.
+
+A ray through the optical center travels straight in the thin-lens approximation. Similar triangles on either side give
 
 $$
-\alpha\approx\frac{h}{d_o},\qquad \beta\approx\frac{h}{d_i},\qquad \gamma\approx\frac{h}{R}.
+\frac{h_i}{h_o}=-\frac{d_i}{d_o}.
 $$
 
-The radius bisects incident and reflected rays (law of reflection), and the exterior-angle relations of the two triangles give $$\gamma=\alpha+\theta$$ and $$\beta=\gamma+\theta$$. Eliminating $$\theta$$,
+A second ray leaves the object parallel to the axis at height $$h_o$$. It refracts through the far focal point $$(f,0)$$. Its outgoing slope is $$-h_o/f$$, so at the image plane,
 
 $$
-\alpha+\beta=2\gamma
+h_i=h_o-\frac{h_o}{f}d_i,\qquad
+\frac{h_i}{h_o}=1-\frac{d_i}{f}.
+$$
+
+Equate the two expressions for the height ratio:
+
+$$
+-\frac{d_i}{d_o}=1-\frac{d_i}{f}
 \quad\Longrightarrow\quad
-\frac{1}{d_o}+\frac{1}{d_i}=\frac{2}{R}.
+\frac1f=\frac1{d_o}+\frac1{d_i}.
 $$
 
-Parallel rays ($$d_o\to\infty$$) focus at $$d_i=R/2$$, defining the focal length $$f=R/2$$, so
-
-$$
-\frac{1}{d_o}+\frac{1}{d_i}=\frac{1}{f}.
-$$
-
-// change this to fit thin lens instead of curved mirror
+The construction used a real image, but signed distances extend the formula to virtual objects and images. For a real object on the incoming side, $$d_o>0$$; a real image on the outgoing side has $$d_i>0$$, and a virtual image on the incoming side has $$d_i<0$$. Converging lenses have $$f>0$$ and diverging lenses have $$f<0$$.
 
 </div>
 
@@ -158,7 +161,16 @@ $$
 
 <div class="theorem-box">
 
-**Theorem (Lensmaker's equation)** // add the theorem of the lensmaker equation, including sign conventions
+**Theorem (Lensmaker's equation).** A thin lens with refractive index $$n_\ell$$ surrounded on both sides by the same medium of index $$n_m$$ has focal length
+
+$$
+\frac1f=\left(\frac{n_\ell}{n_m}-1\right)
+\left(\frac1{R_1}-\frac1{R_2}\right).
+$$
+
+Take light to travel left to right. $$R_1$$ is the signed radius of the first surface and $$R_2$$ of the second. A radius is positive when that surface's center of curvature lies to its right, and negative when it lies to its left. A plane surface has $$R=\infty$$ and contributes zero.
+
+For a biconvex glass lens in air, $$R_1>0$$ and $$R_2<0$$, so $$f>0$$. For a biconcave lens, $$R_1<0$$ and $$R_2>0$$, giving $$f<0$$. In air, use $$n_m\approx1$$. The formula assumes spherical surfaces, negligible thickness, and small ray angles.
 
 </div>
 
@@ -205,7 +217,9 @@ The words **convex** and **concave** describe the shape; **converging** and **di
 | Plano-concave | one flat side, one concave side | diverging | $$-$$ | common simple negative lens |
 | Negative meniscus | one convex and one concave side, thinner in middle | diverging | $$-$$ | weaker/aberration-controlled negative lens |
 
-// add a photo of each type of lens
+<img class="note-img note-img--w720" src="/assets/physics/usapho/comments/lens-types.png" alt="Photographic-style illustration comparing biconvex, plano-convex, positive meniscus, biconcave, plano-concave, and negative meniscus lens shapes" loading="lazy" decoding="async" />
+
+*Generated photographic illustration of the six lens shapes. The table describes their behavior when the lens index exceeds the surrounding medium's index.*
 
 In ordinary air, a lens thicker in the middle is usually converging and a lens thinner in the middle is usually diverging. If the surrounding medium has a higher index than the lens, the behavior can reverse, because the lensmaker's equation depends on the index contrast, not just the visual shape.
 

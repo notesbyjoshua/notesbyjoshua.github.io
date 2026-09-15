@@ -392,7 +392,7 @@ the solar mass $$M_\odot$$.
 
 ## The mechanics of a star
 
-We now turn from observing stars to modeling their interiors. The governing idea is **hydrostatic equilibrium**: at every depth, the pressure difference across a shell must support the weight of the material above it. This is exactly the [fluid hydrostatic equation](/notes/physics/fluiddynamics/), but with the local, depth-dependent gravity of a self-gravitating mass.
+We now turn from observing stars to modeling their interiors. The governing idea is **hydrostatic equilibrium**: at every depth, the pressure difference across a shell must support the weight of the material above it. This is exactly the [fluid hydrostatic equation](/notes/physics/classical-continuum/fluiddynamics/), but with the local, depth-dependent gravity of a self-gravitating mass.
 
 ### Hydrostatic equilibrium
 

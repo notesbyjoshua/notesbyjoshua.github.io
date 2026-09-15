@@ -5,33 +5,35 @@ sidebar:
   order: 1
 ---
 
-## Charges
+## Charging and the flow of charge
 
-All atoms that make up matter contains protons, electrons, and neutrons, and ordinary charging is mostly about moving electrons. A proton has charge $$+e$$, an electron has charge $$-e$$, and a neutron is neutral, where
+Ordinary matter contains positively charged nuclei and negatively charged electrons. Most nuclei also contain neutral neutrons. Charging everyday objects mainly involves moving electrons between them. A proton has charge $$+e$$, an electron has charge $$-e$$, and a neutron is neutral, where
 
 $$
 e=1.602\times 10^{-19}\text{ C}.
 $$
 
-This is known as an **elementary charge**. Macroscopic charge is usually a tiny imbalance of electrons compared with the total number of particles in an object. Charge is conserved: it can move from one object to another, but it is not created or destroyed in ordinary electrostatics. As you go to quantum levels (which is not needed for USAPhO), charged particles are created and annihilated in matter-antimatter pairs.
+This is the **elementary charge**. An object becomes negative by gaining electrons and positive by losing them. Charging redistributes charge; it does not create net charge. The total charge of an isolated system stays constant.
 
-### Materials
-
-Materials differ by how easily their electrons move.
+How that excess charge moves depends on the material:
 
 - **Conductors** have mobile charges that can redistribute through the material.
 - **Insulators** have charges that are locally bound, so charge does not freely flow through the object.
 - **Semiconductors** are between the two: they have some mobile charge carriers, but far fewer than a good conductor.
 
-Grounding connects an object to a large charge reservoir (usually the Earth). We will assume for practical purposes that Earth has basically infinite electrons and acts like a perfect ground.
+This difference matters when we charge an object. In **conduction**, objects make electrical contact and electrons move between them. Two connected conductors reach the same potential at equilibrium; they do not necessarily end up with equal charges. Identical, widely separated metal spheres are a useful special case: after contact and separation, each has half the original total charge.
 
-### Charging, induction, and polarization
+In **induction**, a nearby charged object changes the charge distribution without touching the conductor. Bring a negative rod near an isolated neutral metal sphere: electrons move to the far side, leaving a positive region near the rod. The sphere is polarized, but its total charge is still zero.
 
-Charging by contact transfers charge directly. Charging by induction uses an external charged object to redistribute charges inside a conductor; if the conductor is grounded during the process, charge can leave or enter, and the conductor may be left with a net charge after the ground and external object are removed.
+To leave a net positive charge on the sphere, connect it to ground while the negative rod is nearby. Repelled electrons can then leave through the wire. Disconnect the ground **first**, then remove the rod. The remaining positive charge redistributes over the sphere. Removing the rod while the sphere is still grounded would let electrons return and undo the charging. A positive inducing rod reverses the charge signs and electron-flow direction.
 
-**Polarization** means that positive and negative charge separate slightly inside a neutral object. This is why a charged object can attract a neutral object: the closer side is induced to have the opposite sign, and the closer attraction beats the farther repulsion.
+**Grounding** connects the conductor to a large charge reservoir, usually Earth. Electrons flow in either direction until the conductor reaches Earth's potential, which we choose as $$V=0$$. Grounding fixes potential, not net charge: the nearby rod can leave the grounded sphere positively charged even while it is connected.
 
-### Coulomb's law
+<img class="note-img note-img--w480" src="/assets/physics/usapho/comments/grounding.svg" alt="A negative rod repels electrons from a metal sphere through a wire to Earth, with arrows for electron flow and the ground symbol" loading="lazy" decoding="async" />
+
+---
+
+## Electric force and Coulomb's law
 
 <div class="theorem-box">
 
@@ -47,11 +49,59 @@ $$
 
 The force is repulsive for like charges and attractive for opposite charges.
 
-:::warning
-In vector problems, do not only add magnitudes; use components or unit vectors and then apply superposition.
-:::
+Here $$\hat r$$ points from source charge $$q_1$$ toward the charge $$q_2$$ experiencing the force. The signs of $$q_1q_2$$ then give the direction. Doubling the separation reduces the force to one quarter; the expression applies to stationary point charges in vacuum, or outside spherically symmetric charge distributions when their centers can be used as the source points.
 
-### Electric field
+For several charges, use **superposition**: each source contributes its own force, and the net force is their vector sum. If a charge $$q$$ sits at $$\vec r$$ and source charges $$q_i$$ sit at $$\vec r_i$$,
+
+$$
+\vec F(\vec r)=kq\sum_i q_i\frac{\vec r-\vec r_i}{\lvert\vec r-\vec r_i\rvert^3}.
+$$
+
+For a continuous distribution, divide the source into small elements $$dq$$ and replace the sum by an integral:
+
+$$
+\vec F(\vec r)=kq\int
+\frac{\vec r-\vec r'}{\lvert\vec r-\vec r'\rvert^3}\,dq.
+$$
+
+The source coordinate $$\vec r'$$ varies during integration; the observation point $$\vec r$$ stays fixed. Resolve directions before integrating. Adding force magnitudes would miss cancellations.
+
+### Vacuum permittivity
+
+The constant $$\varepsilon_0$$, read “epsilon naught,” is the **vacuum permittivity**. It sets the strength of electric interactions in SI units:
+
+$$
+\varepsilon_0\approx8.854\times10^{-12}\ \frac{\mathrm C^2}{\mathrm{N\,m}^2}
+=8.854\times10^{-12}\ \mathrm{F/m},
+\qquad
+k=\frac{1}{4\pi\varepsilon_0}\approx8.988\times10^9\ \frac{\mathrm{N\,m}^2}{\mathrm C^2}.
+$$
+
+The factor $$4\pi$$ comes from the geometry of a sphere, which has area $$4\pi r^2$$. We will see it cancel when integrating a point charge's field over a spherical surface in Gauss's law.
+
+In a uniform, linear, isotropic dielectric filling the region, we often use $$\varepsilon=\varepsilon_r\varepsilon_0$$. Interfaces and nonuniform materials require more care because polarization adds bound charges; those effects are covered in the capacitor and dielectric notes.
+
+<div class="theorem-box">
+
+**Example.** Two charges $$+Q$$ are fixed at $$(a,0)$$ and $$(-a,0)$$. A charge $$-q$$, with $$q>0$$, is at $$(0,b)$$, where $$b>0$$. Find the net force on $$-q$$.
+
+Both source charges attract it. Their horizontal forces cancel, and both vertical components point down. Each separation is $$d=\sqrt{a^2+b^2}$$, so
+
+$$
+F_y=-2\left(\frac{kQq}{d^2}\right)\frac{b}{d}
+=-\frac{2kQqb}{(a^2+b^2)^{3/2}},
+\qquad F_x=0.
+$$
+
+For $$b\gg a$$ this approaches $$-2kQq/b^2$$, the force of a single charge $$2Q$$ at the origin.
+
+</div>
+
+## Electric fields
+
+An electric field assigns a vector to every point in space. That vector tells us the force a positive unit charge would experience there. The source charges establish the field whether or not we place a test charge at that point.
+
+This separates the source configuration from the particle responding to it: calculate $$\vec E$$ once, then use $$\vec F=q\vec E$$ for any test charge. A negative charge feels a force opposite the field. The test charge must be small enough that it does not appreciably rearrange the sources.
 
 The electric field is force per unit positive test charge:
 
@@ -59,21 +109,19 @@ $$
 \vec E=\frac{\vec F}{q_0}.
 $$
 
-The field can be viewed as a vector function of position,
+Since the electric field is a vector, it can be broken down into components:
 
 $$
 \vec E(x,y,z)=E_x(x,y,z)\hat i+E_y(x,y,z)\hat j+E_z(x,y,z)\hat k.
 $$
 
-For many source charges, add the individual fields:
+In addition, by the superposition principle, for many source charges, add the individual fields:
 
 $$
 \vec E_{\text{net}}=\sum_i \vec E_i.
 $$
 
-The field is a real physical entity, not just a calculational shorthand: the source charges create it throughout space whether or not a test charge is there, and any charge placed at a point then feels the local field. This also hides a subtlety: the field takes time to establish itself, propagating at the speed of light, which is why Coulomb's law strictly holds only for **static** charges. Once magnetic effects enter, electric and magnetic fields can even sustain and propagate each other with no charges present at all; that is light.
-
-For continuous charge distributions, replace the sum by an integral:
+For continuous charge distributions, we can replace the sum by an integral:
 
 $$
 dE=k\frac{dq}{r^2},
@@ -90,6 +138,8 @@ It is very important to choose useful coordinates (e.g. rectangular, polar, sphe
 <div class="theorem-box">
 
 **Example.** Find the electric field of a uniformly charged disk with radius $$R$$ at a point $$x$$ above the center.
+
+<img class="note-img note-img--w480" src="/assets/physics/usapho/comments/charged-disk.svg" alt="Charged disk of radius R, thin source ring of radius r and width dr, and observation point P a distance x along the disk axis" loading="lazy" decoding="async" />
 
 A uniformly charged disk can be built from thin rings. If the disk has surface charge density $$\sigma$$, then a ring of radius $$r$$ and thickness $$dr$$ has
 
@@ -117,29 +167,52 @@ for $$x>0$$.
 
 <div class="theorem-box">
 
-**Example.** Find the electric field at the center of a uniformly charged hemispherical shell of radius $$R$$ and surface charge density $$\sigma$$.
+**Example.** A solid hemisphere of radius $$R$$ occupies $$z\ge0$$ and has uniform volume charge density $$\rho$$. Find the electric field at the origin, the center of its flat face, using disks and then a triple integral.
 
-By symmetry the field at the center points along the axis of the hemisphere. Slice the shell into thin rings at polar angle $$\theta$$ from the axis. A ring at angle $$\theta$$ has radius $$R\sin\theta$$, circumference $$2\pi R\sin\theta$$, and width $$R\,d\theta$$, so
+Rotational symmetry cancels the horizontal components. For $$\rho>0$$ the field points down, away from the charge above the origin.
 
-$$
-dq=\sigma\,(2\pi R\sin\theta)(R\,d\theta)=2\pi\sigma R^2\sin\theta\,d\theta.
-$$
-
-Every element of the ring sits at distance $$R$$ from the center, and only the component along the axis survives, contributing a factor $$\cos\theta$$:
+**Method 1: stack thin disks.** At height $$z$$ the disk radius is $$\sqrt{R^2-z^2}$$, and a slice of thickness $$dz$$ has effective surface charge density $$\rho\,dz$$. Apply the disk result to a point a distance $$z$$ below that slice:
 
 $$
-dE=k\frac{dq}{R^2}\cos\theta=2\pi k\sigma\sin\theta\cos\theta\,d\theta.
+dE_z=-\frac{\rho\,dz}{2\varepsilon_0}
+\left(1-\frac{z}{\sqrt{z^2+(R^2-z^2)}}\right)
+=-\frac{\rho}{2\varepsilon_0}\left(1-\frac{z}{R}\right)dz.
 $$
 
-Integrating over the hemisphere ($$\theta:0\to\pi/2$$),
+Then
 
 $$
-E=2\pi k\sigma\int_0^{\pi/2}\sin\theta\cos\theta\,d\theta=2\pi k\sigma\cdot\tfrac12=\pi k\sigma=\frac{\sigma}{4\varepsilon_0}.
+E_z=-\frac{\rho}{2\varepsilon_0}\int_0^R\left(1-\frac{z}{R}\right)dz
+=-\frac{\rho R}{4\varepsilon_0}.
 $$
 
-The clean answer hides a useful cancellation: the $$1/R^2$$ from Coulomb's law exactly kills the $$R^2$$ in the ring's charge, so the radius drops out entirely.
+**Method 2: spherical-coordinate triple integral.** Let $$r$$ measure the source point's distance from the origin and $$\theta$$ its angle from $$+z$$. The hemisphere has $$0\le r\le R$$, $$0\le\theta\le\pi/2$$, and $$0\le\phi\le2\pi$$. Since
+
+$$
+dq=\rho r^2\sin\theta\,dr\,d\theta\,d\phi,
+$$
+
+the downward field component is $$dE_z=-k\,dq\cos\theta/r^2$$. Thus
+
+$$
+E_z=-k\rho
+\int_0^Rdr\int_0^{\pi/2}\sin\theta\cos\theta\,d\theta
+\int_0^{2\pi}d\phi
+=-k\rho R\left(\frac12\right)(2\pi)
+=-\frac{\rho R}{4\varepsilon_0}.
+$$
+
+Both methods give
+
+$$
+\vec E=-\frac{\rho R}{4\varepsilon_0}\hat z.
+$$
+
+The apparent $$1/r^2$$ singularity cancels against the volume element, so the integral remains finite at the origin.
 
 </div>
+
+---
 
 ### Electric field lines
 
@@ -152,7 +225,9 @@ Field lines are a visual tool:
 
 Field lines are not the field itself. They are a way to visualize a vector field in space.
 
-### Electric flux
+// note to self: add the hw problem about electric field lines (problem 6 of Ran, HW 1)
+
+## Electric flux and Gauss' Law
 
 Electric flux measures how much electric field passes through a surface:
 
@@ -168,7 +243,9 @@ $$
 \Phi_E=EA\cos\theta.
 $$
 
-### Gauss's law
+<img class="note-img note-img--w480" src="/assets/physics/usapho/comments/flux.svg" alt="Uniform electric field crossing a tilted surface, with area normal and angle theta between the field and normal" loading="lazy" decoding="async" />
+
+For an open surface, flux depends on its area and orientation. For a **closed** surface, count outward crossings positively and inward crossings negatively. An external charge can send field through the surface, but its entering and leaving contributions cancel. Gauss's law makes this connection between net flux and enclosed charge exact:
 
 <div class="theorem-box">
 
@@ -179,8 +256,6 @@ $$
 $$
 
 </div>
-
-It is always true, but it is only easy to use when symmetry makes $$E$$ constant on the useful parts of a Gaussian surface.
 
 <div class="theorem-box">
 
@@ -254,7 +329,36 @@ Good Gaussian surfaces match the symmetry:
 - pillbox for infinite plane symmetry.
 :::
 
+<div class="theorem-box">
+
+**Example.** A nonconducting sphere of radius $$R$$ has charge density $$\rho(r)=\rho_0r/R$$. Find its electric field inside and outside.
+
+A concentric Gaussian sphere has constant radial field. For $$r<R$$, first integrate the charge actually enclosed:
+
+$$
+Q_{\mathrm{enc}}(r)=4\pi\int_0^r\frac{\rho_0r'}{R}r'^2\,dr'
+=\frac{\pi\rho_0r^4}{R}.
+$$
+
+Gauss's law gives $$4\pi r^2E_r=Q_{\mathrm{enc}}/\varepsilon_0$$, so
+
+$$
+E_r(r)=
+\begin{cases}
+\rho_0r^2/(4\varepsilon_0R),&r<R,\\
+\rho_0R^3/(4\varepsilon_0r^2),&r>R.
+\end{cases}
+$$
+
+The total charge is $$\pi\rho_0R^3$$. The two expressions agree at $$r=R$$, and the exterior field falls as $$1/r^2$$.
+
+</div>
+
 ### Standard Gaussian results
+
+// note to self, make sure to every standard E is here
+
+Often times, USAPhO problems rely on standard cases of Gauss' Law (which you can try to derive yourself!).
 
 For a thin spherical shell of radius $$R$$ and total charge $$Q$$,
 
@@ -328,9 +432,9 @@ The field point $$\vec r$$ cancels, leaving the same field everywhere in the cav
 
 </div>
 
-### Electrostatic equilibrium in conductors
+## Electrostatic equilibrium in conductors
 
-In a conductor at electrostatic equilibrium, charges have stopped moving macroscopically. Therefore:
+In USAPhO, many problems will deal with conductors, since it is the easiest type of material to model charge transfer and effects on. In a conductor at electrostatic equilibrium, charges have stopped moving macroscopically. Therefore:
 
 - $$\vec E=0$$ inside the conducting material.
 - Excess charge lies on the conductor's surface.
@@ -345,9 +449,7 @@ $$
 E_{\text{outside}}=\frac{\sigma}{\varepsilon_0}.
 $$
 
-This comes from a thin Gaussian pillbox crossing the surface: the inside face has zero flux because the field inside the conductor is zero, and the outer face contributes $$EA$$.
-
-For advanced conductor problems, the outward electrostatic pressure on a charged conducting surface is
+These features are **very important** to remember for any conductor problems, since it makes it so much easier to solve. In addition, the outward electrostatic pressure on a charged conducting surface is
 
 $$
 P=\frac{\sigma^2}{2\varepsilon_0}.
@@ -355,11 +457,27 @@ $$
 
 One way to remember this is that the surface charge feels the field from the rest of the conductor, not the full field including itself; that gives the factor of $$1/2$$.
 
-Three more facts about conductors recur constantly:
+<div class="theorem-box">
 
-- **Charge concentrates where the surface curves most.** On an isolated conductor, regions of higher curvature (sharper points) carry higher surface charge density and therefore stronger fields just outside. This is why charge "leaks" off sharp points and why lightning rods are pointed.
-- **A conductor shields its interior.** The field inside the conducting material is zero, and the field inside an empty cavity within a conductor is also zero (provided no charge sits in the cavity). A closed conductor thus isolates its interior from outside fields — a **Faraday cage**.
-- **Grounding fixes the potential, not the charge.** Connecting a conductor to ground sets $$V=0$$ (taking $$V_\infty=0$$), but the conductor can still carry induced surface charge; grounding just lets whatever charge is needed flow to or from the Earth to hold $$V=0$$.
+**Example.** An isolated conducting sphere of radius $$R$$ carries charge $$Q$$ in vacuum. Find its surface charge density, the field immediately outside, and the electrostatic pressure.
+
+Spherical symmetry makes the charge uniform:
+
+$$
+\sigma=\frac{Q}{4\pi R^2},\qquad
+\vec E(R^+)=\frac{Q}{4\pi\varepsilon_0R^2}\hat r.
+$$
+
+The outward pressure is
+
+$$
+P=\frac{\sigma^2}{2\varepsilon_0}
+=\frac{Q^2}{32\pi^2\varepsilon_0R^4}.
+$$
+
+Doubling the charge quadruples the pressure. At fixed charge, doubling the radius reduces the pressure by a factor of $$16$$. The pressure is outward for either sign of $$Q$$.
+
+</div>
 
 ### Conducting cavities
 
@@ -385,9 +503,31 @@ If the same conductor is grounded, charge can flow to Earth. The inner wall stil
 Do not confuse "field inside the conducting material is zero" with "potential is zero." The conductor is one equipotential, but that constant is only zero if the conductor is grounded or chosen as the reference.
 :::
 
-## Electric potential and potential energy
+<div class="theorem-box">
 
-The electrostatic force is conservative, which lets us replace vector field bookkeeping with scalar energy.
+**Example.** An isolated conducting shell has total charge $$+3q$$. A point charge $$-q$$ sits off-center inside its closed cavity. Find the total charges on the inner and outer surfaces. Then find those totals after grounding the shell, assuming no external charges.
+
+A Gaussian surface inside the metal has zero flux, so the inner wall must cancel the cavity charge:
+
+$$
+Q_{\mathrm{inner}}=+q.
+$$
+
+Before grounding, charge conservation gives
+
+$$
+Q_{\mathrm{outer}}=3q-Q_{\mathrm{inner}}=2q.
+$$
+
+Grounding fixes the shell potential at zero. With no external sources, the exterior solution is $$V=0$$, so the outer surface becomes uncharged. The inner surface still carries $$+q$$. The conductor's total charge changes from $$3q$$ to $$q$$, so electrons with total charge $$-2q$$ have arrived from Earth.
+
+The off-center position makes the inner surface charge nonuniform, but it does not change its total.
+
+</div>
+
+---
+
+## Electric potential and potential energy
 
 ### Review: Conservative forces
 
@@ -417,7 +557,7 @@ W=\int_A^B k\frac{Qq}{r^2}\hat r\cdot d\vec\ell
 =kQq\left(\frac{1}{r_A}-\frac{1}{r_B}\right),
 $$
 
-which depends only on the initial and final distances—not the path. For a system of source charges, superposition makes the total work the sum of pairwise works, each of which is path-independent, so the total is path-independent too.
+which depends only on the initial and final distances and not the path. For a system of source charges, superposition makes the total work the sum of pairwise works, each of which is path-independent, so the total is path-independent too.
 
 </div>
 
@@ -429,14 +569,31 @@ $$
 E_p(A)=-\int_O^A q\vec E\cdot d\vec\ell .
 $$
 
-The **electric potential** is energy per unit charge,
+The minus sign comes from the definition of potential energy: work done by the electric force reduces the stored potential energy. In a small displacement,
+
+$$
+dU=-dW=-\vec F\cdot d\vec\ell=-q\vec E\cdot d\vec\ell.
+$$
+
+Integrating from the chosen reference $$O$$ gives the expression above; $$E_p$$ is another notation for $$U$$. For a point source $$Q$$, choose infinity as the reference and a radial path:
+
+$$
+U(r)-U(\infty)
+=-\int_\infty^r\frac{kQq}{r'^2}\,dr'
+=-kQq\left[-\frac1{r'}\right]_\infty^r
+=\frac{kQq}{r}.
+$$
+
+For like charges this is positive: bringing them together requires positive external work. For opposite charges it is negative: the electric force does positive work as they approach.
+
+The **electric potential** is defined as the energy per unit charge,
 
 $$
 V(A)=\frac{E_p}{q}=-\int_O^A \vec E\cdot d\vec\ell,
 \qquad V=\frac{kQ}{r}\ \text{(point charge)} .
 $$
 
-Potential superposes by ordinary addition, and for continuous distributions it becomes an integral:
+As opposed to electric field, electric potential is a *scalar*, meaning that it superposes by ordinary addition, and for continuous distributions it becomes an integral:
 
 $$
 V=k\sum_i\frac{q_i}{r_i},
@@ -444,7 +601,9 @@ V=k\sum_i\frac{q_i}{r_i},
 V=k\int\frac{dq}{r}.
 $$
 
-When the field is already known from symmetry, it is usually faster to integrate it: $$\Delta V=-\int \vec E\cdot d\vec\ell$$. A useful consistency fact: $$\vec E$$ may jump across a charged surface, but $$V$$ is always **continuous**, because it is the integral of a bounded field across zero thickness.
+When the field is already known from symmetry, it is usually faster to integrate it: $$\Delta V=-\int \vec E\cdot d\vec\ell$$. Although $$\vec E$$ may jump across a charged surface, but $$V$$ is always **continuous**, because it is the integral of a bounded field across zero thickness.
+
+Like potential energy, electric potential requires a reference point. For real (finite) charge distributions, $$V(\infty)=0$$ is always valid. However, for idealized **infinite** distributions (e.g. an infinite line or plane) $$V=k\int dq/r$$ diverges since the source itself extends out to the reference point. There you must choose a finite reference, and can only track changes in potential with respect to a finite point.
 
 <div class="theorem-box">
 
@@ -466,11 +625,7 @@ This matches the vector field integral with less calculation. To find $$\vec E$$
 
 </div>
 
-### Choosing the reference point
-
-For real (finite) charge distributions, $$V(\infty)=0$$ is always valid. It fails for idealized **infinite** distributions (e.g. an infinite line or plane) because $$V=k\int dq/r$$ diverges: the source itself extends out to the reference point. There you must choose a finite reference, and only potential differences in the region of interest carry meaning. The divergence is an artifact of the idealization, not a real physical infinity.
-
-### Potentials worth memorizing
+### Solving Potentials
 
 - **Uniform field:** $$\Delta V=-\vec E\cdot \vec d$$.
 - **Center of a uniformly charged hemispherical shell** (radius $$R$$, charge $$Q$$): every element sits at distance $$R$$, so $$V=\frac{k}{R}\int dq=\frac{kQ}{R}$$. The same "constant $$r$$" trick gives the full shell.
@@ -480,23 +635,6 @@ For real (finite) charge distributions, $$V(\infty)=0$$ is always valid. It fail
 - **Parallel planes** $$\pm\sigma$$ separated by $$d$$: $$\Delta V=\dfrac{\sigma d}{\varepsilon_0}$$.
 
 If you want, it is a good exercise to derive these yourself!
-
-### Equipotential surfaces and the gradient
-
-Writing the potential's total differential and comparing it with $$dV=-\vec E\cdot d\vec\ell$$ recovers the field component by component:
-
-$$
-dV=\frac{\partial V}{\partial x}dx+\frac{\partial V}{\partial y}dy+\frac{\partial V}{\partial z}dz=-E_x\,dx-E_y\,dy-E_z\,dz,
-$$
-
-so $$E_x=-\partial V/\partial x$$ (and likewise for $$y,z$$), i.e. $$\vec E=-\nabla V$$. The field is the **negative gradient** of the potential: it points in the direction of steepest *decrease* of $$V$$, with magnitude equal to that steepest slope.
-
-An **equipotential surface** is a surface of constant $$V$$ — the second standard way (besides field lines) to picture a field. Two properties make them useful:
-
-- **Field lines cross equipotentials at right angles.** Moving a charge along an equipotential changes $$V$$ by zero, so $$\vec E\cdot d\vec\ell=0$$ for any step within the surface; the field has no tangential component and is therefore perpendicular to the surface. (Equivalently, no work is done moving a charge along an equipotential.)
-- **Closely spaced equipotentials mean a strong field.** Since $$E$$ is the rate of change of $$V$$ with distance, tightly packed surfaces — a large $$\Delta V$$ over a small distance — signal a large gradient and a strong field.
-
-The surface of a conductor in equilibrium is itself an equipotential, which is exactly why field lines always meet a conductor perpendicularly.
 
 ### Problem-solving tips
 
@@ -509,6 +647,45 @@ A few habits that save the most time on potential problems:
 - **Choose the reference to kill terms.** Use $$V(\infty)=0$$ for localized charge; for an infinite line or plane pick a convenient finite point and track only differences.
 - **Use continuity of $$V$$ as a free check.** When you stitch together piecewise regions (inside/outside a shell, across a boundary), the pieces must agree in value even where $$\vec E$$ jumps. A mismatch means an algebra error.
 :::
+
+### Equipotential surfaces and the gradient
+
+Since $$V$$ is an integral, we can rewrite it the total differential and comparing it with $$dV=-\vec E\cdot d\vec\ell$$ can give us the electric field components:
+
+$$
+dV=\frac{\partial V}{\partial x}dx+\frac{\partial V}{\partial y}dy+\frac{\partial V}{\partial z}dz=-E_x\,dx-E_y\,dy-E_z\,dz,
+$$
+
+so $$E_x=-\partial V/\partial x$$ (and likewise for $$y,z$$), i.e. $$\vec E=-\nabla V$$. The field is the **negative gradient** of the potential: it points in the direction of steepest *decrease* of $$V$$, with magnitude equal to that steepest slope.
+
+An **equipotential surface** is defined as a surface of constant $$V$$. These surfaces have two main properties:
+
+- **Field lines cross equipotentials at right angles.** Moving a charge along an equipotential changes $$V$$ by zero, so $$\vec E\cdot d\vec\ell=0$$ for any step within the surface; the field has no tangential component and is therefore perpendicular to the surface. (Equivalently, no work is done moving a charge along an equipotential.)
+- **Closely spaced equipotentials mean a strong field.** Since $$E$$ is the rate of change of $$V$$ with distance, tightly packed surfaces — a large $$\Delta V$$ over a small distance — signal a large gradient and a strong field.
+
+The surface of a conductor in equilibrium is itself an equipotential, which is exactly why field lines always meet a conductor perpendicularly.
+
+<div class="theorem-box">
+
+**Example.** In a region of space, $$V(x,y)=A(x^2-y^2)$$, where $$A>0$$ has units $$\mathrm{V/m^2}$$. Find the field and show that it is perpendicular to the equipotential through $$(a,a)$$, where $$a>0$$.
+
+Taking the negative gradient,
+
+$$
+\vec E=-2Ax\,\hat i+2Ay\,\hat j.
+$$
+
+At $$(a,a)$$, the potential is zero. The local equipotential is the line $$y=x$$, with tangent $$\hat t=(\hat i+\hat j)/\sqrt2$$. Thus
+
+$$
+\vec E(a,a)\cdot\hat t
+=\frac{-2Aa+2Aa}{\sqrt2}=0.
+$$
+
+The field is perpendicular to the line and has magnitude $$2\sqrt2 Aa$$. Potential zero at a point does not imply field zero there.
+
+</div>
+
 
 <div class="theorem-box">
 
@@ -551,9 +728,11 @@ Each integration constant was pinned down by demanding $$V$$ be continuous at a 
 
 </div>
 
-### Energy of a charge configuration
+---
 
-There are three equivalent ways to compute the total potential energy stored in a configuration; choose whichever matches the problem.
+## Energy of a charge configuration
+
+What if instead of bringing about a new object, we wanted to calculate the energy of a charged configuration? There are three equivalent ways to compute the total potential energy stored in a configuration; choose whichever matches the problem.
 
 **1. Pairwise sum.** Add the interaction energy of every distinct pair,
 
@@ -573,9 +752,9 @@ $$
 
 for a continuous distribution, where $$V$$ is the potential of the *whole* distribution. Unlike the pairwise sum, this form **includes** self-energy (energy required to assemble the system against electrostatic repulsion).
 
-**3. Charge it up.** Assemble the charge from zero, tracking $$V$$ as a function of the accumulated charge, and integrate $$U=\int V\,dq$$. This is the cleanest method when symmetry keeps the object near one potential as it charges: for instance a conductor, or a sphere built up shell by shell.
+**3. Charge it up.** Assemble the charge from zero, tracking $$V$$ as a function of the accumulated charge, and integrate $$U=\int V\,dq$$. This is most used when symmetry keeps the object near one potential as it charges: for instance a conductor, or a sphere built up shell by shell.
 
-**4. Field energy** The field-energy viewpoint, $$U=\int \tfrac12\varepsilon_0E^2\,dV$$, is itself a fourth way to compute configuration energy and is sometimes the only practical one when no symmetry helps with potentials.
+**4. Field energy** The field-energy viewpoint, $$U=\int \tfrac12\varepsilon_0E^2\,dV$$, is itself a fourth way to compute configuration energy.
 
 <div class="theorem-box">
 
@@ -623,11 +802,36 @@ after substituting $$\sigma=Q/\pi R^2$$. The coefficient $$8/3\pi\approx0.85$$ i
 
 </div>
 
+---
+
 ## Method of images
 
-The **method of images** replaces certain conductor problems with fake charges placed outside the physical region. The key idea is that a grounded conductor has fixed potential $$V=0$$. If you can place imaginary charges so that the conductor surface is also at $$V=0$$, then the field in the real region matches the actual conductor problem.
+The **method of images** introduces fake charges placed outside the physical region. The key idea is that a grounded conductor has fixed potential $$V=0$$. If you can place imaginary charges so that the conductor surface is also at $$V=0$$, then the field in the real region matches the actual conductor potential.
 
-This works because of the **uniqueness theorem**: if a region is bounded by surfaces of specified potential (conductors, or infinity) and the charge in the region's interior is specified, then the potential throughout the region is *unique*. So any candidate that (i) obeys Gauss's law and the loop law and (ii) matches every boundary condition must be *the* answer — there is no other. That licenses pure guesswork: if some arrangement of fictitious "image" charges reproduces the correct boundary potential, the field it gives in the real region is guaranteed correct.
+This works because of the **uniqueness theorem**: if a region is bounded by surfaces of specified potential (conductors, or infinity) and the charge in the region's interior is specified, then the potential throughout the region is *unique*. So any candidate that (i) obeys Gauss's law and the loop law and (ii) matches every boundary condition must be *the* answer — there is no other. If some arrangement of fictitious "image" charges reproduces the correct boundary potential, the field it gives in the real region is guaranteed correct.
+
+For a **grounded plane** $$z=0$$ and a real charge $$q$$ at $$(x_0,y_0,a)$$ with $$a>0$$, use
+
+$$
+q'=-q,\qquad \vec r'=(x_0,y_0,-a).
+$$
+
+Reflect the charge's position across the plane and reverse its sign. The image is only a mathematical replacement for the conductor in the region $$z>0$$; it is not a real charge inside the metal.
+
+For a **grounded sphere** of radius $$R$$ centered at the origin, with a real charge $$q$$ at $$\vec r_0=d\hat n$$ and $$d>R$$, use
+
+$$
+q'=-q\frac{R}{d},\qquad
+\vec r'=\frac{R^2}{d}\hat n=\frac{R^2}{d^2}\vec r_0.
+$$
+
+The image lies inside the sphere along the line to the real charge. For any surface point $$\vec r$$ with $$\lvert\vec r\rvert=R$$,
+
+$$
+\lvert\vec r-\vec r'\rvert=\frac{R}{d}\lvert\vec r-\vec r_0\rvert,
+$$
+
+so $$kq/\lvert\vec r-\vec r_0\rvert+kq'/\lvert\vec r-\vec r'\rvert=0$$ everywhere on the surface. These values assume grounding. An isolated sphere with prescribed total charge requires an additional image at its center.
 
 <div class="theorem-box">
 
@@ -674,35 +878,13 @@ $$
 
 <div class="theorem-box">
 
-**Example.** A point charge $$q$$ sits a distance $$a$$ from the center of a grounded conducting sphere of radius $$R$$ (with $$a>R$$). Find the force induced on the charge.
-
-A single mirror charge no longer works, but one cleverly placed image does: put
-
-$$
-q'=-\frac{R}{a}\,q
-$$
-
-on the line from the center to $$q$$, at distance
-
-$$
-b=\frac{R^2}{a}
-$$
-
-from the center (inside where the sphere sits). One can check that the surface $$r=R$$ is then exactly the $$V=0$$ surface of the pair $$\{q,q'\}$$: for every point on the sphere the distances to $$q$$ and $$q'$$ are in the constant ratio $$a/R$$, so $$kq/r_q+kq'/r_{q'}=0$$. By uniqueness, the field outside the sphere is just that of $$q$$ and its image. The charge is therefore attracted to the sphere with force
-
-$$
-F=\frac{kqq'}{(a-b)^2}=-\frac{kq^2 Ra}{(a^2-R^2)^2},
-$$
-
-and the total induced charge on the grounded sphere is exactly $$q'=-(R/a)q$$.
+**Example.** // note to self: use a Ran problem
 
 </div>
 
 ---
 
 ## Problem-solving strategy
-
-A short decision tree for which tool to pull off the shelf:
 
 :::strategy
 1. **A handful of discrete point charges, want force or field:** Coulomb's law $$\vec F=k\dfrac{q_1q_2}{r^2}\hat r$$ with vector superposition $$\vec E_{\text{net}}=\sum_i\vec E_i$$. Resolve into components or use symmetry to kill a direction before adding — never sum magnitudes.
@@ -714,4 +896,4 @@ A short decision tree for which tool to pull off the shelf:
 7. **You need total stored energy:** Pick the form that matches the symmetry — pairwise sum $$\dfrac{1}{4\pi\varepsilon_0}\sum_{i<j}\dfrac{q_iq_j}{r_{ij}}$$ (excludes self-energy), $$\tfrac12\int V\,dq$$ or "charge it up" $$\int V\,dq$$ (includes it), or the field integral $$\int\tfrac12\varepsilon_0E^2\,dV$$ when no symmetry helps with potentials.
 :::
 
-Capacitance, electric dipoles, polarization, and dielectric fields continue in [Conductors & Capacitors](/notes/physics/eandm/conductors-capacitors/).
+Capacitance, electric dipoles, polarization, and dielectric fields continue in [Capacitors and Dielectrics](/notes/physics/eandm/conductors-capacitors/).

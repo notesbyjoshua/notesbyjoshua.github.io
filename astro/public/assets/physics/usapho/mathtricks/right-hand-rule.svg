@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" aria-labelledby="title desc">
+  <title id="title">Right-hand rule for a cross product</title>
+  <desc id="desc">Vector a points right, vector b points upward, and a curled arrow from a to b shows that a cross b points out of the page.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+    <marker id="arrow-gold" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#ca8a04"/></marker>
+  </defs>
+  <rect width="720" height="430" rx="24" fill="#f8fafc"/>
+  <g transform="translate(250 250)" font-family="system-ui, sans-serif">
+    <circle r="7" fill="#0f172a"/>
+    <path d="M0 0 H225" fill="none" stroke="#2563eb" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <text x="215" y="-22" fill="#1d4ed8" font-size="30" font-weight="700">a</text>
+    <path d="M0 0 V-175" fill="none" stroke="#dc2626" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow-red)"/>
+    <text x="20" y="-160" fill="#b91c1c" font-size="30" font-weight="700">b</text>
+    <path d="M115 0 A115 115 0 0 0 0 -115" fill="none" stroke="#ca8a04" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow-gold)"/>
+    <text x="85" y="-80" fill="#a16207" font-size="22" font-weight="600">curl fingers</text>
+    <circle cx="0" cy="0" r="42" fill="#fff" stroke="#16a34a" stroke-width="7"/>
+    <circle cx="0" cy="0" r="10" fill="#16a34a"/>
+    <text x="-116" y="75" fill="#15803d" font-size="27" font-weight="700">a × b</text>
+    <text x="-150" y="108" fill="#334155" font-size="20">thumb: out of page</text>
+  </g>
+  <text x="360" y="390" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="20">Point along a, curl toward b, and follow your thumb.</text>
+</svg>

@@ -543,17 +543,17 @@ The person feels lighter. Note the sign of $$a$$ is what matters, not the direct
 
 ## Circular motion
 
-Often, we often describe thing as going in circles (or approximately so). There are two types of circular motino: uniform and non-uniform circular motion.
+// yo update this to not just repeat what's said in kinematics
 
 ### Uniform circular motion
 
-In **uniform circular motion** (an object moving at constant speed in a circle), speed is constant but velocity changes direction, so the object accelerates toward the center of the circle. The centripetal (center-facing) acceleration is
+As you may remember, the centripetal acceleration of an object moving in a circle of radius $$r$$ is:
 
 $$
 a_c = \frac{v^2}{r} = \omega^2 r.
 $$
 
-Newton's second law in the radial direction is
+Newton's second law in the radial direction gives us the force equivalent:
 
 $$
 \sum F_r = m\frac{v^2}{r}.

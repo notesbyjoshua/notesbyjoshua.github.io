@@ -2,10 +2,10 @@
 title: "Advanced Mechanics"
 description: "Physics notes on advanced mechanics, including center of mass, collisions, rotation, gravitation, and problem-solving methods."
 sidebar:
-  order: 4
+  order: 1
 ---
 
----
+// definitely split this page up
 
 ## Lagrangian mechanics
 

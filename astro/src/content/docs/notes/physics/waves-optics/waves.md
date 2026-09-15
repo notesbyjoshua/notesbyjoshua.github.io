@@ -302,7 +302,7 @@ $$
 v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}},
 $$
 
-where $$\gamma$$ is the ratio of specific heats (see the [Thermodynamics](/notes/physics/thermodynamics/) page). Note that sound speed depends on temperature but not on pressure for an ideal gas (since $$P/\rho \propto T$$).
+where $$\gamma$$ is the ratio of specific heats (see the [Thermodynamics](/notes/physics/classical-continuum/thermodynamics/) page). Note that sound speed depends on temperature but not on pressure for an ideal gas (since $$P/\rho \propto T$$).
 
 A sound wave can be described either by the **displacement** $$\xi(x,t)$$ of the gas parcels or by the **pressure variation** $$\delta P \propto -\partial\xi/\partial x$$. These are a quarter-wavelength out of step, which makes the boundary rules subtle. The reliable principle: *whatever quantity the boundary forces to zero is the one that gets a node and flips sign on reflection.*
 

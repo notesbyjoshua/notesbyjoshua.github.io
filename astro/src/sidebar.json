@@ -599,12 +599,25 @@
             ]
           },
           {
-            "label": "Advanced Mechanics",
-            "link": "/notes/physics/advmech/"
-          },
-          {
-            "label": "Fluid Dynamics",
-            "link": "/notes/physics/fluiddynamics/"
+            "label": "Classical & Continuum Physics",
+            "items": [
+              {
+                "label": "Classical & Continuum Physics Home",
+                "link": "/notes/physics/classical-continuum/"
+              },
+              {
+                "label": "Advanced Mechanics",
+                "link": "/notes/physics/classical-continuum/advmech/"
+              },
+              {
+                "label": "Fluid Dynamics",
+                "link": "/notes/physics/classical-continuum/fluiddynamics/"
+              },
+              {
+                "label": "Thermodynamics",
+                "link": "/notes/physics/classical-continuum/thermodynamics/"
+              }
+            ]
           },
           {
             "label": "Modern & Stellar Physics",
@@ -626,10 +639,6 @@
                 "link": "/notes/physics/modern-stellar/stellarphys/"
               }
             ]
-          },
-          {
-            "label": "Thermodynamics",
-            "link": "/notes/physics/thermodynamics/"
           },
           {
             "label": "Waves & Optics",
@@ -660,7 +669,7 @@
                 "link": "/notes/physics/eandm/electrostatics/"
               },
               {
-                "label": "Conductors & Capacitors",
+                "label": "Capacitors and Dielectrics",
                 "link": "/notes/physics/eandm/conductors-capacitors/"
               },
               {

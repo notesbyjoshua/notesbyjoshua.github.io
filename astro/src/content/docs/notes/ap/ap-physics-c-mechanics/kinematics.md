@@ -786,7 +786,7 @@ $$
 
 // note to self: make sure to update this section
 
-What if the speed of the object is changing while moving in a circle? For this **nonuniform circular motion**, acceleration has both radial and tangential components:
+What if the speed of the object is changing while moving in a circle? For example, consider the case of a car decelerating around a turn, a washing machine ending its cycle, or a pendulum swinging about its hinge. For this **nonuniform circular motion**, acceleration has both radial and tangential components:
 
 $$
 a_r = \frac{v^2}{r},

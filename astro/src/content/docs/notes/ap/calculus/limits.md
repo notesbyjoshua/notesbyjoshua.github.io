@@ -1414,3 +1414,155 @@ Limit questions are often about deciding which tool is allowed before doing any 
 :::exam{topic="Limit justification"}
 When a question asks you to justify existence, say why both sides approach the same value (both one-sided limits exist and agree). When a limit does not exist, name the reason: different one-sided limits, unbounded behavior (asymptote), or oscillation.
 :::
+
+---
+
+## Practice
+
+::::problem
+1. Suppose $$f$$ satisfies
+
+   $$
+   \lim_{u\to2^-}f(u)=-1,
+   \qquad
+   \lim_{u\to2^+}f(u)=3,
+   \qquad
+   f(2)=5.
+   $$
+
+   Let $$g(x)=2+x\lvert x\rvert$$.
+
+   $$(A)$$ Find $$\displaystyle\lim_{x\to0^-}f(g(x))$$ and $$\displaystyle\lim_{x\to0^+}f(g(x))$$.
+
+   $$(B)$$ Determine whether $$\displaystyle\lim_{x\to0}f(g(x))$$ exists. Justify your answer by describing the direction from which $$g(x)$$ approaches $$2$$ on each side of $$x=0$$.
+::::
+
+::::problem
+2. Evaluate
+
+   $$
+   \lim_{x\to1}
+   \left(\frac{x^4-1}{x^3-1}\right)
+   \left(\frac{\sqrt{x+3}-2}{x-1}\right).
+   $$
+
+   Show enough algebra to explain why multiplying the two indeterminate factors does not prevent the limit from existing.
+::::
+
+::::problem
+3. Evaluate the limit without using L'Hopital's Rule or a power-series expansion:
+
+   $$
+   \lim_{x\to0}
+   \frac{\sin(3x)-3\sin x}{x(1-\cos x)}.
+   $$
+
+   Your work must reduce the expression to standard trigonometric limits.
+::::
+
+::::problem
+4. Let $$\lfloor y\rfloor$$ denote the greatest integer less than or equal to $$y$$. Determine
+
+   $$
+   \lim_{x\to0}x^2\left\lfloor\frac1x\right\rfloor.
+   $$
+
+   A table or decimal approximation is not sufficient; justify the result with inequalities and the Squeeze Theorem.
+::::
+
+::::problem
+5. Evaluate
+
+   $$
+   \lim_{x\to-\infty}\left(\sqrt{9x^2-4x}+3x\right).
+   $$
+
+   Explain where the sign of $$x$$ matters when simplifying the square root.
+::::
+
+::::problem
+6. Consider
+
+   $$
+   R(x)=\frac{ax^2+bx-6}{x^2+x-2}.
+   $$
+
+   Find the values of $$a$$ and $$b$$ for which $$R$$ has a removable discontinuity at $$x=1$$ and a horizontal asymptote at $$y=2$$. Then find $$\displaystyle\lim_{x\to1}R(x)$$ for those values.
+::::
+
+::::problem
+7. For positive constants $$a$$ and $$b$$, define
+
+   $$
+   f(x)=
+   \begin{cases}
+   \dfrac{\sin(ax)}{x}, & x<0,\\
+   3, & x=0,\\
+   \dfrac{1-\cos(bx)}{x^2}, & x>0.
+   \end{cases}
+   $$
+
+   Find the unique values of $$a$$ and $$b$$ that make $$f$$ continuous at $$x=0$$. Justify both one-sided limits.
+::::
+
+::::problem
+8. Use the formal epsilon-delta definition of a limit to prove
+
+   $$
+   \lim_{x\to3}x^2=9.
+   $$
+
+   Give an explicit choice of $$\delta$$ in terms of $$\varepsilon$$ and explain why an additional bound on $$\lvert x-3\rvert$$ is needed.
+::::
+
+::::problem
+9. Consider the functions
+
+   $$
+   r(x)=\frac1{x-1}
+   \qquad\text{and}\qquad
+   p(x)=x^5+x-1.
+   $$
+
+   $$(A)$$ Although $$r(0)<0<r(2)$$, explain why the Intermediate Value Theorem does not guarantee a zero of $$r$$ on $$(0,2)$$.
+
+   $$(B)$$ Use the Intermediate Value Theorem to show that $$p$$ has a zero in $$(0,1)$$.
+
+   $$(C)$$ Apply bisection repeatedly to place that zero in an interval of length at most $$\frac18$$. State every interval you keep and justify each choice with a sign change.
+::::
+
+::::problem
+10. Decide whether each statement must be true. Prove every statement that is true and give a counterexample for every statement that is false.
+
+    $$(A)$$ If $$\displaystyle\lim_{x\to a}[f(x)]^2=4$$, then $$\displaystyle\lim_{x\to a}f(x)$$ exists.
+
+    $$(B)$$ If $$\displaystyle\lim_{x\to a}f(x)=0$$ and $$g$$ is bounded near $$a$$, then $$\displaystyle\lim_{x\to a}f(x)g(x)=0$$.
+
+    $$(C)$$ If $$\displaystyle\lim_{x\to a}\frac{f(x)}{g(x)}=1$$ and $$\displaystyle\lim_{x\to a}g(x)=0$$, then $$\displaystyle\lim_{x\to a}[f(x)-g(x)]=0$$.
+::::
+
+::::problem
+11. Let
+
+    $$
+    h(x)=\sqrt{\frac{x+1}{x-2}}+\frac{x^2-9}{x-3}.
+    $$
+
+    $$(A)$$ Find the exact domain of $$h$$.
+
+    $$(B)$$ State every interval on which $$h$$ is continuous.
+
+    $$(C)$$ Evaluate $$\displaystyle\lim_{x\to-1^-}h(x)$$, $$\displaystyle\lim_{x\to2^+}h(x)$$, and $$\displaystyle\lim_{x\to3}h(x)$$, allowing infinite limits when appropriate.
+
+    $$(D)$$ Classify the behavior at $$x=2$$ and $$x=3$$.
+::::
+
+::::problem
+12. Evaluate the limit without using L'Hopital's Rule:
+
+    $$
+    \lim_{x\to\infty}x\left(\frac{\pi}{2}-\arctan x\right).
+    $$
+
+    Use a substitution that turns the expression into a standard trigonometric limit, and track the direction from which the new variable approaches $$0$$.
+::::

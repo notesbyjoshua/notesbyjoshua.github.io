@@ -976,3 +976,155 @@ Most derivative questions are rule-recognition questions with algebra mixed in. 
 :::exam{topic="Derivative notation"}
 AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and verbal phrases like "rate of change." Translate the notation before choosing a rule.
 :::
+
+---
+
+## Practice
+
+::::problem
+1. Interpret the limit as a derivative and then evaluate it exactly:
+
+   $$
+   \lim_{h\to0}\frac{(2+h)^{7/3}-2^{7/3}}{h}.
+   $$
+
+   State the function being differentiated and the input at which its derivative is evaluated.
+::::
+
+::::problem
+2. Let
+
+   $$
+   f(x)=
+   \begin{cases}
+   ax^2+b, & x<1,\\
+   3\ln x+c, & x\ge1.
+   \end{cases}
+   $$
+
+   Given that $$f(0)=2$$, find $$a$$, $$b$$, and $$c$$ so that $$f$$ is differentiable at $$x=1$$. Then find $$f'(1)$$.
+::::
+
+::::problem
+3. Define
+
+   $$
+   f(x)=\lvert x^2-4x+3\rvert.
+   $$
+
+   $$(A)$$ Find every input where $$f$$ is not differentiable and justify each one using one-sided derivatives.
+
+   $$(B)$$ Find the equation of the tangent line to $$f$$ at $$x=2$$.
+
+   $$(C)$$ Determine whether either nondifferentiable point can be repaired by changing only the value of $$f$$ at that point. Explain.
+::::
+
+::::problem
+4. Differentiable functions $$f$$ and $$g$$ satisfy
+
+   $$
+   \begin{array}{c|cccc}
+   x & f(x) & f'(x) & g(x) & g'(x) \\\hline
+   2 & 3 & 4 & -1 & 5
+   \end{array}
+   $$
+
+   Let
+
+   $$
+   H(x)=\frac{f(x)g(x)}{f(x)+g(x)}.
+   $$
+
+   Find $$H(2)$$ and $$H'(2)$$. Then write an equation of the normal line to the graph of $$H$$ at $$x=2$$.
+::::
+
+::::problem
+5. Differentiate and simplify enough to identify every input where the derivative does not exist:
+
+   $$
+   y=\frac{(x^2+1)(e^x+\sin x)}{x^3}.
+   $$
+
+   Use the domain of the original function, not only the appearance of your final derivative.
+::::
+
+::::problem
+6. Let
+
+   $$
+   f(x)=\frac{x^2+1}{x-1}.
+   $$
+
+   Find every point on the graph of $$f$$ where the tangent line has slope $$-1$$. Write the equation of each tangent line and determine whether the corresponding normal lines are parallel.
+::::
+
+::::problem
+7. Let $$f(x)=x^2e^x$$. Find $$f^{(12)}(0)$$ without differentiating the function twelve times one line at a time. Develop and justify a pattern for $$f^{(n)}(x)$$ that works for every positive integer $$n$$.
+::::
+
+::::problem
+8. Define
+
+   $$
+   f(x)=
+   \begin{cases}
+   x\sin(1/x), & x\ne0,\\
+   0, & x=0,
+   \end{cases}
+   \qquad
+   g(x)=
+   \begin{cases}
+   x^2\sin(1/x), & x\ne0,\\
+   0, & x=0.
+   \end{cases}
+   $$
+
+   $$(A)$$ Determine whether each function is continuous at $$x=0$$.
+
+   $$(B)$$ Use the derivative definition to determine whether each function is differentiable at $$x=0$$.
+
+   $$(C)$$ For each derivative that exists, find its value.
+::::
+
+::::problem
+9. For $$a>0$$, let $$f(x)=a^x$$. The tangent line to the graph of $$f$$ at $$x=0$$ passes through the point $$(2,5)$$.
+
+   $$(A)$$ Find $$a$$ exactly.
+
+   $$(B)$$ Write equations of the tangent and normal lines at $$x=0$$.
+
+   $$(C)$$ Find the $$x$$-intercept of the normal line.
+::::
+
+::::problem
+10. Starting only from
+
+    $$
+    \frac{d}{dx}(\sinh x)=\cosh x,
+    \qquad
+    \frac{d}{dx}(\cosh x)=\sinh x,
+    $$
+
+    prove that $$\cosh^2x-\sinh^2x$$ is constant. Then determine the value of the constant by evaluating the expression at $$x=0$$.
+::::
+
+::::problem
+11. A particle moves along a line with position
+
+    $$
+    s(t)=t\ln t,
+    \qquad t>0.
+    $$
+
+    Find the exact time $$t\in(1,e)$$ at which the instantaneous velocity equals the average velocity on the interval $$[1,e]$$. Verify directly that your answer lies in the required interval.
+::::
+
+::::problem
+12. Suppose $$f$$ is differentiable at $$x=a$$.
+
+    $$(A)$$ Rewrite $$f(x)-f(a)$$ as a product involving the difference quotient $$\displaystyle\frac{f(x)-f(a)}{x-a}$$.
+
+    $$(B)$$ Use limit laws and the derivative definition to prove that $$f$$ must be continuous at $$x=a$$.
+
+    $$(C)$$ Give an example showing that the converse is false: a function can be continuous at a point without being differentiable there.
+::::

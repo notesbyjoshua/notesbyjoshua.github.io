@@ -784,19 +784,38 @@ $$
 
 ### Nonuniform circular motion
 
-// note to self: make sure to update this section
-
 What if the speed of the object is changing while moving in a circle? For example, consider the case of a car decelerating around a turn, a washing machine ending its cycle, or a pendulum swinging about its hinge. For this **nonuniform circular motion**, acceleration has both radial and tangential components:
 
 $$
-a_r = \frac{v^2}{r},
+a_c = \frac{v^2}{r},
 $$
 
 $$
 a_t = \frac{dv}{dt}.
 $$
 
-The radial component changes the direction of velocity while the tangential component changes the speed.
+The centripetal component $$a_c$$ points toward the center and changes the **direction** of velocity. The tangential component $$a_t$$ lies along the tangent to the circle and changes the **magnitude** of velocity. If the object is speeding up, $$\vec a_t$$ points with the velocity; if it is slowing down, $$\vec a_t$$ points against the velocity.
+
+Using $$\hat r$$ for the outward radial direction and $$\hat\theta$$ for the direction of increasing angle, the acceleration vector is
+
+$$
+\vec a=-\frac{v^2}{r}\hat r+\frac{dv}{dt}\hat\theta.
+$$
+
+The minus sign on the radial term is important: $$\hat r$$ points outward, while centripetal acceleration points inward. Because the radial and tangential directions are perpendicular, the total acceleration magnitude is
+
+$$
+\lvert\vec a\rvert=\sqrt{a_c^2+a_t^2}
+=\sqrt{\left(\frac{v^2}{r}\right)^2+\left(\frac{dv}{dt}\right)^2}.
+$$
+
+If $$\phi$$ is the angle from the inward radial direction toward the tangential acceleration, then
+
+$$
+\tan\phi=\frac{\lvert a_t\rvert}{a_c}.
+$$
+
+Notice that even if $$a_t$$ is constant, $$a_c$$ generally is not: changing the speed also changes $$v^2/r$$.
 
 <div class="theorem-box">
 
@@ -841,6 +860,170 @@ $$
 and $$\lvert\vec a_*\rvert=\sqrt2\,\beta^2R$$.
 
 </div>
+
+<div class="theorem-box">
+
+**Example.** A cyclist rides counterclockwise around a circular track of radius $$25\ \text{m}$$. The cyclist's speed is $$v(t)=4.0+0.60t^2$$, where speed is in meters per second and time is in seconds. At $$t=3.0\ \text{s}$$, find the tangential acceleration, centripetal acceleration, total acceleration magnitude, and acceleration vector when the cyclist is at the rightmost point of the track.
+
+The tangential acceleration comes from the rate at which the speed changes:
+
+$$
+a_t=\frac{dv}{dt}=1.20t.
+$$
+
+Therefore, at $$t=3.0\ \text{s}$$,
+
+$$
+a_t=1.20(3.0)=3.60\ \text{m/s}^2.
+$$
+
+At the same instant, the speed is
+
+$$
+v=4.0+0.60(3.0)^2=9.40\ \text{m/s},
+$$
+
+so the centripetal acceleration is
+
+$$
+a_c=\frac{v^2}{r}=\frac{(9.40)^2}{25}=3.53\ \text{m/s}^2.
+$$
+
+The two components are perpendicular, so
+
+$$
+\lvert\vec a\rvert=\sqrt{(3.53)^2+(3.60)^2}=5.04\ \text{m/s}^2.
+$$
+
+At the rightmost point, inward is left and the counterclockwise tangential direction is up. Thus
+
+$$
+\vec a=(-3.53\hat i+3.60\hat j)\ \text{m/s}^2.
+$$
+
+The acceleration points
+
+$$
+\phi=\tan^{-1}\left(\frac{3.60}{3.53}\right)=45.6^\circ
+$$
+
+above the inward radial direction. The nearly equal components do not mean the motion is uniform; the nonzero tangential component shows that the cyclist is speeding up.
+
+</div>
+
+---
+
+## Relative velocity (introduction)
+
+When someone is sitting still in a chair, are they moving? In your point of view as an observer in the room with them, they are stationary. Yet, the Earth (and therefore the chair the person is sitting on) constantly rotates around its axis and orbits around the Sun.
+
+To describe one object’s motion as seen from another, choose a reference frame. An **inertial frame** does not accelerate or rotate relative to another inertial frame; a **non-inertial frame** does. A frame moving with an object can be either, depending on the object’s motion.
+
+We usually treat the ground-based lab frame as approximately inertial, ignoring Earth’s rotation and orbital acceleration. Watching an F1 race from the stands is an example of this lab-frame viewpoint.
+
+A frame attached to a racecar is non-inertial while the car speeds up, slows down, or turns. In that frame, the driver is at rest and the spectators move relative to the car. Both descriptions are valid; they use different reference frames.
+
+Velocities are vectors, so relative velocities add by vector addition. Define the velocity of object $$A$$ relative to object $$B$$ as $$\vec{v}_{A/B}$$. To find the velocity relative to a third object C, express all vectors using the same axis directions and write
+
+$$
+\vec{v}_{A/C} = \vec{v}_{A/B} + \vec{v}_{B/C}.
+$$
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
+\begin{tikzpicture}[>=Stealth, font=\small]
+\draw[->, very thick, blue] (0,0) -- (0,2.4) node[above] {$\vec v_{A/B}$};
+\draw[->, very thick, red] (0,2.4) -- (2.2,2.4) node[right] {$\vec v_{B/C}$};
+\draw[->, very thick, purple] (0,0) -- (2.2,2.4) node[midway, below right] {$\vec v_{A/C}$};
+\end{tikzpicture}
+```
+
+If you need a reminder of vector addition, check out AP Precalculus. A useful consistency check is that swapping the subscripts negates the vector, $$\vec{v}_{A/B} = -\vec{v}_{B/A}$$.
+
+Relative acceleration follows from differentiating the relative-velocity equation. As long as the reference frames use axes that remain parallel and do not rotate relative to one another,
+
+$$
+\vec a_{A/C}=\vec a_{A/B}+\vec a_{B/C}.
+$$
+
+Equivalently, the acceleration of $$A$$ as measured by $$B$$ is
+
+$$
+\vec a_{A/B}=\vec a_{A/C}-\vec a_{B/C}.
+$$
+
+This subtraction has a useful physical meaning. If $$A$$ and $$B$$ have the same acceleration in the lab frame, their relative acceleration is zero, even if both are speeding up. If their accelerations differ, their relative velocity changes at exactly that difference.
+
+Be careful when the observer's frame rotates. Its coordinate directions change with time, so simply differentiating components measured along those rotating axes misses additional terms. The equations above apply directly to translating, nonrotating frames.
+
+<div class="theorem-box">
+
+**Example.** A train accelerates east at $$1.5\ \text{m/s}^2$$ relative to the ground. Inside the train, a cart's velocity relative to the train changes at a rate of $$0.80\ \text{m/s}^2$$ west. Find the cart's acceleration relative to the ground and the acceleration of the train relative to the cart.
+
+Take east as positive. Let $$C$$ denote the cart, $$T$$ the train, and $$G$$ the ground. The phrase "changes at a rate of $$0.80\ \text{m/s}^2$$ west" gives
+
+$$
+\vec a_{C/T}=-0.80\hat i\ \text{m/s}^2,
+$$
+
+while the train's acceleration is
+
+$$
+\vec a_{T/G}=1.5\hat i\ \text{m/s}^2.
+$$
+
+Add the relative acceleration to the acceleration of the moving frame:
+
+$$
+\vec a_{C/G}=\vec a_{C/T}+\vec a_{T/G}
+=(-0.80+1.5)\hat i
+=0.70\hat i\ \text{m/s}^2.
+$$
+
+The cart can accelerate west relative to the train while still accelerating east relative to the ground because the train's eastward acceleration is larger. Reversing the subscripts reverses the vector, so
+
+$$
+\vec a_{T/C}=-\vec a_{C/T}=0.80\hat i\ \text{m/s}^2.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A boat heads straight across a river, pointing its bow perpendicular to the banks with a speed of $$4\ \text{m/s}$$ relative to the water. The river flows at $$3\ \text{m/s}$$ parallel to the banks, and the river is $$80\ \text{m}$$ wide. Find the boat's velocity relative to the ground, how long the crossing takes, and how far downstream it lands.
+
+Let the boat's velocity relative to the water be $$\vec{v}_{B/W}$$ (across the river) and the water's velocity relative to the ground be $$\vec{v}_{W/G}$$ (downstream). The composition rule gives
+
+$$
+\vec{v}_{B/G} = \vec{v}_{B/W} + \vec{v}_{W/G}.
+$$
+
+These two pieces are perpendicular (check it yourself), so the ground speed is
+
+$$
+v_{B/G} = \sqrt{4^2 + 3^2} = 5\ \text{m/s},
+$$
+
+at an angle $$\arctan(3/4) \approx 37^\circ$$ downstream of straight across.
+
+The crossing time depends only on the across-river component, because the downstream flow does nothing to close the $$80\ \text{m}$$ gap:
+
+$$
+t = \frac{80}{4} = 20\ \text{s}.
+$$
+
+During that time the current carries the boat downstream by
+
+$$
+d = (3)(20) = 60\ \text{m}.
+$$
+
+The key idea is that the perpendicular components are independent, just as in projectile motion: the downstream drift does not change how long the crossing takes.
+
+</div>
+
+You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/classical-continuum/advmech/).
 
 ---
 
@@ -1005,70 +1188,6 @@ $$
 Note that with unequal launch and landing heights the trajectory is no longer symmetric, which is why the level-ground shortcuts cannot be used here.
 
 </div>
-
----
-
-## Relative velocity (introduction)
-
-To describe one object’s motion as seen from another, choose a reference frame. An **inertial frame** does not accelerate or rotate relative to another inertial frame; a **non-inertial frame** does. A frame moving with an object can be either, depending on the object’s motion.
-
-We usually treat the ground-based lab frame as approximately inertial, ignoring Earth’s rotation and orbital acceleration. Watching an F1 race from the stands is an example of this lab-frame viewpoint.
-
-A frame attached to a racecar is non-inertial while the car speeds up, slows down, or turns. In that frame, the driver is at rest and the spectators move relative to the car. Both descriptions are valid; they use different reference frames.
-
-Velocities are vectors, so relative velocities add by vector addition. Define the velocity of object $$A$$ relative to object $$B$$ as $$\vec{v}_{A/B}$$. To find the velocity relative to a third object C, express all vectors using the same axis directions and write
-
-$$
-\vec{v}_{A/C} = \vec{v}_{A/B} + \vec{v}_{B/C}.
-$$
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\draw[->, very thick, blue] (0,0) -- (0,2.4) node[above] {$\vec v_{A/B}$};
-\draw[->, very thick, red] (0,2.4) -- (2.2,2.4) node[right] {$\vec v_{B/C}$};
-\draw[->, very thick, purple] (0,0) -- (2.2,2.4) node[midway, below right] {$\vec v_{A/C}$};
-\end{tikzpicture}
-```
-
-If you need a reminder of vector addition, check out AP Precalculus. A useful consistency check is that swapping the subscripts negates the vector, $$\vec{v}_{A/B} = -\vec{v}_{B/A}$$.
-
-<div class="theorem-box">
-
-**Example.** A boat heads straight across a river, pointing its bow perpendicular to the banks with a speed of $$4\ \text{m/s}$$ relative to the water. The river flows at $$3\ \text{m/s}$$ parallel to the banks, and the river is $$80\ \text{m}$$ wide. Find the boat's velocity relative to the ground, how long the crossing takes, and how far downstream it lands.
-
-Let the boat's velocity relative to the water be $$\vec{v}_{B/W}$$ (across the river) and the water's velocity relative to the ground be $$\vec{v}_{W/G}$$ (downstream). The composition rule gives
-
-$$
-\vec{v}_{B/G} = \vec{v}_{B/W} + \vec{v}_{W/G}.
-$$
-
-These two pieces are perpendicular (check it yourself), so the ground speed is
-
-$$
-v_{B/G} = \sqrt{4^2 + 3^2} = 5\ \text{m/s},
-$$
-
-at an angle $$\arctan(3/4) \approx 37^\circ$$ downstream of straight across.
-
-The crossing time depends only on the across-river component, because the downstream flow does nothing to close the $$80\ \text{m}$$ gap:
-
-$$
-t = \frac{80}{4} = 20\ \text{s}.
-$$
-
-During that time the current carries the boat downstream by
-
-$$
-d = (3)(20) = 60\ \text{m}.
-$$
-
-The key idea is that the perpendicular components are independent, just as in projectile motion: the downstream drift does not change how long the crossing takes.
-
-</div>
-
-You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/classical-continuum/advmech/).
 
 ---
 

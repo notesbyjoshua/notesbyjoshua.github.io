@@ -5,12 +5,6 @@ sidebar:
   order: 3
 ---
 
----
-
-This unit connects particle-level structure (bonding within molecules and forces between them) to bulk properties (melting, boiling, solubility, conductivity) and to mixtures, especially solutions and gases. Ideas about polarity from [Unit 2](/notes/ap/chem/compounds/) carry directly into **intermolecular forces** and chromatography; moles and concentration from [Unit 1](/notes/ap/chem/atomicstrucprop/) are key to the gas laws and **colligative properties**.
-
----
-
 ## Intermolecular forces
 
 **Intermolecular forces** (IMFs) are attractions *between* molecules or ions. They are much weaker than intramolecular (*within* a molecule) covalent or ionic bonds, but they control many everyday properties: boiling point, melting point, vapor pressure, surface tension, and solubility in a given solvent.
@@ -19,17 +13,49 @@ This unit connects particle-level structure (bonding within molecules and forces
 
 **London dispersion forces** arise from temporary electron fluctuations that create instantaneous dipoles, which in turn induce dipoles in neighbors. They are present in *every* substance (atoms and molecules). In nonpolar species they are often the only IMF and dominate cohesive energy. Strength grows with polarizability: larger electron clouds, higher molar mass in a homologous series, and greater surface area (e.g. linear versus branched alkanes) increase the amount of london disperson forces.
 
+<div class="theorem-box">
+
+**Example.** Pentane and neopentane have the same molecular formula and electron count. Why can the less compact molecule have a higher boiling point?
+
+Electron count alone does not determine dispersion attractions. The less compact pentane shape permits greater contact between neighboring molecules, strengthening their combined dispersion interactions. More energy is then needed to separate them into the gas phase. Branching changes molecular shape without changing molar mass, so this comparison isolates a limitation of the mass-only shortcut.
+
+</div>
+
 ### Dipole–dipole interactions
 
 Polar molecules possess a permanent dipole moment, since the more electronegative element always tries to pull in electrons, creating a negatively-charged area around that element and a positive-charged area on the other element. **Dipole–dipole** attractions align partially positive ends toward partially negative ends. They are typically stronger than dispersion between comparable-sized molecules, though dispersion still contributes a little bit of force.
+
+<div class="theorem-box">
+
+**Example.** A student predicts that every polar molecule must boil above every nonpolar molecule. Explain why this rule can fail without denying dipole-dipole attractions.
+
+Both classes experience dispersion forces. A large, highly polarizable nonpolar molecule can have stronger total intermolecular attractions than a small polar molecule, even though only the latter has permanent dipole-dipole interactions. Comparing named force types alone ignores their magnitudes, molecular size, and shape; polarity is most useful when the other factors are comparable.
+
+</div>
 
 ### Hydrogen bonding
 
 **Hydrogen bonding** is an especially strong dipole–dipole interaction (often treated as its own category) when hydrogen is bonded to F, O, or N: small, very electronegative atoms that leave a highly exposed proton. It explains the anomalously high boiling points of $$\text{H}_2\text{O}$$, alcohols ( $$\text{-OH}$$ ), and amines in appropriate contexts, since they all include hydrogen bonds.
 
+<div class="theorem-box">
+
+**Example.** Dimethyl ether and ethanol both contain oxygen and have formula $$\mathrm{C_2H_6O}$$. Which can hydrogen-bond to itself, and can both hydrogen-bond with water?
+
+Ethanol has an O-H bond and oxygen lone pairs, so one ethanol molecule can donate a hydrogen bond to another. Dimethyl ether has lone pairs but no O-H, N-H, or F-H bond, so it cannot form the same self-associated hydrogen-bond network. Both can accept hydrogen bonds from water. The relevant distinction is donor versus acceptor ability, not simply whether oxygen is present.
+
+</div>
+
 ### Ion–dipole interactions
 
 **Ion–dipole** forces act between an ion and the partial charges of a polar solvent. They are central to dissolving ionic compounds in water and are typically stronger than neutral-molecule IMFs, and therefore these are usually the strongest type of IMF.
+
+<div class="theorem-box">
+
+**Example.** Predict how water molecules orient around $$\mathrm{Mg^{2+}}$$ versus $$\mathrm{Cl^-}$$. Would the larger charge of magnesium by itself prove that magnesium chloride is more soluble than every singly charged salt?
+
+The partially negative oxygen end points toward magnesium; partially positive hydrogen ends point toward chloride. A higher ionic charge can strengthen hydration, but it also strengthens attractions within an ionic lattice. Dissolution depends on the competing energetic changes and entropy, so hydration strength alone does not establish a universal solubility ranking.
+
+</div>
 
 ---
 
@@ -38,6 +64,14 @@ Polar molecules possess a permanent dipole moment, since the more electronegativ
 **Bond polarity** compares electronegativity across a bond; **molecular polarity** is the vector sum of bond dipoles in three dimensions. Symmetric molecules (e.g. $$\text{CO}_2$$, $$\text{CCl}_4$$) can be nonpolar even with polar bonds because dipoles cancel. Lone pairs change geometry (VSEPR), which changes whether dipoles cancel, so lone pairs matter indirectly even though polarity is a property of the whole molecule, not “of” a lone pair in isolation. A good way to tell if a molecule is polar if its dipoles are not symmetrical, or if one dipole is significantly stronger than another.
 
 Trends: among similar molecules, greater polarity and stronger IMFs tend to raise boiling point and lower vapor pressure; the opposite trend holds for weaker IMFs.
+
+<div class="theorem-box">
+
+**Example.** A student says that $$\mathrm{CO_2}$$ has dipole-dipole attractions because every C=O bond is polar. Evaluate the argument.
+
+The two equal bond dipoles oppose each other in a linear molecule, giving zero permanent molecular dipole. Pure carbon dioxide still has dispersion forces, but polar bonds alone do not establish permanent dipole-dipole attraction. The vector arrangement of those bonds matters.
+
+</div>
 
 ---
 
@@ -50,6 +84,14 @@ Trends: among similar molecules, greater polarity and stronger IMFs tend to rais
 - **Viscosity** is a liquid’s resistance to flow; it rises with stronger IMFs and often with molecular size or hydrogen bonding
 - **Crystalline** solids have long-range order and often show sharp melting points. **Amorphous** solids (many glasses) lack that order and soften over a temperature range rather than melting at a single temperature.
 
+<div class="theorem-box">
+
+**Example.** Two liquids have similar molar masses. One has lower vapor pressure at a fixed temperature and a higher normal boiling point. Explain how these two observations support the same interpretation.
+
+Lower vapor pressure means fewer molecules escape into the equilibrium vapor at that temperature, consistent with stronger liquid-phase attractions. Boiling requires vapor pressure to reach external pressure, so that liquid must be heated more to boil at one atmosphere. Neither observation requires breaking covalent bonds within the molecules; both concern separating molecules from one another.
+
+</div>
+
 ---
 
 ### Types of crystalline solids
@@ -60,6 +102,14 @@ Chemists often classify solids by the particles at lattice sites and the forces 
 - **Molecular solids** are composed of discrete molecules held by IMFs. They are usually softer, lower-melting, and do not conduct as pure solids. Molecular solids are either **polar** or **nonpolar**, based on the distribution of dipoles.
 - **Covalent network** solids (e.g. diamond, quartz) extend covalent bonding through a three-dimensional network. They are typically very hard, high-melting, and insoluble (Exception: graphite is a network solid that conducts along planes).
 - **Metallic solids** feature cations in a sea of delocalized electrons, giving variable melting points, conductivity, and malleability. They look and feel metallic, so if a solid looks like a traditional metal, it is probably a metallic solid.
+
+<div class="theorem-box">
+
+**Example.** Diamond does not conduct electricity, yet it has a very high melting temperature. Why does lack of conductivity not establish that a solid is molecular?
+
+Diamond is a covalent-network solid: strong covalent bonds extend throughout its structure, but its electrons are not free to carry charge through the solid. A molecular solid can also lack mobile charges, although its particles are held together mainly by weaker intermolecular forces. Conductivity probes charge mobility; melting behavior probes the interactions that must be disrupted. Both observations are needed for a useful classification.
+
+</div>
 
 ---
 
@@ -79,6 +129,14 @@ Simple tests help distinguish the main types of crystalline solids, as the flowc
 
 **Caveat:** **Covalent network** solids are easy to confuse with **nonpolar molecular** solids in water/hexane tests alone: hardness, melting behavior, and structure from other evidence matter.
 
+<div class="theorem-box">
+
+**Example.** A solid is brittle, does not conduct as a solid, and conducts when dissolved in water. Explain why these observations favor an ionic solid over a molecular nonelectrolyte.
+
+Fixed ions explain the lack of solid conductivity. Dissolving releases mobile ions, allowing current; a dissolved molecular nonelectrolyte would remain mostly neutral molecules. Brittleness also fits a lattice in which shifting layers can place like charges next to each other. The observations support a model together rather than identifying it from one property.
+
+</div>
+
 ---
 
 ## Separating mixtures
@@ -95,12 +153,19 @@ with values between $$0$$ and $$1$$ for typical thin-layer work. The retention f
 
 Other methods of separation include distillation (uses differences in boiling point (hence vapor pressure)) and evaporation/crystallization (removes or concentrates solvent to isolate solute).
 
+<div class="theorem-box">
+
+**Example.** A mixture contains sand, salt, and water. A student filters it and calls the filtrate pure water. Design a sequence that recovers all three components.
+
+Filtration removes sand but dissolved ions pass through the filter. Distill the filtrate to collect condensed water and leave salt behind, then dry the residue. Simply evaporating the water would recover salt but would not collect the water.
+
+</div>
+
 ---
 
 ## Temperature, kinetic energy, and the Maxwell–Boltzmann distribution
 
 Temperature (in Kelvin) is proportional to the average translational kinetic energy of ideal-gas molecules, but varies per molecule.  However, the KE can be mapped as a distribution (called the **Maxwell-Boltzmann distribution**). A **Maxwell–Boltzmann** curve plots fraction versus speed or energy. Lighter gases at the same $$T$$ have higher average speed, and raising $$T$$ broadens the curve and increases the fraction with energy above a given activation energy. Note that macroscopic kinetic energy $$\frac{1}{2}mv^2$$ applies to bulk motion; do not confuse it with thermal motion of molecules inside a sample. An example of a Maxwell-Boltzmann distribution can be seen below:
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -117,6 +182,13 @@ Temperature (in Kelvin) is proportional to the average translational kinetic ene
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** Helium and xenon are at the same temperature. Which has the greater average translational kinetic energy, and which has the greater typical speed?
+
+Their average translational kinetic energies are equal because each is $$3k_BT/2$$. Since kinetic energy is $$mv^2/2$$, the lighter helium atoms have higher typical speeds. Equal temperature does not imply equal speed when particle masses differ.
+
+</div>
 
 ---
 
@@ -146,6 +218,14 @@ v_{RMS} = \sqrt{\frac{3RT}{M}}.
 $$
 
 Always remember that kinetic energy is distributed along a Maxwell-Boltzmann distribution, so we always talk about the **average** kinetic energy and **RMS** velocity.
+
+<div class="theorem-box">
+
+**Example.** An ideal gas is compressed to half its volume at constant temperature. Explain the pressure change without claiming that individual molecules acquire more kinetic energy.
+
+Pressure doubles from $$P=nRT/V$$. Average kinetic energy stays fixed because temperature stays fixed. Molecules strike the walls more frequently per unit area in the smaller volume, producing greater pressure without a sustained increase in average kinetic energy.
+
+</div>
 
 ---
 
@@ -224,6 +304,14 @@ $$
 P_{\text{total}} = P_{\text{gas}} + P_{\text{H}_2\text{O}}.
 $$
 
+<div class="theorem-box">
+
+**Example.** A rigid vessel contains equal moles of He and Ne. Half the He is removed at constant temperature. Find the new total pressure as a fraction of the old pressure and the new Ne mole fraction.
+
+Initially there are $$2n$$ total moles; afterward there are $$1.5n$$. Thus $$P_f/P_i=3/4$$. Neon now represents $$n/(1.5n)=2/3$$ of the mixture, but its partial pressure stays unchanged because its own mole count, temperature, and volume did not change.
+
+</div>
+
 ---
 
 ## Diffusion and effusion
@@ -235,6 +323,14 @@ $$
 $$
 
 where $$M$$ is molar mass. Graham's Law basically states that lighter molecules move faster on average and effuse faster.
+
+<div class="theorem-box">
+
+**Example.** Gas X takes twice as long as helium to effuse the same amount through the same opening under matching conditions. Find its molar mass and explain why the time ratio is inverted in the rate ratio.
+
+Equal amounts give $$r_X/r_{He}=t_{He}/t_X=1/2$$. Graham's law gives $$1/2=\sqrt{4.00/M_X}$$, so $$M_X=16.0\ \mathrm{g/mol}$$. Longer time means lower rate; substituting the time ratio directly as a rate ratio would predict the wrong mass.
+
+</div>
 
 ---
 
@@ -254,12 +350,19 @@ $$
 
 which equals $$1$$ for an ideal gas (by Ideal Gas Law). $$Z < 1$$ often reflects attractive effects dominating at moderate pressure, and $$Z > 1$$ can appear when **repulsive** effects dominate at high pressure. Note that this is not very important for an AP context.
 
+<div class="theorem-box">
+
+**Example.** At moderate pressure, a gas has measured pressure below $$nRT/V$$. Which ideal-gas assumption is most likely failing, and why can very high pressure produce the opposite deviation?
+
+Attractions reduce momentum transferred to the walls, lowering measured pressure. At very high density, finite particle volume reduces the space available for motion, which can raise pressure above the ideal prediction. These competing effects explain why a gas need not deviate in the same direction at every pressure.
+
+</div>
+
 ---
 
 ## Phase behavior and phase diagrams
 
 **Vapor pressure** is the pressure of vapor in equilibrium with a condensed phase at a given temperature; it rises with $$T$$ and reflects IMF strength (volatile liquids have high vapor pressure at a given $$T$$). A **phase diagram** plots pressure versus temperature; the **triple point** is where solid, liquid, and gas coexist. The **critical point** ends the liquid–vapor boundary; above the critical temperature there is no distinct liquid phase at any pressure.
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -279,6 +382,13 @@ which equals $$1$$ for an ideal gas (by Ideal Gas Law). $$Z < 1$$ often reflects
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** A solid is heated at constant pressure below its triple-point pressure. Can a liquid plateau appear on the heating curve? Explain from phase stability.
+
+Below the triple-point pressure the liquid is not a stable equilibrium phase. The solid sublimes to gas rather than melting to liquid. A phase-change plateau can still occur, but it represents sublimation rather than melting.
+
+</div>
 
 ---
 
@@ -299,6 +409,14 @@ $$
 $$
 
 $$K_b$$ and $$K_f$$ are solvent constants. The **van’t Hoff factor** $$i$$ is the moles of dissolved particles produced per mole of formula units added (for molecular solids $$i = 1$$). Although this is not always the case, for ionic solids, you can assume that $$i$$ is the number of ions that result after one molecule of the solid dissolves.
+
+<div class="theorem-box">
+
+**Example.** An ideal $$0.10\ m$$ solution of a salt that produces three ions and an ideal $$0.30\ m$$ glucose solution use the same solvent. Compare their freezing points.
+
+The relevant product is $$im$$. It is $$3(0.10)=0.30\ m$$ for the fully dissociated salt and $$1(0.30)=0.30\ m$$ for glucose. They have equal predicted freezing-point depressions, despite different formula-unit concentrations. Ion association would weaken that equality in a real salt solution.
+
+</div>
 
 ---
 
@@ -326,6 +444,14 @@ $$
 
 with $$k_H$$ a constant for a given solute–solvent pair at fixed $$T$$.
 
+<div class="theorem-box">
+
+**Example.** An ideal liquid mixture has mole fraction $$x_A=0.50$$, with pure vapor pressures $$P_A^*=100$$ and $$P_B^*=40\ \mathrm{torr}$$. Determine whether its vapor is also half A.
+
+Raoult's law gives partial pressures $$50$$ and $$20\ \mathrm{torr}$$, so total pressure is $$70\ \mathrm{torr}$$. The vapor mole fraction of A is $$50/70=0.714$$. The more volatile component is enriched in the vapor, which is the basis for separation by distillation.
+
+</div>
+
 ---
 
 ## Osmotic pressure
@@ -337,6 +463,14 @@ $$
 $$
 
 with $$M$$ in $$\text{mol/L}$$ and $$R$$ matched to the units of $$\Pi$$ (commonly $$0.0821 \text{ L}\cdot\text{atm}/(\text{mol}\cdot\text{K})$$ when $$\Pi$$ is in atm). Osmosis is net flow of solvent through a semipermeable membrane toward higher solute concentration. Note that this will likely not appear on the AP Chemistry exam.
+
+<div class="theorem-box">
+
+**Example.** A membrane passes water but no solute. On one side is ideal $$0.10\ M$$ glucose; on the other is fully dissociated $$0.060\ M$$ NaCl. Predict the initial net water movement at equal temperature and pressure.
+
+Effective particle concentrations are $$0.10\ M$$ and $$2(0.060)=0.120\ M$$. Since $$\Pi=iMRT$$, water initially moves toward the NaCl side. Comparing formula-unit molarities alone would give the opposite prediction.
+
+</div>
 
 ---
 
@@ -356,51 +490,65 @@ $$
 
 Transmittance rarely shows up on the AP exam. Beer's law is very applicable for measuring equilibrium/kinetics, since absorbance is directly proportional to concentration. When doing colorimetry, always calibrate beforehand and set the wavelength to the wavelength that is closest to the OPPOSITE of the color of the solution to get maximum absorbance.
 
+<div class="theorem-box">
+
+**Example.** An unknown gives absorbance $$0.60$$ in a $$2.0\ \mathrm{cm}$$ cuvette. A $$0.020\ M$$ standard gives $$0.40$$ in a $$1.0\ \mathrm{cm}$$ cuvette. Determine the unknown concentration.
+
+Taking a ratio of $$A=\varepsilon lc$$ gives $$c_u=0.020(0.60/0.40)(1.0/2.0)=0.015\ M$$. The unknown absorbs more overall because its path is longer, even though it is less concentrated. Absorbance alone is not a concentration comparison unless path lengths match.
+
+</div>
+
 ---
+
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. Which substance is expected to have the highest boiling point?
+1. A $$10.0\ \mathrm{mL}$$ colored sample is diluted to $$50.0\ \mathrm{mL}$$. Its absorbance is then 0.240 in a 2.00 cm cuvette. What would the original sample's absorbance be in a 1.00 cm cuvette, assuming linear Beer-Lambert behavior?
 
-   (A) $$\text{CH}_4$$<br>
-   (B) $$\text{CH}_3\text{CH}_3$$<br>
-   (C) $$\text{CH}_3\text{OH}$$<br>
-   (D) $$\text{CH}_3\text{OCH}_3$$
+   (A) $$0.120$$<br>
+   (B) $$0.600$$<br>
+   (C) $$1.20$$<br>
+   (D) $$2.40$$
 
 :::solution
-$$\text{CH}_3\text{OH}$$ can form hydrogen bonds because it has an O-H bond. The other choices rely mainly on London dispersion forces or dipole-dipole attractions.
+Dilution lowers concentration fivefold while the longer path doubles absorbance. Thus $$A_d/A_o=2/5$$ and $$A_o=0.240(5/2)=0.600$$. Both concentration and path length must be included.
 
 $$
-\boxed{\text{C}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-2. A solution is prepared by dissolving $$0.250\ \text{mol}$$ of $$\text{NaCl}$$ in enough water to make $$0.500\ \text{L}$$ of solution. Assuming complete dissociation, what is the approximate total particle concentration?
+2. Equal moles of He and Ne share a rigid container at the same temperature. Which comparison is correct?
 
-   (A) $$0.250\ M$$<br>
-   (B) $$0.500\ M$$<br>
-   (C) $$1.00\ M$$<br>
-   (D) $$2.00\ M$$
+   (A) He has greater partial pressure and greater mean speed<br>
+   (B) Ne has greater partial pressure and smaller mean speed<br>
+   (C) Partial pressures and mean speeds are both equal<br>
+   (D) Partial pressures are equal, but He has greater mean speed
 
 :::solution
-The formal concentration of $$\text{NaCl}$$ is
+Each partial pressure is $$n_iRT/V$$, so equal mole amounts give equal pressures. Speeds depend on mass at a fixed temperature, with lighter helium moving faster on average.
 
 $$
-\frac{0.250\ \text{mol}}{0.500\ \text{L}}=0.500\ M.
+\boxed{\text{D}}.
 $$
+:::
+::::
 
-Since $$\text{NaCl}$$ dissociates into two ions, the total particle concentration is approximately
+::::problem
+3. An ideal liquid mixture contains equal moles of A and B, whose pure vapor pressures are 80 and 20 torr. What fraction of the vapor is A?
 
-$$
-2(0.500\ M)=1.00\ M.
-$$
+   (A) $$0.20$$<br>
+   (B) $$0.50$$<br>
+   (C) $$0.80$$<br>
+   (D) $$1.00$$
 
-So the answer is
+:::solution
+Partial pressures are 40 and 10 torr. Dalton's law gives vapor fraction $$y_A=40/(40+10)=0.80$$. The vapor is enriched in the more volatile component even though the liquid is equimolar.
 
 $$
 \boxed{\text{C}}.
@@ -409,69 +557,52 @@ $$
 ::::
 
 ::::problem
-3. Which pair is most likely to be miscible?
+4. A gas mixture is collected over water at total pressure 760 torr. Water vapor pressure is 24 torr. If the collected volume is used with 760 torr to calculate dry gas moles, what is the error?
 
-   (A) Hexane and water<br>
-   (B) Ethanol and water<br>
-   (C) Sodium chloride and hexane<br>
-   (D) Oil and water
+   (A) Dry gas moles are overestimated<br>
+   (B) Dry gas moles are underestimated<br>
+   (C) No error because water is liquid<br>
+   (D) No error because partial pressures cannot be subtracted
 
 :::solution
-Ethanol and water are both polar and can hydrogen bond with each other, so they mix well.
+The dry gas pressure is $$760-24=736\ \mathrm{torr}$$. Using 760 in $$n=PV/RT$$ attributes water-vapor pressure to the dry gas and overestimates its mole amount by a factor $$760/736$$.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
 
 ::::problem
-4. If the pressure of a gas above a liquid is increased at constant temperature, the solubility of the gas in the liquid generally
+5. Two gases X and Y effuse under matching conditions. X effuses three times as fast as Y. Which molar-mass relation follows?
 
-   (A) increases.<br>
-   (B) decreases.<br>
-   (C) remains exactly zero.<br>
-   (D) becomes independent of gas identity.
+   (A) $$M_X=3M_Y$$<br>
+   (B) $$M_X=M_Y/3$$<br>
+   (C) $$M_X=9M_Y$$<br>
+   (D) $$M_X=M_Y/9$$
 
 :::solution
-Henry's law says gas solubility increases as the partial pressure of the gas above the liquid increases.
+$$r_X/r_Y=\sqrt{M_Y/M_X}=3$$ gives $$M_Y/M_X=9$$. Faster effusion identifies the lighter gas, and the square-root dependence requires squaring the rate ratio.
 
 $$
-\boxed{\text{A}}
+\boxed{\text{D}}.
 $$
 :::
 ::::
 
 ::::problem
-5. Which sample should behave most ideally as a gas?
+6. An ideal gas is compressed isothermally from V to V/3. Which explanation correctly accounts for the pressure increase?
 
-   (A) $$\text{NH}_3$$ at high pressure and low temperature<br>
-   (B) $$\text{CO}_2$$ at high pressure and low temperature<br>
-   (C) He at low pressure and high temperature<br>
-   (D) $$\text{H}_2\text{O}$$ vapor near condensation
-
-:::solution
-Gases behave most ideally at low pressure and high temperature, especially when particles have weak intermolecular forces. Helium fits best.
-
-$$
-\boxed{\text{C}}
-$$
-:::
-::::
-
-::::problem
-6. Which solution has the highest boiling point, assuming ideal behavior?
-
-   (A) $$0.10\ m$$ glucose<br>
-   (B) $$0.10\ m\ \text{NaCl}$$<br>
-   (C) $$0.10\ m\ \text{CaCl}_2$$<br>
-   (D) pure water
+   (A) Average kinetic energy triples<br>
+   (B) Wall collisions become more frequent while average kinetic energy stays fixed<br>
+   (C) Molecular mass triples<br>
+   (D) Intermolecular attractions triple the pressure
 
 :::solution
-Boiling-point elevation depends on total dissolved particle concentration. $$\text{CaCl}_2$$ produces about three ions per formula unit, the largest value among the choices.
+$$P_f=3P_i$$ from the ideal gas law. Constant temperature fixes average kinetic energy. The smaller volume raises collision frequency with the walls; ideal-gas pressure does not require intermolecular attraction.
 
 $$
-\boxed{\text{C}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
@@ -486,6 +617,8 @@ $$
    $$(B)$$ A solution has absorbance $$0.420$$. A calibration line has equation $$A=15.0c$$, where $$c$$ is in $$\text{mol/L}$$. Calculate the concentration.
 
    $$(C)$$ Explain why the wavelength should be chosen near the color most strongly absorbed by the solution.
+
+   $$(D)$$ **Original extension.** The measured solution was prepared by diluting $$10.0\ \text{mL}$$ of a stock to $$100.0\ \text{mL}$$. Calculate the stock concentration. Then explain the direction of error if fingerprints on the cuvette reduced transmitted light.
 
 :::solution
 $$(A)$$ Beer-Lambert law gives
@@ -509,6 +642,8 @@ c=\frac{0.420}{15.0}=0.0280\ \text{mol/L}.
 $$
 
 $$(C)$$ Choosing a strongly absorbed wavelength gives a larger absorbance change for a given concentration change, which makes the measurement more sensitive. If the wavelength is poorly absorbed, the absorbance values may be too small and close together, making it harder to distinguish concentrations accurately.
+
+$$(D)$$ Dilution conserves solute: $$M_1(10.0)=0.0280(100.0)$$, giving $$M_1=0.280\ M$$. Fingerprints decrease measured transmittance and increase apparent absorbance. Applying the calibration line then overestimates the diluted concentration, and multiplying by the dilution factor also overestimates the stock concentration. The dilution calculation cannot correct an optical measurement error.
 :::
 ::::
 
@@ -520,6 +655,8 @@ $$(C)$$ Choosing a strongly absorbed wavelength gives a larger absorbance change
    $$(B)$$ If a calibration curve has equation $$A=4.00c$$ and an unknown solution has $$A=0.120$$, calculate $$c$$.
 
    $$(C)$$ In a particle diagram of equal volume, how should the number of colored ions compare between a $$0.020\ M$$ solution and a $$0.040\ M$$ solution?
+
+   $$(D)$$ **Original extension.** Predict the absorbance of the $$0.0300\ M$$ solution if the cuvette path length is halved. Would halving the concentration in the original cuvette have the same optical effect? Explain using particle encounters along the light path.
 
 :::solution
 $$(A)$$ More colored ions means more particles are available to absorb photons at that wavelength. For fixed path length, Beer-Lambert law says absorbance is proportional to concentration.
@@ -538,7 +675,6 @@ $$
 
 $$(C)$$ The $$0.040\ M$$ solution has twice the concentration, so an equal-volume particle diagram should show twice as many colored ions. The volume of the box must stay the same; only the number of solute particles should change.
 
-
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
@@ -550,5 +686,6 @@ $$(C)$$ The $$0.040\ M$$ solution has twice the concentration, so an equal-volum
 \end{tikzpicture}
 ```
 
+$$(D)$$ From $$A=\varepsilon bc$$, halving $$b$$ changes absorbance from $$0.120$$ to $$0.0600$$. Halving $$c$$ at fixed $$b$$ also gives $$0.0600$$, assuming the same absorbing species and wavelength. A shorter path encounters a smaller depth of solution; a lower concentration supplies fewer absorbers per unit volume. Both halve the product $$bc$$, even though only dilution changes the solution composition.
 :::
 ::::

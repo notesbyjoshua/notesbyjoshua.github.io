@@ -6,17 +6,19 @@ sidebar:
   order: 9
 ---
 
----
-
-This unit connects the energy ideas from [Unit 6](/notes/ap/chem/thermochemistry/) and equilibrium ideas from [Unit 7](/notes/ap/chem/equilibrium/) to two big questions: whether a process is thermodynamically favored, and how redox reactions can produce or consume electrical work. You will use entropy, Gibbs free energy, cell potential, the Nernst equation, and Faraday's law to describe spontaneous reactions, galvanic cells, electrolytic cells, and electrochemical applications.
-
----
-
 ## Spontaneity and Thermodynamic favorability
 
 A **spontaneous** process is one that occurs *without continuous external intervention* once the required conditions are present. Spontaneous does not mean fast. Iron rusting is thermodynamically favored under ordinary conditions, but it is slow because its pathway has kinetic barriers.
 
 A process is **thermodynamically favored** when it is spontaneous under the stated conditions. A process can be thermodynamically favored but **kinetically controlled** if it happens slowly because the activation energy is high or the reaction mechanism is difficult.
+
+<div class="theorem-box">
+
+**Example.** A mixture remains unchanged until sparked, then reacts vigorously. Can the reaction have been thermodynamically favorable before the spark?
+
+Yes. Favorability describes a decrease in free energy under the stated conditions, while the activation barrier controls how readily reaction starts. A spark can help the mixture cross that barrier. It does not establish the sign of the free-energy change by itself.
+
+</div>
 
 ---
 
@@ -55,6 +57,14 @@ $$
 
 This equation explains why exothermic reactions often help spontaneity: if $$\Delta H_{\text{system}} < 0$$, then $$\Delta S_{\text{surroundings}} > 0$$.
 
+<div class="theorem-box">
+
+**Example.** At $$300\ K$$, a process has $$\Delta H=-6.00\ \mathrm{kJ}$$ and $$\Delta S_{sys}=-10.0\ \mathrm{J/K}$$. Determine whether the total entropy change is favorable.
+
+The surroundings gain entropy $$-\Delta H/T=6000/300=20.0\ \mathrm{J/K}$$. Thus $$\Delta S_{univ}=-10.0+20.0=+10.0\ \mathrm{J/K}$$, favoring the process. The system can become more ordered if the surroundings' entropy increase is larger.
+
+</div>
+
 ---
 
 ## Predicting entropy changes
@@ -80,6 +90,14 @@ For aqueous ionic compounds, remember the **van't Hoff factor** idea from soluti
 
 Some reactions look counterintuitive if you only inspect the system. For example, building biological polymers from smaller units can decrease system entropy, but the overall process can still be favored if heat release or coupled reactions increase the entropy of the surroundings enough.
 
+<div class="theorem-box">
+
+**Example.** Compare the likely entropy signs for liquid water vaporizing and two gas molecules combining into one gas molecule. Explain the particle-level basis.
+
+Vaporization makes far more spatial arrangements accessible, giving positive system entropy change. Combining two gas molecules into one usually reduces translational arrangements, favoring a negative change. These are qualitative predictions; detailed molar-entropy data settle cases where other contributions compete.
+
+</div>
+
 ---
 
 ## Standard molar entropy
@@ -101,6 +119,14 @@ $$
 $$
 
 where $$n_p$$ and $$n_r$$ are the stoichiometric coefficients of products and reactants. Entropy is commonly tabulated in $$\text{J}/(\text{mol}\cdot\text{K})$$, not $$\text{kJ}/(\text{mol}\cdot\text{K})$$, so unit conversion matters when combining entropy with enthalpy or Gibbs free energy.
+
+<div class="theorem-box">
+
+**Example.** A student sets the standard molar entropy of oxygen gas to zero because its formation enthalpy is zero. Explain the distinction.
+
+Standard molar entropy measures accessible energy arrangements at the stated temperature and is not assigned zero for ordinary elements at room temperature. Zero standard formation enthalpy is a reference convention. The third-law zero concerns a perfect crystal at zero kelvin, not a gas at room temperature.
+
+</div>
 
 ---
 
@@ -151,6 +177,14 @@ $$
 
 as long as units match.
 
+<div class="theorem-box">
+
+**Example.** A reaction has $$\Delta H=+40.0\ \mathrm{kJ/mol}$$ and $$\Delta S=+100.\ \mathrm{J/(mol\,K)}$$. Find its crossover temperature and predict favorability at $$500\ K$$, assuming these quantities are constant.
+
+Convert entropy to $$0.100\ \mathrm{kJ/(mol\,K)}$$. Then $$T=\Delta H/\Delta S=400\ K$$ and $$\Delta G(500)=40.0-500(0.100)=-10.0\ \mathrm{kJ/mol}$$. Above 400 K the favorable entropy term outweighs the positive enthalpy change.
+
+</div>
+
 ---
 
 ## Standard and nonstandard free energy
@@ -185,6 +219,14 @@ $$
 
 If $$Q < K$$, then $$\Delta G < 0$$ and the reaction proceeds forward. If $$Q > K$$, then $$\Delta G > 0$$ and the reverse direction is favored. At equilibrium, $$Q = K$$ and $$\Delta G = 0$$.
 
+<div class="theorem-box">
+
+**Example.** At fixed temperature, a reaction has $$K=100$$ but the prepared mixture has $$Q=1000$$. Predict the sign of actual free-energy change despite its negative standard value.
+
+$$\Delta G=RT\ln(Q/K)=RT\ln10>0$$, so the forward direction is unfavorable in that mixture. The reverse direction reduces Q toward K. Standard free energy describes a reference composition; actual direction requires the current reaction quotient.
+
+</div>
+
 ---
 
 ## Coupled reactions
@@ -205,6 +247,14 @@ $$
 
 This is how many biological and industrial processes drive unfavorable steps: the system "pays" for them using a more favorable reaction.
 
+<div class="theorem-box">
+
+**Example.** An uphill step has $$\Delta G=+25\ \mathrm{kJ/mol}$$ and a linked downhill step has $$-40\ \mathrm{kJ/mol}$$. Does their sum establish that simply mixing separate reactants will force the uphill step?
+
+The linked net reaction has $$\Delta G=-15\ \mathrm{kJ/mol}$$ and is favorable. But an actual mechanism must couple the processes, for example by consuming a shared intermediate. An unrelated exergonic reaction occurring nearby does not automatically drive the uphill chemistry.
+
+</div>
+
 ---
 
 ## Electrochemistry overview
@@ -220,6 +270,14 @@ Remember:
 - **REDCAT**: reduction occurs at the cathode.
 
 Electrons flow through the external wire from anode to cathode. Ions move through the solution or salt bridge to maintain charge balance.
+
+<div class="theorem-box">
+
+**Example.** A student proposes that electrons leave the anode through the salt bridge and return through the wire. Explain which charge carriers move in each path.
+
+Electrons travel through the metallic external circuit from oxidation to reduction. Ions migrate through the electrolyte and salt bridge to prevent charge buildup. Both paths complete the circuit, but ionic migration is not electron conduction through the salt solution.
+
+</div>
 
 ---
 
@@ -240,7 +298,13 @@ In a galvanic cell:
 
 The **salt bridge** is usually a U-shaped tube or porous barrier containing inert ions. Without it, charge buildup stops electron flow. Anions migrate toward the anode to balance newly produced cations, and cations migrate toward the cathode to replace cations being reduced.
 
+<div class="theorem-box">
 
+**Example.** The salt bridge is removed from an operating Zn/Cu cell while the wire remains connected. Explain why sustained current stops although both electrodes remain present.
+
+Zinc oxidation leaves excess positive charge in its compartment; copper-ion reduction removes positive charge from the other. Without ion migration, this charge separation rapidly opposes further electron transfer. Keeping a wire connected cannot replace the missing ionic path.
+
+</div>
 
 ---
 
@@ -286,6 +350,14 @@ $$
 \text{efficiency} = \frac{\text{actual work}}{\text{theoretical maximum work}} \times 100
 $$
 
+<div class="theorem-box">
+
+**Example.** A balanced cell reaction is doubled. Determine the changes in n, standard free energy, and standard voltage.
+
+Electron stoichiometry n doubles, and the free energy for the doubled reaction doubles. Since $$E^\circ=-\Delta G^\circ/(nF)$$, their ratio stays fixed. Voltage is energy per unit charge, not the total amount of energy available.
+
+</div>
+
 ---
 
 ## Standard reduction potentials
@@ -316,7 +388,15 @@ $$
 
 then you must reverse the anode half-reaction and change its sign.
 
-Simply stated, you can think of a high cell potential as a river with a lot of electrons, where the more electrons you have the higher the river is. Thus, this river will flow from high to low, just like how electrons will flow from high reduction potential to a low cell potential.
+Under standard galvanic conditions, electrons flow from the anode with the lower reduction potential to the cathode with the higher reduction potential. Voltage measures energy per unit charge, not the number of electrons present.
+
+<div class="theorem-box">
+
+**Example.** Half-cell reductions have potentials $$+0.80$$ and $$-0.40\ V$$. Determine the spontaneous cathode and voltage, and explain whether multiplying one half-reaction by three multiplies its potential.
+
+The more positive reduction runs at the cathode, giving $$E^\circ=0.80-(-0.40)=1.20\ V$$. Balancing electron counts changes amounts, not energy per charge, so no tabulated potential is multiplied by three. Electrons flow from the lower-reduction-potential anode toward the cathode.
+
+</div>
 
 ---
 
@@ -337,6 +417,14 @@ $$
 $$
 
 This describes a cell where zinc is oxidized at the anode and copper ions are reduced at the cathode.
+
+<div class="theorem-box">
+
+**Example.** Interpret $$\mathrm{Pt(s)\mid Fe^{2+}(aq),Fe^{3+}(aq)\parallel Ag^+(aq)\mid Ag(s)}$$ with the left side as anode. Explain the role of Pt.
+
+Iron(II) is oxidized to iron(III), and silver ions are reduced to silver metal. Both iron species are dissolved, so an inert conductor is needed to exchange electrons with the wire. Platinum supplies that conducting surface without appearing in the net reaction.
+
+</div>
 
 ---
 
@@ -372,6 +460,14 @@ $$
 E^\circ_{\text{cell}} = \frac{0.0592}{n}\log K.
 $$
 
+<div class="theorem-box">
+
+**Example.** For a two-electron cell at $$25^\circ\mathrm{C}$$, Q increases by a factor of 100. Determine the voltage change without knowing its initial value.
+
+Subtracting two Nernst equations gives $$\Delta E=-(0.0592/2)\log100=-0.0592\ V$$. The standard potential cancels. Increasing the product-to-reactant activity ratio reduces the forward driving force.
+
+</div>
+
 ---
 
 ## Concentration cells and ion-selective electrodes
@@ -381,6 +477,14 @@ A **concentration cell** uses the same redox couple in both half-cells but at di
 The spontaneous direction reduces the concentration difference. Electrons flow from the dilute side to the concentrated side for a metal-ion concentration cell, so metal tends to oxidize on the dilute side and plate onto the concentrated side.
 
 An **ion-selective electrode** is an electrode that responds selectively to a particular ion concentration. Its potential follows Nernst-type behavior, so it can be used to measure ion activity, such as $$\text{H}^+$$ in a pH electrode or $$\text{F}^-$$ in a fluoride electrode.
+
+<div class="theorem-box">
+
+**Example.** A copper concentration cell has $$[Cu^{2+}]=0.010\ M$$ on the left and $$1.0\ M$$ on the right. Identify the anode and explain how discharge reduces the concentration difference.
+
+Oxidation occurs on the dilute left side, adding copper ions. Reduction occurs on the concentrated right side, removing them. Electrons flow left to right. Standard cell potential is zero, but the concentration difference gives a positive actual potential.
+
+</div>
 
 ---
 
@@ -403,6 +507,14 @@ Corrosion can be slowed by:
 
 In cathodic protection, a more easily oxidized metal acts as a **sacrificial anode**. It oxidizes instead of the protected metal, keeping the protected metal as the cathode.
 
+<div class="theorem-box">
+
+**Example.** A scratched iron object is electrically connected to a more easily oxidized sacrificial metal. Explain why protection can continue despite the scratch.
+
+The sacrificial metal supplies electrons as it oxidizes, keeping iron cathodic and suppressing its oxidation. Protection depends on electrical contact and an ionic path, not an intact surface barrier. Once the sacrificial metal is consumed, that protection is lost.
+
+</div>
+
 ---
 
 ## Electrolytic cells
@@ -418,6 +530,14 @@ Oxidation still occurs at the anode and reduction still occurs at the cathode. T
 
 If both electrodes are in the same compartment and an external battery is driving the reaction, the setup is usually electrolytic. The absence of a salt bridge can also suggest a simple electrolytic setup, though some galvanic cells use porous barriers instead of classic U-shaped bridges. Basically, electrolytics cells are like galvanic cells but reversed.
 
+<div class="theorem-box">
+
+**Example.** A rechargeable cell is driven in reverse by an external source. Do the physical electrodes retain their discharge labels anode and cathode?
+
+No. Labels follow the reactions: the electrode now undergoing oxidation is the anode, and the one now undergoing reduction is the cathode. Reversing the chemistry exchanges those roles. The definitions do not depend on a permanent label stamped on the metal.
+
+</div>
+
 ---
 
 ## Electrolysis of salts
@@ -431,6 +551,14 @@ At the anode: $$2 Br^{-} (l) \longrightarrow Br_2 (l) + 2 e^{-}$$
 At the cathode: $$Pb^{2+} (l) + 2 e^{-} \longrightarrow Pb(s)$$
 
 Since no water is present, it can't react! The metals/liquids should then form onto an **inert electrode** (like platinum and graphite). However, the electrolysis of molten salts is not very practical because it takes hundreds and even thousands of degrees to get the salts into molten form!
+
+<div class="theorem-box">
+
+**Example.** For molten $$\mathrm{MgCl_2}$$, a student predicts chlorine at the cathode because chloride is negative. Correct the electrode assignments and find the mole ratio of products.
+
+Cations migrate toward the negative cathode, where $$\mathrm{Mg^{2+}+2e^-\rightarrow Mg}$$. Chloride migrates toward the positive anode, where $$\mathrm{2Cl^-\rightarrow Cl_2+2e^-}$$. Equal electron transfer gives one mole of magnesium per mole of chlorine gas. The charge of an ion predicts which electrode attracts it, while reduction or oxidation determines the product formed there.
+
+</div>
 
 ### Electrolysis of aqueous solutions
 
@@ -456,6 +584,14 @@ Below are some common observations that would occur if certain elements formed:
 | $$OH^{-}$$ (aq) | Blue in bromothymol blue, pink in phenolphthalein|
 | $$H^{+}$$ (aq) | Yellow in bromothymol blue, clear in phenolphthalein |
 
+<div class="theorem-box">
+
+**Example.** Explain why molten NaCl can yield sodium metal but aqueous NaCl normally produces hydrogen at the cathode.
+
+The melt contains sodium and chloride ions without water competing. In aqueous solution, water is reduced more readily than sodium ions under ordinary conditions, producing hydrogen and hydroxide. Listing the dissolved cation alone is therefore insufficient for predicting aqueous products.
+
+</div>
+
 ---
 
 ## Electroplating and competing reactions
@@ -467,6 +603,14 @@ $$
 $$
 
 In aqueous electrolysis, water can compete with dissolved ions. Whether water or an ion is oxidized/reduced depends on reduction potentials, concentration, electrode material, and overpotential. AP problems often simplify this by giving the relevant half-reactions or asking you to compare standard potentials.
+
+<div class="theorem-box">
+
+**Example.** A copper-plating experiment deposits only 80% of the mass predicted from charge passed. Explain how hydrogen evolution could account for the shortfall.
+
+The theoretical mass assumes every electron reduces copper ions. If some electrons reduce water or acid to hydrogen instead, less charge is available for copper deposition. An 80% current efficiency would multiply the ideal copper mass by 0.80; it does not mean charge disappeared.
+
+</div>
 
 ---
 
@@ -535,132 +679,119 @@ So $$n = 2$$ in the mass equation.
 | Faraday's law mass form                    | $$m = \frac{MIt}{nF}$$                                                                                                   |
 :::
 
+<div class="theorem-box">
+
+**Example.** Equal charge passes through silver-ion and copper(II)-ion plating cells. Using molar masses 107.9 and $$63.55\ \mathrm{g/mol}$$, compare deposited masses.
+
+Silver needs one electron per atom and copper needs two. Thus $$m_{Ag}/m_{Cu}=(107.9/1)/(63.55/2)=3.40$$. Equal charge means equal electron amounts, not equal metal moles or equal masses.
+
+</div>
+
 ---
+
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. For a spontaneous galvanic cell under standard conditions, which statement is correct?
+1. A reaction has $$\Delta H^\circ=+60.0\ \mathrm{kJ/mol}$$ and $$\Delta S^\circ=+150\ \mathrm{J/(mol\,K)}$$. Assuming both are constant, when is the standard reaction favorable?
 
-   (A) $$E^\circ_{\text{cell}}<0$$ and $$\Delta G^\circ<0$$<br>
-   (B) $$E^\circ_{\text{cell}}>0$$ and $$\Delta G^\circ<0$$<br>
-   (C) $$E^\circ_{\text{cell}}>0$$ and $$\Delta G^\circ>0$$<br>
-   (D) $$E^\circ_{\text{cell}}=0$$ and $$\Delta G^\circ=0$$
+   (A) Below 400 K<br>
+   (B) Above 400 K<br>
+   (C) At every temperature<br>
+   (D) At no temperature
 
 :::solution
-For a spontaneous galvanic cell,
+Convert entropy to 0.150 kJ/(mol K). The crossover is $$60.0/0.150=400\ K$$. Above it, $$T\Delta S^\circ$$ exceeds $$\Delta H^\circ$$ and standard free energy is negative.
 
 $$
-\Delta G^\circ=-nFE^\circ_{\text{cell}}.
-$$
-
-Spontaneous means $$\Delta G^\circ<0$$, which requires $$E^\circ_{\text{cell}}>0$$.
-
-$$
-\boxed{\text{B}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-2. Which change always increases the entropy of the system?
+2. For a two-electron cell at $$25^\circ C$$, $$E^\circ=1.10\ V$$ and $$Q=100$$. Find its actual potential.
 
-   (A) $$\text{H}_2\text{O}(g)\rightarrow\text{H}_2\text{O}(l)$$<br>
-   (B) $$\text{NaCl}(aq)\rightarrow\text{NaCl}(s)$$<br>
-   (C) $$\text{CO}_2(s)\rightarrow\text{CO}_2(g)$$<br>
-   (D) $$2\text{NO}_2(g)\rightarrow\text{N}_2\text{O}_4(g)$$
+   (A) $$1.1592\ V$$<br>
+   (B) $$1.1000\ V$$<br>
+   (C) $$1.0408\ V$$<br>
+   (D) $$0.9816\ V$$
 
 :::solution
-Sublimation changes a solid directly into a gas. Gas particles have many more accessible microstates than particles in a solid.
+$$E=1.10-(0.0592/2)\log100=1.0408\ V$$. Both the electron coefficient and the base-ten logarithm matter; product enrichment reduces forward voltage.
 
 $$
-\boxed{\text{C}}
+\boxed{\text{C}}.
 $$
 :::
 ::::
 
 ::::problem
-3. A reaction has $$\Delta H^\circ>0$$ and $$\Delta S^\circ>0$$. The reaction is most likely thermodynamically favorable at
+3. Doubling a balanced redox equation changes which quantities?
 
-   (A) low temperatures only.<br>
-   (B) high temperatures only.<br>
-   (C) all temperatures.<br>
-   (D) no temperatures.
+   (A) E doubles but n stays fixed<br>
+   (B) E and standard free energy both stay fixed<br>
+   (C) E doubles and standard free energy halves<br>
+   (D) n and standard free energy double, but E stays fixed
 
 :::solution
-Use
+Standard free energy scales with the reaction amount and n scales with electrons transferred. Their ratio $$-\Delta G^\circ/(nF)$$ is unchanged, so voltage remains fixed.
 
 $$
-\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ.
-$$
-
-When both $$\Delta H^\circ$$ and $$\Delta S^\circ$$ are positive, high temperature makes the $$-T\Delta S^\circ$$ term large and negative.
-
-$$
-\boxed{\text{B}}
+\boxed{\text{D}}.
 $$
 :::
 ::::
 
 ::::problem
-4. In an electrolytic cell, oxidation occurs at the
+4. Exactly $$0.100\ \mathrm{mol}$$ electrons passes through a copper-plating cell, but only 80.0% reduces copper(II). Use molar mass $$63.55\ \mathrm{g/mol}$$. What mass plates?
 
-   (A) anode.<br>
-   (B) cathode.<br>
-   (C) salt bridge.<br>
-   (D) voltmeter.
+   (A) $$2.54\ g$$<br>
+   (B) $$3.18\ g$$<br>
+   (C) $$5.08\ g$$<br>
+   (D) $$6.36\ g$$
 
 :::solution
-Oxidation always occurs at the anode, in both galvanic and electrolytic cells.
+Effective electron amount is 0.0800 mol. Two electrons plate one Cu, giving 0.0400 mol Cu and $$0.0400(63.55)=2.54\ g$$. Efficiency applies to useful charge before the electron-to-metal conversion.
 
 $$
-\boxed{\text{A}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
 
 ::::problem
-5. If $$\Delta G^\circ<0$$ for a reaction under standard conditions, which statement is true?
+5. An operating Zn/Cu galvanic cell uses an inert salt bridge. Which description of charge flow is correct?
 
-   (A) $$K<1$$<br>
-   (B) $$K=1$$<br>
-   (C) $$K>1$$<br>
-   (D) $$E^\circ_{\text{cell}}<0$$ for the corresponding galvanic cell
+   (A) Electrons cross the bridge toward zinc<br>
+   (B) Anions migrate toward the zinc compartment as zinc ions form<br>
+   (C) Cations migrate toward zinc to increase its positive charge<br>
+   (D) Electrons move through solution from copper to zinc
 
 :::solution
-Since
+Zinc oxidation adds cations to its compartment, requiring anion migration for charge balance. Electrons flow through the external wire from zinc toward copper, not through the salt bridge.
 
 $$
-\Delta G^\circ=-RT\ln K,
-$$
-
-a negative $$\Delta G^\circ$$ means $$\ln K>0$$, so $$K>1$$.
-
-$$
-\boxed{\text{C}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-6. What mass of Ag is plated by $$1.00\ \text{mol}$$ of electrons from $$\text{Ag}^+$$?
+6. A cell has positive standard voltage but actual reaction quotient larger than K. Which conclusion follows?
 
-   (A) $$53.9\ \text{g}$$<br>
-   (B) $$107.9\ \text{g}$$<br>
-   (C) $$215.8\ \text{g}$$<br>
-   (D) $$96500\ \text{g}$$
+   (A) Its forward reaction is favorable because standard voltage is positive<br>
+   (B) A catalyst will increase K until discharge resumes<br>
+   (C) Its actual forward voltage is negative<br>
+   (D) Its standard free energy becomes zero
 
 :::solution
-For $$\text{Ag}^+ + e^- \rightarrow \text{Ag}(s)$$, $$1.00\ \text{mol}$$ of electrons plates $$1.00\ \text{mol}$$ of Ag.
+$$\Delta G=RT\ln(Q/K)>0$$, so $$E=-\Delta G/(nF)<0$$ for the written forward reaction. Standard voltage remains a reference property; actual composition can reverse the favorable direction.
 
 $$
-1.00\ \text{mol Ag}\times107.9\ \text{g/mol}=107.9\ \text{g}.
-$$
-
-$$
-\boxed{\text{B}}
+\boxed{\text{C}}.
 $$
 :::
 ::::
@@ -683,6 +814,8 @@ Use $$E^\circ_{\text{red}}(\text{Cu}^{2+}/\text{Cu})=+0.34\ \text{V}$$ and $$E^\
    $$(C)$$ Calculate $$\Delta G^\circ$$ for the reaction.
 
    $$(D)$$ Explain the direction of electron flow in the external circuit.
+
+   $$(E)$$ **Original extension.** At $$25^\circ\text{C}$$, let $$[\text{Zn}^{2+}]=1.00\ M$$ and $$[\text{Cu}^{2+}]=0.0100\ M$$. Calculate the cell potential and explain why its change from the standard value agrees with the reaction quotient.
 
 :::solution
 $$(A)$$ Zinc is oxidized:
@@ -729,7 +862,6 @@ $$
 
 $$(D)$$ Electrons are produced at the zinc anode and consumed at the copper cathode, so electrons flow from Zn to Cu through the external circuit. Ions move through the salt bridge to maintain charge balance, but electrons do not travel through the salt bridge.
 
-
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
@@ -744,6 +876,7 @@ $$(D)$$ Electrons are produced at the zinc anode and consumed at the copper cath
 \end{tikzpicture}
 ```
 
+$$(E)$$ For $$\text{Zn}(s)+\text{Cu}^{2+}(aq)\rightarrow\text{Zn}^{2+}(aq)+\text{Cu}(s)$$, $$Q=[\text{Zn}^{2+}]/[\text{Cu}^{2+}]=100$$; the solids are excluded. The Nernst equation gives $$E=1.10-(0.0592/2)\log(100)=1.04\ \text{V}$$. Relative to standard conditions, the mixture has a larger product-to-reactant ratio, reducing the forward driving force and voltage. The voltage is still positive, so the forward reaction remains thermodynamically favorable under these conditions.
 :::
 ::::
 
@@ -755,6 +888,8 @@ $$(D)$$ Electrons are produced at the zinc anode and consumed at the copper cath
    $$(B)$$ Calculate the time required to plate $$1.00\ \text{g}$$ of $$\text{Cu}(s)$$ from $$\text{Cu}^{2+}$$ using a current of $$2.00\ \text{A}$$.
 
    $$(C)$$ Identify whether reduction or oxidation occurs at the object being plated.
+
+   $$(D)$$ **Original extension.** Only $$80.0\%$$ of the current deposits copper; the rest drives a competing reaction. Recalculate the time to deposit the same mass and explain whether the copper half-reaction's electron coefficient changes.
 
 :::solution
 $$(A)$$ Electroplating is nonspontaneous as written, so an external power source is needed to drive electron flow and force reduction of metal ions onto the object. In other words, electrical energy is used to make a thermodynamically unfavorable redox process occur.
@@ -786,5 +921,7 @@ $$
 This is about $$25.3\ \text{min}$$ if converted to minutes.
 
 $$(C)$$ Metal ions gain electrons and become solid metal on the object, so reduction occurs at the object being plated. The object being plated acts as the cathode in the electrolytic cell.
+
+$$(D)$$ The useful deposition current is $$0.800(2.00)=1.60\ \text{A}$$. Equivalently, the required total charge is the ideal deposition charge divided by $$0.800$$. Thus $$t=t_{\text{ideal}}/0.800\approx1.90\times10^3\ \text{s}$$, or $$31.6\ \text{min}$$. The reaction remains $$\text{Cu}^{2+}+2e^-\rightarrow\text{Cu}$$: two electrons are still required per copper atom. Lower efficiency changes how much of the supplied charge reaches that reaction, not its stoichiometry.
 :::
 ::::

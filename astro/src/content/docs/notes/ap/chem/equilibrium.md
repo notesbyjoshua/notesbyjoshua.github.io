@@ -5,12 +5,6 @@ sidebar:
   order: 7
 ---
 
----
-
-Unit 7 is about **chemical equilibrium**: the state in a **closed system** where a reversible reaction’s **forward** and **reverse** rates are equal, so **macroscopic** concentrations (or partial pressures) stop changing even though reactants and products are still interconverting at the molecular level. You will write **equilibrium constants** ($$K_c$$, $$K_p$$), compare them to the **reaction quotient** ($$Q$$), use **ICE tables** to compute equilibrium compositions, apply **Le Châtelier’s principle** to predict disturbance responses, and extend the same ideas to **solubility** ($$K_{sp}$$), **precipitation**, and **complex-ion** formation ($$K_f$$). These tools connect directly to **thermodynamics** through **Gibbs free energy** and the **van’t Hoff equation** (how $$K$$ changes with temperature), and to later work on **acids and bases**, where $$K_a$$ and $$K_b$$ are themselves equilibrium constants.
-
----
-
 ## Chemical Equilibrium
 
 Most reactions we have looked at previously were **irreversible reactions**, or reactions that can only go one way (forward). A **reversible reaction** can run in both directions (forward and backwards). In a **closed system** (no escape of matter), the forward reaction consumes reactants and forms products, while the reverse reaction does the opposite. **Chemical equilibrium** is reached when the **rate of the forward reaction** equals the **rate of the reverse reaction**. At that point:
@@ -19,7 +13,6 @@ Most reactions we have looked at previously were **irreversible reactions**, or 
 - The system is **dynamic**: molecules still react, but there is **no net** change in amounts. This is different from a **completed** or **irreversible** reaction, where at least one reactant is effectively exhausted and the process does not establish a lasting balance between forward and reverse paths at ordinary conditions.
 
 The approach to equilibrium has a characteristic shape: starting from pure reactants, the **forward rate** is high (reactant concentrations are large) and the **reverse rate** is zero. As products build up, the forward rate falls and the reverse rate rises until the two are **equal**—from that moment on, concentrations level off and stay flat. Crucially, "equal rates" does *not* mean "equal concentrations"; the leveled-off amounts can be lopsided in either direction depending on $$K$$.
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -38,8 +31,15 @@ The approach to equilibrium has a characteristic shape: starting from pure react
 \end{tikzpicture}
 ```
 
-
 **Homogeneous** equilibrium means all reacting species are in the same phase (e.g. all gases, or all in one solution). **Heterogeneous** equilibrium includes **pure solids** or **pure liquids** as separate phases; their activities are taken as constant and they are **omitted** from the equilibrium expression (see below).
+
+<div class="theorem-box">
+
+**Example.** In a sealed vessel at equilibrium, product concentration is twice reactant concentration. A student says the reverse rate must therefore be twice the forward rate. Evaluate the claim.
+
+Equilibrium requires equal forward and reverse rates, not equal concentrations. Different rate constants and concentration dependences allow unequal amounts while the two rates balance. Constant measured concentrations establish no net change; they do not imply that molecular reactions have stopped.
+
+</div>
 
 ---
 
@@ -70,6 +70,14 @@ On the AP exam, $$K$$ is treated as a dimensionless ratio by implicitly comparin
 
 These cutoffs are rules of thumb; what matters is comparing $$Q$$ to $$K$$ and interpreting $$K$$ relative to $$1$$.
 
+<div class="theorem-box">
+
+**Example.** A reaction has $$K_c=10^{12}$$ but produces no detectable product during a short observation. Must either the measurement or the equilibrium constant be wrong?
+
+No. The large constant predicts a product-favored equilibrium composition, not the time needed to reach it. A large activation barrier can make the forward rate extremely small. A catalyst could help the mixture approach equilibrium faster without changing $$K_c$$. Thermodynamic preference and observable reaction speed answer different questions.
+
+</div>
+
 ### Manipulating $$K$$ for related equations
 
 - **Reverse reaction:**
@@ -84,6 +92,14 @@ These cutoffs are rules of thumb; what matters is comparing $$Q$$ to $$K$$ and i
   $$
   K_{\text{overall}} = K_1 \times K_2 \times \cdots
   $$
+
+<div class="theorem-box">
+
+**Example.** For $$A\rightleftharpoons2B$$, $$K=9$$. Find K for $$B\rightleftharpoons\tfrac12 A$$ and explain why taking only the reciprocal is insufficient.
+
+Reversing gives $$2B\rightleftharpoons A$$ with constant $$1/9$$. Dividing all coefficients by two takes its square root, giving $$K'=1/3$$. The equilibrium expression has both its numerator/denominator and its exponents changed.
+
+</div>
 
 ---
 
@@ -109,6 +125,14 @@ $$
 
 where $$\Delta n_{\text{gas}}$$ is difference between the amount of moles of products and reactants (from the balanced equation), and $$R$$ must be **consistent** with the pressure units used (e.g. $$R = 0.0821\ \text{L·atm/(mol·K)}$$ when $$P$$ is in atm).
 
+<div class="theorem-box">
+
+**Example.** For $$\mathrm{N_2O_4(g)\rightleftharpoons2NO_2(g)}$$, a student sets $$K_p=K_c$$ because all species are gases. Identify the missing factor.
+
+The change in gas mole coefficients is $$\Delta n=2-1=1$$. With the usual textbook unit convention, $$K_p=K_c(RT)$$. Equality would follow for $$\Delta n=0$$, not merely from all species being gaseous. Temperature must be expressed in kelvin and R must match pressure units.
+
+</div>
+
 ---
 
 ## Reaction quotient $$Q$$
@@ -131,7 +155,6 @@ A useful trick is to line up $$K$$ and $$Q$$ alphabetically (so $$K$$ on the lef
 
 The same logic applies to $$Q_p$$ and $$K_p$$ for gases.
 
-
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
@@ -144,8 +167,15 @@ The same logic applies to $$Q_p$$ and $$K_p$$ for gases.
 \end{tikzpicture}
 ```
 
-
 A **catalyst** speeds both forward and reverse rates equally, so it **does not change** $$K$$ or the equilibrium position - it only shortens the time needed to reach equilibrium.
+
+<div class="theorem-box">
+
+**Example.** For $$A\rightleftharpoons2B$$, an equilibrium mixture is suddenly compressed to half its volume at fixed temperature. Compare the new Q with K before any reaction occurs.
+
+Both concentrations double, so $$Q'=\frac{(2[B])^2}{2[A]}=2K$$. The reverse reaction is favored, reducing B and forming A. Tracking the concentration powers explains the shift without assuming that every compression favors reactants.
+
+</div>
 
 ---
 
@@ -195,6 +225,14 @@ $$
 
 which shows that sensitivity of $$\ln K$$ to temperature is *larger* when $$\Delta H^\circ$$ is large and when $$T$$ is *low* (through the $$1/T^2$$ factor in how small $$\Delta T$$ steps accumulate).
 
+<div class="theorem-box">
+
+**Example.** For an endothermic reaction, $$\Delta H^\circ=+40.0\ \mathrm{kJ/mol}$$ and $$K_1=2.00$$ at $$300\ K$$. Estimate K at $$330\ K$$, assuming constant reaction enthalpy, and distinguish this change from a catalyst's effect.
+
+Use $$\ln(K_2/K_1)=-(40000/8.314)(1/330-1/300)=1.46$$. Thus $$K_2=2.00e^{1.46}\approx8.59$$. Heating favors the endothermic direction and changes equilibrium composition. A catalyst instead speeds the approach to equilibrium at a given temperature without changing its constant.
+
+</div>
+
 ---
 
 ## Le Châtelier’s principle
@@ -208,7 +246,6 @@ Typical stresses:
 - **Temperature:** $$K$$ **changes** with temperature. Treat **heat** as part of the reaction: for an **endothermic** forward reaction ($$\Delta H > 0$$), **raising** $$T$$ favors the **forward** direction (larger $$K$$ if the forward reaction is endothermic). For an **exothermic** forward reaction ($$\Delta H < 0$$), **raising** $$T$$ favors the **reverse** direction (smaller $$K$$). **Cooling** favors the exothermic direction.
 
 Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concentration stress when you need a **numerical** $$K$$: use the correct $$K$$ for the new temperature if given, compute $$K_2$$ from $$K_1$$ with the **van’t Hoff equation** (previous section), or reason qualitatively from $$\Delta H$$.
-
 
 ```tikz
 \usepackage{tikz}
@@ -226,6 +263,13 @@ Since $$K$$ depends on $$T$$, **do not** treat temperature like a simple concent
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** Inert gas is added to an ideal-gas equilibrium mixture at fixed temperature and fixed volume. Total pressure rises. Must equilibrium shift toward fewer gas molecules?
+
+No. Each reacting species still has the same $$n_iRT/V$$ partial pressure, so Q stays equal to K. Total pressure alone is insufficient. If instead volume increased at fixed total pressure, reacting-species partial pressures would change and a shift could occur.
+
+</div>
 
 ---
 
@@ -266,6 +310,13 @@ i.e. $$x$$ is at most $$5\%$$ of the initial concentration it was subtracted fro
 
 For $$aA+bB\rightleftharpoons cC+dD$$, changes usually look like $$-ax$$, $$-bx$$, $$+cx$$, and $$+dx$$.
 
+<div class="theorem-box">
+
+**Example.** For $$\mathrm{A\rightleftharpoons B+C}$$, start with $$[A]=0.100\ M$$ and no products, with $$K_c=0.0100$$. Test the small-change approximation and calculate the physical root if it fails.
+
+Assuming $$0.100-x\approx0.100$$ gives $$x=\sqrt{0.0100(0.100)}=0.0316\ M$$, or $$31.6\%$$ depletion, so the assumption fails. Instead solve $$x^2/(0.100-x)=0.0100$$, giving $$x^2+0.0100x-0.00100=0$$ and $$x=0.0270\ M$$. The negative root is unphysical because products start at zero. A small numerical K is not enough by itself; the change must be small relative to the starting concentration.
+
+</div>
 
 ---
 
@@ -296,6 +347,14 @@ Setting up an ICE table for $$K_{sp}$$ is slightly different from a normal ICE t
 3. **Change** row: This is the same as a regular ICE table.
 4. **Equilibrium** row: This is the same as a regular ICE table, except write "solid" for initial for the precipitate.
 
+<div class="theorem-box">
+
+**Example.** For $$\mathrm{Ag_2CrO_4}$$ dissolving in pure water, why is an ICE row of $$+s$$ for both ions incorrect? Write the correct expression.
+
+Each dissolved formula unit produces two silver ions and one chromate ion. Thus the concentration changes are $$+2s$$ for $$\mathrm{Ag^+}$$ and $$+s$$ for $$\mathrm{CrO_4^{2-}}$$. With no initial ions, $$K_{sp}=(2s)^2(s)=4s^3$$. The coefficient affects both the concentration produced and the exponent in the equilibrium expression; these are separate consequences of the same balanced equation.
+
+</div>
+
 ### Molar solubility
 
 **Molar solubility** ($$s$$) is the number of **moles of solid** that dissolve per liter of solution to reach saturation (under stated conditions). If one formula unit of $$\text{A}_m\text{B}_l$$ produces $$m$$ ions of $$\text{A}$$ and $$l$$ ions of $$\text{B}$$, then at saturation
@@ -312,6 +371,14 @@ $$
 
 Solve for $$s$$ given $$K_{sp}$$, or $$K_{sp}$$ given $$s$$. In an ICE table, the molar solubility is equivalent to the $$x$$ value.
 
+<div class="theorem-box">
+
+**Example.** Two salts have the same numerical $$K_{sp}=1.0\times10^{-12}$$. One dissociates as $$\mathrm{AB}$$ and the other as $$\mathrm{AB_2}$$. Are their molar solubilities equal in pure water?
+
+No. For $$\mathrm{AB}$$, $$K_{sp}=s^2$$ gives $$s=1.0\times10^{-6}\ M$$. For $$\mathrm{AB_2}$$, $$K_{sp}=s(2s)^2=4s^3$$ gives $$s=6.3\times10^{-5}\ M$$. Equal equilibrium constants do not imply equal formula-unit solubilities when dissociation stoichiometries differ. This assumes neither ion undergoes a significant additional reaction.
+
+</div>
+
 ### Ion product and precipitation
 
 The **ion product** $$Q_{sp}$$ uses **current** ion concentrations in the $$K_{sp}$$ expression (same form as $$K_{sp}$$).
@@ -320,13 +387,37 @@ The **ion product** $$Q_{sp}$$ uses **current** ion concentrations in the $$K_{s
 - If $$Q_{sp} = K_{sp}$$, the solution is *saturated* (at equilibrium with solid, if present).
 - If $$Q_{sp} > K_{sp}$$, *precipitation* occurs until $$Q_{sp}$$ drops to $$K_{sp}$$ (assuming equilibrium can be reached).
 
+<div class="theorem-box">
+
+**Example.** Equal volumes of $$2.0\times10^{-5}\ M$$ silver nitrate and $$2.0\times10^{-5}\ M$$ sodium chloride are mixed. With $$K_{sp}(\mathrm{AgCl})=1.8\times10^{-10}$$, does precipitation begin?
+
+Mixing doubles each solution's volume, so both ion concentrations become $$1.0\times10^{-5}\ M$$ before any reaction. The ion product is $$Q=(1.0\times10^{-5})^2=1.0\times10^{-10}<K_{sp}$$, so precipitation is not predicted. Using the unmixed concentrations gives a false supersaturation result. Dilution must be accounted for before comparing $$Q$$ with $$K_{sp}$$.
+
+</div>
+
 ### Common-ion effect
 
 If one of the ions is already present from another source (**common ion**), its higher initial concentration shifts dissolution **left**, **lowering** molar solubility compared to pure water. ICE-style reasoning applies: treat initial $$[\text{A}^{a+}]$$ or $$[\text{B}^{b-}]$$ as nonzero before the solid dissolves further.
 
+<div class="theorem-box">
+
+**Example.** Solid AgCl is present in saturated solution. Add NaCl without appreciably changing the volume. Does the silver concentration decrease because $$K_{sp}$$ decreases?
+
+The temperature is unchanged, so $$K_{sp}$$ remains constant. Added chloride initially makes $$Q=[\mathrm{Ag^+}][\mathrm{Cl^-}]$$ too large, causing precipitation until the product again equals $$K_{sp}$$. The new equilibrium has less dissolved silver and more chloride. Concentrations change to satisfy the same constant, rather than changing the constant to fit the disturbance.
+
+</div>
+
 ### Selective precipitation
 
 **Selective precipitation** separates ions by adding a reagent that forms salts with **very different** $$K_{sp}$$ values. The ion whose $$Q_{sp}$$ exceeds its $$K_{sp}$$ **first** (lowest $$K_{sp}$$ or favorable stoichiometry) precipitates preferentially as concentration is raised—used analytically and conceptually on the exam.
+
+<div class="theorem-box">
+
+**Example.** Two cations form 1:1 salts with anion X. Their initial concentrations are $$[M^+]=0.100\ M$$ and $$[N^+]=0.00100\ M$$, with $$K_{sp}(MX)=10^{-8}$$ and $$K_{sp}(NX)=10^{-9}$$. Which salt begins precipitating first as X is added slowly?
+
+The thresholds are $$[X^-]=10^{-8}/0.100=10^{-7}\ M$$ for MX and $$10^{-9}/0.00100=10^{-6}\ M$$ for NX. MX precipitates first despite its larger solubility-product constant. Precipitation onset depends on both the constant and the available cation concentration, not on ranking constants alone. These thresholds assume negligible dilution and no other significant reactions.
+
+</div>
 
 ---
 
@@ -369,118 +460,119 @@ $$
 
 The same equilibrium-constant methods apply to **acid–base** ($$K_a$$, $$K_b$$, $$K_w$$) and **buffers** in the next unit—only the chemical reaction and symbols change.
 
+<div class="theorem-box">
+
+**Example.** Excess ligand binds dissolved metal ions from a sparingly soluble salt. Explain why total dissolved metal can rise while the free-metal concentration remains very small.
+
+The ligand removes free metal ions by forming a complex. This lowers the ion product for dissolution, allowing more solid to dissolve. The solubility expression uses free metal ions, whereas total dissolved metal includes both free and complexed forms. Treating those concentrations as identical misses the effect.
+
+</div>
+
 ---
+
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. For the reaction $$\text{N}_2(g)+3\text{H}_2(g)\rightleftharpoons2\text{NH}_3(g)$$, which expression is $$K_c$$?
+1. For $$A(g)\rightleftharpoons2B(g)$$ at equilibrium, volume is suddenly doubled at fixed temperature. What is Q immediately afterward?
 
-   (A) $$\dfrac{[\text{NH}_3]}{[\text{N}_2][\text{H}_2]}$$<br>
-   (B) $$\dfrac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3}$$<br>
-   (C) $$\dfrac{[\text{N}_2][\text{H}_2]^3}{[\text{NH}_3]^2}$$<br>
-   (D) $$\dfrac{2[\text{NH}_3]}{[\text{N}_2]+3[\text{H}_2]}$$
+   (A) $$K/2$$<br>
+   (B) $$K$$<br>
+   (C) $$2K$$<br>
+   (D) $$4K$$
 
 :::solution
-Gas and aqueous equilibrium expressions use concentrations raised to stoichiometric coefficients:
+Both concentrations halve, so $$Q'=([B]/2)^2/([A]/2)=K/2$$. The forward shift then increases Q back toward K. K itself does not change with this volume perturbation.
 
 $$
-K_c=\frac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3}.
-$$
-
-$$
-\boxed{\text{B}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
 
 ::::problem
-2. For a system at equilibrium, adding a catalyst will
+2. For $$A\rightleftharpoons B$$, $$K_1=4$$; for $$B\rightleftharpoons C$$, $$K_2=9$$. Find K for $$2C\rightleftharpoons2A$$.
 
-   (A) increase $$K$$<br>
-   (B) decrease $$K$$<br>
-   (C) shift the equilibrium toward products<br>
-   (D) leave the equilibrium composition unchanged
+   (A) $$1/36$$<br>
+   (B) $$1/1296$$<br>
+   (C) $$36$$<br>
+   (D) $$1296$$
 
 :::solution
-A catalyst speeds both forward and reverse reactions. It helps the system reach equilibrium faster, but it does not change $$K$$ or the equilibrium composition.
+Adding forward reactions gives 36 for A to C. Reversal gives 1/36, and doubling coefficients squares it: $$1/36^2=1/1296$$. Constants multiply rather than add when reactions are added.
 
 $$
-\boxed{\text{D}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-3. If $$Q>K$$ for a reaction mixture, the reaction will proceed
+3. For $$\mathrm{MX_2(s)\rightleftharpoons M^{2+}+2X^-}$$ with $$K_{sp}=4.0\times10^{-12}$$, what is molar solubility in pure water?
 
-   (A) toward products until equilibrium is reached.<br>
-   (B) toward reactants until equilibrium is reached.<br>
-   (C) in neither direction because it is already at equilibrium.<br>
-   (D) only if a catalyst is added.
+   (A) $$2.0\times10^{-6}\ M$$<br>
+   (B) $$1.6\times10^{-4}\ M$$<br>
+   (C) $$1.0\times10^{-4}\ M$$<br>
+   (D) $$4.0\times10^{-12}\ M$$
 
 :::solution
-If $$Q>K$$, the mixture has too much product relative to equilibrium, so it shifts toward reactants.
+Let solubility be s. Then $$[M^{2+}]=s$$ and $$[X^-]=2s$$, giving $$4s^3=4.0\times10^{-12}$$. The cube root yields $$s=1.0\times10^{-4}\ M$$.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{C}}.
 $$
 :::
 ::::
 
 ::::problem
-4. Which species is omitted from the equilibrium expression for $$\text{CaCO}_3(s)\rightleftharpoons\text{CaO}(s)+\text{CO}_2(g)$$?
+4. Equal volumes of $$2.0\times10^{-5}\ M$$ silver nitrate and sodium chloride are mixed. For AgCl, $$K_{sp}=1.8\times10^{-10}$$. Does precipitation begin?
 
-   (A) $$\text{CO}_2(g)$$ only<br>
-   (B) $$\text{CaCO}_3(s)$$ and $$\text{CaO}(s)$$<br>
-   (C) $$\text{CaO}(s)$$ and $$\text{CO}_2(g)$$<br>
-   (D) all species
+   (A) Yes, because Q is $$4.0\times10^{-10}$$<br>
+   (B) Yes, because Q is less than Ksp<br>
+   (C) No, because Ksp changes on mixing<br>
+   (D) No, because dilution makes Q $$1.0\times10^{-10}$$
 
 :::solution
-Pure solids are omitted from equilibrium expressions, so both solids are omitted.
+Each ion concentration halves to $$1.0\times10^{-5}\ M$$, so their product is below Ksp. Using concentrations before mixing would incorrectly predict precipitation.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{D}}.
 $$
 :::
 ::::
 
 ::::problem
-5. For $$\text{AgCl}(s)\rightleftharpoons\text{Ag}^+(aq)+\text{Cl}^-(aq)$$, what is the expression for $$K_{sp}$$?
+5. An equilibrium mixture contains solid calcium carbonate, solid calcium oxide, and carbon dioxide at fixed temperature and volume. More calcium carbonate is added without changing gas volume. What happens to equilibrium carbon dioxide pressure?
 
-   (A) $$[\text{Ag}^+][\text{Cl}^-]$$<br>
-   (B) $$\dfrac{[\text{Ag}^+][\text{Cl}^-]}{[\text{AgCl}]}$$<br>
-   (C) $$[\text{AgCl}]$$<br>
-   (D) $$\dfrac{1}{[\text{Ag}^+][\text{Cl}^-]}$$
+   (A) It doubles<br>
+   (B) It stays unchanged while both solid phases remain<br>
+   (C) It falls to zero<br>
+   (D) Kp increases
 
 :::solution
-Pure solids are omitted from equilibrium expressions, so
+Pure solid activities do not enter $$K_p=P_{CO_2}$$ in the textbook convention. Adding more of an already present pure solid does not change the equilibrium pressure, provided both solid phases remain and temperature is fixed.
 
 $$
-K_{sp}=[\text{Ag}^+][\text{Cl}^-].
-$$
-
-$$
-\boxed{\text{A}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-6. If an exothermic equilibrium reaction is heated, the equilibrium shifts
+6. A reaction has positive standard free energy but current $$Q<K$$. Which statement is correct?
 
-   (A) toward products.<br>
-   (B) toward reactants.<br>
-   (C) nowhere, because temperature does not affect equilibrium.<br>
-   (D) only if a catalyst is present.
+   (A) Forward reaction is favorable under the current conditions<br>
+   (B) Reverse reaction must be favorable because standard free energy is positive<br>
+   (C) The system is at equilibrium<br>
+   (D) A catalyst must change K before forward reaction is possible
 
 :::solution
-For an exothermic reaction, heat behaves like a product. Adding heat shifts the equilibrium toward reactants.
+Actual $$\Delta G=RT\ln(Q/K)<0$$. The standard value describes a reference state; it does not override the current composition. A catalyst changes the approach rate, not the thermodynamic criterion.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
@@ -501,6 +593,8 @@ A sealed container initially has $$0.600\ M$$ $$\text{A}$$ and no $$\text{B}$$.
    $$(B)$$ Set up an ICE table using $$x$$ for the amount of $$\text{A}$$ consumed.
 
    $$(C)$$ Calculate the equilibrium concentrations of $$\text{A}$$ and $$\text{B}$$.
+
+   $$(D)$$ **Original extension.** After equilibrium is reached, the container volume doubles at constant temperature. Calculate the immediate reaction quotient and determine the direction of the shift. Is the final concentration of B necessarily greater than before expansion? Explain.
 
 :::solution
 $$(A)$$
@@ -558,6 +652,8 @@ $$
 $$
 
 The negative root is rejected because it would make no physical sense for the reaction progress variable in this setup. Both equilibrium concentrations are positive, which is a useful check.
+
+$$(D)$$ Every concentration initially halves, so $$Q'=( [B]/2)^2/([A]/2)=K_c/2=2.00$$. Since $$Q'<K_c$$, the reaction shifts toward B. However, shifting right compares the final state with the immediately diluted state, not with the old equilibrium. The total concentration in A-equivalent units is now $$0.300\ M$$. Writing $$[A]=0.300-y$$ and $$[B]=2y$$ gives $$4y^2/(0.300-y)=4.00$$. The physical root is $$y=0.2416$$, so $$[B]=0.483\ M$$, below the original $$0.842\ M$$ despite net formation of B.
 :::
 ::::
 
@@ -569,6 +665,8 @@ The negative root is rejected because it would make no physical sense for the re
    $$(B)$$ If $$[\text{H}_2]=0.20\ M$$, $$[\text{I}_2]=0.10\ M$$, and $$[\text{HI}]=0.30\ M$$, calculate $$Q$$.
 
    $$(C)$$ If $$K=50$$, predict the direction the system shifts.
+
+   $$(D)$$ **Original extension.** Compress the mixture to half its volume at constant temperature. Calculate the new reaction quotient and decide whether compression changes the direction predicted in the earlier part.
 
 :::solution
 $$(A)$$
@@ -587,7 +685,6 @@ $$
 
 $$(C)$$ Since $$Q<K$$, the system has too little product relative to equilibrium. It shifts toward products, forming more $$\text{HI}$$ and consuming $$\text{H}_2$$ and $$\text{I}_2$$. The value of $$K$$ does not change during the shift because temperature is not changed.
 
-
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
@@ -601,5 +698,6 @@ $$(C)$$ Since $$Q<K$$, the system has too little product relative to equilibrium
 \end{tikzpicture}
 ```
 
+$$(D)$$ All concentrations double. Thus $$Q'=(2[\text{HI}])^2/((2[\text{H}_2])(2[\text{I}_2]))=Q=4.50$$. Since $$4.50<50$$, the reaction still proceeds toward HI. Equal total gas coefficients on each side make the concentration factors cancel. Compression does not change $$K_c$$ or create an additional equilibrium preference, but the mixture was not at equilibrium to begin with, so it still reacts.
 :::
 ::::

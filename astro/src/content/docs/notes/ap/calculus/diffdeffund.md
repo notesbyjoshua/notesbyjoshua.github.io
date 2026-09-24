@@ -306,52 +306,9 @@ is valid only for $$x>0$$. The original function exists at $$x=0$$, but the tang
 
 From a graph, differentiability fails at places where the tangent slope is not a single finite number.
 
-Common visual signs:
+// add the theorem where it is like if a function is continuous it is differentiable (so equivalently if it is not differentiable it is not continuous)
 
-- a corner has two different one-sided slopes,
-- a cusp has slopes that become infinitely steep in opposite directions,
-- a vertical tangent has an infinite slope,
-- a discontinuity cannot be differentiable.
-
-A smooth-looking graph is not a proof by itself, but it gives a strong clue about where derivative values may or may not exist.
-
-### One-sided derivatives
-
-At endpoints or corners, one-sided derivatives can be useful:
-
-$$
-f'_+(a)=\lim_{h\to0^+}\frac{f(a+h)-f(a)}{h},
-\qquad
-f'_-(a)=\lim_{h\to0^-}\frac{f(a+h)-f(a)}{h}.
-$$
-
-The derivative $$f'(a)$$ exists only when the left and right derivatives agree, just like limits.
-
-<div class="theorem-box">
-
-**Example.** Let
-
-$$
-f(x)=\lvert x-2\rvert.
-$$
-
-Find the one-sided derivatives at $$x=2$$.
-
-For $$x<2$$, the function is $$f(x)=2-x$$, so
-
-$$
-f'_-(2)=-1.
-$$
-
-For $$x>2$$, the function is $$f(x)=x-2$$, so
-
-$$
-f'_+(2)=1.
-$$
-
-Since the one-sided derivatives are not equal, $$f'(2)$$ does not exist. This matches the sharp corner in the graph of $$\lvert x-2\rvert$$.
-
-</div>
+// add common types of continuous but not differentiable functions
 
 ---
 

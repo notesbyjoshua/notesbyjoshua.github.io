@@ -5,17 +5,19 @@ sidebar:
   order: 8
 ---
 
----
-
-This unit applies the equilibrium ideas from [Unit 7](/notes/ap/chem/equilibrium/) to proton transfer in water and related solvents. You will classify acids and bases, use $$K_a$$, $$K_b$$, and $$K_w$$, compute pH for strong and weak species, interpret salt solutions, design and analyze buffers, and read titration curves. Nomenclature for common acids appears in [Unit 2](/notes/ap/chem/compounds/); reaction writing and neutralization stoichiometry build on [Unit 4](/notes/ap/chem/chemrxns/).
-
----
-
 ## Definitions of acids and bases
 
 ### Arrhenius Theory
 
 An **Arrhenius acid** increases the concentration of $$\text{H}^+$$ (really $$\text{H}_3\text{O}^+$$ in water) in aqueous solution; an **Arrhenius base** increases $$[\text{OH}^-]$$. The model is useful for water-based chemistry but does not describe ammonia as a base in water without extra bookkeeping, and it does not address nonaqueous systems.
+
+<div class="theorem-box">
+
+**Example.** Ammonia contains no hydroxide ion in its formula. Can it nevertheless increase aqueous hydroxide concentration? Explain the limitation of identifying bases only by an OH group in their formulas.
+
+Ammonia accepts a proton from water: $$\mathrm{NH_3+H_2O\rightleftharpoons NH_4^++OH^-}$$. It therefore increases hydroxide concentration without dissociating into preexisting hydroxide ions. Inspecting the formula alone misses the reaction with solvent. The Brønsted-Lowry definition describes this proton-transfer behavior directly.
+
+</div>
 
 ### Brønsted–Lowry Theory
 
@@ -28,7 +30,6 @@ $$
 the species $$\text{A}^-$$ is the **conjugate base** of $$\text{HA}$$, and $$\text{H}_3\text{O}^+$$ is the **conjugate acid** of $$\text{H}_2\text{O}$$. Every Brønsted acid has a conjugate base, and every base has a conjugate acid, differing by one $$\text{H}^+$$ in the formula and one charge unit. For AP purposes, we will generally use this theory.
 
 A key consequence is an **inverse strength relationship**: the stronger an acid, the weaker its conjugate base, and vice versa. A strong acid like $$\text{HCl}$$ ionizes almost completely precisely *because* its conjugate base $$\text{Cl}^-$$ has essentially no tendency to grab a proton back. A weak acid like $$\text{HF}$$ ionizes only slightly because its conjugate base $$\text{F}^-$$ is a reasonably good proton acceptor that pulls the equilibrium back toward the molecular form. This is the qualitative idea behind $$K_a\times K_b=K_w$$ (derived below).
-
 
 ```tikz
 \usepackage{tikz}
@@ -45,10 +46,25 @@ A key consequence is an **inverse strength relationship**: the stronger an acid,
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** In $$\mathrm{HCO_3^-+H_2O\rightleftharpoons CO_3^{2-}+H_3O^+}$$, identify the acid and conjugate base. Can bicarbonate act as a base in a different reaction?
+
+Bicarbonate donates a proton here, so it is the acid and carbonate is its conjugate base. With an acid, bicarbonate can instead accept a proton to form $$\mathrm{H_2CO_3}$$, making it a base in that reaction. Its negative charge does not fix its role: the actual direction of proton transfer determines the classification.
+
+</div>
 
 ### Lewis Theory
 
 A **Lewis acid** accepts an electron pair; a **Lewis base** donates an electron pair. This picture includes reactions without proton transfer (e.g. $$\text{BF}_3$$ with $$\text{NH}_3$$) and matches how metal ions bind ligands in [Unit 7](/notes/ap/chem/equilibrium/) complex-ion formation. This is usually not covered on the AP exam.
+
+<div class="theorem-box">
+
+**Example.** In $$\mathrm{BF_3+NH_3\rightarrow F_3B-NH_3}$$, identify the Lewis acid and base. Explain why this reaction shows that Lewis acid-base chemistry is broader than proton transfer.
+
+Ammonia donates nitrogen's lone pair to form the B-N bond, so it is the Lewis base. Boron trifluoride accepts the pair and is the Lewis acid. No proton changes partners in this reaction. Electron-pair donation and acceptance can form an acid-base adduct even when neither reactant supplies an acidic proton.
+
+</div>
 
 ---
 
@@ -57,6 +73,14 @@ A **Lewis acid** accepts an electron pair; a **Lewis base** donates an electron 
 **Binary acids** (hydrogen + one other nonmetal): the anion name ending *-ide* becomes *hydro-…-ic acid* (e.g. $$\text{HCl}$$, hydrochloric acid). **Oxyacids** use the oxyanion stem: *-ate* → *-ic acid* ($$\text{NO}_3^-$$ → nitric acid), *-ite* → *-ous acid* ($$\text{NO}_2^-$$ → nitrous acid); prefixes such as *hypo-* and *per-* carry over.
 
 Ionic hydroxides are named as cation + hydroxide. Molecular bases include ammonia ($$\text{NH}_3$$), amines (e.g. $$\text{CH}_3\text{NH}_2$$), and related nitrogen compounds that accept protons in water.
+
+<div class="theorem-box">
+
+**Example.** Compare the names and chlorine oxidation numbers in $$\mathrm{HClO}$$ and $$\mathrm{HClO_3}$$. Explain why the naming difference is not a statement about how many protons each donates.
+
+These are hypochlorous acid and chloric acid. With H at $$+1$$ and O at $$-2$$, chlorine is $$+1$$ and $$+5$$ respectively. Both formulas contain one ionizable proton; the oxyanion-derived names distinguish oxygen content, not proton count.
+
+</div>
 
 ---
 
@@ -69,7 +93,6 @@ The unifying principle behind every acid-strength trend is **conjugate-base stab
 For binary acids $$\text{HX}$$, bond polarity and bond strength both matter: across a period, polarity toward $$\text{X}$$ can strengthen the acid; down a group, longer/weaker $$\text{H–X}$$ often dominates and acidity increases ($$\text{HF}$$ is a weak acid in water; $$\text{HCl}$$, $$\text{HBr}$$, $$\text{HI}$$ are strong). The down-a-group trend wins because the larger halogen forms a longer, weaker bond to hydrogen that breaks more easily, and the resulting larger anion spreads its charge over more volume.
 
 For **oxoacids** with the same central atom, more electronegative atoms attached to that center or a higher oxidation state (more terminal oxygens) generally strengthens the acid: those extra electronegative oxygens pull electron density away from the O–H bond and spread out the negative charge of the conjugate base. This is why acid strength rises in the series $$\text{HClO}<\text{HClO}_2<\text{HClO}_3<\text{HClO}_4$$. For **carboxylic acids**, electron-withdrawing groups (such as the chlorines in chloroacetic acids) stabilize the conjugate base and increase $$K_a$$, while the resonance delocalization of the carboxylate anion is what makes carboxylic acids more acidic than alcohols in the first place.
-
 
 ```tikz
 \usepackage{tikz}
@@ -86,8 +109,15 @@ For **oxoacids** with the same central atom, more electronegative atoms attached
 \end{tikzpicture}
 ```
 
-
 Acid-base reactions favor formation of the **weaker acid** and **weaker base**. A quick way to predict direction is to compare acid strengths: the side with the larger $$K_a$$ acid tends to react toward the side with the smaller $$K_a$$ acid. In $$\text{p}K_a$$ language, reactions tend to go from lower $$\text{p}K_a$$ acid to higher $$\text{p}K_a$$ acid.
+
+<div class="theorem-box">
+
+**Example.** Two equal-concentration acids are $$\mathrm{CH_3COOH}$$ and $$\mathrm{ClCH_2COOH}$$. Predict which has lower pH using the conjugate bases.
+
+Chlorine withdraws electron density and stabilizes negative charge on the chloroacetate conjugate base. That favors acid ionization, so chloroacetic acid has larger Ka and lower pH at equal concentration. The comparison concerns stability after proton loss, not simply the number of H atoms.
+
+</div>
 
 ---
 
@@ -98,6 +128,14 @@ Common strong acids (memorize for AP): $$\text{HCl}$$, $$\text{HBr}$$, $$\text{H
 Strong bases are the group 1 hydroxides ($$\text{LiOH}$$, $$\text{NaOH}$$, $$\text{KOH}$$, …) and the heavier group 2 hydroxides commonly used in lab ($$\text{Ca(OH)}_2$$, $$\text{Sr(OH)}_2$$, $$\text{Ba(OH)}_2$$). $$\text{Mg(OH)}_2$$ is only slightly soluble but what dissolves is essentially fully dissociated.
 
 For a strong acid at moderate concentration, $$[\text{H}_3\text{O}^+] \approx$$ the analytical concentration of the acid (if one proton per formula unit). For a strong diprotic acid such as $$\text{H}_2\text{SO}_4$$, treat the first step as complete and the second with $$K_{a2}$$ if the problem requires it.
+
+<div class="theorem-box">
+
+**Example.** A student calls $$0.0010\ M$$ HCl weaker than $$0.10\ M$$ acetic acid because the HCl is more dilute. Explain the distinction.
+
+Strength describes the extent of ionization; concentration describes amount per volume. HCl is still the strong acid because it ionizes essentially completely. A concentrated weak acid can nevertheless produce more hydronium than a very dilute strong acid, so pH alone cannot label acid strength without concentration information.
+
+</div>
 
 ---
 
@@ -117,6 +155,14 @@ $$
 
 Smaller $$\text{p}K_a$$ means a stronger acid (larger $$K_a$$).
 
+<div class="theorem-box">
+
+**Example.** A hypothetical acid has $$K_a=1.0\times10^{-3}$$ and initial concentration $$0.010\ M$$. Test whether neglecting x is reasonable.
+
+The shortcut gives $$x=\sqrt{K_aC}=0.00316\ M$$, or $$31.6\%$$ ionization, so it fails the 5% check. Solve $$x^2/(0.010-x)=0.0010$$ instead: $$x=0.00270\ M$$. Keeping the depleted denominator matters when a substantial fraction reacts.
+
+</div>
+
 ---
 
 ## Weak bases: $$K_b$$
@@ -132,6 +178,14 @@ K_b = \frac{[\text{BH}^+][\text{OH}^-]}{[\text{B}]}, \qquad \text{p}K_b = -\log 
 $$
 
 ICE setup parallels weak acids, but you solve for $$[\text{OH}^-]$$ and then find pH from $$K_w$$ and pOH.
+
+<div class="theorem-box">
+
+**Example.** A $$0.10\ M$$ weak base has $$K_b=1.0\times10^{-5}$$ at $$25^\circ\mathrm{C}$$. A student gets pH 3.00 from $$-\log\sqrt{K_bC}$$. Correct the result.
+
+The square root estimates hydroxide, $$[OH^-]=1.0\times10^{-3}\ M$$. Its negative logarithm is pOH, not pH. Thus $$\mathrm{pH}=14.00-3.00=11.00$$. The estimate ionizes only $$1\%$$ of the base, consistent with neglecting depletion.
+
+</div>
 
 ---
 
@@ -152,6 +206,14 @@ $$
 $$
 
 At $$25\,^\circ\text{C}$$, $$K_w = 1.0 \times 10^{-14}$$; $$K_w$$ depends on temperature, so $$\text{pH} + \text{pOH} = 14$$ is not universal outside standard conditions unless $$K_w$$ is updated.
+
+<div class="theorem-box">
+
+**Example.** At a certain temperature, $$K_w=4.0\times10^{-14}$$. Find neutral pH and explain why a measured pH of 6.85 is not acidic at this temperature.
+
+Neutrality requires equal hydronium and hydroxide: both are $$\sqrt{K_w}=2.0\times10^{-7}\ M$$. Neutral pH is $$6.70$$. At pH 6.85 hydronium is lower than its neutral value, so the solution is basic. The familiar boundary of 7.00 assumes $$25^\circ\mathrm{C}$$.
+
+</div>
 
 ---
 
@@ -181,6 +243,14 @@ $$
 
 :::
 
+<div class="theorem-box">
+
+**Example.** Equal volumes of strong acid solutions at pH 2.00 and 4.00 are mixed. Find the final pH and explain why averaging pH values fails.
+
+Average concentrations, not logarithms: $$[H_3O^+]=(0.0100+0.000100)/2=0.00505\ M$$. Therefore pH is $$2.30$$, not 3.00. The more concentrated acid supplies nearly all the hydronium.
+
+</div>
+
 ---
 
 ## Percent ionization
@@ -193,11 +263,27 @@ $$
 
 using the initial analytical concentration of $$\text{HA}$$ in the denominator. For a weak base, an analogous expression uses $$[\text{OH}^-]_{\text{eq}}/[\text{B}]_{\text{initial}}$$. Adding common-ion $$\text{A}^-$$ or $$\text{BH}^+$$ suppresses ionization (**Le Châtelier’s principle**), lowering percent ionization.
 
+<div class="theorem-box">
+
+**Example.** A weak acid is diluted by a factor of four while the small-x approximation remains valid. Predict the changes in hydronium concentration and percent ionization.
+
+Since $$[H_3O^+]\approx\sqrt{K_aC}$$, hydronium halves. But percent ionization is proportional to $$\sqrt{K_a/C}$$ and doubles. A greater fraction of fewer acid molecules ionizes; higher percent ionization does not mean a higher hydronium concentration.
+
+</div>
+
 ---
 
 ## Polyprotic acids
 
 A **polyprotic acid** donates more than one proton. Successive $$K_a$$ values usually satisfy $$K_{a1} > K_{a2} > K_{a3}$$ because removing a positive proton from an increasingly negative anion is harder. Many calculations use only $$K_{a1}$$ if later steps are negligible contributors to $$[\text{H}_3\text{O}^+]$$; near the second equivalence point in a titration, the second dissociation matters.
+
+<div class="theorem-box">
+
+**Example.** A diprotic acid has $$K_{a1}=10^{-3}$$ and $$K_{a2}=10^{-8}$$. Explain why treating a $$0.10\ M$$ solution as providing $$0.20\ M$$ hydronium fails.
+
+Neither ionization is complete. The first step establishes hydronium, which further suppresses the much weaker second ionization. Two protons per formula unit specify neutralization capacity with sufficient base, not the free hydronium concentration before titration.
+
+</div>
 
 ---
 
@@ -205,11 +291,27 @@ A **polyprotic acid** donates more than one proton. Successive $$K_a$$ values us
 
 Nonmetal oxides tend to be **acidic anhydrides** (react with water to give acids). Metal oxides, especially ionic ones, tend to be **basic anhydrides** (give hydroxide or raise pH in water). **Amphoteric** oxides/hydroxides (e.g. $$\text{Al}_2\text{O}_3$$, $$\text{Al(OH)}_3$$) react with both strong acid and strong base.
 
+<div class="theorem-box">
+
+**Example.** Equal moles of $$\mathrm{Na_2O}$$ and $$\mathrm{CO_2}$$ are separately introduced into water. Predict opposite acid-base effects and support them with reactions.
+
+Sodium oxide gives $$\mathrm{Na_2O+H_2O\rightarrow2Na^++2OH^-}$$, raising pH. Dissolved carbon dioxide participates in $$\mathrm{CO_2+2H_2O\rightleftharpoons H_3O^++HCO_3^-}$$, lowering pH. Oxygen in a formula does not by itself establish acid or base behavior.
+
+</div>
+
 ---
 
 ## Amphoteric species
 
 An **amphoteric** substance can act as acid or base. Water is the usual example: it donates a proton to $$\text{NH}_3$$ and accepts one from $$\text{HCl}$$. Polyprotic anions such as $$\text{HCO}_3^-$$ and $$\text{HSO}_4^-$$ can donate or accept a proton depending on what they meet.
+
+<div class="theorem-box">
+
+**Example.** Show how bicarbonate can consume either added H+ or added OH-, and identify its role in each reaction.
+
+With acid, $$\mathrm{HCO_3^-+H^+\rightarrow H_2CO_3}$$, followed by possible carbon dioxide loss; bicarbonate accepts a proton. With base, $$\mathrm{HCO_3^-+OH^-\rightarrow CO_3^{2-}+H_2O}$$; bicarbonate donates a proton. It is amphiprotic because it can do both.
+
+</div>
 
 ---
 
@@ -237,6 +339,14 @@ For a cation from a weak base,
 $$
 \text{BH}^+(aq) + \text{H}_2\text{O}(l) \rightleftharpoons \text{B}(aq) + \text{H}_3\text{O}^+(aq).
 $$
+
+<div class="theorem-box">
+
+**Example.** A salt contains a cation with $$K_a=10^{-9}$$ and an anion with $$K_b=10^{-5}$$. Predict whether its dilute solution is acidic or basic and explain why 'salts are neutral' fails.
+
+Both ions react with water, but the anion's base reaction is much more favorable. The solution is basic. Electrical neutrality still holds: zero net bulk charge does not require equal hydronium and hydroxide concentrations.
+
+</div>
 
 ---
 
@@ -272,6 +382,14 @@ $$
 
 After the stoichiometry step, use the new moles of $$\text{HA}$$ and $$\text{A}^-$$ in the Henderson-Hasselbalch ratio. If either buffer component is used up, the solution is no longer a buffer and the excess strong acid/base controls pH. Note that all pH-pKa pairs can be substituted for pOH-pKb pairs.
 
+<div class="theorem-box">
+
+**Example.** Two equal-volume buffers have the same acid/base ratio, but one contains ten times as many moles of each component. Compare initial pH and response to an equal small acid addition.
+
+Henderson-Hasselbalch predicts the same initial pH because the ratios match. The acid addition converts the same number of conjugate-base moles to acid in each buffer, causing a smaller fractional ratio change in the more concentrated buffer. Equal pH does not imply equal capacity.
+
+</div>
+
 ---
 
 ## Titrations
@@ -300,7 +418,6 @@ For a weak acid $$\text{HA}$$ titrated with strong base:
 
 For a weak base titrated with strong acid, swap the acid/base roles: the buffer contains $$\text{B}$$ and $$\text{BH}^+$$, the half-equivalence point gives $$\text{pOH} = \text{p}K_b$$ or $$\text{pH} = \text{p}K_a$$ for $$\text{BH}^+$$, and the equivalence point is acidic.
 
-
 ```tikz
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
@@ -315,8 +432,6 @@ For a weak base titrated with strong acid, swap the acid/base roles: the buffer 
 \end{axis}
 \end{tikzpicture}
 ```
-
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -336,7 +451,6 @@ For a weak base titrated with strong acid, swap the acid/base roles: the buffer 
 
 If an acid can dissociate more than once, it's titration curve follows a polyprotic titration curve:
 
-
 ```tikz
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
@@ -351,6 +465,13 @@ If an acid can dissociate more than once, it's titration curve follows a polypro
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** Titrate $$25.0\ \mathrm{mL}$$ of $$0.100\ M$$ weak monoprotic acid with $$0.100\ M$$ NaOH. Why must the pH method change between $$12.5$$, $$25.0$$, and $$30.0\ \mathrm{mL}$$ of added base?
+
+At $$12.5\ \mathrm{mL}$$, equal amounts of acid and conjugate base form a buffer, so $$\mathrm{pH}=\mathrm{p}K_a$$. At $$25.0\ \mathrm{mL}$$, stoichiometric neutralization leaves conjugate base; use its hydrolysis equilibrium. At $$30.0\ \mathrm{mL}$$, excess hydroxide dominates: $$[\mathrm{OH^-}]=(0.00300-0.00250)/0.0550=0.00909\ M$$, giving pH about $$11.96$$ at $$25^\circ\mathrm{C}$$. An equilibrium expression is chosen only after identifying what remains from neutralization.
+
+</div>
 
 ### pH Indicators
 
@@ -366,6 +487,14 @@ If an acid can dissociate more than once, it's titration curve follows a polypro
 
 
 Choose an indicator whose transition range lies within the steep vertical region of the titration curve. A strong acid-strong base titration has a steep jump around pH $$7$$, so many indicators can work. A weak acid-strong base titration has an equivalence point above $$7$$, so phenolphthalein is often better than methyl orange. A weak base-strong acid titration has an equivalence point below $$7$$, so an acidic-range indicator is usually better.
+
+<div class="theorem-box">
+
+**Example.** A weak-acid/strong-base titration has a steep pH jump from about 7 to 10 near equivalence. Indicator X changes color from pH 3 to 4; indicator Y changes from 8 to 9. Which is suitable, and what concentration error would an early endpoint cause?
+
+Y changes within the steep region, so a small added volume carries it through its transition near equivalence. X changes too early, while acid remains unneutralized. Using that too-small base volume as the equivalence volume underestimates the initial acid amount and concentration. The best choice matches the curve's steep interval, not a rule that every indicator must change at pH 7.
+
+</div>
 
 ---
 
@@ -385,6 +514,14 @@ The **common ion effect** is the suppression of ionization of a weak electrolyte
 
 :::
 
+<div class="theorem-box">
+
+**Example.** Adding sodium acetate to acetic acid raises pH. Does the acid's Ka decrease? Explain using its equilibrium expression.
+
+Ka stays fixed at a fixed temperature. Added acetate raises the numerator of $$Q_a=[H_3O^+][A^-]/[HA]$$ before adjustment, so some hydronium and acetate combine to form HA. The resulting lower hydronium concentration restores the same Ka, rather than creating a new constant.
+
+</div>
+
 ---
 
 ## Reference: common strong acids and bases
@@ -397,132 +534,119 @@ The **common ion effect** is the suppression of ionization of a weak electrolyte
 
 $$\text{HF}$$ is weak; $$\text{HSO}_4^-$$ is a weak acid.
 
+<div class="theorem-box">
+
+**Example.** A student uses the strong-acid list to assign $$[H_3O^+]=2C$$ for every sulfuric acid solution. Explain the needed qualification.
+
+The first ionization is treated as complete, but the second is governed by the bisulfate equilibrium. Its contribution depends on concentration and the hydronium already present. Two equivalents of strong base are needed per mole for complete neutralization, but that stoichiometric fact does not mean both ionizations are initially complete.
+
+</div>
+
 ---
+
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. What is the $$\text{pH}$$ of a $$1.0\times10^{-3}\ M$$ solution of $$\text{HCl}$$ at $$25^\circ\text{C}$$?
+1. Mix $$20.0\ \mathrm{mL}$$ of $$0.100\ M$$ HCl with $$30.0\ \mathrm{mL}$$ of $$0.100\ M$$ NaOH at $$25^\circ C$$. Find pH, assuming additive volumes.
 
-   (A) $$1.00$$<br>
-   (B) $$3.00$$<br>
-   (C) $$7.00$$<br>
-   (D) $$11.00$$
+   (A) $$1.70$$<br>
+   (B) $$7.00$$<br>
+   (C) $$12.30$$<br>
+   (D) $$13.00$$
 
 :::solution
-$$\text{HCl}$$ is a strong acid, so
+Base exceeds acid by 1.00 mmol in 50.0 mL, so hydroxide is 0.0200 M. pOH is 1.70 and pH is 12.30. Equal concentrations do not imply equal amounts when volumes differ.
 
 $$
-[\text{H}_3\text{O}^+]=1.0\times10^{-3}\ M.
-$$
-
-Thus
-
-$$
-\text{pH}=-\log(1.0\times10^{-3})=3.00.
-$$
-
-$$
-\boxed{\text{B}}
+\boxed{\text{C}}.
 $$
 :::
 ::::
 
 ::::problem
-2. A buffer contains equal concentrations of $$\text{HF}$$ and $$\text{F}^-$$. If $$K_a$$ for $$\text{HF}$$ is $$6.8\times10^{-4}$$, what is the $$\text{pH}$$ of the buffer?
+2. A buffer initially has $$0.100\ \mathrm{mol}$$ HA and $$0.100\ \mathrm{mol}$$ A-. Add $$0.0200\ \mathrm{mol}$$ HCl with negligible volume change. What is $$\mathrm{pH}-\mathrm{p}K_a$$ afterward?
 
-   (A) $$1.68$$<br>
-   (B) $$3.17$$<br>
-   (C) $$7.00$$<br>
-   (D) $$10.83$$
+   (A) $$+0.176$$<br>
+   (B) $$-0.176$$<br>
+   (C) $$0$$<br>
+   (D) $$-0.699$$
 
 :::solution
-When $$[\text{HF}]=[\text{F}^-]$$, the Henderson-Hasselbalch equation gives
+Acid consumes A- and produces HA, leaving 0.0800 and 0.120 mol respectively. The logarithmic ratio is $$\log(0.0800/0.120)=-0.176$$. The initial equal ratio is no longer valid.
 
 $$
-\text{pH}=\text{p}K_a.
-$$
-
-$$
-\text{p}K_a=-\log(6.8\times10^{-4})=3.17.
-$$
-
-$$
-\boxed{\text{B}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
 
 ::::problem
-3. Which solution has the greatest $$\text{pH}$$?
+3. A weak acid is diluted 100-fold while its small-x approximation remains valid. What happens approximately to hydronium concentration and percent ionization?
 
-   (A) $$0.10\ M\ \text{HCl}$$<br>
-   (B) $$0.10\ M\ \text{HC}_2\text{H}_3\text{O}_2$$<br>
-   (C) $$0.10\ M\ \text{NaCl}$$<br>
-   (D) $$0.10\ M\ \text{NaOH}$$
+   (A) Both decrease tenfold<br>
+   (B) Hydronium decreases 100-fold and percent is fixed<br>
+   (C) Both increase tenfold<br>
+   (D) Hydronium decreases tenfold and percent increases tenfold
 
 :::solution
-$$\text{NaOH}$$ is a strong base, so it produces the greatest $$[\text{OH}^-]$$ and therefore the greatest $$\text{pH}$$.
+Hydronium scales as $$\sqrt C$$ and ionized fraction scales as $$1/\sqrt C$$. Dilution therefore lowers hydronium but increases the fraction ionized. These conclusions assume water autoionization remains negligible.
 
 $$
-\boxed{\text{D}}
+\boxed{\text{D}}.
 $$
 :::
 ::::
 
 ::::problem
-4. At the half-equivalence point in a weak acid-strong base titration,
+4. At a temperature where $$K_w=1.0\times10^{-12}$$, which solution is neutral?
 
-   (A) $$\text{pH}=\text{p}K_a$$.<br>
-   (B) $$\text{pH}=7.00$$ for every weak acid.<br>
-   (C) all weak acid has been converted to conjugate base.<br>
-   (D) $$[\text{H}_3\text{O}^+]=[\text{OH}^-]$$.
+   (A) pH 6.00<br>
+   (B) pH 7.00<br>
+   (C) pH 12.00<br>
+   (D) pH 0.00
 
 :::solution
-At the half-equivalence point, $$[\text{HA}]=[\text{A}^-]$$. Henderson-Hasselbalch becomes
+Neutrality means equal hydronium and hydroxide, each $$10^{-6}\ M$$, so pH is 6.00. The criterion is equal concentrations, not a temperature-independent pH of seven.
 
 $$
-\text{pH}=\text{p}K_a+\log(1)=\text{p}K_a.
-$$
-
-$$
-\boxed{\text{A}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
 
 ::::problem
-5. Which species is the conjugate base of $$\text{H}_2\text{PO}_4^-$$?
+5. A $$25.0\ \mathrm{mL}$$ weak monoprotic acid sample reaches equivalence after $$40.0\ \mathrm{mL}$$ strong base. At $$20.0\ \mathrm{mL}$$ base its pH is 5.00. What is Ka?
 
-   (A) $$\text{H}_3\text{PO}_4$$<br>
-   (B) $$\text{HPO}_4^{2-}$$<br>
-   (C) $$\text{PO}_4^{3-}$$<br>
-   (D) $$\text{OH}^-$$
+   (A) $$5.0$$<br>
+   (B) $$1.0\times10^{-9}$$<br>
+   (C) $$1.0\times10^{-5}$$<br>
+   (D) It cannot be inferred because the original acid concentration is unknown
 
 :::solution
-A conjugate base is formed by removing one proton. Removing $$\text{H}^+$$ from $$\text{H}_2\text{PO}_4^-$$ gives $$\text{HPO}_4^{2-}$$.
+At half-equivalence the acid and conjugate-base amounts are equal, so pH approximately equals pKa. Thus $$K_a=10^{-5.00}$$. The original concentration is unnecessary for this ratio-based inference.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{C}}.
 $$
 :::
 ::::
 
 ::::problem
-6. Which mixture is a buffer?
+6. A salt contains an acidic cation with $$K_a=2.0\times10^{-9}$$ and a basic anion with $$K_b=5.0\times10^{-6}$$. Which prediction is best?
 
-   (A) $$\text{HCl}$$ and $$\text{NaCl}$$<br>
-   (B) $$\text{NaOH}$$ and $$\text{NaCl}$$<br>
-   (C) $$\text{HF}$$ and $$\text{NaF}$$<br>
-   (D) $$\text{HNO}_3$$ and $$\text{NaNO}_3$$
+   (A) Acidic because the cation has positive charge<br>
+   (B) Basic because anion hydrolysis is stronger<br>
+   (C) Neutral because salt has zero net charge<br>
+   (D) Neutral because both ions react with water
 
 :::solution
-A buffer contains a weak acid and its conjugate base, or a weak base and its conjugate acid. $$\text{HF}$$ and $$\text{F}^-$$ form a buffer pair.
+The anion's basic reaction is much stronger than the cation's acidic reaction, so hydroxide production dominates. Electrical neutrality is maintained by all ions and does not require a neutral pH.
 
 $$
-\boxed{\text{C}}
+\boxed{\text{B}}.
 $$
 :::
 ::::
@@ -539,6 +663,8 @@ $$
    $$(C)$$ Calculate the $$\text{pH}$$.
 
    $$(D)$$ Explain what happens to the percent ionization if sodium acetate is added.
+
+   $$(E)$$ **Original extension.** A separate sample contains $$0.0500\ \text{mol}$$ acetic acid. Add $$0.0200\ \text{mol}$$ NaOH and dilute to $$0.500\ \text{L}$$. Calculate the pH, identifying the reaction that must be completed before using an equilibrium expression.
 
 :::solution
 $$(A)$$
@@ -580,6 +706,8 @@ $$
 $$
 
 $$(D)$$ Sodium acetate adds the common ion $$\text{C}_2\text{H}_3\text{O}_2^-$$, shifting the acid ionization left. Since less acetic acid ionizes, $$[\text{H}_3\text{O}^+]$$ decreases and the percent ionization decreases. This is the common-ion effect.
+
+$$(E)$$ First carry out $$\text{HA}+\text{OH}^-\rightarrow\text{A}^-+\text{H}_2\text{O}$$. Hydroxide is limiting, leaving $$0.0300\ \text{mol}$$ HA and producing $$0.0200\ \text{mol}$$ acetate. The resulting buffer has $$\text{pH}=\text{p}K_a+\log(n_{\text{A}^-}/n_{\text{HA}})=4.745+\log(0.0200/0.0300)=4.57$$. The common final volume cancels in the ratio. Applying the weak-acid-only square-root expression would ignore the substantial conjugate base formed by neutralization.
 :::
 ::::
 
@@ -591,6 +719,8 @@ $$(D)$$ Sodium acetate adds the common ion $$\text{C}_2\text{H}_3\text{O}_2^-$$,
    $$(B)$$ A $$35.0\ \text{mL}$$ sample of $$\text{HNO}_2$$ is titrated to equivalence with $$21.0\ \text{mL}$$ of $$0.160\ M\ \text{NaOH}$$. Calculate the molarity of $$\text{HNO}_2$$.
 
    $$(C)$$ Explain why an indicator should change color near the steep part of the titration curve.
+
+   $$(D)$$ **Original extension.** At $$25^\circ\text{C}$$, take $$K_a(\text{HNO}_2)=4.0\times10^{-4}$$. Calculate the equivalence-point pH for part B, assuming additive volumes, and check the small-change approximation.
 
 :::solution
 $$(A)$$ At equivalence, the weak acid has been converted mostly into its conjugate base. The conjugate base reacts with water to produce $$\text{OH}^-$$:
@@ -619,7 +749,6 @@ $$
 
 $$(C)$$ The steep part of the titration curve is where a tiny volume change causes a large pH change, so the color change most closely marks the equivalence point. If the indicator changes color far from that steep region, it will signal the endpoint too early or too late and create systematic error.
 
-
 ```tikz
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
@@ -635,5 +764,6 @@ $$(C)$$ The steep part of the titration curve is where a tiny volume change caus
 \end{tikzpicture}
 ```
 
+$$(D)$$ The total volume is $$0.0560\ \text{L}$$, giving $$[\text{NO}_2^-]_0=0.00336/0.0560=0.0600\ M$$. Its base constant is $$K_b=K_w/K_a=2.5\times10^{-11}$$. Therefore $$[\text{OH}^-]\approx\sqrt{K_bC}=1.22\times10^{-6}\ M$$, giving $$\text{pOH}=5.91$$ and $$\text{pH}=8.09$$. The fraction hydrolyzed is only $$1.22\times10^{-6}/0.0600=2.04\times10^{-5}$$, so neglecting the change in nitrite concentration is justified. Hydroxide also exceeds the neutral-water concentration enough for this approximation at the reported precision.
 :::
 ::::

@@ -5,12 +5,6 @@ sidebar:
   order: 5
 ---
 
----
-
-**Chemical kinetics** asks how fast a reaction proceeds and *why* that speed changes with conditions. It is distinct from [thermochemistry](/notes/ap/chem/thermochemistry/) (energy changes and a first look at spontaneity) and from [equilibrium](/notes/ap/chem/equilibrium/) (where a reversible process ends up). Balanced equations from [Unit 4](/notes/ap/chem/chemrxns/) supply stoichiometry; kinetics supplies rates, rate laws, and mechanisms.
-
----
-
 ## Collision theory and the molecular picture
 
 **Collision theory** requires that molecules actually collide, that a collision carries at least the **activation energy** $$E_a$$, and that the partners meet with a geometry that allows the relevant bonds to rearrange. A compact way to think about rate is that it scales with three factors:
@@ -33,7 +27,6 @@ Key features of the curve:
 - **Raising the temperature** broadens and flattens the curve and shifts the peak to higher energy. The peak height drops, but the tail beyond $$E_a$$ grows dramatically—so a small rise in $$T$$ can sharply increase the fraction of effective collisions.
 - A **catalyst does not move the curve**; instead it lowers $$E_a$$ (shifts the threshold line left), which puts a larger fraction of the *same* distribution above the barrier.
 
-
 ```tikz
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
@@ -49,14 +42,29 @@ Key features of the curve:
 \end{tikzpicture}
 ```
 
-
 **Homogeneous catalysis** places the catalyst in the same phase as the reactants (solution catalysis is common). **Heterogeneous catalysis** uses a different phase, often a solid surface where adsorption aligns molecules for reaction. **Acid–base catalysis** is a major special case: $$\text{H}^+$$, $$\text{OH}^-$$, or other acids and bases can protonate or deprotonate substrates, stabilizing transition states and speeding steps without being consumed in the net equation.
+
+<div class="theorem-box">
+
+**Example.** Two equal-sized samples of the same gas are compared at different temperatures. A student says the hotter distribution must have a taller peak because more molecules can react. Explain the error.
+
+Each curve represents the same total number of molecules, so its total area stays fixed. Heating broadens the distribution and shifts its peak toward higher energy, generally lowering its height while increasing the area above a fixed activation energy. The reactive fraction is an area beyond the threshold, not the height of the curve at its most probable energy. Suitable orientation is still required for reaction.
+
+</div>
 
 ---
 
 ## Factors affecting rate (summary)
 
 Concentration raises collision frequency $$N$$ and enters the rate law directly. Temperature raises the **number of collisions and the frequency of effective collisions**. Surface area and physical state (powder versus lump, mixing, phase contact) **increase the rate of collision**. Catalysts (homogeneous, heterogeneous, or acid–base) **increases the frequency of effective collisions**.
+
+<div class="theorem-box">
+
+**Example.** Equal masses of a solid react with excess acid at the same temperature, one powdered and one in a single chunk. Predict which finishes first and whether the theoretical product amount changes.
+
+Powder exposes more surface sites at once, so it usually reacts faster. Equal amounts of the same limiting solid produce the same theoretical amount of product. Faster conversion does not mean a larger stoichiometric yield when both trials eventually react completely.
+
+</div>
 
 ---
 
@@ -77,6 +85,14 @@ $$
 The negative sign on reactants makes rate a positive quantity as written. Note that $$d$$ represents the derivative, or the measure of the rate of change. If you watch one species by itself, the sign of $$d[\text{X}]/dt$$ tells you whether it is being used up (negative for a reactant whose concentration falls) or formed (positive for a product). The stoichiometric factors convert those individual slopes into a single rate for the whole reaction.
 
 In lab data you often measure average rate over an interval (slope of a chord on a concentration–time graph). Instantaneous rate is the slope of the tangent at one time—the limit as $$\Delta t \to 0$$ and the quantity that appears in calculus-based rate laws.
+
+<div class="theorem-box">
+
+**Example.** During $$2A\rightarrow B$$, $$[A]$$ drops by $$0.060\ M$$ in $$20.0\ \mathrm{s}$$. A student reports product formation at $$0.0030\ M/s$$. Find the error.
+
+Reactant disappearance is $$0.060/20.0=0.0030\ M/s$$, but two A produce one B. Thus $$\Delta[B]/\Delta t=0.0015\ M/s$$. The normalized reaction rate equals $$-\tfrac12\Delta[A]/\Delta t$$, not the unadjusted disappearance rate.
+
+</div>
 
 ---
 
@@ -107,6 +123,14 @@ Units of $$k$$ follow from $$\text{rate}$$ in $$\text{M/s}$$ (molarity per secon
 - Second order ($$\text{rate} = k[\text{A}]^2$$): $$k$$ in $$\text{M}^{-1}\cdot\text{s}^{-1}$$
 
 Note that rate always has the units of $$\frac{M}{s}$$ and concentration always has the units of $$M$$.
+
+<div class="theorem-box">
+
+**Example.** Doubling both A and B multiplies rate by eight; doubling only A multiplies it by four. Derive a rate law and predict the effect of halving B alone.
+
+With $$r=k[A]^m[B]^n$$, the second trial gives $$2^m=4$$, so $$m=2$$. The joint change gives $$2^{2+n}=8$$, so $$n=1$$. Therefore $$r=k[A]^2[B]$$ and halving B halves the rate. Changing two concentrations at once needs a second comparison to separate their effects.
+
+</div>
 
 ---
 
@@ -162,7 +186,6 @@ Putting it together, here is the standard comparison for a single reactant $$\te
 | First | $$\text{rate}=k[\text{A}]$$ | $$\ln[\text{A}]=\ln[\text{A}]_0-kt$$ | $$\ln[\text{A}]$$ vs $$t$$ | $$-k$$ | $$\text{s}^{-1}$$ | $$\dfrac{0.693}{k}$$ |
 | Second | $$\text{rate}=k[\text{A}]^2$$ | $$\dfrac{1}{[\text{A}]}=\dfrac{1}{[\text{A}]_0}+kt$$ | $$\dfrac{1}{[\text{A}]}$$ vs $$t$$ | $$+k$$ | $$\text{M}^{-1}\cdot\text{s}^{-1}$$ | $$\dfrac{1}{k[\text{A}]_0}$$ |
 
-
 ```tikz
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.16}
@@ -174,6 +197,13 @@ Putting it together, here is the standard comparison for a single reactant $$\te
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** A reactant falls from $$0.800$$ to $$0.400\ M$$ in 10 seconds, then to $$0.200\ M$$ in another 20 seconds. Is a constant first-order half-life consistent with these data?
+
+No. Successive half-lives increase from 10 to 20 seconds. For second-order decay, $$1/[A]$$ increases by $$1.25\ M^{-1}$$ in 10 seconds and $$2.50\ M^{-1}$$ in 20 seconds, giving the same slope $$0.125\ M^{-1}s^{-1}$$. The data instead support second-order behavior.
+
+</div>
 
 ---
 
@@ -201,6 +231,14 @@ $$
 
 For the same reaction under the same conditions, a larger $$k$$ always goes with a higher temperature, because $$e^{-E_a/(RT)}$$ increases when $$T$$ increases. A modest rise in $$T$$ can change $$k$$ dramatically because it sits in an exponential.
 
+<div class="theorem-box">
+
+**Example.** Two reactions have equal rate constants at $$300\ K$$ but different activation energies. Under the Arrhenius model with fixed pre-exponential factors, which rate constant increases by the larger factor when heated?
+
+From $$\ln(k_2/k_1)=E_a(1/T_1-1/T_2)/R$$, the temperature factor is positive when heated. Larger $$E_a$$ gives a larger logarithmic increase. A larger barrier means stronger temperature sensitivity, not necessarily a larger absolute rate constant at the original temperature.
+
+</div>
+
 ---
 
 ## Reaction mechanisms
@@ -212,6 +250,14 @@ A **reaction mechanism** proposes a sequence of such steps. Species produced in 
 The **rate-determining step** (RDS) is the slowest step; it has the highest activation energy in the sequence and usually controls the observed rate law. If the first step is slow, its elementary law often appears directly in the experimental rate law (exponents from that step’s stoichiometry). Steps after the RDS do not change the concentration dependence of the rate law (they only consume intermediates as they leak out of the bottleneck).
 
 If the experimental rate law does not match the stoichiometry of the overall equation, you infer multiple steps and a slow step that controls rate.
+
+<div class="theorem-box">
+
+**Example.** A proposed mechanism is $$A+B\rightarrow I$$ followed by $$I+B\rightarrow P$$. Identify the intermediate and overall reaction, and decide whether the overall equation alone proves a second-order dependence on B.
+
+Adding steps cancels I and gives $$A+2B\rightarrow P$$. I is an intermediate because it forms and is consumed. Overall coefficients do not determine the rate law; the slow step and any preceding equilibrium must be specified before assigning concentration exponents.
+
+</div>
 
 ---
 
@@ -263,6 +309,14 @@ For heterogeneous catalysts, the same cycle idea happens on a surface:
 
 Catalyst poisoning occurs when another species binds strongly to active sites and blocks the cycle. Finely divided catalysts usually work faster because they expose more surface area and therefore more active sites.
 
+<div class="theorem-box">
+
+**Example.** Consider $$\mathrm{C+A\rightarrow I}$$ followed by $$\mathrm{I+B\rightarrow C+P}$$. Identify the catalyst and intermediate, derive the net reaction, and explain why neither belongs in its stoichiometric equation.
+
+C is consumed and then regenerated, so it is the catalyst. I is formed and then consumed, so it is the intermediate. Adding the steps cancels both and gives $$\mathrm{A+B\rightarrow P}$$. Although the catalyst is absent from the net equation, its concentration can affect the rate; cancellation from stoichiometry does not imply kinetic irrelevance.
+
+</div>
+
 ---
 
 ## Reaction coordinate diagrams
@@ -274,7 +328,6 @@ E_{a,\text{fwd}} - E_{a,\text{rev}} = \Delta H.
 $$
 
 A catalyst lowers $$E_{a,\text{fwd}}$$ and $$E_{a,\text{rev}}$$ by about the same amount (same pathway lowering for forward and reverse), so it speeds approach to equilibrium but does not change $$\Delta H$$ or the equilibrium constant at fixed $$T$$.
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -291,13 +344,11 @@ A catalyst lowers $$E_{a,\text{fwd}}$$ and $$E_{a,\text{rev}}$$ by about the sam
 \end{tikzpicture}
 ```
 
-
 ### Multi-step profiles
 
 A reaction coordinate diagram for a **multi-step** mechanism has one "hill" per elementary step, with a **valley** between hills for each **intermediate** (a real, if short-lived, species that sits in a local energy minimum). The number of peaks tells you the number of elementary steps; the number of valleys between reactants and products tells you the number of intermediates.
 
 The **tallest peak** corresponds to the step with the largest activation energy—the **rate-determining step**. Reading these diagrams lets you connect the energy picture directly to the mechanism: a high first hill followed by a low second hill means the first step is rate-determining, and the observed rate law should reflect that step's stoichiometry.
-
 
 ```tikz
 \usepackage{pgfplots}
@@ -312,6 +363,13 @@ The **tallest peak** corresponds to the step with the largest activation energy�
 \end{tikzpicture}
 ```
 
+<div class="theorem-box">
+
+**Example.** A two-step energy profile has reactants at $$0$$, the first transition state at $$50$$, an intermediate at $$-30$$, the second transition state at $$40$$, and products at $$-60\ \mathrm{kJ/mol}$$. Which forward step has the larger barrier?
+
+The first barrier is $$50-0=50\ \mathrm{kJ/mol}$$. The second is $$40-(-30)=70\ \mathrm{kJ/mol}$$, even though its peak is lower on the page. Each barrier is measured from the preceding minimum. With comparable prefactors, the second elementary step has the smaller rate constant, though the overall observed rate also depends on intermediate concentration. The net enthalpy is $$-60\ \mathrm{kJ/mol}$$, not either barrier height.
+
+</div>
 
 ---
 
@@ -321,44 +379,96 @@ Along the reaction coordinate, the **transition state** (or **activated complex*
 
 A **catalyst** provides an alternative pathway with lower activation energy. It is regenerated by the end of the cycle and does not appear in the net reaction. A catalyst increases $$k$$ (both forward and reverse for a reversible path) and speeds approach to equilibrium but does not change $$\Delta G^\circ$$ or the equilibrium constant for a given reaction at fixed $$T$$.
 
+<div class="theorem-box">
+
+**Example.** A catalyst lowers the forward barrier by $$15\ \mathrm{kJ/mol}$$ for a reaction with unchanged reactants and products. Explain whether it can lower the products' enthalpy as well.
+
+A catalyst changes the route between the same initial and final states; it does not change their enthalpies. In a simple one-barrier picture the reverse barrier also falls by 15, leaving $$E_{a,fwd}-E_{a,rev}=\Delta H$$ unchanged. Faster product formation does not imply a different reaction enthalpy.
+
+</div>
+
 ---
 
 ## Kinetics vs equilibrium (preview)
 
 For a reversible elementary reaction, forward and reverse rates balance at equilibrium, linking rate constants to an equilibrium constant in simple cases. The [equilibrium notes](/notes/ap/chem/equilibrium/) develop this connection. Kinetics describes how fast a reaction proceeds; equilibrium describes the composition it approaches under fixed conditions.
 
+<div class="theorem-box">
+
+**Example.** A reaction has a very large equilibrium constant but no detectable conversion during a short experiment. Explain why both observations can be true.
+
+Large K says products dominate at equilibrium. A high activation barrier can prevent the system from reaching that composition on the experimental timescale. A catalyst can shorten that timescale but cannot make K larger at the same temperature.
+
+</div>
+
 ---
+
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. For the reaction $$A+B\rightarrow C$$, the initial-rate data below are collected.
+1. Doubling A alone quadruples rate, while doubling both A and B increases rate eightfold. What is the overall reaction order?
 
-| Trial | $$[A]$$ | $$[B]$$ | Initial rate |
-|-------|---------|---------|--------------|
-| 1 | $$0.10\ M$$ | $$0.10\ M$$ | $$2.0\times10^{-3}\ M/s$$ |
-| 2 | $$0.20\ M$$ | $$0.10\ M$$ | $$8.0\times10^{-3}\ M/s$$ |
-| 3 | $$0.20\ M$$ | $$0.20\ M$$ | $$8.0\times10^{-3}\ M/s$$ |
-
-What is the rate law?
-
-   (A) $$\text{rate}=k[A][B]$$<br>
-   (B) $$\text{rate}=k[A]^2$$<br>
-   (C) $$\text{rate}=k[A]^2[B]$$<br>
-   (D) $$\text{rate}=k[B]^2$$
+   (A) 1<br>
+   (B) 2<br>
+   (C) 3<br>
+   (D) 4
 
 :::solution
-Compare trials 1 and 2. Doubling $$[A]$$ while holding $$[B]$$ constant makes the rate four times larger, so the reaction is second order in $$A$$.
-
-Compare trials 2 and 3. Doubling $$[B]$$ while holding $$[A]$$ constant does not change the rate, so the reaction is zero order in $$B$$.
+A is second order because $$2^m=4$$. B contributes the remaining factor of two, so it is first order. The sum of the exponents is three; the factor of eight is not itself the order.
 
 $$
-\boxed{\text{rate}=k[A]^2}
+\boxed{\text{C}}.
 $$
+:::
+::::
 
-So the answer is
+::::problem
+2. For $$2A\rightarrow B$$, A disappears at $$0.040\ M/s$$. What is the formation rate of B?
+
+   (A) $$0.080\ M/s$$<br>
+   (B) $$0.040\ M/s$$<br>
+   (C) $$0.020\ M/s$$<br>
+   (D) $$0.010\ M/s$$
+
+:::solution
+Two A are consumed per B formed, so $$d[B]/dt=-\tfrac12d[A]/dt=0.020\ M/s$$. Rates for different species require the stoichiometric coefficients even when the kinetic order is unknown.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+::::problem
+3. A first-order reactant falls from $$0.800$$ to $$0.200\ M$$ in $$40.0\ s$$. How much additional time is needed to reach $$0.0500\ M$$?
+
+   (A) 10.0 s<br>
+   (B) 20.0 s<br>
+   (C) 40.0 s<br>
+   (D) 80.0 s
+
+:::solution
+Each fourfold drop takes two half-lives. The first interval establishes a 20.0 s half-life, so the second fourfold drop also takes 40.0 s. Constant first-order half-life does not mean constant absolute concentration loss.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+::::problem
+4. For a second-order decay, which change follows when initial concentration doubles at fixed temperature?
+
+   (A) Initial rate doubles and half-life doubles<br>
+   (B) Initial rate quadruples and half-life halves<br>
+   (C) Initial rate quadruples and half-life is unchanged<br>
+   (D) Initial rate is unchanged and half-life halves
+
+:::solution
+The law $$r=k[A]^2$$ makes initial rate four times larger. The second-order half-life $$1/(k[A]_0)$$ becomes half as long. The constant k stays fixed because temperature and reaction conditions otherwise stay fixed.
 
 $$
 \boxed{\text{B}}.
@@ -367,100 +477,35 @@ $$
 ::::
 
 ::::problem
-2. A catalyst increases the rate of a reaction by
+5. For a fast pre-equilibrium $$A+B\rightleftharpoons I$$ followed by slow $$I+A\rightarrow P$$, which rate law follows?
 
-   (A) increasing $$\Delta G^\circ$$<br>
-   (B) lowering the activation energy<br>
-   (C) increasing the equilibrium constant<br>
-   (D) increasing the enthalpy change of the reaction
+   (A) $$k[A][B]$$<br>
+   (B) $$k[I]$$ only<br>
+   (C) $$k[A][B]^2$$<br>
+   (D) $$k[A]^2[B]$$
 
 :::solution
-A catalyst provides an alternate pathway with lower activation energy. It does not change $$\Delta G^\circ$$, $$\Delta H$$, or $$K$$.
+Slow-step rate is $$k_2[I][A]$$ and pre-equilibrium gives $$[I]=K_1[A][B]$$. Substitution yields $$k_2K_1[A]^2[B]$$. The observed law must eliminate the intermediate.
 
 $$
-\boxed{\text{B}}
+\boxed{\text{D}}.
 $$
 :::
 ::::
 
 ::::problem
-3. For a first-order reaction, which plot should be linear?
+6. A one-step reaction has forward activation energy 75 and enthalpy change $$-25\ \mathrm{kJ/mol}$$. A catalyst lowers the transition-state energy by $$20\ \mathrm{kJ/mol}$$. What is the catalyzed reverse barrier?
 
-   (A) $$[A]$$ versus time<br>
-   (B) $$\ln[A]$$ versus time<br>
-   (C) $$1/[A]$$ versus time<br>
-   (D) rate versus $$1/T$$
-
-:::solution
-For a first-order reaction,
-
-$$
-\ln[A]_t=-kt+\ln[A]_0,
-$$
-
-so $$\ln[A]$$ versus time is linear.
-
-$$
-\boxed{\text{B}}
-$$
-:::
-::::
-
-::::problem
-4. If the rate law is $$\text{rate}=k[A]^2[B]$$, what happens to the rate when $$[A]$$ is doubled and $$[B]$$ is held constant?
-
-   (A) It doubles.<br>
-   (B) It triples.<br>
-   (C) It quadruples.<br>
-   (D) It stays the same.
+   (A) $$80\ \mathrm{kJ/mol}$$<br>
+   (B) $$55\ \mathrm{kJ/mol}$$<br>
+   (C) $$30\ \mathrm{kJ/mol}$$<br>
+   (D) $$100\ \mathrm{kJ/mol}$$
 
 :::solution
-The rate depends on $$[A]^2$$. Doubling $$[A]$$ multiplies the rate by
+Uncatalyzed reverse barrier is $$75-(-25)=100$$. Lowering the transition state by 20 makes it 80. The products' energy stays fixed; the catalyzed forward barrier is 55 and $$55-80=-25$$ still holds.
 
 $$
-2^2=4.
-$$
-
-$$
-\boxed{\text{C}}
-$$
-:::
-::::
-
-::::problem
-5. A reaction has a rate law $$\text{rate}=k[A]$$. What are the units of $$k$$ if rate is measured in $$M/s$$?
-
-   (A) $$M^{-1}s^{-1}$$<br>
-   (B) $$s^{-1}$$<br>
-   (C) $$M/s$$<br>
-   (D) $$M^2/s$$
-
-:::solution
-For $$\text{rate}=k[A]$$,
-
-$$
-k=\frac{M/s}{M}=s^{-1}.
-$$
-
-$$
-\boxed{\text{B}}
-$$
-:::
-::::
-
-::::problem
-6. Increasing temperature usually increases reaction rate because
-
-   (A) the activation energy becomes zero.<br>
-   (B) more collisions have energy greater than or equal to $$E_a$$.<br>
-   (C) the equilibrium constant must become larger.<br>
-   (D) the reaction mechanism cannot change.
-
-:::solution
-At higher temperature, particles have greater kinetic energy on average, so a larger fraction of collisions can overcome the activation energy.
-
-$$
-\boxed{\text{B}}
+\boxed{\text{A}}.
 $$
 :::
 ::::
@@ -475,6 +520,8 @@ $$
    $$(B)$$ If the initial concentration is $$0.800\ M$$, calculate the concentration after $$60.0\ \text{s}$$.
 
    $$(C)$$ Explain how the slope of a graph of $$\ln[A]$$ versus time is related to $$k$$.
+
+   $$(D)$$ **Original extension.** Calculate the time required for $$90.0\%$$ of the reactant to decompose. Would doubling the initial concentration change this time? Justify mathematically.
 
 :::solution
 $$(A)$$ For a first-order reaction,
@@ -516,6 +563,8 @@ $$
 $$
 
 The negative slope shows that $$[A]$$ decreases as time increases. The magnitude of the slope gives the rate constant, so a steeper negative line means a faster first-order reaction.
+
+$$(D)$$ When $$90.0\%$$ has decomposed, $$[A]_t/[A]_0=0.100$$. Thus $$t=-\ln(0.100)/(0.0300\ \text{s}^{-1})=76.8\ \text{s}$$. The integrated law depends on the fraction remaining, so doubling the initial concentration does not change this time at fixed temperature. It does double the initial rate $$k[A]_0$$. A larger absolute rate is therefore compatible with the same time to consume a given fraction.
 :::
 ::::
 
@@ -527,6 +576,8 @@ The negative slope shows that $$[A]$$ decreases as time increases. The magnitude
    $$(B)$$ If a plot of $$\ln[A]$$ versus time has slope $$-0.0150\ \text{s}^{-1}$$, identify $$k$$.
 
    $$(C)$$ Calculate the half-life for the reaction.
+
+   $$(D)$$ **Original extension.** A second run starts at twice the original reactant concentration but at the same temperature. Compare its initial rate, half-life, and slope on a plot of $$\ln[A]$$ versus time.
 
 :::solution
 $$(A)$$ If a plot of $$\ln[A]$$ versus time is linear, the data support a first-order relationship in $$A$$. Equivalently, the concentration should decrease by the same fraction over equal time intervals. A plot of $$[A]$$ versus time or $$1/[A]$$ versus time would be used to test zero-order or second-order behavior, so the linear graph identifies the order.
@@ -546,5 +597,7 @@ t_{1/2}=\frac{0.693}{k}=\frac{0.693}{0.0150}=46.2\ \text{s}.
 $$
 
 For a first-order reaction, this half-life is constant, meaning every $$46.2\ \text{s}$$ the concentration is cut in half regardless of the starting concentration.
+
+$$(D)$$ A linear $$\ln[A]$$ plot indicates first-order behavior, so the initial rate $$k[A]_0$$ doubles. The half-life remains $$\ln 2/0.0150=46.2\ \text{s}$$ because it does not depend on the initial concentration. The slope remains $$-k=-0.0150\ \text{s}^{-1}$$; only the vertical intercept increases, by $$\ln 2$$. Changing the amount of reactant does not itself change the rate constant.
 :::
 ::::

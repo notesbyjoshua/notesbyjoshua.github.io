@@ -42,6 +42,26 @@ The communist victory in China and the Soviet atomic test in 1949 heightened U.S
 Containment could use economic aid, diplomacy, military alliances, covert intervention, or war. Do not reduce it to a single program or assume every president used the same methods.
 :::
 
+### Security dilemmas and competing systems
+
+The United States promoted a capitalist international economy and representative government, while the Soviet Union defended a one-party communist system and a sphere of influence in Eastern Europe. Actual policy did not always match these principles: the United States supported some authoritarian anticommunist governments, and Soviet claims of liberation accompanied coercive control over neighboring societies.
+
+Each side could interpret a measure it considered defensive as aggressive when taken by the other. Soviet control in Eastern Europe was presented as protection against another invasion, but Americans saw expansion. U.S. economic aid was presented as recovery and stability, while Soviet leaders saw a means of extending capitalist influence. This **security dilemma** made mutual suspicion self-reinforcing.
+
+Germany became a central test because its industrial strength and location mattered to both sides. Disagreement over occupation and reconstruction contributed to the formation of separate German states. Berlin, located within the Soviet occupation zone but divided among the occupying powers, remained a point where competing commitments could collide directly.
+
+### Comparing economic and military containment
+
+The Marshall Plan addressed the belief that political instability and economic hardship could make communist parties more attractive. Restoring production and trade could strengthen noncommunist governments without requiring direct military occupation. It also benefited the United States by supporting a healthier international economy.
+
+NATO made a different commitment: an attack on a member would be treated as a concern for the alliance. This marked a durable departure from the older reluctance to enter peacetime European military alliances. Containment increasingly depended on institutions and deployments designed to last rather than on a temporary response to one emergency.
+
+NSC-68 encouraged a more heavily militarized understanding of the conflict. The Korean War made the proposed buildup politically easier to implement. An event in East Asia therefore influenced defense spending and strategic planning far beyond Korea itself.
+
+:::key{name="Ideology and interests"}
+Ideological rivalry mattered, but policy also reflected geography, economic access, military security, and domestic politics. Identifying several motives makes it easier to explain why governments sometimes acted inconsistently with their stated ideals.
+:::
+
 ---
 
 ## Cold War conflicts and intervention
@@ -64,6 +84,16 @@ In Cuba, the failed **Bay of Pigs invasion** in 1961 damaged Kennedy's administr
 Local conflicts were not simply contests controlled by Washington and Moscow. Nationalism, colonial rule, land reform, and domestic political struggles shaped events in countries where the superpowers intervened.
 :::
 
+### Nuclear deterrence and the risk of escalation
+
+Nuclear deterrence depended on convincing an opponent that an attack would bring unacceptable retaliation. As both superpowers developed more destructive weapons and delivery systems, a direct war threatened devastation on a scale far beyond earlier conflicts. Military strength could discourage attack while making mistakes, miscommunication, or local crises more dangerous.
+
+The Cuban Missile Crisis showed both sides searching for a way to retreat without appearing to surrender. A public noninvasion promise and a private understanding about missiles in Turkey helped produce an agreement. The outcome cannot be understood only as one leader forcing another to back down; it also involved reciprocal concessions and recognition of catastrophic risk.
+
+Subsequent measures such as a direct communications link and the **Limited Test Ban Treaty** aimed to reduce some dangers. They did not end the arms race. Cooperation over risk could coexist with continued competition over weapons and influence.
+
+Eisenhower's warning about the military-industrial complex concerned the lasting political influence of a large defense establishment and its contractors. Defense spending supported jobs, research, and regional development, making the Cold War part of domestic economic life. Reducing military commitments could therefore face opposition from groups benefiting from them even beyond strategic arguments.
+
 ---
 
 ## Anticommunism at home
@@ -77,6 +107,16 @@ Government campaigns also targeted gay and lesbian employees during the **Lavend
 :::key{name="Security and liberty"}
 Separate evidence of espionage from the wider use of accusation and guilt by association. A real security threat does not establish that every investigation, dismissal, or restriction was justified.
 :::
+
+### The political effects of suspicion
+
+Accusations of communist sympathy could damage careers without establishing espionage or unlawful conduct. Hearings often pressured witnesses to identify associates, encouraging guilt by association. Refusing to cooperate could itself be treated as suspicious, while cooperating could expose other people to blacklisting.
+
+Anticommunism also influenced reform movements. Labor unions expelled some left-wing members or organizations, and civil rights activists faced accusations that challenges to racial hierarchy served foreign enemies. These attacks could narrow the acceptable range of domestic debate by attaching international disloyalty to local demands.
+
+Cold War competition could also strengthen arguments for racial reform. Soviet propaganda highlighted American segregation, making discrimination a liability for a country claiming to lead the free world. U.S. officials sometimes supported civil rights because racial inequality damaged international credibility, even when they remained cautious about broader domestic change.
+
+The relationship between foreign policy and civil rights therefore worked in two directions: anticommunism could suppress activists, while competition for international opinion could increase pressure to address the injustice they opposed.
 
 ---
 
@@ -102,6 +142,16 @@ Beat writers and later youth movements criticized conformity, materialism, and r
 The 1950s were neither universally prosperous nor uniformly conformist. Growth was substantial, but access depended on race, gender, occupation, and location, and organized challenges were already developing.
 :::
 
+### Public policy behind private prosperity
+
+Suburban development relied on federally supported mortgages, highways, infrastructure, and favorable credit conditions. These policies reduced the cost of homeownership for many families. Describing the result entirely as individual thrift overlooks how government shaped the opportunities available to different buyers.
+
+Housing discrimination had consequences extending across generations. Families able to purchase homes in appreciating neighborhoods could accumulate equity, help pay for education, or pass wealth to children. Families denied comparable mortgages or excluded from those neighborhoods lost access to the same mechanism of wealth accumulation.
+
+Highway construction facilitated commuting and commerce but sometimes destroyed established urban neighborhoods. The benefits of mobility were not distributed equally with the costs of displacement. Examining who selected routes and who had political influence reveals why a nationally popular program could harm particular communities.
+
+The **Fair Deal**, Truman's domestic program, sought to extend aspects of the New Deal, but congressional opposition limited much of it. His administration nevertheless supported measures such as an increased minimum wage and public housing. The contrast between ambitious proposals and limited enactment shows that postwar liberalism faced constraints well before the 1970s.
+
 ---
 
 ## The Black freedom struggle
@@ -123,6 +173,22 @@ The civil rights movement grew from decades of local organizing, legal challenge
 | Fair Housing Act, 1968 | Prohibits major forms of housing discrimination |
 
 **Martin Luther King Jr.** promoted nonviolent direct action to expose injustice and force negotiation. Organizers such as **Ella Baker**, **Fannie Lou Hamer**, and local student activists built participation and challenged dependence on a single charismatic leader.
+
+### How legal action and direct action reinforced one another
+
+The NAACP's legal campaign challenged the logic of separate but equal through carefully selected cases. Brown rejected segregation in public schools, but the decision did not provide a simple enforcement timetable that immediately integrated every district. **Massive resistance** by white officials, school closures, and intimidation delayed change.
+
+Direct action made the cost of delay visible. A boycott withdrew money from a segregated business or service; a sit-in challenged a discriminatory practice in the place where it operated. Arrests and attacks could reveal the violence needed to maintain a system that its defenders described as orderly.
+
+The **Freedom Rides** tested whether federal decisions against segregation in interstate travel would be enforced. Activists deliberately crossed jurisdictions, exposing the gap between national law and local practice. Federal authorities faced pressure to act when local officials failed to protect riders or participated in repression.
+
+**Freedom Summer** in 1964 linked voter registration, education, and political organizing in Mississippi. Activists confronted violence as well as administrative obstacles. The **Mississippi Freedom Democratic Party** challenged an all-white delegation's claim to represent the state, showing that the movement sought power within political institutions as well as desegregation of public spaces.
+
+The **Selma campaign** brought voting obstruction and state violence to national attention. The Voting Rights Act addressed the enforcement problem directly through federal oversight and tools against discriminatory practices. It was more than a statement that racial discrimination was wrong; it changed who could intervene when local authorities maintained it.
+
+:::key{name="Grassroots pressure"}
+Federal action often followed years of local organizing. Courts and presidents mattered, but activists created the situations in which delay or inaction became politically harder to sustain.
+:::
 
 ### Beyond formal segregation
 
@@ -148,6 +214,16 @@ President **Lyndon Johnson's Great Society** expanded federal efforts in health 
 - The **Immigration and Nationality Act of 1965** ended the national-origins quota system, helping reshape later immigration from Asia and Latin America.
 
 The Warren Court also expanded protections for defendants and addressed representation. **Gideon v. Wainwright** protected access to counsel in state felony cases, and **Miranda v. Arizona** required warnings before custodial interrogation.
+
+### The assumptions behind the Great Society
+
+Johnson's domestic program developed during a period of strong economic growth and confidence that public policy could widen opportunity. Programs addressed health costs, educational inequality, housing, and poverty rather than assuming general growth would automatically reach everyone.
+
+Some initiatives emphasized **community action**, giving residents a role in identifying needs and managing programs. This could challenge established local politicians who were accustomed to controlling public resources. Conflict over implementation therefore occurred within liberal politics as well as between liberals and conservatives.
+
+The war in Vietnam placed pressure on spending and political attention. Critics on the left argued that military commitments undermined domestic reform, while conservatives criticized the scale and design of antipoverty programs. The Great Society's record varied across programs: Medicare produced a durable change in access to health insurance, while other initiatives encountered funding limits or local resistance.
+
+The persistence of poverty did not by itself establish that every program failed. Outcomes depended on the problem being addressed, the resources supplied, and the measure used. A policy could reduce hardship without eliminating the structural causes of inequality.
 
 ### Youth activism and the counterculture
 
@@ -185,6 +261,18 @@ Nixon pursued **Vietnamization**, shifting combat responsibilities to South Viet
 The Vietnam War did not end in 1973 for the Vietnamese. That date marks the U.S. agreement and withdrawal; the war continued until 1975.
 :::
 
+### Escalation, credibility, and the limits of intervention
+
+U.S. leaders worried that withdrawal from Vietnam would damage credibility with allies and encourage communist expansion elsewhere. This concern could make every setback a reason to commit more resources: leaving seemed more costly after the United States had already promised support. The fear of losing credibility narrowed policymakers' willingness to reconsider underlying assumptions.
+
+Vietnamese communists combined revolutionary goals with a struggle for national unification and independence. Treating them solely as instruments of Moscow or Beijing understated their own objectives. South Vietnam also contained diverse political interests, and U.S. support did not automatically give its government legitimacy among all its residents.
+
+Military measures of success, such as enemy casualty counts, could misrepresent political progress. An army might win engagements while failing to secure lasting cooperation from the population. The gap between battlefield statistics and political legitimacy helps explain why superior firepower did not yield the expected settlement.
+
+The antiwar movement developed over time and was internally diverse. Some opposed the draft's unequal burdens, some condemned the war morally, and others questioned whether it could be won at an acceptable cost. Protest did not require agreement on a single alternative foreign policy.
+
+The **Kent State shootings** in 1970, after protests surrounding the Cambodia campaign, intensified conflict over dissent and state force. Nixon appealed to a **silent majority** that he argued supported order and his policies. The dispute over the war became part of a wider struggle over who represented the nation.
+
 ---
 
 ## The 1970s: détente, scandal, and economic trouble
@@ -206,6 +294,16 @@ The **War Powers Resolution** of 1973 attempted to limit unilateral presidential
 **Stagflation** combined high inflation with weak growth and unemployment. Oil shocks, productivity problems, international competition, and other pressures challenged postwar economic assumptions. Deindustrialization damaged many older manufacturing communities.
 
 Conservative activists criticized taxes, regulation, welfare programs, and changes in social norms. The **Southern Strategy**, suburban organizing, business mobilization, and the rise of the **religious right** helped expand the Republican coalition. Conservative growth was gradual and involved more than a reaction to one president or one policy.
+
+### Why the postwar political consensus weakened
+
+Stagflation challenged the assumption that policymakers could easily choose between inflation and unemployment through familiar adjustments to demand. Higher energy costs affected transportation and production, while international competition and slower productivity growth placed pressure on industrial employment and wages.
+
+Economic insecurity interacted with political distrust. Vietnam had exposed misleading official claims, Watergate revealed abuses of executive power, and inflation eroded confidence in everyday economic management. These were separate problems, but together they weakened the authority of national institutions.
+
+Conservative organizers offered explanations centered on taxes, regulation, permissive social policies, and weakened national resolve. Liberal critics offered different explanations involving corporate power, inequality, and misplaced military priorities. The shift toward conservatism was not an automatic result of hardship; organizations, donors, media, and political leaders worked to turn dissatisfaction into a governing coalition.
+
+The period therefore ends with a transformation in expectations rather than a disappearance of the postwar state. Civil rights legislation, social insurance, defense institutions, and environmental regulation remained important. The dispute increasingly concerned how far those institutions should extend and whose interests they should serve.
 
 ---
 

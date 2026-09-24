@@ -34,6 +34,16 @@ Filipino nationalists who had fought Spain resisted U.S. rule in the **Philippin
 Overseas expansion raised a different problem from simply admitting new states: could the United States govern people indefinitely without giving them equal political membership? The Insular Cases allowed unequal constitutional treatment of certain territories.
 :::
 
+### The imperial debate at home
+
+Supporters of expansion argued that industrial production needed overseas outlets and that a modern navy required bases and coaling stations. Some missionaries and political leaders treated spreading Christianity or American institutions as an obligation. These claims presented national advantage and moral purpose as compatible, even when the people being governed opposed U.S. control.
+
+The **Anti-Imperialist League** challenged annexation of the Philippines by invoking consent of the governed. Its coalition included people with very different views about race, business, and government. A businessman might fear the expense of empire, a labor leader might fear competition, and a reformer might object to denying self-government. Agreement against annexation did not imply agreement about equality.
+
+The **Teller Amendment** had disclaimed an intention to annex Cuba during the war with Spain. The later Platt Amendment created substantial U.S. influence without formal annexation. Comparing the two shows how a commitment to independence could coexist with arrangements that limited another country's practical sovereignty.
+
+The Philippine-American War exposed the violence required to maintain an empire against resistance. Filipino nationalists had their own independence movement, so the conflict was not merely a transfer of administration from one colonial power to another. U.S. rule required defeating people who expected the end of Spanish rule to mean freedom.
+
 ### Different approaches to intervention
 
 | Policy | Main approach |
@@ -68,6 +78,20 @@ The **Panama Canal** strengthened naval and commercial connections between the A
 
 Wilson's reforms included the **Federal Reserve Act**, **Federal Trade Commission**, and **Clayton Antitrust Act**. Conservation policies sought managed use of resources, while preservationists such as **John Muir** wanted stronger protection from development.
 
+### Social reform and the power of expertise
+
+Progressive reformers often believed that trained professionals could solve problems that corrupt or uncoordinated local politics had failed to address. City commissions, public-health departments, building codes, and professional management reflected this confidence in expertise. Such reforms could improve services while shifting decisions away from ordinary voters.
+
+The **Triangle Shirtwaist fire of 1911** made unsafe working conditions difficult to dismiss as isolated accidents. The deaths of garment workers encouraged demands for workplace inspection, fire safety, and employer responsibility. Organizers and investigators converted public outrage into institutional reform; the disaster alone did not automatically change the law.
+
+Suffrage campaigns also used different methods. **Carrie Chapman Catt** pursued organized lobbying and coordinated state and national campaigns, while **Alice Paul** used more confrontational tactics, including demonstrations directed at the federal government. Their approaches differed, but both helped increase the political cost of continued exclusion.
+
+Conservation exposed disagreements within reform. **Gifford Pinchot** favored scientifically managed resource use, while preservationists wanted some landscapes protected from development. Both challenged unrestricted exploitation, but they disagreed over whether a dam or commercial use could represent responsible public management.
+
+:::key{name="Progressive tensions"}
+Progressivism could expand democracy through voting reforms while reducing direct public control through expert administration. Its participants shared dissatisfaction with existing conditions more consistently than they shared one theory of reform.
+:::
+
 ### The limits of reform
 
 Many Progressives ignored racial inequality or supported segregation and coercive policies. Wilson's administration segregated federal workplaces. **W. E. B. Du Bois** and the **NAACP** pressed for civil rights, while other activists challenged lynching and discrimination outside mainstream white reform organizations.
@@ -99,6 +123,16 @@ Labor demand accelerated the **Great Migration** of Black southerners to norther
 :::key{name="War and the state"}
 Mobilization increased the government's role in production, labor, information, and policing. The same war described as a defense of democracy also brought restrictions on dissent at home.
 :::
+
+### Migration, labor, and wartime expectations
+
+Wartime industry needed workers at a moment when European immigration was disrupted. Black newspapers and community networks spread information about northern opportunities, encouraging migration out of the South. Leaving could mean escaping direct threats and gaining political influence through voting in places where disfranchisement was less entrenched.
+
+Northern employers did not necessarily offer equality. Migrants often entered difficult jobs and segregated housing markets, while white workers sometimes treated them as competitors or strikebreakers. Tensions could lead to violence, as in East St. Louis in 1917 and the broader attacks of 1919. Economic opportunity and racial exclusion developed together.
+
+The government sometimes encouraged cooperation between labor and management to avoid production stoppages. Wartime bargaining gains could prove fragile after peace, when employers sought to recover control and officials associated militancy with radicalism. The transition from mobilization to demobilization helps explain the wave of strikes and repression after 1918.
+
+Wilson's language of self-determination also raised expectations outside Europe. Colonized peoples could ask why a principle used to reorganize European territory should not apply to them. The peace settlement's limits exposed a gap between universal rhetoric and the interests of victorious empires.
 
 ### The peace settlement
 
@@ -132,6 +166,16 @@ The image of the **flapper** symbolized changing gender expectations, but most w
 :::note
 The United States avoided some formal political commitments during the 1920s, but it remained involved through trade, loans, arms agreements, and intervention in Latin America. “Isolationism” can obscure this continued involvement.
 :::
+
+### Consumer prosperity and underlying weakness
+
+The automobile connected several sectors of the economy. Car production increased demand for steel, rubber, glass, oil, roads, and service businesses. It also changed settlement and leisure by making longer-distance travel more accessible. A single mass-produced product could therefore reorganize employment and daily routines far beyond its assembly line.
+
+Installment credit let families buy goods before they had saved the full price. This expanded immediate demand but created obligations that became harder to meet if income fell. The same mechanism that supported consumption during growth could worsen distress during a downturn.
+
+Agriculture did not share evenly in urban prosperity. Wartime demand had encouraged expansion, but postwar prices fell while farmers still owed debts incurred for land and machinery. The contrast helps explain why 1929 did not feel like the beginning of hardship for everyone; many rural communities had faced a prolonged crisis already.
+
+The renewed Ku Klux Klan's influence extended beyond the South. It defended a vision of white Protestant national identity and mobilized against Catholics, Jews, immigrants, and Black Americans. Its growth demonstrates that racial and religious exclusion were national political forces, not merely remnants of southern Reconstruction conflict.
 
 ---
 
@@ -168,6 +212,26 @@ The crash did not single-handedly cause the Depression, and Hoover did not liter
 | SEC | Regulates securities markets |
 | Fair Labor Standards Act | Establishes federal wage and hour standards and restricts child labor |
 
+### Banking confidence and emergency action
+
+A bank run occurred when depositors rushed to withdraw money because they feared a bank might fail. Banks did not keep every deposit in cash, since funds were lent or invested. Even an institution with valuable assets could collapse if it could not turn those assets into cash quickly enough to meet withdrawals.
+
+Roosevelt's **bank holiday**, emergency legislation, and public explanation of policy sought to interrupt this cycle of panic. Deposit insurance later reduced the incentive for small depositors to rush to withdraw at the first sign of trouble. Banking reform therefore addressed confidence and institutional design, not simply the quantity of government spending.
+
+The New Deal developed experimentally. Early measures tried to stabilize prices and coordinate recovery; later measures placed greater emphasis on labor rights, employment, and social insurance. Treating it as a single plan fully designed in 1933 obscures how political pressure and disappointing results changed policy.
+
+### Labor organization and political change
+
+The **Congress of Industrial Organizations**, initially developing within the labor movement before becoming a separate federation, organized workers across entire mass-production industries. Unlike an approach centered on separate skilled crafts, industrial unionism sought to bargain for large groups working within the same industry. Sit-down strikes and other tactics increased workers' leverage while provoking intense opposition.
+
+The Wagner Act strengthened legal protection for organizing, but workers still had to build unions and win recognition. Government action created an opening; it did not automatically supply workplace power. Growing union membership then helped build support for Democrats and sustained demands for economic security.
+
+The **recession of 1937–1938** showed that recovery remained fragile. Reduced federal support and tighter financial conditions contributed to renewed contraction. The episode strengthened arguments for continued public spending while providing critics with evidence that the New Deal had not established a self-sustaining recovery.
+
+:::warning
+Relief, recovery, and reform are overlapping purposes, not three programs. A public-works project can provide immediate wages, stimulate demand, and leave useful infrastructure at the same time.
+:::
+
 ### Opposition and limitations
 
 Conservatives argued that the New Deal expanded federal power too far. Critics such as **Huey Long** argued that it did too little to redistribute wealth. The Supreme Court struck down some early programs, and Roosevelt's proposed **court expansion plan** damaged his political standing.
@@ -195,6 +259,20 @@ Japan's attack on **Pearl Harbor** on December 7, 1941, brought the United State
 - **Island hopping** captured strategically important Pacific positions while bypassing others.
 - The Soviet Union bore enormous losses fighting Germany on the eastern front; Allied victory depended on a coalition, not U.S. action alone.
 
+### Why neutrality became harder to maintain
+
+Memories of World War I led many Americans to suspect that trade, loans, and arms sales could drag the country into another conflict. Neutrality legislation tried to prevent that sequence by restricting transactions with belligerents. But treating aggressors and their opponents identically could leave threatened countries without supplies while expansionist powers continued attacking.
+
+Roosevelt gradually argued that aiding countries fighting the Axis would strengthen U.S. security. **Cash-and-carry** arrangements and later Lend-Lease moved policy toward support without initially deploying an American combat army into the European war. Neutrality became a debate about which actions actually reduced the danger of eventual war.
+
+In the Pacific, Japanese expansion in China and Southeast Asia collided with U.S. strategic and commercial interests. American economic restrictions, including oil restrictions, increased pressure on Japan. Japanese leaders chose a wider war rather than retreat from imperial ambitions. Pearl Harbor was therefore connected to a broader struggle over expansion and resources, not an isolated event without prior conflict.
+
+### Logistics and coalition warfare
+
+The United States supplied ships, aircraft, vehicles, food, and other materials on an enormous scale. Keeping supply routes open was essential: producing equipment did little good if it could not reach the people using it. The struggle in the Atlantic and the capture of strategic Pacific positions were therefore logistical as well as battlefield contests.
+
+Allied leaders disagreed over strategy and the timing of a western front. The Soviet Union wanted relief from the pressure of fighting Germany, while Britain and the United States weighed military readiness and competing theaters. Cooperation was necessary for victory without requiring complete agreement about the postwar world.
+
 ### Mobilization and inequality at home
 
 Federal spending, industrial conversion, rationing, and mass military service reorganized the economy. Women entered industrial work in greater numbers, though many were pushed out of those jobs after the war. The **Bracero Program** recruited Mexican workers under temporary labor agreements.
@@ -214,6 +292,16 @@ Germany surrendered in May 1945. In August, the United States dropped atomic bom
 The Holocaust and other wartime atrocities exposed the consequences of Nazi racial ideology and mass murder. U.S. immigration restrictions had limited refuge for many people fleeing persecution.
 
 The war left the United States with enormous industrial and military power. The **United Nations** and new international financial institutions reflected efforts to prevent another global collapse, while tensions with the Soviet Union laid the groundwork for the Cold War.
+
+### War, the economy, and the international order
+
+Wartime mobilization used federal spending and coordination on a scale far beyond the New Deal. Production demands absorbed unemployment, while rationing and price controls attempted to manage shortages and inflation. Families postponed purchases, accumulated savings, and prepared for a postwar economy that would redirect factories toward civilian consumption.
+
+The **GI Bill of 1944** anticipated veterans' return by supporting education, training, and housing. Its later effects belong largely to the postwar period, but its passage reflected wartime planning to avoid the instability that had followed World War I. Unequal access to the benefits would also shape postwar inequality.
+
+The **Bretton Woods agreements** helped establish institutions intended to stabilize international finance and support reconstruction. The United Nations created a forum for diplomacy and collective security while giving the major powers special authority through the Security Council. These arrangements reflected both ideals of cooperation and the distribution of power at the war's end.
+
+Comparing 1919 with 1945 reveals a major shift. After World War I, the United States refused membership in the League of Nations. After World War II, it accepted a central role in new international institutions and maintained much larger global commitments. The difference came from wartime experience, economic power, and the emerging rivalry with the Soviet Union rather than from a disappearance of domestic disagreement.
 
 ---
 

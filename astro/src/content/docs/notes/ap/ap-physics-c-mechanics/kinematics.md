@@ -700,6 +700,8 @@ $$
 a_c = \frac{v^2}{r}.
 $$
 
+// define all the variables proved in the next section here
+
 <div class="theorem-box">
 
 **Proof (Centripetal acceleration).** Start with the parameterization for a standard circle centered at $$(a, e)$$
@@ -939,9 +941,9 @@ $$
 \end{tikzpicture}
 ```
 
-If you need a reminder of vector addition, check out AP Precalculus. A useful consistency check is that swapping the subscripts negates the vector, $$\vec{v}_{A/B} = -\vec{v}_{B/A}$$.
+If you need a reminder of vector addition, check out AP Precalculus. Since we can model the velocities as vectors, $$\vec{v}_{A/B} = -\vec{v}_{B/A}$$, meaning that two objects that are moving have opposite relative velocities with respect to each other.
 
-Relative acceleration follows from differentiating the relative-velocity equation. As long as the reference frames use axes that remain parallel and do not rotate relative to one another,
+What if instead of looking at velocity, we look at acceleration? As long as the reference frames use axes that remain parallel and do not rotate relative to one another,
 
 $$
 \vec a_{A/C}=\vec a_{A/B}+\vec a_{B/C}.
@@ -953,9 +955,7 @@ $$
 \vec a_{A/B}=\vec a_{A/C}-\vec a_{B/C}.
 $$
 
-This subtraction has a useful physical meaning. If $$A$$ and $$B$$ have the same acceleration in the lab frame, their relative acceleration is zero, even if both are speeding up. If their accelerations differ, their relative velocity changes at exactly that difference.
-
-Be careful when the observer's frame rotates. Its coordinate directions change with time, so simply differentiating components measured along those rotating axes misses additional terms. The equations above apply directly to translating, nonrotating frames.
+However, you should ALWAYS remember that acceleration is NEVER inherited! When I drop a donut in an accelerating train to an outside perspective, the donut is dropping straight down. However, if you are accelerating with the frame, any object the leaves the frame (e.g. is dropped, meaning that it technically isn't moving with the train anymore) will inherit the velocity but from your perspective, will have a fictitious acceleration going backwards, since $$\vec{a}_{A/B} = -\vec{a}_{B/A}$$.
 
 <div class="theorem-box">
 
@@ -986,6 +986,8 @@ The cart can accelerate west relative to the train while still accelerating east
 $$
 \vec a_{T/C}=-\vec a_{C/T}=0.80\hat i\ \text{m/s}^2.
 $$
+
+// change this problem to a problem about looking from different frames and stuff (so like the donut in a train problem)
 
 </div>
 
@@ -1029,7 +1031,9 @@ You can find more about relative motion on the [USAPhO section on mechanics](/no
 
 ## Kinematics in two dimensions and projectile motion
 
-In 2D, vectors can be broken down into $$x$$- and $$y$$-components. For **projectile motion** with negligible air resistance (meaning you throw something in the air or something is launched), horizontal acceleration is zero and vertical acceleration is $$g$$ downward (again, signs depend on whether you call “up” positive $$y$$ or not). The motions along $$x$$ and $$y$$ are independent except that they share the same time parameter $$t$$.
+When dealing with 2D kinematics, vectors can be broken down into $$x$$- and $$y$$-components, with each component acting *independently* of the other. **Projectile motion**, a special type of 2D kinematics where you launch an object, with negligible air resistance (meaning you throw something in the air or something is launched), horizontal acceleration is zero and vertical acceleration is $$g$$ downward (again, signs depend on whether you call “up” positive $$y$$ or not).
+
+// please fix the grammar in the previous paragraph
 
 ```tikz
 \usepackage{tikz}
@@ -1049,7 +1053,7 @@ $$
 v_{0x} = v_0 \cos\theta, v_{0y} = v_0 \sin\theta.
 $$
 
-Typical component equations (up is positive $$y$$, gravity is downward) then become:
+The motion can thus be broken down into components, with each component having its own kinematic equaions (up is positive $$y$$, gravity is downward):
 
 $$
 x = x_0 + v_{0x} t, \qquad y = y_0 + v_{0y} t - \frac{1}{2} g t^2,
@@ -1061,7 +1065,7 @@ $$
 
 Remember: ALWAYS make sure you know which direction you define as $$+y$$! The trajectory in the vertical plane is a parabola until the object hits something.
 
-If launch and landing occur at the same height, the shortcuts for range, maximum height, and total flight time on level ground are:
+If launch and landing occur at the same height, you can shortcut formulas. The shortcuts for range, maximum height, and total flight time on level ground are:
 
 $$
 R = \frac{v_0^2 \sin(2\theta)}{g},

@@ -34,6 +34,18 @@ Victory also left Britain with debt and the cost of managing an enlarged empire.
 The war strengthened Britain's empire but weakened its relationship with the colonies. New revenue demands and frontier controls disrupted expectations built during decades of local autonomy.
 :::
 
+### Why winning the war created a governing problem
+
+Before 1763, the presence of French power gave many British colonists a reason to value imperial military protection. France's defeat removed much of that immediate threat. At the same time, Britain gained territory whose defense required soldiers, diplomacy, and money. The same victory could therefore reduce colonists' sense of dependence while increasing Britain's demands on them.
+
+Western land also attracted competing interests. Settlers wanted farms, speculators wanted rising land values, colonial governments wanted jurisdiction, and Native nations wanted to defend their territory. The Proclamation Line was an attempt to manage these pressures, not a permanent recognition that Native sovereignty would never be challenged. Its weak enforcement nevertheless did not prevent resentment among colonists who considered western access a reward for victory.
+
+British troops remaining in North America could appear to imperial officials as a defensive necessity. To critics, they looked like an expensive standing army that might enforce unpopular policies. The dispute was therefore about political trust as well as the amount of money owed.
+
+:::key{name="Different expectations"}
+Britain expected greater colonial contributions after an expensive victory. Colonists expected recognition of their service, western opportunity, and continued local control. The conflict sharpened because each side considered its own expectations reasonable.
+:::
+
 ---
 
 ## From protest to independence
@@ -55,6 +67,22 @@ The **Sons of Liberty**, colonial newspapers, and **committees of correspondence
 
 The **Boston Massacre** in 1770 became a powerful propaganda symbol. The **Boston Tea Party** in 1773 and Britain's response made compromise harder.
 
+### Resistance as a political and economic movement
+
+The **Stamp Act Congress** brought delegates from several colonies together to coordinate arguments against taxation. Boycotts then applied economic pressure to British merchants, who had reasons to lobby for repeal. Colonial resistance could succeed when it made imperial policy costly for influential people in Britain, not only when protesters convinced Parliament on constitutional principle.
+
+Nonimportation also created a test of loyalty within colonial communities. Merchants who continued importing could face public criticism, while consumers were encouraged to forgo British goods. Women who organized household consumption and produced cloth played a political role even though they did not vote in colonial assemblies. The boundary between private household work and public protest became less clear.
+
+Protest was not always peaceful or universally supported. Crowds threatened officials and destroyed property, while some colonists feared that resistance would destabilize social order. Wealthy critics of Parliament could support constitutional protest yet worry about popular movements they could not fully control.
+
+The Tea Act illustrates why the conflict cannot be reduced to high prices. The measure could make legally imported tea cheaper, but accepting it still meant accepting a parliamentary tax and a privileged commercial arrangement. The Tea Party targeted a claim of authority as much as a consumer expense.
+
+Britain intended the Coercive Acts to isolate Massachusetts and restore obedience. Instead, many other colonists feared that the same treatment could be used against them. Punishing one colony encouraged broader solidarity, a result opposite to the policy's intended effect.
+
+:::warning
+Distinguish an event's purpose from its outcome. A law meant to restore order can widen resistance, and a commercial concession can intensify a constitutional dispute.
+:::
+
 ### The decision to separate
 
 Fighting began at **Lexington and Concord** in April 1775, but independence was not yet a universal goal. The **Olive Branch Petition** still sought reconciliation. Thomas Paine's **Common Sense** in 1776 attacked monarchy and made separation seem both reasonable and necessary.
@@ -65,6 +93,16 @@ The **Declaration of Independence** justified separation through natural rights,
 Do not assume everyone who opposed a tax supported independence. Positions changed as violence escalated, reconciliation failed, and the costs of remaining in the empire became clearer.
 :::
 
+### Natural rights and the meaning of consent
+
+Enlightenment arguments held that government existed to secure rights rather than simply reflect a monarch's inherited entitlement. If a government repeatedly violated that purpose, its people could claim a right to alter or replace it. The Declaration applied this reasoning to separation from Britain and presented the colonies' grievances to an international audience.
+
+The language was universal, but the political community imagined by many revolutionary leaders was limited. Enslaved people, women, and Native nations could use the same language to expose contradictions that white male leaders did not resolve. The significance of revolutionary ideas lies partly in the claims they made available to people excluded from immediate power.
+
+Paine made republican arguments accessible to a broad audience by attacking hereditary monarchy directly. This shifted the debate from whether a particular king had behaved badly to whether monarchy itself made sense. Independence became easier to imagine when political loyalty no longer depended on the hope of finding a better monarch.
+
+The Declaration also served practical diplomatic purposes. Foreign powers could more readily ally with a state claiming independence than with colonists merely demanding changes in British policy. Ideology and international strategy therefore worked together.
+
 ---
 
 ## The Revolutionary War
@@ -74,6 +112,22 @@ Britain possessed a powerful navy, an experienced army, and substantial resource
 **George Washington** kept the Continental Army together despite shortages and defeats. Victory did not require winning every battle; the army had to survive long enough to make British control too costly.
 
 The American victory at **Saratoga** in 1777 helped secure a formal alliance with France. French money, troops, and naval power were decisive. At **Yorktown** in 1781, American and French forces trapped Cornwallis while the French fleet blocked escape by sea. The **Treaty of Paris of 1783** recognized independence and U.S. territory extending to the Mississippi River.
+
+### How the Patriots sustained resistance
+
+The Continental Congress struggled to finance the war because it lacked a reliable tax base. Paper currency lost value, supplies were uneven, and soldiers experienced shortages and delayed pay. State governments, local communities, foreign loans, and military requisitions all contributed, but none provided an easy solution. The fiscal problems of the war later strengthened arguments for a national government capable of raising revenue.
+
+British strategy required controlling people as well as occupying cities. Capturing New York or Philadelphia did not automatically eliminate patriot governments, local militias, or supply networks. Fighting could continue outside major urban centers, making a quick political victory difficult.
+
+In the South, the British hoped Loyalist support would help restore control. The campaign instead became a violent struggle involving regular armies, militias, and local rivalries. Patriot forces could wear down British strength even when they suffered battlefield defeats, because Britain had to replace men and supplies across the Atlantic.
+
+French assistance changed this balance. Britain faced a wider international war and had to defend interests beyond North America. The Yorktown campaign combined land forces with naval power at a moment when British reinforcement or evacuation became impossible. The victory is best explained through that coordination rather than through a single general's brilliance.
+
+### Freedom as a wartime choice
+
+Lord Dunmore's 1775 proclamation offered freedom to certain enslaved people belonging to rebels who joined British forces. It did not abolish slavery throughout British America. Nevertheless, it created a real opening for people seeking escape and increased white southern fears that Britain threatened the slave system.
+
+Other Black people served the Patriot side, seeking freedom, pay, or recognition. Choices depended on location, military access, family needs, and the promises available. Patriot and British definitions of liberty were less important to someone escaping slavery than the practical question of which route offered a better chance of freedom.
 
 ### A divided population
 
@@ -103,6 +157,22 @@ Religious disestablishment also advanced. Virginia's **Statute for Religious Fre
 The Revolution changed the source of political authority and opened new arguments about rights. It did not eliminate slavery, Native dispossession, or the exclusion of women from formal political power.
 :::
 
+### State constitutions and competing definitions of republicanism
+
+The states became laboratories for republican government. Written constitutions defined institutions and, in some cases, declarations of rights. Distrust of executive power encouraged strong legislatures, but experience also raised fears that legislatures could act impulsively or violate property rights.
+
+Republican government did not necessarily mean direct democracy. Some leaders believed elected representatives should be insulated from popular pressure so they could exercise independent judgment. Others wanted frequent elections and broad participation to prevent officeholders from becoming a new aristocracy. These disagreements later reappeared in the ratification debate.
+
+Gradual emancipation in the North illustrates both change and limitation. Laws often freed children born after a specified date only after lengthy terms of service. Slavery therefore persisted for years after a state adopted an emancipation measure. Economic interests and racial prejudice shaped how quickly revolutionary principles changed legal status.
+
+Women participated in boycotts, fundraising, and wartime production, but marriage law continued to restrict many married women's independent legal and economic rights. Republican motherhood expanded the public significance attached to women's education while usually defining that significance through service to husbands, sons, and the republic.
+
+For Native nations, American independence often meant a stronger settler state seeking western land. A revolution against imperial rule could therefore become the foundation for another system of expansion. The same event had different meanings depending on whose sovereignty or freedom was at stake.
+
+:::key{name="Measuring revolutionary change"}
+Compare political authority, legal rights, and everyday conditions separately. The replacement of monarchy was a major political change even where property relations, gender hierarchy, or racial exclusion continued.
+:::
+
 ---
 
 ## The Articles of Confederation
@@ -119,6 +189,16 @@ The Confederation nevertheless established important western policies:
 These measures encouraged expansion, but they treated Native lands as territory available for U.S. settlement.
 
 **Shays' Rebellion** in 1786–1787 grew from debt, taxation, and foreclosure pressures in Massachusetts. Its suppression did not prove the country had collapsed, but the uprising strengthened arguments that the central government needed more capacity to maintain stability.
+
+### Credit, commerce, and competing interests under the Articles
+
+Without direct taxation, Congress depended on state contributions that often arrived late or not at all. This made it difficult to repay wartime debts or sustain military commitments. Creditors worried about repayment, while taxpayers and indebted farmers resisted policies that demanded scarce money during a difficult postwar adjustment.
+
+Interstate commerce created another problem. States could pursue policies benefiting their own merchants even when those policies disadvantaged neighbors. The central government lacked sufficient authority to create a consistent national commercial policy. Foreign powers could exploit this weakness when negotiating access to markets or territory.
+
+Britain retained forts in the Northwest after the peace treaty, while Spain controlled access to the lower Mississippi. These problems showed that winning formal recognition did not guarantee the ability to enforce every treaty provision or obtain favorable trade terms. Diplomatic independence required institutions capable of supporting it.
+
+Shays' Rebellion brought these economic pressures into view. Farmers who faced foreclosure or imprisonment for debt attempted to stop courts from operating. To supporters, they were resisting an unjust distribution of the war's financial burden. To many property owners, they threatened lawful government. The event's importance comes from the competing interpretations it encouraged, not simply from the presence of disorder.
 
 ---
 
@@ -143,6 +223,22 @@ The Three-Fifths Compromise increased slaveholding states' political power witho
 The Constitution did not abolish slavery or automatically end the international slave trade in 1808. It permitted Congress to prohibit that trade beginning in 1808; Congress then passed legislation to do so.
 :::
 
+### Representation, power, and compromise
+
+The **Virginia Plan** favored representation based substantially on population, benefiting large states. The **New Jersey Plan** defended equal state representation. The Great Compromise created a legislature combining both principles, making it possible for states with different sizes and interests to support the same constitutional framework.
+
+The presidency supplied the independent executive missing under the Articles. A separate judiciary offered a national institution for resolving legal disputes. At the same time, impeachment, vetoes, appointments, and divided legislative authority were designed to prevent any one institution from controlling the whole system.
+
+The Constitution's compromises over slavery were central political choices. Counting enslaved people for representation increased the influence of slaveholders, although the people being counted could not vote. The fugitive-slave provision required cooperation across state lines, making slavery a national constitutional issue even where local emancipation was underway.
+
+**Federalist No. 10**, written by Madison, argued that a large republic could make it harder for a single faction to dominate. A broad range of interests would complicate the formation of an oppressive majority. Anti-Federalists countered that a distant government might become unaccountable and that officials would be more responsive in smaller political communities.
+
+The **Bill of Rights** protected freedoms such as speech and religion, established procedural protections, and reserved undelegated powers. Initially, these amendments limited the federal government rather than applying the same restrictions to every state. Their application to state action expanded much later, especially through the Fourteenth Amendment.
+
+:::note
+Federalists in the ratification debate and the later Federalist Party overlapped but were not identical categories. Support for adopting the Constitution did not permanently determine every person's position in the party conflicts of the 1790s.
+:::
+
 ---
 
 ## The first party system and foreign affairs
@@ -160,6 +256,16 @@ The Constitution did not abolish slavery or automatically end the international 
 
 The **Whiskey Rebellion** in 1794 tested federal taxation. Washington mobilized troops to enforce the law, contrasting the new government's capacity with the Confederation's weakness.
 
+### Why the bank produced a constitutional dispute
+
+Hamilton argued that Congress could use powers reasonably connected to its stated responsibilities. A bank could collect revenue, manage public funds, and support borrowing, making it a legitimate instrument of national fiscal policy. This was a **broad construction** of federal power, relying on implied powers and the necessary and proper clause.
+
+Jefferson argued that the Constitution had not specifically authorized a national bank and that such an institution risked concentrating political and financial power. His **strict construction** emphasized limiting the federal government to delegated authority. The disagreement concerned both constitutional interpretation and the kind of economy the government should promote.
+
+Assuming state debts tied creditors to the national government's success. A creditor expecting repayment from the United States had an interest in a stable federal revenue system. Hamilton's program therefore built political support for the new government through economic relationships, not merely through abstract appeals to unity.
+
+The Whiskey Rebellion exposed the unequal local effects of national policy. Farmers who transported grain as whiskey could find an excise tax particularly burdensome. The government's response demonstrated that resistance to taxation would be treated differently when the tax came from an elected American government. Revolution had legitimized resistance to one authority without creating a general right to refuse every unpopular law.
+
 ### Neutrality and civil liberties
 
 Washington sought neutrality in European war. **Jay's Treaty** eased tensions with Britain but angered critics who thought it conceded too much. **Pinckney's Treaty** with Spain secured navigation of the Mississippi and access to New Orleans. The **Treaty of Greenville**, following the Battle of Fallen Timbers, forced major Native land cessions in the Ohio region.
@@ -167,6 +273,16 @@ Washington sought neutrality in European war. **Jay's Treaty** eased tensions wi
 Under John Adams, the **XYZ Affair** increased hostility toward France and contributed to an undeclared naval conflict. The **Alien and Sedition Acts** restricted immigrants and punished some criticism of the government. The **Virginia and Kentucky Resolutions** challenged these laws and advanced arguments about state resistance to unconstitutional federal action.
 
 Jefferson's victory in **1800** led to a peaceful transfer of power between parties. The election demonstrated the durability of the constitutional system despite fierce disagreement.
+
+### Revolution abroad and opposition at home
+
+The French Revolution divided Americans because it seemed both to extend republican ideals and to threaten social order through violence. Democratic-Republicans often emphasized its attack on monarchy, while Federalists pointed to instability and the dangers of radical politics. Foreign events sharpened domestic disagreement about what the American Revolution itself should mean.
+
+Washington's Farewell Address warned against intense party divisions and permanent foreign entanglements. Yet parties developed because citizens disagreed over real questions of power, money, and diplomacy. They were not simply the result of leaders ignoring advice to cooperate.
+
+The Sedition Act targeted opposition publications and encouraged debate about whether criticism was a threat to government or a necessary safeguard against abuse. The Virginia and Kentucky Resolutions offered a state-based response, but other states did not accept their strongest claims. The controversy left unresolved how constitutional violations should be challenged when the branches of the federal government disagreed with critics.
+
+The election of 1800 tested that uncertainty in practice. A tie between Jefferson and Aaron Burr sent the decision to the House of Representatives. The eventual transition to Jefferson showed that partisan defeat could occur without overthrowing the constitutional order. It also exposed defects in the original electoral process that the Twelfth Amendment later addressed.
 
 ---
 

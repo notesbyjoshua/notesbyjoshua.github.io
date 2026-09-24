@@ -32,6 +32,26 @@ The growth of the **Sun Belt** strengthened conservative politics. Migration, de
 Conservatism after 1980 combined economic arguments about markets with social arguments about values and political arguments about national strength. Explaining only tax policy leaves out much of the coalition.
 :::
 
+### How the conservative coalition came together
+
+Conservative growth drew strength from several forms of dissatisfaction that were not identical. Business leaders objected to taxes, regulation, and organized labor. Some suburban homeowners feared rising taxes and changes in neighborhood or school policy. Religious activists opposed abortion and challenged secular trends in public life. Anticommunists criticized détente and argued that military strength had declined.
+
+Organizations such as the **Moral Majority** helped turn religious concerns into voter registration and electoral participation. Think tanks developed policy proposals, while donors and campaign organizations supported candidates. The coalition's success depended on this institutional work, not only on Reagan's communication skills or Carter's unpopularity.
+
+The 1978 passage of **Proposition 13** in California, which restricted property taxation, illustrated the strength of the tax revolt. Homeowners could see themselves as defending family budgets, while critics warned that reduced revenue would constrain public services. The debate connected individual financial pressures to competing views of what government should provide.
+
+### Continuity with earlier periods
+
+Reagan's rise did not erase the New Deal or Great Society. Many voters who supported lower taxes also valued retirement benefits, infrastructure, or defense spending. Politicians therefore faced pressure to criticize government broadly while protecting programs their supporters used.
+
+Some policies associated with the conservative era had begun earlier. Deregulation of transportation industries developed under Carter, and the Federal Reserve's campaign against inflation began before Reagan entered office. Recognizing these continuities prevents a presidential election from becoming an artificial dividing line at which every policy suddenly changes.
+
+Race remained part of political realignment, but it interacted with religion, geography, and economic interests. White southern movement toward the Republican Party occurred over decades and differed between presidential, congressional, and state elections. A careful explanation treats realignment as a process rather than assuming an entire region changed parties in one year.
+
+:::key{name="Coalition politics"}
+Groups can support the same candidate for different reasons. A durable coalition requires enough shared priorities to hold together, even when its members disagree over particular programs or the meaning of limited government.
+:::
+
 ---
 
 ## Reagan's economic and domestic policies
@@ -55,6 +75,22 @@ Economic growth did not benefit everyone equally. Manufacturing communities face
 Do not attribute falling inflation entirely to Reagan's tax cuts. Federal Reserve policy, recession, and changing economic conditions were central to disinflation.
 :::
 
+### Monetary policy, fiscal policy, and economic outcomes
+
+**Monetary policy** concerns the money and credit conditions influenced by the Federal Reserve. Raising interest rates can reduce borrowing and spending, slowing inflation but also weakening employment. **Fiscal policy** concerns government taxation and spending. Reagan's tax and budget choices and Volcker's monetary policy were therefore different instruments, even when they operated during the same years.
+
+The early-1980s recession imposed severe costs on manufacturing workers, farmers, and borrowers. As inflation declined and growth resumed, supporters credited market-oriented policy, while critics emphasized the unequal recovery and rising debt. Explaining the economy requires separating the timing of recession, disinflation, and expansion rather than treating the decade as uniformly prosperous.
+
+A **budget deficit** occurs when annual federal spending exceeds annual revenue; the **national debt** accumulates from borrowing over time. Defense increases, tax policy, economic conditions, and existing program commitments all affected federal finances. The persistence of deficits illustrates the difficulty of combining tax reductions, military expansion, and protection of politically popular benefits.
+
+### The changing balance between labor and employers
+
+Reagan's dismissal of striking **PATCO** air traffic controllers in 1981 signaled a tougher federal attitude toward organized labor. The strike involved public employees prohibited from striking, but the outcome also carried symbolic weight in private industry. Employers increasingly understood that aggressive resistance to unions might be politically acceptable.
+
+Union decline had several causes beyond one confrontation. Manufacturing employment shrank in many regions, new jobs often appeared in less unionized sectors, companies moved production, and organizing faced legal and managerial resistance. Reduced union strength could weaken workers' ability to bargain over wages and benefits even when overall productivity increased.
+
+Economic inequality also reflected changes in education premiums, executive compensation, taxation, financial markets, and ownership of assets. No single policy explains every income trend. A useful account distinguishes forces affecting wages from forces increasing the value of property and investments.
+
 ### Social policy and cultural conflict
 
 Conservatives challenged abortion rights, affirmative action, and some forms of federal intervention in education and social policy. Religious conservatives sought a larger public role for traditional Christian values, while opponents defended church-state separation and expanded individual rights.
@@ -62,6 +98,16 @@ Conservatives challenged abortion rights, affirmative action, and some forms of 
 The **War on Drugs** and tougher sentencing policies contributed to expanding incarceration, with especially severe effects on Black and Latino communities. Support for punitive criminal justice policies crossed party lines.
 
 The **AIDS crisis** exposed stigma toward gay men and other affected groups, as well as shortcomings in public-health responses. Activists organized for treatment, research, public education, and recognition of people living with AIDS.
+
+### Courts, federalism, and the culture wars
+
+Conservatives increasingly treated judicial appointments as a way to shape policy over decades. Disputes about constitutional interpretation affected abortion, affirmative action, religion, criminal justice, and the boundaries of federal authority. Court politics connected election results to decisions that could outlast a president's term.
+
+Arguments for **federalism** often called for transferring responsibility from Washington to states. Supporters said local governments could respond more effectively to local needs; critics warned that resources and protections would vary depending on where a person lived. The historical comparison with earlier states' rights disputes is useful, but the specific policy and affected population still need to be identified.
+
+Debates over family structure and sexuality also reflected changes in paid work, divorce, women's independence, and public visibility for gay and lesbian people. Conservative activists defended traditional norms, while rights movements challenged the assumption that those norms should determine legal equality. Culture wars concerned access to institutions and state power as well as private belief.
+
+AIDS activism exposed a different dimension of citizenship: whether stigmatized communities could compel public institutions to respond to a health emergency. Activists used public protest, scientific engagement, and political pressure to demand faster research and treatment. Their work linked cultural recognition to material questions of survival and access to care.
 
 ---
 
@@ -82,6 +128,20 @@ The Cold War ended through Soviet internal problems, reform decisions, popular m
 :::
 
 The United States emerged as the dominant global military power, but the disappearance of its main rival did not remove regional conflict or produce agreement about when it should intervene.
+
+### Why Soviet reform destabilized the system
+
+Gorbachev sought to improve a struggling Soviet system, not simply to abolish it. Greater openness allowed criticism of official failures, while restructuring disrupted established practices without quickly producing a stable alternative. National movements within the Soviet Union and Eastern Europe pressed demands that went beyond the reforms leaders initially intended.
+
+The Soviet decision not to use overwhelming force to preserve every Eastern European communist government was crucial. Popular protests and political organizing could achieve outcomes that earlier interventions had blocked. Leaders and citizens in these countries were active participants, not merely beneficiaries of decisions made in Washington.
+
+Reagan's later willingness to negotiate also matters. His administration combined earlier pressure with agreements that reduced some nuclear weapons and recognized opportunities created by Gorbachev's policies. Describing the period only as confrontation misses the diplomacy that accompanied the rivalry's end.
+
+### Victory without a settled replacement
+
+The Soviet collapse removed the organizing opponent around which decades of U.S. strategy had been built. Some expected a **peace dividend**, with resources redirected from defense to domestic priorities. Others argued that U.S. power was needed to manage regional threats, protect trade, and prevent humanitarian disasters.
+
+The 1991 Gulf War seemed to demonstrate the effectiveness of a broad coalition with a limited objective. Later interventions were harder to evaluate because political goals could be less clear and local institutions weaker. Military superiority answered the question of whether the United States could defeat many opposing forces, but not necessarily whether it could create an accepted political order afterward.
 
 ---
 
@@ -105,6 +165,16 @@ The 1991 Gulf War and the 2003 Iraq War were separate conflicts with different i
 
 The long wars revealed limits to military power: overthrowing a government did not ensure a stable political settlement. The final U.S. withdrawal from Afghanistan in 2021 and the Taliban's return to power underscored those limits. The [Defense Department's contemporary account](https://www.army.mil/article/249864/military_phase_of_evacuation_ends_as_does_americas_longest_war) describes the final withdrawal and evacuation.
 
+### Security, civil liberties, and the scope of war
+
+After September 11, policymakers sought to prevent attacks by acting before threats materialized. This raised difficult questions about intelligence, evidence, detention, and the extent of executive discretion. Policies justified as temporary emergency measures could become lasting features of national security institutions.
+
+The conflict was also difficult to define geographically. Al-Qaeda was a transnational organization rather than a conventional state with one capital to capture. Targeting its networks involved military operations, intelligence, financial controls, policing, and cooperation with other governments. Calling all of these activities a war could broaden presidential claims of authority beyond a traditional battlefield.
+
+The Iraq War intensified debate over **preventive war**, in which force is used against a threat expected to become more dangerous in the future. Such a strategy depends heavily on the accuracy of predictions and intelligence. The failure to find the alleged weapons stockpiles damaged public trust and raised questions about how evidence had been evaluated and presented.
+
+Long occupations also exposed the difference between removing a regime and establishing legitimate government. Local political divisions, insurgency, corruption, and civilian harm could undermine support for U.S.-backed institutions. The historical lesson concerns the limits of translating military power into durable political outcomes, not a claim that every intervention has the same causes or results.
+
 ---
 
 ## Globalization and technological change
@@ -127,6 +197,24 @@ The internet changed news, commerce, organizing, and social relationships. Later
 :::note
 “Service jobs” include both highly paid professional work and low-paid retail or care work. A shift toward services does not by itself show whether living standards improved for a particular group.
 :::
+
+### Winners, losses, and regional differences in globalization
+
+Lower trade barriers could benefit consumers through lower prices and help exporters reach new customers. They could also expose workers in import-competing industries to job loss or wage pressure. The gains and costs were distributed unevenly, so aggregate economic growth did not guarantee that a particular town or household benefited.
+
+**Deindustrialization** does not necessarily mean that the country stopped producing manufactured goods. Productivity improvements and automation could allow substantial output with fewer workers. At the same time, moving production abroad could eliminate jobs in specific locations. Distinguishing employment from output avoids a common misunderstanding of industrial decline.
+
+The **Rust Belt** became a label for older industrial areas experiencing plant closures and population loss. Declining employment affected local tax revenue, schools, businesses, and property values. Economic change therefore reshaped civic institutions and political expectations, not only individual paychecks.
+
+Technology-oriented metropolitan areas could attract investment and skilled workers while also facing housing costs and inequality. The divide between prosperous and struggling places was not simply North versus South. Differences within regions, between cities and rural areas, and among workers with different resources became increasingly important.
+
+### Information as an economic and political resource
+
+Digital networks lowered the cost of storing and distributing information. Firms reorganized work across borders, consumers gained access to online markets, and individuals could publish without owning a newspaper or television station. These changes widened participation while giving large technology firms substantial influence over communication.
+
+The **digital divide** included access to devices, reliable connections, and the skills needed to use them. Schools, workplaces, and public services increasingly assumed that people could operate online, making unequal access more consequential. Technology could expand opportunity and create new barriers at the same time.
+
+Political movements used digital tools to raise money and organize, but the speed of communication could also amplify false claims before they were checked. This altered older disputes about media, persuasion, and public trust without eliminating the need to evaluate sources and evidence.
 
 ---
 
@@ -160,6 +248,20 @@ Federal responses included emergency financial support, Federal Reserve action, 
 
 :::key{name="A recurring debate"}
 Since 1980, Americans have repeatedly disagreed over whether government intervention protects opportunity or obstructs it. Banking crises, health care, taxes, and environmental policy bring different versions of that dispute into focus.
+:::
+
+### Housing, finance, and the spread of the 2008 crisis
+
+Mortgage lending became connected to complex financial products sold to investors. Combining loans into securities could appear to spread risk, but it also made institutions dependent on assumptions about housing prices and repayment. When prices fell and defaults increased, investors became uncertain about which institutions held losses and how large those losses were.
+
+Financial firms used borrowed money, or **leverage**, to expand returns. Leverage also magnified losses when asset values declined. Because institutions owed money to one another and depended on short-term funding, trouble at one firm could threaten others. The crisis therefore spread beyond the households that originally missed mortgage payments.
+
+Emergency support for financial institutions provoked anger from people losing homes or jobs. Supporters argued that allowing the financial system to collapse would worsen the damage to everyone; critics questioned fairness, accountability, and the incentives created by rescue. The debate revived a recurring American question about whether government was protecting the public or powerful private interests.
+
+Responses came from different directions. The Tea Party criticized federal spending and intervention, while **Occupy Wall Street** emphasized inequality and the political influence of finance. Shared dissatisfaction did not yield a shared diagnosis or policy program.
+
+:::key{name="Comparing economic crises"}
+The Great Depression and Great Recession both involved financial instability, falling demand, and debates over federal action. Their scale, institutions, and policy responses differed. Comparison is most useful when it identifies a mechanism rather than treating one crisis as an exact repetition of the other.
 :::
 
 ### Rights and political conflict in the twenty-first century

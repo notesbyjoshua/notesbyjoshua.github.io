@@ -113,6 +113,16 @@ https://notesbyjoshua.github.io/notes/math/geometry/radical-axes-and-inversion/
 https://notesbyjoshua.github.io/notes/math/geometry/solid-geometry/
 https://notesbyjoshua.github.io/notes/math/geometry/triangle-centers-and-concurrency/
 https://notesbyjoshua.github.io/notes/math/geometry/triangles/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/algebra-of-linear-algebra/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/algebra-of-rn/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/functions/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/geometry-of-rn/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/linear-of-linear-algebra/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/putting-it-all-together/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/sets/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/structure-of-rn/
+https://notesbyjoshua.github.io/notes/math/linear-algebra/the-size-of-sets/
 https://notesbyjoshua.github.io/notes/math/multivariable-calculus/differential-multivariable-functions/
 https://notesbyjoshua.github.io/notes/math/multivariable-calculus/geometry-of-curves/
 https://notesbyjoshua.github.io/notes/math/multivariable-calculus/line-and-surface-integrals/

@@ -529,6 +529,51 @@
         ]
       },
       {
+        "label": "Linear Algebra",
+        "items": [
+          {
+            "label": "Linear Algebra Home",
+            "link": "/notes/math/linear-algebra/"
+          },
+          {
+            "label": "Unit 1: Sets",
+            "link": "/notes/math/linear-algebra/sets/"
+          },
+          {
+            "label": "Unit 2: Functions",
+            "link": "/notes/math/linear-algebra/functions/"
+          },
+          {
+            "label": "Unit 3: The Size of Sets",
+            "link": "/notes/math/linear-algebra/the-size-of-sets/"
+          },
+          {
+            "label": "Unit 4: The Geometry of R^n",
+            "link": "/notes/math/linear-algebra/geometry-of-rn/"
+          },
+          {
+            "label": "Unit 5: The Algebra of R^n",
+            "link": "/notes/math/linear-algebra/algebra-of-rn/"
+          },
+          {
+            "label": "Unit 6: The Structure of R^n",
+            "link": "/notes/math/linear-algebra/structure-of-rn/"
+          },
+          {
+            "label": "Unit 7: Act I — The Algebra of Linear Algebra",
+            "link": "/notes/math/linear-algebra/algebra-of-linear-algebra/"
+          },
+          {
+            "label": "Unit 8: Act II — The Linear of Linear Algebra",
+            "link": "/notes/math/linear-algebra/linear-of-linear-algebra/"
+          },
+          {
+            "label": "Unit 9: Act III — Putting It All Together",
+            "link": "/notes/math/linear-algebra/putting-it-all-together/"
+          }
+        ]
+      },
+      {
         "label": "Multivariable Calculus",
         "items": [
           {

@@ -140,6 +140,7 @@ const editHref = isNote && filePath ? `/admin/edit?path=${encodeURIComponent(`as
   if (meta) {
     const content = document.querySelector('.sl-markdown-content');
     const readingContent = content?.cloneNode(true) as HTMLElement | undefined;
+    readingContent?.querySelectorAll('.problem-box, [data-problem], [data-frq], [data-solution]').forEach((el) => el.remove());
     const headingLevel = (el: Element) => Number(el.tagName.slice(1));
     const isHeading = (el: Element | null): el is HTMLHeadingElement =>
       !!el && /^H[1-6]$/.test(el.tagName);
@@ -149,7 +150,7 @@ const editHref = isNote && filePath ? `/admin/edit?path=${encodeURIComponent(`as
         .replace(/\s+/g, ' ')
         .trim()
         .toLowerCase();
-      return /^(practice( problems?)?|problems?|solutions?|answer key)$/.test(text);
+      return /^(mcq|frq|practice( problems?)?|problems?|solutions?|answer key)$/.test(text);
     };
     readingContent?.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((heading) => {
       if (!isPracticeHeading(heading)) return;

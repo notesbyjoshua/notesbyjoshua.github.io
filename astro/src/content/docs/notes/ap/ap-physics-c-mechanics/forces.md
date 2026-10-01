@@ -25,15 +25,19 @@ sidebar:
 
 ---
 
-## Newton's Three Laws of Motion
+## The Basics of Forces
 
-In 1687, Newton formulated the three laws of motion. They work extremely well for ordinary macroscopic objects moving much slower than the speed of light. At quantum, relativistic, or very strong-gravity scales, Newtonian mechanics must be replaced or extended by quantum mechanics, but for AP purposes, Newtonian mechanics suffices.
+What is a force? A force is a push or pull done by or on an object. Forces act like vectors. When a force is applied through contact, it is known as a contact force (e.g. friction, normal force) and when a force is applied with no contact, it is called a non-contact force (e.g. gravity, E&M force). Forces are commonly denoted with $$\vec F$$ and have units of Newtons ($$N$$)
+
+### Newton's Three Laws of Motion
+
+In 1687, Newton formulated the three laws of motion. They work extremely well for ordinary macroscopic objects moving much slower than the speed of light. At quantum, relativistic, or very strong-gravity scales, Newtonian mechanics must be replaced or extended, but for AP purposes, Newtonian mechanics suffices.
 
 <div class="theorem-box">
 
 **Theorem (Newton's Three Laws).**
 
-1. **First Law**: An object has constant velocity unless acted on by a nonzero net external force. If $$\sum \vec{F} = 0$$, then $$\vec{a} = 0$$.
+1. **First Law**: An object has constant velocity unless acted on by a nonzero net external force. If $$\sum \vec{F} = 0$$, then $$\vec{a} = 0$$ (the converse is true as well).
 2. **Second Law**: The net external force equals mass times acceleration, $$\sum \vec{F} = m\vec{a}$$.
 3. **Third Law**: If object $$A$$ exerts a force on object $$B$$, then object $$B$$ exerts an equal-magnitude, opposite-direction force on object $$A$$, $$\vec{F}_{A\text{ on }B} = -\vec{F}_{B\text{ on }A}$$.
 
@@ -41,11 +45,9 @@ In 1687, Newton formulated the three laws of motion. They work extremely well fo
 
 Third-law forces act on different objects, so they never cancel for one object. They can cancel only when you treat both interacting objects as one system and the force pair becomes internal.
 
----
+### Free-body diagrams
 
-## Free-body diagrams
-
-A **free-body diagram** is a force diagram for one object or one chosen system. It should show only external forces acting on that object/system, not forces the object applies to something else. Forces are treated as vectors and can be composed accordingly.
+A **free-body diagram** is a force diagram for one object or one chosen system. It is the MOST important thing to do when solving force problems. It should show only external forces acting on that object/system, not forces the object applies to something else. Forces are treated as vectors and can be composed accordingly. An example of a free-body diagram is shown below:
 
 ```tikz
 \usepackage{tikz}
@@ -59,14 +61,14 @@ A **free-body diagram** is a force diagram for one object or one chosen system. 
 \end{tikzpicture}
 ```
 
-Good procedure:
-
+:::strategy
 1. Choose the object or system.
 2. Draw a dot or simple sketch.
 3. Add one arrow for each external force (make sure to draw where the force originates from).
 4. Choose axes, usually one axis parallel to the expected acceleration or along a surface.
 5. Resolve angled forces into components using vector decomposition.
 6. Write Newton's second law separately for each direction.
+:::
 
 For a particle in two dimensions, you should split up force into components using vector decomposition like for velocity:
 
@@ -75,6 +77,16 @@ $$
 $$
 
 If acceleration is zero in one direction, the net force in that direction is zero even if forces are present (basically they cancel out each other).
+
+### Inertial and non-inertial frames
+
+Newton's laws have their simplest form in an **inertial frame**, a frame that is not accelerating. However, in an accelerating frame (e.g. a moving train), you may introduce a **pseudo-force** so Newton's second law appears to work inside that frame. Just like how you deal with relative velocity or acceleration,  for a frame accelerating with $$\vec{a}_{\text{frame}}$$, the pseudo-force on a mass $$m$$ is
+
+$$
+\vec{F}_{\text{pseudo}} = -m\vec{a}_{\text{frame}}.
+$$
+
+Pseudo-forces are not interaction forces and do not have third-law partners (since they don't actually exist!). Think of it like this: if a bus suddenly accelerates forward, you feel thrown backward, but no mysterious object pushed you backward. Your body was trying to keep its original velocity while the bus floor moved forward underneath you.
 
 ---
 
@@ -111,6 +123,25 @@ Always get $$F_N$$ from the perpendicular equation, never by assumption, because
 ### Tension
 
 **Tension** is a pulling force transmitted by a rope, string, or cable. In an ideal world, strings are massless and inextensible, and pulleys are massless and frictionless. Under those assumptions, the tension is the same throughout a continuous string. Tension will always point *away* from an object along the direction of the string. If a string or pulley has mass, or if the pulley has rotational inertia, tension may differ on different sides. Those cases usually belong more naturally with rotational dynamics.
+
+To solve for tension, draw a separate free-body diagram for each attached object and write its force equation. Then connect the accelerations using the rope's fixed length. Equal tension and equal acceleration are different assumptions: a movable pulley can have the same tension in its supporting segments while the rope end moves twice as far as the pulley.
+
+For two masses hanging over a fixed pulley, take both vertical coordinates positive downward. The variable rope lengths satisfy
+
+$$
+y_1+y_2=\text{constant}
+\quad\Longrightarrow\quad v_1+v_2=0
+\quad\Longrightarrow\quad a_1+a_2=0.
+$$
+
+For a movable pulley supported by two vertical segments, let $$y_p$$ be its downward position and $$y_e$$ the downward position of the free end beyond a fixed redirecting pulley. Then
+
+$$
+2y_p+y_e=\text{constant}
+\quad\Longrightarrow\quad 2a_p+a_e=0.
+$$
+
+The free end therefore accelerates with twice the magnitude and opposite sign. Use this relation with the force equations, counting both supporting tensions on the movable pulley. These constraints apply while the rope is taut; a rope cannot push, and a negative calculated tension means the assumed taut-rope motion is impossible.
 
 ### Friction
 
@@ -154,73 +185,29 @@ $$
 \vec{F}_d = c\vec{v}^2
 $$
 
-for high-speed quadratic drag. The model that you should use for a problem will usually be stated.
+for high-speed quadratic drag, as seen in kinematics. The model that you should use for a problem will usually be stated.
 
 Essentially, drag acts like a friction force for falling objects. At some point, the amount of drag pulling up will equal the force of gravity pulling down, allowing an object to go at a constant velocity (terminal velocity). Usually, drag force can never exceed gravity (that's why skydivers don't just go back up after reaching terminal velocity!).
-
-<div class="theorem-box">
-
-**Example.** A $$5.0\ \text{kg}$$ box rests on a horizontal table. A spring pulls it to the right with force $$12\ \text{N}$$, a rope pulls it to the left with tension $$7.0\ \text{N}$$, and kinetic friction has coefficient $$\mu_k=0.20$$. Find the box's acceleration if it is sliding right.
-
-The weight is $$mg=(5.0)(9.8)=49\ \text{N}$$ downward. Since there is no vertical acceleration, the normal force is $$F_N=49\ \text{N}$$ upward. The box slides right, so kinetic friction points left:
-
-$$
-f_k=\mu_kF_N=(0.20)(49)=9.8\ \text{N}.
-$$
-
-The horizontal net force is
-
-$$
-\sum F_x = 12-7.0-9.8=-4.8\ \text{N}.
-$$
-
-Thus
-
-$$
-a_x=\frac{\sum F_x}{m}=\frac{-4.8}{5.0}=-0.96\ \text{m/s}^2.
-$$
-
-The negative sign means the acceleration is leftward, so the object is slowing down while moving right. This one setup uses the main force types: weight, normal force, tension, friction, and spring force.
-
-</div>
-
-<div class="theorem-box">
-
-**Example.** A $$70\ \text{kg}$$ skydiver falls downward through air with linear drag $$F_d=bv$$, where $$b=35\ \text{kg/s}$$. Find the terminal speed.
-
-At terminal speed, acceleration is zero, so the upward drag equals the downward weight:
-
-$$
-bv_t=mg.
-$$
-
-Therefore
-
-$$
-v_t=\frac{mg}{b}=\frac{(70)(9.8)}{35}=19.6\ \text{m/s}.
-$$
-
-This is a force-balance problem, not a kinematics problem: terminal speed comes from $$\sum F=0$$.
-
-</div>
 
 ---
 
 ## Solving Newton's second law problems
 
 :::strategy
-1. Draw a free-body diagram for each object.
-2. Pick axes that simplify the motion.
-3. Write $$\sum F = ma$$ along each axis.
-4. Connect objects with constraints, such as equal accelerations for an ideal string.
-5. Solve algebraically before substituting numbers.
-6. Check the sign and units of the result.
+1. Choose the object or system, then draw its free-body diagram. For acceleration, start with the whole system when its objects share an acceleration. Internal contact forces will cacel.
+2. If relevant, for tension or a contact force, isolate an object or subsystem on which that force is external and match the mass to the chosen system.
+3. Pick axes that simplify the motion (e.g. $$x$$/$$y$$, radial/centripetal, etc.).
+4. Write $$\sum F = ma$$ along each axis. Keep the algebra symbolic until the constraints and signs are settled, then check the units and whether the result agrees with the assumed direction of acceleration. Always include pseudo-forces if necessary.
+5. Connect objects with constraints, such as equal tensions for an ideal string.
+6. Solve algebraically before substituting numbers.
+7. Check the sign and units of the result.
 :::
 
-For multiple-object systems, you can choose either:
-
-- Treat each object separately to find internal forces like tension.
-- Treat several objects as one system to eliminate internal forces.
+:::mistakes
+- Do not assume $$T=mg$$ or $$F_N=mg$$. Other forces and acceleration can change either value.
+- Do not count both a force and its components in the same sum. Components replace the original vector in that equation.
+- Newton's third-law partners act on different objects. They cancel in a combined system only when both objects are included.
+:::
 
 If the question asks only for acceleration of a connected system, the system approach is often faster. If the question asks for tension or contact force, individual free-body diagrams are usually required.
 
@@ -256,6 +243,12 @@ Both routes agree. Notice the system method gave $$a$$ instantly, but the tensio
 
 ## Inclined planes
 
+:::tip
+Always decompose forces along axes perpendicular and parallel to the surface of the incline. Check the gravity components against a horizontal surface: at $$\theta=0$$, the down-slope component $$mg\sin\theta$$ vanishes and the perpendicular component $$mg\cos\theta$$ becomes $$mg$$.
+
+If a bob hangs perpendicular to the ceiling of a car translating along a straight incline, with its ceiling parallel to the incline, tension has no component along the slope. If the bob stays fixed relative to the car, its force equations give the car's downhill acceleration $$a=g\sin\theta$$ and the tension $$T=mg\cos\theta$$.
+:::
+
 For a block on an incline of angle $$\theta$$, it is usually best to choose axes parallel and perpendicular to the plane. The weight decomposes into
 
 $$
@@ -270,7 +263,7 @@ $$
 
 into/perpendicular to the incline.
 
-If there is no acceleration perpendicular to the surface,
+If there is no acceleration perpendicular to the surface and no other force has a perpendicular component,
 
 $$
 F_N = mg\cos\theta.
@@ -334,51 +327,83 @@ The block accelerates down the plane at about $$1.5\ \text{m/s}^2$$. Had $$f_{s,
 
 </div>
 
-### Inclined plane kinematics
+<div class="theorem-box">
 
-Sometimes, you will deal with kinematics on an inclined plane, which will break the projectile motion shortcut rules learned in Unit 1. However, once the acceleration along the plane is known, the motion becomes a one-dimensional kinematics problem along the surface. Choose the down-plane direction as positive if the object is sliding down, then use the Big Five from Unit 1 with $$\Delta x$$ measured **along the incline**, not vertically.
+**Example.** A block of mass $$m$$ slides uphill on an incline of angle $$\theta$$ with kinetic friction coefficient $$\mu_k$$. A rope pulls at angle $$\alpha$$ above the slope. Derive its acceleration in terms of tension $$T$$, assuming it remains in contact, and specialize to a rope parallel to the slope.
 
-For a frictionless incline released from rest,
-
-$$
-a=g\sin\theta.
-$$
-
-If the object travels a distance $$s$$ along the incline, then
+A taut rope pulls along its own length. If it points up the incline, its tension acts entirely parallel to the surface. Taking up the slope as positive, a block sliding upward satisfies
 
 $$
-v^2=2as=2g s\sin\theta.
+T-mg\sin\theta-\mu_kF_N=ma,
+\qquad F_N=mg\cos\theta.
 $$
 
-Since the vertical drop is $$h=s\sin\theta$$, this also gives $$v=\sqrt{2gh}$$.
+If the block slides downward, friction points up the slope instead, so its sign reverses. The acceleration sign still follows your chosen axis, not necessarily the direction of motion.
+
+If the rope makes an angle $$\alpha$$ above the incline, resolve tension too. With no perpendicular acceleration,
+
+$$
+F_N+T\sin\alpha-mg\cos\theta=0,
+$$
+
+so $$F_N=mg\cos\theta-T\sin\alpha$$ while contact is maintained. For upward sliding, the parallel equation becomes
+
+$$
+T\cos\alpha-mg\sin\theta-\mu_kF_N=ma.
+$$
+
+The rope now both pulls the block uphill and reduces the normal force, which also reduces kinetic friction.
+
+Substituting the normal force and dividing by mass gives
+
+$$
+a=\frac{T(\cos\alpha+\mu_k\sin\alpha)}{m}
+-g(\sin\theta+\mu_k\cos\theta).
+$$
+
+For a parallel rope, set $$\alpha=0$$. The contact assumption requires $$mg\cos\theta-T\sin\alpha\ge0$$.
+
+</div>
 
 <div class="theorem-box">
 
-**Example.** A block starts from rest and slides without friction down a $$4.0\ \text{m}$$ incline tilted at $$25^\circ$$. Find the acceleration down the plane and the speed at the bottom.
+**Example.** A rope parallel to a $$30^\circ$$ incline pulls a $$4.0\ \text{kg}$$ block uphill. The block is sliding upward and accelerating uphill at $$1.2\ \text{m/s}^2$$. If $$\mu_k=0.20$$, find the tension.
 
-The acceleration along the surface is
-
-$$
-a=g\sin25^\circ=(9.8)(0.423)=4.15\ \text{m/s}^2.
-$$
-
-Use kinematics along the incline, not vertically:
+The rope has no perpendicular component, so
 
 $$
-v^2=v_0^2+2as=0+2(4.15)(4.0)=33.2,
+F_N=mg\cos30^\circ=33.9\ \text{N}.
 $$
 
-so
+Friction acts downhill because the block slides uphill. Its magnitude is $$f_k=0.20(33.9)=6.79\ \text{N}$$. Taking uphill as positive gives
 
 $$
-v=5.8\ \text{m/s}.
+T-mg\sin30^\circ-f_k=ma.
 $$
 
-The vertical drop shortcut gives the same result because $$h=s\sin25^\circ$$, but the one-dimensional incline method is more flexible when friction is present.
+Therefore,
+
+$$
+T=ma+mg\sin30^\circ+f_k
+=(4.0)(1.2)+19.6+6.79
+=31.2\ \text{N}.
+$$
+
+The tension must overcome both downhill forces and leave a net uphill force of $$ma=4.8\ \text{N}$$.
 
 </div>
 
 ### Friction and the slipping condition
+
+:::tip
+For "will it slip?" questions, calculate the friction required to prevent relative sliding, then compare its magnitude with $$\mu_sF_N$$. If it exceeds that maximum, the assumed no-slip motion is impossible. Once the surfaces slide relative to each other, use $$f_k=\mu_kF_N$$.
+:::
+
+:::mistakes
+- Use $$f_s=\mu_sF_N$$ only at impending slip. Otherwise, static friction adjusts to the required value.
+- Friction opposes relative sliding or the tendency to slide at the contact surface; it need not oppose the object's ground-frame velocity.
+- Recalculate $$F_N$$ when a force pulls away from or pushes into the surface. On a horizontal surface with zero vertical acceleration, an upward pull $$T\sin\theta$$ gives $$F_N=mg-T\sin\theta$$, provided contact is maintained.
+:::
 
 The condition for impending slip (equivalent to when a block starts to move) is
 
@@ -419,6 +444,14 @@ The mass and $$g$$ both cancel, which is why this simple tilt test works regardl
 ---
 
 ## Connected objects and pulleys
+
+:::tip
+For a massless rope passing over ideal massless, frictionless pulleys, tension is the same along each continuous rope. Different ropes can have different tensions. Count every segment pulling directly on your chosen system.
+
+A movable pulley supported by two vertical segments feels an upward force $$2T$$. For a combined load and pulley of mass $$M$$, write $$2T-Mg=Ma_y$$, taking up as positive. Only when $$a_y=0$$ does this give $$T=Mg/2$$.
+
+For a person pulling themselves up in a chair, count the rope's pull on both the chair and the person's hand. If each receives an upward tension $$T$$, the person-plus-chair system satisfies $$2T-Mg=Ma_y$$, where $$M$$ is their total mass.
+:::
 
 For ideal ropes and pulleys, connected objects share related accelerations. A common Atwood machine is a very simple pulley that contains two hanging masses connected by a massless string over a frictionless pulley.
 
@@ -499,6 +532,12 @@ For pulley systems with movable pulleys, the acceleration constraints may involv
 
 ## Apparent weight and elevators
 
+:::mistakes
+- Apparent weightlessness means $$F_N=0$$, even while gravity acts.
+- Use the direction of acceleration to decide whether the scale reading increases or decreases. An elevator traveling upward while slowing down accelerates downward.
+- A negative calculated normal force means ordinary floor contact cannot persist: the floor cannot pull the person downward.
+:::
+
 A scale does not directly measure your weight, it insteads measures the **apparent weight**, which is the normal force applied to the scale. In an elevator (or any condition with nonzero acceleration),
 
 $$
@@ -543,23 +582,17 @@ The person feels lighter. Note the sign of $$a$$ is what matters, not the direct
 
 ## Circular motion
 
-// yo update this to not just repeat what's said in kinematics
-
 ### Uniform circular motion
 
-As you may remember, the centripetal acceleration of an object moving in a circle of radius $$r$$ is:
+Kinematics tells us that an object moving in a circle needs an inward acceleration. Here, the new question is what **real forces** produce that acceleration. At each instant, choose a radial axis pointing toward the center and apply Newton's second law along that axis:
 
 $$
-a_c = \frac{v^2}{r} = \omega^2 r.
+\sum F_{\text{inward}}=ma_c=m\frac{v^2}{r}=m\omega^2r.
 $$
 
-Newton's second law in the radial direction gives us the force equivalent:
+The expression $$mv^2/r$$ is not an additional force to draw on a free-body diagram. It is the required **net** inward force. Draw only forces that come from physical interactions, such as tension, gravity, friction, or a normal force, and then add their radial components.
 
-$$
-\sum F_r = m\frac{v^2}{r}.
-$$
-
-There is no special "centripetal force." The phrase describes the net inward force required for circular motion. All forces acting on an object going in uniform circular motion must add up to the centripetal force (as long as the force does not act perpendicular to the vector connecting the object and the center of the circle).
+Because the inward direction changes as the object moves, the signs of individual forces depend on the object's location. A force pointing toward the center contributes positively to $$\sum F_{\text{inward}}$$; a force pointing away from the center contributes negatively; and a purely tangential force contributes zero to the radial equation.
 
 ```tikz
 \usepackage{tikz}
@@ -567,7 +600,7 @@ There is no special "centripetal force." The phrase describes the net inward for
 \begin{tikzpicture}[>=Stealth, font=\small]
 \draw[blue, thick] (0,0) circle (1.6); \fill (0,0) circle (1.5pt) node[below] {center};
 \fill (1.35,0.85) circle (2pt) node[above right] {$m$};
-\draw[->, very thick, red] (1.35,0.85) -- (0.25,0.3) node[above left] {$F_c$};
+\draw[->, very thick, red] (1.35,0.85) -- (0.25,0.3) node[above left] {$\sum \vec F_r$};
 \draw[->, very thick, blue] (1.35,0.85) -- (0.75,1.8) node[above] {$v$};
 \end{tikzpicture}
 ```
@@ -578,6 +611,13 @@ Examples:
 - A car on a flat curve: static friction provides the inward force.
 - A satellite in orbit: gravity provides the inward force.
 - A roller coaster at the bottom of a loop: normal force and gravity combine to give the net inward force.
+
+:::strategy
+1. Draw a free-body diagram containing only real forces.
+2. Mark the inward radial direction at the object's current position.
+3. Resolve each force into radial and tangential components.
+4. Write $$\sum F_{\text{inward}}=mv^2/r$$. Use a separate tangential equation only if the speed is changing.
+:::
 
 <div class="theorem-box">
 
@@ -637,100 +677,31 @@ As $$\theta \to 0$$ the period approaches $$2\pi\sqrt{L/g}$$, the small-angle pe
 
 </div>
 
-### Nonuniform circular motion
+### Circular-motion tips and limiting conditions
 
-For **nonuniform circular motion**, acceleration has both radial and tangential components:
+:::mistakes
+- Draw the inward direction before assigning signs. At the bottom of an inside loop, $$F_N-mg=mv^2/r$$; at its top, $$F_N+mg=mv^2/r$$. At the crest of a hill with the object on top of the track, $$mg-F_N=mv^2/r$$.
+- The condition $$F_N=0$$ marks loss of ordinary contact, but the geometry decides whether it gives a maximum or minimum speed. At a hill's crest it gives $$v_{\max}=\sqrt{gr}$$; at the top of an inside loop it gives $$v_{\min}=\sqrt{gr}$$. These assume the track can only push, with gravity and the normal force as the only radial forces.
+- For changing speed, $$v^2/r$$ is only the radial acceleration. Also write $$\sum F_t=ma_t$$, and use $$a=\sqrt{a_r^2+a_t^2}$$ for the total magnitude.
+:::
 
-$$
-a_r = \frac{v^2}{r},
-$$
+:::tip
+For a pendulum with angle $$\theta$$ measured from the downward vertical, take inward as positive radially and increasing $$\theta$$ as positive tangentially. Then $$T-mg\cos\theta=mv^2/L$$ and $$ma_t=-mg\sin\theta$$. Tension has no tangential component. The minus sign means gravity accelerates the bob toward the bottom of the swing.
+:::
 
-$$
-a_t = \frac{dv}{dt}.
-$$
+### Horizontal circles and hanging objects
 
-The radial component changes the direction of velocity. The tangential component changes the speed. Write Newton's second law separately in radial and tangential directions:
-
-$$
-\sum F_r = m\frac{v^2}{r}, \qquad \sum F_t = m\frac{dv}{dt}.
-$$
-
-This is common in vertical circle problems, where gravity has a tangential component except at the top and bottom. Always remember your normal force as it won't always cancel with gravity!
-
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\draw[blue, thick] (0,0) circle (1.7);
-\fill (0,1.7) circle (2pt);
-\fill (0,-1.7) circle (2pt);
-\draw[->, red, thick] (0,1.7) -- (0,0.7) node[midway,right] {$mg$}; \draw[->, blue, thick] (0,1.7) -- (0,0.2) node[midway,left] {$T$};
-\draw[->, red, thick] (0,-1.7) -- (0,-2.7) node[below] {$mg$}; \draw[->, blue, thick] (0,-1.7) -- (0,-0.5) node[midway,right] {$T$};
-\end{tikzpicture}
-```
-
-
-<div class="theorem-box">
-
-**Proof (minimum speed at the top of a vertical loop).** An object travels on the inside of a vertical circular track of radius $$r$$. Find the minimum speed $$v_{\text{top}}$$ at the top of the loop for the object to maintain contact with the track.
-
-At the very top, both the weight $$mg$$ and the normal force $$N$$ point straight down, toward the center of the circle. The radial (inward) form of Newton's second law gives
-
-$$
-N + mg = \frac{mv_{\text{top}}^2}{r}.
-$$
-
-The track can only push, never pull, so $$N \ge 0$$. As the speed decreases, the required centripetal force decreases, and $$N$$ shrinks. The slowest possible speed that still keeps the object on the track is the point where $$N = 0$$, meaning gravity alone supplies the entire centripetal force:
-
-$$
-mg = \frac{mv_{\text{top}}^2}{r}.
-$$
-
-The mass cancels, giving
-
-$$
-v_{\text{top}} = \sqrt{gr}.
-$$
-
-Below this speed, the required inward force is less than $$mg$$, so the object falls away from the track before reaching the top. The same condition describes a ball on a string ($$N$$ replaced by tension $$T \ge 0$$) and water in a swung bucket.
-
-</div>
-
-<div class="theorem-box">
-
-**Example.** A $$0.30\ \text{kg}$$ ball attached to a string of length $$L=1.2\ \text{m}$$ moves through the top of a vertical circle at speed $$v=4.0\ \text{m/s}$$. At a point $$30^\circ$$ below the top, its speed is momentarily $$4.4\ \text{m/s}$$. Find the radial acceleration, tangential acceleration, and tension at that instant without using energy.
-
-The radial acceleration depends only on the instantaneous speed:
-
-$$
-a_r=\frac{v^2}{L}=\frac{(4.4)^2}{1.2}=16.1\ \text{m/s}^2.
-$$
-
-At $$30^\circ$$ below the top, the component of gravity tangent to the circle is $$mg\sin 30^\circ$$, directed down the path, so
-
-$$
-a_t=g\sin 30^\circ=4.9\ \text{m/s}^2.
-$$
-
-For tension, write the radial equation inward. The inward component of weight is $$mg\cos 30^\circ$$, so
-
-$$
-T+mg\cos 30^\circ=m\frac{v^2}{L}.
-$$
-
-Therefore
-
-$$
-T=m\frac{v^2}{L}-mg\cos 30^\circ
-=(0.30)(16.1)-(0.30)(9.8)(0.866)=2.3\ \text{N}.
-$$
-
-The speed at that instant was given, so no energy step was needed; the radial and tangential force equations were enough.
-
-</div>
+:::tip
+- Determine the actual path radius before substituting into $$mv^2/r$$. For a conical pendulum, $$r=L\sin\theta$$. For a swing attached at platform radius $$R$$ and tilted outward, $$r=R+L\sin\theta$$, where $$\theta$$ is measured from vertical.
+- Divide the horizontal and vertical tension equations to eliminate tension. A bob fixed relative to a car with horizontal acceleration magnitude $$a$$ satisfies $$T\sin\theta=ma$$ and $$T\cos\theta=mg$$, so $$\tan\theta=a/g$$. On a level constant-speed turn, substitute $$a=v^2/r$$.
+- In a rotating-cylinder ride, the wall's normal force supplies the radial acceleration: $$F_N=m\omega^2r$$. Static friction supports the rider vertically, so $$f_s=mg\le\mu_sF_N$$. Thus $$\omega_{\min}=\sqrt{g/(\mu_s r)}$$. Convert angular speed to revolutions per second using $$f=\omega/(2\pi)$$.
+:::
 
 ### Banked curves
+
+:::tip
+Resolve forces horizontally toward the center and vertically. Even though the road is tilted, a car following a level circular path has no vertical acceleration. Determine whether it would slide up or down the bank without friction, then point static friction against that tendency.
+:::
 
 Sometimes, circular motion is not confined on a flat surface. For a frictionless banked (raised) curve, the horizontal component of the normal force provides centripetal acceleration, while the vertical component balances weight:
 
@@ -754,7 +725,7 @@ $$
 v = \sqrt{rg\tan\theta}.
 $$
 
-With friction, static friction points whichever way prevents slipping: up the slope if the car would slide down, and down the slope if the car would slide up (remember static friction always OPPOSES motion!).
+With friction, static friction points whichever way prevents slipping: up the slope if the car would slide down, and down the slope if the car would slide up.
 
 <div class="theorem-box">
 
@@ -898,42 +869,6 @@ v_2=\frac{v_{\text{orbit}}}{2}.
 $$
 
 The farther moon moves more slowly because the gravitational field is weaker and a larger orbit needs less centripetal acceleration for a given speed.
-
-</div>
-
----
-
-## Inertial and non-inertial frames
-
-Newton's laws have their simplest form in an **inertial frame**, a frame that is not accelerating. In an accelerating frame, you may introduce a **pseudo-force** so Newton's second law appears to work inside that frame.
-
-For a frame accelerating with $$\vec{a}_{\text{frame}}$$, the pseudo-force on a mass $$m$$ is
-
-$$
-\vec{F}_{\text{pseudo}} = -m\vec{a}_{\text{frame}}.
-$$
-
-Pseudo-forces are not interaction forces and do not have third-law partners (since they don't actually exist!). Think of it like this: if a bus suddenly accelerates forward, you feel thrown backward, but no mysterious object pushed you backward. Your body was trying to keep its original velocity while the bus floor moved forward underneath you. In the accelerating bus frame, adding a backward pseudo-force is a bookkeeping trick that lets Newton's second law look normal from inside the bus.
-
-<div class="theorem-box">
-
-**Example.** A block of mass $$m$$ rests on a frictionless incline of angle $$\theta$$ built on a cart. How fast must the cart accelerate horizontally (toward the foot of the incline) so that the block does not slide relative to the incline?
-
-Work in the cart's non-inertial frame, where the block is in equilibrium (not moving). Three forces act on it: gravity $$mg$$ downward, the normal force $$F_N$$ perpendicular to the incline surface, and the pseudo-force $$ma$$ pointing horizontally backward (opposite the cart's acceleration). Resolve along the incline, taking down-the-slope as positive. Gravity contributes $$mg\sin\theta$$ down the slope, while the pseudo-force contributes $$ma\cos\theta$$ up the slope. For the block not to slide, these must cancel:
-
-$$
-mg\sin\theta = ma\cos\theta,
-$$
-
-so
-
-$$
-a = g\tan\theta.
-$$
-
-The cleanest way to see it: in the cart frame gravity and the pseudo-force combine into an **effective gravity** $$\vec{g}_{\text{eff}} = \vec{g} - \vec{a}_{\text{frame}}$$. When $$a = g\tan\theta$$, this effective gravity points exactly perpendicular to the incline, so the block sits as if on level ground and has no tendency to slide.
-
-As a check, solve it in the inertial ground frame. There the block accelerates horizontally at $$a$$, and only gravity and the normal force act. Vertically there is no acceleration, so $$F_N\cos\theta = mg$$; horizontally the normal force supplies the acceleration, so $$F_N\sin\theta = ma$$. Dividing gives $$\tan\theta = a/g$$, the same result, as expected.
 
 </div>
 

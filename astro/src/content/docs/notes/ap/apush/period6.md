@@ -273,6 +273,16 @@ The **Interstate Commerce Act of 1887** created a federal commission to regulate
 
 ---
 
+### Regulation and the limits of reform before 1900
+
+Early regulation faced a problem of scale. A state could attempt to control railroad charges within its borders, but railroads crossed state lines and operated as national businesses. Court decisions limiting state authority increased pressure for federal action. The Interstate Commerce Commission reflected recognition that local regulation alone could not govern an integrated economy.
+
+Creating a commission did not automatically give it the resources or legal authority needed to make every rule effective. Companies challenged decisions, and courts interpreted statutes in ways that could limit enforcement. The gap between passing a law and changing business behavior is central to understanding why later Progressives demanded stronger powers.
+
+The same distinction applies to antitrust legislation. A broad prohibition on restraints of trade required judges and officials to decide which combinations violated the law and what remedies were available. Political commitment mattered alongside statutory language. These early measures established a basis for later regulation while leaving much corporate power intact.
+
+---
+
 ## Connections and recap
 
 | Historical connection | Evidence from this period |

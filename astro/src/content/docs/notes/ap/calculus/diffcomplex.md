@@ -85,23 +85,150 @@ $$
 
 This is correct because each layer contributes its own derivative factor, starting from the outside layer and moving inward.
 
+### General chain rule
+
+For a composition with any number of layers,
+
+$$
+F(x)=f_1(f_2(\cdots f_n(x)\cdots)),
+$$
+
+differentiate each layer once, from the outside toward the inside:
+
+$$
+F'(x)
+=
+f_1'(f_2(\cdots f_n(x)\cdots))
+f_2'(f_3(\cdots f_n(x)\cdots))
+\cdots
+f_n'(x).
+$$
+
+Every derivative factor is evaluated at the expression immediately inside its layer. The process stops only when the derivative reaches $$x$$.
+
+:::strategy
+1. Mark the layers before differentiating.
+2. Differentiate the outside layer while copying everything inside it unchanged.
+3. Move inward one layer and multiply by its derivative.
+4. Repeat until the innermost expression has been differentiated.
+5. Apply product or quotient rules to the larger structure when the composition is only one factor of the function.
+:::
+
+<div class="theorem-box">
+
+**Example.** Differentiate
+
+$$
+y=e^{\sin((3x^2-1)^4)}.
+$$
+
+There are four changing layers: the exponential, sine, fourth power, and quadratic. Differentiate them in that order:
+
+$$
+\frac{dy}{dx}
+=
+e^{\sin((3x^2-1)^4)}
+\cos((3x^2-1)^4)
+\cdot4(3x^2-1)^3
+\cdot6x.
+$$
+
+Therefore,
+
+$$
+\frac{dy}{dx}
+=
+24x(3x^2-1)^3
+\cos((3x^2-1)^4)
+e^{\sin((3x^2-1)^4)}.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Let
+
+$$
+F(x)=\frac{(x^2+1)e^{(x-1)^2}}{x+1}.
+$$
+
+Find the equation of the tangent line to $$F$$ at $$x=2$$.
+
+The numerator is a product containing a composite exponential. Let
+
+$$
+N(x)=(x^2+1)e^{(x-1)^2}.
+$$
+
+Use the product and chain rules:
+
+$$
+N'(x)
+=
+2xe^{(x-1)^2}
++(x^2+1)e^{(x-1)^2}\cdot2(x-1).
+$$
+
+Now apply the quotient rule:
+
+$$
+F'(x)
+=
+\frac{N'(x)(x+1)-N(x)}{(x+1)^2}.
+$$
+
+At $$x=2$$,
+
+$$
+N(2)=5e
+\qquad\text{and}\qquad
+N'(2)=4e+10e=14e.
+$$
+
+Thus
+
+$$
+F(2)=\frac{5e}{3}
+$$
+
+and
+
+$$
+F'(2)
+=
+\frac{(14e)(3)-5e}{9}
+=
+\frac{37e}{9}.
+$$
+
+The tangent line is
+
+$$
+y-\frac{5e}{3}
+=
+\frac{37e}{9}(x-2).
+$$
+
+</div>
+
 ---
 
 ## Implicit differentiation
 
-When a curve is defined by an equation relating $$x$$ and $$y$$, differentiate both sides with respect to $$x$$ and remember that $$y$$ depends on $$x$$. Every time a derivative hits a term involving $$y$$, multiply by $$dy/dx$$ because $$y$$ is changing as $$x$$ changes.
-
-Implicit equations describe a relationship rather than a solved function. The variable $$y$$ still depends on $$x$$, even if the equation does not say so explicitly. Implicit differentiation is especially useful when solving for $$y$$ would be messy or impossible. It also lets you find slopes on curves that are not functions globally, such as circles, ellipses, and many algebraic curves.
+Implicit equations describe a relationship rather than a solved function, meaning that the $$x$$s and $$y$$s of the equation are not fully separated. To take $$\frac{dy}{dx}$$ of such function we can use implicit differentiation.
 
 :::tip
-When differentiating with respect to $$x$$, attach $$dy/dx$$ exactly when the term you are differentiating includes $$y$$. Another way to think about it is that you are differentiating $$y$$, so any term with $$y$$ will have to include a $$\frac{dy}{dx}$$ (or $$y'$$) term.
+When differentiating with respect to $$x$$, attach $$dy/dx$$ when the term you are differentiating includes $$y$$. Another way to think about it is that you are differentiating using $$\frac{d}{dx}$$, so any term with $$y$$ will have to add a $$y$$ to the fraction, meaing it will have to include a $$\frac{dy}{dx}$$ (or $$y'$$) term.
 
 - $$\frac{d}{dx}(y^2)=2y\frac{dy}{dx}$$
 - $$\frac{d}{dx}(\sin y)=\cos y\frac{dy}{dx}$$
 - $$\frac{d}{dx}(xy)=x\frac{dy}{dx}+y$$
 
-Terms involving only $$x$$, such as $$x^2$$ or $$\sin x$$, do not get an extra $$dy/dx$$.
+Terms involving only $$x$$, such as $$x^2$$ or $$\sin x$$, do not get an extra $$dy/dx$$. The derivative rules (you can treat everything in $$x$$ as one function and everything in $$y$$ as another function) still apply even during implicit differentiation.
 :::
+
+After differentiating, collect every term containing $$dy/dx$$ on one side. Factor out $$dy/dx$$ only after all product and chain rules have been expanded. The remaining coefficient determines the slope. If that coefficient is zero while the other side is nonzero, the curve may have a vertical tangent rather than an ordinary finite slope.
 
 <div class="theorem-box">
 
@@ -151,6 +278,63 @@ So the tangent line at $$(3,4)$$ has slope $$-\frac34$$.
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** The curve
+
+$$
+x^2y+\sin(xy)=x+\sin1
+$$
+
+passes through $$(1,1)$$. Find the equation of its tangent line at that point.
+
+Differentiate both sides with respect to $$x$$. The term $$x^2y$$ needs the product rule, while $$\sin(xy)$$ needs both the chain rule and another product rule:
+
+$$
+2xy+x^2\frac{dy}{dx}
++\cos(xy)\left(x\frac{dy}{dx}+y\right)
+=1.
+$$
+
+Collect the derivative terms:
+
+$$
+\left(x^2+x\cos(xy)\right)\frac{dy}{dx}
+=
+1-2xy-y\cos(xy).
+$$
+
+Therefore,
+
+$$
+\frac{dy}{dx}
+=
+\frac{1-2xy-y\cos(xy)}{x^2+x\cos(xy)}.
+$$
+
+At $$(1,1)$$,
+
+$$
+\frac{dy}{dx}
+=
+\frac{-1-\cos1}{1+\cos1}
+=-1.
+$$
+
+The tangent line is
+
+$$
+y-1=-(x-1),
+$$
+
+or
+
+$$
+y=-x+2.
+$$
+
+</div>
+
 ---
 
 ## Derivatives of inverse functions
@@ -172,6 +356,10 @@ $$
 $$
 
 </div>
+
+The derivative of an inverse is a reciprocal slope, but the reciprocal is taken at the matching point on the original function. If $$f(a)=b$$, then the point $$(a,b)$$ on $$f$$ becomes $$(b,a)$$ on $$f^{-1}$$. The slope $$f'(a)$$ belongs to the original point, while $$(f^{-1})'(b)$$ belongs to the reflected point.
+
+The condition $$f'(a)\ne0$$ matters. A horizontal tangent on $$f$$ reflects to a vertical tangent on its inverse, so the inverse does not have a finite derivative there.
 
 <div class="theorem-box">
 
@@ -219,6 +407,52 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** Suppose $$f(2)=5$$ and $$f'(2)=-3$$. Define
+
+$$
+g(x)=f^{-1}(x^2+1).
+$$
+
+Find the equation of the tangent line to $$g$$ at $$x=2$$.
+
+First find the point on $$g$$:
+
+$$
+g(2)=f^{-1}(5)=2.
+$$
+
+Differentiate the composite inverse function:
+
+$$
+g'(x)
+=
+(f^{-1})'(x^2+1)\cdot2x
+=
+\frac{2x}{f'(f^{-1}(x^2+1))}.
+$$
+
+At $$x=2$$,
+
+$$
+g'(2)
+=
+\frac4{f'(f^{-1}(5))}
+=
+\frac4{f'(2)}
+=
+-\frac43.
+$$
+
+Using the point $$(2,2)$$, the tangent line is
+
+$$
+y-2=-\frac43(x-2).
+$$
+
+</div>
+
 ---
 
 ## Derivatives of inverse trig functions
@@ -248,6 +482,24 @@ $$
 $$
 
 For AP work, $$\arcsin$$, $$\arccos$$, and $$\arctan$$ are the most common inverse trig functions. All six formulas follow from the inverse-function derivative formula; one proof is shown below.
+
+The listed formulas give the derivative of the inverse trig function itself. If its input is another function $$u(x)$$, the chain rule adds a factor of $$u'(x)$$. For example,
+
+$$
+\frac{d}{dx}\arcsin(u)
+=
+\frac{u'}{\sqrt{1-u^2}},
+$$
+
+and
+
+$$
+\frac{d}{dx}\arctan(u)
+=
+\frac{u'}{1+u^2}.
+$$
+
+Domain restrictions still matter after differentiating. The derivative of $$\arcsin x$$ becomes unbounded at $$x=\pm1$$, and the absolute value in the arcsec and arccsc formulas cannot be dropped without knowing the sign of the input.
 
 <div class="theorem-box">
 
@@ -332,6 +584,63 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** Differentiate and simplify
+
+$$
+y=\arcsin\left(\frac{x}{\sqrt{1+x^2}}\right).
+$$
+
+Let
+
+$$
+u=\frac{x}{\sqrt{1+x^2}}
+=
+x(1+x^2)^{-1/2}.
+$$
+
+Differentiate $$u$$ using the product and chain rules:
+
+$$
+u'
+=
+(1+x^2)^{-1/2}
+-x^2(1+x^2)^{-3/2}
+=
+\frac1{(1+x^2)^{3/2}}.
+$$
+
+Also,
+
+$$
+1-u^2
+=
+1-\frac{x^2}{1+x^2}
+=
+\frac1{1+x^2}.
+$$
+
+Since $$1+x^2>0$$,
+
+$$
+\sqrt{1-u^2}=\frac1{\sqrt{1+x^2}}.
+$$
+
+Apply the chain-rule form of the arcsine derivative:
+
+$$
+\frac{dy}{dx}
+=
+\frac{u'}{\sqrt{1-u^2}}
+=
+\frac{1/(1+x^2)^{3/2}}{1/\sqrt{1+x^2}}
+=
+\frac1{1+x^2}.
+$$
+
+</div>
+
 ---
 
 ## Logarithmic differentiation
@@ -385,6 +694,23 @@ $$
 
 This is especially helpful when a function has many factors or when a variable appears in both the base and the exponent.
 
+For a variable power $$u(x)^{v(x)}$$ with $$u(x)>0$$, logarithmic differentiation turns the exponent into a factor:
+
+$$
+\ln y=v(x)\ln(u(x)).
+$$
+
+Differentiating gives
+
+$$
+\frac{y'}{y}
+=
+v'(x)\ln(u(x))
++v(x)\frac{u'(x)}{u(x)}.
+$$
+
+This contains both the derivative of the exponent and the derivative of the base. Treating $$v(x)$$ as a constant would miss the first term.
+
 After differentiating, remember that differentiating $$\ln y$$ gives
 
 $$
@@ -413,6 +739,52 @@ Multiply both sides by $$y$$ and substitute $$y=x^x$$:
 
 $$
 \frac{dy}{dx}=x^x(\ln x+1).
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Use logarithmic differentiation to find $$dy/dx$$ for
+
+$$
+y=\frac{(x^2+1)^{\sin x}}{x^3\sqrt{x-1}},
+\qquad x>1.
+$$
+
+Take the natural logarithm and expand using log laws:
+
+$$
+\ln y
+=
+\sin x\ln(x^2+1)
+-3\ln x
+-\frac12\ln(x-1).
+$$
+
+Differentiate both sides. The first term requires the product rule:
+
+$$
+\frac1y\frac{dy}{dx}
+=
+\cos x\ln(x^2+1)
++\frac{2x\sin x}{x^2+1}
+-\frac3x
+-\frac1{2(x-1)}.
+$$
+
+Multiply by $$y$$ and substitute the original expression:
+
+$$
+\frac{dy}{dx}
+=
+\frac{(x^2+1)^{\sin x}}{x^3\sqrt{x-1}}
+\left(
+\cos x\ln(x^2+1)
++\frac{2x\sin x}{x^2+1}
+-\frac3x
+-\frac1{2(x-1)}
+\right).
 $$
 
 </div>

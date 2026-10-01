@@ -249,6 +249,18 @@ For this period, the most useful causal explanation connects several levels: com
 
 ---
 
+### Comparing the societies that entered the Atlantic world
+
+Before sustained contact, societies on all three sides of the Atlantic had trade, political hierarchies, and forms of conflict. They differed in their institutions and technologies, but none lacked history or the capacity for change. Starting from that comparison avoids treating Europeans as the only people with economic interests or political strategies.
+
+European colonizers gained advantages from ships, weapons, imperial resources, and the effects of disease, but those advantages did not operate uniformly. Inland geography, local resistance, limited supplies, and competition among Europeans could constrain colonial control. The conquest of one centralized empire does not explain every later encounter in a region organized around many smaller communities.
+
+Relationships also changed over time. A small group of newcomers might initially depend on local food and diplomacy. After securing reinforcements, markets, and a labor supply, settlers could make demands they had previously lacked the power to enforce. Cooperation and conquest were sometimes different stages in the same relationship rather than permanent characteristics of particular peoples.
+
+The most important continuity across this transformation was the pursuit of community survival and political authority by Native peoples. Their resources and choices changed dramatically, but their goals did not disappear because Europeans claimed a territory. Following those goals makes later units on colonial diplomacy, removal, and sovereignty easier to understand.
+
+---
+
 ## Connections and recap
 
 | Historical connection | Evidence from this period |

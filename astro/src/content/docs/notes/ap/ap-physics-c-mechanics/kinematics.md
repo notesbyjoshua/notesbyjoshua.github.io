@@ -19,7 +19,7 @@ sidebar:
 
 ## Constant acceleration in one dimension
 
-Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five** (holy niche bro)) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
+Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five**) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
 
 :::key{name="The Big Five"}
 1. Missing $$\Delta x$$: $$v_f = v_0 + at$$
@@ -700,7 +700,18 @@ $$
 a_c = \frac{v^2}{r}.
 $$
 
-// define all the variables proved in the next section here
+:::variables
+| Symbol | Meaning |
+| --- | --- |
+| $$r$$ | Radius of the circular path |
+| $$v$$ | Constant speed along the path |
+| $$a_c$$ | Magnitude of the inward, centripetal acceleration |
+| $$\theta$$ | Angular position measured from a chosen reference direction |
+| $$\theta_0$$ | Angular position at $$t=0$$ |
+| $$\omega$$ | Signed angular velocity; positive is counterclockwise |
+| $$T$$ | Period, or time required for one revolution |
+| $$f$$ | Frequency, or revolutions per unit time |
+:::
 
 <div class="theorem-box">
 
@@ -955,39 +966,65 @@ $$
 \vec a_{A/B}=\vec a_{A/C}-\vec a_{B/C}.
 $$
 
-However, you should ALWAYS remember that acceleration is NEVER inherited! When I drop a donut in an accelerating train to an outside perspective, the donut is dropping straight down. However, if you are accelerating with the frame, any object the leaves the frame (e.g. is dropped, meaning that it technically isn't moving with the train anymore) will inherit the velocity but from your perspective, will have a fictitious acceleration going backwards, since $$\vec{a}_{A/B} = -\vec{a}_{B/A}$$.
+An object released from an accelerating frame keeps the velocity it had at the instant of release, but it does not automatically keep the frame's acceleration. For example, a donut dropped inside an eastward-accelerating train initially has the train's eastward velocity. After release, however, no horizontal force acts on the donut. A ground observer therefore measures zero horizontal acceleration, while an observer on the train sees the donut accelerate backward relative to the train.
 
 <div class="theorem-box">
 
-**Example.** A train accelerates east at $$1.5\ \text{m/s}^2$$ relative to the ground. Inside the train, a cart's velocity relative to the train changes at a rate of $$0.80\ \text{m/s}^2$$ west. Find the cart's acceleration relative to the ground and the acceleration of the train relative to the cart.
+**Example.** A train moves east at speed $$u$$ and accelerates east at a constant rate $$A$$. At $$t=0$$, a passenger releases a donut from rest relative to the train at height $$H$$ above the floor. Ignore air resistance. Describe the donut's motion in the ground frame and the train frame, and find how far behind the release point it lands as measured in the train.
 
-Take east as positive. Let $$C$$ denote the cart, $$T$$ the train, and $$G$$ the ground. The phrase "changes at a rate of $$0.80\ \text{m/s}^2$$ west" gives
-
-$$
-\vec a_{C/T}=-0.80\hat i\ \text{m/s}^2,
-$$
-
-while the train's acceleration is
+Take east as $$+x$$ and up as $$+y$$. Let $$D$$ denote the donut, $$T$$ the train, and $$G$$ the ground. At release, the donut has the train's instantaneous horizontal velocity:
 
 $$
-\vec a_{T/G}=1.5\hat i\ \text{m/s}^2.
+\vec v_{D/G}(0)=u\hat i.
 $$
 
-Add the relative acceleration to the acceleration of the moving frame:
+Once released, the donut is in free fall. In the ground frame its acceleration is
 
 $$
-\vec a_{C/G}=\vec a_{C/T}+\vec a_{T/G}
-=(-0.80+1.5)\hat i
-=0.70\hat i\ \text{m/s}^2.
+\vec a_{D/G}=-g\hat j,
 $$
 
-The cart can accelerate west relative to the train while still accelerating east relative to the ground because the train's eastward acceleration is larger. Reversing the subscripts reverses the vector, so
+so its coordinates relative to the release point are
 
 $$
-\vec a_{T/C}=-\vec a_{C/T}=0.80\hat i\ \text{m/s}^2.
+x_{D/G}=ut,
+\qquad
+y_{D/G}=H-\frac{1}{2}gt^2.
 $$
 
-// change this problem to a problem about looking from different frames and stuff (so like the donut in a train problem)
+The ground observer sees a projectile: the donut continues east while falling in a parabola. During the same time, the point on the train directly below the release point moves according to
+
+$$
+x_{T/G}=ut+\frac{1}{2}At^2.
+$$
+
+Subtracting the train's position from the donut's position gives the horizontal motion seen by the passenger:
+
+$$
+x_{D/T}=x_{D/G}-x_{T/G}=-\frac{1}{2}At^2.
+$$
+
+Thus the donut appears to accelerate west in the train frame, with
+
+$$
+\vec a_{D/T}=\vec a_{D/G}-\vec a_{T/G}=-A\hat i-g\hat j.
+$$
+
+The donut reaches the floor when $$y_{D/G}=0$$:
+
+$$
+t_f=\sqrt{\frac{2H}{g}}.
+$$
+
+At that time,
+
+$$
+x_{D/T}(t_f)
+=-\frac{1}{2}A\left(\frac{2H}{g}\right)
+=-\frac{AH}{g}.
+$$
+
+Therefore, the donut lands a distance $$AH/g$$ behind the point on the train directly below where it was released. The two observers agree on the physical landing event, but they describe the path and acceleration differently because the train frame is accelerating.
 
 </div>
 
@@ -1031,9 +1068,7 @@ You can find more about relative motion on the [USAPhO section on mechanics](/no
 
 ## Kinematics in two dimensions and projectile motion
 
-When dealing with 2D kinematics, vectors can be broken down into $$x$$- and $$y$$-components, with each component acting *independently* of the other. **Projectile motion**, a special type of 2D kinematics where you launch an object, with negligible air resistance (meaning you throw something in the air or something is launched), horizontal acceleration is zero and vertical acceleration is $$g$$ downward (again, signs depend on whether you call “up” positive $$y$$ or not).
-
-// please fix the grammar in the previous paragraph
+In two-dimensional kinematics, a vector can be split into $$x$$- and $$y$$-components, and each component follows its own kinematic equation. **Projectile motion** is the motion of an object after it has been launched and is moving under gravity alone. If air resistance is negligible, horizontal acceleration is zero and vertical acceleration is $$g$$ downward. The sign of the vertical acceleration depends on which direction you choose as positive $$y$$.
 
 ```tikz
 \usepackage{tikz}
@@ -1053,7 +1088,7 @@ $$
 v_{0x} = v_0 \cos\theta, v_{0y} = v_0 \sin\theta.
 $$
 
-The motion can thus be broken down into components, with each component having its own kinematic equaions (up is positive $$y$$, gravity is downward):
+The motion can thus be broken into components, each with its own kinematic equations. Taking up as positive $$y$$ gives
 
 $$
 x = x_0 + v_{0x} t, \qquad y = y_0 + v_{0y} t - \frac{1}{2} g t^2,
@@ -1193,6 +1228,88 @@ Note that with unequal launch and landing heights the trajectory is no longer sy
 
 </div>
 
+### Inclined plane kinematics
+
+Suppose we want to launch along a surface that is angle $$\theta$$ above the horizontal. For a projectile above a ramp, rotate the axes: let $$x$$ point along the ramp to the right and $$y$$ point perpendicular to it, away from the surface. Let $$\theta$$ be the signed ramp angle relative to horizontal: positive for an uphill ramp and negative for a downhill slope, with $$-90^\circ<\theta<90^\circ$$. Launch from the origin at speed $$v_0$$ and angle $$\phi$$ above the ramp, so the launch angle above horizontal is $$\theta+\phi$$.
+
+Gravity is the only acceleration during flight. Its rotated components and the velocity components are
+
+$$
+a_x=-g\sin\theta,\qquad a_y=-g\cos\theta,
+$$
+
+$$
+v_x=v_0\cos\phi-gt\sin\theta,\qquad
+v_y=v_0\sin\phi-gt\cos\theta.
+$$
+
+Integrating with initial position at the origin gives
+
+$$
+x=v_0t\cos\phi-\frac12gt^2\sin\theta,\qquad
+y=v_0t\sin\phi-\frac12gt^2\cos\theta.
+$$
+
+The ramp itself is $$y=0$$ in these coordinates. The projectile leaves the surface, so its perpendicular coordinate is positive during flight; it is not constrained to slide along the ramp. For a downhill slope, $$\theta<0$$ and $$a_x>0$$, so gravity increases the down-slope velocity component. You can try to prove the formulas by yourself (hint: Use similar triangles and Pythagorean Theorem).
+
+<div class="theorem-box">
+
+**Example.** A projectile is launched at speed $$v_0$$ above an uphill ramp of angle $$\theta$$, where $$0<\theta<90^\circ$$. Its launch direction makes angle $$\phi$$ above the ramp, with $$0<\phi<90^\circ-\theta$$. Find its landing distance $$d$$ along the ramp and the launch angle that maximizes this distance.
+
+Landing occurs when the perpendicular displacement returns to zero:
+
+$$
+0=t\left(v_0\sin\phi-\frac12gt\cos\theta\right).
+$$
+
+Discarding the launch instant $$t=0$$ gives
+
+$$
+t_f=\frac{2v_0\sin\phi}{g\cos\theta}.
+$$
+
+Substitute into the along-ramp position:
+
+$$
+d=\frac{2v_0^2\sin\phi\cos\phi}{g\cos\theta}
+-\frac{2v_0^2\sin^2\phi\sin\theta}{g\cos^2\theta}
+=\frac{2v_0^2\sin\phi\cos(\theta+\phi)}{g\cos^2\theta}.
+$$
+
+Using $$2\sin\phi\cos(\theta+\phi)=\sin(2\phi+\theta)-\sin\theta$$,
+
+$$
+d=\frac{v_0^2}{g\cos^2\theta}
+\left[\sin(2\phi+\theta)-\sin\theta\right].
+$$
+
+Only the sine term varies with launch angle. It is largest when $$2\phi+\theta=90^\circ$$, so
+
+$$
+\phi_{\mathrm{opt}}=45^\circ-\frac{\theta}{2},\qquad
+d_{\max}=\frac{v_0^2}{g(1+\sin\theta)}.
+$$
+
+The optimum angle above horizontal is therefore $$45^\circ+\theta/2$$. For a downhill slope of angle $$\beta>0$$, substitute $$\theta=-\beta$$: the optimum angle above the slope is $$45^\circ+\beta/2$$.
+
+If instead a reachable distance $$d$$ is specified, there are generally two launch angles. Set
+
+$$
+K=\sin\theta+\frac{gd\cos^2\theta}{v_0^2}.
+$$
+
+For $$0<d<d_{\max}$$, the larger angle above the ramp that reaches that distance is
+
+$$
+\phi_{\mathrm{high}}=\frac{180^\circ-\arcsin K-\theta}{2}.
+$$
+
+At $$d=d_{\max}$$ the two angles coincide. A requested distance greater than $$d_{\max}$$ is unreachable at that launch speed.
+
+// add another method for phi max where you just take the derivative of the distance function
+
+</div>
+
 ---
 
 :::equations
@@ -1222,47 +1339,7 @@ Note that with unequal launch and landing heights the trajectory is no longer sy
 ### Multiple Choice
 
 ::::problem
-1. A projectile is fired from height $$h$$ with speed $$v_0$$ at angle $$\theta$$ above horizontal. Air resistance is negligible. Which equation determines its time of flight if the ground is $$y=0$$?
-
-(A) $$0=h+v_0\sin\theta\,t-\dfrac{1}{2}gt^2$$
-
-(B) $$0=v_0\cos\theta\,t-\dfrac{1}{2}gt^2$$
-
-(C) $$h=v_0t-\dfrac{1}{2}gt^2$$
-
-(D) $$0=v_0\sin\theta-gt$$
-
-
-:::solution
-The time of flight is controlled by vertical motion, because the projectile lands when its vertical position reaches ground level.
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,decorations.pathmorphing}
-\begin{tikzpicture}[>=Stealth, font=\small, scale=0.85]
-  \draw[->] (0,0) -- (5.2,0) node[right] {$x$};
-  \draw[->] (0,0) -- (0,3.0) node[above] {$y$};
-  \draw[dashed] (0,0.75) -- (5,0.75) node[right] {ground};
-  \draw[very thick, blue!65] (0.35,1.65) parabola bend (2.35,2.65) (4.75,0.75);
-  \fill (0.35,1.65) circle (2pt) node[left] {launch};
-  \draw[->, red!75, thick] (0.35,1.65) -- ++(0.95,0.65) node[above] {$v_0$};
-  \draw[->, red!75] (1.05,1.65) arc[start angle=0,end angle=34,radius=0.7];
-  \node[red!75] at (1.15,1.95) {$\theta$};
-\end{tikzpicture}
-```
-
-The initial vertical velocity is $$v_0\sin\theta$$ and the vertical acceleration is $$-g$$, so
-
-$$
-y(t)=h+v_0\sin\theta\,t-\frac12gt^2.
-$$
-
-Set $$y(t)=0$$ at landing. This gives $$0=h+v_0\sin\theta\,t-\dfrac12gt^2$$, so the answer is $$\boxed{\text{A}}$$.
-:::
-::::
-
-::::problem
-2. A projectile is launched from level ground. At the top of its path, its speed is half its launch speed. What was the launch angle?
+1. A projectile is launched from level ground. At the top of its path, its speed is half its launch speed. What was the launch angle?
 
 (A) $$30^\circ$$
 
@@ -1293,7 +1370,7 @@ Cancel $$v_0$$ to get $$\cos\theta=1/2$$, so $$\theta=60^\circ$$. The answer is 
 ::::
 
 ::::problem
-3. Two projectiles are launched from the same point with the same speed at complementary angles $$\theta$$ and $$90^\circ-\theta$$, where $$0<\theta<45^\circ$$. On level ground, the projectile launched at the larger angle has
+2. Two projectiles are launched from the same point with the same speed at complementary angles $$\theta$$ and $$90^\circ-\theta$$, where $$0<\theta<45^\circ$$. On level ground, the projectile launched at the larger angle has
 
 (A) the same range and a longer flight time
 
@@ -1318,11 +1395,11 @@ The larger angle has a larger vertical component, so it stays in the air longer.
 ::::
 
 ::::problem
-4. A particle has $$x(t)=At^3-Bt$$ with $$A,B>0$$. At the instant when the particle's velocity is zero, its acceleration is
+3. A particle has $$x(t)=At^3-Bt$$ with $$A,B>0$$. For $$t>0$$, at the instant when the particle's velocity is zero, its acceleration is
 
 (A) zero
 
-(B) $$2\sqrt{3AB}$$
+(B) $$-2\sqrt{3AB}$$
 
 (C) $$6\sqrt{B/(3A)}$$
 
@@ -1359,7 +1436,7 @@ So the answer is $$\boxed{\text{D}}$$.
 ::::
 
 ::::problem
-5. A particle moves in the plane with $$x=bt$$ and $$y=ct^2-dt^3$$. At the instant when $$v_y=0$$, the acceleration vector points
+4. A particle moves in the plane with $$x=bt$$ and $$y=ct^2-dt^3$$, where $$b,c,d>0$$. At the nonzero instant when $$v_y=0$$, the acceleration vector points
 
 (A) purely horizontal
 
@@ -1401,7 +1478,7 @@ Since $$c>0$$, this is downward. The answer is $$\boxed{\text{C}}$$.
 ::::
 
 ::::problem
-6. A runner moves so that her speed depends on position according to $$v=v_0+kx$$, where $$v_0,k>0$$. Her acceleration as a function of position is
+5. A runner moves so that her speed depends on position according to $$v=v_0+kx$$, where $$v_0,k>0$$. Her acceleration as a function of position is
 
 (A) $$k$$
 
@@ -1440,7 +1517,7 @@ The units also check: $$k$$ has units of inverse time because $$kx$$ is a speed,
 ::::
 
 ::::problem
-7. A particle has $$v(t)=v_0-\beta t^2$$ with $$v_0,\beta>0$$. Which expression gives the distance traveled from $$t=0$$ until the particle first stops?
+6. A particle has $$v(t)=v_0-\beta t^2$$ with $$v_0,\beta>0$$. Which expression gives the distance traveled from $$t=0$$ until the particle first stops?
 
 (A) $$\int_0^{\sqrt{v_0/\beta}}(v_0-\beta t^2)\,dt$$
 
@@ -1474,7 +1551,7 @@ The answer is $$\boxed{\text{A}}$$.
 ::::
 
 ::::problem
-8. A particle moves along the $$x$$-axis with velocity $$v(t)=v_0-\alpha t^2$$, where $$v_0,\alpha>0$$. At what time is the particle's displacement from its starting point greatest?
+7. A particle moves along the $$x$$-axis with velocity $$v(t)=v_0-\alpha t^2$$, where $$v_0,\alpha>0$$. At what time is the particle's displacement from its starting point greatest?
 
 (A) $$t=\sqrt{v_0/\alpha}$$
 
@@ -1502,6 +1579,31 @@ t=\sqrt{\frac{v_0}{\alpha}}.
 $$
 
 So the answer is $$\boxed{\text{A}}$$.
+:::
+::::
+
+::::problem
+8. A projectile is launched from level ground and lands back at the same height a fixed horizontal distance $$R$$ away. The launch speed is increased while $$R$$ is kept the same. Compared with the original two possible launch angles, the new two possible launch angles
+
+(A) move closer to $$45^\circ$$
+
+(B) move farther from $$45^\circ$$
+
+(C) both increase
+
+(D) both decrease
+
+
+:::solution
+For level-ground projectile range,
+
+$$
+R=\frac{v_0^2\sin2\theta}{g}.
+$$
+
+If $$R$$ is fixed while $$v_0$$ increases, then $$\sin2\theta$$ must decrease.
+
+The two possible angles are complementary, one below $$45^\circ$$ and one above $$45^\circ$$. Decreasing $$\sin2\theta$$ pushes them farther away from $$45^\circ$$. Thus the answer is $$\boxed{\text{B}}$$.
 :::
 ::::
 
@@ -1539,32 +1641,89 @@ The drifts are the same, so the answer is $$\boxed{\text{B}}$$.
 ::::
 
 ::::problem
-10. A projectile is launched from level ground and lands back at the same height a fixed horizontal distance $$R$$ away. The launch speed is increased while $$R$$ is kept the same. Compared with the original two possible launch angles, the new two possible launch angles
+10. A particle moves in one dimension with acceleration $$a=-kv^2$$ when $$v>0$$, where $$k>0$$. Which statement must be true while the particle is moving in the positive direction?
 
-(A) move closer to $$45^\circ$$
+(A) The velocity-time graph is a straight line.
 
-(B) move farther from $$45^\circ$$
+(B) The velocity decreases, but the magnitude of the slope decreases as the particle slows.
 
-(C) both increase
+(C) The acceleration is constant and negative.
 
-(D) both decrease
+(D) Equal decreases in speed take equal amounts of time.
 
 
 :::solution
-For level-ground projectile range,
+The acceleration is negative because the particle is moving in the positive direction but $$a=-kv^2$$.
+
+
+The slope of a velocity-time graph is acceleration. Since
 
 $$
-R=\frac{v_0^2\sin2\theta}{g}.
+\lvert a\rvert=kv^2,
 $$
 
-If $$R$$ is fixed while $$v_0$$ increases, then $$\sin2\theta$$ must decrease.
-
-The two possible angles are complementary, one below $$45^\circ$$ and one above $$45^\circ$$. Decreasing $$\sin2\theta$$ pushes them farther away from $$45^\circ$$. Thus the answer is $$\boxed{\text{B}}$$.
+the magnitude of the slope is large when the particle is fast and smaller after it slows down. Therefore the velocity decreases, but the slope becomes less steep in magnitude. The answer is $$\boxed{\text{B}}$$.
 :::
 ::::
 
 ::::problem
-11. A small cart moves to the right with initial speed $$v_0$$ through a medium that produces resistive acceleration
+11. A skier launches from a point on a long slope descending at $$30^\circ$$ below horizontal. The launch speed is $$v_0$$, and the launch angle above the slope is chosen to maximize the distance along the slope before landing. Ignore air resistance. Which pair gives the maximum distance $$d$$ and the speed immediately before landing?
+
+(A) $$d=v_0^2/g,\quad v=v_0$$
+
+(B) $$d=2v_0^2/g,\quad v=\sqrt{3}v_0$$
+
+(C) $$d=2v_0^2/g,\quad v=2v_0$$
+
+(D) $$d=3v_0^2/g,\quad v=\sqrt{3}v_0$$
+
+:::solution
+Take $$x$$ down the slope and $$y$$ perpendicular outward. With $$\theta=-30^\circ$$, the range-maximizing angle above the slope is
+
+$$
+\phi=45^\circ-\frac{\theta}{2}=60^\circ.
+$$
+
+The range formula gives
+
+$$
+d_{\max}=\frac{v_0^2}{g(1+\sin(-30^\circ))}
+=\frac{2v_0^2}{g}.
+$$
+
+To find the landing speed, compute both velocity components. The return time is
+
+$$
+t_f=\frac{2v_0\sin60^\circ}{g\cos30^\circ}
+=\frac{2v_0}{g}.
+$$
+
+Gravity accelerates the skier down the slope while reducing the outward component:
+
+$$
+v_x=v_0\cos60^\circ+g\sin30^\circ t_f
+=\frac32v_0,
+$$
+
+$$
+v_y=v_0\sin60^\circ-g\cos30^\circ t_f
+=-\frac{\sqrt3}{2}v_0.
+$$
+
+The negative perpendicular component means the skier is approaching the slope. The speed is the magnitude of the velocity, not just its along-slope component:
+
+$$
+v=\sqrt{v_x^2+v_y^2}
+=v_0\sqrt{\frac94+\frac34}
+=\sqrt3v_0.
+$$
+
+The answer is $$\boxed{\text{B}}$$.
+:::
+::::
+
+::::problem
+12. A small cart moves to the right with initial speed $$v_0$$ through a medium that produces resistive acceleration
 
 $$
 a=-kv\left(1+\frac{v}{V}\right)
@@ -1629,32 +1788,6 @@ v(t)=\frac{Vv_0e^{-kt}}{V+v_0\left(1-e^{-kt}\right)}.
 $$
 
 This is harder than ordinary linear drag because the separation needs partial fractions. It still makes sense physically: $$v(0)=v_0$$ and $$v(t)$$ approaches $$0$$ as $$t\to\infty$$. The answer is $$\boxed{\text{A}}$$.
-:::
-::::
-
-::::problem
-12. A particle moves in one dimension with acceleration $$a=-kv^2$$ when $$v>0$$, where $$k>0$$. Which statement must be true while the particle is moving in the positive direction?
-
-(A) The velocity-time graph is a straight line.
-
-(B) The velocity decreases, but the magnitude of the slope decreases as the particle slows.
-
-(C) The acceleration is constant and negative.
-
-(D) Equal decreases in speed take equal amounts of time.
-
-
-:::solution
-The acceleration is negative because the particle is moving in the positive direction but $$a=-kv^2$$.
-
-
-The slope of a velocity-time graph is acceleration. Since
-
-$$
-\lvert a\rvert=kv^2,
-$$
-
-the magnitude of the slope is large when the particle is fast and smaller after it slows down. Therefore the velocity decreases, but the slope becomes less steep in magnitude. The answer is $$\boxed{\text{B}}$$.
 :::
 ::::
 

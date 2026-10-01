@@ -306,9 +306,44 @@ is valid only for $$x>0$$. The original function exists at $$x=0$$, but the tang
 
 From a graph, differentiability fails at places where the tangent slope is not a single finite number.
 
-// add the theorem where it is like if a function is continuous it is differentiable (so equivalently if it is not differentiable it is not continuous)
+<div class="theorem-box">
 
-// add common types of continuous but not differentiable functions
+**Theorem.** If $$f$$ is differentiable at $$x=a$$, then $$f$$ is continuous at $$x=a$$.
+
+**Proof (Differentiability implies continuity).** Suppose $$f'(a)$$ exists. For $$x\ne a$$, rewrite the change in the function as
+
+$$
+f(x)-f(a)
+=\frac{f(x)-f(a)}{x-a}(x-a).
+$$
+
+As $$x\to a$$, the first factor approaches $$f'(a)$$ and the second factor approaches $$0$$. Therefore,
+
+$$
+\lim_{x\to a}\big(f(x)-f(a)\big)
+=f'(a)\cdot0
+=0.
+$$
+
+It follows that
+
+$$
+\lim_{x\to a}f(x)=f(a),
+$$
+
+which is exactly the definition of continuity at $$a$$.
+
+</div>
+
+The contrapositive is often more useful: if $$f$$ is **not continuous** at $$a$$, then it cannot be differentiable there. The converse is false. A function may be continuous at a point without being differentiable at that point.
+
+The most common continuous-but-nondifferentiable behaviors are:
+
+- **Corner:** the one-sided derivatives are finite but unequal, as with $$f(x)=\lvert x\rvert$$ at $$x=0$$.
+- **Cusp:** the one-sided slopes become infinite with opposite signs, as with $$f(x)=x^{2/3}$$ at $$x=0$$.
+- **Vertical tangent:** the slopes become infinite with the same sign, as with $$f(x)=x^{1/3}$$ at $$x=0$$.
+
+All three graphs remain unbroken at the point, so continuity alone does not guarantee differentiability.
 
 ---
 
@@ -339,16 +374,14 @@ $$
 $$
 \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
 =
-\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}
+\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2} \qquad g(x) \ne 0.
 $$
-
-for $$g(x) \ne 0$$.
 
 The theorems can all be proven by just plugging in the parent function into the derivative definition, so I will only show one example proof below.
 
 <div class="theorem-box">
 
-**Proof (Product Rule).** Let $$H(x)=f(x) \cdot g(x)$$
+**Proof (Product Rule).** Let $$H(x)=f(x) \cdot g(x)$$. Find $$\frac{dH}{dx}$$.
 
 Start from the derivative definition:
 
@@ -430,9 +463,9 @@ Note that if you have more than two functions, the procedure is the same, giving
 
 <div class="theorem-box">
 
-**Example.** Differentiate $$y = x^3 \sin x$$.
+**Example.** Differentiate $$y=(x^2+1)(x^3-4x)$$ using the product rule.
 
-Let $$f(x)=x^3$$ and $$g(x)=\sin x$$, so $$f'(x)=3x^2$$ and $$g'(x)=\cos x$$. The product rule gives
+Let $$f(x)=x^2+1$$ and $$g(x)=x^3-4x$$, so $$f'(x)=2x$$ and $$g'(x)=3x^2-4$$. The product rule gives
 
 $$
 y' = f'(x)g(x) + f(x)g'(x).
@@ -441,10 +474,14 @@ $$
 Substitute the pieces:
 
 $$
-y' = 3x^2\sin x + x^3\cos x.
+y'=2x(x^3-4x)+(x^2+1)(3x^2-4).
 $$
 
-So $$y' = 3x^2\sin x + x^3\cos x$$.
+Simplifying gives
+
+$$
+y'=5x^4-9x^2-4.
+$$
 
 </div>
 
@@ -594,12 +631,6 @@ $$
 
 </div>
 
-<div class="theorem-box">
-
-**Proof (Derivative of $$\tan x$$).**
-
-</div>
-
 ### Derivatives of exponential and logarithmic functions
 
 Exponential functions are special because their rate of change is proportional to their current value. For $$a^x$$, the derivative is some constant multiple of $$a^x$$:
@@ -627,7 +658,37 @@ $$
 \qquad a>0,\ a\ne 1.
 $$
 
-The proofs for these formulas can be proved using techniques from Unit 3.
+The formulas for general exponential and logarithmic functions can be derived later using the chain rule and derivatives of inverse functions. The most important starting point is the derivative of $$e^x$$.
+
+<div class="theorem-box">
+
+**Proof (Derivative of $$e^x$$).** Start from the derivative definition:
+
+$$
+\frac{d}{dx}(e^x)
+=\lim_{h\to0}\frac{e^{x+h}-e^x}{h}.
+$$
+
+Using $$e^{x+h}=e^xe^h$$, factor out the term that does not depend on $$h$$:
+
+$$
+\frac{d}{dx}(e^x)
+=e^x\lim_{h\to0}\frac{e^h-1}{h}.
+$$
+
+The base $$e$$ is defined so that
+
+$$
+\lim_{h\to0}\frac{e^h-1}{h}=1.
+$$
+
+Therefore,
+
+$$
+\frac{d}{dx}(e^x)=e^x.
+$$
+
+</div>
 
 ### Derivatives of hyperbolic functions
 
@@ -946,6 +1007,32 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$
 
    State the function being differentiated and the input at which its derivative is evaluated.
+
+:::solution
+The limit has the form
+
+$$
+\lim_{h\to0}\frac{f(2+h)-f(2)}{h}
+$$
+
+for
+
+$$
+f(x)=x^{7/3}.
+$$
+
+Therefore, the limit equals $$f'(2)$$. By the power rule,
+
+$$
+f'(x)=\frac73x^{4/3}.
+$$
+
+Evaluating at $$x=2$$ gives
+
+$$
+\boxed{f'(2)=\frac73\,2^{4/3}=\frac{14\sqrt[3]{2}}{3}.}
+$$
+:::
 ::::
 
 ::::problem
@@ -960,6 +1047,50 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$
 
    Given that $$f(0)=2$$, find $$a$$, $$b$$, and $$c$$ so that $$f$$ is differentiable at $$x=1$$. Then find $$f'(1)$$.
+
+:::solution
+Since $$0<1$$,
+
+$$
+f(0)=a(0)^2+b=b.
+$$
+
+Thus $$b=2$$. Continuity at $$x=1$$ requires the two branches to meet:
+
+$$
+a+b=c.
+$$
+
+For differentiability, the one-sided derivatives must also agree. The derivative of the left branch is $$2ax$$, while the derivative of the right branch is $$3/x$$. At $$x=1$$,
+
+$$
+2a=3,
+$$
+
+so
+
+$$
+a=\frac32.
+$$
+
+Now use continuity:
+
+$$
+c=a+b=\frac32+2=\frac72.
+$$
+
+The common one-sided derivative is $$3$$. Therefore,
+
+$$
+\boxed{a=\frac32,
+\qquad
+b=2,
+\qquad
+c=\frac72,
+\qquad
+f'(1)=3.}
+$$
+:::
 ::::
 
 ::::problem
@@ -974,6 +1105,75 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$(B)$$ Find the equation of the tangent line to $$f$$ at $$x=2$$.
 
    $$(C)$$ Determine whether either nondifferentiable point can be repaired by changing only the value of $$f$$ at that point. Explain.
+
+:::solution
+Factor the expression inside the absolute value:
+
+$$
+x^2-4x+3=(x-1)(x-3).
+$$
+
+It is nonnegative for $$x\le1$$ and $$x\ge3$$, and negative for $$1<x<3$$. Thus
+
+$$
+f(x)=
+\begin{cases}
+x^2-4x+3, & x\le1,\\
+-x^2+4x-3, & 1<x<3,\\
+x^2-4x+3, & x\ge3.
+\end{cases}
+$$
+
+At $$x=1$$, the one-sided derivatives are
+
+$$
+f'_-(1)=2(1)-4=-2
+$$
+
+and
+
+$$
+f'_+(1)=-2(1)+4=2.
+$$
+
+At $$x=3$$,
+
+$$
+f'_-(3)=-2(3)+4=-2
+$$
+
+and
+
+$$
+f'_+(3)=2(3)-4=2.
+$$
+
+Therefore, $$f$$ is not differentiable at $$x=1$$ or $$x=3$$.
+
+At $$x=2$$, use the middle branch:
+
+$$
+f(2)=1
+\qquad\text{and}\qquad
+f'(2)=-2(2)+4=0.
+$$
+
+The tangent line is
+
+$$
+y-1=0(x-2),
+$$
+
+or $$y=1$$.
+
+Neither corner can be repaired by changing only the point value. Keeping the current value preserves continuity but leaves unequal one-sided slopes; changing the value makes the function discontinuous, which also prevents differentiability.
+
+$$
+\boxed{\text{Nondifferentiable at }x=1\text{ and }x=3;
+\qquad
+\text{tangent at }x=2:\ y=1.}
+$$
+:::
 ::::
 
 ::::problem
@@ -993,6 +1193,68 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$
 
    Find $$H(2)$$ and $$H'(2)$$. Then write an equation of the normal line to the graph of $$H$$ at $$x=2$$.
+
+:::solution
+First evaluate the function:
+
+$$
+H(2)=\frac{f(2)g(2)}{f(2)+g(2)}
+=
+\frac{(3)(-1)}{3-1}
+=
+-\frac32.
+$$
+
+Let
+
+$$
+N(x)=f(x)g(x)
+\qquad\text{and}\qquad
+D(x)=f(x)+g(x).
+$$
+
+At $$x=2$$,
+
+$$
+N(2)=-3,
+\qquad
+N'(2)=f'(2)g(2)+f(2)g'(2)=(4)(-1)+(3)(5)=11,
+$$
+
+and
+
+$$
+D(2)=2,
+\qquad
+D'(2)=f'(2)+g'(2)=9.
+$$
+
+The quotient rule gives
+
+$$
+H'(2)
+=
+\frac{N'(2)D(2)-N(2)D'(2)}{[D(2)]^2}
+=
+\frac{(11)(2)-(-3)(9)}{4}
+=
+\frac{49}{4}.
+$$
+
+The normal slope is the negative reciprocal, $$-4/49$$. Using the point $$(2,-3/2)$$, the normal line is
+
+$$
+y+\frac32=-\frac4{49}(x-2).
+$$
+
+$$
+\boxed{H(2)=-\frac32,
+\qquad
+H'(2)=\frac{49}{4},
+\qquad
+y+\frac32=-\frac4{49}(x-2).}
+$$
+:::
 ::::
 
 ::::problem
@@ -1003,6 +1265,41 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$
 
    Use the domain of the original function, not only the appearance of your final derivative.
+
+:::solution
+Write the function as
+
+$$
+y=(x^2+1)(e^x+\sin x)x^{-3}.
+$$
+
+Differentiate the three factors:
+
+$$
+y'
+=
+2x(e^x+\sin x)x^{-3}
++(x^2+1)(e^x+\cos x)x^{-3}
+-3(x^2+1)(e^x+\sin x)x^{-4}.
+$$
+
+Combining the terms over $$x^4$$ gives
+
+$$
+y'
+=
+\frac{x(x^2+1)(e^x+\cos x)-(x^2+3)(e^x+\sin x)}{x^4}.
+$$
+
+The exponential and trigonometric factors are differentiable for every real number. The only restriction comes from the original denominator $$x^3$$, so the function and its derivative are undefined at $$x=0$$.
+
+$$
+\boxed{y'
+=
+\frac{x(x^2+1)(e^x+\cos x)-(x^2+3)(e^x+\sin x)}{x^4},
+\qquad x\ne0.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1013,10 +1310,102 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$
 
    Find every point on the graph of $$f$$ where the tangent line has slope $$-1$$. Write the equation of each tangent line and determine whether the corresponding normal lines are parallel.
+
+:::solution
+Polynomial division gives
+
+$$
+f(x)=x+1+\frac2{x-1}.
+$$
+
+Therefore,
+
+$$
+f'(x)=1-\frac2{(x-1)^2}.
+$$
+
+Set the derivative equal to $$-1$$:
+
+$$
+1-\frac2{(x-1)^2}=-1.
+$$
+
+Then
+
+$$
+(x-1)^2=1,
+$$
+
+so $$x=0$$ or $$x=2$$. The corresponding points are
+
+$$
+f(0)=-1
+\qquad\text{and}\qquad
+f(2)=5.
+$$
+
+The tangent lines with slope $$-1$$ are
+
+$$
+y+1=-x
+\quad\Longrightarrow\quad
+y=-x-1
+$$
+
+and
+
+$$
+y-5=-(x-2)
+\quad\Longrightarrow\quad
+y=-x+7.
+$$
+
+Both normal lines have slope $$1$$. Their equations are $$y=x-1$$ and $$y=x+3$$, so they are parallel.
+
+$$
+\boxed{(0,-1)\text{ and }(2,5);
+\quad
+\text{tangents }y=-x-1\text{ and }y=-x+7;
+\quad
+\text{the normals are parallel}.}
+$$
+:::
 ::::
 
 ::::problem
 7. Let $$f(x)=x^2e^x$$. Find $$f^{(12)}(0)$$ without differentiating the function twelve times one line at a time. Develop and justify a pattern for $$f^{(n)}(x)$$ that works for every positive integer $$n$$.
+
+:::solution
+In the $$n$$th derivative of $$x^2e^x$$, the polynomial factor can be differentiated zero, one, or two times. The generalized product rule gives
+
+$$
+f^{(n)}(x)
+=
+\binom n0x^2e^x
++\binom n1(2x)e^x
++\binom n2(2)e^x.
+$$
+
+Since every derivative of $$e^x$$ is still $$e^x$$,
+
+$$
+f^{(n)}(x)
+=
+e^x\left[x^2+2nx+n(n-1)\right].
+$$
+
+At $$x=0$$,
+
+$$
+f^{(n)}(0)=n(n-1).
+$$
+
+Therefore,
+
+$$
+\boxed{f^{(12)}(0)=12(11)=132.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1041,6 +1430,66 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$(B)$$ Use the derivative definition to determine whether each function is differentiable at $$x=0$$.
 
    $$(C)$$ For each derivative that exists, find its value.
+
+:::solution
+For continuity of $$f$$ at $$0$$, use
+
+$$
+\lvert x\sin(1/x)\rvert\le\lvert x\rvert.
+$$
+
+The outer bound approaches $$0$$, so
+
+$$
+\lim_{x\to0}f(x)=0=f(0).
+$$
+
+Similarly,
+
+$$
+\lvert x^2\sin(1/x)\rvert\le x^2,
+$$
+
+so $$g$$ is also continuous at $$0$$.
+
+Now use the derivative definition for $$f$$:
+
+$$
+f'(0)
+=
+\lim_{h\to0}\frac{f(h)-f(0)}{h}
+=
+\lim_{h\to0}\sin(1/h).
+$$
+
+This limit does not exist because the sine term continues to oscillate. Therefore, $$f$$ is not differentiable at $$0$$.
+
+For $$g$$,
+
+$$
+g'(0)
+=
+\lim_{h\to0}\frac{h^2\sin(1/h)}{h}
+=
+\lim_{h\to0}h\sin(1/h).
+$$
+
+Since
+
+$$
+\lvert h\sin(1/h)\rvert\le\lvert h\rvert,
+$$
+
+the Squeeze Theorem gives $$g'(0)=0$$.
+
+$$
+\boxed{f\text{ and }g\text{ are continuous at }0;
+\quad
+f'(0)\text{ does not exist};
+\quad
+g'(0)=0.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1051,6 +1500,62 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
    $$(B)$$ Write equations of the tangent and normal lines at $$x=0$$.
 
    $$(C)$$ Find the $$x$$-intercept of the normal line.
+
+:::solution
+Since
+
+$$
+f'(x)=a^x\ln a,
+$$
+
+the point of tangency is $$(0,1)$$ and the tangent slope is
+
+$$
+f'(0)=\ln a.
+$$
+
+The tangent line is
+
+$$
+y-1=(\ln a)x.
+$$
+
+It passes through $$(2,5)$$, so
+
+$$
+5-1=2\ln a.
+$$
+
+Thus $$\ln a=2$$ and
+
+$$
+a=e^2.
+$$
+
+The tangent line is $$y=2x+1$$. Its normal slope is $$-1/2$$, so the normal line is
+
+$$
+y-1=-\frac12x.
+$$
+
+Set $$y=0$$ to find its $$x$$-intercept:
+
+$$
+-1=-\frac12x
+\quad\Longrightarrow\quad
+x=2.
+$$
+
+$$
+\boxed{a=e^2;
+\qquad
+\text{tangent: }y=2x+1;
+\qquad
+\text{normal: }y=1-\frac12x;
+\qquad
+x\text{-intercept: }(2,0).}
+$$
+:::
 ::::
 
 ::::problem
@@ -1063,6 +1568,40 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
     $$
 
     prove that $$\cosh^2x-\sinh^2x$$ is constant. Then determine the value of the constant by evaluating the expression at $$x=0$$.
+
+:::solution
+Let
+
+$$
+F(x)=\cosh^2x-\sinh^2x.
+$$
+
+Using the product rule on each square,
+
+$$
+F'(x)
+=
+2\cosh x\sinh x-2\sinh x\cosh x
+=0.
+$$
+
+A function whose derivative is zero on an interval is constant there. To identify the constant, evaluate at $$x=0$$:
+
+$$
+F(0)
+=
+\cosh^2(0)-\sinh^2(0)
+=
+1^2-0^2
+=1.
+$$
+
+Therefore,
+
+$$
+\boxed{\cosh^2x-\sinh^2x=1.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1074,6 +1613,64 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
     $$
 
     Find the exact time $$t\in(1,e)$$ at which the instantaneous velocity equals the average velocity on the interval $$[1,e]$$. Verify directly that your answer lies in the required interval.
+
+:::solution
+The instantaneous velocity is
+
+$$
+v(t)=s'(t)=\ln t+1.
+$$
+
+The average velocity on $$[1,e]$$ is
+
+$$
+\frac{s(e)-s(1)}{e-1}
+=
+\frac{e\ln e-1\ln1}{e-1}
+=
+\frac{e}{e-1}.
+$$
+
+Set the two velocities equal:
+
+$$
+\ln t+1=\frac{e}{e-1}.
+$$
+
+Then
+
+$$
+\ln t
+=
+\frac{e}{e-1}-1
+=
+\frac1{e-1},
+$$
+
+so
+
+$$
+t=e^{1/(e-1)}.
+$$
+
+Because $$e>2$$,
+
+$$
+0<\frac1{e-1}<1.
+$$
+
+Exponentiating gives
+
+$$
+1<e^{1/(e-1)}<e,
+$$
+
+so the time lies in the required interval.
+
+$$
+\boxed{t=e^{1/(e-1)}.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1084,4 +1681,47 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and v
     $$(B)$$ Use limit laws and the derivative definition to prove that $$f$$ must be continuous at $$x=a$$.
 
     $$(C)$$ Give an example showing that the converse is false: a function can be continuous at a point without being differentiable there.
+
+:::solution
+For $$x\ne a$$,
+
+$$
+f(x)-f(a)
+=
+(x-a)\frac{f(x)-f(a)}{x-a}.
+$$
+
+Take the limit as $$x\to a$$. Differentiability tells us that the difference quotient approaches the finite number $$f'(a)$$:
+
+$$
+\lim_{x\to a}[f(x)-f(a)]
+=
+\left(\lim_{x\to a}(x-a)\right)
+\left(\lim_{x\to a}\frac{f(x)-f(a)}{x-a}\right).
+$$
+
+Therefore,
+
+$$
+\lim_{x\to a}[f(x)-f(a)]
+=
+0\cdot f'(a)
+=0.
+$$
+
+Adding $$f(a)$$ to both sides gives
+
+$$
+\lim_{x\to a}f(x)=f(a),
+$$
+
+which is exactly continuity at $$x=a$$.
+
+The converse is false. For example, $$f(x)=\lvert x\rvert$$ is continuous at $$x=0$$, but its left-hand derivative is $$-1$$ and its right-hand derivative is $$1$$. Therefore it is not differentiable there.
+
+$$
+\boxed{f\text{ differentiable at }a\Longrightarrow f\text{ continuous at }a,
+\quad\text{but the converse is false}.}
+$$
+:::
 ::::

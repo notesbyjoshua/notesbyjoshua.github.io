@@ -1435,6 +1435,48 @@ When a question asks you to justify existence, say why both sides approach the s
    $$(A)$$ Find $$\displaystyle\lim_{x\to0^-}f(g(x))$$ and $$\displaystyle\lim_{x\to0^+}f(g(x))$$.
 
    $$(B)$$ Determine whether $$\displaystyle\lim_{x\to0}f(g(x))$$ exists. Justify your answer by describing the direction from which $$g(x)$$ approaches $$2$$ on each side of $$x=0$$.
+
+:::solution
+For $$x<0$$, $$\lvert x\rvert=-x$$, so
+
+$$
+g(x)=2-x^2<2.
+$$
+
+Therefore, as $$x\to0^-$$, the input $$g(x)$$ approaches $$2$$ from the left. It follows that
+
+$$
+\lim_{x\to0^-}f(g(x))
+=
+\lim_{u\to2^-}f(u)
+=-1.
+$$
+
+For $$x>0$$, $$\lvert x\rvert=x$$, so
+
+$$
+g(x)=2+x^2>2.
+$$
+
+Thus $$g(x)\to2^+$$ as $$x\to0^+$$, giving
+
+$$
+\lim_{x\to0^+}f(g(x))
+=
+\lim_{u\to2^+}f(u)
+=3.
+$$
+
+The two one-sided limits are different, so the two-sided limit does not exist. The value $$f(2)=5$$ does not affect this conclusion.
+
+$$
+\boxed{\lim_{x\to0^-}f(g(x))=-1,
+\qquad
+\lim_{x\to0^+}f(g(x))=3,
+\qquad
+\lim_{x\to0}f(g(x))\text{ does not exist}.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1447,6 +1489,53 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Show enough algebra to explain why multiplying the two indeterminate factors does not prevent the limit from existing.
+
+:::solution
+Factor the polynomial expressions in the first quotient:
+
+$$
+\lim_{x\to1}\frac{x^4-1}{x^3-1}
+=
+\lim_{x\to1}
+\frac{(x-1)(x+1)(x^2+1)}{(x-1)(x^2+x+1)}.
+$$
+
+After canceling $$x-1$$,
+
+$$
+\lim_{x\to1}\frac{(x+1)(x^2+1)}{x^2+x+1}
+=
+\frac{(2)(2)}{3}
+=
+\frac43.
+$$
+
+For the radical quotient, multiply by the conjugate:
+
+$$
+\lim_{x\to1}\frac{\sqrt{x+3}-2}{x-1}
+=
+\lim_{x\to1}
+\frac{x+3-4}{(x-1)(\sqrt{x+3}+2)}.
+$$
+
+Canceling $$x-1$$ gives
+
+$$
+\lim_{x\to1}\frac1{\sqrt{x+3}+2}
+=
+\frac14.
+$$
+
+Each factor has a finite limit after simplification, so the product law applies:
+
+$$
+\boxed{\lim_{x\to1}
+\left(\frac{x^4-1}{x^3-1}\right)
+\left(\frac{\sqrt{x+3}-2}{x-1}\right)
+=\frac43\cdot\frac14=\frac13.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1458,6 +1547,45 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Your work must reduce the expression to standard trigonometric limits.
+
+:::solution
+Use the triple-angle identity
+
+$$
+\sin(3x)=3\sin x-4\sin^3x.
+$$
+
+The numerator becomes $$-4\sin^3x$$. Also,
+
+$$
+1-\cos x=2\sin^2\left(\frac{x}{2}\right).
+$$
+
+Therefore,
+
+$$
+\lim_{x\to0}\frac{\sin(3x)-3\sin x}{x(1-\cos x)}
+=
+\lim_{x\to0}
+\frac{-4\sin^3x}{2x\sin^2(x/2)}.
+$$
+
+Since $$\sin x=2\sin(x/2)\cos(x/2)$$,
+
+$$
+\lim_{x\to0}
+\frac{-4\sin^3x}{2x\sin^2(x/2)}
+=
+\lim_{x\to0}
+-8\left(\frac{\sin x}{x}\right)\cos^2\left(\frac{x}{2}\right).
+$$
+
+Both remaining factors have standard limits:
+
+$$
+\boxed{\lim_{x\to0}\frac{\sin(3x)-3\sin x}{x(1-\cos x)}=-8.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1468,6 +1596,38 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    A table or decimal approximation is not sufficient; justify the result with inequalities and the Squeeze Theorem.
+
+:::solution
+The floor function satisfies
+
+$$
+y-1<\lfloor y\rfloor\le y.
+$$
+
+Set $$y=1/x$$. Since $$x^2>0$$ for $$x\ne0$$, multiplying through by $$x^2$$ preserves the inequalities:
+
+$$
+x-x^2
+<
+x^2\left\lfloor\frac1x\right\rfloor
+\le
+x.
+$$
+
+As $$x\to0$$,
+
+$$
+\lim_{x\to0}(x-x^2)=0
+\qquad\text{and}\qquad
+\lim_{x\to0}x=0.
+$$
+
+The same bounds work for positive and negative $$x$$. By the Squeeze Theorem,
+
+$$
+\boxed{\lim_{x\to0}x^2\left\lfloor\frac1x\right\rfloor=0.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1478,6 +1638,43 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Explain where the sign of $$x$$ matters when simplifying the square root.
+
+:::solution
+Rationalize the expression:
+
+$$
+\lim_{x\to-\infty}\left(\sqrt{9x^2-4x}+3x\right)
+=
+\lim_{x\to-\infty}
+\frac{-4x}{\sqrt{9x^2-4x}-3x}.
+$$
+
+Because $$x\to-\infty$$, $$\sqrt{x^2}=\lvert x\rvert=-x$$. Thus
+
+$$
+\sqrt{9x^2-4x}
+=
+\lvert x\rvert\sqrt{9-\frac4x}
+=
+-x\sqrt{9-\frac4x}.
+$$
+
+Substitute this into the denominator:
+
+$$
+\lim_{x\to-\infty}
+\frac{-4x}{-x\sqrt{9-4/x}-3x}
+=
+\lim_{x\to-\infty}
+\frac4{\sqrt{9-4/x}+3}.
+$$
+
+Now the limit can be evaluated directly:
+
+$$
+\boxed{\lim_{x\to-\infty}\left(\sqrt{9x^2-4x}+3x\right)=\frac23.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1488,6 +1685,46 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Find the values of $$a$$ and $$b$$ for which $$R$$ has a removable discontinuity at $$x=1$$ and a horizontal asymptote at $$y=2$$. Then find $$\displaystyle\lim_{x\to1}R(x)$$ for those values.
+
+:::solution
+The degrees of the numerator and denominator are equal, so the horizontal asymptote is the ratio of leading coefficients. Requiring the asymptote to be $$y=2$$ gives
+
+$$
+a=2.
+$$
+
+For a removable discontinuity at $$x=1$$, the numerator must vanish where the denominator does:
+
+$$
+a+b-6=0.
+$$
+
+Substituting $$a=2$$ gives $$b=4$$. Then
+
+$$
+R(x)
+=
+\frac{2x^2+4x-6}{x^2+x-2}
+=
+\frac{2(x+3)(x-1)}{(x+2)(x-1)}.
+$$
+
+For $$x\ne1$$, this simplifies to
+
+$$
+R(x)=\frac{2(x+3)}{x+2}.
+$$
+
+Therefore,
+
+$$
+\boxed{a=2,
+\qquad
+b=4,
+\qquad
+\lim_{x\to1}R(x)=\frac83.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1503,6 +1740,58 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Find the unique values of $$a$$ and $$b$$ that make $$f$$ continuous at $$x=0$$. Justify both one-sided limits.
+
+:::solution
+For the left-hand limit,
+
+$$
+\lim_{x\to0^-}\frac{\sin(ax)}{x}
+=
+a\lim_{x\to0^-}\frac{\sin(ax)}{ax}
+=a.
+$$
+
+Continuity requires this limit to equal $$f(0)=3$$, so
+
+$$
+a=3.
+$$
+
+For the right-hand limit, use $$1-\cos u=2\sin^2(u/2)$$:
+
+$$
+\lim_{x\to0^+}\frac{1-\cos(bx)}{x^2}
+=
+\lim_{x\to0^+}
+\frac{2\sin^2(bx/2)}{x^2}.
+$$
+
+Rewrite the expression around the standard sine limit:
+
+$$
+\lim_{x\to0^+}
+2\left(\frac{\sin(bx/2)}{bx/2}\right)^2
+\left(\frac{b}{2}\right)^2
+=
+\frac{b^2}{2}.
+$$
+
+Set this equal to $$3$$:
+
+$$
+\frac{b^2}{2}=3
+\quad\Longrightarrow\quad
+b^2=6.
+$$
+
+Since $$b$$ is positive, $$b=\sqrt6$$. Hence
+
+$$
+\boxed{a=3,
+\qquad
+b=\sqrt6.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1513,6 +1802,54 @@ When a question asks you to justify existence, say why both sides approach the s
    $$
 
    Give an explicit choice of $$\delta$$ in terms of $$\varepsilon$$ and explain why an additional bound on $$\lvert x-3\rvert$$ is needed.
+
+:::solution
+Let $$\varepsilon>0$$. We need to control
+
+$$
+\lvert x^2-9\rvert
+=
+\lvert x-3\rvert\lvert x+3\rvert.
+$$
+
+The factor $$\lvert x+3\rvert$$ depends on $$x$$, so first require $$\lvert x-3\rvert<1$$. Then
+
+$$
+2<x<4,
+$$
+
+which implies
+
+$$
+\lvert x+3\rvert<7.
+$$
+
+Choose
+
+$$
+\delta=\min\left\{1,\frac{\varepsilon}{7}\right\}.
+$$
+
+If $$0<\lvert x-3\rvert<\delta$$, then
+
+$$
+\lvert x^2-9\rvert
+=
+\lvert x-3\rvert\lvert x+3\rvert
+<
+7\lvert x-3\rvert
+<
+7\delta
+\le
+\varepsilon.
+$$
+
+Therefore, by the formal definition,
+
+$$
+\boxed{\lim_{x\to3}x^2=9.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1529,6 +1866,64 @@ When a question asks you to justify existence, say why both sides approach the s
    $$(B)$$ Use the Intermediate Value Theorem to show that $$p$$ has a zero in $$(0,1)$$.
 
    $$(C)$$ Apply bisection repeatedly to place that zero in an interval of length at most $$\frac18$$. State every interval you keep and justify each choice with a sign change.
+
+:::solution
+For $$r(x)=1/(x-1)$$,
+
+$$
+r(0)=-1
+\qquad\text{and}\qquad
+r(2)=1.
+$$
+
+However, $$r$$ is not continuous on $$[0,2]$$ because it is undefined at $$x=1$$. The Intermediate Value Theorem does not apply, and in fact $$1/(x-1)$$ can never equal $$0$$.
+
+The function $$p(x)=x^5+x-1$$ is a polynomial, so it is continuous on $$[0,1]$$. Its endpoint values are
+
+$$
+p(0)=-1
+\qquad\text{and}\qquad
+p(1)=1.
+$$
+
+Since the signs differ, IVT guarantees at least one zero in $$(0,1)$$.
+
+For bisection, first test $$x=1/2$$:
+
+$$
+p\left(\frac12\right)
+=
+\frac1{32}+\frac12-1
+=
+-\frac{15}{32}<0.
+$$
+
+Keep $$[1/2,1]$$. Its midpoint is $$3/4$$:
+
+$$
+p\left(\frac34\right)
+=
+\frac{243}{1024}+\frac34-1
+=
+-\frac{13}{1024}<0.
+$$
+
+Keep $$[3/4,1]$$. Its midpoint is $$7/8$$:
+
+$$
+p\left(\frac78\right)
+=
+\frac{16807}{32768}+\frac78-1
+=
+\frac{12711}{32768}>0.
+$$
+
+The final sign change is on $$[3/4,7/8]$$, whose length is $$1/8$$. Thus
+
+$$
+\boxed{\text{A zero of }p\text{ lies in }\left(\frac34,\frac78\right).}
+$$
+:::
 ::::
 
 ::::problem
@@ -1539,6 +1934,61 @@ When a question asks you to justify existence, say why both sides approach the s
     $$(B)$$ If $$\displaystyle\lim_{x\to a}f(x)=0$$ and $$g$$ is bounded near $$a$$, then $$\displaystyle\lim_{x\to a}f(x)g(x)=0$$.
 
     $$(C)$$ If $$\displaystyle\lim_{x\to a}\frac{f(x)}{g(x)}=1$$ and $$\displaystyle\lim_{x\to a}g(x)=0$$, then $$\displaystyle\lim_{x\to a}[f(x)-g(x)]=0$$.
+
+:::solution
+Statement (A) is false. For example, define
+
+$$
+f(x)=
+\begin{cases}
+-2, & x<a,\\
+2, & x\ge a.
+\end{cases}
+$$
+
+Then $$[f(x)]^2=4$$ for every $$x$$, so
+
+$$
+\lim_{x\to a}[f(x)]^2=4.
+$$
+
+However, the one-sided limits of $$f$$ are $$-2$$ and $$2$$, so $$\lim_{x\to a}f(x)$$ does not exist.
+
+Statement (B) is true. Since $$g$$ is bounded near $$a$$, there is a constant $$M>0$$ such that $$\lvert g(x)\rvert\le M$$ near $$a$$. Then
+
+$$
+\lvert f(x)g(x)\rvert
+\le
+M\lvert f(x)\rvert.
+$$
+
+Because $$f(x)\to0$$, the right side approaches $$0$$. The Squeeze Theorem gives
+
+$$
+\lim_{x\to a}f(x)g(x)=0.
+$$
+
+Statement (C) is also true. Wherever the quotient is defined,
+
+$$
+f(x)-g(x)
+=
+g(x)\left(\frac{f(x)}{g(x)}-1\right).
+$$
+
+The first factor approaches $$0$$, and the second approaches $$1-1=0$$. Therefore,
+
+$$
+\lim_{x\to a}[f(x)-g(x)]
+=
+0\cdot0
+=0.
+$$
+
+$$
+\boxed{\text{(A) false, \qquad (B) true, \qquad (C) true}.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1555,6 +2005,76 @@ When a question asks you to justify existence, say why both sides approach the s
     $$(C)$$ Evaluate $$\displaystyle\lim_{x\to-1^-}h(x)$$, $$\displaystyle\lim_{x\to2^+}h(x)$$, and $$\displaystyle\lim_{x\to3}h(x)$$, allowing infinite limits when appropriate.
 
     $$(D)$$ Classify the behavior at $$x=2$$ and $$x=3$$.
+
+:::solution
+The square root requires
+
+$$
+\frac{x+1}{x-2}\ge0.
+$$
+
+A sign chart gives
+
+$$
+x\in(-\infty,-1]\cup(2,\infty).
+$$
+
+The rational term is undefined at $$x=3$$. Therefore the exact domain is
+
+$$
+(-\infty,-1]\cup(2,3)\cup(3,\infty).
+$$
+
+Both component functions are continuous wherever they are defined, so these are also the intervals on which $$h$$ is continuous.
+
+For the first limit, the square-root term approaches $$0$$ and the rational term approaches $$2$$:
+
+$$
+\lim_{x\to-1^-}h(x)
+=
+0+\frac{(-1)^2-9}{-1-3}
+=2.
+$$
+
+As $$x\to2^+$$, the radicand grows without bound positively:
+
+$$
+\lim_{x\to2^+}\sqrt{\frac{x+1}{x-2}}=\infty.
+$$
+
+The rational term approaches $$5$$, so
+
+$$
+\lim_{x\to2^+}h(x)=\infty.
+$$
+
+At $$x=3$$, cancel the removable factor in the rational term:
+
+$$
+\frac{x^2-9}{x-3}=x+3
+$$
+
+for $$x\ne3$$. Hence
+
+$$
+\lim_{x\to3}h(x)
+=
+\sqrt{\frac{4}{1}}+6
+=8.
+$$
+
+Thus $$x=2$$ is an infinite discontinuity and vertical asymptote, while $$x=3$$ is a removable discontinuity.
+
+$$
+\boxed{\operatorname{Dom}(h)=(-\infty,-1]\cup(2,3)\cup(3,\infty),
+\quad
+\lim_{x\to-1^-}h(x)=2,
+\quad
+\lim_{x\to2^+}h(x)=\infty,
+\quad
+\lim_{x\to3}h(x)=8.}
+$$
+:::
 ::::
 
 ::::problem
@@ -1564,5 +2084,45 @@ When a question asks you to justify existence, say why both sides approach the s
     \lim_{x\to\infty}x\left(\frac{\pi}{2}-\arctan x\right).
     $$
 
-    Use a substitution that turns the expression into a standard trigonometric limit, and track the direction from which the new variable approaches $$0$$.
+:::solution
+Let
+
+$$
+u=\frac{\pi}{2}-\arctan x.
+$$
+
+As $$x\to\infty$$, $$u\to0^+$$. Since
+
+$$
+\arctan x=\frac{\pi}{2}-u,
+$$
+
+we have
+
+$$
+x=\tan\left(\frac{\pi}{2}-u\right)=\cot u.
+$$
+
+The limit becomes
+
+$$
+\lim_{u\to0^+}u\cot u
+=
+\lim_{u\to0^+}\frac{u\cos u}{\sin u}.
+$$
+
+Rewrite it using the standard sine limit:
+
+$$
+\lim_{u\to0^+}\cos u\left(\frac{u}{\sin u}\right)
+=
+1\cdot1.
+$$
+
+Therefore,
+
+$$
+\boxed{\lim_{x\to\infty}x\left(\frac{\pi}{2}-\arctan x\right)=1.}
+$$
+:::
 ::::

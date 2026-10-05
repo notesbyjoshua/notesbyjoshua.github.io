@@ -639,7 +639,7 @@ $$
 \frac{d}{dx}(a^x)=a^x\ln a.
 $$
 
-The base $$e$$ is the unique positive base where that constant is $$1$$. In other words, $$e^x$$ is the exponential function whose derivative is exactly itself. Logarithm derivatives come from the fact that logarithms are inverse functions of exponentials.
+The base $$e$$ is the unique positive base where that constant is $$1$$. In other words, $$e^x$$ is the exponential function whose derivative is exactly itself. All exponential and logarithmic differentiations can be solved using a clever trick in the limit definition.
 
 $$
 \frac{d}{dx}(e^x) = e^x
@@ -658,7 +658,7 @@ $$
 \qquad a>0,\ a\ne 1.
 $$
 
-The formulas for general exponential and logarithmic functions can be derived later using the chain rule and derivatives of inverse functions. The most important starting point is the derivative of $$e^x$$.
+The most important starting point is the derivative of $$e^x$$ and $$\ln x$$.
 
 <div class="theorem-box">
 
@@ -676,7 +676,7 @@ $$
 =e^x\lim_{h\to0}\frac{e^h-1}{h}.
 $$
 
-The base $$e$$ is defined so that
+The base $$e$$ is defined in AP Calc so that
 
 $$
 \lim_{h\to0}\frac{e^h-1}{h}=1.
@@ -686,6 +686,56 @@ Therefore,
 
 $$
 \frac{d}{dx}(e^x)=e^x.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Proof (Derivative of $$\ln x$$ from the limit definition).** For $$x>0$$, start with
+
+$$
+\frac{d}{dx}(\ln x)
+=
+\lim_{h\to0}\frac{\ln(x+h)-\ln x}{h}.
+$$
+
+Use the quotient law for logarithms:
+
+$$
+\frac{d}{dx}(\ln x)
+=
+\lim_{h\to0}\frac{1}{h}
+\ln\left(\frac{x+h}{x}\right)
+=
+\lim_{h\to0}\frac{1}{h}
+\ln\left(1+\frac{h}{x}\right).
+$$
+
+Let $$u=h/x$$, so $$h=xu$$ and $$u\to0$$. Then
+
+$$
+\frac{d}{dx}(\ln x)
+=
+\frac1x\lim_{u\to0}\frac{\ln(1+u)}{u}.
+$$
+
+To evaluate the remaining limit, let $$v=\ln(1+u)$$. Then $$u=e^v-1$$ and $$v\to0$$, so
+
+$$
+\lim_{u\to0}\frac{\ln(1+u)}{u}
+=
+\lim_{v\to0}\frac{v}{e^v-1}
+=
+\frac{1}{\displaystyle\lim_{v\to0}\frac{e^v-1}{v}}
+=1.
+$$
+
+The last step uses the defining exponential limit from the previous proof. Therefore,
+
+$$
+\frac{d}{dx}(\ln x)=\frac1x,
+\qquad x>0.
 $$
 
 </div>
@@ -860,6 +910,8 @@ $$
 
 - normal slope is $$-1/f'(a)$$ when $$f'(a) \ne 0$$.
 
+A vertical line will always have an infinite slope, so if a derivative is infinite at a point then there is a vertical tangent at that point.
+
 <div class="theorem-box">
 
 **Example.** Find the equation of the tangent line to $$f(x)=x^3+e^x$$ at $$x=2$$.
@@ -889,50 +941,6 @@ y = (12+e^2)x-(16+3e^2).
 $$
 
 </div>
-
----
-
-## Higher derivatives
-
-The second derivative $$f''(x)$$ measures the rate of change of the first derivative.
-
-The second derivative has many useful interpretations:
-
-- concavity (whether a graph is opening up or down) in pure math
-- acceleration when $$f$$ is position or angular frequency when $$f$$ is potential in physics
-
-You may also see $$f^{(n)}(x)$$ for the $$n$$th derivative. Basically, higher order derivatives just means take the derivative of a function $$n$$ times.
-
-<div class="theorem-box">
-
-**Example.** Find $$f''(x)$$ for $$f(x)=x^4-5x^2+3x$$.
-
-Differentiate once using the power rule term by term:
-
-$$
-f'(x)=4x^3-10x+3.
-$$
-
-Differentiate again to get the second derivative:
-
-$$
-f''(x)=12x^2-10.
-$$
-
-</div>
-
-### Alternate notation for higher-order derivatives
-
-Higher derivatives have several common notations. If $$y=f(x)$$, then:
-
-| Order | Prime notation | Leibniz notation | Function notation |
-|---|---|---|---|
-| First | $$y'$$ | $$\frac{dy}{dx}$$ | $$f'(x)$$ |
-| Second | $$y''$$ | $$\frac{d^2y}{dx^2}$$ | $$f''(x)$$ |
-| Third | $$y'''$$ | $$\frac{d^3y}{dx^3}$$ | $$f'''(x)$$ |
-| $$n$$th | $$y^{(n)}$$ | $$\frac{d^ny}{dx^n}$$ | $$f^{(n)}(x)$$ |
-
-The notation $$\frac{d^2y}{dx^2}$$ means "differentiate $$y$$ with respect to $$x$$ twice." It does not mean a fraction where $$dx$$ is squared in the usual algebraic sense.
 
 ---
 
@@ -992,10 +1000,29 @@ Most derivative questions are rule-recognition questions with algebra mixed in. 
 :::
 
 :::exam{topic="Derivative notation"}
-AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, $$d^2y/dx^2$$, and verbal phrases like "rate of change." Translate the notation before choosing a rule.
+AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, and verbal phrases like "rate of change." Translate the notation before choosing a rule.
 :::
 
 ---
+
+:::equations
+
+| Idea | Equation |
+| --- | --- |
+| Derivative at a point | $$f'(a)=\displaystyle\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$$ |
+| Alternate derivative form | $$f'(a)=\displaystyle\lim_{x\to a}\frac{f(x)-f(a)}{x-a}$$ |
+| Power rule | $$\dfrac{d}{dx}(x^n)=nx^{n-1}$$ |
+| Product rule | $$(fg)'=f'g+fg'$$ |
+| Quotient rule | $$\left(\dfrac{f}{g}\right)'=\dfrac{f'g-fg'}{g^2},\quad g\ne0$$ |
+| Basic trig derivatives | $$(\sin x)'=\cos x,\quad(\cos x)'=-\sin x,\quad(\tan x)'=\sec^2x$$ |
+| Remaining trig derivatives | $$(\sec x)'=\sec x\tan x,\quad(\csc x)'=-\csc x\cot x,\quad(\cot x)'=-\csc^2x$$ |
+| Exponential derivatives | $$(e^x)'=e^x,\quad(a^x)'=a^x\ln a$$ |
+| Logarithmic derivatives | $$(\ln x)'=1/x,\quad(\log_a x)'=1/(x\ln a)$$ |
+| Main hyperbolic derivatives | $$(\sinh x)'=\cosh x,\quad(\cosh x)'=\sinh x,\quad(\tanh x)'=\operatorname{sech}^2x$$ |
+| Tangent line at $$x=a$$ | $$y-f(a)=f'(a)(x-a)$$ |
+| Normal slope | $$m_{\mathrm{normal}}=-1/f'(a),\quad f'(a)\ne0$$ |
+| Symmetric derivative estimate | $$f'(a)\approx\dfrac{f(a+h)-f(a-h)}{2h}$$ |
+:::
 
 ## Practice
 
@@ -1373,37 +1400,76 @@ $$
 ::::
 
 ::::problem
-7. Let $$f(x)=x^2e^x$$. Find $$f^{(12)}(0)$$ without differentiating the function twelve times one line at a time. Develop and justify a pattern for $$f^{(n)}(x)$$ that works for every positive integer $$n$$.
+7. Starting with the change-of-base identity
+
+   $$
+   \log_a x=\frac{\ln x}{\ln a},
+   \qquad a>0,quad a\ne1,
+   $$
+
+   $$(A)$$ derive the formula for $$\displaystyle\frac{d}{dx}(\log_a x)$$;
+
+   $$(B)$$ find the value of $$a$$ for which the tangent line to $$y=\log_a x$$ at $$x=1$$ passes through $$(2,3)$$; and
+
+   $$(C)$$ write the equation of that tangent line.
 
 :::solution
-In the $$n$$th derivative of $$x^2e^x$$, the polynomial factor can be differentiated zero, one, or two times. The generalized product rule gives
+Since $$\ln a$$ is constant with respect to $$x$$,
 
 $$
-f^{(n)}(x)
+\frac{d}{dx}(\log_a x)
 =
-\binom n0x^2e^x
-+\binom n1(2x)e^x
-+\binom n2(2)e^x.
-$$
-
-Since every derivative of $$e^x$$ is still $$e^x$$,
-
-$$
-f^{(n)}(x)
+\frac1{\ln a}\frac{d}{dx}(\ln x)
 =
-e^x\left[x^2+2nx+n(n-1)\right].
+\frac1{x\ln a}.
 $$
 
-At $$x=0$$,
+At $$x=1$$,
 
 $$
-f^{(n)}(0)=n(n-1).
+\log_a1=0
 $$
 
-Therefore,
+and
 
 $$
-\boxed{f^{(12)}(0)=12(11)=132.}
+\left.\frac{d}{dx}(\log_a x)\right|_{x=1}
+=
+\frac1{\ln a}.
+$$
+
+Therefore, the tangent line at $$(1,0)$$ is
+
+$$
+y=\frac1{\ln a}(x-1).
+$$
+
+It passes through $$(2,3)$$, so
+
+$$
+3=\frac1{\ln a}(2-1).
+$$
+
+Thus
+
+$$
+\ln a=\frac13
+$$
+
+and
+
+$$
+a=e^{1/3}.
+$$
+
+For this base, the tangent slope is $$3$$, giving
+
+$$
+\boxed{a=e^{1/3},
+\qquad
+\frac{d}{dx}(\log_a x)=\frac1{x\ln a},
+\qquad
+y=3x-3.}
 $$
 :::
 ::::
@@ -1674,54 +1740,112 @@ $$
 ::::
 
 ::::problem
-12. Suppose $$f$$ is differentiable at $$x=a$$.
+12. Suppose $$f$$ is differentiable at $$x=0$$, $$f(0)=0$$, and $$f'(0)=L$$. Define
 
-    $$(A)$$ Rewrite $$f(x)-f(a)$$ as a product involving the difference quotient $$\displaystyle\frac{f(x)-f(a)}{x-a}$$.
+    $$
+    g(x)=
+    \begin{cases}
+    f(x)\sin(1/x), & x\ne0,\\
+    0, & x=0.
+    \end{cases}
+    $$
 
-    $$(B)$$ Use limit laws and the derivative definition to prove that $$f$$ must be continuous at $$x=a$$.
+    $$(A)$$ Prove that $$g$$ is continuous at $$x=0$$ for every finite value of $$L$$.
 
-    $$(C)$$ Give an example showing that the converse is false: a function can be continuous at a point without being differentiable there.
+    $$(B)$$ Prove that if $$L=0$$, then $$g$$ is differentiable at $$x=0$$ and find $$g'(0)$$.
+
+    $$(C)$$ Prove that if $$L\ne0$$, then $$g'(0)$$ does not exist. Use two sequences approaching $$0$$ along which $$\sin(1/x)$$ equals $$1$$ and $$-1$$.
+
+    $$(D)$$ Give one explicit function $$f$$ for the case $$L=0$$ and one for the case $$L\ne0$$.
 
 :::solution
-For $$x\ne a$$,
+Since $$f$$ is differentiable at $$0$$,
 
 $$
-f(x)-f(a)
+\lim_{x\to0}\frac{f(x)-f(0)}{x-0}
 =
-(x-a)\frac{f(x)-f(a)}{x-a}.
+\lim_{x\to0}\frac{f(x)}x
+=L.
 $$
 
-Take the limit as $$x\to a$$. Differentiability tells us that the difference quotient approaches the finite number $$f'(a)$$:
+The quotient $$f(x)/x$$ is therefore bounded near $$0$$. Write
 
 $$
-\lim_{x\to a}[f(x)-f(a)]
+f(x)=x\frac{f(x)}x.
+$$
+
+The factor $$x$$ approaches $$0$$ while the quotient remains bounded, so $$f(x)\to0$$. Since
+
+$$
+\lvert g(x)\rvert
 =
-\left(\lim_{x\to a}(x-a)\right)
-\left(\lim_{x\to a}\frac{f(x)-f(a)}{x-a}\right).
+\lvert f(x)\sin(1/x)\rvert
+\le
+\lvert f(x)\rvert,
 $$
 
-Therefore,
+the Squeeze Theorem gives
 
 $$
-\lim_{x\to a}[f(x)-f(a)]
+\lim_{x\to0}g(x)=0=g(0).
+$$
+
+Thus $$g$$ is continuous at $$0$$.
+
+For differentiability, use the definition:
+
+$$
+g'(0)
 =
-0\cdot f'(a)
-=0.
+\lim_{h\to0}\frac{g(h)-g(0)}h
+=
+\lim_{h\to0}\frac{f(h)}h\sin(1/h).
 $$
 
-Adding $$f(a)$$ to both sides gives
+If $$L=0$$, then $$f(h)/h\to0$$. Because $$\lvert\sin(1/h)\rvert\le1$$, the Squeeze Theorem gives
 
 $$
-\lim_{x\to a}f(x)=f(a),
+g'(0)=0.
 $$
 
-which is exactly continuity at $$x=a$$.
-
-The converse is false. For example, $$f(x)=\lvert x\rvert$$ is continuous at $$x=0$$, but its left-hand derivative is $$-1$$ and its right-hand derivative is $$1$$. Therefore it is not differentiable there.
+Now suppose $$L\ne0$$. Choose
 
 $$
-\boxed{f\text{ differentiable at }a\Longrightarrow f\text{ continuous at }a,
-\quad\text{but the converse is false}.}
+h_n=\frac{1}{\pi/2+2\pi n}
+\qquad\text{and}\qquad
+k_n=\frac{1}{3\pi/2+2\pi n}.
+$$
+
+Both sequences approach $$0^+$$, but
+
+$$
+\sin(1/h_n)=1
+\qquad\text{and}\qquad
+\sin(1/k_n)=-1.
+$$
+
+Along the first sequence, the difference quotient approaches
+
+$$
+\lim_{n\to\infty}\frac{f(h_n)}{h_n}\sin(1/h_n)=L.
+$$
+
+Along the second, it approaches
+
+$$
+\lim_{n\to\infty}\frac{f(k_n)}{k_n}\sin(1/k_n)=-L.
+$$
+
+Since $$L\ne0$$, these limits differ, so $$g'(0)$$ does not exist.
+
+For explicit examples, $$f(x)=x^2$$ has $$L=f'(0)=0$$, while $$f(x)=x$$ has $$L=f'(0)=1$$. Therefore,
+
+$$
+\boxed{g\text{ is always continuous at }0,
+\qquad
+g'(0)\text{ exists exactly when }L=0,
+\qquad
+g'(0)=0\text{ in that case}.}
 $$
 :::
 ::::

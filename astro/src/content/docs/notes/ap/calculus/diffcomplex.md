@@ -453,9 +453,9 @@ $$
 
 </div>
 
----
+### Derivatives of inverse trig functions
 
-## Derivatives of inverse trig functions
+Using the newly learned inverse function formula, we can find the formulas for all of the inverse trig functions.
 
 $$
 \frac{d}{dx}(\arcsin x) = \frac{1}{\sqrt{1-x^2}}
@@ -717,7 +717,7 @@ $$
 \frac{1}{y}\frac{dy}{dx},
 $$
 
-so the final derivative usually comes from multiplying by $$y$$, where you resubstitude the original function (if $$y=f(x)$$).
+so the final derivative usually comes from multiplying by $$y$$, where you resubstitute the original function (if $$y=f(x)$$).
 
 <div class="theorem-box">
 
@@ -789,6 +789,208 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** Let $$r$$ be any real number and let $$y=x^r.$$ Prove the power rule (ignore domain restrictions).
+
+Apply $$\ln$$ to both sides:
+
+$$
+\ln y=r\ln x.
+$$
+
+Differentiate implicitly:
+
+$$
+\frac1y\frac{dy}{dx}=\frac rx.
+$$
+
+Multiply by $$y=x^r$$:
+
+$$
+\frac{dy}{dx}
+=
+x^r\frac rx
+=
+rx^{r-1}.
+$$
+
+Thus the power rule
+
+$$
+\frac{d}{dx}(x^r)=rx^{r-1}
+$$
+
+holds for every real $$r$$ on $$x>0$$. Integer powers extend to every real input where the expression is defined, while rational powers may require additional domain restrictions.
+
+</div>
+
+---
+
+## Higher derivatives
+
+The second derivative $$f''(x)$$ measures the rate of change of the first derivative.
+
+The second derivative has many useful interpretations:
+
+- concavity (whether a graph is opening up or down) in pure math
+- acceleration when $$f$$ is position or angular frequency when $$f$$ is potential in physics
+
+You may also see $$f^{(n)}(x)$$ for the $$n$$th derivative. Basically, higher order derivatives just means take the derivative of a function $$n$$ times.
+
+### Alternate notation for higher-order derivatives
+
+Higher derivatives have several common notations. If $$y=f(x)$$, then:
+
+| Order | Prime notation | Leibniz notation | Function notation |
+|---|---|---|---|
+| First | $$y'$$ | $$\frac{dy}{dx}$$ | $$f'(x)$$ |
+| Second | $$y''$$ | $$\frac{d^2y}{dx^2}$$ | $$f''(x)$$ |
+| Third | $$y'''$$ | $$\frac{d^3y}{dx^3}$$ | $$f'''(x)$$ |
+| $$n$$th | $$y^{(n)}$$ | $$\frac{d^ny}{dx^n}$$ | $$f^{(n)}(x)$$ |
+
+The notation $$\frac{d^2y}{dx^2}$$ means "differentiate $$y$$ with respect to $$x$$ twice." It does not mean a fraction where $$dx$$ is squared in the usual algebraic sense.
+
+Higher-derivative problems are usually pattern problems rather than endurance problems. Depending on the function, the useful structure may be a repeating derivative cycle, a generalized product rule, or another round of implicit differentiation.
+
+For a product, the $$n$$th derivative can be organized with the generalized product rule:
+
+$$
+\frac{d^n}{dx^n}[u(x)v(x)]
+=
+\sum_{k=0}^{n}\binom{n}{k}u^{(k)}(x)v^{(n-k)}(x).
+$$
+
+This is also called Leibniz's rule. It is especially efficient when one factor becomes zero after only a few derivatives.
+
+<div class="theorem-box">
+
+**Example.** Let $$f(x)=\sin(3x)$$. Find $$f^{(2025)}(0)$$ without listing all $$2025$$ derivatives.
+
+Each differentiation contributes a factor of $$3$$ and advances sine by one quarter-cycle:
+
+$$
+f^{(n)}(x)
+=
+3^n\sin\left(3x+\frac{n\pi}{2}\right).
+$$
+
+Since
+
+$$
+2025=4(506)+1,
+$$
+
+the derivative has the same trig position as the first derivative. Therefore,
+
+$$
+f^{(2025)}(0)
+=
+3^{2025}\sin\left(\frac{2025\pi}{2}\right)
+=
+3^{2025}.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Let $$f(x)=x^2e^x$$. Find $$f^{(12)}(0)$$ without differentiating twelve times one line at a time.
+
+In Leibniz's rule, derivatives of $$x^2$$ vanish after the second derivative. Only three terms remain:
+
+$$
+f^{(n)}(x)
+=
+\binom n0x^2e^x
++\binom n1(2x)e^x
++\binom n2(2)e^x.
+$$
+
+Since every derivative of $$e^x$$ is still $$e^x$$,
+
+$$
+f^{(n)}(x)
+=
+e^x\left[x^2+2nx+n(n-1)\right].
+$$
+
+At $$x=0$$,
+
+$$
+f^{(n)}(0)=n(n-1).
+$$
+
+Thus
+
+$$
+f^{(12)}(0)=12(11)=132.
+$$
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** The curve
+
+$$
+x^2+xy+y^2=7
+$$
+
+passes through $$(1,2)$$. Find $$d^2y/dx^2$$ at that point.
+
+Differentiate once:
+
+$$
+2x+x\frac{dy}{dx}+y+2y\frac{dy}{dx}=0.
+$$
+
+Solve for the first derivative:
+
+$$
+\frac{dy}{dx}
+=
+-\frac{2x+y}{x+2y}.
+$$
+
+At $$(1,2)$$,
+
+$$
+\frac{dy}{dx}=-\frac45.
+$$
+
+Differentiate the equation
+
+$$
+2x+xy'+y+2yy'=0
+$$
+
+again:
+
+$$
+2+2y'+x y''+2(y')^2+2y y''=0.
+$$
+
+Collect the second-derivative terms:
+
+$$
+(x+2y)y''
+=
+-2-2y'-2(y')^2.
+$$
+
+Substitute $$x=1$$, $$y=2$$, and $$y'=-4/5$$:
+
+$$
+y''
+=
+\frac{-2+8/5-32/25}{5}
+=
+-\frac{42}{125}.
+$$
+
+</div>
+
 ---
 
 ## Tips for the exam
@@ -812,3 +1014,26 @@ AP often mixes rules. A single derivative might require product rule, chain rule
 :::
 
 Before moving on, make sure you can explain which rule is being used at each step. On AP-style questions, the hardest part is often choosing the rule order, not doing the algebra afterward.
+
+---
+
+:::equations
+
+| Idea | Equation |
+| --- | --- |
+| Chain rule | $$\dfrac{d}{dx}f(g(x))=f'(g(x))g'(x)$$ |
+| Three-layer chain | $$\dfrac{d}{dx}f(g(h(x)))=f'(g(h(x)))g'(h(x))h'(x)$$ |
+| Implicit power | $$\dfrac{d}{dx}(y^n)=ny^{n-1}\dfrac{dy}{dx}$$ |
+| Implicit product | $$\dfrac{d}{dx}(xy)=y+x\dfrac{dy}{dx}$$ |
+| Inverse-function derivative | $$(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$$ |
+| Arcsine derivative | $$\dfrac{d}{dx}\arcsin u=\dfrac{u'}{\sqrt{1-u^2}}$$ |
+| Arccosine derivative | $$\dfrac{d}{dx}\arccos u=-\dfrac{u'}{\sqrt{1-u^2}}$$ |
+| Arctangent derivative | $$\dfrac{d}{dx}\arctan u=\dfrac{u'}{1+u^2}$$ |
+| Arcsecant derivative | $$\dfrac{d}{dx}\operatorname{arcsec}u=\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}}$$ |
+| Arccosecant derivative | $$\dfrac{d}{dx}\operatorname{arccsc}u=-\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}}$$ |
+| Arccotangent derivative | $$\dfrac{d}{dx}\operatorname{arccot}u=-\dfrac{u'}{1+u^2}$$ |
+| Variable power | $$\dfrac{d}{dx}[u(x)^{v(x)}]=u^v\left(v'\ln u+v\dfrac{u'}u\right),\quad u>0$$ |
+| Real-exponent power rule | $$\dfrac{d}{dx}(x^r)=rx^{r-1},\quad r\in\mathbb R,\ x>0$$ |
+| Higher derivatives | $$f^{(n)}(x)=\dfrac{d^nf}{dx^n}$$ |
+| Generalized product rule | $$\dfrac{d^n}{dx^n}(uv)=\displaystyle\sum_{k=0}^{n}\binom nk u^{(k)}v^{(n-k)}$$ |
+:::

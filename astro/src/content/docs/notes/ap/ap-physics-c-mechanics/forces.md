@@ -145,7 +145,7 @@ The free end therefore accelerates with twice the magnitude and opposite sign. U
 
 ### Friction
 
-**Friction** is a contact force parallel to a surface that opposes relative motion or impending relative motion and will *always* point *opposite* to the direction of motion (e.g. when you are moving down a ramp friction points upwards). There are two types: static and kinetic friction.
+**Friction** is a contact force that acts parallel to a surface that opposes relative motion or impending relative motion and will *always* point *opposite* to the direction of motion (e.g. when you are moving down a ramp friction points upwards). There are two types: static and kinetic friction.
 
 Static friction is friction that prevents an object from moving, and adjusts up to a maximum value:
 

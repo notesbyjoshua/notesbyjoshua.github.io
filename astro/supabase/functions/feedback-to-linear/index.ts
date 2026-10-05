@@ -30,7 +30,7 @@ const COMMON_LABEL = "Website feedback";
 // Linear priority: 0 none, 1 urgent, 2 high, 3 normal, 4 low.
 const CATEGORY_PRIORITY: Record<string, number> = { bug: 2 };
 
-const SITE = "https://notesbyjoshua.github.io";
+const SITE = "https://notesbyjoshua.com";
 
 async function linear(query: string, variables: Record<string, unknown>) {
   const res = await fetch(LINEAR_API, {

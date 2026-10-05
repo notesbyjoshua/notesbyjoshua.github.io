@@ -21,7 +21,7 @@
 //
 // See ../README.md for full setup steps.
 
-const SITE = "https://notesbyjoshua.github.io";
+const SITE = "https://notesbyjoshua.com";
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const MANIFEST_URL =
   Deno.env.get("FRQ_MANIFEST_URL") ?? `${SITE}/generated/frq-manifest.json`;
@@ -35,6 +35,8 @@ const MAX_ANSWER_CHARS = 5000;
 // Origins allowed to call this function (the live site + local dev).
 const ALLOWED_ORIGINS = new Set([
   SITE,
+  // Temporary migration fallback for cached pages on the former hostname.
+  "https://notesbyjoshua.github.io",
   "http://localhost:4321",
   "http://localhost:3000",
 ]);

@@ -29,6 +29,7 @@
 // See ../README.md for full setup steps.
 
 const GITHUB_API = "https://api.github.com";
+const SITE = "https://notesbyjoshua.com";
 const REPO = Deno.env.get("GITHUB_REPO") ?? "notesbyjoshua/notesbyjoshua.github.io";
 const BRANCH = Deno.env.get("GITHUB_BRANCH") ?? "main";
 
@@ -50,6 +51,8 @@ const EDITABLE_TOPICS = [
 
 // Origins allowed to call this function (the live site + local dev).
 const ALLOWED_ORIGINS = new Set([
+  SITE,
+  // Temporary migration fallback for cached pages on the former hostname.
   "https://notesbyjoshua.github.io",
   "http://localhost:4321",
   "http://localhost:4322",
@@ -57,7 +60,7 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 
 function corsHeaders(origin: string | null): Record<string, string> {
-  const allow = origin && ALLOWED_ORIGINS.has(origin) ? origin : "https://notesbyjoshua.github.io";
+  const allow = origin && ALLOWED_ORIGINS.has(origin) ? origin : SITE;
   return {
     "Access-Control-Allow-Origin": allow,
     "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",

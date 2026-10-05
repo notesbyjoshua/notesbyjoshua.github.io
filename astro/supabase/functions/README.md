@@ -285,9 +285,9 @@ After the deploy finishes:
 
   ```bash
   curl -i -X OPTIONS "https://<your-project-ref>.supabase.co/functions/v1/grade-frq" \
-    -H "Origin: https://notesbyjoshua.github.io" \
+    -H "Origin: https://notesbyjoshua.com" \
     -H "Access-Control-Request-Method: POST"
-  # expect: access-control-allow-origin: https://notesbyjoshua.github.io
+  # expect: access-control-allow-origin: https://notesbyjoshua.com
   ```
 
 ### Adding FRQs to a note

@@ -3,7 +3,7 @@
 // so search engines understand them as free learning resources / articles.
 import Default from '@astrojs/starlight/components/Head.astro';
 
-const SITE_URL = 'https://notesbyjoshua.github.io';
+const SITE_URL = 'https://notesbyjoshua.com';
 const route = (Astro.locals as any).starlightRoute;
 const entry = route?.entry;
 const isNote = Astro.url.pathname.startsWith('/notes/');

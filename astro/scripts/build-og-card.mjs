@@ -70,7 +70,7 @@ const bg = Buffer.from(`
   <rect x="48" y="44" width="1104" height="542" rx="30" fill="none" stroke="#ddd6c8" stroke-width="3"/>
 
   <g>
-    <text class="ui" x="220" y="132" font-size="30" font-weight="600" fill="#b84a18" letter-spacing="1">notesbyjoshua.github.io</text>
+    <text class="ui" x="220" y="132" font-size="30" font-weight="600" fill="#b84a18" letter-spacing="1">notesbyjoshua.com</text>
     <text class="display" x="78" y="326" font-size="112" font-weight="700" fill="#141820">${esc('Notes by Joshua')}</text>
     <text class="prose" x="84" y="414" font-size="39" font-weight="500" fill="#5d564a">${esc('Free, shareable study notes')}</text>
     <text class="prose" x="84" y="469" font-size="33" font-weight="500" fill="#5d564a">${esc('AP courses · math · physics · chemistry')}</text>

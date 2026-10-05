@@ -1,7 +1,7 @@
 # Notes by Joshua
 
 Free study notes for AP courses and math/physics/chemistry competitions.
-Live at **https://notesbyjoshua.github.io**.
+Live at **https://notesbyjoshua.com**.
 
 ## Stack
 

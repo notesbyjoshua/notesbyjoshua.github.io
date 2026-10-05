@@ -3,7 +3,7 @@ import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
-const SITE_URL = 'https://notesbyjoshua.github.io';
+const SITE_URL = 'https://notesbyjoshua.com';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..');
 const docsDir = join(root, 'src', 'content', 'docs');

@@ -51,6 +51,8 @@ export default defineConfig({
 			lastUpdated: true,
 			favicon: '/assets/Images/favicon.jpeg',
 			components: {
+				// Site-wide domain-migration announcement below the header.
+				Banner: './src/components/Banner.astro',
 				// Show an account indicator in the header (keeps social icons too).
 				SocialIcons: './src/components/HeaderAccount.astro',
 				// Add a Bookmark toggle next to the title on note pages.

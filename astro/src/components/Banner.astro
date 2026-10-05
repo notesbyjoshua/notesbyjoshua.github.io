@@ -1,0 +1,53 @@
+<aside class="site-update" data-pagefind-ignore aria-label="Site update">
+	<span class="site-update__badge">Update</span>
+	<span>Notes by Joshua has officially moved to <a href="https://notesbyjoshua.com/">notesbyjoshua.com</a>.</span>
+</aside>
+
+<style>
+	.site-update {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.65rem;
+		padding: 0.65rem var(--sl-nav-pad-x);
+		border-block: 1px solid color-mix(in srgb, var(--sl-color-accent) 36%, var(--sl-color-gray-5));
+		background: color-mix(in srgb, var(--sl-color-accent-low) 72%, var(--sl-color-bg));
+		color: var(--sl-color-text);
+		font-family: var(--font-ui, sans-serif);
+		font-size: var(--sl-text-sm);
+		font-weight: 500;
+		line-height: 1.35;
+		text-align: center;
+		text-wrap: balance;
+		box-shadow: var(--sl-shadow-sm);
+	}
+
+	.site-update__badge {
+		flex: none;
+		padding: 0.12rem 0.55rem;
+		border-radius: 999px;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-text-invert);
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	.site-update a {
+		color: var(--sl-color-text-accent);
+		font-weight: 700;
+		text-underline-offset: 0.18em;
+	}
+
+	.site-update a:hover { text-decoration-thickness: 2px; }
+
+	@media (max-width: 30rem) {
+		.site-update { align-items: flex-start; padding-block: 0.7rem; }
+	}
+
+	@media print {
+		.site-update { display: none; }
+	}
+</style>

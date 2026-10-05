@@ -972,6 +972,22 @@ As $$t \to \infty$$, the exponential vanishes and $$v \to v_t$$, as expected. Th
 | Top-of-loop minimum speed | $$v_{\text{top}} = \sqrt{gr}$$ |
 | Terminal velocity (linear drag) | $$v_t = mg/b$$ |
 | Center of mass dynamics | $$\sum \vec{F}_{\text{ext}} = M\vec{a}_{\text{CM}}$$ |
+| Fixed pulley, both coordinates downward | $$y_1+y_2=\text{constant},\quad a_1+a_2=0$$ |
+| Movable pulley, two supporting segments, downward coordinates | $$2y_p+y_e=\text{constant},\quad 2a_p+a_e=0$$ |
+| Two vertical supporting tensions (up positive) | $$2T-Mg=Ma_y$$ |
+| Incline, rope at angle $$\alpha$$ above slope, contact maintained | $$F_N=mg\cos\theta-T\sin\alpha$$ |
+| Sliding uphill, uphill positive | $$T\cos\alpha-mg\sin\theta-\mu_kF_N=ma$$ |
+| Impending slip, gravity-only incline | $$\tan\theta_{\max}=\mu_s$$ |
+| Tangential force equation | $$\sum F_t=ma_t$$ |
+| Conical pendulum ($$\theta$$ from vertical) | $$T\cos\theta=mg,\quad T\sin\theta=mv^2/r,\quad r=L\sin\theta$$ |
+| Hill crest, ordinary contact | $$mg-F_N=mv^2/r,\quad v_{\max}=\sqrt{gr}$$ |
+| Pendulum ($$\theta$$ from downward vertical) | $$T-mg\cos\theta=mv^2/L,\quad ma_t=-mg\sin\theta$$ |
+| Bob fixed in horizontally accelerating car | $$\tan\theta=a/g$$ |
+| Rotating cylinder, rider not slipping | $$F_N=m\omega^2r,\quad mg\le\mu_sF_N,\quad \omega_{\min}=\sqrt{g/(\mu_s r)}$$ |
+| Universal gravitation and field | $$F_g=Gm_1m_2/r^2,\quad g(r)=GM/r^2$$ |
+| Circular orbit about a dominant central mass | $$v=\sqrt{GM/r}$$ |
+| Constant-mass calculus form | $$\vec F_{\mathrm{net}}=m\,d\vec v/dt=m\,d^2\vec r/dt^2$$ |
+| Linear drag force, falling from rest (down positive) | $$m\,dv/dt=mg-bv,\quad v(t)=\frac{mg}{b}(1-e^{-bt/m}),\quad \tau=m/b$$ |
 :::
 
 ## Practice

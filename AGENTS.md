@@ -381,6 +381,7 @@ Output:
 Do not rewrite large sections unless asked. Prefer reporting issues first.
 
 When making edits:
+- After every note edit, check the final equations box immediately before Practice against the current instructional content. Add or revise relevant summary equations, remove stale entries, and retain the notation, sign conventions, and validity conditions used in the page.
 - preserve my writing style
 - keep Markdown/Jekyll formatting valid
 - use `$$...$$` for both inline and display KaTeX math; never single-dollar delimiters in note prose. Inside fenced TikZ code, retain the single-dollar LaTeX labels required by TikZ.

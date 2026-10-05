@@ -17,171 +17,6 @@ sidebar:
 
 ---
 
-## Constant acceleration in one dimension
-
-Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five**) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
-
-:::key{name="The Big Five"}
-1. Missing $$\Delta x$$: $$v_f = v_0 + at$$
-2. Missing $$v_f$$: $$\Delta x = v_0t + \frac{1}{2}at^2$$
-3. Missing $$v_0$$: $$\Delta x = v_f t - \frac{1}{2}at^2$$
-4. Missing $$t$$: $$v^2 = v_0^2 + 2a\Delta x$$
-5. Missing $$a$$: $$\Delta x = \frac{v_0+v_f}{2}t$$
-:::
-
-These are algebraic consequences of $$a = dv/dt$$ constant and $$v = dx/dt$$.
-
-:::conditions
-- Valid only for **constant acceleration**. For non-constant acceleration you need other methods (talked about later).
-- If $$a=0$$, they reduce to the constant-velocity result $$\Delta x=vt$$.
-:::
-
-<div class="theorem-box">
-
-**Proof (The Big Five).** Start with constant acceleration:
-
-$$
-a=\frac{dv}{dt}.
-$$
-
-Since $$a$$ is constant, integrate from $$0$$ to $$t$$:
-
-$$
-\int_{v_0}^{v}dv=\int_0^t a\,dt.
-$$
-
-This gives
-
-$$
-v-v_0=at,
-$$
-
-so
-
-$$
-v=v_0+at.
-$$
-
-That proves equation 1.
-
-Since velocity is the derivative of position,
-
-$$
-v=\frac{dx}{dt}.
-$$
-
-Using $$v(t)=v_0+at$$,
-
-$$
-\Delta x=\int_0^t v(t)\,dt=\int_0^t (v_0+at)\,dt.
-$$
-
-Therefore
-
-$$
-\Delta x=v_0t+\frac{1}{2}at^2.
-$$
-
-That proves equation 2.
-
-Solve equation 1 for the initial velocity:
-
-$$
-v_0=v-at.
-$$
-
-Substitute into equation 2:
-
-$$
-\Delta x=(v-at)t+\frac{1}{2}at^2.
-$$
-
-So
-
-$$
-\Delta x=vt-\frac{1}{2}at^2.
-$$
-
-That proves equation 3.
-
-To eliminate time, use the chain rule:
-
-$$
-a=\frac{dv}{dt}=\frac{dv}{dx}\frac{dx}{dt}=v\frac{dv}{dx}.
-$$
-
-Then
-
-$$
-a\,dx=v\,dv.
-$$
-
-Integrate from $$x_0$$ to $$x$$ and from $$v_0$$ to $$v$$:
-
-$$
-\int_{x_0}^{x}a\,dx=\int_{v_0}^{v}v\,dv.
-$$
-
-So
-
-$$
-a\Delta x=\frac{1}{2}(v^2-v_0^2),
-$$
-
-which rearranges to
-
-$$
-v^2=v_0^2+2a\Delta x.
-$$
-
-That proves equation 4.
-
-Finally, for constant acceleration, the velocity-time graph is a straight line, so displacement is the area under that graph: a trapezoid with bases $$v_0$$ and $$v$$ and width $$t$$. Thus
-
-$$
-\Delta x=\frac{v_0+v}{2}t.
-$$
-
-That proves equation 5.
-
-</div>
-
-:::tip
-Always check that your signs for $$v_0$$, $$v$$, $$a$$, and $$\Delta x$$ match the coordinate system and stay consistent with your definitions (e.g. if you take up as $$+y$$ then gravity has negative acceleration).
-:::
-
-<div class="theorem-box">
-
-**Example.** A car traveling at $$v_0 = 25\ \text{m/s}$$ brakes with constant deceleration and comes to rest in $$40\ \text{m}$$. Find the acceleration and the time it takes to stop.
-
-The final velocity is $$v = 0$$, and we know $$v_0$$ and $$\Delta x$$ but not $$t$$, so use equation 4 (missing $$t$$):
-
-$$
-v^2 = v_0^2 + 2a\Delta x \;\Rightarrow\; 0 = (25)^2 + 2a(40).
-$$
-
-Solve:
-
-$$
-a = -\frac{625}{80} = -7.8\ \text{m/s}^2.
-$$
-
-The negative sign means the acceleration opposes the motion, as expected for braking. For the time, use equation 1:
-
-$$
-v = v_0 + at \;\Rightarrow\; 0 = 25 + (-7.8)t,
-$$
-
-$$
-t = \frac{25}{7.8} \approx 3.2\ \text{s}.
-$$
-
-A quick check with equation 5: $$\Delta x = \frac{v_0 + v}{2}t = \frac{25 + 0}{2}(3.2) \approx 40\ \text{m}$$, which matches.
-
-</div>
-
----
-
 ## Scalars and Vectors
 
 A **scalar** has magnitude only (examples: speed, distance, time). A **vector** is a quantity that has magnitude and direction (examples: displacement, velocity, acceleration). 
@@ -445,6 +280,171 @@ At $$t = 3\ \text{s}$$,
 $$
 x(3) = 2(3) + (3)^3 = 6 + 27 = 33\ \text{m}.
 $$
+
+</div>
+
+---
+
+## Constant acceleration in one dimension
+
+Many problems use constant acceleration $$a$$ (free fall near Earth’s surface is a common case with $$a = -g$$ or $$a = +g$$ depending on axis choice). The following equations (known as the **Big Five**) are very useful for these types of problems, since they only require 4 out of the 5 useful variables ($$a$$, $$v_f$$, $$v_0$$, $$\Delta x$$, $$t$$). By convention, we set $$t_0 = 0$$, with $$a$$ being acceleration, $$v_0$$ being initial velocity, $$v_f$$ being final velocity, $$\Delta x$$ being displacement, and $$t$$ being time:
+
+:::key{name="The Big Five"}
+1. Missing $$\Delta x$$: $$v_f = v_0 + at$$
+2. Missing $$v_f$$: $$\Delta x = v_0t + \frac{1}{2}at^2$$
+3. Missing $$v_0$$: $$\Delta x = v_f t - \frac{1}{2}at^2$$
+4. Missing $$t$$: $$v^2 = v_0^2 + 2a\Delta x$$
+5. Missing $$a$$: $$\Delta x = \frac{v_0+v_f}{2}t$$
+:::
+
+These are algebraic consequences of $$a = dv/dt$$ constant and $$v = dx/dt$$.
+
+:::conditions
+- Valid only for **constant acceleration**. For non-constant acceleration you need other methods (talked about later).
+- If $$a=0$$, they reduce to the constant-velocity result $$\Delta x=vt$$.
+:::
+
+<div class="theorem-box">
+
+**Proof (The Big Five).** Start with constant acceleration:
+
+$$
+a=\frac{dv}{dt}.
+$$
+
+Since $$a$$ is constant, integrate from $$0$$ to $$t$$:
+
+$$
+\int_{v_0}^{v}dv=\int_0^t a\,dt.
+$$
+
+This gives
+
+$$
+v-v_0=at,
+$$
+
+so
+
+$$
+v=v_0+at.
+$$
+
+That proves equation 1.
+
+Since velocity is the derivative of position,
+
+$$
+v=\frac{dx}{dt}.
+$$
+
+Using $$v(t)=v_0+at$$,
+
+$$
+\Delta x=\int_0^t v(t)\,dt=\int_0^t (v_0+at)\,dt.
+$$
+
+Therefore
+
+$$
+\Delta x=v_0t+\frac{1}{2}at^2.
+$$
+
+That proves equation 2.
+
+Solve equation 1 for the initial velocity:
+
+$$
+v_0=v-at.
+$$
+
+Substitute into equation 2:
+
+$$
+\Delta x=(v-at)t+\frac{1}{2}at^2.
+$$
+
+So
+
+$$
+\Delta x=vt-\frac{1}{2}at^2.
+$$
+
+That proves equation 3.
+
+To eliminate time, use the chain rule:
+
+$$
+a=\frac{dv}{dt}=\frac{dv}{dx}\frac{dx}{dt}=v\frac{dv}{dx}.
+$$
+
+Then
+
+$$
+a\,dx=v\,dv.
+$$
+
+Integrate from $$x_0$$ to $$x$$ and from $$v_0$$ to $$v$$:
+
+$$
+\int_{x_0}^{x}a\,dx=\int_{v_0}^{v}v\,dv.
+$$
+
+So
+
+$$
+a\Delta x=\frac{1}{2}(v^2-v_0^2),
+$$
+
+which rearranges to
+
+$$
+v^2=v_0^2+2a\Delta x.
+$$
+
+That proves equation 4.
+
+Finally, for constant acceleration, the velocity-time graph is a straight line, so displacement is the area under that graph: a trapezoid with bases $$v_0$$ and $$v$$ and width $$t$$. Thus
+
+$$
+\Delta x=\frac{v_0+v}{2}t.
+$$
+
+That proves equation 5.
+
+</div>
+
+:::tip
+Always check that your signs for $$v_0$$, $$v$$, $$a$$, and $$\Delta x$$ match the coordinate system and stay consistent with your definitions (e.g. if you take up as $$+y$$ then gravity has negative acceleration).
+:::
+
+<div class="theorem-box">
+
+**Example.** A car traveling at $$v_0 = 25\ \text{m/s}$$ brakes with constant deceleration and comes to rest in $$40\ \text{m}$$. Find the acceleration and the time it takes to stop.
+
+The final velocity is $$v = 0$$, and we know $$v_0$$ and $$\Delta x$$ but not $$t$$, so use equation 4 (missing $$t$$):
+
+$$
+v^2 = v_0^2 + 2a\Delta x \;\Rightarrow\; 0 = (25)^2 + 2a(40).
+$$
+
+Solve:
+
+$$
+a = -\frac{625}{80} = -7.8\ \text{m/s}^2.
+$$
+
+The negative sign means the acceleration opposes the motion, as expected for braking. For the time, use equation 1:
+
+$$
+v = v_0 + at \;\Rightarrow\; 0 = 25 + (-7.8)t,
+$$
+
+$$
+t = \frac{25}{7.8} \approx 3.2\ \text{s}.
+$$
+
+A quick check with equation 5: $$\Delta x = \frac{v_0 + v}{2}t = \frac{25 + 0}{2}(3.2) \approx 40\ \text{m}$$, which matches.
 
 </div>
 
@@ -1306,7 +1306,26 @@ $$
 
 At $$d=d_{\max}$$ the two angles coincide. A requested distance greater than $$d_{\max}$$ is unreachable at that launch speed.
 
-// add another method for phi max where you just take the derivative of the distance function
+**Calculus method.** Hold $$v_0$$ and $$\theta$$ fixed and differentiate the range with respect to $$\phi$$, measuring angles in radians:
+
+$$
+\frac{dd}{d\phi}=\frac{2v_0^2}{g\cos^2\theta}\cos(2\phi+\theta).
+$$
+
+Setting this equal to zero gives $$2\phi+\theta=\pi/2$$ in the allowed launch-angle interval. Thus
+
+$$
+\phi_{\mathrm{opt}}=\frac{\pi}{4}-\frac{\theta}{2}.
+$$
+
+To confirm that this critical point maximizes the range, differentiate again:
+
+$$
+\frac{d^2d}{d\phi^2}
+=-\frac{4v_0^2}{g\cos^2\theta}\sin(2\phi+\theta).
+$$
+
+At the critical point, the sine is $$1$$, so the second derivative is negative. The range also approaches zero at both endpoints $$\phi=0$$ and $$\phi=\pi/2-\theta$$ of the uphill launch interval, making this the absolute maximum.
 
 </div>
 
@@ -1332,6 +1351,16 @@ At $$d=d_{\max}$$ the two angles coincide. A requested distance greater than $$d
 | Max height (level ground) | $$h = \dfrac{v_0^2\sin^2\theta}{2g}$$ |
 | Time of flight (level ground) | $$T = \dfrac{2v_0\sin\theta}{g}$$ |
 | Relative velocity | $$\vec{v}_{A/C} = \vec{v}_{A/B} + \vec{v}_{B/C}$$ |
+| Relative acceleration (parallel, nonrotating axes) | $$\vec a_{A/C}=\vec a_{A/B}+\vec a_{B/C}$$ |
+| Circular speed, period, frequency | $$v=r\lvert\omega\rvert=2\pi r/T,\quad f=1/T$$ |
+| Circular acceleration components | $$a_c=v^2/r=r\omega^2,\quad a_t=dv/dt$$ |
+| Total circular acceleration | $$\lvert\vec a\rvert=\sqrt{a_c^2+a_t^2}$$ |
+| Linear drag acceleration (down positive, released from rest) | $$dv/dt=g-bv,\quad v(t)=\frac gb(1-e^{-bt}),\quad v_T=g/b$$ |
+| Ramp axes: signed slope angle $$\theta$$, launch angle $$\phi$$ above ramp | $$a_x=-g\sin\theta,\quad a_y=-g\cos\theta$$ |
+| Ramp velocity components | $$v_x=v_0\cos\phi-gt\sin\theta,\quad v_y=v_0\sin\phi-gt\cos\theta$$ |
+| Ramp position from launch | $$x=v_0t\cos\phi-\frac12gt^2\sin\theta,\quad y=v_0t\sin\phi-\frac12gt^2\cos\theta$$ |
+| Return to ramp | $$t_f=\frac{2v_0\sin\phi}{g\cos\theta},\quad d=\frac{v_0^2[\sin(2\phi+\theta)-\sin\theta]}{g\cos^2\theta}$$ |
+| Maximum ramp range (fixed launch speed) | $$\phi_{\mathrm{opt}}=\pi/4-\theta/2,\quad d_{\max}=\frac{v_0^2}{g(1+\sin\theta)}$$ |
 :::
 
 ## Practice

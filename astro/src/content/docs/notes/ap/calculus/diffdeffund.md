@@ -1400,76 +1400,108 @@ $$
 ::::
 
 ::::problem
-7. Starting with the change-of-base identity
+7. For $$a>0$$ with $$a\ne1$$, define
 
    $$
-   \log_a x=\frac{\ln x}{\ln a},
-   \qquad a>0,quad a\ne1,
+   F_a(x)=\frac{\log_a x}{x},
+   \qquad x>0.
    $$
 
-   $$(A)$$ derive the formula for $$\displaystyle\frac{d}{dx}(\log_a x)$$;
+   $$(A)$$ Use the change-of-base identity to find $$F_a'(x)$$.
 
-   $$(B)$$ find the value of $$a$$ for which the tangent line to $$y=\log_a x$$ at $$x=1$$ passes through $$(2,3)$$; and
+   $$(B)$$ Find the point where the graph of $$F_a$$ has a horizontal tangent, and write the equation of that tangent line in terms of $$a$$.
 
-   $$(C)$$ write the equation of that tangent line.
+   $$(C)$$ The tangent line at $$x=1$$ intersects the horizontal tangent from part $$(B)$$. Find their intersection point in terms of $$a$$.
+
+   $$(D)$$ Suppose the intersection point from part $$(C)$$ lies on the line $$y=1/2$$. Find $$a$$ exactly and write the equations of both tangent lines.
 
 :::solution
-Since $$\ln a$$ is constant with respect to $$x$$,
+By the change-of-base identity,
 
 $$
-\frac{d}{dx}(\log_a x)
+F_a(x)=\frac{\ln x}{x\ln a}.
+$$
+
+Since $$\ln a$$ is a nonzero constant, the quotient rule gives
+
+$$
+F_a'(x)
 =
-\frac1{\ln a}\frac{d}{dx}(\ln x)
+\frac{x(1/x)-\ln x}{x^2\ln a}
 =
-\frac1{x\ln a}.
+\frac{1-\ln x}{x^2\ln a}.
+$$
+
+The tangent is horizontal when $$F_a'(x)=0$$. The denominator is nonzero on the domain, so
+
+$$
+1-\ln x=0,
+$$
+
+which gives $$x=e$$. At this input,
+
+$$
+F_a(e)=\frac{1}{e\ln a}.
+$$
+
+Thus the horizontal tangent line is
+
+$$
+y=\frac{1}{e\ln a}.
 $$
 
 At $$x=1$$,
 
 $$
-\log_a1=0
+F_a(1)=0
+\qquad\text{and}\qquad
+F_a'(1)=\frac1{\ln a},
 $$
 
-and
+so the other tangent line is
 
 $$
-\left.\frac{d}{dx}(\log_a x)\right|_{x=1}
-=
-\frac1{\ln a}.
+y=\frac{x-1}{\ln a}.
 $$
 
-Therefore, the tangent line at $$(1,0)$$ is
+At the intersection of the two tangent lines,
 
 $$
-y=\frac1{\ln a}(x-1).
+\frac{x-1}{\ln a}=\frac1{e\ln a}.
 $$
 
-It passes through $$(2,3)$$, so
+Multiplying by the nonzero quantity $$\ln a$$ gives
 
 $$
-3=\frac1{\ln a}(2-1).
+x=1+\frac1e.
 $$
 
-Thus
+Therefore, the intersection point is
 
 $$
-\ln a=\frac13
+\left(1+\frac1e,\frac1{e\ln a}\right).
 $$
 
-and
+If its $$y$$-coordinate is $$1/2$$, then
 
 $$
-a=e^{1/3}.
+\frac1{e\ln a}=\frac12.
 $$
 
-For this base, the tangent slope is $$3$$, giving
+It follows that
 
 $$
-\boxed{a=e^{1/3},
-\qquad
-\frac{d}{dx}(\log_a x)=\frac1{x\ln a},
-\qquad
-y=3x-3.}
+\ln a=\frac2e
+\qquad\Longrightarrow\qquad
+a=e^{2/e}.
+$$
+
+For this value of $$a$$, $$1/\ln a=e/2$$. The two tangent lines are therefore
+
+$$
+\boxed{y=\frac e2(x-1)
+\qquad\text{and}\qquad
+y=\frac12.}
 $$
 :::
 ::::
@@ -1478,83 +1510,92 @@ $$
 8. Define
 
    $$
-   f(x)=
-   \begin{cases}
-   x\sin(1/x), & x\ne0,\\
-   0, & x=0,
-   \end{cases}
-   \qquad
-   g(x)=
-   \begin{cases}
-   x^2\sin(1/x), & x\ne0,\\
-   0, & x=0.
-   \end{cases}
+   p(x)=(x-1)\lvert x\rvert^{2/3}.
    $$
 
-   $$(A)$$ Determine whether each function is continuous at $$x=0$$.
+   $$(A)$$ Show that $$p$$ is continuous at $$x=0$$.
 
-   $$(B)$$ Use the derivative definition to determine whether each function is differentiable at $$x=0$$.
+   $$(B)$$ Use the derivative definition to determine whether $$p'(0)$$ exists. Describe the behavior of the difference quotient from the left and from the right.
 
-   $$(C)$$ For each derivative that exists, find its value.
+   $$(C)$$ Find $$p'(x)$$ separately for $$x<0$$ and $$x>0$$. Then find every point on the graph where the tangent line is horizontal.
+
+   $$(D)$$ Write the equation of each horizontal tangent line and explain what the results from parts $$(A)$$ and $$(B)$$ reveal about the graph at $$x=0$$.
 
 :::solution
-For continuity of $$f$$ at $$0$$, use
+The functions $$x-1$$ and $$\lvert x\rvert^{2/3}$$ are continuous for every real input. Their product is therefore continuous, and
 
 $$
-\lvert x\sin(1/x)\rvert\le\lvert x\rvert.
+p(0)=(-1)(0)=0.
 $$
 
-The outer bound approaches $$0$$, so
+To test differentiability at $$0$$, use the definition:
 
 $$
-\lim_{x\to0}f(x)=0=f(0).
-$$
-
-Similarly,
-
-$$
-\lvert x^2\sin(1/x)\rvert\le x^2,
-$$
-
-so $$g$$ is also continuous at $$0$$.
-
-Now use the derivative definition for $$f$$:
-
-$$
-f'(0)
+p'(0)
 =
-\lim_{h\to0}\frac{f(h)-f(0)}{h}
+\lim_{h\to0}\frac{p(h)-p(0)}h
 =
-\lim_{h\to0}\sin(1/h).
+\lim_{h\to0}\frac{(h-1)\lvert h\rvert^{2/3}}h.
 $$
 
-This limit does not exist because the sine term continues to oscillate. Therefore, $$f$$ is not differentiable at $$0$$.
-
-For $$g$$,
+For $$h>0$$, the difference quotient becomes
 
 $$
-g'(0)
+h^{-1/3}(h-1),
+$$
+
+which approaches $$-\infty$$ as $$h\to0^+$$. For $$h<0$$, write $$h=-t$$ with $$t>0$$. Then the quotient is
+
+$$
+\frac{(-t-1)t^{2/3}}{-t}
 =
-\lim_{h\to0}\frac{h^2\sin(1/h)}{h}
+(t+1)t^{-1/3},
+$$
+
+which approaches $$+\infty$$ as $$t\to0^+$$. The one-sided difference quotients do not approach the same finite value, so $$p'(0)$$ does not exist.
+
+For $$x>0$$, $$\lvert x\rvert^{2/3}=x^{2/3}$$. The product rule gives
+
+$$
+p'(x)
 =
-\lim_{h\to0}h\sin(1/h).
+x^{2/3}+\frac23(x-1)x^{-1/3}
+=
+\frac{5x-2}{3x^{1/3}}.
 $$
 
-Since
+For $$x<0$$, the derivative of $$\lvert x\rvert^{2/3}$$ is $$-(2/3)\lvert x\rvert^{-1/3}$$. Therefore,
 
 $$
-\lvert h\sin(1/h)\rvert\le\lvert h\rvert,
+p'(x)
+=
+\lvert x\rvert^{2/3}
+-\frac23(x-1)\lvert x\rvert^{-1/3}
+=
+\frac{2-5x}{3\lvert x\rvert^{1/3}}.
 $$
 
-the Squeeze Theorem gives $$g'(0)=0$$.
+When $$x<0$$, both $$2-5x$$ and the denominator are positive, so there are no horizontal tangents on that interval. When $$x>0$$,
 
 $$
-\boxed{f\text{ and }g\text{ are continuous at }0;
-\quad
-f'(0)\text{ does not exist};
-\quad
-g'(0)=0.}
+5x-2=0
+\qquad\Longrightarrow\qquad
+x=\frac25.
 $$
+
+The corresponding point is
+
+$$
+\left(\frac25,-\frac35\left(\frac25\right)^{2/3}\right).
+$$
+
+Because the slope is zero there, the horizontal tangent line is
+
+$$
+\boxed{y=-\frac35\left(\frac25\right)^{2/3}.}
+$$
+
+The graph is continuous at $$x=0$$, but its one-sided slopes become unbounded with opposite signs. Thus the graph has a cusp at $$(0,0)$$ rather than a differentiable point.
 :::
 ::::
 

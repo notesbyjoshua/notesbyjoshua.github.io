@@ -64,9 +64,9 @@ The parametric form still gives extra information: as $$t$$ increases, $$x=t+1$$
   width=8.5cm, height=6.5cm,
   xlabel=$x$, ylabel=$y$,
 ]
-\addplot[blue, very thick, samples=260, domain=0:360] ({2*cos(x)},{sin(2*x)});
-\addplot[->, orange!85!black, very thick] coordinates {(1.73,0.87) (1.38,1.22)};
-\addplot[only marks, mark=*, mark size=1.7pt, blue] coordinates {(1.73,0.87)};
+\addplot[blue, very thick, samples=180, domain=-1:2.5] { (x-1)^2-2 };
+\addplot[->, orange!85!black, very thick] coordinates {(0,-1) (0.4,-1.64)};
+\addplot[only marks, mark=*, mark size=1.7pt, blue] coordinates {(1,-2)};
 \node[orange!85!black, anchor=south] at (axis cs:0,1.4) {direction as $t$ increases};
 \end{axis}
 \end{tikzpicture}
@@ -370,6 +370,50 @@ $$
 
 </div>
 
+### A self-intersection can have two tangent lines
+
+Different parameter values can produce the same point. At such a point, calculate derivatives at each parameter separately because the two passages may have different slopes and velocities. A rectangular picture may show an intersection while hiding which branch is traced first.
+
+To find a self-intersection, solve both coordinate equalities simultaneously for distinct parameters. Equal horizontal coordinates alone do not suffice, and equal positions at different times do not mean two particles collide.
+
+<div class="theorem-box">
+
+**Example.** For $$x=t^2-1$$ and $$y=t^3-t$$, find the tangent lines at the self-intersection, all horizontal and vertical tangents, and the parametric concavity intervals.
+
+At $$t=-1$$ and $$t=1$$, both coordinates are zero, so the origin is traced twice. For $$t\ne0$$,
+
+$$
+\frac{dy}{dx}=\frac{3t^2-1}{2t}.
+$$
+
+At negative one the slope is negative one; at positive one the slope is positive one. Thus the two tangent lines through the origin are $$y=-x$$ and $$y=x$$.
+
+Horizontal tangents occur at $$t=\pm1/\sqrt3$$. Their horizontal coordinate is $$-2/3$$ and their vertical coordinate is $$-2t/3$$. Since $$2t\ne0$$ at these parameters, both satisfy the horizontal-tangent test.
+
+At $$t=0$$, the horizontal velocity is zero while the vertical velocity is negative one. This gives the vertical tangent $$x=-1$$ at $$(-1,0)$$.
+
+For concavity, differentiate the slope with respect to the parameter and divide again by $$x'$$:
+
+$$
+\frac{d^2y}{dx^2}
+=\frac{\frac32+\frac1{2t^2}}{2t}
+=\frac{3t^2+1}{4t^3}.
+$$
+
+The branches are concave down for $$t<0$$ and concave up for $$t>0$$, where the curve can locally be treated as a graph over $$x$$. The denominator vanishes at the vertical tangent, so the formula does not assign an ordinary second derivative there.
+
+</div>
+
+### When both coordinate derivatives vanish
+
+The ratio test for tangents assumes that the appropriate denominator or numerator is nonzero. If both vanish, simplify the ratio for nearby parameters or eliminate the parameter locally. A stopped particle can still lie on a smooth geometric path.
+
+For example, $$x=t^3$$ and $$y=t^6$$ give $$x'(0)=y'(0)=0$$, but eliminating the parameter gives $$y=x^2$$. The path has a horizontal tangent at the origin. For $$t\ne0$$, the slope ratio simplifies to $$2t^3$$ and approaches zero, confirming that tangent.
+
+Compare $$x=t^2$$ and $$y=t^3$$. Again both derivatives vanish at zero, but now $$y^2=x^3$$ describes a cusp, with two branches meeting at a point where the motion stops and reverses horizontal direction. A limiting slope can identify the tangent line without proving the path is smooth.
+
+These examples explain why a zero-over-zero ratio requires analysis rather than an automatic horizontal or vertical label.
+
 ---
 
 ## Polar coordinates
@@ -381,8 +425,10 @@ x = r\cos\theta, \qquad y = r\sin\theta
 $$
 
 $$
-r^2 = x^2 + y^2, \qquad \theta = \tan^{-1}(\frac{y}{x})
+r^2 = x^2 + y^2, \qquad \tan\theta = \frac{y}{x}\quad(x\ne0).
 $$
+
+The inverse tangent alone does not determine the correct quadrant. Choose an angle consistent with the signs of both coordinates, or use a quadrant-aware angle calculation.
 
 Different polar pairs can describe the same point because adding $$2\pi$$ to $$\theta$$ changes nothing and negative $$r$$ reflects through the origin. If $$r$$ is negative, the point is plotted in the opposite direction from the angle. You can learn more about polar coordinates in [Unit 10](/notes/ap/precalc/additionaltrig/) of AP Precalculus.
 
@@ -472,6 +518,59 @@ $$
 
 This is the same structure as parametric second derivatives, just with $$\theta$$ as the parameter.
 
+### A changing radius is not the whole velocity
+
+The derivative $$dr/d\theta$$ measures radial change per radian. It is not a Cartesian tangent slope, and it is not a time rate unless the angle itself is the time parameter.
+
+If $$\theta=\theta(t)$$ and $$r=r(\theta(t))$$, the radial time rate is
+
+$$
+\frac{dr}{dt}=\frac{dr}{d\theta}\frac{d\theta}{dt}.
+$$
+
+The particle also moves around the pole. Differentiating the rectangular coordinates gives
+
+$$
+\frac{dx}{dt}=\frac{dr}{dt}\cos\theta-r\sin\theta\frac{d\theta}{dt},
+\qquad
+\frac{dy}{dt}=\frac{dr}{dt}\sin\theta+r\cos\theta\frac{d\theta}{dt}.
+$$
+
+Squaring and adding cancels the cross terms:
+
+$$
+\text{speed}
+=\sqrt{\left(\frac{dr}{dt}\right)^2+
+r^2\left(\frac{d\theta}{dt}\right)^2}.
+$$
+
+The first contribution is radial motion and the second is motion around the pole. A particle traveling on a circle has zero radial rate and can still have positive speed.
+
+<div class="theorem-box">
+
+**Example.** A particle follows $$r=1+\cos\theta$$. At one instant, $$\theta=\pi/2$$ and $$d\theta/dt=2$$ radians per second. Find its radial rate, Cartesian velocity, speed, and tangent slope.
+
+At the specified angle,
+
+$$
+r=1,\qquad \frac{dr}{d\theta}=-1,
+\qquad \frac{dr}{dt}=(-1)(2)=-2.
+$$
+
+The Cartesian component rates are
+
+$$
+\frac{dx}{dt}=(-2)(0)-(1)(1)(2)=-2,
+\qquad
+\frac{dy}{dt}=(-2)(1)+(1)(0)(2)=-2.
+$$
+
+Thus velocity is $$\langle-2,-2\rangle$$ and speed is $$2\sqrt2$$. The tangent slope is $$(-2)/(-2)=1$$.
+
+These quantities differ for a reason: the radius is shrinking at two length units per second, while the simultaneous angular motion adds another perpendicular contribution to speed. The radial derivative with respect to angle is negative one, yet the Cartesian tangent slope is positive one.
+
+</div>
+
 <div class="theorem-box">
 
 **Example.** Find the slope of the polar curve $$r=2\cos\theta$$ at $$\theta=\frac{\pi}{4}$$.
@@ -524,6 +623,37 @@ A = \frac12 \int_a^b [r(\theta)]^2\,d\theta.
 $$
 
 If a curve is traced more than once over an interval, the integral counts the repeated tracing. Choose angle bounds that trace the intended region exactly once whenever possible.
+
+### Tracing one petal or one loop
+
+Zeros of $$r$$ often give useful boundaries because they identify passages through the pole. They do not automatically establish that the intervening interval traces one simple region. Test intermediate angles, note where the radius is negative, and use symmetry only after identifying which part of the curve is being traced.
+
+For a negative radius, the actual point lies on the ray with angle $$\theta+\pi$$. Squaring the radius in the area formula produces a positive sector contribution, but it does not change which physical ray contains the point. This distinction matters when comparing two different polar curves.
+
+<div class="theorem-box">
+
+**Example.** Find the area of the rightmost petal of $$r=3\cos(2\theta)$$ and the total area of all its petals.
+
+The rightmost petal is centered at angle zero. The adjacent zeros satisfy $$2\theta=\pm\pi/2$$, so it is traced once for $$-\pi/4\le\theta\le\pi/4$$. On this interval, the radius is nonnegative.
+
+Its area is
+
+$$
+A_{\mathrm{petal}}
+=\frac12\int_{-\pi/4}^{\pi/4}9\cos^2(2\theta)\,d\theta.
+$$
+
+Using symmetry and power reduction,
+
+$$
+A_{\mathrm{petal}}
+=9\int_0^{\pi/4}\frac{1+\cos4\theta}{2}\,d\theta
+=\frac{9\pi}{8}.
+$$
+
+The curve has four congruent petals, so its total area is $$9\pi/2$$. The interval $$0\le\theta\le\pi/2$$ also has that same numerical petal-area integral, but it traces halves of two different petals. Correct bounds should describe the requested region, not merely happen to produce its area.
+
+</div>
 
 ### Area bounded by polar curves
 
@@ -662,6 +792,42 @@ $$
 
 </div>
 
+### Common interior uses the smaller radius
+
+On a ray where both curves have nonnegative radii and each region fills the segment from the pole to its boundary, their common interior extends only to the smaller radius. Their union extends to the larger radius, while the area between them uses the difference of their squared radii.
+
+These are three different region descriptions. In particular, adding the two enclosed areas counts the common interior twice. Find where the radial ordering changes before setting up the integral.
+
+<div class="theorem-box">
+
+**Example.** Find the area common to the circles $$r=2\cos\theta$$ and $$r=2\sin\theta$$.
+
+The first circle has center $$(1,0)$$ and radius one; the second has center $$(0,1)$$ and radius one. Their common region lies in the first quadrant. Both circles pass through the pole, and their other same-angle intersection satisfies
+
+$$
+2\cos\theta=2\sin\theta,
+\qquad \theta=\frac\pi4.
+$$
+
+On $$[0,\pi/4]$$, the sine radius is smaller. On $$[\pi/4,\pi/2]$$, the cosine radius is smaller. Thus
+
+$$
+A=\frac12\int_0^{\pi/4}(2\sin\theta)^2\,d\theta
++\frac12\int_{\pi/4}^{\pi/2}(2\cos\theta)^2\,d\theta.
+$$
+
+By symmetry the two contributions are equal:
+
+$$
+A=4\int_0^{\pi/4}\sin^2\theta\,d\theta
+=\left[2\theta-\sin2\theta\right]_0^{\pi/4}
+=\frac\pi2-1.
+$$
+
+The pole is a shared point even though the curves reach it at different angle values. Solving only the equality of the radii at a common angle would omit that intersection from the geometric description.
+
+</div>
+
 ### Arc length in polar form
 
 If $$r=f(\theta)$$, then arc length is
@@ -702,6 +868,40 @@ Thus
 $$
 L=\int_0^{\pi/2}2\,d\theta=\pi.
 $$
+
+</div>
+
+### The absolute value in a polar length integral
+
+Arc length uses the square root of a sum of squares. Simplifying a perfect square produces an absolute value, which may require a split even when the original radius is nonnegative.
+
+<div class="theorem-box">
+
+**Example.** Find the full perimeter of the cardioid $$r=2(1+\cos\theta)$$.
+
+One full tracing is $$0\le\theta\le2\pi$$. With $$r'=-2\sin\theta$$,
+
+$$
+r^2+(r')^2
+=4(1+\cos\theta)^2+4\sin^2\theta
+=16\cos^2(\theta/2).
+$$
+
+Therefore,
+
+$$
+L=\int_0^{2\pi}4\lvert\cos(\theta/2)\rvert\,d\theta.
+$$
+
+The cosine changes sign at $$\theta=\pi$$, so
+
+$$
+L=4\int_0^\pi\cos(\theta/2)\,d\theta
+-4\int_\pi^{2\pi}\cos(\theta/2)\,d\theta
+=8+8=16.
+$$
+
+Dropping the absolute value would produce zero length by canceling the two halves. The cusp at the pole does not prevent the finite length calculation on the two smooth pieces.
 
 </div>
 
@@ -903,11 +1103,120 @@ $$
 
 </div>
 
+### Speeding up in two dimensions
+
+Acceleration need not point along the path. It can change the direction of velocity, its magnitude, or both. A nonzero acceleration does not automatically imply increasing speed.
+
+For nonzero velocity, differentiate the squared speed:
+
+$$
+\frac d{dt}(\mathbf v\cdot\mathbf v)
+=2\mathbf v\cdot\mathbf a.
+$$
+
+Since $$\lvert\mathbf v\rvert^2=\mathbf v\cdot\mathbf v$$, the chain rule gives
+
+$$
+\frac d{dt}\lvert\mathbf v\rvert
+=\frac{\mathbf v\cdot\mathbf a}{\lvert\mathbf v\rvert}.
+$$
+
+A positive dot product means speeding up, and a negative dot product means slowing down. A zero dot product at nonzero speed means the speed is instantaneously stationary, even though the direction may be changing. In one-dimensional motion, this reduces to the familiar sign test for $$va$$.
+
+<div class="theorem-box">
+
+**Example.** A particle has velocity $$\mathbf v(t)=\langle2t-2,3t^2-3\rangle$$ for $$0\le t\le2$$ and initial position $$\langle1,-2\rangle$$. Find its position, when it is at rest, and when its speed increases.
+
+Integrate component by component and use both initial coordinates:
+
+$$
+\mathbf r(t)=\langle t^2-2t+1,\ t^3-3t-2\rangle.
+$$
+
+The particle is at rest only when both velocity components vanish, which occurs at $$t=1$$. Its position then is $$\langle0,-4\rangle$$.
+
+Acceleration is $$\mathbf a=\langle2,6t\rangle$$, so
+
+$$
+\mathbf v\cdot\mathbf a
+=4(t-1)+18t(t^2-1)
+=2(t-1)(9t^2+9t+2).
+$$
+
+The quadratic factor is positive for nonnegative times. Thus speed decreases on $$(0,1)$$ and increases on $$(1,2)$$. The dot-product formula for the derivative of speed is not used at the rest instant itself because its denominator is zero there.
+
+The displacement over the whole interval is
+
+$$
+\mathbf r(2)-\mathbf r(0)=\langle0,2\rangle.
+$$
+
+This vector does not give distance traveled. That distance is the nonnegative scalar
+
+$$
+\int_0^2\sqrt{(2t-2)^2+(3t^2-3)^2}\,dt.
+$$
+
+</div>
+
+### Recovering position when the initial time is not zero
+
+If velocity is known and the initial position is specified at $$t=a$$, write
+
+$$
+\mathbf r(t)=\mathbf r(a)+\int_a^t\mathbf v(u)\,du.
+$$
+
+This form handles each integration constant automatically. It also works for times earlier than $$a$$ because the integral reverses orientation. A negative time interval does not require changing the sign of velocity separately.
+
+Two particles collide only if their positions agree at the same time. Intersections of their paths can occur at different times and therefore need not be collisions. Solve both coordinate equalities with a shared time variable for a collision question, rather than merely checking that the two geometric traces cross.
+
+### Geometric length versus repeated travel
+
+Reparameterizing a curve can change its speed without changing its shape. If the same simple path is traced once in the opposite direction, its length is unchanged because the speed is a magnitude. If the path is traversed twice, integrating speed counts both trips.
+
+For $$\mathbf r(t)=\langle\cos t,\sin t\rangle$$, speed is one. Over $$[0,2\pi]$$ the total distance is $$2\pi$$ and displacement is zero. Over $$[0,4\pi]$$ the geometric image is the same circle, but distance is $$4\pi$$ because the particle completes two circuits.
+
+An oriented area integral such as $$\int y(t)x'(t)\,dt$$ behaves differently: reversing the direction changes its sign. This distinction explains why a single parameter interval can be suitable for distance traveled but unsuitable for the area of a region traced exactly once.
+
+### A path intersection versus a collision
+
+Consider two particles with
+
+$$
+\mathbf r_A(t)=\langle\cos t,\sin t\rangle,
+\qquad
+\mathbf r_B(t)=\langle-\cos t,-\sin t\rangle.
+$$
+
+Both trace the same unit circle and have speed one. At any fixed time, however, their positions are opposite, so their separation is always two. They never collide, even though each eventually visits every point of the other's path.
+
+More generally, use two separate parameters to study whether geometric paths intersect, but use the same time in both position functions to study collisions. If a question gives each particle its own starting time, translate those times to one shared clock before equating positions.
+
+Distance from the origin is another distinct quantity. For a position vector $$\mathbf r$$ away from the origin,
+
+$$
+\frac d{dt}\lvert\mathbf r\rvert
+=\frac{\mathbf r\cdot\mathbf v}{\lvert\mathbf r\rvert}.
+$$
+
+Thus a particle moves away from the origin when $$\mathbf r\cdot\mathbf v>0$$. This tests position against velocity, whereas speeding up tests velocity against acceleration. On a circle centered at the origin, the first dot product is zero even though the speed can be positive.
+
+For example, at position $$\langle3,4\rangle$$ with velocity $$\langle-2,1\rangle$$, the distance from the origin changes at rate
+
+$$
+\frac{(3)(-2)+(4)(1)}5=-\frac25.
+$$
+
+The particle approaches the origin even though its vertical coordinate increases. Component signs describe movement relative to coordinate axes; a radial conclusion requires the combined calculation.
+
 ---
 
 ## Tips for the exam
 
 BC curve questions often hide familiar single-variable calculus inside a new coordinate system. The idea is still rate, accumulation, and interpretation, but the independent variable may be $$t$$ or $$\theta$$ instead of $$x$$.
+
+Identify the quantity being differentiated before choosing a formula. The expressions $$dy/dt$$, $$dy/dx$$, and $$dr/d\theta$$ compare different changes and usually give different numbers. Similarly, a parameter interval describes travel, while coordinate bounds describe a geometric region. Keep a small record of the starting point, ending point, and direction of tracing; it can reveal a repeated loop or a reversed branch before an integral is evaluated. At a self-intersection, record each parameter value separately so its tangent and velocity remain associated with the correct passage.
 
 :::checklist
 1. For parametric slopes, compute $$dx/dt$$ and $$dy/dt$$ separately before forming $$dy/dx$$.
@@ -919,4 +1228,18 @@ BC curve questions often hide familiar single-variable calculus inside a new coo
 
 :::exam{topic="BC curves"}
 Always state the parameter interval or angle interval being used. The same equation can trace a curve once, multiple times, or only partially depending on the interval.
+:::
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Parametric slope | $$dy/dx=y'(t)/x'(t),\quad x'(t)\ne0$$ |
+| Parametric concavity | $$d^2y/dx^2=\dfrac{d(dy/dx)/dt}{x'(t)}$$ |
+| Oriented parametric area | $$\int y\,dx=\int y(t)x'(t)\,dt$$ |
+| Velocity and acceleration | $$\mathbf v=\mathbf r',\quad\mathbf a=\mathbf r''$$ |
+| Distance traveled | $$D=\int_a^b\sqrt{[x'(t)]^2+[y'(t)]^2}\,dt$$ |
+| Speed derivative | $$\dfrac d{dt}\lvert\mathbf v\rvert=\dfrac{\mathbf v\cdot\mathbf a}{\lvert\mathbf v\rvert},\quad\mathbf v\ne\mathbf0$$ |
+| Polar slope | $$dy/dx=\dfrac{r'\sin\theta+r\cos\theta}{r'\cos\theta-r\sin\theta},\quad dx/d\theta\ne0$$ |
+| Polar area | $$A=\frac12\int_a^br^2\,d\theta\quad\text{with the region traced once}$$ |
+| Polar arc length | $$L=\int_a^b\sqrt{r^2+(r')^2}\,d\theta$$ |
 :::

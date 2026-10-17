@@ -133,7 +133,7 @@ $$
 dq=\lambda\,d\ell,\qquad dq=\sigma\,dA,\qquad dq=\rho\,dV.
 $$
 
-It is very important to choose useful coordinates (e.g. rectangular, polar, spherical, etc.), use symmetry to cancel components, project the remaining component, then integrate.
+Choose coordinates that fit the geometry (e.g. rectangular, polar, or spherical), use symmetry to cancel components, project the remaining component, and then integrate.
 
 <div class="theorem-box">
 
@@ -449,7 +449,7 @@ $$
 E_{\text{outside}}=\frac{\sigma}{\varepsilon_0}.
 $$
 
-These features are **very important** to remember for any conductor problems, since it makes it so much easier to solve. In addition, the outward electrostatic pressure on a charged conducting surface is
+Use these features to simplify **conductor problems**. The outward electrostatic pressure on a charged conducting surface is
 
 $$
 P=\frac{\sigma^2}{2\varepsilon_0}.

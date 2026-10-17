@@ -661,24 +661,6 @@ So $$n = 2$$ in the mass equation.
 
 ---
 
-:::equations
-| Idea                                       | Equation                                                                                                                 |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Entropy of universe                        | $$\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}$$                               |
-| Surroundings entropy                       | $$\Delta S_{\text{surroundings}} = -\Delta H_{\text{system}}/T$$                                                         |
-| Standard reaction entropy                  | $$\Delta S^\circ_{\text{rxn}} = \sum n_p S^\circ_{\text{products}} - \sum n_r S^\circ_{\text{reactants}}$$               |
-| Gibbs free energy                          | $$\Delta G = \Delta H - T\Delta S$$                                                                                      |
-| Standard free energy from formation values | $$\Delta G^\circ_{\text{rxn}} = \sum n_p\Delta G_f^\circ(\text{products}) - \sum n_r\Delta G_f^\circ(\text{reactants})$$ |
-| Free energy and equilibrium                | $$\Delta G^\circ = -RT\ln K$$                                                                                            |
-| Nonstandard free energy                    | $$\Delta G = \Delta G^\circ + RT\ln Q$$                                                                                  |
-| Free energy and cell potential             | $$\Delta G = -nFE_{\text{cell}}$$                                                                                        |
-| Standard cell potential                    | $$E^\circ_{\text{cell}} = E^\circ_{\text{cathode}} - E^\circ_{\text{anode}}$$                                            |
-| Nernst equation                            | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{RT}{nF}\ln Q$$                                                         |
-| Nernst at $$25^\circ\text{C}$$             | $$E_{\text{cell}} = E^\circ_{\text{cell}} - \frac{0.0592}{n}\log Q$$                                                     |
-| Charge                                     | $$q = nF = It$$                                                                                                          |
-| Faraday's law mass form                    | $$m = \frac{MIt}{nF}$$                                                                                                   |
-:::
-
 <div class="theorem-box">
 
 **Example.** Equal charge passes through silver-ion and copper(II)-ion plating cells. Using molar masses 107.9 and $$63.55\ \mathrm{g/mol}$$, compare deposited masses.
@@ -689,21 +671,38 @@ Silver needs one electron per atom and copper needs two. Thus $$m_{Ag}/m_{Cu}=(1
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Total entropy | $$\Delta S_{univ}=\Delta S_{sys}+\Delta S_{surr}$$; $$\Delta S_{surr}=-\Delta H_{sys}/T$$ | Surroundings at fixed T; constant-pressure heat transfer, only pressure-volume work. |
+| Standard entropy | $$\Delta S_{rxn}^\circ=\sum_p\nu_pS_p^\circ-\sum_r\nu_rS_r^\circ$$ | Standard molar entropies of elements are not generally zero. |
+| Gibbs free energy | $$\Delta G=\Delta H-T\Delta S$$ | Compare states at the same T; negative change favors the written direction at fixed T and P. |
+| Formation free energies | $$\Delta G_{rxn}^\circ=\sum_p\nu_p\Delta G_{f,p}^\circ-\sum_r\nu_r\Delta G_{f,r}^\circ$$ | Match stoichiometric coefficients and physical states. |
+| Composition and equilibrium | $$\Delta G=\Delta G^\circ+RT\ln Q$$; $$\Delta G^\circ=-RT\ln K$$ | Use dimensionless activity ratios. |
+| Cell energy | $$\Delta G=-nFE$$; $$E^\circ=E^\circ_{cathode}-E^\circ_{anode}$$ | n is electrons transferred per balanced reaction; tabulated potentials are reductions. |
+| Nernst | $$E=E^\circ-\frac{RT}{nF}\ln Q$$ | Ideal dilute concentrations may approximate activities; omit pure solids. |
+| Nernst at 25 degrees C | $$E=E^\circ-\frac{0.0592\ \mathrm{V}}n\log Q$$; $$\log K=nE^\circ/(0.0592\ \mathrm{V})$$ | Base-ten logarithms, potential in volts. |
+| Charge | $$q=It=n_{e^-}F$$ | $$n_{e^-}$$ is moles of electrons, distinct from the reaction coefficient n. |
+| Electrodeposition | $$m=\frac{M_{molar}\eta It}{zF}$$ | z electrons per deposited atom; $$\eta$$ is the useful-current fraction. |
+| Electrical energy | $$E_{supplied}=qV_{applied}$$ | Constant applied voltage; actual energy can exceed desired reversible chemical work. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. A reaction has $$\Delta H^\circ=+60.0\ \mathrm{kJ/mol}$$ and $$\Delta S^\circ=+150\ \mathrm{J/(mol\,K)}$$. Assuming both are constant, when is the standard reaction favorable?
+1. A two-electron cell has $$E^\circ=0.200\ V$$ at $$25^\circ\mathrm{C}$$. At what reaction quotient does its forward voltage become zero? Use the base-ten Nernst coefficient 0.0592 V.
 
-   (A) Below 400 K<br>
-   (B) Above 400 K<br>
-   (C) At every temperature<br>
-   (D) At no temperature
+   (A) $$2.4\times10^3$$<br>
+   (B) $$5.7\times10^6$$<br>
+   (C) $$1.7\times10^{-7}$$<br>
+   (D) $$10^2$$
 
 :::solution
-Convert entropy to 0.150 kJ/(mol K). The crossover is $$60.0/0.150=400\ K$$. Above it, $$T\Delta S^\circ$$ exceeds $$\Delta H^\circ$$ and standard free energy is negative.
+At zero voltage, $$\log Q=nE^\circ/0.0592=0.400/0.0592=6.757$$. Thus $$Q=K\approx5.7\times10^6$$. Electron stoichiometry belongs in the numerator when solving for the logarithm, and zero voltage corresponds to equilibrium rather than necessarily equal concentrations.
 
 $$
 \boxed{\text{B}}.
@@ -712,32 +711,15 @@ $$
 ::::
 
 ::::problem
-2. For a two-electron cell at $$25^\circ C$$, $$E^\circ=1.10\ V$$ and $$Q=100$$. Find its actual potential.
+2. For $$\mathrm{Zn+Cu^{2+}\rightarrow Zn^{2+}+Cu}$$, an operating cell has both solutions diluted tenfold without changing temperature or electrode materials. In the ideal dilute-solution model, how does its voltage change immediately?
 
-   (A) $$1.1592\ V$$<br>
-   (B) $$1.1000\ V$$<br>
-   (C) $$1.0408\ V$$<br>
-   (D) $$0.9816\ V$$
-
-:::solution
-$$E=1.10-(0.0592/2)\log100=1.0408\ V$$. Both the electron coefficient and the base-ten logarithm matter; product enrichment reduces forward voltage.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-3. Doubling a balanced redox equation changes which quantities?
-
-   (A) E doubles but n stays fixed<br>
-   (B) E and standard free energy both stay fixed<br>
-   (C) E doubles and standard free energy halves<br>
-   (D) n and standard free energy double, but E stays fixed
+   (A) Increases by 0.0592 V<br>
+   (B) Decreases by 0.0296 V<br>
+   (C) Becomes zero<br>
+   (D) Stays unchanged because Q stays unchanged
 
 :::solution
-Standard free energy scales with the reaction amount and n scales with electrons transferred. Their ratio $$-\Delta G^\circ/(nF)$$ is unchanged, so voltage remains fixed.
+The quotient is $$[\mathrm{Zn^{2+}}]/[\mathrm{Cu^{2+}}]$$, so equal dilution factors cancel. The Nernst correction is unchanged. Dilution can change resistance and current under load, but the equilibrium cell potential in the stated ideal model depends on Q, not the two concentrations independently.
 
 $$
 \boxed{\text{D}}.
@@ -746,15 +728,15 @@ $$
 ::::
 
 ::::problem
-4. Exactly $$0.100\ \mathrm{mol}$$ electrons passes through a copper-plating cell, but only 80.0% reduces copper(II). Use molar mass $$63.55\ \mathrm{g/mol}$$. What mass plates?
+3. The same total charge passes through silver(I) and copper(II) plating cells. Silver plates with 100% current efficiency and copper with 80.0%. Use molar masses 108 and 64.0. What is $$m_{Ag}/m_{Cu}$$?
 
-   (A) $$2.54\ g$$<br>
-   (B) $$3.18\ g$$<br>
-   (C) $$5.08\ g$$<br>
-   (D) $$6.36\ g$$
+   (A) $$4.22$$<br>
+   (B) $$3.38$$<br>
+   (C) $$2.70$$<br>
+   (D) $$1.69$$
 
 :::solution
-Effective electron amount is 0.0800 mol. Two electrons plate one Cu, giving 0.0400 mol Cu and $$0.0400(63.55)=2.54\ g$$. Efficiency applies to useful charge before the electron-to-metal conversion.
+Per mole of supplied electrons, silver deposits 108 g, whereas copper deposits $$0.800(64.0/2)=25.6\ \mathrm{g}$$. Their mass ratio is $$108/25.6=4.22$$. Equal charge is not equal deposited metal amount, and the inefficiency further lowers copper's mass.
 
 $$
 \boxed{\text{A}}.
@@ -763,32 +745,15 @@ $$
 ::::
 
 ::::problem
-5. An operating Zn/Cu galvanic cell uses an inert salt bridge. Which description of charge flow is correct?
+4. A process at $$300\ K$$ has $$\Delta H=-9.00\ \mathrm{kJ}$$ and $$\Delta S_{sys}=-20.0\ \mathrm{J/K}$$. For constant-pressure heat transfer to surroundings at 300 K, which pair is correct?
 
-   (A) Electrons cross the bridge toward zinc<br>
-   (B) Anions migrate toward the zinc compartment as zinc ions form<br>
-   (C) Cations migrate toward zinc to increase its positive charge<br>
-   (D) Electrons move through solution from copper to zinc
-
-:::solution
-Zinc oxidation adds cations to its compartment, requiring anion migration for charge balance. Electrons flow through the external wire from zinc toward copper, not through the salt bridge.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-6. A cell has positive standard voltage but actual reaction quotient larger than K. Which conclusion follows?
-
-   (A) Its forward reaction is favorable because standard voltage is positive<br>
-   (B) A catalyst will increase K until discharge resumes<br>
-   (C) Its actual forward voltage is negative<br>
-   (D) Its standard free energy becomes zero
+   (A) $$\Delta S_{univ}=-50.0\ \mathrm{J/K}$$ and $$\Delta G=+15.0\ \mathrm{kJ}$$<br>
+   (B) $$\Delta S_{univ}=+30.0\ \mathrm{J/K}$$ and $$\Delta G=-9.00\ \mathrm{kJ}$$<br>
+   (C) $$\Delta S_{univ}=+10.0\ \mathrm{J/K}$$ and $$\Delta G=-3.00\ \mathrm{kJ}$$<br>
+   (D) $$\Delta S_{univ}=-10.0\ \mathrm{J/K}$$ and $$\Delta G=+3.00\ \mathrm{kJ}$$
 
 :::solution
-$$\Delta G=RT\ln(Q/K)>0$$, so $$E=-\Delta G/(nF)<0$$ for the written forward reaction. Standard voltage remains a reference property; actual composition can reverse the favorable direction.
+The surroundings gain $$9000/300=30.0\ \mathrm{J/K}$$, making the universe change $$30.0-20.0=10.0\ \mathrm{J/K}$$. Independently, $$\Delta G=-9.00-300(-0.0200)=-3.00\ \mathrm{kJ}$$. The system's entropy can decrease while the total entropy increases.
 
 $$
 \boxed{\text{C}}.
@@ -796,132 +761,82 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+5. Reduction potentials are $$E^\circ(\mathrm{M^{3+}/M^{2+}})=0.600\ V$$ and $$E^\circ(\mathrm{M^{2+}/M})=-0.300\ V$$. What is $$E^\circ$$ for $$\mathrm{M^{3+}+3e^-\rightarrow M}$$?
 
-::::frq{id=chem-thermoelectro-1}
-7. A galvanic cell is based on the reaction
-
-$$
-\text{Zn}(s)+\text{Cu}^{2+}(aq)\rightarrow\text{Zn}^{2+}(aq)+\text{Cu}(s).
-$$
-
-Use $$E^\circ_{\text{red}}(\text{Cu}^{2+}/\text{Cu})=+0.34\ \text{V}$$ and $$E^\circ_{\text{red}}(\text{Zn}^{2+}/\text{Zn})=-0.76\ \text{V}$$.
-
-   $$(A)$$ Identify the anode and cathode.
-
-   $$(B)$$ Calculate $$E^\circ_{\text{cell}}$$.
-
-   $$(C)$$ Calculate $$\Delta G^\circ$$ for the reaction.
-
-   $$(D)$$ Explain the direction of electron flow in the external circuit.
-
-   $$(E)$$ **Original extension.** At $$25^\circ\text{C}$$, let $$[\text{Zn}^{2+}]=1.00\ M$$ and $$[\text{Cu}^{2+}]=0.0100\ M$$. Calculate the cell potential and explain why its change from the standard value agrees with the reaction quotient.
+   (A) $$0.300\ V$$<br>
+   (B) $$0.150\ V$$<br>
+   (C) $$-0.300\ V$$<br>
+   (D) $$0.000\ V$$
 
 :::solution
-$$(A)$$ Zinc is oxidized:
+Add free energies, not voltages. The one-electron step has $$\Delta G_1^\circ=-0.600F$$; the two-electron step has $$\Delta G_2^\circ=-2F(-0.300)=+0.600F$$. Their sum is zero, so $$E^\circ=-\Delta G^\circ/(3F)=0$$. An unweighted average would ignore the different electron amounts.
 
 $$
-\text{Zn}(s)\rightarrow\text{Zn}^{2+}(aq)+2e^-,
+\boxed{\text{D}}.
 $$
-
-so zinc is the anode. Copper(II) is reduced at the cathode:
-
-$$
-\text{Cu}^{2+}(aq)+2e^-\rightarrow\text{Cu}(s).
-$$
-
-This follows the rule that oxidation occurs at the anode and reduction occurs at the cathode.
-
-$$(B)$$
-
-$$
-E^\circ_{\text{cell}}=E^\circ_{\text{cathode}}-E^\circ_{\text{anode}}
-$$
-
-$$
-E^\circ_{\text{cell}}=0.34-(-0.76)=1.10\ \text{V}.
-$$
-
-The positive cell potential is consistent with the reaction being spontaneous as a galvanic cell under standard conditions.
-
-$$(C)$$ Here $$n=2$$.
-
-$$
-\Delta G^\circ=-nFE^\circ_{\text{cell}}
-$$
-
-$$
-\Delta G^\circ=-(2)(96485)(1.10)=-2.12\times10^5\ \text{J/mol rxn}.
-$$
-
-So
-
-$$
-\boxed{\Delta G^\circ=-212\ \text{kJ/mol rxn}}.
-$$
-
-$$(D)$$ Electrons are produced at the zinc anode and consumed at the copper cathode, so electrons flow from Zn to Cu through the external circuit. Ions move through the salt bridge to maintain charge balance, but electrons do not travel through the salt bridge.
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\draw (-4,-1.4) rectangle (-1,1.2); \draw (1,-1.4) rectangle (4,1.2);
-\draw[fill=gray!20] (-3.2,-1.1) rectangle (-2.9,0.9); \node at (-3.05,1.45) {Zn anode};
-\draw[fill=orange!30] (2.9,-1.1) rectangle (3.2,0.9); \node at (3.05,1.45) {Cu cathode};
-\draw[thick] (-3.05,0.9) -- (-3.05,2.2) -- (3.05,2.2) -- (3.05,0.9);
-\draw[->, very thick, blue] (-2.4,2.45) -- (2.4,2.45) node[midway, above] {electron flow};
-\draw[rounded corners, fill=yellow!20] (-1.2,0.8) -- (-0.5,1.45) -- (0.5,1.45) -- (1.2,0.8) -- (0.8,0.65) -- (0.35,1.05) -- (-0.35,1.05) -- (-0.8,0.65) -- cycle;
-\node at (0,1.75) {salt bridge};
-\end{tikzpicture}
-```
-
-$$(E)$$ For $$\text{Zn}(s)+\text{Cu}^{2+}(aq)\rightarrow\text{Zn}^{2+}(aq)+\text{Cu}(s)$$, $$Q=[\text{Zn}^{2+}]/[\text{Cu}^{2+}]=100$$; the solids are excluded. The Nernst equation gives $$E=1.10-(0.0592/2)\log(100)=1.04\ \text{V}$$. Relative to standard conditions, the mixture has a larger product-to-reactant ratio, reducing the forward driving force and voltage. The voltage is still positive, so the forward reaction remains thermodynamically favorable under these conditions.
 :::
 ::::
 
-::::frq{id=chem-thermoelectro-2}
-8. The 2024 AP Chemistry exam included electroplating and nonspontaneous electrochemistry in a sterling silver context. (Adapted from College Board, [2024 AP Chemistry FRQ 3](https://apcentral.collegeboard.org/media/pdf/ap24-frq-chemistry.pdf).)
+::::problem
+6. A reaction has $$\Delta H^\circ=+30.0\ \mathrm{kJ/mol}$$ and $$\Delta S^\circ=+50.0\ \mathrm{J/(mol\,K)}$$. At $$500\ K$$, what condition on Q makes the actual forward reaction favorable? Use $$R=8.314\ \mathrm{J/(mol\,K)}$$.
 
-   $$(A)$$ Explain why an electrolytic plating process requires an external power source.
-
-   $$(B)$$ Calculate the time required to plate $$1.00\ \text{g}$$ of $$\text{Cu}(s)$$ from $$\text{Cu}^{2+}$$ using a current of $$2.00\ \text{A}$$.
-
-   $$(C)$$ Identify whether reduction or oxidation occurs at the object being plated.
-
-   $$(D)$$ **Original extension.** Only $$80.0\%$$ of the current deposits copper; the rest drives a competing reaction. Recalculate the time to deposit the same mass and explain whether the copper half-reaction's electron coefficient changes.
+   (A) $$Q>3.33$$<br>
+   (B) $$Q<0.300$$<br>
+   (C) Every Q because entropy increases<br>
+   (D) No Q because standard free energy is positive
 
 :::solution
-$$(A)$$ Electroplating is nonspontaneous as written, so an external power source is needed to drive electron flow and force reduction of metal ions onto the object. In other words, electrical energy is used to make a thermodynamically unfavorable redox process occur.
-
-$$(B)$$ Moles of copper plated:
+At 500 K, $$\Delta G^\circ=30.0-500(0.0500)=+5.00\ \mathrm{kJ/mol}$$. Favorability requires $$5000+RT\ln Q<0$$, or $$Q<e^{-5000/(8.314\times500)}=0.300$$. Positive standard free energy does not rule out a favorable nonstandard mixture.
 
 $$
-n_{\text{Cu}}=\frac{1.00\ \text{g}}{63.55\ \text{g/mol}}=0.0157\ \text{mol}.
+\boxed{\text{B}}.
 $$
+:::
+::::
 
-For $$\text{Cu}^{2+}+2e^-\rightarrow\text{Cu}(s)$$,
+### FRQ
 
-$$
-n_{e^-}=2(0.0157)=0.0315\ \text{mol e}^-.
-$$
+::::frq{id=chem-thermoelectro-challenge-1}
+7. A galvanic cell follows $$\mathrm{Zn(s)+Cu^{2+}(aq)\rightarrow Zn^{2+}(aq)+Cu(s)}$$ with $$E^\circ=1.10\ V$$ at $$25^\circ\mathrm{C}$$. Initially each compartment has 1.00 L solution: $$[Zn^{2+}]=0.100\ M$$ and $$[Cu^{2+}]=0.500\ M$$. Use $$F=96485\ \mathrm{C/mol\ e^-}$$, a base-ten Nernst coefficient of 0.0592 V, and copper molar mass $$63.55\ \mathrm{g/mol}$$. Ignore volume change and competing reactions.
 
-Charge required:
+   $$(A)$$ Write both half-reactions, identify anode and cathode, and calculate the initial cell potential.
 
-$$
-q=nF=(0.0315)(96485)=3.04\times10^3\ \text{C}.
-$$
+   $$(B)$$ After 0.100 mol copper has deposited, calculate both ion concentrations and the new cell potential.
 
-Since $$q=It$$,
+   $$(C)$$ Find the charge passed and copper mass deposited during part B. Explain whether doubling electrode mass alone doubles voltage.
 
-$$
-t=\frac{3.04\times10^3\ \text{C}}{2.00\ \text{C/s}}=1.52\times10^3\ \text{s}.
-$$
+   $$(D)$$ Calculate the equilibrium constant and predict which salt-bridge ions move toward the zinc compartment during discharge.
 
-This is about $$25.3\ \text{min}$$ if converted to minutes.
+:::solution
+$$(A)$$ Zinc oxidation is $$\mathrm{Zn\rightarrow Zn^{2+}+2e^-}$$ at the anode. Copper reduction is $$\mathrm{Cu^{2+}+2e^-\rightarrow Cu}$$ at the cathode. Initially $$Q=0.100/0.500=0.200$$, so $$E=1.10-(0.0592/2)\log0.200=1.121\ V$$. The solids are excluded from Q, and electrons flow externally from zinc to copper.
 
-$$(C)$$ Metal ions gain electrons and become solid metal on the object, so reduction occurs at the object being plated. The object being plated acts as the cathode in the electrolytic cell.
+$$(B)$$ Each mole of deposited copper consumes one mole copper ions and produces one mole zinc ions. The 1.00 L compartments therefore become 0.400 M copper(II) and 0.200 M zinc(II). Now $$Q=0.200/0.400=0.500$$ and $$E=1.10-(0.0592/2)\log0.500=1.109\ V$$. Discharge raises Q and lowers the forward voltage.
 
-$$(D)$$ The useful deposition current is $$0.800(2.00)=1.60\ \text{A}$$. Equivalently, the required total charge is the ideal deposition charge divided by $$0.800$$. Thus $$t=t_{\text{ideal}}/0.800\approx1.90\times10^3\ \text{s}$$, or $$31.6\ \text{min}$$. The reaction remains $$\text{Cu}^{2+}+2e^-\rightarrow\text{Cu}$$: two electrons are still required per copper atom. Lower efficiency changes how much of the supplied charge reaches that reaction, not its stoichiometry.
+$$(C)$$ Depositing 0.100 mol Cu requires 0.200 mol electrons, giving $$q=0.200F=1.93\times10^4\ C$$. Copper mass is $$0.100(63.55)=6.36\ \mathrm{g}$$. Adding more of a pure solid electrode does not change its activity or Q, so voltage does not double. More electrode material can increase available reaction capacity without increasing energy per unit charge.
+
+$$(D)$$ At equilibrium, $$0=E^\circ-(0.0592/2)\log K$$, giving $$\log K=2(1.10)/0.0592=37.16$$ and $$K\approx1.45\times10^{37}$$. Zinc oxidation adds positive ions to its compartment, so salt-bridge anions migrate toward it to maintain charge balance. Electrons travel through the wire, not through the salt bridge.
+:::
+::::
+
+::::frq{id=chem-thermoelectro-challenge-2}
+8. A copper-plating cell runs at 2.50 A. Only 75.0% of the charge reduces copper(II) to copper; all remaining cathodic charge produces hydrogen gas from acid. The target copper deposit is 3.00 g. Use $$M_{Cu}=63.55\ \mathrm{g/mol}$$, $$F=96485\ \mathrm{C/mol\ e^-}$$, and $$R=0.0821\ \mathrm{L\,atm/(mol\,K)}$$.
+
+   $$(A)$$ Calculate the useful deposition charge, total charge, and operating time.
+
+   $$(B)$$ Calculate the moles and dry volume of hydrogen produced at 298 K and 1.00 atm.
+
+   $$(C)$$ If current is doubled but copper efficiency falls to 60.0%, calculate the new time for the same copper mass and compare it with the original time.
+
+   $$(D)$$ An ideal reversible cell driving the desired reaction would require 0.300 V under its operating conditions. If the external source actually supplies 1.20 V throughout the original run, compare desired-reaction electrical work with total supplied energy.
+
+:::solution
+$$(A)$$ Copper moles are $$3.00/63.55=0.04721$$. The useful charge is $$q_{Cu}=2F(0.04721)=9.11\times10^3\ C$$. Because this is only 75.0% of supplied charge, $$q_{total}=q_{Cu}/0.750=1.21\times10^4\ C$$. Time is $$q_{total}/I=4.86\times10^3\ s$$, or 81.0 min. Efficiency reduces useful charge, not the two-electron requirement per copper atom.
+
+$$(B)$$ Hydrogen receives $$0.250q_{total}=3.04\times10^3\ C$$. The half-reaction $$\mathrm{2H^++2e^-\rightarrow H_2}$$ requires two electrons per molecule, so $$n_{H_2}=q_{H_2}/(2F)=0.0157\ \mathrm{mol}$$. Its dry ideal-gas volume is $$nRT/P=0.0157(0.0821)(298)=0.385\ L$$. No water-vapor correction is needed because the requested gas is dry.
+
+$$(C)$$ The useful charge remains fixed by the target mass. The original useful current is $$2.50(0.750)=1.875\ A$$, while the new useful current is $$5.00(0.600)=3.00\ A$$. Thus $$t_{new}/t_{old}=1.875/3.00=0.625$$ and $$t_{new}=3.04\times10^3\ s$$, about 50.6 min. Doubling total current does not halve time when efficiency also changes.
+
+$$(D)$$ The reversible work for the copper amount is $$w_{desired}=q_{Cu}(0.300)=2.73\ \mathrm{kJ}$$. Actual source energy is $$q_{total}(1.20)=14.6\ \mathrm{kJ}$$. Their ratio is $$0.750(0.300/1.20)=0.1875$$, about 18.8%. Both competing reactions and operating above the reversible voltage reduce the fraction of supplied energy associated with the desired reversible chemical change.
 :::
 ::::

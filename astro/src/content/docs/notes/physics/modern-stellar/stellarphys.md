@@ -283,7 +283,7 @@ So $$m-M$$ (the "distance modulus") converts directly to distance, and conversel
 
 <div class="theorem-box">
 
-**Definition (Hertzsprung–Russell diagram).** The Hertzsprung-Russell diagram plots stars' luminosity (or absolute magnitude) against their temperature (or color, or spectral type), with temperature increasing *to the left* by convention, and they do not scatter randomly. Most lie along a diagonal **main sequence** running from hot-luminous (upper left) to cool-dim (lower right); these are stars fusing hydrogen in their cores. Cool but very luminous stars in the upper right must be huge (large $$R$$ in $$L=4\pi R^2\sigma T^4$$) (**giants** and **supergiants**). Hot but dim stars in the lower left must be tiny (**white dwarfs**). The HR diagram is the single most important organizing picture in stellar astrophysics.
+**Definition (Hertzsprung–Russell diagram).** The Hertzsprung-Russell diagram plots stars' luminosity (or absolute magnitude) against their temperature (or color, or spectral type), with temperature increasing *to the left* by convention, and they do not scatter randomly. Most lie along a diagonal **main sequence** running from hot-luminous (upper left) to cool-dim (lower right); these are stars fusing hydrogen in their cores. Cool but very luminous stars in the upper right must be huge (large $$R$$ in $$L=4\pi R^2\sigma T^4$$) (**giants** and **supergiants**). Hot but dim stars in the lower left must be tiny (**white dwarfs**). The HR diagram organizes these relationships among stellar temperature, luminosity, and size.
 
 </div>
 
@@ -293,7 +293,7 @@ So $$m-M$$ (the "distance modulus") converts directly to distance, and conversel
 
 ## Gravitation
 
-Stellar physics is merely just applied gravitation. The results in this section are standard **AP Physics C Mechanics** material, Newton's law of gravitation and energy methods, but since essentially every other section on this page leans on them, it is worth collecting them in one place.
+Many stellar-physics calculations use Newton's law of gravitation and energy methods from **AP Physics C Mechanics**. The results collected here support the other sections on this page.
 
 ### Newton's law of gravitation
 

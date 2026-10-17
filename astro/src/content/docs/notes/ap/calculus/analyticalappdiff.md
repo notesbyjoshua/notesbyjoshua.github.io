@@ -1,6 +1,6 @@
 ---
 title: "Unit 5: Analytical Applications of Differentiation"
-description: "AP Calculus notes on mean value theorems, monotonicity, concavity, optimization, related rates, and curve sketching."
+description: "AP Calculus notes on mean value theorems, derivative sign charts, extrema, concavity, constrained optimization, and curve sketching."
 sidebar:
   order: 5
 ---
@@ -203,6 +203,58 @@ When justifying an absolute maximum or minimum, compare function values, not der
 A point where $$f'(c)=0$$ is not automatically a maximum or minimum. For example, $$f(x)=x^3$$ has $$f'(0)=0$$, but $$x=0$$ is not an extremum.
 :::
 
+### Why interior extrema give critical numbers
+
+<div class="theorem-box">
+
+**Proof (Fermat's theorem).** Suppose $$f$$ has a local maximum at an interior point $$c$$ and is differentiable there. For sufficiently small positive $$h$$,
+
+$$
+\frac{f(c+h)-f(c)}h\le0,
+$$
+
+because the numerator is nonpositive. For sufficiently small negative $$h$$, the numerator is still nonpositive, but dividing by a negative denominator gives
+
+$$
+\frac{f(c+h)-f(c)}h\ge0.
+$$
+
+If the two-sided derivative exists, its value must be both nonpositive and nonnegative. Therefore $$f'(c)=0$$. At a local minimum, the inequalities reverse and give the same result.
+
+</div>
+
+The interior condition allows changes to the left and right. At an endpoint, only one of those directions is available, so there is no reason for the derivative to be zero. For example, $$f(x)=x$$ reaches its maximum on $$[0,1]$$ at $$1$$ even though its slope is always one.
+
+This also proves Rolle's Theorem once EVT is available. Equal endpoint values either belong to a constant function, whose derivative is zero throughout, or force a nonconstant continuous function to have an absolute extremum somewhere inside the interval. Differentiability at that interior extremum then gives a horizontal tangent.
+
+### Using derivative bounds without finding the function
+
+The MVT converts bounds on instantaneous rates into bounds on total change. If $$m\le f'(x)\le M$$ throughout $$(a,b)$$, then
+
+$$
+m(b-a)\le f(b)-f(a)\le M(b-a).
+$$
+
+This is useful when a derivative is easier to estimate than an original function is to evaluate. The hypotheses still require continuity on the closed interval and differentiability inside it. Checking the derivative at only a few table entries does not establish a bound everywhere.
+
+<div class="theorem-box">
+
+**Example.** A differentiable function satisfies $$f(2)=7$$ and $$-3\le f'(x)\le2$$ on $$2<x<6$$. Bound $$f(6)$$. If $$f(6)=15$$ and the derivative is continuous, what more can you conclude?
+
+Apply the derivative bounds over an interval of width four:
+
+$$
+-12\le f(6)-7\le8.
+$$
+
+Thus $$-5\le f(6)\le15$$. If $$f(6)=15$$, the average slope is the largest permitted slope, namely two.
+
+In that equality case, the derivative cannot be strictly below two at any interior input. Continuity of the derivative would make it strictly below two on a small interval, creating a smaller total increase than eight. Therefore $$f'(x)=2$$ throughout the interval, and $$f(x)=2x+3$$ there.
+
+The first bound uses only the MVT. The equality argument uses the extra continuity assumption on the derivative and the fact that accumulated change equals the integral of that derivative.
+
+</div>
+
 ---
 
 ## Graphical meaning of derivatives
@@ -247,7 +299,7 @@ An inflection point is a point where concavity changes. The equation $$f''(x)=0$
 
 ## The First Derivative Test
 
-A very useful test to find local extrema is the First Derivative Test. At points where $$f'(x)=0$$ (critical points), we can use this test to see if there is a local minimum, local maximum, or neither.
+The First Derivative Test classifies interior critical points by the signs of the derivative nearby. It applies both where the derivative is zero and where it is undefined, provided the function is continuous at the point and differentiable on the nearby intervals being tested.
 
 <div class="theorem-box">
 
@@ -256,6 +308,8 @@ A very useful test to find local extrema is the First Derivative Test. At points
 - positive to negative at $$c$$: local maximum,
 - negative to positive at $$c$$: local minimum,
 - no sign change: neither.
+
+Assume $$f$$ is continuous at $$c$$ and differentiable on each side near $$c$$, with the stated strict derivative signs on those intervals.
 
 </div>
 
@@ -296,6 +350,26 @@ f'(3)=3(3)(1)=9>0.
 $$
 
 The derivative goes positive to negative at $$x=0$$, so $$f$$ has a local maximum there, with $$f(0)=0$$. The derivative goes negative to positive at $$x=2$$, so $$f$$ has a local minimum there, with $$f(2)=8-12=-4$$.
+
+</div>
+
+### Reading the graph of a derivative
+
+A graph of $$f'$$ supplies slope information about $$f$$. Its height determines whether $$f$$ rises or falls, while its own increasing or decreasing behavior determines the concavity of $$f$$. A positive derivative that is decreasing describes a function that rises while flattening out.
+
+A local maximum of $$f'$$ is a candidate for an inflection point of $$f$$, not automatically a local maximum of $$f$$. Conversely, a zero of $$f'$$ is a candidate for an extremum of $$f$$, not automatically an inflection point. Keep the role of each graph explicit before writing a conclusion.
+
+<div class="theorem-box">
+
+**Example.** Suppose $$f$$ is differentiable on $$(-3,4)$$. Its derivative is negative on $$(-3,-1)$$, positive on $$(-1,2)$$, and negative on $$(2,4)$$. Also, $$f'$$ increases until $$x=0$$ and decreases after $$x=0$$. Classify the extrema and concavity of $$f$$.
+
+The sign changes give a local minimum at $$x=-1$$ and a local maximum at $$x=2$$. These conclusions use the sign of $$f'$$, not whether its graph is rising.
+
+Because $$f'$$ increases on $$(-3,0)$$, the original function is concave up there. Because $$f'$$ decreases on $$(0,4)$$, the original function is concave down there. There is an inflection point at $$x=0$$.
+
+Between $$0$$ and $$2$$, $$f$$ is increasing and concave down: its outputs rise, but its slopes become smaller. At $$0$$ the derivative is at its greatest value, so the original graph has its greatest upward slope there.
+
+No actual value of $$f(-1)$$ or $$f(2)$$ follows from the derivative information alone. Adding a constant to $$f$$ preserves all these derivative facts.
 
 </div>
 
@@ -343,6 +417,28 @@ Comparing the candidate values, the absolute maximum is $$2$$ at $$x=2$$, and th
 
 </div>
 
+### Nondifferentiable candidates and disconnected domains
+
+Solving $$f'=0$$ can miss an absolute extremum at a corner or cusp. You must also include inputs in the domain where the derivative fails to exist. A vertical asymptote is different: the excluded input is not a critical number because the original function does not exist there.
+
+<div class="theorem-box">
+
+**Example.** Find the absolute extrema of $$f(x)=\lvert x^2-4\rvert$$ on $$[-3,1]$$.
+
+For $$x<-2$$, $$f(x)=x^2-4$$, with derivative $$2x$$. For $$-2<x\le1$$, $$f(x)=4-x^2$$, with derivative $$-2x$$. The interior candidates are the corner at $$x=-2$$ and the derivative zero at $$x=0$$.
+
+Evaluate the function at those inputs and both endpoints:
+
+$$
+f(-3)=5,\qquad f(-2)=0,\qquad f(0)=4,\qquad f(1)=3.
+$$
+
+The absolute maximum is five at $$x=-3$$, and the absolute minimum is zero at $$x=-2$$. The smooth critical point $$0$$ is a local maximum but does not produce the largest output on the whole interval.
+
+The function is continuous on the closed interval, so EVT guarantees that the comparison finds both absolute extrema despite the corner.
+
+</div>
+
 ---
 
 ## Concavity and the second derivative
@@ -387,6 +483,14 @@ $$
 The inflection point is $$(1,-2)$$.
 
 </div>
+
+### When zero second derivative tells you nothing
+
+Compare $$x^4$$, $$-x^4$$, and $$x^3$$ at zero. All three have zero first and second derivatives there, but their behaviors differ: the first has a minimum, the second has a maximum, and the third has neither. Therefore an inconclusive second derivative test requires another method, usually a sign chart for the first derivative.
+
+Inflection points require a change in concavity and a point on the graph where the change occurs. For $$x^4$$, the second derivative $$12x^2$$ is positive on both sides of zero, so there is no inflection. For $$x^{1/3}$$, the second derivative is undefined at zero, but concavity changes across the continuous point, so there is an inflection there.
+
+For $$1/x$$, concavity changes sign across zero, but zero is outside the domain. There is no inflection point at the vertical asymptote. A sign change across an excluded input describes two separate branches.
 
 ---
 
@@ -509,6 +613,57 @@ f(0)=0,\qquad f(1)=-2,\qquad f(2)=-4.
 $$
 
 A good sketch should pass through those points, rise before $$0$$, fall between $$0$$ and $$2$$, rise after $$2$$, and change concavity at $$x=1$$.
+
+</div>
+
+### A rational-function sketch with domain restrictions
+
+Polynomial examples have no breaks in their domains. Rational functions require the derivative chart to respect excluded inputs even when algebraic simplification makes a sign pattern look continuous.
+
+<div class="theorem-box">
+
+**Example.** Analyze the increasing and decreasing intervals, local extrema, concavity, and asymptotes of
+
+$$
+f(x)=\frac{x^2}{x-1}.
+$$
+
+The domain excludes $$1$$. Long division gives
+
+$$
+f(x)=x+1+\frac1{x-1},
+$$
+
+so the vertical asymptote is $$x=1$$ and the slant asymptote is $$y=x+1$$.
+
+Differentiate:
+
+$$
+f'(x)=1-\frac1{(x-1)^2}
+=\frac{x(x-2)}{(x-1)^2}.
+$$
+
+The denominator is positive wherever the function exists. The numerator is positive before zero and after two, and negative between them. Thus $$f$$ increases on $$(-\infty,0)$$ and $$(2,\infty)$$ and decreases on $$(0,1)$$ and $$(1,2)$$.
+
+At zero, $$f'$$ changes from positive to negative, giving the local maximum $$(0,0)$$. At two it changes from negative to positive, giving the local minimum $$(2,4)$$. There is no extremum at the asymptote.
+
+For concavity,
+
+$$
+f''(x)=\frac2{(x-1)^3}.
+$$
+
+The left branch is concave down and the right branch is concave up. There is no inflection point because the change occurs across the excluded input one.
+
+Finally,
+
+$$
+\lim_{x\to1^-}f(x)=-\infty,
+\qquad
+\lim_{x\to1^+}f(x)=\infty.
+$$
+
+These limits explain how a local maximum with output zero and a local minimum with output four can coexist. They belong to different branches, and neither is an absolute extremum over the whole domain.
 
 </div>
 
@@ -641,6 +796,41 @@ Because $$S(x)\to\infty$$ as $$x\to0^+$$ and as $$x\to\infty$$, the critical poi
 
 </div>
 
+### Optimizing a model with unequal costs
+
+Symmetry of the geometry does not guarantee symmetry of the best design. If different sides have different costs, optimize cost rather than area or perimeter. The variable being eliminated must still come from the physical constraint.
+
+<div class="theorem-box">
+
+**Example.** A rectangular enclosure beside a straight river must have area $$1800$$ square meters. No fence is needed along the river. The opposite side costs $$20$$ dollars per meter, and each side perpendicular to the river costs $$10$$ dollars per meter. Find the dimensions minimizing fencing cost.
+
+Let $$x$$ be each perpendicular length and $$y$$ the length parallel to the river. The area constraint is $$xy=1800$$, so $$y=1800/x$$ for $$x>0$$.
+
+There are two sides of length $$x$$ and one fenced side of length $$y$$. Therefore,
+
+$$
+C(x)=2(10)x+20\frac{1800}{x}
+=20x+\frac{36000}{x}.
+$$
+
+The critical-point equation is
+
+$$
+C'(x)=20-\frac{36000}{x^2}=0,
+$$
+
+which gives $$x^2=1800$$ and $$x=30\sqrt2$$. The other dimension is
+
+$$
+y=\frac{1800}{30\sqrt2}=30\sqrt2.
+$$
+
+The derivative is negative before $$30\sqrt2$$ and positive afterward, so this design gives an absolute minimum on the positive domain. The cost also tends to infinity at both ends of that domain.
+
+The minimizing enclosure happens to be square because the total cost of the two perpendicular sides matches the cost coefficient of the parallel side. With uniform cost per meter instead, the optimal parallel side would be twice a perpendicular side. The objective function, not a memorized rectangle pattern, determines the dimensions.
+
+</div>
+
 ---
 
 ## Newton's method
@@ -663,7 +853,7 @@ $$
 
 </div>
 
-$$x_n$$ represents the $$n$$th iteration, where you keep using your previous attempts to estimate the root. The first number always starts out as a guess, as after many iterations, the value will get closer and closer to the real root. However, the method works best when the starting guess is close to the root and the derivative is not near zero. If the tangent line is nearly horizontal, the next approximation can jump far away.
+The input $$x_n$$ is the current approximation, and $$x_{n+1}$$ is the next approximation. Convergence is not automatic: the method works best near a root when the derivative is nonzero and the local tangent gives a useful prediction. A nearly horizontal tangent can send the next approximation far away.
 
 <div class="theorem-box">
 
@@ -805,6 +995,14 @@ So the solution is approximately $$x\approx0.7391$$.
 
 ---
 
+### Recognizing a failed iteration
+
+Before accepting a decimal answer, check that it approximately satisfies the original equation. Nearby successive guesses are useful evidence only if the formula was implemented correctly and the original function is defined there.
+
+For $$f(x)=x^3-2x+2$$, starting at $$x_0=0$$ gives $$x_1=1$$, and starting from $$1$$ gives $$x_2=0$$. The iteration repeats forever even though the polynomial has a real root elsewhere. The tangent construction itself is valid, but this starting value produces a cycle.
+
+For a root at which $$f'=0$$, the update may become undefined or converge more slowly. If an iterate hits a point where the denominator vanishes, choose a different starting value or another numerical method. Newton's method supplies an approximation procedure, not the existence guarantee supplied by IVT or the uniqueness argument supplied by monotonicity.
+
 ## Tips for the exam
 
 Analytical applications ask you to turn derivative information into a story about the original function. The safest approach is to separate **where candidates occur** from **what those candidates mean**.
@@ -823,3 +1021,16 @@ Write conclusions in terms of signs and changes: "$$f$$ has a local maximum at $
 :::
 
 For optimization, the derivative work is only the middle of the problem. A complete solution should also define variables, state the constraint, state the domain, and answer in the original units.
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Mean Value Theorem | $$f'(c)=[f(b)-f(a)]/(b-a),\quad a<c<b$$ |
+| Derivative bounds | $$m(b-a)\le f(b)-f(a)\le M(b-a)\quad\text{if }m\le f'\le M$$ |
+| Interior candidates | $$f'(c)=0\text{ or }f'(c)\text{ undefined},\quad c\in\operatorname{dom}f$$ |
+| Local maximum | $$f':+\to-$$ |
+| Local minimum | $$f':-\to+$$ |
+| Concavity | $$f''>0:\text{ up};\quad f''<0:\text{ down}$$ |
+| Second derivative test | $$f'(c)=0,\quad f''(c)>0:\text{ min};\quad f''(c)<0:\text{ max}$$ |
+| Newton update | $$x_{n+1}=x_n-f(x_n)/f'(x_n),\quad f'(x_n)\ne0$$ |
+:::

@@ -7,7 +7,7 @@ sidebar:
 
 ---
 
-This unit studies how conductors rearrange charge in electrostatic equilibrium and how capacitors store charge and energy. It builds directly on [electric fields](/notes/ap/ap-physics-c-em/electrostatics/) and [electric potential](/notes/ap/ap-physics-c-em/electricpot/): conductors are governed by field and potential constraints, and capacitors are devices designed to create controlled electric fields.
+Conductors rearrange charge until they reach electrostatic equilibrium, while capacitors store charge and energy. Both can be understood using [electric fields](/notes/ap/ap-physics-c-em/electrostatics/) and [electric potential](/notes/ap/ap-physics-c-em/electricpot/): conductors are governed by field and potential constraints, and capacitors are devices designed to create controlled electric fields.
 
 ---
 

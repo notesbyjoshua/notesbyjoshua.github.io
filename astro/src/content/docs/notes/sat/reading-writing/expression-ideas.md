@@ -21,7 +21,7 @@ There are two main jobs:
 - **Transitions:** identify the logical relationship between two ideas.
 
 :::tip
-Both question types have repeatable steps. Read the goal or determine the relationship before looking closely at the choices. This prevents polished but irrelevant answers from distracting you.
+For both question types, read the goal or determine the relationship before comparing the choices, so that a polished but irrelevant answer does not distract you.
 :::
 
 ## Rhetorical Synthesis

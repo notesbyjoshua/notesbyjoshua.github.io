@@ -32,5 +32,7 @@
   "/notes/ap/stats/collectingdata/": "/notes/ap/stats/onevardata/",
   "/notes/ap/stats/samplingdistr/": "/notes/ap/stats/probranddist/",
   "/notes/ap/stats/catchi/": "/notes/ap/stats/infprop/",
-  "/notes/ap/stats/quantslopes/": "/notes/ap/stats/reganalysis/"
+  "/notes/ap/stats/quantslopes/": "/notes/ap/stats/reganalysis/",
+  "/notes/math/multivariable-calculus/multiple-integrals-curvilinear/": "/notes/math/multivariable-calculus/multiple-integrals-cartesian/",
+  "/notes/math/multivariable-calculus/line-and-surface-integrals/": "/notes/math/multivariable-calculus/vector-analysis/"
 }

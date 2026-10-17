@@ -69,7 +69,7 @@ Groups can support the same candidate for different reasons. A durable coalition
 
 Inflation fell after the Federal Reserve, under **Paul Volcker**, pursued tight monetary policy that began during Carter's presidency. High interest rates contributed to a severe early-1980s recession before sustained recovery developed.
 
-Economic growth did not benefit everyone equally. Manufacturing communities faced job losses, union membership declined, and income inequality widened. Federal deficits also grew. Social Security and Medicare remained major programs, showing the political limits of reducing government.
+Economic growth did not benefit everyone equally, as manufacturing communities faced job losses, union membership declined, and income inequality widened. Federal deficits also grew. Social Security and Medicare remained major programs, showing the political limits of reducing government.
 
 :::warning
 Do not attribute falling inflation entirely to Reagan's tax cuts. Federal Reserve policy, recession, and changing economic conditions were central to disinflation.

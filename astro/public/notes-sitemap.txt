@@ -125,9 +125,7 @@ https://notesbyjoshua.com/notes/math/linear-algebra/structure-of-rn/
 https://notesbyjoshua.com/notes/math/linear-algebra/the-size-of-sets/
 https://notesbyjoshua.com/notes/math/multivariable-calculus/differential-multivariable-functions/
 https://notesbyjoshua.com/notes/math/multivariable-calculus/geometry-of-curves/
-https://notesbyjoshua.com/notes/math/multivariable-calculus/line-and-surface-integrals/
 https://notesbyjoshua.com/notes/math/multivariable-calculus/multiple-integrals-cartesian/
-https://notesbyjoshua.com/notes/math/multivariable-calculus/multiple-integrals-curvilinear/
 https://notesbyjoshua.com/notes/math/multivariable-calculus/vector-analysis/
 https://notesbyjoshua.com/notes/math/multivariable-calculus/vectors-euclidean-geometry/
 https://notesbyjoshua.com/notes/math/number-theory/diophantine-equations/

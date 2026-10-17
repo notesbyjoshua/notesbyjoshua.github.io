@@ -62,6 +62,45 @@ $$
 
 exists as a finite number. Otherwise, the series *diverges*.
 
+### Partial sums and telescoping cancellation
+
+A term formula describes one summand, while a partial-sum formula describes everything accumulated so far. The sequence $$1/n$$ approaches zero, but its partial sums are the divergent harmonic series. Convergence of the terms and convergence of the accumulated sum are different limits.
+
+Changing finitely many terms cannot change whether a series converges. It can change the sum, which matters when evaluating a telescoping or geometric series with a shifted starting index.
+
+<div class="theorem-box">
+
+**Example.** Evaluate $$\sum_{n=1}^{\infty}2/[n(n+2)]$$ by writing its partial sums.
+
+Partial fractions give
+
+$$
+\frac2{n(n+2)}=\frac1n-\frac1{n+2}.
+$$
+
+For $$N\ge2$$, write the finite sum before canceling:
+
+$$
+S_N=\left(1-\frac13\right)+\left(\frac12-\frac14\right)
++\cdots+\left(\frac1N-\frac1{N+2}\right).
+$$
+
+All middle terms cancel, leaving
+
+$$
+S_N=1+\frac12-\frac1{N+1}-\frac1{N+2}.
+$$
+
+Thus the series converges to $$3/2$$. The positive tail after the first $$N$$ terms is exactly
+
+$$
+R_N=\frac1{N+1}+\frac1{N+2}.
+$$
+
+The cancellation is justified in each finite sum and then passed to a limit. There is no subtraction of two separately divergent infinite sums.
+
+</div>
+
 ---
 
 ## nth-term test for divergence
@@ -214,7 +253,7 @@ $$
 \sum_{n=1}^{\infty} \frac{1}{n^p}
 $$
 
-for some positive integer $$p$$. The p-series wil only converges if and only if $$p>1$$.
+for a real number $$p$$. The series converges if and only if $$p>1$$.
 
 The *harmonic series* is a special case of the $$p$$-series with $$p=1$$:
 
@@ -222,7 +261,7 @@ $$
 \sum_{n=1}^{\infty} \frac{1}{n}.
 $$
 
-The harmonic series by definition diverges.
+The harmonic series diverges even though its terms approach zero.
 
 </div>
 
@@ -256,7 +295,7 @@ diverges. The terms shrink to zero, but not fast enough for the sum to stay fini
 
 </div>
 
-Note that while $$p$$-series are easy to determine convergence, it is really hard to find the value for a convergent series. If you are curious, you can research the Riemann zeta function.
+Checking whether a $$p$$-series converges is straightforward, but finding its sum can be much harder. The Riemann zeta function is a useful topic to explore if you want to learn more about these sums.
 
 ---
 
@@ -270,13 +309,15 @@ $$
 \sum a_n
 $$
 
-and
+and the improper integral
 
 $$
-\int f(x)\,dx
+\int_N^\infty f(x)\,dx
 $$
 
 either both converge or both diverge.
+
+Here $$N$$ is any sufficiently large starting input for which the hypotheses hold. An indefinite integral alone does not have a convergence classification.
 
 </div>
 
@@ -353,6 +394,41 @@ $$
 $$
 
 diverges.
+
+</div>
+
+---
+
+### Integral bounds on the remainder
+
+For a positive, decreasing, continuous function with $$a_n=f(n)$$ and a convergent series, let $$R_N=S-S_N$$. Comparing tail rectangles to the area under the graph gives
+
+$$
+\int_{N+1}^\infty f(x)\,dx
+\le R_N\le
+\int_N^\infty f(x)\,dx.
+$$
+
+The remainder is positive because every omitted term is positive, so the partial sum underestimates the total. These bounds do not say the integral equals the series remainder.
+
+<div class="theorem-box">
+
+**Example.** How many terms of $$\sum_{n=1}^{\infty}1/n^3$$ guarantee an error less than $$0.005$$ using the Integral Test remainder bound?
+
+For $$f(x)=x^{-3}$$,
+
+$$
+R_N\le\int_N^\infty x^{-3}\,dx=\frac1{2N^2}.
+$$
+
+To make this bound strictly smaller than $$0.005$$, solve
+
+$$
+\frac1{2N^2}<0.005
+\quad\Longrightarrow\quad N^2>100.
+$$
+
+Thus eleven terms suffice under this bound. Ten terms give a bound equal to the tolerance, rather than strictly smaller. This is a guarantee from the stated estimate, not a claim that every smaller partial sum has an actual error above the tolerance.
 
 </div>
 
@@ -498,10 +574,12 @@ Absolute convergence is stronger. If a series converges absolutely, it converges
 
 <div class="theorem-box">
 
-**Theorem (Alternating Series Test).** The series converges conditionally if:
+**Theorem (Alternating Series Test).** The alternating series converges if:
 
 - $$b_n$$ decreases eventually,
 - $$b_n \to 0$$.
+
+The test alone does not establish conditional convergence. To classify the convergence, test the absolute-value series separately.
 
 </div>
 
@@ -619,7 +697,7 @@ $$
 
 then for some number $$r$$ with $$L<r<1$$, the ratio is eventually less than $$r$$. That means the tail of $$\sum \lvert a_n\rvert$$ is bounded by a geometric series with ratio $$r$$, so the series converges absolutely.
 
-If $$L>1$$, then eventually $$\lvert a_{n+1}\rvert>\lvert a_n\rvert$$ often enough that the terms cannot approach $$0$$. Therefore the original series diverges by the nth-term test. When $$L=1$$, both convergent and divergent examples are possible, so the test is inconclusive.
+If $$L>1$$, choose a fixed number $$q$$ with $$1<q<L$$. Eventually $$\lvert a_{n+1}\rvert\ge q\lvert a_n\rvert$$, so the magnitudes grow at least geometrically and cannot approach zero. Therefore the original series diverges by the nth-term test. When $$L=1$$, both convergent and divergent examples are possible, so the test is inconclusive.
 
 </div>
 
@@ -768,6 +846,38 @@ $$
 
 ---
 
+### Shifted centers and unequal endpoint behavior
+
+The radius is a distance from the center, not an endpoint coordinate. If the inequality from a ratio test is $$\lvert x-2\rvert<3/2$$, the center is two, the radius is $$3/2$$, and the open interval is $$(1/2,7/2)$$.
+
+<div class="theorem-box">
+
+**Example.** Find the radius and interval of convergence of
+
+$$
+\sum_{n=1}^{\infty}\frac{(2x-4)^n}{n3^n}.
+$$
+
+The consecutive-term ratio in absolute value approaches
+
+$$
+L=\frac{\lvert2x-4\rvert}{3}.
+$$
+
+Thus absolute convergence holds when $$\lvert x-2\rvert<3/2$$. At the left endpoint $$x=1/2$$, the series becomes $$\sum(-1)^n/n$$, which converges conditionally by the Alternating Series Test and divergence of the absolute harmonic series.
+
+At the right endpoint $$x=7/2$$, the series becomes $$\sum1/n$$ and diverges. Therefore the radius is $$3/2$$ and the full interval is
+
+$$
+\left[\frac12,\frac72\right).
+$$
+
+The same ratio limit equals one at both endpoints, but their actual behavior differs. This is why an open-interval calculation cannot decide the endpoint brackets.
+
+</div>
+
+---
+
 ## Choosing a convergence test
 
 Series tests are tools for different patterns.
@@ -803,7 +913,7 @@ Power series are most often used to approximate functions, especially rational, 
 
 Inside the interval of convergence, a power series can be differentiated or integrated term by term.
 
-This is allowed because power series behave like polynomials inside their interval of convergence. On any smaller closed interval inside the radius of convergence, the series converges uniformly, which means the infinite sum is well-behaved enough that limits, derivatives, and integrals can be handled term by term. For AP purposes, the main rule is:
+On any smaller closed interval strictly inside the radius of convergence, both the power series and its differentiated series have the convergence properties needed to justify these operations. Uniform convergence of a general series by itself would not justify differentiating it. For AP purposes, the main rule is:
 
 :::key{name="Power series operations"}
 Inside the interval of convergence, power series may be differentiated and integrated term by term. The radius of convergence stays the same, but endpoints must be checked again.
@@ -832,6 +942,48 @@ $$
 The interval of convergence remains $$\lvert x\rvert<1$$ before checking endpoints. In this case, both endpoints diverge, so the interval is $$(-1,1)$$.
 
 </div>
+
+---
+
+### Building new series from a known one
+
+Substitution changes the powers and the convergence condition at the same time. Differentiation changes coefficients and starting indices. Integration introduces a constant determined by a known value. Keep those three effects separate.
+
+<div class="theorem-box">
+
+**Example.** Derive a power series for $$\arctan x$$ from the geometric series and determine its real interval of convergence.
+
+Substitute $$-t^2$$ for the geometric variable:
+
+$$
+\frac1{1+t^2}=\sum_{n=0}^{\infty}(-1)^nt^{2n},
+\qquad \lvert t\rvert<1.
+$$
+
+Integrate from zero to $$x$$ inside this interval:
+
+$$
+\arctan x
+=\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n+1}}{2n+1}.
+$$
+
+No extra constant remains because both sides are zero at the lower limit. At $$x=1$$, the numerical series is alternating with decreasing terms approaching zero, so it converges. At $$x=-1$$, its negative also converges.
+
+The full interval of convergence is therefore $$[-1,1]$$. Integration preserved the radius one but added convergent endpoints compared with the original geometric series. The endpoint sums are $$\pm\pi/4$$; identifying these with the function values uses the endpoint limit of the power-series identity, while endpoint convergence itself follows from the Alternating Series Test.
+
+</div>
+
+### Reading derivatives from coefficients
+
+If a power series centered at $$c$$ contains $$b_k(x-c)^k$$, then its $$k$$th derivative at the center is $$k!b_k$$. Do not mistake the coefficient for the derivative when $$k\ge2$$.
+
+For example,
+
+$$
+e^{-x^2}=1-x^2+\frac{x^4}{2}-\frac{x^6}{6}+\cdots
+$$
+
+gives $$f^{(6)}(0)=6!(-1/6)=-120$$. Every odd derivative at zero is zero because there are no odd powers. If the requested power is missing, its coefficient is zero, not unknown.
 
 ---
 
@@ -876,7 +1028,7 @@ $$
 </div>
 
 :::note
-You may wonder the difference between Taylor and Maclaurin series, since when the terms increas to infinity, the functions effectively become the same. However, for most practical purposes, you only have a finite amount of terms to work with, and approximating about a point that is not $$x=0$$ will induce a lot of error in your calculations compared to a Taylor series centered about the correct point. However, most problems will only ask for the Maclaurin series since it is less tedious.
+A Maclaurin series is a Taylor series centered at zero. A different center uses derivative information at that different input and can give a much better finite approximation near it. The center also affects the interval on which the expansion represents the function, so two expansions of the same function need not be interchangeable everywhere.
 :::
 
 Useful Maclaurin series to memorize:
@@ -1029,9 +1181,86 @@ $$
 
 ---
 
+### A Taylor polynomial about a nonzero center
+
+<div class="theorem-box">
+
+**Example.** Find the cubic Taylor polynomial for $$\ln x$$ centered at $$x=2$$ and use it to approximate $$\ln(2.2)$$. Bound the error.
+
+The needed derivatives at two are
+
+$$
+f(2)=\ln2,\quad f'(2)=\frac12,\quad
+f''(2)=-\frac14,\quad f'''(2)=\frac14.
+$$
+
+Divide each derivative by its factorial:
+
+$$
+T_3(x)=\ln2+\frac{x-2}{2}
+-\frac{(x-2)^2}{8}+\frac{(x-2)^3}{24}.
+$$
+
+At $$2.2$$, this gives
+
+$$
+\ln(2.2)\approx\ln2+0.1-0.005+\frac{0.008}{24}.
+$$
+
+For the error, $$f^{(4)}(x)=-6/x^4$$. On $$[2,2.2]$$, its magnitude is at most $$6/16=3/8$$. Thus
+
+$$
+\lvert R_3(2.2)\rvert
+\le\frac{3/8}{4!}(0.2)^4
+=0.000025.
+$$
+
+The fourth derivative is negative throughout the interval, so the actual remainder is negative: the cubic approximation is an overestimate. The relevant distance in the bound is $$0.2$$ from the center, not the coordinate $$2.2$$.
+
+</div>
+
+### Choosing a degree to meet a tolerance
+
+A degree is the highest power retained; the number of nonzero terms may be smaller. For sine, $$T_4(x)=x-x^3/6$$ has only two nonzero terms because the constant, quadratic, and quartic coefficients vanish.
+
+For an alternating expansion with decreasing term magnitudes at the requested input, use the first omitted nonzero term. For a general smooth function, bound the next derivative over the entire interval between the center and the target.
+
+<div class="theorem-box">
+
+**Example.** Find a Maclaurin degree that guarantees error less than $$10^{-5}$$ when estimating $$e^{0.2}$$, using the bound $$e^t<2$$ on $$[0,0.2]$$.
+
+Every derivative of $$e^t$$ is $$e^t$$, so we can use $$M=2$$ in the Lagrange bound. For degree three,
+
+$$
+\lvert R_3(0.2)\rvert\le\frac{2(0.2)^4}{4!}
+\approx0.0001333,
+$$
+
+which does not provide the requested guarantee. For degree four,
+
+$$
+\lvert R_4(0.2)\rvert\le\frac{2(0.2)^5}{5!}
+\approx0.000005333<10^{-5}.
+$$
+
+Therefore degree four suffices:
+
+$$
+e^{0.2}\approx1+0.2+\frac{0.2^2}{2}
++\frac{0.2^3}{6}+\frac{0.2^4}{24}.
+$$
+
+The failed degree-three bound does not by itself prove that the actual degree-three error exceeds the tolerance. It says that this particular bound is not strong enough to certify it.
+
+</div>
+
+---
+
 ## Binomial series
 
 The binomial series generalizes powers of $$a+x$$ using the binomial theorem:
+
+For a positive real base $$a$$ and a real exponent $$p$$, the expansion is
 
 $$
 (a+x)^p
@@ -1206,6 +1435,20 @@ $$
 
 ---
 
+### Bounding the error after integrating a series
+
+If an alternating integrand is integrated term by term over an interval where the expansion is valid, check the integrated term magnitudes before applying the alternating remainder bound to the numerical result. The first omitted term of the integrand and the first omitted term of the integrated series have different powers and denominators.
+
+For the preceding approximation of $$\int_0^{0.5}e^{-x^2}\,dx$$, the first omitted integrand term is $$-x^6/6$$. After integration, its magnitude is
+
+$$
+\int_0^{0.5}\frac{x^6}{6}\,dx
+=\frac{0.5^7}{42}
+<0.000187.
+$$
+
+The integrated terms alternate and decrease, so this bounds the error of the three-term approximation. The omitted contribution is negative, so the approximation overestimates the true integral. This makes the answer more useful than a decimal approximation without a stated tolerance.
+
 ## Tips for the exam
 
 Series questions are decision problems. The hard part is usually not algebra; it is choosing a test whose hypotheses match the series.
@@ -1224,3 +1467,17 @@ AP scoring expects the name of the test and the key evidence. For example, "conv
 :::
 
 For Taylor polynomials, remember that approximation and error are linked. A polynomial is useful only when you know where it is centered, what degree it has, and how large the possible remainder could be.
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Partial sums | $$S_N=\sum_{n=1}^{N}a_n,\quad S=\lim_{N\to\infty}S_N$$ |
+| Geometric sum | $$\sum_{n=0}^{\infty}ar^n=a/(1-r),\quad\lvert r\rvert<1$$ |
+| Power benchmark | $$\sum1/n^p\text{ converges iff }p>1$$ |
+| Ratio test | $$L=\lim\lvert a_{n+1}/a_n\rvert,\quad L<1:\text{ absolute convergence};\quad L=1:\text{ inconclusive}$$ |
+| Alternating remainder | $$\lvert S-S_N\rvert\le b_{N+1}\quad\text{when }b_n\downarrow0$$ |
+| Integral remainder | $$\int_{N+1}^\infty f\le R_N\le\int_N^\infty f\quad\text{for positive decreasing }f$$ |
+| Taylor polynomial | $$T_N(x)=\sum_{n=0}^{N}\dfrac{f^{(n)}(c)}{n!}(x-c)^n$$ |
+| Lagrange remainder | $$\lvert R_N(x)\rvert\le\dfrac{M\lvert x-c\rvert^{N+1}}{(N+1)!},\quad M\ge\lvert f^{(N+1)}\rvert\text{ between }c,x$$ |
+| Series coefficients | $$f^{(n)}(c)=n!a_n\quad\text{for }f(x)=\sum a_n(x-c)^n$$ |
+:::

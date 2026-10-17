@@ -13,7 +13,7 @@ sidebar:
 
 </div>
 
-A function can be pictured as a machine or an arrow diagram, but the important rule is simple: **every input gets exactly one output**. Different inputs are allowed to share an output. What is not allowed is one input being sent to two different outputs.
+Whether you picture a function as a machine or an arrow diagram, **every input gets exactly one output**. Different inputs may share an output, but one input cannot be sent to two different outputs.
 
 The notation
 

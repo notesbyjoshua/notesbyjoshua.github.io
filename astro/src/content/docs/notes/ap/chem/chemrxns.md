@@ -144,7 +144,7 @@ $$
 
 If one combination is insoluble (in the example above it is $$CB$$), it forms a **precipitate**, a solid that may appear as cloudiness, flecks, or a settled solid at the bottom of the vessel. Different precipitates will have different colors, which may be useful in determining the contents of the reaction. If all ionic products remain soluble (aqueous), no net reaction occurs.
 
-You predict precipitates with **solubility rules**, which are very important to memorize. These rules are general AP-level shortcuts; a few exceptions exist, and exact solubility is handled later with $$K_{sp}$$.
+Learn the **solubility rules** to predict precipitates. These AP-level shortcuts have exceptions; exact solubility is handled later with $$K_{sp}$$.
 
 | Usually soluble | Important exceptions |
 | --- | --- |
@@ -448,21 +448,37 @@ A visible path indicates scattering by dispersed particles and supports a colloi
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Amount conversions | $$n=m/M_{molar}$$; $$n=MV$$; $$n=PV/(RT)$$ | Solution V in liters; gas formula assumes ideal behavior. |
+| Reaction extent | $$\xi_{max}=\min_i(n_{i,0}/\nu_i)$$ | Take the minimum over consumed reactants in a complete-reaction model. |
+| Stoichiometric change | $$n_{reactant,f}=n_0-\nu\xi$$; $$n_{product,f}=n_0+\nu\xi$$ | Use the balanced coefficients, not subscripts. |
+| Percent yield | $$\%yield=m_{actual}/m_{theoretical}\times100\%$$ | Compare the same pure product and physical state. |
+| Composition | $$\%mass=m_{component}/m_{sample}\times100\%$$ | For combustion analysis, sample oxygen may require mass difference. |
+| Back titration | $$n_{reagent,consumed}=n_{reagent,added}-n_{reagent,left}$$ | Convert the titration amount with its own balanced mole ratio first. |
+| Redox electron balance | $$n_{e^-,lost}=n_{e^-,gained}$$ | Balance both atoms and charge; oxidation numbers sum to species charge. |
+| Hydrate ratio | $$x=n_{water}/n_{anhydrous\ salt}$$ | Assumes only water is lost and the residue is fully anhydrous. |
+| Solution composition | $$m_{molality}=n_{solute}/m_{solvent,kg}$$; $$x_i=n_i/\sum_jn_j$$ | Molality uses solvent mass; mole fraction uses total moles. |
+| Henry's law | $$c=k_HP_{gas}$$ | Fixed temperature and the stated convention for $$k_H$$. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. Mix $$25.0\ \mathrm{mL}$$ of $$0.200\ M$$ barium chloride with $$40.0\ \mathrm{mL}$$ of $$0.100\ M$$ sodium sulfate. Assuming complete precipitation and additive volumes, what is the excess barium-ion concentration?
+1. A $$1.00\ \mathrm{g}$$ mixture of $$\mathrm{CaCO_3}$$ and inert material reacts with $$30.0\ \mathrm{mL}$$ of $$1.00\ M$$ HCl. The leftover acid needs $$10.0\ \mathrm{mL}$$ of $$1.00\ M$$ NaOH for neutralization. Using $$M(\mathrm{CaCO_3})=100.\ \mathrm{g/mol}$$, what is the carbonate mass percent?
 
-   (A) $$0.0615\ M$$<br>
-   (B) $$0.0154\ M$$<br>
-   (C) $$0.100\ M$$<br>
-   (D) $$0.0769\ M$$
+   (A) $$50.0\%$$<br>
+   (B) $$100.\%$$<br>
+   (C) $$75.0\%$$<br>
+   (D) $$200.\%$$
 
 :::solution
-Initial barium and sulfate amounts are 5.00 and 4.00 mmol. Their one-to-one precipitation leaves 1.00 mmol barium in 65.0 mL: $$[Ba^{2+}]=0.00100/0.0650=0.0154\ M$$.
+Initially there are 0.0300 mol acid and 0.0100 mol remains, so carbonate consumed 0.0200 mol HCl. Each mole of carbonate consumes two moles of acid, giving 0.0100 mol carbonate or 1.00 g. The sample is 100% carbonate within the data's precision; calling it a mixture does not guarantee a nonzero impurity fraction.
 
 $$
 \boxed{\text{B}}.
@@ -471,15 +487,15 @@ $$
 ::::
 
 ::::problem
-2. For $$2A+3B\rightarrow C$$, initially $$0.40\ \mathrm{mol}$$ A and $$0.45\ \mathrm{mol}$$ B react completely. Which result is correct?
+2. Mix $$40.0\ \mathrm{mL}$$ of $$0.150\ M$$ calcium chloride with $$60.0\ \mathrm{mL}$$ of $$0.150\ M$$ sodium carbonate. Assuming complete precipitation and additive volumes, which pair of remaining ion concentrations is correct?
 
-   (A) A limits; 0.20 mol C forms<br>
-   (B) B limits; 0.30 mol C forms<br>
-   (C) B limits; 0.15 mol C forms and 0.10 mol A remains<br>
-   (D) A limits; 0.15 mol B remains
+   (A) $$[\mathrm{Ca^{2+}}]=0.0600\ M$$ and $$[\mathrm{Na^+}]=0.0900\ M$$<br>
+   (B) $$[\mathrm{CO_3^{2-}}]=0.0900\ M$$ and $$[\mathrm{Cl^-}]=0.0600\ M$$<br>
+   (C) $$[\mathrm{CO_3^{2-}}]=0.0300\ M$$ and $$[\mathrm{Cl^-}]=0.120\ M$$<br>
+   (D) $$[\mathrm{CO_3^{2-}}]=0.0300\ M$$ and $$[\mathrm{Cl^-}]=0.0600\ M$$
 
 :::solution
-Reaction-batch amounts are $$0.40/2=0.20$$ and $$0.45/3=0.15$$. B limits to 0.15 mol C. A consumed is $$2(0.15)=0.30$$ mol, leaving 0.10 mol.
+Calcium contributes 0.00600 mol and carbonate 0.00900 mol. The 1:1 precipitate leaves 0.00300 mol carbonate in 0.100 L. Chloride is a spectator, with $$2(0.00600)=0.0120\ \mathrm{mol}$$ in the same volume, giving 0.120 M. Spectators are diluted, not consumed by this reaction.
 
 $$
 \boxed{\text{C}}.
@@ -488,15 +504,15 @@ $$
 ::::
 
 ::::problem
-3. In acidic solution, permanganate is reduced to manganese(II) while iron(II) becomes iron(III). How many iron(II) ions react per permanganate ion?
+3. In acid, dichromate becomes chromium(III) and iron(II) becomes iron(III). A $$25.0\ \mathrm{mL}$$ iron(II) sample requires $$12.5\ \mathrm{mL}$$ of $$0.0200\ M$$ dichromate. What is the iron(II) concentration?
 
-   (A) 1<br>
-   (B) 2<br>
-   (C) 3<br>
-   (D) 5
+   (A) $$0.0100\ M$$<br>
+   (B) $$0.0200\ M$$<br>
+   (C) $$0.0300\ M$$<br>
+   (D) $$0.0600\ M$$
 
 :::solution
-Manganese changes from +7 to +2, accepting five electrons. Each iron(II) loses one electron. Equal electron transfer therefore requires five iron(II) ions per permanganate ion.
+Each chromium changes from +6 to +3, accepting three electrons; two chromium atoms accept six. Each iron(II) supplies one electron, so the sample contains $$6(0.0125)(0.0200)=0.00150\ \mathrm{mol}$$ iron(II). Dividing by 0.0250 L gives 0.0600 M. The redox electron balance determines the titration ratio.
 
 $$
 \boxed{\text{D}}.
@@ -505,15 +521,15 @@ $$
 ::::
 
 ::::problem
-4. A precipitate is weighed before it is fully dry and its mass is used to infer the original analyte concentration. Assuming no product loss, what bias results?
+4. A $$2.46\ \mathrm{g}$$ sample of $$\mathrm{MgSO_4\cdot xH_2O}$$ leaves $$1.20\ \mathrm{g}$$ anhydrous salt on heating. Use molar masses 120. and 18.0. What x is obtained, and how would incomplete drying bias x?
 
-   (A) Concentration is too high because retained water is counted as precipitate<br>
-   (B) Concentration is too low because water has low molar mass<br>
-   (C) No bias because water is neutral<br>
-   (D) The sign cannot be predicted even with all assumptions stated
+   (A) $$7$$; too low<br>
+   (B) $$7$$; too high<br>
+   (C) $$5$$; too low<br>
+   (D) $$5$$; too high
 
 :::solution
-Extra water increases measured mass. Dividing that mass by the precipitate's molar mass overestimates precipitate moles and hence analyte moles. Charge neutrality has no bearing on the mass error.
+Water loss is 1.26 g, or 0.0700 mol, and anhydrous salt is 0.0100 mol, so x is 7. Incomplete drying makes the apparent water loss too small and the apparent anhydrous mass too large; both effects lower the inferred ratio.
 
 $$
 \boxed{\text{A}}.
@@ -522,15 +538,15 @@ $$
 ::::
 
 ::::problem
-5. Which net ionic equation correctly represents neutralizing acetic acid with sodium hydroxide?
+5. Complete combustion of $$0.900\ \mathrm{g}$$ of a compound containing only C, H, and O gives $$1.32\ \mathrm{g}$$ carbon dioxide and $$0.540\ \mathrm{g}$$ water. Use molar masses 44.0 and 18.0, and atomic masses 12.0, 1.00, and 16.0. What is its empirical formula?
 
-   (A) $$\mathrm{H^++OH^-\rightarrow H_2O}$$ only<br>
-   (B) $$\mathrm{CH_3COOH+OH^-\rightarrow CH_3COO^-+H_2O}$$<br>
-   (C) $$\mathrm{Na^++OH^-\rightarrow NaOH(s)}$$<br>
-   (D) $$\mathrm{CH_3COO^-+H_2O\rightarrow CH_3COOH+OH^-}$$
+   (A) $$\mathrm{C_2H_6O}$$<br>
+   (B) $$\mathrm{CH_2O}$$<br>
+   (C) $$\mathrm{CH_4O}$$<br>
+   (D) $$\mathrm{C_2H_4O}$$
 
 :::solution
-Acetic acid is weak and remains written mainly as molecules in the net ionic equation. Hydroxide removes its proton and sodium is a spectator. The last option is the reverse base-hydrolysis process.
+Products show 0.0300 mol C and 0.0600 mol H atoms, accounting for 0.360+0.0600=0.420 g. The original sample therefore contains 0.480 g O, or 0.0300 mol. The ratio is 1:2:1. Oxygen from the combustion gas prevents using product oxygen directly as the sample's oxygen amount.
 
 $$
 \boxed{\text{B}}.
@@ -539,15 +555,15 @@ $$
 ::::
 
 ::::problem
-6. A hydrocarbon sample yields $$0.30\ \mathrm{mol}$$ carbon dioxide and $$0.40\ \mathrm{mol}$$ water upon complete combustion. Which empirical formula fits?
+6. A precipitation should produce $$2.00\ \mathrm{g}$$ of pure dry product. During filtration, 10.0% of that product is lost. The recovered solid retains water equal to 10.0% of its dry mass. What apparent percent yield is recorded?
 
-   (A) $$\mathrm{CH_2}$$<br>
-   (B) $$\mathrm{C_3H_4}$$<br>
-   (C) $$\mathrm{C_3H_8}$$<br>
-   (D) $$\mathrm{C_6H_8}$$
+   (A) $$90.0\%$$<br>
+   (B) $$100.\%$$<br>
+   (C) $$99.0\%$$<br>
+   (D) $$110.\%$$
 
 :::solution
-Carbon amount is 0.30 mol atoms and hydrogen amount is $$2(0.40)=0.80$$ mol atoms. The ratio is 3:8. Water moles must be doubled when counting hydrogen atoms.
+Recovery leaves $$2.00(0.900)=1.80\ \mathrm{g}$$ dry product. Retained water adds $$0.100(1.80)=0.180\ \mathrm{g}$$, giving 1.98 g and 99.0% apparent yield. Equal stated percentages do not cancel because they use different reference masses.
 
 $$
 \boxed{\text{C}}.
@@ -557,80 +573,46 @@ $$
 
 ### FRQ
 
-::::frq{id=chem-chemrxns-1}
-7. A $$2.50\ \text{g}$$ sample of impure $$\text{CaCO}_3$$ reacts with excess $$\text{HCl}$$ according to
+::::frq{id=chem-chemrxns-challenge-1}
+7. A 1.500 g sample contains only $$\mathrm{Na_2CO_3}$$ and $$\mathrm{NaHCO_3}$$. It reacts with 40.00 mL of 1.000 M HCl. After carbon dioxide is fully expelled, the excess acid requires 15.00 mL of 1.000 M NaOH. Use molar masses 106.0 and $$84.00\ \mathrm{g/mol}$$.
 
-$$
-\text{CaCO}_3(s)+2\text{HCl}(aq)\rightarrow \text{CaCl}_2(aq)+\text{CO}_2(g)+\text{H}_2\text{O}(l).
-$$
+   $$(A)$$ Write balanced net ionic reactions of carbonate and bicarbonate with acid, and find the moles of acid consumed by the sample.
 
-The reaction produces $$0.0200\ \text{mol}$$ of $$\text{CO}_2$$.
+   $$(B)$$ Determine the mass percent of each component by solving simultaneous equations.
 
-   $$(A)$$ Calculate the moles of $$\text{CaCO}_3$$ that reacted.
+   $$(C)$$ Calculate the total moles of carbon dioxide produced. Explain why acid consumed cannot simply be equated to gas produced.
 
-   $$(B)$$ Calculate the mass of $$\text{CaCO}_3$$ in the sample.
-
-   $$(C)$$ Calculate the percent by mass of $$\text{CaCO}_3$$ in the impure sample.
-
-   $$(D)$$ **Original extension.** Suppose $$10.0\%$$ of the carbon dioxide produced escapes before measurement. Recalculate the actual mass percent of calcium carbonate, assuming no other error.
+   $$(D)$$ If some dissolved carbon dioxide remains and also consumes NaOH during the back titration, predict the error in the inferred carbonate mass fraction.
 
 :::solution
-$$(A)$$ The balanced equation has a $$1:1$$ mole ratio between $$\text{CaCO}_3$$ and $$\text{CO}_2$$. The problem says the acid is in excess, so all of the carbonate that can react is converted to products, and the moles of $$\text{CO}_2$$ produced directly equal the moles of $$\text{CaCO}_3$$ that reacted:
+$$(A)$$ The reactions are $$\mathrm{CO_3^{2-}+2H^+\rightarrow CO_2+H_2O}$$ and $$\mathrm{HCO_3^-+H^+\rightarrow CO_2+H_2O}$$. Initial acid is 0.04000 mol and leftover acid is 0.01500 mol from the 1:1 NaOH neutralization. Therefore the sample consumes 0.02500 mol H+. One carbonate consumes twice as much acid as one bicarbonate.
 
-$$
-\boxed{0.0200\ \text{mol CaCO}_3}.
-$$
+$$(B)$$ Let x and y be moles of sodium carbonate and sodium bicarbonate. Acid consumption gives $$2x+y=0.02500$$ and sample mass gives $$106.0x+84.00y=1.500$$. Substituting $$y=0.02500-2x$$ yields $$x=0.009677\ \mathrm{mol}$$ and $$y=0.005645\ \mathrm{mol}$$. Their masses are 1.026 g and 0.4742 g, or 68.39% carbonate and 31.61% bicarbonate.
 
-$$(B)$$ Using $$100.09\ \text{g/mol}$$ for $$\text{CaCO}_3$$,
+$$(C)$$ Each reactant anion yields one carbon dioxide, so $$n_{CO_2}=x+y=0.01532\ \mathrm{mol}$$. Acid consumed is 0.02500 mol because the two anions need different numbers of protons. Equating all consumed acid with gas would treat carbonate as if it were bicarbonate and overpredict the gas amount.
 
-$$
-(0.0200\ \text{mol})(100.09\ \text{g/mol})=2.00\ \text{g}.
-$$
-
-The answer has three significant figures because the measured amount of $$\text{CO}_2$$ is given as $$0.0200\ \text{mol}$$.
-
-$$(C)$$ The mass percent is
-
-$$
-\frac{2.00\ \text{g}}{2.50\ \text{g}}\times 100\%=80.0\%.
-$$
-
-This means $$80.0\%$$ of the impure sample was reactive $$\text{CaCO}_3$$, and the remaining $$20.0\%$$ was impurity that did not produce $$\text{CO}_2$$.
-
-$$(D)$$ The measured $$0.0200\ \text{mol}$$ represents $$90.0\%$$ of the gas produced, so the actual amount is $$0.0200/0.900=0.0222\ \text{mol}$$. The corresponding calcium carbonate mass is about $$2.22\ \text{g}$$, giving $$2.22/2.50\times100\%=88.9\%$$. Gas loss biases the original result low because the calculation wrongly treats uncollected gas as calcium carbonate that was never present. The correction divides by $$0.900$$; adding ten percentage points would not reverse a fractional loss.
+$$(D)$$ Extra NaOH consumption would be incorrectly assigned to leftover HCl. Subtracting this overestimated leftover acid from the initial acid makes the inferred acid consumption by the sample too small. At fixed sample mass, carbonate consumes more acid per gram than bicarbonate, so the calculation then assigns too little carbonate. Expelling carbon dioxide separates the intended acid measurement from this interference.
 :::
 ::::
 
-::::frq{id=chem-chemrxns-2}
-8. A released AP Chemistry question asked students to identify a limiting reactant from experimental data. (Adapted from College Board, [2024 AP Chemistry FRQ 2](https://apcentral.collegeboard.org/media/pdf/ap24-frq-chemistry.pdf).)
+::::frq{id=chem-chemrxns-challenge-2}
+8. A 0.8000 g ore sample contains iron and inert material. All iron is dissolved and converted to iron(II), then titrated in acid with 0.02000 M permanganate. The sample uses 18.00 mL, while an identical reagent blank uses 1.00 mL. Permanganate is reduced to manganese(II). Use $$M_{Fe}=55.85\ \mathrm{g/mol}$$.
 
-   $$(A)$$ In a trial, $$0.0300\ \text{mol}$$ of $$\text{Al}$$ reacts with $$0.0200\ \text{mol}$$ of $$\text{Cl}_2$$ according to $$2\text{Al}+3\text{Cl}_2\rightarrow2\text{AlCl}_3$$. Identify the limiting reactant.
+   $$(A)$$ Balance the net ionic redox equation by showing the electron transfers.
 
-   $$(B)$$ Calculate the theoretical moles of $$\text{AlCl}_3$$ produced.
+   $$(B)$$ Apply the blank correction and calculate the ore's iron mass percent.
 
-   $$(C)$$ Explain why the excess reactant remains after the limiting reactant is consumed.
+   $$(C)$$ Suppose 10.0% of the sample iron(II) is oxidized by air before titration. Predict the reported percent if every other step and the blank correction remain unchanged.
 
-   $$(D)$$ **Original extension.** In a second trial, double only the initial chlorine amount. Identify the limiting reactant and calculate the theoretical yield of aluminum chloride. Explain why doubling one reactant need not always double the yield.
+   $$(D)$$ The final solution contains potassium, manganese(II), iron(III), and excess acid. Explain why potassium is absent from the net ionic equation and why a precipitate is not required for the reaction to count as chemical change.
 
 :::solution
-$$(A)$$ Compare how much $$\text{Cl}_2$$ is needed for the available Al:
+$$(A)$$ Oxidation is $$\mathrm{Fe^{2+}\rightarrow Fe^{3+}+e^-}$$. Reduction is $$\mathrm{MnO_4^-+8H^++5e^-\rightarrow Mn^{2+}+4H_2O}$$. Multiplying the iron half-reaction by five and adding gives $$\mathrm{MnO_4^-+8H^++5Fe^{2+}\rightarrow Mn^{2+}+4H_2O+5Fe^{3+}}$$. Both atoms and charge balance; total charge is +17 on either side.
 
-$$
-0.0300\ \text{mol Al}\times\frac{3\ \text{mol Cl}_2}{2\ \text{mol Al}}=0.0450\ \text{mol Cl}_2.
-$$
+$$(B)$$ The analyte accounts for $$18.00-1.00=17.00\ \mathrm{mL}$$ permanganate. Its amount is $$0.01700(0.02000)=0.0003400\ \mathrm{mol}$$, corresponding to $$5(0.0003400)=0.001700\ \mathrm{mol}$$ Fe. The iron mass is $$0.001700(55.85)=0.09495\ \mathrm{g}$$, giving $$0.09495/0.8000\times100\%=11.87\%$$. The blank removes oxidant consumed by reagents rather than sample iron.
 
-Only $$0.0200\ \text{mol Cl}_2$$ is available, which is less than the $$0.0450\ \text{mol Cl}_2$$ required to consume all of the aluminum. Therefore, $$\text{Cl}_2$$ is the limiting reactant.
+$$(C)$$ Only 90.0% of the original iron can now supply electrons to permanganate. The inferred iron amount and mass percent scale by 0.900, giving $$0.900(11.87\%)=10.68\%$$. The iron has not vanished, but the chosen assay no longer measures the already-oxidized fraction. A reagent blank cannot compensate for oxidation specific to the sample.
 
-$$(B)$$ Use the limiting reactant:
-
-$$
-0.0200\ \text{mol Cl}_2\times\frac{2\ \text{mol AlCl}_3}{3\ \text{mol Cl}_2}=0.0133\ \text{mol AlCl}_3.
-$$
-
-The mole ratio comes from the balanced equation: $$3$$ moles of $$\text{Cl}_2$$ produce $$2$$ moles of $$\text{AlCl}_3$$.
-
-$$(C)$$ The balanced reaction requires fixed mole ratios. Once $$\text{Cl}_2$$ is used up, no more $$\text{AlCl}_3$$ can form, even though some Al remains. The excess reactant remains because there are no longer enough particles of the limiting reactant available to collide and react in the required stoichiometric ratio.
-
-$$(D)$$ The new chlorine amount is $$0.0400\ \text{mol}$$. Consuming all $$0.0300\ \text{mol}$$ Al would require $$0.0450\ \text{mol}$$ chlorine, so chlorine is still limiting. The product amount is $$0.0400(2/3)=0.0267\ \text{mol}$$, twice the original yield. This proportionality holds only while chlorine remains limiting. Above $$0.0450\ \text{mol}$$ chlorine, aluminum limits the product to $$0.0300\ \text{mol}$$ regardless of further chlorine addition.
+$$(D)$$ Potassium accompanies the permanganate reagent but retains its charge and remains dissolved; it is a spectator ion. Iron and manganese change oxidation states through electron transfer even if all products remain aqueous. A new solid is only one possible observation of reaction, not a requirement. The balanced ionic equation records the species undergoing the chemical transformation.
 :::
 ::::

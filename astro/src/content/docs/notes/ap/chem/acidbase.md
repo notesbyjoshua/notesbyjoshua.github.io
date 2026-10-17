@@ -544,72 +544,37 @@ The first ionization is treated as complete, but the second is governed by the b
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Water and pH | $$K_w=[H_3O^+][OH^-]$$; $$\mathrm{pH}=-\log[H_3O^+]$$; $$\mathrm{pH}+\mathrm{pOH}=\mathrm{p}K_w$$ | $$\mathrm{p}K_w=14.00$$ at 25 degrees C in the dilute-solution model. |
+| Weak acid/base | $$K_a=[H_3O^+][A^-]/[HA]$$; $$K_b=[BH^+][OH^-]/[B]$$ | Water omitted as solvent; conjugate pairs satisfy $$K_aK_b=K_w$$. |
+| Weak acid only | $$K_a=x^2/(C-x)$$; $$x\approx\sqrt{K_aC}$$ | No added conjugate base; approximation needs small depletion and negligible water contribution. |
+| Percent ionization | $$\%ionization=x/C\times100\%$$ | x is the amount ionized per unit volume, not necessarily every hydronium source. |
+| Buffer | $$\mathrm{pH}=\mathrm{p}K_a+\log([A^-]/[HA])$$ | Neutralization first; both components remain appreciable. |
+| Strong-acid addition | $$n_{A^-,f}=n_{A^-,0}-n_{H^+}$$; $$n_{HA,f}=n_{HA,0}+n_{H^+}$$ | Valid before A- is exhausted; divide by common volume or use the mole ratio in the buffer equation. |
+| Monoprotic equivalence | $$M_aV_a=M_bV_{eq}$$ | One acidic proton and one hydroxide per base formula unit. |
+| Half-equivalence | $$\mathrm{pH}\approx\mathrm{p}K_a$$ | Weak monoprotic acid titrated by strong base in the buffer regime. |
+| Equivalence hydrolysis | $$[OH^-]\approx\sqrt{K_bC_{salt}}$$ | Weak-acid/strong-base titration; use total mixed volume and check small change. |
+| After equivalence | $$[OH^-]\approx n_{OH^-,excess}/V_{total}$$ | Excess strong base dominates over salt hydrolysis and water autoionization. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. Mix $$20.0\ \mathrm{mL}$$ of $$0.100\ M$$ HCl with $$30.0\ \mathrm{mL}$$ of $$0.100\ M$$ NaOH at $$25^\circ C$$. Find pH, assuming additive volumes.
+1. A buffer contains $$0.0100\ \mathrm{mol}$$ HA and $$0.0150\ \mathrm{mol}$$ its conjugate base. Add $$0.0200\ \mathrm{mol}$$ HCl and make the final volume $$0.500\ \mathrm{L}$$. With $$K_a=10^{-5}$$, what is the approximate pH?
 
-   (A) $$1.70$$<br>
-   (B) $$7.00$$<br>
-   (C) $$12.30$$<br>
-   (D) $$13.00$$
-
-:::solution
-Base exceeds acid by 1.00 mmol in 50.0 mL, so hydroxide is 0.0200 M. pOH is 1.70 and pH is 12.30. Equal concentrations do not imply equal amounts when volumes differ.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-2. A buffer initially has $$0.100\ \mathrm{mol}$$ HA and $$0.100\ \mathrm{mol}$$ A-. Add $$0.0200\ \mathrm{mol}$$ HCl with negligible volume change. What is $$\mathrm{pH}-\mathrm{p}K_a$$ afterward?
-
-   (A) $$+0.176$$<br>
-   (B) $$-0.176$$<br>
-   (C) $$0$$<br>
-   (D) $$-0.699$$
+   (A) $$2.00$$<br>
+   (B) $$4.82$$<br>
+   (C) $$5.18$$<br>
+   (D) $$12.00$$
 
 :::solution
-Acid consumes A- and produces HA, leaving 0.0800 and 0.120 mol respectively. The logarithmic ratio is $$\log(0.0800/0.120)=-0.176$$. The initial equal ratio is no longer valid.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-3. A weak acid is diluted 100-fold while its small-x approximation remains valid. What happens approximately to hydronium concentration and percent ionization?
-
-   (A) Both decrease tenfold<br>
-   (B) Hydronium decreases 100-fold and percent is fixed<br>
-   (C) Both increase tenfold<br>
-   (D) Hydronium decreases tenfold and percent increases tenfold
-
-:::solution
-Hydronium scales as $$\sqrt C$$ and ionized fraction scales as $$1/\sqrt C$$. Dilution therefore lowers hydronium but increases the fraction ionized. These conclusions assume water autoionization remains negligible.
-
-$$
-\boxed{\text{D}}.
-$$
-:::
-::::
-
-::::problem
-4. At a temperature where $$K_w=1.0\times10^{-12}$$, which solution is neutral?
-
-   (A) pH 6.00<br>
-   (B) pH 7.00<br>
-   (C) pH 12.00<br>
-   (D) pH 0.00
-
-:::solution
-Neutrality means equal hydronium and hydroxide, each $$10^{-6}\ M$$, so pH is 6.00. The criterion is equal concentrations, not a temperature-independent pH of seven.
+Strong acid consumes all 0.0150 mol conjugate base and leaves 0.00500 mol excess hydronium. Its concentration is 0.0100 M, giving pH 2.00. The common hydronium suppresses the weak acid's additional ionization. Henderson-Hasselbalch is inapplicable after a buffer component is exhausted.
 
 $$
 \boxed{\text{A}}.
@@ -618,15 +583,15 @@ $$
 ::::
 
 ::::problem
-5. A $$25.0\ \mathrm{mL}$$ weak monoprotic acid sample reaches equivalence after $$40.0\ \mathrm{mL}$$ strong base. At $$20.0\ \mathrm{mL}$$ base its pH is 5.00. What is Ka?
+2. A weak monoprotic acid reaches equivalence after $$40.0\ \mathrm{mL}$$ of strong base. At $$30.0\ \mathrm{mL}$$ added, its pH is 5.00. What is its approximate Ka?
 
-   (A) $$5.0$$<br>
-   (B) $$1.0\times10^{-9}$$<br>
-   (C) $$1.0\times10^{-5}$$<br>
-   (D) It cannot be inferred because the original acid concentration is unknown
+   (A) $$1.0\times10^{-5}$$<br>
+   (B) $$3.3\times10^{-6}$$<br>
+   (C) $$3.0\times10^{-5}$$<br>
+   (D) $$1.0\times10^{-10}$$
 
 :::solution
-At half-equivalence the acid and conjugate-base amounts are equal, so pH approximately equals pKa. Thus $$K_a=10^{-5.00}$$. The original concentration is unnecessary for this ratio-based inference.
+At three-quarter equivalence, conjugate base to remaining acid is $$30/(40-30)=3$$. Thus $$5.00=\mathrm{p}K_a+\log3$$, giving $$\mathrm{p}K_a=4.523$$ and $$K_a=3.0\times10^{-5}$$. The observed pH equals pKa only at half-equivalence.
 
 $$
 \boxed{\text{C}}.
@@ -635,15 +600,15 @@ $$
 ::::
 
 ::::problem
-6. A salt contains an acidic cation with $$K_a=2.0\times10^{-9}$$ and a basic anion with $$K_b=5.0\times10^{-6}$$. Which prediction is best?
+3. A weak acid has $$K_a=1.0\times10^{-3}$$ and formal concentration $$0.0100\ M$$. Neglecting water autoionization, which pH and approximation judgment are correct?
 
-   (A) Acidic because the cation has positive charge<br>
-   (B) Basic because anion hydrolysis is stronger<br>
-   (C) Neutral because salt has zero net charge<br>
-   (D) Neutral because both ions react with water
+   (A) 2.50; small-x is valid<br>
+   (B) 2.57; small-x is invalid<br>
+   (C) 3.00; small-x is valid<br>
+   (D) 1.00; small-x is invalid
 
 :::solution
-The anion's basic reaction is much stronger than the cation's acidic reaction, so hydroxide production dominates. Electrical neutrality is maintained by all ions and does not require a neutral pH.
+The shortcut gives $$x=0.00316\ M$$, more than 5% of 0.0100 M. Solving $$x^2/(0.0100-x)=0.0010$$ instead gives $$x=0.00270\ M$$ and pH 2.57. Calling an acid weak does not guarantee small fractional ionization.
 
 $$
 \boxed{\text{B}}.
@@ -651,119 +616,99 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+4. At $$25^\circ\mathrm{C}$$, mix $$20.0\ \mathrm{mL}$$ of $$0.100\ M$$ strong monoprotic acid with $$15.0\ \mathrm{mL}$$ of $$0.100\ M$$ barium hydroxide. Assuming complete dissociation and additive volumes, what is pH?
 
-::::frq{id=chem-acidbase-1}
-7. A $$0.100\ M$$ solution of acetic acid, $$\text{HC}_2\text{H}_3\text{O}_2$$, has $$K_a=1.8\times10^{-5}$$.
-
-   $$(A)$$ Write the acid-ionization equation.
-
-   $$(B)$$ Calculate $$[\text{H}_3\text{O}^+]$$ using the small-$$x$$ approximation.
-
-   $$(C)$$ Calculate the $$\text{pH}$$.
-
-   $$(D)$$ Explain what happens to the percent ionization if sodium acetate is added.
-
-   $$(E)$$ **Original extension.** A separate sample contains $$0.0500\ \text{mol}$$ acetic acid. Add $$0.0200\ \text{mol}$$ NaOH and dilute to $$0.500\ \text{L}$$. Calculate the pH, identifying the reaction that must be completed before using an equilibrium expression.
+   (A) $$1.54$$<br>
+   (B) $$7.00$$<br>
+   (C) $$12.15$$<br>
+   (D) $$12.46$$
 
 :::solution
-$$(A)$$
+Acid supplies 0.00200 mol hydronium; barium hydroxide supplies $$2(0.0150)(0.100)=0.00300\ \mathrm{mol}$$ hydroxide. Excess hydroxide is $$0.00100/0.0350=0.0286\ M$$. Its pOH is 1.54, giving pH 12.46. The base produces two hydroxide ions per formula unit.
 
 $$
-\text{HC}_2\text{H}_3\text{O}_2(aq)+\text{H}_2\text{O}(l)\rightleftharpoons \text{H}_3\text{O}^+(aq)+\text{C}_2\text{H}_3\text{O}_2^-(aq)
+\boxed{\text{D}}.
 $$
-
-Water is included in the chemical equation because it accepts the proton, but liquid water is omitted from the $$K_a$$ expression.
-
-$$(B)$$ Let $$x=[\text{H}_3\text{O}^+]$$ at equilibrium. Then
-
-$$
-K_a=\frac{x^2}{0.100-x}.
-$$
-
-Using the small-$$x$$ approximation,
-
-$$
-1.8\times10^{-5}=\frac{x^2}{0.100}.
-$$
-
-Thus
-
-$$
-x=\sqrt{(1.8\times10^{-5})(0.100)}=1.34\times10^{-3}\ M.
-$$
-
-This value is small compared with $$0.100\ M$$, so the small-$$x$$ approximation is reasonable:
-
-$$
-\frac{1.34\times10^{-3}}{0.100}\times100\%=1.34\%.
-$$
-
-$$(C)$$
-
-$$
-\text{pH}=-\log(1.34\times10^{-3})=2.87.
-$$
-
-$$(D)$$ Sodium acetate adds the common ion $$\text{C}_2\text{H}_3\text{O}_2^-$$, shifting the acid ionization left. Since less acetic acid ionizes, $$[\text{H}_3\text{O}^+]$$ decreases and the percent ionization decreases. This is the common-ion effect.
-
-$$(E)$$ First carry out $$\text{HA}+\text{OH}^-\rightarrow\text{A}^-+\text{H}_2\text{O}$$. Hydroxide is limiting, leaving $$0.0300\ \text{mol}$$ HA and producing $$0.0200\ \text{mol}$$ acetate. The resulting buffer has $$\text{pH}=\text{p}K_a+\log(n_{\text{A}^-}/n_{\text{HA}})=4.745+\log(0.0200/0.0300)=4.57$$. The common final volume cancels in the ratio. Applying the weak-acid-only square-root expression would ignore the substantial conjugate base formed by neutralization.
 :::
 ::::
 
-::::frq{id=chem-acidbase-2}
-8. The 2026 AP Chemistry exam included a nitrous acid titration and indicator question. (Adapted from College Board, [2026 AP Chemistry FRQ 3](https://apcentral.collegeboard.org/media/pdf/ap26-frq-chemistry.pdf).)
+::::problem
+5. Two $$1.00\ \mathrm{L}$$ buffers initially have equal acid/base ratios and the same pH. X contains 0.0100 mol each of HA and A-, and Y contains 0.100 mol each. Add 0.00500 mol HCl to each with negligible volume change. Which pH changes follow?
 
-   $$(A)$$ Explain why the equivalence point of a weak acid-strong base titration has $$\text{pH}>7$$.
-
-   $$(B)$$ A $$35.0\ \text{mL}$$ sample of $$\text{HNO}_2$$ is titrated to equivalence with $$21.0\ \text{mL}$$ of $$0.160\ M\ \text{NaOH}$$. Calculate the molarity of $$\text{HNO}_2$$.
-
-   $$(C)$$ Explain why an indicator should change color near the steep part of the titration curve.
-
-   $$(D)$$ **Original extension.** At $$25^\circ\text{C}$$, take $$K_a(\text{HNO}_2)=4.0\times10^{-4}$$. Calculate the equivalence-point pH for part B, assuming additive volumes, and check the small-change approximation.
+   (A) X: $$-0.477$$; Y: $$-0.0435$$<br>
+   (B) Both: $$-0.477$$<br>
+   (C) X: $$+0.477$$; Y: $$+0.0435$$<br>
+   (D) X: $$-0.0435$$; Y: $$-0.477$$
 
 :::solution
-$$(A)$$ At equivalence, the weak acid has been converted mostly into its conjugate base. The conjugate base reacts with water to produce $$\text{OH}^-$$:
+For X the new base/acid ratio is $$0.00500/0.0150=1/3$$, giving a -0.477 pH change. For Y it is $$0.0950/0.105=0.9048$$, giving -0.0435. Equal initial pH does not imply equal capacity; the same addition consumes very different fractions of the available base.
 
 $$
-\text{NO}_2^-(aq)+\text{H}_2\text{O}(l)\rightleftharpoons\text{HNO}_2(aq)+\text{OH}^-(aq).
+\boxed{\text{A}}.
 $$
+:::
+::::
 
-Because $$\text{OH}^-$$ is produced, the solution is basic and the equivalence-point pH is greater than $$7$$.
+::::problem
+6. At equivalence, a weak-acid/strong-base titration contains $$0.0400\ M$$ conjugate base. The acid has $$K_a=4.0\times10^{-5}$$ at $$25^\circ\mathrm{C}$$. What is the approximate pH?
 
-$$(B)$$ At equivalence,
+   (A) $$5.50$$<br>
+   (B) $$7.00$$<br>
+   (C) $$8.50$$<br>
+   (D) $$9.50$$
+
+:::solution
+The base constant is $$K_b=10^{-14}/(4.0\times10^{-5})=2.5\times10^{-10}$$. Hydrolysis gives $$[\mathrm{OH^-}]\approx\sqrt{K_bC}=3.16\times10^{-6}\ M$$. Thus pOH is 5.50 and pH is 8.50. The small change is less than 0.01% of the salt concentration, so the approximation is justified.
 
 $$
-n_{\text{HNO}_2}=n_{\text{NaOH}}.
+\boxed{\text{C}}.
 $$
+:::
+::::
 
-$$
-n_{\text{NaOH}}=(0.0210\ \text{L})(0.160\ M)=0.00336\ \text{mol}.
-$$
+### FRQ
 
-Thus
+::::frq{id=chem-acidbase-challenge-1}
+7. A 25.00 mL sample of monoprotic weak acid HA requires 30.00 mL of 0.1000 M NaOH to reach equivalence. At 10.00 mL added, the pH is 4.20. All measurements are at $$25^\circ\mathrm{C}$$; use $$K_w=1.00\times10^{-14}$$ and additive volumes.
 
-$$
-M_{\text{HNO}_2}=\frac{0.00336\ \text{mol}}{0.0350\ \text{L}}=0.0960\ M.
-$$
+   $$(A)$$ Determine the original acid concentration and infer Ka from the partial-titration measurement.
 
-$$(C)$$ The steep part of the titration curve is where a tiny volume change causes a large pH change, so the color change most closely marks the equivalence point. If the indicator changes color far from that steep region, it will signal the endpoint too early or too late and create systematic error.
+   $$(B)$$ Estimate the initial pH and check the small-change approximation.
 
-```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\begin{tikzpicture}
-\begin{axis}[axis lines=left, width=9cm, height=5.5cm, xmin=0, xmax=50, ymin=0, ymax=14, xlabel={volume base added}, ylabel={pH}, xtick=\empty, ytick={0,7,14}, grid=both, grid style={gray!15}]
-\addplot[blue, very thick, samples=200, domain=0:50] {3 + 8/(1+exp(-0.45*(x-25))) + 0.025*x};
-\addplot[dashed] coordinates {(25,0) (25,14)};
-\addplot[dashed] coordinates {(0,7) (50,7)};
-\node[anchor=south west] at (axis cs:25,8.6) {equivalence point};
-\node[anchor=south] at (axis cs:12.5,5.0) {buffer region};
-\node[anchor=north] at (axis cs:12.5,4.7) {$pH=pK_a$};
-\end{axis}
-\end{tikzpicture}
-```
+   $$(C)$$ Calculate the approximate pH at equivalence, accounting for dilution.
 
-$$(D)$$ The total volume is $$0.0560\ \text{L}$$, giving $$[\text{NO}_2^-]_0=0.00336/0.0560=0.0600\ M$$. Its base constant is $$K_b=K_w/K_a=2.5\times10^{-11}$$. Therefore $$[\text{OH}^-]\approx\sqrt{K_bC}=1.22\times10^{-6}\ M$$, giving $$\text{pOH}=5.91$$ and $$\text{pH}=8.09$$. The fraction hydrolyzed is only $$1.22\times10^{-6}/0.0600=2.04\times10^{-5}$$, so neglecting the change in nitrite concentration is justified. Hydroxide also exceeds the neutral-water concentration enough for this approximation at the reported precision.
+   $$(D)$$ Calculate the pH after 32.00 mL of NaOH has been added and explain why the controlling calculation changes.
+
+:::solution
+$$(A)$$ Initial acid is $$0.03000(0.1000)=0.003000\ \mathrm{mol}$$, giving $$0.003000/0.02500=0.1200\ M$$. At 10.00 mL, neutralization leaves 0.002000 mol HA and forms 0.001000 mol A-. Thus $$4.20=\mathrm{p}K_a+\log(0.001000/0.002000)$$, giving $$\mathrm{p}K_a=4.501$$ and $$K_a=3.15\times10^{-5}$$. The pH measurement is not at half-equivalence.
+
+$$(B)$$ Before adding base, $$[H_3O^+]\approx\sqrt{K_aC}=\sqrt{(3.15\times10^{-5})(0.1200)}=1.94\times10^{-3}\ M$$. The pH is approximately 2.71. The fractional change is $$0.00194/0.1200=1.62\%$$, below the usual 5% guideline. This justifies the estimate at the stated precision, unlike simply assuming every weak acid ionizes negligibly.
+
+$$(C)$$ The salt concentration is $$0.003000/(0.02500+0.03000)=0.05455\ M$$. Its base constant is $$K_b=K_w/K_a=3.17\times10^{-10}$$. Hydrolysis gives $$[OH^-]\approx\sqrt{K_bC}=4.16\times10^{-6}\ M$$, so pOH is 5.38 and pH is 8.62. The acid has been converted to conjugate base; the Henderson-Hasselbalch acid/base ratio is not the correct equivalence-point model.
+
+$$(D)$$ Base exceeds the initial acid by $$0.003200-0.003000=0.0002000\ \mathrm{mol}$$. In 0.05700 L, $$[OH^-]=0.003509\ M$$, giving pOH 2.455 and pH 11.545. Excess strong hydroxide dominates and suppresses the conjugate base's hydrolysis. Stoichiometry must identify this excess before choosing an equilibrium equation.
+:::
+::::
+
+::::frq{id=chem-acidbase-challenge-2}
+8. Prepare a 1.00 L buffer containing 0.0800 mol HA and 0.120 mol NaA. The acid has $$K_a=2.00\times10^{-5}$$ at $$25^\circ\mathrm{C}$$. Neglect volume changes when small amounts of solid or concentrated reagent are added, and use the usual buffer approximation where valid.
+
+   $$(A)$$ Calculate the initial pH and the pH after adding 0.0500 mol HCl. Show the neutralization step first.
+
+   $$(B)$$ For a fresh original buffer, calculate the maximum HCl addition that keeps pH at or above 4.50.
+
+   $$(C)$$ Dilute a fresh original buffer to 10.00 L, then add 0.0500 mol HCl. Compare its approximate final pH with part A and explain how capacity per liter differs.
+
+   $$(D)$$ For another fresh original buffer, add 0.130 mol HCl. Estimate the final pH and explain why the buffer equation must no longer be used.
+
+:::solution
+$$(A)$$ Initially $$\mathrm{pH}=4.699+\log(0.120/0.0800)=4.875$$. Added acid reacts by $$\mathrm{A^-+H^+\rightarrow HA}$$, leaving 0.0700 mol A- and 0.130 mol HA. The new pH is $$4.699+\log(0.0700/0.130)=4.430$$. Using the original ratio after addition would miss the chemical consumption of the buffer base.
+
+$$(B)$$ Let x be moles HCl added. The boundary condition is $$10^{4.50-4.699}=(0.120-x)/(0.0800+x)=0.6325$$. Solving gives $$x=(0.120-0.6325(0.0800))/(1+0.6325)=0.0425\ \mathrm{mol}$$. This is below the 0.120 mol needed to exhaust the base; a specified pH tolerance can be exceeded well before a component disappears.
+
+$$(C)$$ Dilution leaves component mole amounts unchanged, and the same acid addition again leaves 0.0700 mol A- and 0.130 mol HA. Their concentration ratio is unchanged by the common larger volume, so the approximate final pH is again 4.430. The buffer contains one-tenth as many buffer moles per liter, however, so its capacity per liter is lower. Equal total added moles to the whole sample is different from equal added moles per liter.
+
+$$(D)$$ All 0.120 mol A- is protonated, leaving 0.0100 mol excess strong acid in 1.00 L. Thus hydronium is approximately 0.0100 M and pH is about 2.00; weak-acid ionization is suppressed by this hydronium. The Henderson-Hasselbalch approximation assumes appreciable amounts of both HA and A-. Substituting a negative remaining base amount would be chemically meaningless.
 :::
 ::::

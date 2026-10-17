@@ -68,7 +68,7 @@ Ideological rivalry mattered, but policy also reflected geography, economic acce
 
 ### Korea and the nuclear arms race
 
-North Korea invaded South Korea in 1950. A U.S.-led United Nations force intervened. After UN troops advanced north, China entered the war. The fighting ended in an armistice in 1953 near the original dividing line, leaving Korea divided.
+After North Korea invaded South Korea in 1950, a U.S.-led United Nations force intervened. China entered the war after UN troops advanced north. The fighting ended in an armistice in 1953 near the original dividing line, leaving Korea divided.
 
 President Truman dismissed **Douglas MacArthur** after disagreements over expanding the war. The episode reinforced civilian control of the military and the difficulty of fighting a limited war in a nuclear age.
 

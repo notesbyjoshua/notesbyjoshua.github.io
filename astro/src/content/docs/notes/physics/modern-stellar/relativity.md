@@ -98,7 +98,7 @@ The real lesson of the long, sad history of people (even accomplished scientists
 
 ## Four-vectors
 
-The cleanest formalism. A **four-vector** $$V^\mu = (V^0, V^1, V^2, V^3)$$ transforms like $$(ct, x, y, z)$$. The key tool is the **inner product**, which has minus signs:
+A **four-vector** $$V^\mu = (V^0, V^1, V^2, V^3)$$ transforms like $$(ct, x, y, z)$$. Its **inner product** uses the following sign convention:
 
 $$
 V \cdot W = V^0 W^0 - V^1 W^1 - V^2 W^2 - V^3 W^3.
@@ -143,7 +143,7 @@ $$
 \begin{pmatrix} x \\ ct \end{pmatrix} = \begin{pmatrix} \cosh\phi & \sinh\phi \\ \sinh\phi & \cosh\phi \end{pmatrix}\begin{pmatrix} x' \\ ct' \end{pmatrix}.
 $$
 
-The payoff: **rapidities simply add** when you compose collinear boosts, $$\phi_{\text{tot}} = \phi_1 + \phi_2$$ (compare the messy velocity-addition formula). This makes acceleration problems tractable.
+For collinear boosts, **rapidities simply add**, $$\phi_{\text{tot}} = \phi_1 + \phi_2$$ (compare the messy velocity-addition formula). This makes acceleration problems tractable.
 
 For a rocket with constant **proper acceleration** $$a_0$$ (felt onboard), the lab-frame acceleration is $$a_0/\gamma^3$$, and the rapidity grows linearly with proper time: $$\phi = a_0\tau/c$$, so $$v = c\tanh(a_0\tau/c)$$. The clean linear growth is exactly the rapidity-addition property at work.
 
@@ -339,7 +339,7 @@ $$
 
 The term $$q\mathbf{A}$$ is a kind of "potential momentum," analogous to potential energy $$q\phi$$. The power of this: even when fields and motion are complicated, if $$\phi$$ and $$\mathbf{A}$$ are independent of $$x$$, then $$p_x$$ is conserved. For rotational symmetry about $$\hat z$$, $$J_z = (\mathbf{r}\times\mathbf{p})\cdot\hat{z}$$ is conserved (using the *canonical* $$\mathbf{p}$$). The relativistic versions hold with $$m\mathbf{v}\to\gamma m\mathbf{v}$$.
 
-This is the right tool for adiabatic-invariant problems in magnetic fields (e.g. the betatron, slow changes of $$B$$ on an orbiting charge), and it's the hidden conserved quantity behind several "magic" Olympiad solutions.
+This conserved quantity is useful in adiabatic-invariant problems involving magnetic fields, such as the betatron or slow changes of $$B$$ acting on an orbiting charge, and can shorten Olympiad solutions.
 
 ## Gravitation and the equivalence principle
 

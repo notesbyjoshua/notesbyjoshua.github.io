@@ -36,7 +36,7 @@ The war strengthened Britain's empire but weakened its relationship with the col
 
 ### Why winning the war created a governing problem
 
-Before 1763, the presence of French power gave many British colonists a reason to value imperial military protection. France's defeat removed much of that immediate threat. At the same time, Britain gained territory whose defense required soldiers, diplomacy, and money. The same victory could therefore reduce colonists' sense of dependence while increasing Britain's demands on them.
+Before 1763, French power gave many British colonists a reason to value imperial military protection, but France's defeat removed much of that immediate threat. At the same time, Britain gained territory whose defense required soldiers, diplomacy, and money. The same victory could therefore reduce colonists' sense of dependence while increasing Britain's demands on them.
 
 Western land also attracted competing interests. Settlers wanted farms, speculators wanted rising land values, colonial governments wanted jurisdiction, and Native nations wanted to defend their territory. The Proclamation Line was an attempt to manage these pressures, not a permanent recognition that Native sovereignty would never be challenged. Its weak enforcement nevertheless did not prevent resentment among colonists who considered western access a reward for victory.
 

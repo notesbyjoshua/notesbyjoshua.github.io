@@ -20,7 +20,7 @@ A detail answer is already in the passage. An inference answer is not stated wor
 
 ## Overall Strategies
 
-When dealing with information and ideas problems, the passage will most likely (especially for module 2) throw in a bunch of jargon and unnecessary details to complicate the paragraph. The main goal before answering the question is simplifying the passage without losing any critical information. The similar process can be applied to the answer choices too!
+Information and Ideas passages often include jargon and extra details, especially in module 2. Before answering, simplify the passage while keeping the information the question depends on. You can do the same with the answer choices.
 
 :::strategy
 1. If a passage mentions a species (e.g. Tyrannosaurus Rex), always replace it with something simpler, like "species A."

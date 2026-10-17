@@ -113,7 +113,7 @@ $$
 
 </div>
 
-The definition basically means that a well-defined set is very precise so that the values in the set can be determined with no ambiguity, regardless of how difficult it is to actual list out all of the values in the set. The set of prime numbers larger than one million is well-defined; the set of “large numbers” is not unless *large* is given a precise meaning.
+A well-defined set has an unambiguous membership rule, even if listing all of its elements is difficult. The set of prime numbers larger than one million is well-defined; the set of “large numbers” is not unless *large* is given a precise meaning.
 
 There is also a difference between a difficult membership test and a flawed definition. Consider
 

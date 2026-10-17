@@ -7,7 +7,7 @@ sidebar:
 
 ## Types of chemical bonding
 
-Electrons are the currency of chemical bonding. Whether electrons are fully transferred, shared, or pooled determines the type of bond and, in broad terms, how strong and how directional that interaction is.
+Whether electrons are fully transferred, shared, or pooled determines the type of chemical bond and, in broad terms, its strength and directionality.
 
 ### Ionic bonding
 
@@ -103,7 +103,7 @@ Their connectivities are $$\mathrm{CH_3-CH_2-OH}$$ and $$\mathrm{CH_3-O-CH_3}$$.
 
 ## Drawing two-dimensional structures
 
-**Lewis structures** are schematic: they show valence electrons and bonds in two dimensions even though real molecules are three-dimensional. They are still very useful for drawing bonds, assigning **formal charge**, and spotting **resonance**.
+**Lewis structures** are schematic: they show valence electrons and bonds in two dimensions even though real molecules are three-dimensional. They help us draw bonds, assign **formal charge**, and identify **resonance**.
 
 ### The octet rule
 
@@ -350,55 +350,34 @@ The cycle is $$-400=100+500+120-350-U$$, so $$U=770\ \mathrm{kJ/mol}$$. This is 
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Formal charge | $$FC=V-N_{nonbonding}-N_{bonding}/2$$ | V is the free atom's valence-electron count; charges sum to the species charge. |
+| Electron domains | $$SN=N_{sigma\ bonds}+N_{lone\ pairs}$$ | Count around one central atom; a multiple bond is one domain. |
+| Localized hybridization | $$SN=2,3,4\ \longleftrightarrow\ sp,sp^2,sp^3$$ | A localized model, not a count of all bond lines. |
+| Multiple bonds | $$N_\sigma=1$$ per bonded atom pair; $$N_\pi=1$$ for a double bond and $$2$$ for a triple bond | Delocalized structures require resonance rather than permanent assignment to one contributor. |
+| Electrostatic energy and force | $$U=kQ_1Q_2/r$$; $$F=k\lvert Q_1Q_2\rvert/r^2$$ | Pair model; lattice energies also depend on arrangement and repulsion. |
+| Born-Haber sum | $$\Delta H_f^\circ=\sum\Delta H_{gas\ ion\ preparation}-U_{sep}$$ | Positive $$U_{sep}$$ separates the solid into gaseous ions; include every ionization and electron-gain event. |
+| Hydration and dissolution | $$\Delta H_{soln}=U_{sep}+\Delta H_{hydration}$$ | Hydration is normally negative; enthalpy alone does not establish solubility. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. Which pair has the same electron-domain geometry but different molecular geometries?
+1. For $$\mathrm{CH_3-C\equiv N}$$, which combination of total sigma bonds, total pi bonds, and carbon hybridizations is correct in the localized bonding model?
 
-   (A) $$\mathrm{CO_2}$$ and $$\mathrm{BF_3}$$<br>
-   (B) $$\mathrm{CH_4}$$ and $$\mathrm{NH_3}$$<br>
-   (C) $$\mathrm{BF_3}$$ and $$\mathrm{NH_3}$$<br>
-   (D) $$\mathrm{CO_2}$$ and $$\mathrm{H_2O}$$
-
-:::solution
-Both methane and ammonia have four electron domains, giving tetrahedral electron-domain geometry. Ammonia has one lone pair, so its molecular geometry is trigonal pyramidal; methane's is tetrahedral.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-2. In a simple ionic model, salt X contains $$+1,-1$$ ions at separation r, while salt Y contains $$+2,-2$$ ions at separation $$2r$$. Compare pair-attraction energy magnitudes.
-
-   (A) Y is half of X<br>
-   (B) They are equal<br>
-   (C) Y is twice X<br>
-   (D) Y is four times X
+   (A) 5 sigma, 2 pi; methyl carbon $$sp^3$$ and nitrile carbon $$sp$$<br>
+   (B) 3 sigma, 3 pi; both carbons $$sp^2$$<br>
+   (C) 5 sigma, 1 pi; both carbons $$sp^3$$<br>
+   (D) 6 sigma, 2 pi; methyl carbon $$sp^3$$ and nitrile carbon $$sp^2$$
 
 :::solution
-Coulomb potential-energy magnitude scales as the charge product divided by separation: $$\lvert U_Y\rvert/\lvert U_X\rvert=4/2=2$$. Using an inverse-square distance would confuse potential energy with force.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-3. An octet-obeying Lewis structure of $$\mathrm{NO_2^-}$$ contains one N=O bond and one N-O bond. Which formal-charge assignment is correct?
-
-   (A) N is 0, double-bond O is 0, single-bond O is -1<br>
-   (B) N is +1 and each O is -1<br>
-   (C) N is -1 and both O are 0<br>
-   (D) Every atom has zero formal charge
-
-:::solution
-Nitrogen has one lone pair and three shared pairs, so $$FC_N=5-2-3=0$$. The single-bond oxygen has three lone pairs, giving $$6-6-1=-1$$; the double-bond oxygen is neutral. Charges sum to the ion's -1 charge.
+Three C-H bonds contribute three sigma bonds, the C-C connection contributes one, and C-N contributes one sigma plus two pi bonds. The methyl carbon has four domains and is sp3; the nitrile carbon has two domains and is sp. A triple bond counts as one domain but contains three bonding interactions.
 
 $$
 \boxed{\text{A}}.
@@ -407,32 +386,15 @@ $$
 ::::
 
 ::::problem
-4. Which observation supports resonance in carbonate rather than one fixed C=O bond?
+2. An octet-obeying nitrate contributor has one N=O bond and two N-O bonds. Which statement correctly connects formal charge with measured bond lengths?
 
-   (A) Carbonate has a net charge<br>
-   (B) Oxygen is more electronegative than carbon<br>
-   (C) Carbon has no lone pair<br>
-   (D) All three C-O bond lengths are equal and intermediate between typical single and double bonds
-
-:::solution
-Equivalent intermediate bond lengths support delocalized bonding. A fixed single double bond would distinguish one shorter bond from two longer bonds. Charge and electronegativity alone do not establish resonance.
-
-$$
-\boxed{\text{D}}.
-$$
-:::
-::::
-
-::::problem
-5. In ethene, $$\mathrm{H_2C=CH_2}$$, rotation around the C-C axis is restricted primarily because rotation would disrupt which interaction?
-
-   (A) Overlap of the carbon 1s orbitals<br>
-   (B) Side-by-side overlap of the unhybridized p orbitals<br>
-   (C) Every C-H sigma bond<br>
-   (D) The attraction between separate ethene molecules
+   (A) Nitrogen is neutral and one bond remains permanently shorter<br>
+   (B) Nitrogen is $$+1$$, each single-bonded oxygen is $$-1$$, and all three real N-O bonds are equivalent<br>
+   (C) Nitrogen is $$-1$$ and resonance requires the atoms to exchange positions<br>
+   (D) Every oxygen is $$-1$$ and the real ion has one localized double bond
 
 :::solution
-Each carbon is approximately sp2, leaving a p orbital for the pi bond. Twisting the groups out of alignment weakens that side-by-side overlap. The restriction is intramolecular and cannot be explained by attractions between separate molecules.
+Nitrogen is assigned four bonding electrons, so its formal charge is $$5-4=+1$$. Each single-bonded oxygen is -1 and the double-bonded oxygen is neutral, totaling -1. Three equivalent contributors place the double bond on different oxygens, describing delocalized bonding rather than permanently different bond lengths.
 
 $$
 \boxed{\text{B}}.
@@ -441,15 +403,66 @@ $$
 ::::
 
 ::::problem
-6. For a hypothetical salt, gas-ion formation from the elements costs $$+450\ \mathrm{kJ/mol}$$ overall and crystal formation from those ions releases $$800\ \mathrm{kJ/mol}$$. What is the standard formation enthalpy of the solid?
+3. Pair X consists of $$+1$$ and $$-1$$ ions separated by r. Pair Y consists of $$+2$$ and $$-1$$ ions separated by $$1.5r$$. What are the ratios $$\lvert U_Y\rvert/\lvert U_X\rvert$$ and $$F_Y/F_X$$?
 
-   (A) $$+1250\ \mathrm{kJ/mol}$$<br>
-   (B) $$+350\ \mathrm{kJ/mol}$$<br>
-   (C) $$-350\ \mathrm{kJ/mol}$$<br>
-   (D) $$-800\ \mathrm{kJ/mol}$$
+   (A) $$4/3$$ and $$4/3$$<br>
+   (B) $$8/9$$ and $$4/3$$<br>
+   (C) $$4/3$$ and $$8/9$$<br>
+   (D) $$2$$ and $$2/3$$
 
 :::solution
-Hess's law gives $$450-800=-350\ \mathrm{kJ/mol}$$. The lattice step alone is not the full formation enthalpy because creating the gas ions first requires energy.
+Potential energy scales as charge product divided by distance, giving $$2/1.5=4/3$$. Force magnitude instead scales inversely with distance squared, giving $$2/(1.5)^2=8/9$$. A more negative pair energy can coexist with a smaller force at the specified separation; energy and force are not interchangeable.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+::::problem
+4. For a hypothetical MX salt, atomizing the elements costs $$180\ \mathrm{kJ/mol}$$, ionizing M costs $$500$$, and adding an electron to X releases $$320$$. The solid's formation enthalpy is $$-410\ \mathrm{kJ/mol}$$. What is the energy to separate the crystal into gaseous ions?
+
+   (A) $$90\ \mathrm{kJ/mol}$$<br>
+   (B) $$410\ \mathrm{kJ/mol}$$<br>
+   (C) $$-770\ \mathrm{kJ/mol}$$<br>
+   (D) $$770\ \mathrm{kJ/mol}$$
+
+:::solution
+Gas-ion preparation costs $$180+500-320=360\ \mathrm{kJ/mol}$$. If U is the positive lattice-separation energy, Hess's law gives $$-410=360-U$$, so $$U=770\ \mathrm{kJ/mol}$$. Lattice formation has the opposite sign; the requested process is separation.
+
+$$
+\boxed{\text{D}}.
+$$
+:::
+::::
+
+::::problem
+5. In $$\mathrm{XeF_4}$$, a Lewis structure gives xenon four bonds and two lone pairs. Which arrangement minimizes lone-pair repulsion and what molecular polarity follows?
+
+   (A) Adjacent lone pairs; polar tetrahedral molecule<br>
+   (B) Opposite lone pairs; nonpolar square-planar molecule<br>
+   (C) Opposite lone pairs; polar seesaw molecule<br>
+   (D) Adjacent lone pairs; nonpolar trigonal-planar molecule
+
+:::solution
+Six domains give an octahedral electron arrangement. Placing the two lone pairs opposite each other leaves four fluorines in a square plane. Equal Xe-F bond dipoles cancel by symmetry. Counting bonded atoms alone would miss both the electron-domain geometry and the lone-pair placement.
+
+$$
+\boxed{\text{B}}.
+$$
+:::
+::::
+
+::::problem
+6. Two isomers are $$\mathrm{CH_3CH_2OH}$$ and $$\mathrm{CH_3OCH_3}$$. Which explanation correctly predicts the higher boiling point without confusing intermolecular forces with covalent bonding?
+
+   (A) The ether, because its two C-O bonds must break during boiling<br>
+   (B) Ethanol, because it has more electrons<br>
+   (C) Ethanol, because its molecules can both donate and accept hydrogen bonds<br>
+   (D) The ether, because ethanol lacks dispersion forces
+
+:::solution
+Both isomers have the same formula and electron count, and both experience dispersion forces. Ethanol has an O-H donor as well as oxygen lone pairs, enabling self-hydrogen-bonding; ether has no suitable donor. Boiling separates molecules rather than breaking their C-O bonds.
 
 $$
 \boxed{\text{C}}.
@@ -459,73 +472,46 @@ $$
 
 ### FRQ
 
-::::frq{id=chem-compounds-1}
-7. Consider the molecules $$\text{CH}_2\text{O}$$ and $$\text{CH}_3\text{OH}$$.
+::::frq{id=chem-compounds-challenge-1}
+7. Consider formic acid, $$\mathrm{H-C(=O)-O-H}$$, and its conjugate base, formate, $$\mathrm{HCO_2^-}$$. Use the localized Lewis and hybridization models for individual contributors.
 
-   $$(A)$$ Draw a reasonable Lewis structure for each molecule.
+   $$(A)$$ Draw a complete Lewis structure of formic acid, including lone pairs. Count all sigma and pi bonds and assign the carbon hybridization.
 
-   $$(B)$$ Identify the hybridization of the carbon atom in each molecule.
+   $$(B)$$ Write the two equivalent formate resonance contributors and assign formal charges in each. Predict the two C-O bond lengths relative to the single and double C-O bonds of the acid.
 
-   $$(C)$$ Explain which molecule can form stronger intermolecular attractions with water.
+   $$(C)$$ The O-C-O angle is close to 120 degrees. Explain why counting four bond lines around carbon would give the wrong geometry.
 
-   $$(D)$$ **Original extension.** Count the sigma and pi bonds in each molecule. Explain why rotation around the carbon-oxygen bond is more restricted in formaldehyde than in methanol.
+   $$(D)$$ Compare the interactions of each species with water. Explain why the absence of an O-H bond in formate does not imply weak attraction to water.
 
 :::solution
-$$(A)$$ In $$\text{CH}_2\text{O}$$, carbon is bonded to two H atoms and double-bonded to O. In $$\text{CH}_3\text{OH}$$, carbon is bonded to three H atoms and single-bonded to O, while O is bonded to H and has two lone pairs.
+$$(A)$$ The connectivity is $$\mathrm{H-C(=O)-O-H}$$, with two lone pairs on each oxygen. It has four sigma bonds: C-H, two C-O connections, and O-H. The carbonyl contributes one pi bond. Carbon has three electron domains and is sp2, with its unhybridized p orbital participating in the pi bond. Both oxygens and carbon have octets, and each atom has zero formal charge.
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\node at (-2.8,0) {$\mathrm{H_2C=O}$};
-\draw (-3.55,-0.25) -- (-3.15,-0.25); \draw (-3.55,0.25) -- (-3.15,0.25);
-\node at (-3.9,0) {H}; \node at (-2.1,0) {O};
-\node at (2.0,0.45) {$\mathrm{CH_3OH}$};
-\draw (1.45,0.2) -- (2.45,0.2); \node at (1.2,0.2) {C}; \node at (2.7,0.2) {O-H};
-\node[align=center] at (0,-1.0) {Lewis structures show bonding pairs and lone pairs};
-\end{tikzpicture}
-```
+$$(B)$$ The contributors are $$\mathrm{H-C(=O)-O^-}$$ and $$\mathrm{H-C(-O^-)=O}$$. In each, the single-bonded oxygen has three lone pairs and formal charge -1; the double-bonded oxygen has two lone pairs and charge 0. Carbon and hydrogen are neutral. Delocalization makes the formate C-O bonds equivalent, with lengths between typical C-O single and double bonds. A drawing with one localized double bond is not the complete description of the ion.
 
-$$(B)$$ The carbon in $$\text{CH}_2\text{O}$$ has three electron domains, so it is
+$$(C)$$ A double bond contains sigma and pi interactions along one bonded direction, so it counts as one electron domain. Carbon has three domains: one toward hydrogen and one toward each oxygen. Their approximately trigonal-planar arrangement gives angles near 120 degrees. Four drawn bond lines do not indicate four independent directions or tetrahedral geometry.
 
-$$
-\boxed{sp^2}.
-$$
-
-The carbon in $$\text{CH}_3\text{OH}$$ has four electron domains, so it is
-
-$$
-\boxed{sp^3}.
-$$
-
-$$(C)$$ $$\text{CH}_3\text{OH}$$ forms stronger attractions with water because it can both donate and accept hydrogen bonds through its $$\text{O-H}$$ group. The O atom has lone pairs that can accept hydrogen bonds, and the H attached to O can be donated into a hydrogen bond with water. $$\text{CH}_2\text{O}$$ can accept hydrogen bonds at oxygen, but it cannot donate hydrogen bonds because its H atoms are bonded to carbon, not to a highly electronegative atom. This gives methanol stronger overall interactions with water.
-
-$$(D)$$ Formaldehyde has three sigma bonds (two C-H and one C-O) and one pi bond. Methanol has five sigma bonds (three C-H, one C-O, and one O-H) and no pi bonds. Rotating about the C=O axis would destroy the parallel p-orbital overlap that forms the pi bond. Rotation about methanol's C-O single bond does not require breaking a pi bond, although different conformations can have different energies.
+$$(D)$$ Formic acid can donate a hydrogen bond from O-H and accept hydrogen bonds at oxygen. Formate lacks an O-H donor, but its negatively charged, delocalized oxygen region interacts strongly with water's partial positive hydrogen ends through ion-dipole interactions and can accept hydrogen bonds. Losing a donor does not remove the ion's charge or its acceptor sites. Comparing the two species requires considering charge as well as molecular functional groups.
 :::
 ::::
 
-::::frq{id=chem-compounds-2}
-8. The 2026 AP Chemistry exam asked students about chromate resonance and VSEPR geometry. (Adapted from College Board, [2026 AP Chemistry FRQ 2](https://apcentral.collegeboard.org/media/pdf/ap26-frq-chemistry.pdf).)
+::::frq{id=chem-compounds-challenge-2}
+8. A hypothetical ionic solid $$\mathrm{MX_2}$$ contains $$\mathrm{M^{2+}}$$ and $$\mathrm{X^-}$$. Per mole of solid, metal sublimation costs 150 kJ, the first and second ionizations cost 600 and 1200 kJ, dissociating one mole of $$\mathrm{X_2}$$ costs 200 kJ, and adding an electron to each gaseous X atom releases 350 kJ. Formation of the solid from its standard-state elements has $$\Delta H_f^\circ=-700\ \mathrm{kJ/mol}$$.
 
-   $$(A)$$ Predict the molecular geometry around chromium in $$\text{CrO}_4^{2-}$$.
+   $$(A)$$ Write a Born-Haber sum and calculate the positive lattice-separation energy U.
 
-   $$(B)$$ Explain why multiple resonance structures can be drawn for $$\text{CrO}_4^{2-}$$.
+   $$(B)$$ An otherwise comparable solid has the same charges and lattice arrangement but ion separation 10.0% larger. Use the inverse-distance model to estimate its lattice-separation energy. State a limitation of the estimate.
 
-   $$(C)$$ Explain why the four Cr-O bonds are expected to be equivalent in the resonance hybrid.
+   $$(C)$$ If hydration of one mole of gaseous ion sets releases 2100 kJ, estimate the dissolution enthalpy of the original salt. Can the sign alone establish whether it dissolves?
 
-   $$(D)$$ **Original extension.** Compare formal charges in a chromate structure with four single Cr-O bonds and one with two double and two single Cr-O bonds. Explain why choosing one resonance contributor does not establish two permanently different types of Cr-O bond.
+   $$(D)$$ Predict electrical conduction in the solid, molten salt, and aqueous solution if the salt dissolves. Identify the moving particles rather than just saying there are charges.
 
 :::solution
-$$(A)$$ The chromium has four bonding regions around it, so the electron-domain geometry and molecular geometry are both
+$$(A)$$ Preparing gaseous ions costs $$150+600+1200+200-2(350)=1450\ \mathrm{kJ/mol}$$. Two electron-gain events are needed because the formula contains two anions. Formation of the lattice contributes -U, so $$-700=1450-U$$ and $$U=2150\ \mathrm{kJ/mol}$$. The dissociation term is for one whole mole of diatomic X2, supplying two moles of atoms.
 
-$$
-\boxed{\text{tetrahedral}}.
-$$
+$$(B)$$ With all other model factors fixed, $$U'\approx U/1.10=1955\ \mathrm{kJ/mol}$$, about $$1.95\times10^3\ \mathrm{kJ/mol}$$. Greater separation weakens attraction. Actual lattice energies also depend on repulsion, polarizability, and crystal structure, so simply scaling distance is an estimate rather than a complete calculation for a different real compound.
 
-$$(B)$$ The double-bond character can be placed between chromium and different oxygen atoms while keeping the same atom connectivity and total number of valence electrons. These drawings differ only in electron placement, not in which atoms are bonded to which, so they are resonance structures rather than different compounds.
+$$(C)$$ Lattice separation costs 2150 kJ/mol and hydration releases 2100 kJ/mol, giving $$\Delta H_{soln}=+50\ \mathrm{kJ/mol}$$. Dissolution is endothermic in this model. Its equilibrium extent also depends on entropy and free energy, so positive dissolution enthalpy alone does not prove insolubility.
 
-$$(C)$$ The resonance hybrid averages the valid resonance structures. Since no single resonance structure fully describes the ion, the Cr-O bonds have the same average bond order and are equivalent. A good particle-level explanation is that the extra electron density is delocalized over the Cr-O bonding framework rather than locked into one permanent double bond.
-
-$$(D)$$ With four single bonds, chromium has formal charge $$6-4=+2$$ and each oxygen has $$6-(6+1)=-1$$, giving total charge $$-2$$. With two double bonds, chromium has formal charge $$6-6=0$$; each double-bonded oxygen is neutral and each single-bonded oxygen is $$-1$$. The latter reduces formal-charge separation, but its double bonds can be placed on different oxygens. The real ion has delocalized bonding, not bonds that switch between drawings, so no one contributor selects permanently shorter bonds.
+$$(D)$$ In the ideal solid, ions are fixed in lattice positions and cannot sustain bulk charge transport. In the melt, mobile cations and anions carry current in opposite directions. Dissolved ions can also migrate through water and carry current. The ionic substance does not become a metal on melting; the main carriers remain ions rather than delocalized electrons.
 :::
 ::::

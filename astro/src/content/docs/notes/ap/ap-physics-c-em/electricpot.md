@@ -200,7 +200,7 @@ $$
 V_P = 8.99\times10^{9}\,(1.0\times10^{-8} - 1.0\times10^{-8}) = 0\ \text{V}.
 $$
 
-The potential at $$P$$ is exactly zero. Crucially, this does **not** mean the field is zero there: $$\vec{E}$$ is a vector sum of two nonzero, non-collinear contributions and is generally nonzero on the $$V=0$$ surface. Adding scalars (with sign) is far easier than adding the vector fields, which is the whole reason potential is convenient.
+The potential at $$P$$ is exactly zero. This does **not** mean the field is zero there: $$\vec{E}$$ is a vector sum of two nonzero, non-collinear contributions and is generally nonzero on the $$V=0$$ surface. Adding signed scalar contributions is simpler than adding these vector fields, which makes potential convenient here.
 
 </div>
 

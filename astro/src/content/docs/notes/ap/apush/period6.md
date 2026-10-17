@@ -99,7 +99,7 @@ Workers could organize collectively, but employers had access to replacement lab
 
 Industrial workers differed by skill, language, race, gender, and immigration status. Employers could exploit those divisions, but prejudice among workers also weakened solidarity. Skilled workers sometimes protected their own bargaining position by excluding less-skilled laborers, while white workers frequently denied Black and Asian workers equal membership or blamed them for competition.
 
-A union needed resources to support members during a strike. Families living near subsistence could not stop receiving wages indefinitely. Employers could wait, recruit replacement workers, or seek court orders restricting picketing and boycotts. This unequal ability to endure a dispute often mattered as much as the popularity of the workers' demands.
+A union needed resources to support members during a strike because families living near subsistence could not go without wages indefinitely. Employers could wait, recruit replacement workers, or seek court orders restricting picketing and boycotts. This unequal ability to endure a dispute often mattered as much as the popularity of the workers' demands.
 
 The **Knights of Labor** envisioned a broad reform of the relationship between labor and capital, while the **AFL** concentrated more heavily on practical bargaining gains for organized crafts. The contrast was not simply idealism versus realism: each approach faced different difficulties in uniting workers and winning concessions.
 

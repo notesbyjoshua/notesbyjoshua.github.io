@@ -236,7 +236,7 @@ $$
 
 ## Definite integrals
 
-Although Riemann sums are a great way to approximate the area under the curve, you always end of over- or underestimating the actual area. One way to fix this is to shrink the width of the rectangles used to an infinitesimally small value $$dx$$ (basically $$0$$) so that the height of each rectangle represents the actual height. We define a function called the definite integral to model this limit.
+A finite Riemann sum approximates signed accumulation and may overestimate, underestimate, or occasionally equal the exact result. The definite integral is the limit as the subinterval widths approach zero. No individual width is set equal to zero; the limit combines increasingly many increasingly narrow rectangles.
 
 <div class="theorem-box">
 
@@ -258,7 +258,7 @@ $$
 \int_a^b f(x)\,dx = -\int_b^a f(x)\,dx.
 $$
 
-This is because we usually define the definite integral using singed area (talked about right after this), meaning that the direction of the area matters. We usually take right and above as positive, meaning that integrating from right to left or integrating under the $$x$$-axis results in a negative area.
+Reversing the bounds reverses the orientation and therefore changes the sign. With bounds ordered from left to right, positive function values contribute positively and negative function values contribute negatively. Reversing the bounds changes the sign of the whole accumulation.
 
 ### Signed area vs geometric area
 
@@ -268,6 +268,67 @@ For bounds ordered from left to right, the definite integral gives signed area:
 - area below the $$x$$-axis contributes negatively.
 
 Geometric area is always nonnegative, meaning that you add up the magnitudes of all of the areas.
+
+### Recovering an integral from a limit of sums
+
+To translate a sum into an integral, identify the width first. If $$\Delta x=(b-a)/n$$, then a right-endpoint sample point is $$a+i\Delta x$$. The coefficient outside the function and the expression inside it must describe the same partition.
+
+<div class="theorem-box">
+
+**Example.** Express the limit as a definite integral and evaluate it:
+
+$$
+\lim_{n\to\infty}\sum_{i=1}^{n}
+\frac3n\left[\left(2+\frac{3i}{n}\right)^2-1\right].
+$$
+
+The width is $$3/n$$, and the sample point $$2+3i/n$$ starts at two and ends at five. Thus the integrand is $$x^2-1$$ and the interval is $$[2,5]$$:
+
+$$
+\lim_{n\to\infty}\sum_{i=1}^{n}
+\frac3n\left[\left(2+\frac{3i}{n}\right)^2-1\right]
+=\int_2^5(x^2-1)\,dx.
+$$
+
+Using an antiderivative,
+
+$$
+\int_2^5(x^2-1)\,dx
+=\left[\frac{x^3}{3}-x\right]_2^5=36.
+$$
+
+The factor $$3/n$$ supplies the interval width. Reading only the coefficient of $$i/n$$ inside the square would miss where the interval begins.
+
+</div>
+
+### Integral properties and bounds
+
+Definite integrals are linear, and adjacent intervals can be combined:
+
+$$
+\int_a^b(\alpha f+\beta g)\,dx
+=\alpha\int_a^b f\,dx+\beta\int_a^b g\,dx,
+\qquad
+\int_a^c f\,dx=\int_a^b f\,dx+\int_b^c f\,dx.
+$$
+
+These identities allow you to work with a graph or table without inventing a formula for the function. They also work with reversed bounds, provided the signs are retained.
+
+If $$m\le f(x)\le M$$ throughout $$[a,b]$$ with $$a<b$$, integrating the inequalities gives
+
+$$
+m(b-a)\le\int_a^b f(x)\,dx\le M(b-a).
+$$
+
+This bounds an accumulation by two rectangle areas. It also provides a useful plausibility check: a positive rate that never exceeds five units per hour cannot add thirty units over four hours.
+
+### Why numerical error depends on shape
+
+Monotonicity controls left and right sums because it determines whether each endpoint height lies above or below the intermediate heights. Concavity controls trapezoidal and midpoint estimates instead.
+
+For a concave-up graph, secant segments lie above the graph, so the trapezoidal rule overestimates the signed integral. The midpoint rule underestimates it. For a concave-down graph the inequalities reverse. These statements also apply to negative function values; compare the numerical values of the signed integrals rather than unsigned areas.
+
+When concavity changes over the interval, a single overall error direction does not follow without further information. Table entries alone usually cannot establish concavity throughout every subinterval.
 
 ---
 
@@ -279,7 +340,7 @@ The theorem also explains why derivatives and integrals are inverse processes. D
 
 <div class="theorem-box">
 
-**Theorem (Fundamental Theorem of Calculus).** If for some functions $$F(x)$$ and $$f(x)$$, $$F'(x)=f(x)$$, then
+**Theorem (Fundamental Theorem of Calculus).** If $$f$$ is continuous on $$[a,b]$$ and $$F'=f$$ there, then
 
 $$
 \int_a^b f(x)\,dx = F(b)-F(a).
@@ -552,6 +613,82 @@ The lower limit contributes nothing because its derivative is zero.
 
 </div>
 
+### Analyzing an accumulation function without integrating
+
+For $$A(x)=\int_a^x f(t)\,dt$$, the original integrand becomes the derivative of the accumulation. Thus zeros and signs of $$f$$ determine increasing and decreasing intervals of $$A$$, and increasing or decreasing behavior of $$f$$ determines concavity of $$A$$.
+
+Be careful with the lower bound: $$A(a)=0$$, but that does not mean the accumulation is zero at every zero of $$f$$. A zero of $$f$$ describes an instant when accumulation stops changing, not when all previous contributions cancel.
+
+<div class="theorem-box">
+
+**Example.** Let
+
+$$
+A(x)=5+\int_1^x(t-2)(t-4)\,dt,
+\qquad 1\le x\le5.
+$$
+
+Find all local extrema, the absolute extrema, and the inflection point of $$A$$.
+
+By FTC,
+
+$$
+A'(x)=(x-2)(x-4),
+\qquad
+A''(x)=2x-6.
+$$
+
+The accumulation increases on $$(1,2)$$, decreases on $$(2,4)$$, and increases on $$(4,5)$$. Thus there is a local maximum at two and a local minimum at four. Concavity changes from down to up at three.
+
+For absolute extrema, compare the endpoint and critical values. An antiderivative of the integrand is
+
+$$
+F(t)=\frac{t^3}{3}-3t^2+8t.
+$$
+
+Therefore,
+
+$$
+A(1)=5,\quad A(2)=\frac{19}{3},
+\quad A(4)=5,\quad A(5)=\frac{19}{3}.
+$$
+
+The absolute maximum is $$19/3$$ at both two and five; the absolute minimum is five at both one and four. The inflection point is $$(3,17/3)$$.
+
+The added constant changes these output values but does not change any derivative sign chart. This is why qualitative analysis can be completed before computing the integral.
+
+</div>
+
+### Both bounds moving
+
+When both limits depend on the input, the upper endpoint contributes an incoming term and the lower endpoint contributes a subtracted term. Each contribution has its own chain-rule factor. There is no need to find an elementary antiderivative.
+
+<div class="theorem-box">
+
+**Example.** For positive $$x$$, define
+
+$$
+H(x)=\int_{\ln x}^{x^2}e^{-t^2}\,dt.
+$$
+
+Find $$H'(x)$$ and the slope at $$x=1$$.
+
+The upper-limit contribution is $$e^{-x^4}(2x)$$. The lower-limit contribution is $$e^{-(\ln x)^2}(1/x)$$ and must be subtracted:
+
+$$
+H'(x)=2xe^{-x^4}-\frac{e^{-(\ln x)^2}}x.
+$$
+
+At one,
+
+$$
+H'(1)=\frac2e-1.
+$$
+
+The integrand has no elementary antiderivative, but that does not obstruct differentiation of this accumulation function. FTC describes its rate directly.
+
+</div>
+
 ---
 
 ## Antiderivatives and the indefinite integral
@@ -665,6 +802,13 @@ $$
 \int_{-3}^{3}(x^2+1)\,dx
 =
 2\int_0^3(x^2+1)\,dx.
+$$
+
+Evaluating the reduced integral gives
+
+$$
+2\left[\frac{x^3}{3}+x\right]_0^3
+=2(9+3)=24.
 $$
 
 </div>
@@ -1096,7 +1240,7 @@ Trig substitution is useful when radicals contain expressions matching Pythagore
 | $$\sqrt{a^2+x^2}$$ | $$x=a\tan\theta$$ | $$1+\tan^2\theta=\sec^2\theta$$ |
 | $$\sqrt{x^2-a^2}$$ | $$x=a\sec\theta$$ | $$\sec^2\theta-1=\tan^2\theta$$ |
 
-This technique should be immediately used when you see something that resembles Pythagorean theorem, like square roots with $$x^2$$ in them.
+Check for a direct inverse-trig pattern or an ordinary substitution first. Trig substitution is useful when a quadratic radical remains and replacing the variable with a trig function actually simplifies the integral. It is an additional technique beyond the core substitution examples.
 
 <div class="theorem-box">
 
@@ -1380,6 +1524,8 @@ $$
 \lim_{a\to0^+}\int_a^1 \frac{1}{\sqrt{x}}\,dx.
 $$
 
+This example has a singularity at an endpoint. For a singularity at an interior input $$c$$, use two separate limits, one on each side of $$c$$.
+
 The integral **converges** if the limit is finite and **diverges** otherwise. If an improper integral has two problematic endpoints or an interior discontinuity, every required limit must converge.
 
 Convergence means the limiting accumulated value is finite. Divergence means the accumulated value does not settle to a finite number.
@@ -1420,6 +1566,40 @@ The limit is finite, so the improper integral converges and its value is $$1$$.
 
 ---
 
+### Interior singularities cannot cancel
+
+<div class="theorem-box">
+
+**Example.** Determine whether $$\int_{-1}^{1}1/x\,dx$$ converges.
+
+The integrand is undefined at zero. Its odd symmetry does not justify cancellation across an improper singularity. Split it:
+
+$$
+\int_{-1}^{0}\frac1x\,dx
+=\lim_{a\to0^-}\left[\ln\lvert x\rvert\right]_{-1}^{a}
+=-\infty,
+$$
+
+whereas
+
+$$
+\int_{0}^{1}\frac1x\,dx
+=\lim_{b\to0^+}\left[\ln x\right]_{b}^{1}
+=\infty.
+$$
+
+Both required limits fail to be finite, so the improper integral diverges. Pairing symmetric cutoffs would produce zero, but that is a different limiting procedure and does not define convergence of the improper integral.
+
+</div>
+
+### Power behavior near infinity and zero
+
+For $$p>1$$, $$\int_1^\infty x^{-p}\,dx$$ converges. For $$p\le1$$, it diverges. At zero the condition reverses: $$\int_0^1 x^{-p}\,dx$$ converges precisely when $$p<1$$.
+
+The difference comes from which endpoint is being approached. An antiderivative contains $$x^{1-p}/(1-p)$$ for $$p\ne1$$. At infinity that power needs a negative exponent to approach zero; near zero it needs a positive exponent. For $$p=1$$, the logarithm is unbounded at both problematic endpoints.
+
+These tests describe accumulated area, not merely whether the integrand approaches zero. The function $$1/x$$ approaches zero at infinity but accumulates without a finite bound, while $$1/\sqrt{x}$$ becomes infinite at zero yet has finite accumulated area there.
+
 ## Tips for the exam
 
 Integration questions usually ask you to connect a rate, an amount, and an interval. The central idea is:
@@ -1444,4 +1624,19 @@ $$
 
 :::exam{topic="Integral interpretation"}
 AP problems often give a table or graph of a rate. You may not have a formula, so be comfortable estimating integrals numerically and explaining whether the estimate is an overestimate or underestimate.
+:::
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Equal partition | $$\Delta x=(b-a)/n,\quad x_i=a+i\Delta x$$ |
+| Definite integral | $$\int_a^bf(x)\,dx=\lim_{n\to\infty}\sum f(x_i^*)\Delta x$$ |
+| Endpoint evaluation | $$\int_a^bf(x)\,dx=F(b)-F(a),\quad F'=f,\quad f\text{ continuous}$$ |
+| Accumulation derivative | $$\dfrac d{dx}\int_a^xf(t)\,dt=f(x),\quad f\text{ continuous at }x$$ |
+| Moving bounds | $$\dfrac d{dx}\int_{u(x)}^{v(x)}f(t)\,dt=f(v(x))v'(x)-f(u(x))u'(x)$$ |
+| Substitution | $$\int f(g(x))g'(x)\,dx=\int f(u)\,du,\quad u=g(x)$$ |
+| Reflection | $$\int_a^bf(x)\,dx=\int_a^bf(a+b-x)\,dx$$ |
+| Integration by parts | $$\int u\,dv=uv-\int v\,du$$ |
+| Infinite-endpoint power test | $$\int_1^\infty x^{-p}\,dx\text{ converges iff }p>1$$ |
+| Zero-endpoint power test | $$\int_0^1 x^{-p}\,dx\text{ converges iff }p<1$$ |
 :::

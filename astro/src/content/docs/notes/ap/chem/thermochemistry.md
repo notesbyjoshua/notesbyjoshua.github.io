@@ -325,21 +325,39 @@ The slope is $$-\Delta H_{vap}/R$$, so $$\Delta H_{vap}=4800(8.314)=39.9\ \mathr
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| First law | $$\Delta U=q+w$$ | Heat entering and work done on the system are positive. |
+| Pressure-volume work | $$w=-P_{ext}\Delta V$$ | Constant external pressure; expansion work is negative. |
+| Sensible heat | $$q=mc\Delta T$$; $$q_{cal}=C_{cal}\Delta T$$ | No phase change during this step. |
+| Calorimetry | $$q_{rxn}=-(mc+C_{cal})\Delta T$$ | Neglect heat loss; add other heat recipients if present. |
+| Heat loss | $$q_{captured}=(1-f)\lvert q_{rxn}\rvert$$ | f is the fraction of released heat lost outside the measured surroundings. |
+| Phase change | $$q=n\Delta H_{phase}$$ | Use molar phase enthalpy; temperature stays at the transition value during coexistence. |
+| Enthalpy and internal energy | $$q_p=\Delta H$$; $$q_v=\Delta U$$; $$\Delta H=\Delta U+\Delta n_gRT$$ | Only pressure-volume work; final relation assumes ideal gases at a common T. |
+| Hess's law | $$\Delta H_{net}=\sum_j\alpha_j\Delta H_j$$ | Reversal makes $$\alpha_j$$ negative; scaling coefficients scales enthalpy. |
+| Formation data | $$\Delta H_{rxn}^\circ=\sum_p\nu_p\Delta H_{f,p}^\circ-\sum_r\nu_r\Delta H_{f,r}^\circ$$ | Standard-state elements have zero formation enthalpy by convention. |
+| Bond estimate | $$\Delta H\approx\sum D_{broken}-\sum D_{formed}$$ | Average gas-phase bond energies; correct phase changes separately. |
+| Dissolution | $$\Delta H_{soln}=\Delta H_{separation}+\Delta H_{mixing}$$ | Include both solute and solvent separation when using this partition. |
+| Clausius-Clapeyron | $$\ln(P_2/P_1)=-\Delta H_{vap}(1/T_2-1/T_1)/R$$ | Approximately constant vaporization enthalpy and ideal vapor. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. A gas absorbs $$350\ J$$ and does $$500\ J$$ of work on its surroundings. What is its internal-energy change?
+1. A gas absorbs $$500.\ \mathrm{J}$$ while expanding from $$2.00$$ to $$5.00\ \mathrm{L}$$ against $$1.50\ \mathrm{atm}$$. Use $$1\ \mathrm{L\,atm}=101.3\ \mathrm{J}$$. What is its internal-energy change?
 
-   (A) $$+850\ J$$<br>
-   (B) $$+150\ J$$<br>
-   (C) $$-150\ J$$<br>
-   (D) $$-850\ J$$
+   (A) $$+956\ \mathrm{J}$$<br>
+   (B) $$-456\ \mathrm{J}$$<br>
+   (C) $$+44.2\ \mathrm{J}$$<br>
+   (D) $$-44.2\ \mathrm{J}$$
 
 :::solution
-Work done by the system is negative, giving $$\Delta U=q+w=350-500=-150\ J$$. Heat absorbed does not guarantee an increase in internal energy when work is also exchanged.
+Expansion gives $$w=-P_{ext}\Delta V=-(1.50)(3.00)(101.3)=-455.85\ \mathrm{J}$$. Then $$\Delta U=q+w=500.-455.85\approx+44.2\ \mathrm{J}$$. Most of the absorbed heat leaves as work; adding its magnitude would use the wrong sign.
 
 $$
 \boxed{\text{C}}.
@@ -348,49 +366,15 @@ $$
 ::::
 
 ::::problem
-2. A reaction heats $$100.0\ g$$ of solution by $$5.00^\circ C$$ in a calorimeter with heat capacity $$40.0\ \mathrm{J/K}$$. Take solution specific heat as $$4.00\ \mathrm{J/(g\,K)}$$ and neglect losses. What heat is released by the reaction?
+2. A reaction heats $$100.0\ \mathrm{g}$$ of solution by $$3.00\ K$$ in a calorimeter with heat capacity $$40.0\ \mathrm{J/K}$$. The solution's specific heat is $$4.00\ \mathrm{J/(g\,K)}$$ and $$0.0200\ \mathrm{mol}$$ reacts. What is the molar reaction enthalpy, neglecting heat loss?
 
-   (A) $$2.00\ kJ$$<br>
-   (B) $$2.20\ kJ$$<br>
-   (C) $$1.80\ kJ$$<br>
-   (D) $$0.200\ kJ$$
-
-:::solution
-Solution absorbs $$100(4)(5)=2000\ J$$ and calorimeter absorbs $$40(5)=200\ J$$. The reaction releases their sum, 2.20 kJ; its signed q is -2.20 kJ. Omitting the container underestimates the magnitude.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-3. Given $$A\rightarrow B$$ at $$+20\ kJ$$ and $$2B\rightarrow C$$ at $$-70\ kJ$$, find the enthalpy for $$C\rightarrow2A$$.
-
-   (A) $$-90\ kJ$$<br>
-   (B) $$-30\ kJ$$<br>
-   (C) $$+30\ kJ$$<br>
-   (D) $$+90\ kJ$$
+   (A) $$-66.0\ \mathrm{kJ/mol}$$<br>
+   (B) $$-60.0\ \mathrm{kJ/mol}$$<br>
+   (C) $$+66.0\ \mathrm{kJ/mol}$$<br>
+   (D) $$-6.00\ \mathrm{kJ/mol}$$
 
 :::solution
-Double the first reaction and add the second: $$2A\rightarrow C$$ has $$40-70=-30\ kJ$$. Reverse that overall reaction to obtain +30 kJ. Both scaling and reversal must be applied.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-4. For $$\mathrm{H_2(g)+Cl_2(g)\rightarrow2HCl(g)}$$, bond energies are H-H 436, Cl-Cl 243, and H-Cl $$431\ \mathrm{kJ/mol}$$. Estimate the reaction enthalpy.
-
-   (A) $$-183\ kJ$$<br>
-   (B) $$+183\ kJ$$<br>
-   (C) $$+248\ kJ$$<br>
-   (D) $$-431\ kJ$$
-
-:::solution
-Breaking bonds costs $$436+243=679$$ kJ and making two H-Cl bonds releases $$2(431)=862$$ kJ. Net is $$679-862=-183$$ kJ. Forgetting the coefficient on the formed bond reverses the conclusion.
+Both solution and apparatus warm: $$q_{surr}=(100.0\times4.00+40.0)(3.00)=1320\ \mathrm{J}$$. Reaction heat has the opposite sign, so $$\Delta H=-1.320/0.0200=-66.0\ \mathrm{kJ/mol}$$. Omitting the calorimeter undercounts the released heat.
 
 $$
 \boxed{\text{A}}.
@@ -399,15 +383,15 @@ $$
 ::::
 
 ::::problem
-5. During boiling at constant pressure, heat is supplied but temperature stays constant while liquid remains. What primarily changes?
+3. Given $$A\rightarrow2B$$ with $$\Delta H=+40.0\ \mathrm{kJ}$$ and $$B+C\rightarrow D$$ with $$\Delta H=-70.0\ \mathrm{kJ}$$, what is the enthalpy for $$2D\rightarrow A+2C$$?
 
-   (A) Average molecular kinetic energy increases steadily<br>
-   (B) Intramolecular bonds necessarily break<br>
-   (C) The substance stops absorbing energy<br>
-   (D) Energy associated with intermolecular separation increases
+   (A) $$-100.\ \mathrm{kJ}$$<br>
+   (B) $$-30.0\ \mathrm{kJ}$$<br>
+   (C) $$+30.0\ \mathrm{kJ}$$<br>
+   (D) $$+100.\ \mathrm{kJ}$$
 
 :::solution
-Added energy converts liquid to vapor by separating molecules against attractions. Constant temperature means no sustained increase in average thermal kinetic energy during the phase change. Boiling does not require decomposing the molecules.
+Adding the first equation to twice the second gives $$A+2C\rightarrow2D$$ with $$40.0-140.=-100.\ \mathrm{kJ}$$. Reversing gives +100 kJ. Both the intermediate coefficient and the final arrow direction affect the result.
 
 $$
 \boxed{\text{D}}.
@@ -416,15 +400,15 @@ $$
 ::::
 
 ::::problem
-6. An exothermic coffee-cup experiment loses heat to the room. If the calculation assumes no loss, what happens to the inferred reaction enthalpy per mole?
+4. Combustion of one mole of a fuel to form two moles of gaseous water has $$\Delta H=-800.\ \mathrm{kJ}$$. Water's vaporization enthalpy is $$44.0\ \mathrm{kJ/mol}$$ at the same temperature. How much heat is released by burning $$0.250\ \mathrm{mol}$$ fuel to liquid water?
 
-   (A) It becomes more negative<br>
-   (B) It becomes less negative<br>
-   (C) Its sign must become positive<br>
-   (D) It is unchanged because energy is conserved
+   (A) $$178\ \mathrm{kJ}$$<br>
+   (B) $$222\ \mathrm{kJ}$$<br>
+   (C) $$200.\ \mathrm{kJ}$$<br>
+   (D) $$244\ \mathrm{kJ}$$
 
 :::solution
-The observed temperature increase is smaller because some released heat bypasses the measured solution. The inferred released-heat magnitude is too small, so an exothermic molar enthalpy is reported closer to zero. Conservation holds when the unmeasured room is included.
+Condensing two moles of product water contributes $$-88.0\ \mathrm{kJ}$$ per mole fuel. The liquid-product reaction therefore has $$\Delta H=-888\ \mathrm{kJ/mol}$$. A quarter mole releases $$0.250(888)=222\ \mathrm{kJ}$$; the requested heat released is a positive magnitude.
 
 $$
 \boxed{\text{B}}.
@@ -432,74 +416,82 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+5. At $$300\ K$$, a rigid bomb measures $$\Delta U=-100.0\ \mathrm{kJ}$$ for $$\mathrm{A(g)+2B(g)\rightarrow C(g)}$$ as written. For ideal gases, what is $$\Delta H$$? Use $$R=8.314\ \mathrm{J/(mol\,K)}$$.
 
-::::frq{id=chem-thermochemistry-1}
-7. A reaction is represented by
-
-$$
-2\text{H}_2(g)+\text{O}_2(g)\rightarrow2\text{H}_2\text{O}(l)
-$$
-
-with $$\Delta H^\circ_{\text{rxn}}=-572\ \text{kJ}$$ for the reaction as written.
-
-   $$(A)$$ Calculate the enthalpy change for forming $$1.00\ \text{mol}$$ of $$\text{H}_2\text{O}(l)$$.
-
-   $$(B)$$ Calculate the enthalpy change when $$4.00\ \text{mol}$$ of $$\text{H}_2(g)$$ reacts completely.
-
-   $$(C)$$ Explain why breaking bonds is endothermic even when the overall reaction is exothermic.
-
-   $$(D)$$ **Original extension.** If vaporizing one mole of liquid water at the stated temperature requires $$44.0\ \text{kJ}$$, calculate the reaction enthalpy when the two moles of product water are gaseous. Explain the sign of the correction.
+   (A) $$-95.0\ \mathrm{kJ}$$<br>
+   (B) $$-100.0\ \mathrm{kJ}$$<br>
+   (C) $$-105.0\ \mathrm{kJ}$$<br>
+   (D) $$-102.5\ \mathrm{kJ}$$
 
 :::solution
-$$(A)$$ The reaction forms $$2$$ moles of water, so the enthalpy change must be divided by $$2$$ to find the value per mole of water:
+The gas mole change is $$1-3=-2$$. Thus $$\Delta H=\Delta U+\Delta n_gRT=-100.0+(-2)(8.314)(300)/1000=-105.0\ \mathrm{kJ}$$. Constant-volume heat measures internal energy; converting to enthalpy requires the gas-mole correction.
 
 $$
-\frac{-572\ \text{kJ}}{2}=-286\ \text{kJ}.
+\boxed{\text{C}}.
 $$
-
-The negative sign means heat is released when water forms from hydrogen and oxygen.
-
-$$(B)$$ The reaction as written consumes $$2$$ moles of $$\text{H}_2$$. Consuming $$4.00$$ moles doubles the reaction, so the enthalpy change also doubles:
-
-$$
-2(-572\ \text{kJ})=-1144\ \text{kJ}.
-$$
-
-$$(C)$$ Energy must be added to separate bonded atoms, so bond breaking is endothermic. The overall reaction is exothermic because forming the O-H bonds in water releases more energy than was required to break the H-H and O=O bonds. In bond-enthalpy language, $$\Delta H_{\text{rxn}}$$ is negative because the energy released by bonds formed is greater than the energy absorbed by bonds broken.
-
-$$(D)$$ Start with the stated reaction forming liquid water, then add $$2\text{H}_2\text{O}(l)\rightarrow2\text{H}_2\text{O}(g)$$ with $$\Delta H=+88.0\ \text{kJ}$$. Hess's law gives $$\Delta H=-572+88.0=-484\ \text{kJ}$$. Vaporization absorbs energy, so forming gaseous water releases less energy than forming liquid water. The atoms and stoichiometric coefficients are unchanged, but product phase changes the enthalpy.
 :::
 ::::
 
-::::frq{id=chem-thermochemistry-2}
-8. The 2026 AP Chemistry exam included a sodium oxide thermochemistry problem using formation enthalpy and limiting reactants. (Adapted from College Board, [2026 AP Chemistry FRQ 7](https://apcentral.collegeboard.org/media/pdf/ap26-frq-chemistry.pdf).)
+::::problem
+6. Two equal-mass samples of the same substance start at its melting point. X is all solid; Y is half solid and half liquid. The same heat, sufficient to melt X completely and warm it, is added to each without loss. Which finishes hotter?
 
-   $$(A)$$ For $$4\text{Na}(s)+\text{O}_2(g)\rightarrow2\text{Na}_2\text{O}(s)$$ with $$\Delta H^\circ_{\text{rxn}}=-828\ \text{kJ}$$, calculate $$\Delta H_f^\circ$$ for $$\text{Na}_2\text{O}(s)$$.
-
-   $$(B)$$ If $$2.00\ \text{mol}$$ Na reacts completely with excess oxygen, calculate the heat released.
-
-   $$(C)$$ Explain why elements in their standard states have $$\Delta H_f^\circ=0$$.
-
-   $$(D)$$ **Original extension.** React $$0.400\ \text{mol}$$ Na with $$0.0500\ \text{mol}$$ oxygen. Determine the limiting reactant, heat released, and amount of excess reactant remaining.
+   (A) Y, because less of its added energy is required for melting<br>
+   (B) X, because it initially contains more solid bonds<br>
+   (C) Equal temperatures, because the heat inputs match<br>
+   (D) Cannot be predicted even if heat capacities and melting enthalpy are positive
 
 :::solution
-$$(A)$$ The reaction forms $$2$$ moles of $$\text{Na}_2\text{O}(s)$$ from elements in their standard states, so the reaction enthalpy is twice the molar enthalpy of formation:
+Y needs only half as much latent heat to finish melting. With identical masses and final liquid heat capacities, more of Y's equal heat input remains for raising temperature. Equal heat input yields equal temperature changes only when the initial phase states and heat capacities permit that comparison.
 
 $$
-\Delta H_f^\circ=\frac{-828\ \text{kJ}}{2}=-414\ \text{kJ/mol}.
+\boxed{\text{A}}.
 $$
+:::
+::::
 
-$$(B)$$ The reaction releases $$828\ \text{kJ}$$ per $$4$$ moles Na.
+### FRQ
 
-$$
-2.00\ \text{mol Na}\times\frac{-828\ \text{kJ}}{4.00\ \text{mol Na}}=-414\ \text{kJ}.
-$$
+::::frq{id=chem-thermochemistry-challenge-1}
+7. Mix 50.0 mL of 1.00 M HCl with 75.0 mL of 0.500 M NaOH in a coffee-cup calorimeter. Both start at $$22.00^\circ\mathrm{C}$$ and the mixture reaches $$25.50^\circ\mathrm{C}$$. Take solution density as $$1.00\ \mathrm{g/mL}$$, specific heat as $$4.00\ \mathrm{J/(g\,K)}$$, and calorimeter heat capacity as $$30.0\ \mathrm{J/K}$$. Assume additive volumes.
 
-So $$414\ \text{kJ}$$ of heat is released.
+   $$(A)$$ Identify the limiting reactant and calculate the moles of water formed by neutralization.
 
-$$(C)$$ Formation enthalpy measures formation from elements in their standard states. An element already in its standard state requires no formation reaction, so its assigned value is zero. This is a reference convention that lets formation enthalpies be added and subtracted consistently in Hess's law calculations.
+   $$(B)$$ Calculate the heat absorbed by the solution and calorimeter, then infer the molar neutralization enthalpy.
 
-$$(D)$$ Consuming all sodium would require $$0.400/4=0.100\ \text{mol}$$ oxygen, more than is available. Oxygen is limiting. The reaction extent relative to the written equation is $$0.0500\ \text{mol}$$, so $$q_p=(0.0500)(-828)=-41.4\ \text{kJ}$$: the system releases $$41.4\ \text{kJ}$$. Sodium consumed is $$4(0.0500)=0.200\ \text{mol}$$, leaving $$0.200\ \text{mol}$$. The enthalpy must be scaled by the limiting amount, not by all the sodium supplied.
+   $$(C)$$ Suppose 15.0% of the released reaction heat escaped to the room before the peak temperature was recorded. Correct the inferred molar enthalpy.
+
+   $$(D)$$ If the same reactant amounts were used in a calorimeter with twice the original heat capacity, predict whether the observed temperature rise would halve. Assume no heat loss and use the uncorrected measured heat for this comparison.
+
+:::solution
+$$(A)$$ Acid supplies $$0.0500(1.00)=0.0500\ \mathrm{mol}$$ hydronium, while base supplies $$0.0750(0.500)=0.0375\ \mathrm{mol}$$ hydroxide. The 1:1 net reaction $$\mathrm{H^++OH^-\rightarrow H_2O}$$ makes hydroxide limiting. Water formed is 0.0375 mol, with 0.0125 mol excess acid remaining.
+
+$$(B)$$ The temperature rise is 3.50 K. Solution heat is $$125.0(4.00)(3.50)=1750\ \mathrm{J}$$ and calorimeter heat is $$30.0(3.50)=105\ \mathrm{J}$$. Reaction heat is their negative sum, -1855 J. Dividing by 0.0375 mol reacted gives $$\Delta H=-49.5\ \mathrm{kJ/mol}$$ water formed. Dividing by total acid supplied would include acid that did not react.
+
+$$(C)$$ The measured surroundings gained only 85.0% of the reaction's released energy. Thus the true released magnitude is $$1855/0.850=2182\ \mathrm{J}$$, not 1855 multiplied by 1.15. The corrected enthalpy is $$-2.182/0.0375=-58.2\ \mathrm{kJ/mol}$$. Heat loss makes the uncorrected exothermic value too close to zero.
+
+$$(D)$$ The original combined heat capacity is $$125.0(4.00)+30.0=530\ \mathrm{J/K}$$. Doubling only the calorimeter contribution gives $$500+60.0=560\ \mathrm{J/K}$$. The same 1855 J would produce $$\Delta T=1855/560=3.31\ K$$, not 1.75 K. Only one part of the total heat capacity doubled, while the much larger solution contribution stayed fixed.
+:::
+::::
+
+::::frq{id=chem-thermochemistry-challenge-2}
+8. For ethanol combustion, $$\mathrm{C_2H_5OH(l)+3O_2(g)\rightarrow2CO_2(g)+3H_2O(l)}$$ has $$\Delta H^\circ=-1367\ \mathrm{kJ/mol}$$ ethanol. Standard formation enthalpies are $$-393.5\ \mathrm{kJ/mol}$$ for carbon dioxide and $$-285.8\ \mathrm{kJ/mol}$$ for liquid water. At the same temperature, vaporizing water requires $$44.0\ \mathrm{kJ/mol}$$.
+
+   $$(A)$$ Determine ethanol's standard formation enthalpy and write its formation reaction from standard-state elements.
+
+   $$(B)$$ Calculate the combustion enthalpy if all product water is vapor instead of liquid.
+
+   $$(C)$$ Burn 0.200 mol ethanol with 0.450 mol oxygen. Find the heat released when water is liquid and the ethanol remaining, assuming complete consumption of the limiting reactant.
+
+   $$(D)$$ For the liquid-water reaction at 298 K, calculate $$\Delta U^\circ$$ per mole ethanol assuming ideal gases and only pressure-volume work. Use $$R=8.314\ \mathrm{J/(mol\,K)}$$.
+
+:::solution
+$$(A)$$ Products contribute $$2(-393.5)+3(-285.8)=-1644.4\ \mathrm{kJ/mol}$$. With oxygen's formation enthalpy zero, $$-1367=-1644.4-\Delta H_f^\circ(ethanol)$$, so $$\Delta H_f^\circ=-277.4\ \mathrm{kJ/mol}$$. The formation reaction is $$\mathrm{2C(graphite)+3H_2(g)+\tfrac12O_2(g)\rightarrow C_2H_5OH(l)}$$. It must form exactly one mole of ethanol.
+
+$$(B)$$ Add $$\mathrm{3H_2O(l)\rightarrow3H_2O(g)}$$, with enthalpy $$3(44.0)=132.0\ \mathrm{kJ}$$. Hess's law then gives $$\Delta H=-1367+132.0=-1235\ \mathrm{kJ/mol}$$. Gaseous products retain the energy that would have been released on condensation, so combustion to vapor is less exothermic.
+
+$$(C)$$ Full consumption of the ethanol would require 0.600 mol oxygen, so oxygen is limiting. Ethanol consumed is $$0.450/3=0.150\ \mathrm{mol}$$, leaving 0.0500 mol. The system releases $$0.150(1367)=205\ \mathrm{kJ}$$. Scaling enthalpy by the initial 0.200 mol ethanol would overstate the reaction extent.
+
+$$(D)$$ Gas coefficients change from three moles oxygen to two moles carbon dioxide, so $$\Delta n_g=-1$$; the liquids do not count. Since $$\Delta H=\Delta U+\Delta n_gRT$$, $$\Delta U=-1367-(-1)(8.314)(298)/1000=-1364.5\ \mathrm{kJ/mol}$$. The distinction reflects the pressure-volume contribution, not a failure of energy conservation.
 :::
 ::::

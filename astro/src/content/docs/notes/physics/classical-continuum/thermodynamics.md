@@ -242,7 +242,7 @@ The constant $$a>0$$ for attractive forces: a molecule approaching the wall is p
 
 ## Heat and Heat Transfer
 
-**Heat** is energy that flows between a system and its environment *because of a temperature difference*. By convention $$Q>0$$ when heat flows into the system. Crucially, heat and work are *not* state functions (a function that has the same value regardless of path) since a system does not "contain" heat or work. They are associated with a process, with the transfer between states, not with the states themselves.
+**Heat** is energy that flows between a system and its environment *because of a temperature difference*. By convention $$Q>0$$ when heat flows into the system. Heat and work are *not* state functions (quantities whose values do not depend on the path). A system does not "contain" heat or work; these describe energy transfer during a process between states.
 
 ### Conduction
 

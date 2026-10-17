@@ -24,7 +24,7 @@ The Americas were already home to large, organized societies before Europeans ar
 
 ### Agriculture and regional differences
 
-**Maize cultivation** spread north from Mesoamerica over many centuries. In places where farming supported a dependable food supply, populations could grow and settlements could become more permanent. Many communities grew maize, beans, and squash together. Beans helped replenish soil nitrogen, while squash leaves helped shade the ground.
+**Maize cultivation** spread north from Mesoamerica over many centuries. In places where farming supported a dependable food supply, populations could grow and settlements could become more permanent. Many communities grew maize, beans, and squash together, with beans helping replenish soil nitrogen and squash leaves helping shade the ground.
 
 Geography shaped the choices available to people, but it did not determine every part of their lives. Communities adapted to changing environments and exchanged goods and knowledge with neighbors.
 
@@ -45,7 +45,7 @@ The horse-based Plains cultures often shown in popular images developed after Eu
 
 ### Agriculture, settlement, and political organization
 
-Agriculture helped support larger populations because stored food could sustain people who were not farming full time. Artisans, religious specialists, and political leaders could perform more specialized work. Surplus food also made possible tribute systems in which communities supplied goods or labor to a ruler. These developments created opportunities for large settlements, but they could also produce inequality and conflict over resources.
+Agriculture helped support larger populations because stored food could sustain people who were not farming full time, allowing artisans, religious specialists, and political leaders to perform more specialized work. Surplus food also made possible tribute systems in which communities supplied goods or labor to a ruler. These developments created opportunities for large settlements, but they could also produce inequality and conflict over resources.
 
 The **Mexica Empire**, centered on Tenochtitlán, controlled many surrounding communities through conquest and tribute. It did not turn every conquered community into a culturally identical society. That distinction matters because people who resented Mexica tribute demands later supported Spanish forces. The empire's size created power, but the relationships holding it together also created vulnerabilities.
 

@@ -403,72 +403,36 @@ Large K says products dominate at equilibrium. A high activation barrier can pre
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Reaction rate | $$r=-\frac1a\frac{d[A]}{dt}=\frac1p\frac{d[P]}{dt}$$ | For $$aA\rightarrow pP$$; distinguish species rates. |
+| Experimental rate law | $$r=k[A]^m[B]^n$$; $$r_2/r_1=([A]_2/[A]_1)^m([B]_2/[B]_1)^n$$ | Compare trials at the same temperature. |
+| Zero-order decay | $$[A]_t=[A]_0-kt$$; $$t_{1/2}=[A]_0/(2k)$$ | For $$-d[A]/dt=k$$ over the valid concentration range. |
+| First-order decay | $$\ln([A]_t/[A]_0)=-kt$$; $$t_{1/2}=\ln2/k$$ | For $$-d[A]/dt=k[A]$$; apply any instantaneous dilution separately. |
+| Second-order decay | $$1/[A]_t=1/[A]_0+kt$$; $$t_{1/2}=1/(k[A]_0)$$ | For $$-d[A]/dt=k[A]^2$$, with k defined for disappearance of A. |
+| Arrhenius | $$k=Ae^{-E_a/(RT)}$$; $$\ln(k_2/k_1)=-E_a(1/T_2-1/T_1)/R$$ | Fixed mechanism and approximately constant prefactor; use kelvin. |
+| Fast pre-equilibrium | $$K_1=[I]/([A][B])$$ | For $$A+B\rightleftharpoons I$$; substitute into the slow-step law. |
+| Pseudo-first-order | $$k_{obs}=k[B]$$ | For $$-d[A]/dt=k[A][B]$$ with B effectively constant. |
+| Barrier comparison | $$E_{a,f}-E_{a,r}=\Delta H$$ | For a shared transition state on an enthalpy profile. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. Doubling A alone quadruples rate, while doubling both A and B increases rate eightfold. What is the overall reaction order?
+1. At fixed temperature, doubling A and halving B doubles the initial rate. Tripling A and doubling B increases it eighteenfold. Which rate law fits both experiments?
 
-   (A) 1<br>
-   (B) 2<br>
-   (C) 3<br>
-   (D) 4
-
-:::solution
-A is second order because $$2^m=4$$. B contributes the remaining factor of two, so it is first order. The sum of the exponents is three; the factor of eight is not itself the order.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-2. For $$2A\rightarrow B$$, A disappears at $$0.040\ M/s$$. What is the formation rate of B?
-
-   (A) $$0.080\ M/s$$<br>
-   (B) $$0.040\ M/s$$<br>
-   (C) $$0.020\ M/s$$<br>
-   (D) $$0.010\ M/s$$
+   (A) $$k[A][B]$$<br>
+   (B) $$k[A]^2[B]$$<br>
+   (C) $$k[A][B]^2$$<br>
+   (D) $$k[A]^2[B]^2$$
 
 :::solution
-Two A are consumed per B formed, so $$d[B]/dt=-\tfrac12d[A]/dt=0.020\ M/s$$. Rates for different species require the stoichiometric coefficients even when the kinetic order is unknown.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-3. A first-order reactant falls from $$0.800$$ to $$0.200\ M$$ in $$40.0\ s$$. How much additional time is needed to reach $$0.0500\ M$$?
-
-   (A) 10.0 s<br>
-   (B) 20.0 s<br>
-   (C) 40.0 s<br>
-   (D) 80.0 s
-
-:::solution
-Each fourfold drop takes two half-lives. The first interval establishes a 20.0 s half-life, so the second fourfold drop also takes 40.0 s. Constant first-order half-life does not mean constant absolute concentration loss.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-4. For a second-order decay, which change follows when initial concentration doubles at fixed temperature?
-
-   (A) Initial rate doubles and half-life doubles<br>
-   (B) Initial rate quadruples and half-life halves<br>
-   (C) Initial rate quadruples and half-life is unchanged<br>
-   (D) Initial rate is unchanged and half-life halves
-
-:::solution
-The law $$r=k[A]^2$$ makes initial rate four times larger. The second-order half-life $$1/(k[A]_0)$$ becomes half as long. The constant k stays fixed because temperature and reaction conditions otherwise stay fixed.
+For orders m and n, $$2^m(1/2)^n=2$$ and $$3^m2^n=18$$. The first gives $$m-n=1$$; substituting into the second gives $$3\times6^n=18$$, so $$n=1$$ and $$m=2$$. Neither experiment isolates one reactant, so both ratios must be used together.
 
 $$
 \boxed{\text{B}}.
@@ -477,15 +441,32 @@ $$
 ::::
 
 ::::problem
-5. For a fast pre-equilibrium $$A+B\rightleftharpoons I$$ followed by slow $$I+A\rightarrow P$$, which rate law follows?
+2. A first-order reactant starts at $$0.800\ M$$ with $$k=0.0200\ \mathrm{s^{-1}}$$. After $$20.0\ \mathrm{s}$$, its solution is instantly diluted to twice the volume without changing temperature. What is its concentration at $$50.0\ \mathrm{s}$$ from the start?
 
-   (A) $$k[A][B]$$<br>
-   (B) $$k[I]$$ only<br>
-   (C) $$k[A][B]^2$$<br>
-   (D) $$k[A]^2[B]$$
+   (A) $$0.294\ M$$<br>
+   (B) $$0.220\ M$$<br>
+   (C) $$0.147\ M$$<br>
+   (D) $$0.0736\ M$$
 
 :::solution
-Slow-step rate is $$k_2[I][A]$$ and pre-equilibrium gives $$[I]=K_1[A][B]$$. Substitution yields $$k_2K_1[A]^2[B]$$. The observed law must eliminate the intermediate.
+Before dilution, concentration is $$0.800e^{-0.0200(20.0)}$$. Dilution halves it, then first-order decay continues for 30.0 s. Combining factors gives $$[A]=0.400e^{-0.0200(50.0)}=0.147\ M$$. Dilution changes concentration but not k or the elapsed reaction time.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+::::problem
+3. For $$-d[A]/dt=k[A]^2$$, concentration falls from $$0.600$$ to $$0.300\ M$$ in $$25.0\ \mathrm{s}$$. What additional time is required to reach $$0.100\ M$$?
+
+   (A) $$25.0\ \mathrm{s}$$<br>
+   (B) $$50.0\ \mathrm{s}$$<br>
+   (C) $$75.0\ \mathrm{s}$$<br>
+   (D) $$100.\ \mathrm{s}$$
+
+:::solution
+The reciprocal-concentration slope is $$k=(1/0.300-1/0.600)/25.0=0.0667\ \mathrm{M^{-1}s^{-1}}$$. From 0.300 to 0.100 M, $$\Delta t=(10.0-3.333)/0.0667=100.\ \mathrm{s}$$. Second-order half-lives grow as concentration decreases; equal concentration fractions do not require equal times.
 
 $$
 \boxed{\text{D}}.
@@ -494,15 +475,15 @@ $$
 ::::
 
 ::::problem
-6. A one-step reaction has forward activation energy 75 and enthalpy change $$-25\ \mathrm{kJ/mol}$$. A catalyst lowers the transition-state energy by $$20\ \mathrm{kJ/mol}$$. What is the catalyzed reverse barrier?
+4. For $$r=k[A][B]$$, B is held in large excess. A plot of $$\ln[A]$$ against time has slope $$-0.0400\ \mathrm{s^{-1}}$$ when $$[B]=0.200\ M$$. What slope is expected at $$[B]=0.0500\ M$$ at the same temperature?
 
-   (A) $$80\ \mathrm{kJ/mol}$$<br>
-   (B) $$55\ \mathrm{kJ/mol}$$<br>
-   (C) $$30\ \mathrm{kJ/mol}$$<br>
-   (D) $$100\ \mathrm{kJ/mol}$$
+   (A) $$-0.0100\ \mathrm{s^{-1}}$$<br>
+   (B) $$-0.0400\ \mathrm{s^{-1}}$$<br>
+   (C) $$-0.0800\ \mathrm{s^{-1}}$$<br>
+   (D) $$-0.160\ \mathrm{s^{-1}}$$
 
 :::solution
-Uncatalyzed reverse barrier is $$75-(-25)=100$$. Lowering the transition state by 20 makes it 80. The products' energy stays fixed; the catalyzed forward barrier is 55 and $$55-80=-25$$ still holds.
+The apparent first-order constant is $$k_{obs}=k[B]$$. The first trial gives $$k=0.0400/0.200=0.200\ \mathrm{M^{-1}s^{-1}}$$. The second therefore has $$k_{obs}=0.0100\ \mathrm{s^{-1}}$$. A first-order-looking trace under excess-B conditions does not establish a truly first-order overall law.
 
 $$
 \boxed{\text{A}}.
@@ -510,94 +491,82 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+5. Reactions X and Y have equal rate constants at $$300\ K$$. Their activation energies are 60.0 and $$30.0\ \mathrm{kJ/mol}$$, respectively. Assuming each follows Arrhenius behavior with a temperature-independent prefactor, what is approximately $$k_X/k_Y$$ at $$330\ K$$? Use $$R=8.314\ \mathrm{J/(mol\,K)}$$.
 
-::::frq{id=chem-kinetics-1}
-7. A first-order decomposition has rate constant $$k=0.0300\ \text{s}^{-1}$$.
-
-   $$(A)$$ Calculate the half-life.
-
-   $$(B)$$ If the initial concentration is $$0.800\ M$$, calculate the concentration after $$60.0\ \text{s}$$.
-
-   $$(C)$$ Explain how the slope of a graph of $$\ln[A]$$ versus time is related to $$k$$.
-
-   $$(D)$$ **Original extension.** Calculate the time required for $$90.0\%$$ of the reactant to decompose. Would doubling the initial concentration change this time? Justify mathematically.
+   (A) $$0.335$$<br>
+   (B) $$1.00$$<br>
+   (C) $$2.98$$<br>
+   (D) $$8.91$$
 
 :::solution
-$$(A)$$ For a first-order reaction,
+Subtract the two temperature-ratio equations. Since the initial constants match, $$\ln(k_X/k_Y)=(60000-30000)(1/300-1/330)/R=1.09$$. Thus the ratio is about 2.98. The higher-barrier reaction is more temperature-sensitive; equal constants at one temperature do not imply equal prefactors.
 
 $$
-t_{1/2}=\frac{0.693}{k}.
+\boxed{\text{C}}.
 $$
-
-Thus
-
-$$
-t_{1/2}=\frac{0.693}{0.0300}=23.1\ \text{s}.
-$$
-
-The units are seconds because the rate constant has units of $$\text{s}^{-1}$$ for a first-order reaction.
-
-$$(B)$$ Use the integrated rate law:
-
-$$
-\ln[A]_t=\ln[A]_0-kt.
-$$
-
-Equivalently,
-
-$$
-[A]_t=[A]_0e^{-kt}=0.800e^{-(0.0300)(60.0)}.
-$$
-
-$$
-[A]_t=0.132\ M.
-$$
-
-This is less than the initial $$0.800\ M$$, which is reasonable because the reactant is decomposing over time.
-
-$$(C)$$ For a first-order reaction, a graph of $$\ln[A]$$ versus time is linear with slope
-
-$$
-\boxed{-k}.
-$$
-
-The negative slope shows that $$[A]$$ decreases as time increases. The magnitude of the slope gives the rate constant, so a steeper negative line means a faster first-order reaction.
-
-$$(D)$$ When $$90.0\%$$ has decomposed, $$[A]_t/[A]_0=0.100$$. Thus $$t=-\ln(0.100)/(0.0300\ \text{s}^{-1})=76.8\ \text{s}$$. The integrated law depends on the fraction remaining, so doubling the initial concentration does not change this time at fixed temperature. It does double the initial rate $$k[A]_0$$. A larger absolute rate is therefore compatible with the same time to consume a given fraction.
 :::
 ::::
 
-::::frq{id=chem-kinetics-2}
-8. The 2026 AP Chemistry exam included a kinetics question using concentration-time data and a graph of natural log of concentration. (Adapted from College Board, [2026 AP Chemistry FRQ 2](https://apcentral.collegeboard.org/media/pdf/ap26-frq-chemistry.pdf).)
+::::problem
+6. For fast $$\mathrm{C+A\rightleftharpoons I}$$ with equilibrium constant K followed by slow $$\mathrm{I+B\rightarrow C+P}$$ with constant $$k_2$$, which result is consistent with the mechanism?
 
-   $$(A)$$ Explain how concentration-time data can support that a reaction is first order in a reactant.
-
-   $$(B)$$ If a plot of $$\ln[A]$$ versus time has slope $$-0.0150\ \text{s}^{-1}$$, identify $$k$$.
-
-   $$(C)$$ Calculate the half-life for the reaction.
-
-   $$(D)$$ **Original extension.** A second run starts at twice the original reactant concentration but at the same temperature. Compare its initial rate, half-life, and slope on a plot of $$\ln[A]$$ versus time.
+   (A) C is an intermediate and $$r=k_2[A][B]$$<br>
+   (B) C is a catalyst and $$r=k_2K[C][A][B]$$<br>
+   (C) I is a catalyst and $$r=k_2[I][B]$$ is the fully eliminated law<br>
+   (D) C is a catalyst and changing its concentration changes the overall equilibrium constant
 
 :::solution
-$$(A)$$ If a plot of $$\ln[A]$$ versus time is linear, the data support a first-order relationship in $$A$$. Equivalently, the concentration should decrease by the same fraction over equal time intervals. A plot of $$[A]$$ versus time or $$1/[A]$$ versus time would be used to test zero-order or second-order behavior, so the linear graph identifies the order.
-
-$$(B)$$ For a first-order reaction, the slope is $$-k$$, so
+C is consumed then regenerated, while I is formed then consumed. Pre-equilibrium gives $$[I]=K[C][A]$$, so the slow-step rate becomes $$k_2K[C][A][B]$$. The catalyst can change the rate without changing the equilibrium constant for the net reaction $$A+B\rightleftharpoons P$$.
 
 $$
-k=0.0150\ \text{s}^{-1}.
+\boxed{\text{B}}.
 $$
+:::
+::::
 
-The sign of $$k$$ is positive; the negative sign belongs to the slope because the concentration is decreasing.
+### FRQ
 
-$$(C)$$
+::::frq{id=chem-kinetics-challenge-1}
+7. A reaction has rate law $$r=k[A]^m[B]^n$$. Three initial-rate trials give: trial 1, $$[A]=0.100\ M$$, $$[B]=0.200\ M$$, $$r=0.00400\ \mathrm{M/s}$$; trial 2, $$[A]=0.200\ M$$, $$[B]=0.100\ M$$, $$r=0.00800\ \mathrm{M/s}$$; trial 3, $$[A]=0.300\ M$$, $$[B]=0.400\ M$$, $$r=0.0720\ \mathrm{M/s}$$. Temperature is constant.
 
-$$
-t_{1/2}=\frac{0.693}{k}=\frac{0.693}{0.0150}=46.2\ \text{s}.
-$$
+   $$(A)$$ Determine m and n using both independent rate ratios.
 
-For a first-order reaction, this half-life is constant, meaning every $$46.2\ \text{s}$$ the concentration is cut in half regardless of the starting concentration.
+   $$(B)$$ Calculate k with units and predict the initial rate at $$[A]=0.150\ M$$ and $$[B]=0.300\ M$$.
 
-$$(D)$$ A linear $$\ln[A]$$ plot indicates first-order behavior, so the initial rate $$k[A]_0$$ doubles. The half-life remains $$\ln 2/0.0150=46.2\ \text{s}$$ because it does not depend on the initial concentration. The slope remains $$-k=-0.0150\ \text{s}^{-1}$$; only the vertical intercept increases, by $$\ln 2$$. Changing the amount of reactant does not itself change the rate constant.
+   $$(C)$$ Evaluate the mechanism fast $$A+B\rightleftharpoons I$$, then slow $$I+A\rightarrow P$$. Derive its predicted rate law and state whether agreement proves the mechanism.
+
+   $$(D)$$ For that net reaction, calculate the initial disappearance rate of A under the conditions in part B if r is the product-formation rate. Explain the coefficient's role.
+
+:::solution
+$$(A)$$ Trials 2 and 1 give $$2=2^m(1/2)^n$$, so $$m-n=1$$. Trials 3 and 1 give $$18=3^m2^n$$. Substituting $$m=n+1$$ gives $$18=3(6^n)$$, hence $$n=1$$ and $$m=2$$. The law is $$r=k[A]^2[B]$$; no trial comparison changes only one reactant, so a single ratio is insufficient.
+
+$$(B)$$ Trial 1 gives $$k=0.00400/((0.100)^2(0.200))=2.00\ \mathrm{M^{-2}s^{-1}}$$. The predicted rate is $$2.00(0.150)^2(0.300)=0.0135\ \mathrm{M/s}$$. The units follow from dividing M/s by M cubed, not from assuming every rate constant has units of inverse seconds.
+
+$$(C)$$ The slow step predicts $$r=k_2[I][A]$$. Pre-equilibrium gives $$[I]=K_1[A][B]$$, producing $$r=k_2K_1[A]^2[B]$$, consistent with the measured orders. The intermediate I cancels from the net reaction $$2A+B\rightarrow P$$. Agreement supports this mechanism but does not prove uniqueness; different mechanisms can generate the same rate law.
+
+$$(D)$$ The net equation consumes two A for each P formed, so $$-d[A]/dt=2r=0.0270\ \mathrm{M/s}$$. The rate law predicts the defined reaction rate, whereas the species disappearance rate includes its stoichiometric coefficient. The coefficient 2 in the overall equation does not by itself prove second order in A; that order came from the experiments and is explained by the proposed mechanism.
+:::
+::::
+
+::::frq{id=chem-kinetics-challenge-2}
+8. A colored reactant A is the only absorber at a chosen wavelength. After blank correction, its absorbances at 0, 40.0, and 80.0 s are 0.800, 0.400, and 0.200. Path length and temperature are fixed, and Beer-Lambert behavior is linear. A separate run at a higher temperature has first-order rate constant twice the original value.
+
+   $$(A)$$ Use the data to support a first-order model and calculate k. Explain what additional evidence would strengthen the inference.
+
+   $$(B)$$ At 80.0 s, the solution is instantly diluted to three times its volume. Calculate the absorbance at 120.0 s at the original temperature and path length.
+
+   $$(C)$$ The two temperatures are 300 and 315 K. Estimate the activation energy using $$R=8.314\ \mathrm{J/(mol\,K)}$$ and a fixed Arrhenius prefactor.
+
+   $$(D)$$ If an uncorrected constant absorbance of 0.050 were present, would a plot of the logarithm of raw absorbance remain exactly linear? Explain the late-time effect.
+
+:::solution
+$$(A)$$ Absorbance is proportional to concentration, and the same fraction, one-half, remains after each 40.0 s interval. This supports constant half-life and first-order decay. Thus $$k=\ln2/40.0=0.0173\ \mathrm{s^{-1}}$$. More time points giving a straight line of $$\ln A_{abs}$$ versus time, with no systematic residual pattern, would provide a stronger test than only three measurements.
+
+$$(B)$$ Dilution changes absorbance immediately from 0.200 to $$0.200/3=0.0667$$. Another 40.0 s is one half-life, so absorbance falls to $$0.0333$$ at 120.0 s. The reaction constant is unchanged by this dilution in the assumed first-order model; the concentration jump must be applied separately from time decay.
+
+$$(C)$$ The two-temperature equation gives $$\ln2=(E_a/R)(1/300-1/315)$$. Therefore $$E_a=8.314\ln2/(1/300-1/315)=3.63\times10^4\ \mathrm{J/mol}=36.3\ \mathrm{kJ/mol}$$. Absolute temperatures and a joule-compatible R are required. Doubling k at this temperature interval does not imply a universal doubling for every 15 K increase.
+
+$$(D)$$ Raw absorbance would be $$A_{raw}=A_{solute}+0.050$$. The logarithm of that sum is not the logarithm of the exponentially decaying solute plus a constant. At late times, raw absorbance approaches 0.050 rather than zero, and its logarithm levels off. A late-time straight-line fit would then underestimate the magnitude of the first-order decay slope.
 :::
 ::::

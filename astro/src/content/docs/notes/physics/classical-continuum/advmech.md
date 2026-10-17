@@ -607,7 +607,7 @@ $$
 
 a real symmetric matrix called the **inertia tensor** $$\mathbf I$$. The diagonal entries $$I_{xx}=\sum m(y^2+z^2)$$ are the ordinary moments of inertia about each axis; the off-diagonal entries $$I_{xy}=-\sum m\,xy$$ are the **products of inertia**.
 
-The crucial conceptual break from AP physics: **$$\vec L$$ is generally not parallel to $$\vec\omega$$.** A matrix sends a vector to a parallel vector only along its eigenvectors, so $$\vec L\parallel\vec\omega$$ only for special spin directions.
+Unlike the fixed-axis cases emphasized in AP physics, **$$\vec L$$ is generally not parallel to $$\vec\omega$$.** A matrix sends a vector to a parallel vector only along its eigenvectors, so $$\vec L\parallel\vec\omega$$ only for special spin directions.
 
 *What the products of inertia mean physically.* Imagine a rigid body spinning at constant $$\vec\omega$$ on a fixed shaft. If $$I_{xy}\neq0$$ for the shaft axis, then $$\vec L$$ is tilted off the axis and, since the body carries $$\vec L$$ around with it, $$\vec L$$ sweeps out a cone once per revolution. But $$\vec L$$ is constant in the body and rotating in space means $$d\vec L/dt=\vec\omega\times\vec L\neq0$$, which by $$\vec\tau=d\vec L/dt$$ demands a *torque* — supplied by the bearings as a rotating sideways force. This is dynamic imbalance: a wheel can be statically balanced (center of mass on the axis) yet still shake the bearings because its products of inertia don't vanish. Tire shops fix it by adding small weights to zero out $$I_{xz}$$ and $$I_{yz}$$.
 
@@ -939,7 +939,7 @@ Note it is *eastward* in both hemispheres (it depends on $$\cos\lambda$$, which 
 
 ### Worked examples in rotating frames
 
-When a problem is naturally circular — a bead in a rotating tube, a mass near a Lagrange point, a satellite viewed from a co-rotating frame — moving into the rotating frame replaces "what is the trajectory?" with "where does the effective force balance?" The following examples show the machinery in full.
+When a problem is naturally circular — a bead in a rotating tube, a mass near a Lagrange point, a satellite viewed from a co-rotating frame — moving into the rotating frame replaces "what is the trajectory?" with "where does the effective force balance?" The following examples work through that change of frame.
 
 <div class="theorem-box">
 

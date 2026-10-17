@@ -12,7 +12,7 @@ Most reactions we have looked at previously were **irreversible reactions**, or 
 - **Concentrations** (or for gases, **partial pressures**) remain **constant** over time (they are **not** necessarily equal to one another)
 - The system is **dynamic**: molecules still react, but there is **no net** change in amounts. This is different from a **completed** or **irreversible** reaction, where at least one reactant is effectively exhausted and the process does not establish a lasting balance between forward and reverse paths at ordinary conditions.
 
-The approach to equilibrium has a characteristic shape: starting from pure reactants, the **forward rate** is high (reactant concentrations are large) and the **reverse rate** is zero. As products build up, the forward rate falls and the reverse rate rises until the two are **equal**—from that moment on, concentrations level off and stay flat. Crucially, "equal rates" does *not* mean "equal concentrations"; the leveled-off amounts can be lopsided in either direction depending on $$K$$.
+The approach to equilibrium has a characteristic shape: starting from pure reactants, the **forward rate** is high (reactant concentrations are large) and the **reverse rate** is zero. As products build up, the forward rate falls and the reverse rate rises until the two are **equal**—from that moment on, concentrations level off and stay flat. "Equal rates" does *not* mean "equal concentrations": the equilibrium mixture can favor either reactants or products depending on $$K$$.
 
 ```tikz
 \usepackage{pgfplots}
@@ -470,13 +470,29 @@ The ligand removes free metal ions by forming a complex. This lowers the ion pro
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Equilibrium and quotient | $$K_c=\frac{[C]^c[D]^d}{[A]^a[B]^b}$$ | For $$aA+bB\rightleftharpoons cC+dD$$; Q uses current values; omit pure solids and liquids. |
+| Direction | $$Q<K: \text{forward}$$; $$Q>K: \text{reverse}$$ | Compare at the same temperature and with consistent conventions. |
+| Related reactions | $$K_{reverse}=K^{-1}$$; $$K_{scaled}=K^\alpha$$; $$K_{sum}=K_1K_2$$ | Scale every coefficient by $$\alpha$$; multiply constants when adding reactions. |
+| Gas equilibrium | $$K_p=K_c(RT)^{\Delta n_g}$$ | Textbook concentration/pressure convention; ideal gases. |
+| Free energy | $$\Delta G^\circ=-RT\ln K$$; $$\Delta G=RT\ln(Q/K)$$ | Thermodynamic K and Q are dimensionless activity ratios. |
+| Temperature dependence | $$\ln(K_2/K_1)=-\Delta H^\circ(1/T_2-1/T_1)/R$$ | Approximately constant reaction enthalpy, T in kelvin. |
+| Solubility | $$K_{sp}=[M]^a[X]^b$$ | For $$M_aX_b(s)\rightleftharpoons aM+bX$$ with charges understood; use free-ion concentrations. |
+| Pure-water molar solubility | $$K_{sp}=(as)^a(bs)^b$$ | No initial ions and no significant competing reactions. |
+| Complex formation | $$K_f=[ML_n]/([M][L]^n)$$ | Use free ligand and free metal, not analytical totals. |
+| Combined dissolution | $$K_{net}=K_{sp}K_f$$ | Applies when adding the specified dissolution and complexation reactions once cancels free metal. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. For $$A(g)\rightleftharpoons2B(g)$$ at equilibrium, volume is suddenly doubled at fixed temperature. What is Q immediately afterward?
+1. For $$\mathrm{A(g)\rightleftharpoons2B(g)}$$, an equilibrium mixture is compressed to half its volume at fixed temperature. Then enough inert gas is added at fixed volume to double the total pressure again. Before reaction occurs, what is Q?
 
    (A) $$K/2$$<br>
    (B) $$K$$<br>
@@ -484,41 +500,7 @@ The ligand removes free metal ions by forming a complex. This lowers the ion pro
    (D) $$4K$$
 
 :::solution
-Both concentrations halve, so $$Q'=([B]/2)^2/([A]/2)=K/2$$. The forward shift then increases Q back toward K. K itself does not change with this volume perturbation.
-
-$$
-\boxed{\text{A}}.
-$$
-:::
-::::
-
-::::problem
-2. For $$A\rightleftharpoons B$$, $$K_1=4$$; for $$B\rightleftharpoons C$$, $$K_2=9$$. Find K for $$2C\rightleftharpoons2A$$.
-
-   (A) $$1/36$$<br>
-   (B) $$1/1296$$<br>
-   (C) $$36$$<br>
-   (D) $$1296$$
-
-:::solution
-Adding forward reactions gives 36 for A to C. Reversal gives 1/36, and doubling coefficients squares it: $$1/36^2=1/1296$$. Constants multiply rather than add when reactions are added.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-3. For $$\mathrm{MX_2(s)\rightleftharpoons M^{2+}+2X^-}$$ with $$K_{sp}=4.0\times10^{-12}$$, what is molar solubility in pure water?
-
-   (A) $$2.0\times10^{-6}\ M$$<br>
-   (B) $$1.6\times10^{-4}\ M$$<br>
-   (C) $$1.0\times10^{-4}\ M$$<br>
-   (D) $$4.0\times10^{-12}\ M$$
-
-:::solution
-Let solubility be s. Then $$[M^{2+}]=s$$ and $$[X^-]=2s$$, giving $$4s^3=4.0\times10^{-12}$$. The cube root yields $$s=1.0\times10^{-4}\ M$$.
+Compression doubles each reacting concentration, giving $$Q'=(2[B])^2/(2[A])=2K$$. Adding inert gas at fixed volume changes neither reacting concentration nor partial pressure. Only the compression changes Q; total pressure alone is not the relevant variable.
 
 $$
 \boxed{\text{C}}.
@@ -527,32 +509,15 @@ $$
 ::::
 
 ::::problem
-4. Equal volumes of $$2.0\times10^{-5}\ M$$ silver nitrate and sodium chloride are mixed. For AgCl, $$K_{sp}=1.8\times10^{-10}$$. Does precipitation begin?
+2. For $$A\rightleftharpoons2B$$, $$K_1=4.00$$; for $$B\rightleftharpoons C$$, $$K_2=3.00$$. What is K for $$C\rightleftharpoons\tfrac12 A$$?
 
-   (A) Yes, because Q is $$4.0\times10^{-10}$$<br>
-   (B) Yes, because Q is less than Ksp<br>
-   (C) No, because Ksp changes on mixing<br>
-   (D) No, because dilution makes Q $$1.0\times10^{-10}$$
-
-:::solution
-Each ion concentration halves to $$1.0\times10^{-5}\ M$$, so their product is below Ksp. Using concentrations before mixing would incorrectly predict precipitation.
-
-$$
-\boxed{\text{D}}.
-$$
-:::
-::::
-
-::::problem
-5. An equilibrium mixture contains solid calcium carbonate, solid calcium oxide, and carbon dioxide at fixed temperature and volume. More calcium carbonate is added without changing gas volume. What happens to equilibrium carbon dioxide pressure?
-
-   (A) It doubles<br>
-   (B) It stays unchanged while both solid phases remain<br>
-   (C) It falls to zero<br>
-   (D) Kp increases
+   (A) $$1/36$$<br>
+   (B) $$1/6$$<br>
+   (C) $$6$$<br>
+   (D) $$36$$
 
 :::solution
-Pure solid activities do not enter $$K_p=P_{CO_2}$$ in the textbook convention. Adding more of an already present pure solid does not change the equilibrium pressure, provided both solid phases remain and temperature is fixed.
+Twice the second reaction added to the first gives $$A\rightleftharpoons2C$$ with $$K=4.00(3.00)^2=36$$. Reversing and halving coefficients gives $$K'=36^{-1/2}=1/6$$. Reaction scaling changes exponents, not a numerical multiplier in front of K.
 
 $$
 \boxed{\text{B}}.
@@ -561,15 +526,15 @@ $$
 ::::
 
 ::::problem
-6. A reaction has positive standard free energy but current $$Q<K$$. Which statement is correct?
+3. For $$\mathrm{MX_2(s)\rightleftharpoons M^{2+}+2X^-}$$, $$K_{sp}=4.0\times10^{-12}$$. What is the approximate molar solubility in $$0.0100\ M$$ NaX, neglecting other reactions?
 
-   (A) Forward reaction is favorable under the current conditions<br>
-   (B) Reverse reaction must be favorable because standard free energy is positive<br>
-   (C) The system is at equilibrium<br>
-   (D) A catalyst must change K before forward reaction is possible
+   (A) $$4.0\times10^{-8}\ M$$<br>
+   (B) $$1.0\times10^{-4}\ M$$<br>
+   (C) $$4.0\times10^{-10}\ M$$<br>
+   (D) $$2.0\times10^{-5}\ M$$
 
 :::solution
-Actual $$\Delta G=RT\ln(Q/K)<0$$. The standard value describes a reference state; it does not override the current composition. A catalyst changes the approach rate, not the thermodynamic criterion.
+Use $$K_{sp}=s(0.0100+2s)^2$$, not the pure-water expression. Neglecting 2s gives $$s=4.0\times10^{-12}/10^{-4}=4.0\times10^{-8}\ M$$. The added $$2s=8.0\times10^{-8}\ M$$ is negligible beside 0.0100 M, validating the approximation.
 
 $$
 \boxed{\text{A}}.
@@ -577,127 +542,99 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+4. For $$\mathrm{AB(s)\rightleftharpoons A^++B^-}$$, $$K_{sp}=1.0\times10^{-8}$$. Only $$2.0\times10^{-5}\ \mathrm{mol}$$ solid is added to $$1.00\ \mathrm{L}$$ pure water. What is the final state if no other reactions occur?
 
-::::frq{id=chem-equilibrium-1}
-7. At a certain temperature, $$K_c=4.00$$ for
-
-$$
-\text{A}(g)\rightleftharpoons2\text{B}(g).
-$$
-
-A sealed container initially has $$0.600\ M$$ $$\text{A}$$ and no $$\text{B}$$.
-
-   $$(A)$$ Write the equilibrium-constant expression.
-
-   $$(B)$$ Set up an ICE table using $$x$$ for the amount of $$\text{A}$$ consumed.
-
-   $$(C)$$ Calculate the equilibrium concentrations of $$\text{A}$$ and $$\text{B}$$.
-
-   $$(D)$$ **Original extension.** After equilibrium is reached, the container volume doubles at constant temperature. Calculate the immediate reaction quotient and determine the direction of the shift. Is the final concentration of B necessarily greater than before expansion? Explain.
+   (A) Some solid remains and both ions are $$10^{-4}\ M$$<br>
+   (B) Some solid remains and both ions are $$2.0\times10^{-5}\ M$$<br>
+   (C) All dissolves and Ksp falls to $$4.0\times10^{-10}$$<br>
+   (D) All dissolves and $$Q=4.0\times10^{-10}<K_{sp}$$
 
 :::solution
-$$(A)$$
+Complete dissolution supplies only $$2.0\times10^{-5}\ M$$ of each ion, giving $$Q=4.0\times10^{-10}$$. This is below saturation, so all the available solid dissolves. The constant stays fixed; equality with Ksp requires equilibrium with solid present, which the small sample cannot establish.
 
 $$
-K_c=\frac{[\text{B}]^2}{[\text{A}]}.
+\boxed{\text{D}}.
 $$
-
-The coefficient $$2$$ in front of $$\text{B}$$ becomes the exponent $$2$$ in the equilibrium expression. There are no solids or liquids to omit in this reaction.
-
-$$(B)$$ The ICE setup is
-
-|        | $$\text{A}$$ | $$\text{B}$$ |
-|--------|--------------|--------------|
-| Initial | $$0.600$$ | $$0$$ |
-| Change | $$-x$$ | $$+2x$$ |
-| Equilibrium | $$0.600-x$$ | $$2x$$ |
-
-The $$+2x$$ appears because every mole of $$\text{A}$$ that reacts produces $$2$$ moles of $$\text{B}$$.
-
-$$(C)$$ Substitute into $$K_c$$:
-
-$$
-4.00=\frac{(2x)^2}{0.600-x}.
-$$
-
-So
-
-$$
-4.00=\frac{4x^2}{0.600-x}
-$$
-
-and
-
-$$
-x^2=0.600-x.
-$$
-
-Thus
-
-$$
-x^2+x-0.600=0.
-$$
-
-The positive root is $$x=0.421$$. Therefore,
-
-$$
-[\text{A}]_{\text{eq}}=0.600-0.421=0.179\ M
-$$
-
-and
-
-$$
-[\text{B}]_{\text{eq}}=2(0.421)=0.842\ M.
-$$
-
-The negative root is rejected because it would make no physical sense for the reaction progress variable in this setup. Both equilibrium concentrations are positive, which is a useful check.
-
-$$(D)$$ Every concentration initially halves, so $$Q'=( [B]/2)^2/([A]/2)=K_c/2=2.00$$. Since $$Q'<K_c$$, the reaction shifts toward B. However, shifting right compares the final state with the immediately diluted state, not with the old equilibrium. The total concentration in A-equivalent units is now $$0.300\ M$$. Writing $$[A]=0.300-y$$ and $$[B]=2y$$ gives $$4y^2/(0.300-y)=4.00$$. The physical root is $$y=0.2416$$, so $$[B]=0.483\ M$$, below the original $$0.842\ M$$ despite net formation of B.
 :::
 ::::
 
-::::frq{id=chem-equilibrium-2}
-8. The 2024 AP Chemistry exam included an equilibrium particle-diagram question for $$\text{H}_2(g)+\text{I}_2(g)\rightleftharpoons2\text{HI}(g)$$. (Adapted from College Board, [2024 AP Chemistry FRQ 5](https://apcentral.collegeboard.org/media/pdf/ap24-frq-chemistry.pdf).)
+::::problem
+5. At a fixed temperature, $$K=0.0100$$ for a reaction and its current quotient is $$Q=1.00\times10^{-4}$$. What is $$\Delta G/(RT)$$?
 
-   $$(A)$$ Write the expression for $$Q$$.
-
-   $$(B)$$ If $$[\text{H}_2]=0.20\ M$$, $$[\text{I}_2]=0.10\ M$$, and $$[\text{HI}]=0.30\ M$$, calculate $$Q$$.
-
-   $$(C)$$ If $$K=50$$, predict the direction the system shifts.
-
-   $$(D)$$ **Original extension.** Compress the mixture to half its volume at constant temperature. Calculate the new reaction quotient and decide whether compression changes the direction predicted in the earlier part.
+   (A) $$+4.61$$<br>
+   (B) $$-4.61$$<br>
+   (C) $$+9.21$$<br>
+   (D) $$-9.21$$
 
 :::solution
-$$(A)$$
+Actual free energy is $$\Delta G=RT\ln(Q/K)$$. The ratio is 0.0100, whose natural logarithm is -4.61. Although $$\Delta G^\circ/(RT)=-\ln K=+4.61$$, the prepared mixture favors the forward reaction.
 
 $$
-Q=\frac{[\text{HI}]^2}{[\text{H}_2][\text{I}_2]}.
+\boxed{\text{B}}.
 $$
+:::
+::::
 
-The coefficient $$2$$ on $$\text{HI}$$ becomes the exponent $$2$$.
+::::problem
+6. Given $$\mathrm{MX(s)\rightleftharpoons M^++X^-}$$ with $$K_{sp}=10^{-10}$$ and $$\mathrm{M^++2L\rightleftharpoons ML_2^+}$$ with $$K_f=10^{12}$$, what is K for $$\mathrm{MX(s)+2L\rightleftharpoons ML_2^++X^-}$$?
 
-$$(B)$$
+   (A) $$10^{-22}$$<br>
+   (B) $$10^{-2}$$<br>
+   (C) $$10^2$$<br>
+   (D) $$10^{22}$$
+
+:::solution
+Adding the reactions cancels free metal ions, and their equilibrium constants multiply: $$K=K_{sp}K_f=10^2$$. Complex formation can therefore promote dissolution. Free-metal concentration in the solubility expression must not be replaced by total dissolved metal concentration.
 
 $$
-Q=\frac{(0.30)^2}{(0.20)(0.10)}=\frac{0.090}{0.020}=4.5.
+\boxed{\text{C}}.
 $$
+:::
+::::
 
-$$(C)$$ Since $$Q<K$$, the system has too little product relative to equilibrium. It shifts toward products, forming more $$\text{HI}$$ and consuming $$\text{H}_2$$ and $$\text{I}_2$$. The value of $$K$$ does not change during the shift because temperature is not changed.
+### FRQ
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\draw[rounded corners] (-3,-1.5) rectangle (-0.3,1.5); \node at (-1.65,1.8) {before};
-\draw[rounded corners] (0.3,-1.5) rectangle (3,1.5); \node at (1.65,1.8) {after shift};
-\foreach \x/\y in {-2.5/0.8,-2.1/-0.3,-1.5/0.4,-0.9/-0.9}{\node[blue] at (\x,\y) {$H_2$};}
-\foreach \x/\y in {-2.6/-0.8,-1.8/1.0,-0.9/0.2}{\node[red] at (\x,\y) {$I_2$};}
-\foreach \x/\y in {0.8/1.0,1.4/0.4,2.2/0.9,0.9/-0.6,1.8/-1.0,2.4/-0.2}{\node[purple] at (\x,\y) {$HI$};}
-\node[align=center] at (1.65,-1.85) {more product particles};
-\end{tikzpicture}
-```
+::::frq{id=chem-equilibrium-challenge-1}
+7. For $$\mathrm{A(g)\rightleftharpoons2B(g)}$$, $$K_c=0.360$$ at a fixed temperature. A 1.00 L vessel initially contains 0.500 mol A and no B. Gases behave ideally.
 
-$$(D)$$ All concentrations double. Thus $$Q'=(2[\text{HI}])^2/((2[\text{H}_2])(2[\text{I}_2]))=Q=4.50$$. Since $$4.50<50$$, the reaction still proceeds toward HI. Equal total gas coefficients on each side make the concentration factors cancel. Compression does not change $$K_c$$ or create an additional equilibrium preference, but the mixture was not at equilibrium to begin with, so it still reacts.
+   $$(A)$$ Set up an ICE expression and calculate both equilibrium concentrations without assuming a small change.
+
+   $$(B)$$ Double the vessel volume at constant temperature. Calculate Q immediately after expansion and predict the direction of net reaction.
+
+   $$(C)$$ Calculate the new equilibrium concentrations. Determine whether the final concentration of B exceeds its value before expansion.
+
+   $$(D)$$ At the new equilibrium, add inert gas at fixed volume and temperature. Compare the effects on total pressure, B partial pressure, Q, and K.
+
+:::solution
+$$(A)$$ Let x M of A dissociate. Then $$[A]=0.500-x$$, $$[B]=2x$$, and $$4x^2/(0.500-x)=0.360$$. The quadratic $$4x^2+0.360x-0.180=0$$ has physical root $$x=0.17185\ M$$. Thus $$[A]=0.3281\ M$$ and $$[B]=0.3437\ M$$, retaining guard digits for the later parts. Depletion is about 34% of the initial A, so a small-x shortcut would be inappropriate.
+
+$$(B)$$ Both concentrations halve before any reaction occurs. Thus $$Q'=([B]/2)^2/([A]/2)=K_c/2=0.180$$. Because Q is below K, the forward reaction forms more B. K remains 0.360 because temperature is unchanged.
+
+$$(C)$$ The conserved A-equivalent concentration after expansion is $$[A]+[B]/2=0.250\ M$$. Write $$[B]=2y$$ and $$[A]=0.250-y$$, giving $$4y^2/(0.250-y)=0.360$$. The physical root is $$y=0.11160\ M$$, so $$[B]=0.2232\ M$$ and $$[A]=0.1384\ M$$. B rises from its immediately diluted concentration of 0.1719 M but remains below its pre-expansion value 0.3437 M. A shift toward product does not automatically restore the old concentration.
+
+$$(D)$$ Total pressure rises because total gas moles increase. B partial pressure remains $$n_BRT/V$$ with all three quantities unchanged. Reacting concentrations and Q therefore stay fixed, as does K. There is no net shift in this ideal fixed-volume case, even though a pressure gauge records an increase.
+:::
+::::
+
+::::frq{id=chem-equilibrium-challenge-2}
+8. A solution initially contains $$0.0100\ M$$ silver ions and $$0.0100\ M$$ lead(II) ions. Chloride is added slowly with negligible volume change. Use $$K_{sp}(\mathrm{AgCl})=1.8\times10^{-10}$$ and $$K_{sp}(\mathrm{PbCl_2})=1.6\times10^{-5}$$. Ignore complex formation unless specified.
+
+   $$(A)$$ Find the chloride concentration at which each solid would first precipitate if its metal concentration remained at the initial value. Identify the first precipitate.
+
+   $$(B)$$ Just before lead chloride starts to precipitate, calculate the free silver concentration and the percentage of initial silver removed.
+
+   $$(C)$$ A separate saturated AgCl sample is exposed to a ligand L with $$K_f=1.0\times10^7$$ for $$\mathrm{Ag^++2L\rightleftharpoons AgL_2^+}$$. Derive the equilibrium constant for $$\mathrm{AgCl(s)+2L\rightleftharpoons AgL_2^++Cl^-}$$.
+
+   $$(D)$$ Explain why adding excess ligand can increase total dissolved silver while free silver remains small. Would this improve precipitation-based removal of silver?
+
+:::solution
+$$(A)$$ For AgCl, $$[Cl^-]_{crit}=K_{sp}/[Ag^+]=1.8\times10^{-8}\ M$$. For lead chloride, $$[Cl^-]_{crit}=\sqrt{K_{sp}/[Pb^{2+}]}=\sqrt{1.6\times10^{-3}}=0.0400\ M$$. Silver chloride precipitates first. The different chloride exponents require different calculations; comparing Ksp values alone is not the method.
+
+$$(B)$$ At $$[Cl^-]=0.0400\ M$$, equilibrium with AgCl gives $$[Ag^+]=1.8\times10^{-10}/0.0400=4.5\times10^{-9}\ M$$. The fraction remaining is $$4.5\times10^{-9}/0.0100=4.5\times10^{-7}$$. Thus $$99.999955\%$$ has been removed in this idealized model. This describes a very effective separation, not literally zero residual silver.
+
+$$(C)$$ Add dissolution and complex formation; free silver cancels. The constants multiply, giving $$K=K_{sp}K_f=(1.8\times10^{-10})(1.0\times10^7)=1.8\times10^{-3}$$. Its expression is $$[AgL_2^+][Cl^-]/[L]^2$$ under the dilute-solution approximation. The solid has unit activity and is omitted.
+
+$$(D)$$ Ligand binds free silver into the complex, lowering the dissolution ion product and allowing more solid to dissolve. Total dissolved silver includes $$[Ag^+]+[AgL_2^+]$$, whereas Ksp uses only free $$[Ag^+]$$. Strong complexation therefore tends to oppose removal as a solid, keeping silver dissolved even when a calculation based only on total metal concentration would predict precipitation. It would not improve this precipitation-based separation.
 :::
 ::::

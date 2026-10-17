@@ -26,7 +26,7 @@ $$
 p=\frac{F_\perp}{A},\qquad [p]=\text{Pa}=\text{N/m}^2.
 $$
 
-The crucial property of pressure in a fluid **at rest** is that it is isotropic: the pressure at a point is the same in **all** directions. The force on any surface element is $$dF=p\,dA$$ (a generalization of $$F=PA$$) directed *along the inward normal*, regardless of the surface's orientation.
+Pressure in a fluid **at rest** is isotropic: the pressure at a point is the same in **all** directions. The force on any surface element is $$dF=p\,dA$$ (a generalization of $$F=PA$$) directed *along the inward normal*, regardless of the surface's orientation.
 
 The isotropy argument fails once the fluid moves with shear, or once viscosity matters, then pressure is only the isotropic part of a more general stress, and the off-diagonal (shear) stresses are nonzero. Keep that in the back of your mind for the viscosity section.
 

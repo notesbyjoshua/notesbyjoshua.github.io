@@ -5,12 +5,12 @@ sidebar:
   order: 2
 ---
 
-With every experiment, there will be a source of error, whether you like it or not. Since we aren't perfect, we need to account for the error, which we call uncertainty. A measurement reported without its uncertainty is almost meaningless: "the period is 2.00 s" is a very different claim from "the period is $$2.00\pm0.05$$ s."
+Every experiment has sources of error, so a reported measurement should include an estimate of uncertainty. Without it, the reader cannot judge the measurement’s precision: "the period is 2.00 s" is a very different claim from "the period is $$2.00\pm0.05$$ s."
 
 A quantity $$x$$ is written $$x\pm\delta x$$, where $$\delta x$$ is the **absolute uncertainty** (same units as $$x$$). The **relative** (or fractional) uncertainty is $$\delta x/x$$, often quoted as a percentage. The central question of error propagation is: if $$f$$ depends on measured quantities $$x,y,\dots$$, how big is $$\delta f$$?
 
 :::note
-**A note on the two methods.** There are two conventions. The **worst-case (linear)** method simply adds uncertainties and gives the largest the error could possibly be. The **quadrature (statistical)** method adds them in quadrature (root-sum-of-squares) and is correct when the errors are *independent and random*, since independent errors partly cancel rather than always conspiring. Quadrature is the standard for real lab data; the linear method is a quick conservative bound. Both are shown below — use whichever a problem specifies, defaulting to quadrature. MOST problems require quadrature uncertainty calculations.
+**A note on the two methods.** There are two conventions. The **worst-case (linear)** method simply adds uncertainties and gives the largest the error could possibly be. The **quadrature (statistical)** method adds them in quadrature (root-sum-of-squares) and is correct when the errors are *independent and random*, because independent errors can partly cancel rather than all contributing in the same direction. Quadrature is the standard for real lab data; the linear method is a quick conservative bound. Both are shown below — use whichever a problem specifies, defaulting to quadrature. MOST problems require quadrature uncertainty calculations.
 :::
 
 ---

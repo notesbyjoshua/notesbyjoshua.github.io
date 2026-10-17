@@ -19,7 +19,7 @@ sidebar:
 
 ## Variables of Rotation
 
-Like kinematics, rotation also has counterparts for measurements of energy and other variables.
+Energy and momentum have rotational counterparts, just as the kinematic quantities do.
 
 ### Rotational Kinetic Energy
 
@@ -70,7 +70,7 @@ $$
 K = \frac{1}{2}Mv_{\text{cm}}^2 + \frac{1}{2}I_{\text{cm}}\omega^2.
 $$
 
-This form is especially important for rolling objects. The translational term tracks motion of the center of mass; the rotational term tracks spinning about the center of mass. Any rigid-body motion can be decomposed into translation of the center of mass plus rotation about the center of mass, and the kinetic energy splits into exactly these two pieces with no cross term.
+This form is useful for rolling objects because it separates motion of the center of mass from rotation about the center of mass. Any rigid-body motion can be decomposed into translation of the center of mass plus rotation about the center of mass, and the kinetic energy splits into exactly these two pieces with no cross term.
 
 <div class="theorem-box">
 

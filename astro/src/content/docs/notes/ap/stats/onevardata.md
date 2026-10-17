@@ -140,7 +140,7 @@ Whenever you look at a univariate graph, there are a few main traits that should
 
 ### Center
 
-The **center** is a typical or middle value—where much of the data sits. For many distributions, the **mean** and **median** lie near the visual center; for **skewed** data they can separate, which is an important aspect of the plot.
+The **center** is a typical or middle value—where much of the data sits. For many distributions, the **mean** and **median** lie near the visual center, but with **skewed** data they can separate. Look for that difference when describing the plot.
 
 ### Spread
 

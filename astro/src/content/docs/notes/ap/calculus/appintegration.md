@@ -59,6 +59,50 @@ The average value is $$3$$: a constant height of $$3$$ would enclose the same ar
 
 </div>
 
+### Average value, average rate, and average speed
+
+Average value measures a typical output over a whole interval. Average rate of change measures net output change per input change. They can have different units even when they refer to the same original function.
+
+For position $$s(t)$$, average velocity is $$[s(b)-s(a)]/(b-a)$$. This is also the average value of the velocity function, because integrating velocity gives displacement. Average speed instead divides total distance by elapsed time, so its integral uses $$\lvert v\rvert$$.
+
+An average of endpoint values is generally not the average value of a function. The expression $$[f(a)+f(b)]/2$$ is the average height of the secant segment, and is exact for the function's average only in special situations, such as a linear function.
+
+<div class="theorem-box">
+
+**Example.** A temperature is modeled by $$T(t)=20+12\sin(\pi t/6)$$ degrees Celsius for $$0\le t\le6$$ hours. Find its average temperature, its average rate of change, and the times when it equals its average temperature.
+
+The average temperature is
+
+$$
+T_{\mathrm{avg}}
+=\frac16\int_0^6\left(20+12\sin\frac{\pi t}{6}\right)\,dt
+=20+\frac{24}{\pi}.
+$$
+
+The average rate of change is zero because both endpoint temperatures are twenty:
+
+$$
+\frac{T(6)-T(0)}6=0.
+$$
+
+To find where the temperature equals its average, solve
+
+$$
+\sin\frac{\pi t}{6}=\frac2\pi.
+$$
+
+On the stated interval there are two solutions:
+
+$$
+t=\frac6\pi\arcsin\frac2\pi,
+\qquad
+t=6-\frac6\pi\arcsin\frac2\pi.
+$$
+
+The temperature spends the interior of the interval above its endpoint values, so an average rate of zero does not imply an average temperature of twenty. Continuity guarantees at least one input where the temperature equals its average value, but it does not guarantee exactly one.
+
+</div>
+
 ---
 
 ## Straight line motion and integration
@@ -146,6 +190,81 @@ $$
 $$
 
 So the displacement is $$-3$$ while the total distance is $$\frac{23}{3}$$, confirming that the two quantities differ once the velocity changes sign.
+
+</div>
+
+### Recovering motion from acceleration and initial data
+
+An acceleration formula determines velocity only after an initial velocity is supplied. Velocity then determines position only after an initial position is supplied. Each integration introduces its own constant or initial-value term.
+
+For total distance, find where the recovered velocity changes sign. Zeros of acceleration do not determine when position reverses direction. A particle can continue moving forward while its velocity increases and decreases.
+
+<div class="theorem-box">
+
+**Example.** A particle has acceleration $$a(t)=6t-6$$ meters per second squared, with $$v(0)=0$$ and $$s(0)=4$$ meters. Find its position at $$t=3$$, its displacement, and its distance traveled on $$[0,3]$$.
+
+Integrate acceleration using the initial velocity:
+
+$$
+v(t)=0+\int_0^t(6u-6)\,du=3t^2-6t.
+$$
+
+The velocity is negative between zero and two and positive after two. Recover position:
+
+$$
+s(t)=4+\int_0^t(3u^2-6u)\,du
+=4+t^3-3t^2.
+$$
+
+Thus $$s(3)=4$$, giving displacement zero. However, $$s(2)=0$$, so the particle first moves from position four to zero and then returns from zero to four.
+
+The total distance is
+
+$$
+\int_0^2(-3t^2+6t)\,dt
++\int_2^3(3t^2-6t)\,dt=4+4=8
+$$
+
+meters. Its average velocity is zero, while its average speed is $$8/3$$ meters per second. The equal initial and final positions erase net change, but they do not erase the intermediate travel.
+
+</div>
+
+### Net rates and the largest amount
+
+For a tank, population, or inventory, integrate the net rate to recover the amount:
+
+$$
+Q(t)=Q(a)+\int_a^t[\text{input rate}-\text{output rate}]\,du.
+$$
+
+To find when the amount is largest, analyze this net rate as the derivative of $$Q$$. The largest input rate is not necessarily the time of largest amount: accumulation can keep rising after the input rate has already begun falling, as long as it still exceeds the output rate.
+
+<div class="theorem-box">
+
+**Example.** A tank contains fifty liters at time zero. Water enters at $$10+2t$$ liters per minute and leaves at $$t^2$$ liters per minute for $$0\le t\le5$$. Find the maximum volume and verify that the model never predicts an empty tank.
+
+The volume derivative is
+
+$$
+V'(t)=10+2t-t^2.
+$$
+
+Its positive root is $$c=1+\sqrt{11}$$. The other root is negative and outside the time domain. The net rate is positive before $$c$$ and negative afterward, so the maximum occurs at $$c$$.
+
+The amount function is
+
+$$
+V(t)=50+10t+t^2-\frac{t^3}{3}.
+$$
+
+Using $$c^2=2c+10$$ and $$c^3=14c+20$$ simplifies the maximum:
+
+$$
+V(c)=\frac{182+22\sqrt{11}}3
+\text{ liters}.
+$$
+
+Because the function increases and then decreases, its minimum on this interval is at an endpoint. The endpoint values are $$V(0)=50$$ and $$V(5)=250/3$$, both positive. Thus the model remains physically consistent with a nonempty tank throughout the interval.
 
 </div>
 
@@ -262,6 +381,48 @@ $$
 
 </div>
 
+### Curves that exchange top and bottom
+
+An intersection can separate two different bounded regions. Integrating one signed difference over both regions can cancel part or all of their geometric area. Find every relevant intersection first, then test which function is above on each interval.
+
+<div class="theorem-box">
+
+**Example.** Find the total area enclosed by $$y=x^3$$ and $$y=x$$.
+
+Solve $$x^3=x$$:
+
+$$
+x(x-1)(x+1)=0,
+$$
+
+so the intersections occur at negative one, zero, and one. On $$(-1,0)$$, the cubic is above the line. On $$(0,1)$$, the line is above the cubic.
+
+Therefore,
+
+$$
+A=\int_{-1}^{0}(x^3-x)\,dx
++\int_0^1(x-x^3)\,dx.
+$$
+
+The two regions are symmetric, so
+
+$$
+A=2\int_0^1(x-x^3)\,dx
+=2\left(\frac12-\frac14\right)=\frac12.
+$$
+
+By contrast, $$\int_{-1}^1(x^3-x)\,dx=0$$ because that integrand is odd. This signed cancellation cannot be the area of two nonempty regions.
+
+</div>
+
+### Choosing the slice direction before solving for bounds
+
+Horizontal slices can avoid splitting a region into several vertical pieces. For the region between $$x=y^2$$ and $$x=2-y$$, a horizontal slice has one continuous left boundary and one continuous right boundary for $$-2\le y\le1$$.
+
+If you insist on vertical slices, the parabola becomes $$y=\pm\sqrt{x}$$. Part of the upper boundary follows $$\sqrt{x}$$ and another part follows $$2-x$$, so a split is needed. Both approaches describe the same region, but the horizontal setup keeps its geometry visible with one integral.
+
+Do not choose a variable merely because one equation is written as $$y=f(x)$$. Sketch one candidate slice in each direction and ask whether its two endpoints can be described consistently over the entire region.
+
 ---
 
 ## Calculating volumes
@@ -283,6 +444,10 @@ V=\int_a^b A(x)\,dx.
 $$
 
 Common cross sections include squares, rectangles, semicircles, and equilateral triangles.
+
+The length of a segment in the base determines a dimension of the cross section, but you must identify which dimension. If the segment of length $$s$$ is a semicircle's diameter, its area is $$\pi s^2/8$$, not $$\pi s^2/2$$. For an equilateral triangle with side $$s$$, the altitude is $$\sqrt3s/2$$, giving area $$\sqrt3s^2/4$$.
+
+The area formula belongs inside the volume integral. A base segment is a length, its associated cross-sectional formula has square units, and multiplying by slice thickness produces cubic units. This unit sequence catches missing squares and mistaken radius factors.
 
 ```tikz
 \usepackage{tikz}
@@ -334,23 +499,55 @@ $$
 
 </div>
 
+### Cross sections with a diameter instead of a radius
+
+<div class="theorem-box">
+
+**Example.** A solid has base bounded by $$y=2x$$ and $$y=x^2$$. Its cross sections perpendicular to the horizontal axis are semicircles whose diameters lie in the base. Find the volume. Then compare with the solid formed using semicircular cross sections perpendicular to the vertical axis.
+
+For vertical slices, the intersections are at zero and two, and the diameter is $$d=2x-x^2$$. A semicircle with diameter $$d$$ has radius $$d/2$$ and area $$\pi d^2/8$$. Therefore,
+
+$$
+V_x=\frac\pi8\int_0^2(2x-x^2)^2\,dx
+=\frac\pi8\cdot\frac{16}{15}
+=\frac{2\pi}{15}.
+$$
+
+For horizontal slices, rewrite the boundaries as $$x=y/2$$ and $$x=\sqrt y$$. Over $$0\le y\le4$$, the right endpoint is $$\sqrt y$$ and the left endpoint is $$y/2$$, so
+
+$$
+V_y=\frac\pi8\int_0^4\left(\sqrt y-\frac y2\right)^2\,dy.
+$$
+
+Expand before integrating:
+
+$$
+V_y=\frac\pi8\int_0^4\left(y-y^{3/2}+\frac{y^2}{4}\right)\,dy
+=\frac\pi8\left(8-\frac{64}{5}+\frac{16}{3}\right)
+=\frac\pi{15}.
+$$
+
+These volumes differ because changing the direction of the prescribed cross sections creates a different solid. This differs from choosing two integration methods for the same solid of revolution, where correct setups must agree.
+
+</div>
+
 ### Disk and washer methods
 
 When a region is revolved around an axis, a slice perpendicular to the axis forms a disk or washer.
 
-If you are only revolving one function around an axis, you can use the disk method:
+If every perpendicular slice reaches the axis and leaves no central hole, use the disk method:
 
 $$
 V=\pi\int_a^b [R(x)]^2\,dx.
 $$
 
-If you are revolving two functions and taking the middle portion, you can use the washer method:
+If every perpendicular slice has an outer radius and a smaller positive inner radius, use the washer method:
 
 $$
 V=\pi\int_a^b \left([R(x)]^2-[r(x)]^2\right)\,dx.
 $$
 
-Here $$R$$ is the outer radius ("top" function) and $$r$$ is the inner radius ("bottom" function). Both radii are distances to the axis of rotation. The formulas in the integrand is just the standard area formula for a circle with the functions as the radius.
+Here $$R$$ is the larger distance to the axis and $$r$$ is the smaller distance. They need not correspond to the top and bottom functions in that order. Subtract the squared radii to remove the central hole. Squaring the difference of the radii would instead describe an entirely different disk.
 
 ```tikz
 \usepackage{tikz}
@@ -386,6 +583,69 @@ Evaluate:
 $$
 V=\pi\left[\frac{x^2}{2}\right]_0^4=8\pi.
 $$
+
+</div>
+
+### Rotation about a shifted axis
+
+When rotating about $$y=k$$, the radius to a point at height $$y$$ is $$\lvert y-k\rvert$$. For an axis above the whole region, the lower boundary is farther away and supplies the outer radius. For a vertical axis $$x=k$$, horizontal washers use the distances $$\lvert x-k\rvert$$.
+
+<div class="theorem-box">
+
+**Example.** Revolve the region between $$y=x$$ and $$y=x^2$$ for $$0\le x\le1$$ about $$y=2$$. Find the volume.
+
+The axis is above both curves. Since $$x^2\le x$$ on this interval, the lower curve $$x^2$$ lies farther from the axis:
+
+$$
+R(x)=2-x^2,
+\qquad
+r(x)=2-x.
+$$
+
+The washer setup is
+
+$$
+V=\pi\int_0^1\left[(2-x^2)^2-(2-x)^2\right]\,dx.
+$$
+
+After expanding,
+
+$$
+V=\pi\int_0^1(4x-5x^2+x^4)\,dx
+=\pi\left(2-\frac53+\frac15\right)
+=\frac{8\pi}{15}.
+$$
+
+Using the top function as the outer radius would reverse the subtraction and produce a negative volume. The distance to the axis decides the order.
+
+</div>
+
+### When the axis passes through the region
+
+If a slice crosses the axis, rotating it fills the center. There is no hole to subtract, even if both original endpoints have nonzero distance from the axis. The radius is the larger of their two distances.
+
+<div class="theorem-box">
+
+**Example.** The region $$0\le x\le1$$, $$0\le y\le x$$ is rotated about $$y=1/2$$. Set up and evaluate its volume.
+
+For $$0\le x\le1/2$$, the slice lies below the axis. It produces a washer with outer radius $$1/2$$ and inner radius $$1/2-x$$.
+
+For $$1/2\le x\le1$$, the slice crosses the axis. Its lower endpoint is always at distance $$1/2$$, while the upper endpoint has distance $$x-1/2\le1/2$$. Rotation fills a disk of radius $$1/2$$.
+
+Thus
+
+$$
+V=\pi\int_0^{1/2}\left[\frac14-\left(\frac12-x\right)^2\right]\,dx
++\pi\int_{1/2}^1\frac14\,dx.
+$$
+
+The first integral contributes $$\pi/12$$ and the second contributes $$\pi/8$$, giving
+
+$$
+V=\frac{5\pi}{24}.
+$$
+
+The switch occurs because the slice first touches and then crosses the axis. Treating every slice as a washer would remove material from a center that is actually filled.
 
 </div>
 
@@ -442,6 +702,10 @@ $$
 
 Shells are often cleaner when washers would require solving for inverse functions or splitting the region.
 
+Choose shells when the slice is parallel to the axis, and washers when it is perpendicular. The differential follows the slice thickness, not the axis label: vertical shells use $$dx$$, while horizontal shells use $$dy$$. Around a vertical axis $$x=k$$, a vertical shell's radius is $$\lvert x-k\rvert$$ and its height is the vertical length of the region.
+
+If the axis passes through the base region, shells from opposite sides can sweep out overlapping material. Do not add those shell volumes blindly. A perpendicular-slice setup often makes the filled cross sections easier to describe without double counting.
+
 ```tikz
 \usepackage{tikz}
 \begin{tikzpicture}[scale=0.9]
@@ -477,6 +741,21 @@ V=2\pi\left[\frac{x^4}{4}\right]_0^2
 $$
 
 </div>
+
+### Two descriptions of the same rotated solid
+
+The region between $$y=x$$ and $$y=x^2$$ on $$[0,1]$$ gives volume $$\pi/6$$ when revolved about the vertical axis using shells. Horizontal washers must give that same result because the region and axis are unchanged.
+
+For a fixed height $$0\le y\le1$$, the region extends from $$x=y$$ to $$x=\sqrt y$$. These are distances from the vertical axis, so the outer radius is $$\sqrt y$$ and the inner radius is $$y$$. Therefore,
+
+$$
+V=\pi\int_0^1\left[(\sqrt y)^2-y^2\right]\,dy
+=\pi\int_0^1(y-y^2)\,dy=\frac\pi6.
+$$
+
+This comparison explains why the shell and washer integrands have different forms. Shells accumulate cylindrical layers by radius; washers accumulate circular cross sections by height. A method changes how the solid is partitioned, not which solid is being measured.
+
+When the two answers disagree, check whether the slice direction changed without changing the variable, whether a boundary was inverted incorrectly, or whether the radius was measured from the wrong axis. Comparing methods is especially helpful for shifted-axis problems where a familiar-looking formula can conceal a missing constant.
 
 <div class="theorem-box">
 
@@ -579,7 +858,7 @@ $$
 
 ---
 
-## Surface area of revolution (BC-only)
+## Surface area of revolution (extension)
 
 Surface area is different from volume: instead of adding cross-sectional areas, it adds thin bands of surface.
 
@@ -667,9 +946,19 @@ $$
 
 </div>
 
+### Checking arc length against displacement
+
+Arc length measures travel along a curve and must be at least the straight-line distance between the endpoints. It is also at least the magnitude of the net horizontal change, because $$\sqrt{1+(f')^2}\ge1$$.
+
+The integral $$\int_a^b f'(x)\,dx$$ gives vertical change, not curve length. Integrating $$\lvert f'(x)\rvert$$ gives total vertical variation, which still omits the horizontal component of each piece of travel.
+
+For a line of slope $$m$$, the arc-length formula becomes $$(b-a)\sqrt{1+m^2}$$. This agrees with the Pythagorean theorem using horizontal change $$b-a$$ and vertical change $$m(b-a)$$, providing a direct check on the square-root factor.
+
+Surface area adds circumference times arc length, whereas volume adds cross-sectional area times thickness. These formulas use different pieces even when the same radius appears in both. Surface area also excludes end caps unless the problem explicitly asks to include them.
+
 ---
 
-## Applications to statistics: Probability density functions
+## Applications to statistics: Probability density functions (extension)
 
 A probability density function $$p(x)$$ must satisfy
 
@@ -727,11 +1016,88 @@ $$
 
 </div>
 
+### Density height is not a probability
+
+A probability density can have a height greater than one; what must remain between zero and one is the area over an event interval. For a continuous random variable, a single point has probability zero because an interval of zero width contributes zero area.
+
+Expected value is a weighted average, with $$p(x)\,dx$$ representing probability weight. It is different from the average value of the density graph. Integrating $$xp(x)$$ weights each possible output by how likely nearby values are.
+
+<div class="theorem-box">
+
+**Example.** Let $$p(x)=kx(2-x)$$ on $$[0,2]$$ and zero elsewhere. Find $$k$$, the probability that $$X\le1/2$$, and the expected value.
+
+Normalization gives
+
+$$
+1=k\int_0^2(2x-x^2)\,dx=\frac{4k}{3},
+\qquad k=\frac34.
+$$
+
+The requested probability is
+
+$$
+P(X\le1/2)
+=\frac34\left[x^2-\frac{x^3}{3}\right]_0^{1/2}
+=\frac5{32}.
+$$
+
+For the expected value,
+
+$$
+E[X]=\frac34\int_0^2(2x^2-x^3)\,dx=1.
+$$
+
+The density is symmetric about one, which independently confirms that mean. The probability calculation uses an interval area, while the mean calculation includes the extra factor $$x$$.
+
+</div>
+
+---
+
+### Interpreting an integral when only data are available
+
+A formula is not required to apply the accumulation principle. With a rate table, an integral can be estimated using the measured values and actual subinterval widths. A nonlinear quantity such as a volume radius must still be formed before the numerical rule is applied.
+
+<div class="theorem-box">
+
+**Example.** A pump's flow rate is measured in liters per minute:
+
+$$
+\begin{array}{c|cccc}
+t\text{ (minutes)}&0&1&3&6\\\hline
+R(t)&4&7&5&2
+\end{array}
+$$
+
+Use trapezoids to estimate the amount pumped over six minutes and its average flow rate.
+
+The widths are one, two, and three minutes, so
+
+$$
+\int_0^6R(t)\,dt
+\approx\frac12(4+7)(1)
++\frac12(7+5)(2)
++\frac12(5+2)(3)
+=28.
+$$
+
+The amount is approximately twenty-eight liters. The average flow rate is therefore
+
+$$
+R_{\mathrm{avg}}\approx\frac{28}{6}=\frac{14}{3}
+\text{ liters per minute}.
+$$
+
+A simple average of the four measured rates would give equal weight to measurements representing intervals of different lengths. It would not be the same calculation. Also, the table does not establish concavity between measurements, so it does not justify calling the trapezoidal estimate an overestimate or underestimate.
+
+</div>
+
 ---
 
 ## Tips for the exam
 
 Applications of integration are mostly about choosing the correct tiny piece.
+
+Before evaluating, check what one integrand term represents and multiply its units by the units of the differential. A volume setup needs area times length, a motion setup needs speed times time, and an average-value setup divides the accumulated quantity by interval width. Then check the geometry independently: slice lengths and radii are nonnegative, holes are subtracted only when they actually exist, and a region should be counted once. These checks are especially useful when the antiderivative is easy, since a quick calculation can otherwise hide an incorrect model.
 
 :::strategy
 1. Area between curves: slice vertically for top minus bottom or horizontally for right minus left.
@@ -746,3 +1112,18 @@ AP free-response questions often award setup points even when the integral is no
 :::
 
 When curves cross, split the interval at every intersection point. The expression "top minus bottom" or "right minus left" can change from one subinterval to the next.
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Average value | $$f_{\mathrm{avg}}=\dfrac1{b-a}\int_a^bf(x)\,dx,\quad a<b$$ |
+| Position from velocity | $$s(b)=s(a)+\int_a^bv(t)\,dt$$ |
+| Total distance | $$D=\int_a^b\lvert v(t)\rvert\,dt$$ |
+| Geometric area | $$A=\int_a^b\lvert f(x)-g(x)\rvert\,dx$$ |
+| Known cross sections | $$V=\int_a^bA(x)\,dx$$ |
+| Washers | $$V=\pi\int_a^b(R^2-r^2)\,dx,\quad R\ge r\ge0$$ |
+| Shells | $$V=2\pi\int(\text{radius})(\text{height})\,d(\text{slice variable})$$ |
+| Graph arc length | $$L=\int_a^b\sqrt{1+[f'(x)]^2}\,dx$$ |
+| Surface area extension | $$S=2\pi\int r\,ds$$ |
+| Density extension | $$P(a\le X\le b)=\int_a^bp(x)\,dx,\quad E[X]=\int xp(x)\,dx$$ |
+:::

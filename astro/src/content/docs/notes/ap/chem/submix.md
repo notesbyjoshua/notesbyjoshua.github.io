@@ -322,7 +322,7 @@ $$
 \frac{\text{rate}_1}{\text{rate}_2} = \sqrt{\frac{M_2}{M_1}},
 $$
 
-where $$M$$ is molar mass. Graham's Law basically states that lighter molecules move faster on average and effuse faster.
+where $$M$$ is molar mass. Graham's Law relates faster effusion to the higher average speeds of lighter molecules.
 
 <div class="theorem-box">
 
@@ -500,72 +500,38 @@ Taking a ratio of $$A=\varepsilon lc$$ gives $$c_u=0.020(0.60/0.40)(1.0/2.0)=0.0
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Ideal gas | $$PV=nRT$$; $$M_{molar}=dRT/P$$ | Absolute T; consistent units; ideal-gas approximation. |
+| Gas mixtures | $$P_i=x_iP_{total}=n_iRT/V$$ | $$x_i=n_i/n_{total}$$ for an ideal gas mixture. |
+| Wet gas | $$P_{dry}=P_{total}-P_{water}$$ | Use water's vapor pressure at the collection temperature. |
+| Translational kinetic energy | $$\overline{KE}=3k_BT/2$$ per particle | Equal temperature means equal average translational energy, not equal speed. |
+| Effusion | $$r_1/r_2=\sqrt{M_2/M_1}$$ | Compare matching temperatures and effusion conditions. |
+| Colligative shifts | $$\Delta T_f=iK_fm$$; $$\Delta T_b=iK_bm$$ | m is molality; i counts effective solute particles. |
+| Osmosis | $$\Pi=iMRT$$ | Dilute ideal solution; membrane passes solvent but not solute. |
+| Ideal liquid mixture | $$P_i=x_iP_i^*$$; $$P_{total}=\sum_iP_i$$; $$y_i=P_i/P_{total}$$ | x describes liquid; y describes vapor. |
+| Absorbance | $$A=-\log(I/I_0)=\varepsilon bc$$ | Fixed wavelength, linear response, corrected blank. |
+| Instrument offset | $$A_{measured}=\varepsilon bc+A_{offset}$$ | Subtract a specified additive offset before scaling concentration or path length. |
+| Dilution | $$c_1V_1=c_2V_2$$ | No solute loss or reaction. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. A $$10.0\ \mathrm{mL}$$ colored sample is diluted to $$50.0\ \mathrm{mL}$$. Its absorbance is then 0.240 in a 2.00 cm cuvette. What would the original sample's absorbance be in a 1.00 cm cuvette, assuming linear Beer-Lambert behavior?
+1. A calibration for a colored solute is $$A=20.0c+0.040$$ in a 1.00 cm cuvette, with c in M. A stock is diluted from $$5.00$$ to $$50.0\ \mathrm{mL}$$ and measured in a 2.00 cm cuvette, giving $$A=0.440$$. The instrument offset remains 0.040. What is the stock concentration?
 
-   (A) $$0.120$$<br>
-   (B) $$0.600$$<br>
-   (C) $$1.20$$<br>
-   (D) $$2.40$$
-
-:::solution
-Dilution lowers concentration fivefold while the longer path doubles absorbance. Thus $$A_d/A_o=2/5$$ and $$A_o=0.240(5/2)=0.600$$. Both concentration and path length must be included.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-2. Equal moles of He and Ne share a rigid container at the same temperature. Which comparison is correct?
-
-   (A) He has greater partial pressure and greater mean speed<br>
-   (B) Ne has greater partial pressure and smaller mean speed<br>
-   (C) Partial pressures and mean speeds are both equal<br>
-   (D) Partial pressures are equal, but He has greater mean speed
+   (A) $$0.100\ M$$<br>
+   (B) $$0.110\ M$$<br>
+   (C) $$0.200\ M$$<br>
+   (D) $$0.220\ M$$
 
 :::solution
-Each partial pressure is $$n_iRT/V$$, so equal mole amounts give equal pressures. Speeds depend on mass at a fixed temperature, with lighter helium moving faster on average.
-
-$$
-\boxed{\text{D}}.
-$$
-:::
-::::
-
-::::problem
-3. An ideal liquid mixture contains equal moles of A and B, whose pure vapor pressures are 80 and 20 torr. What fraction of the vapor is A?
-
-   (A) $$0.20$$<br>
-   (B) $$0.50$$<br>
-   (C) $$0.80$$<br>
-   (D) $$1.00$$
-
-:::solution
-Partial pressures are 40 and 10 torr. Dalton's law gives vapor fraction $$y_A=40/(40+10)=0.80$$. The vapor is enriched in the more volatile component even though the liquid is equimolar.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-4. A gas mixture is collected over water at total pressure 760 torr. Water vapor pressure is 24 torr. If the collected volume is used with 760 torr to calculate dry gas moles, what is the error?
-
-   (A) Dry gas moles are overestimated<br>
-   (B) Dry gas moles are underestimated<br>
-   (C) No error because water is liquid<br>
-   (D) No error because partial pressures cannot be subtracted
-
-:::solution
-The dry gas pressure is $$760-24=736\ \mathrm{torr}$$. Using 760 in $$n=PV/RT$$ attributes water-vapor pressure to the dry gas and overestimates its mole amount by a factor $$760/736$$.
+Subtract the offset first: solute absorbance is 0.400. Doubling path length doubles the concentration slope to 40.0, so diluted concentration is $$0.400/40.0=0.0100\ M$$. The tenfold dilution gives a 0.100 M stock. The additive instrument offset is not doubled with path length.
 
 $$
 \boxed{\text{A}}.
@@ -574,15 +540,49 @@ $$
 ::::
 
 ::::problem
-5. Two gases X and Y effuse under matching conditions. X effuses three times as fast as Y. Which molar-mass relation follows?
+2. A rigid vessel initially contains equal moles of He and Ne at $$300\ K$$. Half the He is removed, and the vessel is heated to $$360\ K$$. What are final total pressure divided by initial total pressure and final Ne mole fraction?
 
-   (A) $$M_X=3M_Y$$<br>
-   (B) $$M_X=M_Y/3$$<br>
-   (C) $$M_X=9M_Y$$<br>
-   (D) $$M_X=M_Y/9$$
+   (A) $$0.75$$ and $$1/2$$<br>
+   (B) $$1.20$$ and $$2/3$$<br>
+   (C) $$0.90$$ and $$2/3$$<br>
+   (D) $$0.90$$ and $$1/2$$
 
 :::solution
-$$r_X/r_Y=\sqrt{M_Y/M_X}=3$$ gives $$M_Y/M_X=9$$. Faster effusion identifies the lighter gas, and the square-root dependence requires squaring the rate ratio.
+Total moles fall from $$2n$$ to $$1.5n$$, while absolute temperature increases by a factor of 1.20. Thus $$P_f/P_i=(1.5/2)(360/300)=0.90$$. Neon supplies $$n/(1.5n)=2/3$$ of the remaining particles. Heating changes pressure but not mole fraction.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+::::problem
+3. An ideal liquid mixture has pure-component vapor pressures $$P_A^*=100$$ and $$P_B^*=40\ \mathrm{torr}$$. Its equilibrium vapor is 80.0% A by mole. What is the liquid mole fraction of A?
+
+   (A) $$0.800$$<br>
+   (B) $$0.615$$<br>
+   (C) $$0.500$$<br>
+   (D) $$0.200$$
+
+:::solution
+Combine Raoult's and Dalton's laws: $$0.800=100x/(100x+40(1-x))$$. This gives $$32+48x=100x$$ and $$x=32/52=0.615$$. The more volatile component is enriched in the vapor, so the liquid fraction is lower than the vapor fraction.
+
+$$
+\boxed{\text{B}}.
+$$
+:::
+::::
+
+::::problem
+4. A $$0.100\ m$$ solution of a 1:1 electrolyte has freezing-point depression $$0.335^\circ\mathrm{C}$$ in water, with $$K_f=1.86^\circ\mathrm{C}/m$$. If undissociated formula units and separate ions are the only solute species, what fraction is dissociated?
+
+   (A) $$0.10$$<br>
+   (B) $$0.20$$<br>
+   (C) $$0.50$$<br>
+   (D) $$0.80$$
+
+:::solution
+The effective particle factor is $$i=0.335/(1.86\times0.100)=1.80$$. Each dissociated formula unit changes one particle into two, so $$i=1+\alpha$$. Therefore $$\alpha=0.80$$. The van't Hoff factor is a particle-count multiplier, not itself the fraction dissociated.
 
 $$
 \boxed{\text{D}}.
@@ -591,101 +591,81 @@ $$
 ::::
 
 ::::problem
-6. An ideal gas is compressed isothermally from V to V/3. Which explanation correctly accounts for the pressure increase?
+5. An equal-mole ideal mixture of He and unknown gas X has density $$0.650\ \mathrm{g/L}$$ at $$1.00\ \mathrm{atm}$$ and $$300\ K$$. Use $$R=0.0821\ \mathrm{L\,atm/(mol\,K)}$$ and helium molar mass 4.00. Approximately what is $$r_X/r_{He}$$ for separate gases effusing at matching conditions?
 
-   (A) Average kinetic energy triples<br>
-   (B) Wall collisions become more frequent while average kinetic energy stays fixed<br>
-   (C) Molecular mass triples<br>
-   (D) Intermolecular attractions triple the pressure
+   (A) $$0.378$$<br>
+   (B) $$0.500$$<br>
+   (C) $$2.65$$<br>
+   (D) $$7.00$$
 
 :::solution
-$$P_f=3P_i$$ from the ideal gas law. Constant temperature fixes average kinetic energy. The smaller volume raises collision frequency with the walls; ideal-gas pressure does not require intermolecular attraction.
+The mixture's mean molar mass is $$dRT/P\approx16.0\ \mathrm{g/mol}$$. Equal mole fractions imply $$(4.00+M_X)/2=16.0$$, so $$M_X\approx28.0$$. Graham's law gives $$r_X/r_{He}=\sqrt{4.00/28.0}=0.378$$. A mixture density first yields a mean molar mass, not X's mass directly.
 
 $$
-\boxed{\text{B}}.
+\boxed{\text{A}}.
+$$
+:::
+::::
+
+::::problem
+6. A gas is collected over water at total pressure $$750\ \mathrm{torr}$$, volume $$0.500\ \mathrm{L}$$, and temperature $$300\ K$$. Water vapor pressure is $$30.0\ \mathrm{torr}$$. If the dry gas mass is $$0.600\ \mathrm{g}$$, what molar mass follows using $$R=62.4\ \mathrm{L\,torr/(mol\,K)}$$?
+
+   (A) $$29.9\ \mathrm{g/mol}$$<br>
+   (B) $$22.4\ \mathrm{g/mol}$$<br>
+   (C) $$31.2\ \mathrm{g/mol}$$<br>
+   (D) $$62.4\ \mathrm{g/mol}$$
+
+:::solution
+Dry-gas pressure is 720 torr. Its mole amount is $$n=720(0.500)/(62.4\times300)=0.01923\ \mathrm{mol}$$, giving $$M=0.600/0.01923=31.2\ \mathrm{g/mol}$$. Including water vapor as analyte gas would overestimate moles and underestimate molar mass.
+
+$$
+\boxed{\text{C}}.
 $$
 :::
 ::::
 
 ### FRQ
 
-::::frq{id=chem-submix-1}
-7. A student measures the absorbance of several solutions of $$\text{Cu}^{2+}$$ at the same wavelength and path length.
+::::frq{id=chem-submix-challenge-1}
+7. At a fixed wavelength, standards measured in a 1.00 cm cuvette follow $$A=25.0c+0.030$$, with c in M. A $$4.00\ \mathrm{mL}$$ unknown stock is diluted to $$100.0\ \mathrm{mL}$$. Its absorbance in a 2.00 cm cuvette is 0.430. The 0.030 instrument offset is independent of cuvette length.
 
-   $$(A)$$ Explain why absorbance can be used to determine concentration.
+   $$(A)$$ Calculate the diluted and stock concentrations, showing how path length and the offset enter separately.
 
-   $$(B)$$ A solution has absorbance $$0.420$$. A calibration line has equation $$A=15.0c$$, where $$c$$ is in $$\text{mol/L}$$. Calculate the concentration.
+   $$(B)$$ The stock contains a nonelectrolyte of molar mass $$150.\ \mathrm{g/mol}$$. Find the mass of solute in $$250.0\ \mathrm{mL}$$ of stock.
 
-   $$(C)$$ Explain why the wavelength should be chosen near the color most strongly absorbed by the solution.
+   $$(C)$$ Predict the measured absorbance if equal volumes of the diluted unknown and pure solvent are mixed, then measured in the same 2.00 cm cuvette.
 
-   $$(D)$$ **Original extension.** The measured solution was prepared by diluting $$10.0\ \text{mL}$$ of a stock to $$100.0\ \text{mL}$$. Calculate the stock concentration. Then explain the direction of error if fingerprints on the cuvette reduced transmitted light.
+   $$(D)$$ A fingerprint decreases transmitted light for the unknown but not the standards. Predict the stock-concentration error. Would a correct dilution calculation remove it?
 
 :::solution
-$$(A)$$ Beer-Lambert law gives
+$$(A)$$ Corrected absorbance is $$0.430-0.030=0.400$$. Doubling the path doubles the solute response coefficient from 25.0 to 50.0, so $$c_{dil}=0.400/50.0=0.00800\ M$$. The dilution factor is $$100.0/4.00=25.0$$, giving $$c_{stock}=0.200\ M$$. Multiplying the offset by two would incorrectly treat an instrument bias as absorption by the solute.
 
-$$
-A=\varepsilon lc.
-$$
+$$(B)$$ The stock amount is $$n=(0.200)(0.2500)=0.0500\ \mathrm{mol}$$. Multiplying by molar mass gives $$m=0.0500(150.)=7.50\ \mathrm{g}$$. This uses the original stock concentration, not the 25-times-smaller concentration in the measured flask.
 
-If $$\varepsilon$$ and $$l$$ are constant, absorbance is directly proportional to concentration. This means a calibration curve can be used because a solution with more absorbing particles in the same path length absorbs more light. The relationship is only reliable when all measurements use the same wavelength and cuvette path length.
+$$(C)$$ Equal-volume mixing halves solute concentration to 0.00400 M. The solute contribution becomes $$50.0(0.00400)=0.200$$, while the offset remains 0.030. The measured absorbance is therefore 0.230, not half of 0.430. Only the concentration-dependent part scales with dilution.
 
-$$(B)$$ Substitute into the calibration equation:
-
-$$
-0.420=15.0c.
-$$
-
-Thus
-
-$$
-c=\frac{0.420}{15.0}=0.0280\ \text{mol/L}.
-$$
-
-$$(C)$$ Choosing a strongly absorbed wavelength gives a larger absorbance change for a given concentration change, which makes the measurement more sensitive. If the wavelength is poorly absorbed, the absorbance values may be too small and close together, making it harder to distinguish concentrations accurately.
-
-$$(D)$$ Dilution conserves solute: $$M_1(10.0)=0.0280(100.0)$$, giving $$M_1=0.280\ M$$. Fingerprints decrease measured transmittance and increase apparent absorbance. Applying the calibration line then overestimates the diluted concentration, and multiplying by the dilution factor also overestimates the stock concentration. The dilution calculation cannot correct an optical measurement error.
+$$(D)$$ Lower transmitted intensity produces a larger measured absorbance because $$A=-\log(I/I_0)$$. The calibration then attributes the extra absorbance to solute, overestimating diluted concentration. Multiplying by the correct dilution factor carries the same relative error into the stock result. Correct volume arithmetic cannot remove an optical interference.
 :::
 ::::
 
-::::frq{id=chem-submix-2}
-8. The 2026 AP Chemistry exam included a spectrophotometry particle-diagram question about absorbance and ion concentration. (Adapted from College Board, [2026 AP Chemistry FRQ 6](https://apcentral.collegeboard.org/media/pdf/ap26-frq-chemistry.pdf).)
+::::frq{id=chem-submix-challenge-2}
+8. An ideal liquid solution contains 0.600 mol A and 0.400 mol B. At the stated temperature, pure-component vapor pressures are 120. and 30.0 torr. A small equilibrium vapor sample is removed without appreciably changing the liquid composition. Both substances are molecular and remain chemically unchanged.
 
-   $$(A)$$ Explain why a solution with greater concentration of colored ions has greater absorbance at a fixed wavelength.
+   $$(A)$$ Calculate total vapor pressure and the mole fraction of A in the vapor.
 
-   $$(B)$$ If a calibration curve has equation $$A=4.00c$$ and an unknown solution has $$A=0.120$$, calculate $$c$$.
+   $$(B)$$ If 0.0100 mol of this vapor is condensed and removed, find the remaining liquid mole fraction of A to four decimal places. Neglect any additional vapor remaining above the liquid.
 
-   $$(C)$$ In a particle diagram of equal volume, how should the number of colored ions compare between a $$0.020\ M$$ solution and a $$0.040\ M$$ solution?
+   $$(C)$$ Qualitatively predict the next vapor sample's A fraction at the same temperature. Explain why repeated removal is not described by a fixed initial vapor composition.
 
-   $$(D)$$ **Original extension.** Predict the absorbance of the $$0.0300\ M$$ solution if the cuvette path length is halved. Would halving the concentration in the original cuvette have the same optical effect? Explain using particle encounters along the light path.
+   $$(D)$$ A nonvolatile solute is instead added to the original liquid, with no reaction. Explain what happens to the total vapor pressure and whether the A:B vapor ratio must change in the ideal model.
 
 :::solution
-$$(A)$$ More colored ions means more particles are available to absorb photons at that wavelength. For fixed path length, Beer-Lambert law says absorbance is proportional to concentration.
+$$(A)$$ Raoult's law gives $$P_A=(0.600)(120.)=72.0\ \mathrm{torr}$$ and $$P_B=(0.400)(30.0)=12.0\ \mathrm{torr}$$. Total pressure is 84.0 torr and $$y_A=72.0/84.0=0.857$$. Liquid and vapor mole fractions differ because A is more volatile.
 
-$$(B)$$
+$$(B)$$ The removed amounts are $$0.0100(6/7)=0.008571\ \mathrm{mol}$$ A and $$0.001429\ \mathrm{mol}$$ B. Liquid A remaining is 0.591429 mol in 0.9900 mol total, so $$x_A=0.591429/0.9900=0.5974$$. Removing A-enriched vapor makes the residual liquid slightly poorer in A.
 
-$$
-0.120=4.00c
-$$
+$$(C)$$ The next vapor is slightly less rich in A because its partial pressure is proportional to the now-lower liquid A fraction. Substituting the revised composition gives $$y_A=120x_A/(120x_A+30(1-x_A))$$, approximately 0.856 rather than 0.857. Each removal changes the liquid composition, so the phase-equilibrium calculation must be updated.
 
-so
-
-$$
-c=0.0300\ M.
-$$
-
-$$(C)$$ The $$0.040\ M$$ solution has twice the concentration, so an equal-volume particle diagram should show twice as many colored ions. The volume of the box must stay the same; only the number of solute particles should change.
-
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathmorphing,angles,quotes}
-\begin{tikzpicture}[>=Stealth, font=\small]
-\draw[rounded corners] (-3,-1.4) rectangle (-0.5,1.4); \node at (-1.75,1.75) {$0.020\ M$};
-\draw[rounded corners] (0.5,-1.4) rectangle (3,1.4); \node at (1.75,1.75) {$0.040\ M$};
-\foreach \x/\y in {-2.4/0.6,-1.5/-0.2,-1.0/0.9,-2.1/-0.9}{\fill[blue] (\x,\y) circle (2pt);}
-\foreach \x/\y in {1.0/0.8,1.4/0.1,2.1/0.7,2.6/-0.4,1.1/-0.9,1.8/-0.7,2.4/1.0,2.6/0.2}{\fill[blue] (\x,\y) circle (2pt);}
-\end{tikzpicture}
-```
-
-$$(D)$$ From $$A=\varepsilon bc$$, halving $$b$$ changes absorbance from $$0.120$$ to $$0.0600$$. Halving $$c$$ at fixed $$b$$ also gives $$0.0600$$, assuming the same absorbing species and wavelength. A shorter path encounters a smaller depth of solution; a lower concentration supplies fewer absorbers per unit volume. Both halve the product $$bc$$, even though only dilution changes the solution composition.
+$$(D)$$ The added solute reduces both solvent mole fractions by the same factor, so both solvent partial pressures and their sum decrease. However, $$P_A/P_B=(n_A/n_B)(P_A^*/P_B^*)$$ is unchanged because the common total-mole denominator cancels. Thus the ideal vapor A:B ratio remains the same even though total vapor pressure falls. Nonideal interactions could change that result outside the stated model.
 :::
 ::::

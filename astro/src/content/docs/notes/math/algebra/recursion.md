@@ -18,7 +18,7 @@ Topic plan:
 
 ---
 
-The heart of recursion is to assume that you know previous elements of a sequence and then find a way to construct the next element in that sequence. Not only will explicit recursion problems appear of the AIME, USAMO, or USAJMO, often counting or combinatoric problems include them as well.
+Recursion uses earlier terms of a sequence to construct the next term. It appears in explicit recurrence problems on the AIME, USAMO, and USAJMO, as well as in counting and other combinatorics problems.
 
 These notes are adapted in part from Jeffrey Chen's *Recursion in the AIME* handout and the generating-functions section of the summations notes.
 

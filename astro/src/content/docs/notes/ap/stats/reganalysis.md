@@ -139,7 +139,7 @@ Technology output often includes the intercept, slope, residual standard deviati
 
 ### Influential observations and outliers
 
-An outlier in regression is often a point with an unusually large residual: the line misses it badly. An influential observation is one whose removal would substantially change the estimated slope or intercept—often a point that is extreme in $$x$$ (high leverage) and also off the trend. Not every outlier is influential, and not every influential point looks like a vertical outlier; inspect the plot and, when possible, recompute the line without suspect cases (sensibly and transparently).
+An outlier in regression is often a point with an unusually large residual: the line misses it badly. An influential observation is one whose removal would substantially change the estimated slope or intercept—often a point that is extreme in $$x$$ (high leverage) and also off the trend. Not every outlier is influential, and not every influential point looks like a vertical outlier. Inspect the plot and, when possible, compare the fit with and without a suspect point, explaining any decision to exclude it.
 
 ---
 

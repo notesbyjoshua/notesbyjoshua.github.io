@@ -47,7 +47,7 @@ Polk's election in 1844 gave expansionists a president committed to territorial 
 
 The war with Mexico raised constitutional questions about executive authority. Polk claimed that Mexico had attacked Americans on American soil, but the fighting occurred in disputed territory. **Abraham Lincoln's Spot Resolutions** challenged the administration to identify the exact location and justify its claim. Opposition to the war could therefore combine antislavery concerns with criticism of presidential power.
 
-Settlers' movement also depended on infrastructure, information, and public policy. Overland trails connected migrants to western destinations, but travel was dangerous and expensive. Traders, military posts, guides, and prior migrants helped make movement possible. The image of completely self-sufficient pioneers obscures these supporting networks.
+Settlers' movement also depended on infrastructure, information, and public policy. Although overland trails connected migrants to western destinations, travel was dangerous and expensive, and migrants relied on traders, military posts, guides, and prior migrants to help make the journey possible. The image of completely self-sufficient pioneers obscures these supporting networks.
 
 ### Who bore the costs of expansion?
 

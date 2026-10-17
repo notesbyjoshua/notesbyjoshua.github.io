@@ -5,11 +5,11 @@ sidebar:
   order: 1
 ---
 
-## The basics of chemistry
+## The Basics of Chemistry
 
 ### Significant figures
 
-**Significant figures** are the digits in a measurement that carry meaning—every digit we are entitled to report given how well we know the quantity. They matter whenever you round a calculated result so it does not pretend to be more precise than the data that produced it. On the AP exam they appear mainly in lab-style questions; in research they are non-negotiable.
+**Significant figures** are the digits justified by a measurement’s precision. Use them when rounding a calculated result so it does not imply greater precision than the original data support. Sig-figs (or sig-digs) follow a strict set of rules:
 
 - Nonzero digits are always significant.
 - **Leading zeros** (as in $$0.0045$$) are not significant; they only locate the decimal point. **Captive zeros** between nonzero digits are significant (e.g. $$1.05$$ has three significant figures).
@@ -25,9 +25,23 @@ Subtraction is limited by decimal place, not by matching significant-figure coun
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** A sample's mass is found by subtracting $$1.247\times10^2\ \mathrm{g}$$ from $$1.263\times10^2\ \mathrm{g}$$. Its volume is $$2.50\times10^{-1}\ \mathrm{mL}$$. Calculate its density in scientific notation with the correct significant figures.
+
+First align the powers of ten. The masses are $$124.7$$ and $$126.3\ \mathrm{g}$$, both measured to the tenths place, so the difference is $$1.6\ \mathrm{g}$$. This difference has only two significant figures, even though each original mass has four.
+
+$$
+\rho=\frac{1.6}{2.50\times10^{-1}}=6.4\times10^0\ \mathrm{g/mL}.
+$$
+
+The subtraction determines the precision of the numerator; the final division is therefore limited to two significant figures.
+
+</div>
+
 ### Matter and its classification
 
-**Matter** is anything that has mass and occupies volume. Chemists classify it first by composition.
+**Matter** is anything that has mass and occupies volume, and is the fundamental building block of chemistry. Chemists classify it first by composition.
 
 - **Elements** are made of one kind of atom
 - **Compounds** contain two or more elements combined in definite proportion.
@@ -55,14 +69,6 @@ Subtraction is limited by decimal place, not by matching significant-figure coun
 \end{tikzpicture}
 ```
 
-<div class="theorem-box">
-
-**Example.** Two clear liquids each appear uniform. One leaves crystals after evaporation; the other evaporates completely. Does this prove the second is a pure substance?
-
-No. The first contains a nonvolatile component, consistent with a solution. The second could be a pure liquid or a mixture of volatile liquids such as ethanol and water. A single visible phase establishes apparent homogeneity, not chemical purity. Additional evidence, such as composition measurements or a distillation profile, is needed.
-
-</div>
-
 ### Reading the periodic table
 
 The **periodic table** arranges elements by increasing **atomic number** $$Z$$. Horizontal rows are **periods**; vertical columns are **groups** (or families). Groups may be labeled $$1$$–$$18$$ or with Roman numerals and letters in older notation. Several families have traditional names that appear frequency:
@@ -85,19 +91,15 @@ $$
 
 where $$N$$ is the neutron count. Isotopes of the same element share $$Z$$ but differ in $$A$$ (and therefore in $$N$$).
 
-<div class="theorem-box">
-
-**Example.** A periodic table lists chlorine's atomic number as 17 and average atomic mass near 35.45. A student assigns every chlorine atom 18.45 neutrons. Explain both mistakes and identify the neutron count in chlorine-37.
-
-Individual nuclei contain whole numbers of neutrons. The tabulated mass averages the masses of naturally occurring isotopes; it is not one atom's mass number. Chlorine-37 has $$37-17=20$$ neutrons. Isotopes share their proton count and periodic-table position even though their neutron counts differ.
-
-</div>
+**Metals** occupy the left and center of the table, including the two detached rows. **Nonmetals** cluster in the upper right; hydrogen is a nonmetal even though it appears above group 1. **Metalloids**, commonly B, Si, Ge, As, Sb, and Te, lie along the staircase between these regions and have properties intermediate between typical metals and nonmetals. The boundary is a useful guide, not a sharp rule for every property or classification.
 
 ---
 
 ## Ions
 
-An **ion** is an atom or group of atoms with a net electric charge from gain or loss of electrons. A **cation** is positive (fewer electrons than protons); an **anion** is negative (more electrons than protons). A good way to remember this is that cats are always positive so CATions are positively charged! **Metals** tend to form cations and **nonmetals** tend to form anions. In addition, many **transition metals** exhibit variable charge in compounds because several oxidation states are comparably stable (mentioned later in more detail) due to the availability of their $$d$$ orbital (mentioned later as well).
+An **ion** is an atom or group of atoms with a net electric charge from gain or loss of electrons. A **cation** is positive (fewer electrons than protons); an **anion** is negative (more electrons than protons). A good way to remember this is that cats are always positive so CATions are positively charged!
+
+**Metals** tend to form cations and **nonmetals** tend to form anions. In addition, many **transition metals** exhibit variable charge in compounds because several oxidation states are comparably stable (mentioned later in more detail) due to the availability of their $$d$$ orbital (mentioned later).
 
 ### Polyatomic ions
 
@@ -118,19 +120,11 @@ An **ion** is an atom or group of atoms with a net electric charge from gain or 
 | Chromate / dichromate | $$\mathrm{CrO_4^{2-}}$$ / $$\mathrm{Cr_2O_7^{2-}}$$ | $$-2$$ |
 | Permanganate | $$\mathrm{MnO_4^-}$$ | $$-1$$ |
 
-<div class="theorem-box">
-
-**Example.** How many moles of each ion form when $$0.200\ \mathrm{mol}$$ of $$\mathrm{Al_2(SO_4)_3}$$ dissolves completely? Explain why the solution is neutral even though it contains different numbers of cations and anions.
-
-Each formula unit supplies two aluminum ions and three sulfate ions, giving $$0.400\ \mathrm{mol}$$ $$\mathrm{Al^{3+}}$$ and $$0.600\ \mathrm{mol}$$ $$\mathrm{SO_4^{2-}}$$. Their charge amounts are proportional to $$0.400(3)=1.20$$ and $$0.600(-2)=-1.20$$, which cancel. Electrical neutrality requires equal total positive and negative charge, not equal ion counts. Sulfate remains a polyatomic ion rather than separating into sulfur and oxygen atoms.
-
-</div>
-
 ---
 
 ## Avogadro’s number, the mole, and molar mass
 
-- The **mole** is the chemist’s unit of counting: one mole contains **Avogadro’s number** (sometimes denoted as $$N_A$$) of specified entities (atoms, molecules, ions, formula units, etc.):
+The **mole** is the chemist’s unit of counting: one mole contains **Avogadro’s number** (sometimes denoted as $$N_A$$) of specified entities (atoms, molecules, ions, formula units, etc.):
 
 $$
 1 \text{ mol} = 6.022 \times 10^{23} \text{ entities}
@@ -186,13 +180,13 @@ When a problem gives **mass percentages** (or masses of elements in a sample), t
 
 :::
 
-That yields the empirical formula. **Combustion analysis** problems follow the same logic: measured masses of $$\text{CO}_2$$ and $$\text{H}_2\text{O}$$ produced fix the carbon and hydrogen in the original sample; any oxygen is often obtained by difference from the original sample mass if the compound contains only C, H, and O.
-
 <div class="theorem-box">
 
-**Example.** A compound is $$43.6\%$$ phosphorus and $$56.4\%$$ oxygen by mass. A student rounds its mole ratio $$1:2.50$$ to $$1:3$$. Find the correct empirical formula using atomic masses $$31.0$$ and $$16.0$$.
+**Example.** A molecular compound is $$54.5\%$$ carbon, $$9.1\%$$ hydrogen, and $$36.4\%$$ oxygen by mass. Its molar mass is $$88.0\ \mathrm{g/mol}$$. Using atomic masses $$12.0$$, $$1.00$$, and $$16.0$$, determine its molecular formula.
 
-A $$100\ \mathrm{g}$$ sample contains $$43.6/31.0=1.41\ \mathrm{mol}$$ P and $$56.4/16.0=3.53\ \mathrm{mol}$$ O, giving approximately $$1:2.50$$. Multiplying both entries by two gives $$2:5$$ and $$\mathrm{P_2O_5}$$. A ratio near a simple fraction should be scaled, not rounded to an unrelated integer. This establishes only the empirical formula; molar mass is needed to determine the molecular formula.
+For a $$100\ \mathrm{g}$$ sample, the mole amounts are $$54.5/12.0=4.54$$ for carbon, $$9.1/1.00=9.1$$ for hydrogen, and $$36.4/16.0=2.275$$ for oxygen. Dividing each by the smallest gives approximately $$2:4:1$$, so the empirical formula is $$\mathrm{C_2H_4O}$$.
+
+Its empirical-formula mass is $$2(12.0)+4(1.00)+16.0=44.0\ \mathrm{g/mol}$$. The multiplier is $$88.0/44.0=2$$, giving molecular formula $$\mathrm{C_4H_8O_2}$$. Multiply every subscript, not just the carbon subscript.
 
 </div>
 
@@ -214,9 +208,35 @@ A $$100\ \mathrm{g}$$ sample contains $$43.6/31.0=1.41\ \mathrm{mol}$$ P and $$5
 
 <div class="theorem-box">
 
-**Example.** An element has two isotopes of masses $$10.0$$ and $$11.0\ \mathrm{u}$$ and average mass $$10.8\ \mathrm{u}$$. A student assigns the taller peak to the lighter isotope. Determine whether that assignment fits the data.
+**Example.** An element has two isotopes of masses $$10.0$$ and $$11.0\ \mathrm{amu}$$ and average mass $$10.8\ \mathrm{amu}$$. A student assigns the taller peak to the lighter isotope. Determine whether that assignment fits the data.
 
 Let $$f$$ be the lighter isotope's fraction. Then $$10.0f+11.0(1-f)=10.8$$ gives $$f=0.20$$. The heavier isotope is $$80\%$$ abundant and should have the taller peak if detector response and charge are comparable. An unweighted midpoint of $$10.5$$ would assume equal abundances without evidence.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A hypothetical element has only two isotopes, with masses $$62.0$$ and $$64.0\ \mathrm{amu}$$. Its singly charged ions give the relative intensities below. Assuming equal detector response per ion, calculate each isotope's percent abundance and the average atomic mass.
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{tikzpicture}
+\begin{axis}[axis lines=left, width=9cm, height=5cm, xmin=61, xmax=65, ymin=0, ymax=110, xtick={62,64}, ytick={0,25,50,75,100}, xlabel={mass-to-charge ratio}, ylabel={relative intensity}]
+\addplot[ycomb, very thick, blue] coordinates {(62,100) (64,25)};
+\node[anchor=south] at (axis cs:62,100) {100};
+\node[anchor=south] at (axis cs:64,25) {25};
+\end{axis}
+\end{tikzpicture}
+```
+
+The intensities sum to $$125$$, not $$100$$. Thus the lighter isotope's fraction is $$100/125=0.800$$ and the heavier isotope's fraction is $$25/125=0.200$$: their abundances are $$80.0\%$$ and $$20.0\%$$.
+
+$$
+\overline m=(0.800)(62.0)+(0.200)(64.0)=62.4\ \mathrm{amu}.
+$$
+
+A base peak labeled 100 is a relative intensity, not necessarily a 100% abundance.
 
 </div>
 
@@ -266,9 +286,9 @@ since volume changes with temperature, molarity is *temperature-dependent*. It d
 
 <div class="theorem-box">
 
-**Example.** A student dissolves $$0.100\ \mathrm{mol}$$ of solute in $$1.00\ \mathrm{L}$$ of water and labels it $$0.100\ M$$. Explain what must be measured before that label is justified.
+**Example.** Dissolve $$5.85\ \mathrm{g}$$ NaCl, with molar mass $$58.5\ \mathrm{g/mol}$$, to make $$250.0\ \mathrm{mL}$$ of solution. Transfer $$20.0\ \mathrm{mL}$$ of this solution to a second flask and dilute to $$100.0\ \mathrm{mL}$$. Find both concentrations.
 
-Molarity uses solution volume, not solvent volume. Dissolving the solute may change the volume, so the final solution volume must be measured. To prepare the intended concentration, dissolve in less than $$1.00\ \mathrm{L}$$ of water and dilute to a final volume of $$1.00\ \mathrm{L}$$.
+The stock contains $$5.85/58.5=0.100\ \mathrm{mol}$$, so its concentration is $$0.100/0.2500=0.400\ M$$. The transferred portion contains $$0.400(0.0200)=0.00800\ \mathrm{mol}$$. Dilution changes the volume but not this solute amount, giving $$0.00800/0.1000=0.0800\ M$$. Use the final solution volumes in both calculations, not the amount of water added.
 
 </div>
 
@@ -286,7 +306,15 @@ Useful conventions include:
 - Hydrogen is usually $$+1$$ except in metal hydrides (e.g. $$\text{NaH}$$), where it is $$-1$$.
 - Fluorine is $$-1$$ in all compounds. Other halogens are $$-1$$ unless bonded to a more electronegative element (such as oxygen).
 
-The rule of thumb is that you always assign the most electronegative atom first in terms of oxidation states.
+The rule of thumb is that you always assign the most electronegative atom first in terms of oxidation states. Note that hydrogen must have $$+1$$ or $$-1$$ since you can only fill/empty its first subshell.
+
+<div class="theorem-box">
+
+**Example.** Find chromium's oxidation number in $$\mathrm{K_2Cr_2O_7}$$, and explain why the sum for the dichromate ion differs from the sum for the whole compound.
+
+Potassium is $$+1$$ and oxygen is $$-2$$. For the neutral compound, $$2(+1)+2x+7(-2)=0$$, so $$2x=12$$ and each chromium is $$+6$$. For $$\mathrm{Cr_2O_7^{2-}}$$ alone, $$2x+7(-2)=-2$$ gives the same result. Oxidation numbers sum to the charge of the species being analyzed, not always to zero.
+
+</div>
 
 <div class="theorem-box">
 
@@ -302,7 +330,7 @@ In the peroxide, $$2(+1)+2x=0$$ gives $$x=-1$$. In $$\mathrm{OF_2}$$, fluorine t
 
 ### Electron configuration and quantum numbers
 
-Each electron in an atom is described by four **quantum numbers** that arise from the *wave-mechanical* model.
+Each electron in an atom is described by four **quantum numbers** that arise from the wave-mechanical model (basically everything is a wave and a particle at the same time).
 
 The **principal quantum number** $$n$$ is a positive integer ($$n = 1, 2, 3, \ldots$$). It sets the shell and is the main contributor to orbital energy for hydrogen-like atoms.
 
@@ -317,19 +345,15 @@ The **magnetic quantum number** $$m_l$$ takes integer values from $$-l$$ to $$+l
 
 The **spin quantum number** $$m_s$$ is $$+\frac{1}{2}$$ or $$-\frac{1}{2}$$ for the two **spin** states of a single electron.
 
-The **Pauli exclusion principle** states that no two electrons in the same atom may share the same set of four quantum numbers, so at most two electrons occupy any one atomic orbital, and they must have *opposite spin*.
+When assigning these numbers to electrons, you follow a set list of rules:
 
-The **Aufbau principle** directs you to fill orbitals in order of increasing energy. The familiar $$n s$$, $$(n-1) d$$, $$(n-2) f$$ crossing is why the periodic table has its shape. Exceptions (e.g. chromium $$\text{Cr}$$, copper $$\text{Cu}$$, and several heavier transition metals) reflect especially stable $$d^5$$ or $$d^{10}$$ arrangements; those same stability patterns contribute to variable metal oxidation states in compounds.
+- The **Pauli exclusion principle** states that no two electrons in the same atom may share the same set of four quantum numbers, so at most two electrons occupy any one atomic orbital, and they must have *opposite spin*.
 
-**Hund’s rule** favors placing electrons singly in degenerate orbitals of a subshell before pairing, with *parallel spins* where possible, to reduce *electron–electron repulsion*.
+- The **Aufbau principle** directs you to fill orbitals in order of increasing energy. The familiar $$n s$$, $$(n-1) d$$, $$(n-2) f$$ crossing is why the periodic table has its shape. Exceptions (e.g. chromium $$\text{Cr}$$, copper $$\text{Cu}$$, and several heavier transition metals) reflect especially stable $$d^5$$ or $$d^{10}$$ arrangements; those same stability patterns contribute to variable metal oxidation states in compounds.
 
-**Heisenberg’s uncertainty principle** limits how sharply *position* and *momentum* can be known simultaneously for a quantum particle: a conceptual foundation for why we speak in terms of orbitals (probability distributions) rather than classical orbits. It states that:
+- **Hund’s rule** favors placing electrons singly in degenerate orbitals of a subshell before pairing, with *parallel spins* where possible, to reduce *electron–electron repulsion*.
 
-$$
-\Delta x \Delta p \ge \frac{h}{4\pi}
-$$
-
-This means that the uncertainty in position and momentum are always above some constant, implying that both cannot be known at a time. This is why we have electron clouds instead of set orbits.
+- **Heisenberg’s uncertainty principle** limits how precisely position and momentum can be known simultaneously for a quantum particle: a conceptual foundation for why we speak in terms of orbitals (probability distributions) rather than classical orbits. It states that: $$\Delta x \Delta p \ge \frac{h}{4\pi} = \frac{\bar h}{2}$$. This means that the uncertainty in position and momentum are always above some constant, implying that both cannot be known at a time. This is why we have electron clouds instead of set orbits. $$h$$ is Planck's constant and $$\bar h$$ is the reduced Planck's constant
 
 **Abbreviated configurations** use the previous noble gas core in brackets, e.g.
 
@@ -427,7 +451,7 @@ $$
 
 a narrow window between **ultraviolet** and **infrared**. Moving toward shorter wavelength corresponds to higher photon energy (**gamma rays** and **X-rays** at the extreme) and longer wavelength to lower energy (**microwave**, **radio**).
 
-// put em.jpg here (the thing in assets)
+<img class="note-img" src="/assets/APs/AP%20Chem/atomicstrucprop/em.jpg" alt="Electromagnetic spectrum from radio waves to gamma rays, with decreasing wavelength and increasing photon energy" loading="lazy" decoding="async" />
 
 <div class="theorem-box">
 
@@ -462,15 +486,12 @@ because s orbitals *penetrate* closer to the nucleus and experience less **shiel
 
 **Shielding** (screening) means inner and same-shell electrons reduce the **full nuclear charge** $$Z$$ felt by an electron of interest. More effective shielding lowers **effective nuclear charge** and stabilizes outer electrons less. Penetration explains why an $$ns$$ electron can be more tightly bound than an $$(n-1)d$$ electron despite the larger $$n$$ in the label, leading to the *aufbau* order you use when writing configurations.
 
-### Effective nuclear charge
-
-**Effective nuclear charge** $$Z_{\text{eff}}$$ is the net positive charge experienced by an electron in a many-electron atom after shielding. A simple textbook form is
-
+Taking into account shielding, the nuclear charge should be modified. **Effective nuclear charge** $$Z_{\text{eff}}$$ is the net positive charge experienced by an electron in a many-electron atom after shielding:
 $$
 Z_{\text{eff}} = Z - S,
 $$
 
-where $$S$$ is a **shielding constant** summarizing electron–electron repulsion. **Slater’s rules** and more advanced models give numerical estimates; qualitatively, $$S$$ grows as you add *inner shells*, so going *down a group* increases shielding even though $$Z$$ increases. On the AP exam, this equation will not be tested in full but it is good to know that shielding decreases effective nuclear charge.
+where $$S$$ is a **shielding constant** summarizing electron–electron repulsion.
 
 Penetration order among subshell types at comparable $$n$$ is often summarized as
 
@@ -498,7 +519,9 @@ Magnesium has one more proton, while both atoms have the same neon-like core. Th
 
 Broad patterns: **atomic radius** increases *down a group* (new shells, more shielding) and decreases *across a period* (rising $$Z_{\text{eff}}$$). **Ionization energy** and **electron affinity** (for representative elements) generally show opposite *horizontal* trends to radius. **Metallic character** decreases across a period and increases down a group. Exceptions, such as the **ionization energy** dip at boron or the **electron affinity** anomaly for nitrogen, appear when subshell structure or pairing changes the cost of removing or adding an electron.
 
-// put periodictriends.png here (the thing in assets)
+<img class="note-img" src="/assets/APs/AP%20Chem/atomicstrucprop/periodictrends.png" alt="Periodic table showing general directions of increasing atomic radius, ionization energy, and metallic character" loading="lazy" decoding="async" />
+
+The arrows summarize broad trends, not exception-free rules. In the image, increasing electron affinity means a generally greater tendency to accept an electron; if electron-gain energy is reported with an exothermic negative sign, more favorable attachment corresponds to a more negative value.
 
 <div class="theorem-box">
 
@@ -538,72 +561,40 @@ The force magnitude becomes one-fourth as large, while $$U=kQ_1Q_2/r$$ becomes h
 
 ---
 
+:::equations
+
+| Idea | Equation | Conditions |
+| --- | --- | --- |
+| Particle counts | $$A=Z+N$$; ion charge in elementary-charge units $$=N_p-N_e$$ | Isotopes share Z, not necessarily A. |
+| Moles and particles | $$n=m/M_{molar}$$; $$N=nN_A$$ | Specify the counted entities. |
+| Average isotope mass | $$\overline m=\sum_i f_im_i$$; $$\sum_i f_i=1$$ | Normalize isotope intensities before weighting. |
+| Molecular-formula multiplier | $$k=M_{compound}/M_{empirical}$$ | k must be consistent with a positive integer within measurement precision. |
+| Molarity and dilution | $$M=n/V$$; $$M_1V_1=M_2V_2$$ | V is final solution volume in liters; dilution conserves solute when no reaction occurs. |
+| Yield and error | $$\%yield=(actual/theoretical)100\%$$; $$\%error=\lvert measured-accepted\rvert\,100\%/\lvert accepted\rvert$$ | Yield is not the same as percent error; accepted value must be nonzero. |
+| Energy efficiency | $$\eta=E_{useful}/E_{input}$$ | Multiply by 100% to report a percentage. |
+| Light | $$c=\lambda\nu$$; $$E_{photon}=h\nu=hc/\lambda$$; $$N_{photons}=E_{pulse}/E_{photon}$$ | Use consistent wavelength units. |
+| Photoemission | $$K_{max}=h\nu-\Phi$$; $$\lambda_0=hc/\Phi$$ | Emission requires photon energy at least the work function in the single-photon model. |
+| Orbital nodes | $$N_{radial}=n-l-1$$; $$N_{angular}=l$$; $$N_{total}=n-1$$ | Hydrogen-like orbital model. |
+| Effective nuclear charge | $$Z_{eff}\approx Z-S$$ | S is shielding; this is an approximate model. |
+| Coulomb interaction | $$F=k\lvert Q_1Q_2\rvert/r^2$$; $$U=kQ_1Q_2/r$$ | F is force magnitude; U is signed and zero at infinite separation. |
+| Uncertainty | $$\Delta x\Delta p\ge h/(4\pi)$$ | Position and momentum uncertainties refer to the same direction. |
+
+:::
 
 ## Practice
 
 ### MCQ
 
 ::::problem
-1. A neutral atom has successive ionization energies $$580, 1800, 2700, 11600\ \mathrm{kJ/mol}$$. Which inference best fits a main-group atom?
+1. A period-3 element X has successive ionization energies of approximately $$740,1450,7730,10500\ \mathrm{kJ/mol}$$. For its usual monatomic ion, which electron count and radius comparison with $$\mathrm{Na^+}$$ are consistent with these data?
 
-   (A) One valence electron<br>
-   (B) Two valence electrons<br>
-   (C) Three valence electrons<br>
-   (D) Four valence electrons
-
-:::solution
-The large jump occurs after three electrons have been removed. Removing the fourth disrupts a core shell. The jump's location, rather than the largest listed energy alone, identifies three valence electrons.
-
-$$
-\boxed{\text{C}}.
-$$
-:::
-::::
-
-::::problem
-2. Two ions each contain 10 electrons. Ion X has 12 protons and ion Y has 9. Which comparison is justified?
-
-   (A) X is larger because it is more positive<br>
-   (B) X is smaller because its nuclear attraction is stronger<br>
-   (C) Y is smaller because it has fewer protons<br>
-   (D) Their radii are equal because their electron counts match
+   (A) 10 electrons; smaller than sodium ion<br>
+   (B) 10 electrons; larger than sodium ion<br>
+   (C) 12 electrons; smaller than sodium ion<br>
+   (D) 8 electrons; larger than sodium ion
 
 :::solution
-X is magnesium(II) and Y is fluoride. With the same occupied shells and electron count, X's larger nuclear charge contracts its electron cloud more strongly. Equal electron configurations do not guarantee equal radii.
-
-$$
-\boxed{\text{B}}.
-$$
-:::
-::::
-
-::::problem
-3. Equal-energy pulses at $$300\ \mathrm{nm}$$ and $$600\ \mathrm{nm}$$ strike a detector. What is the ratio of photon counts $$N_{600}/N_{300}$$?
-
-   (A) $$1/4$$<br>
-   (B) $$1/2$$<br>
-   (C) $$1$$<br>
-   (D) $$2$$
-
-:::solution
-Photon energy is inversely proportional to wavelength. The 600 nm photons each have half the energy, so twice as many are required to carry the same total pulse energy: $$N=E_{pulse}\lambda/(hc)$$.
-
-$$
-\boxed{\text{D}}.
-$$
-:::
-::::
-
-::::problem
-4. An element contains isotopes of masses $$24.0$$ and $$26.0\ \mathrm{u}$$. Its measured average is $$24.4\ \mathrm{u}$$. Which is the heavier isotope's abundance?
-
-   (A) $$20\%$$<br>
-   (B) $$40\%$$<br>
-   (C) $$60\%$$<br>
-   (D) $$80\%$$
-
-:::solution
-Let f be the heavier fraction. Then $$24.0(1-f)+26.0f=24.4$$, so $$2.0f=0.4$$ and $$f=0.20$$. Assigning 80% to the heavier isotope would give 25.6 u instead.
+The large jump after the second removal identifies two valence electrons, so X is magnesium and its usual ion is magnesium(II). It has 10 electrons, just like sodium ion, but 12 protons rather than 11. With the same occupied shells, the stronger nuclear attraction makes the magnesium ion smaller.
 
 $$
 \boxed{\text{A}}.
@@ -612,15 +603,15 @@ $$
 ::::
 
 ::::problem
-5. A compound is $$40.0\%$$ C, $$6.7\%$$ H, and $$53.3\%$$ O by mass, with molar mass about $$180\ \mathrm{g/mol}$$. Which molecular formula fits? Use atomic masses 12, 1, and 16.
+2. A hypothetical element has isotopes of masses $$50.0$$ and $$52.0\ \mathrm{amu}$$ and an average atomic mass of $$50.6\ \mathrm{amu}$$. If atoms pair randomly to form diatomic molecules, what fraction contains one atom of each isotope?
 
-   (A) $$\mathrm{CH_2O}$$<br>
-   (B) $$\mathrm{C_3H_6O_3}$$<br>
-   (C) $$\mathrm{C_6H_{12}O_6}$$<br>
-   (D) $$\mathrm{C_6H_6O_6}$$
+   (A) $$0.21$$<br>
+   (B) $$0.30$$<br>
+   (C) $$0.42$$<br>
+   (D) $$0.49$$
 
 :::solution
-A 100 g sample gives about 3.33 mol C, 6.7 mol H, and 3.33 mol O: ratio 1:2:1. The empirical mass is 30 g/mol, so the molecular formula is six times CH2O. Mass percent determines the ratio; molar mass determines the multiplier.
+The heavy-isotope fraction satisfies $$50(1-f)+52f=50.6$$, giving $$f=0.30$$. Mixed molecules arise in two ways, light-heavy and heavy-light, so their fraction is $$2(0.70)(0.30)=0.42$$. Using just one product misses half the mixed pairs.
 
 $$
 \boxed{\text{C}}.
@@ -629,15 +620,15 @@ $$
 ::::
 
 ::::problem
-6. PES peaks for a neutral atom correspond to electron counts $$2,2,6,2,3$$ from most tightly bound to least tightly bound subshells. Which removal produces its first cation?
+3. A surface has threshold wavelength $$600\ \mathrm{nm}$$. Equal-energy pulses of $$300\ \mathrm{nm}$$ and $$400\ \mathrm{nm}$$ light strike it. In the single-photon model, what are $$N_{400}/N_{300}$$ and $$K_{max,300}/K_{max,400}$$?
 
-   (A) Removal from 1s because it is closest to the nucleus<br>
-   (B) Removal from 3p because it has the lowest binding energy<br>
-   (C) Removal from 2p because it contains the most electrons<br>
-   (D) Removal from 3s because s orbitals always ionize first
+   (A) $$3/4$$ and $$4/3$$<br>
+   (B) $$4/3$$ and $$2$$<br>
+   (C) $$4/3$$ and $$4/3$$<br>
+   (D) $$3/4$$ and $$2$$
 
 :::solution
-The counts give $$1s^22s^22p^63s^23p^3$$. The first electron removed is from the least tightly bound occupied subshell, 3p. Peak area tells electron count, whereas binding energy tells removal cost.
+Equal pulse energy gives photon count proportional to wavelength, hence $$N_{400}/N_{300}=4/3$$. The threshold work function is $$hc/(600\ \mathrm{nm})$$. Subtracting this from each photon energy gives a kinetic-energy ratio $$(1/300-1/600)/(1/400-1/600)=2$$. Photon-energy ratios alone do not give the electron kinetic-energy ratio.
 
 $$
 \boxed{\text{B}}.
@@ -645,66 +636,99 @@ $$
 :::
 ::::
 
-### FRQ
+::::problem
+4. A compound contains $$40.0\%$$ C, $$6.7\%$$ H, and the remainder O. Its molar mass is $$90.0\ \mathrm{g/mol}$$. Use atomic masses 12.0, 1.00, and 16.0. Which molecular formula is consistent with both measurements?
 
-::::frq{id=chem-atomicstrucprop-1}
-7. A sample of chlorine contains $$75.78\%$$ $$^{35}\text{Cl}$$ atoms and $$24.22\%$$ $$^{37}\text{Cl}$$ atoms.
-
-   $$(A)$$ Calculate the average atomic mass of chlorine.
-
-   $$(B)$$ Explain why the average atomic mass is closer to $$35$$ than to $$37$$.
-
-   $$(C)$$ A PES spectrum for chlorine shows peaks from core electrons and valence electrons. Explain why core-electron peaks appear at higher binding energy than valence-electron peaks.
-
-   $$(D)$$ **Original extension.** A different chlorine sample has an average mass of approximately $$35.60\ \text{amu}$$. Using isotope masses of $$35$$ and $$37\ \text{amu}$$, determine its percent chlorine-37 and explain whether its electron configuration differs from that of the first sample.
+   (A) $$\mathrm{CH_2O}$$<br>
+   (B) $$\mathrm{C_3H_3O_3}$$<br>
+   (C) $$\mathrm{C_2H_4O_2}$$<br>
+   (D) $$\mathrm{C_3H_6O_3}$$
 
 :::solution
-$$(A)$$ Use a weighted average:
+Oxygen is 53.3% by mass. A 100 g sample gives approximately 3.33 mol C, 6.7 mol H, and 3.33 mol O, a 1:2:1 ratio. The empirical mass is 30.0 g/mol, so the molecular formula is three times the empirical formula. Neither the mass percentages nor the molar mass can be ignored.
 
 $$
-(0.7578)(35)+(0.2422)(37)=35.4844.
+\boxed{\text{D}}.
 $$
-
-The percentages must be written as decimals because each isotope contributes only its fractional abundance to the average.
-
-The average atomic mass is
-
-$$
-\boxed{35.48\ \text{amu}}.
-$$
-
-$$(B)$$ The average is closer to $$35$$ because the $$^{35}\text{Cl}$$ isotope is much more abundant than $$^{37}\text{Cl}$$. In a weighted average, the more abundant isotope pulls the average closer to its mass. Since about three-fourths of the atoms are $$^{35}\text{Cl}$$, the average should sit much nearer $$35$$ than $$37$$, which matches the calculated value.
-
-$$(C)$$ Core electrons are closer to the nucleus and experience a larger effective nuclear attraction than valence electrons. They are also less shielded by other electrons. Because the attraction between the nucleus and a core electron is stronger, more energy is required to remove a core electron from the atom. Therefore, core-electron peaks appear at higher binding energy on a PES spectrum than valence-electron peaks.
-
-$$(D)$$ Let $$f$$ be the fraction of chlorine-37. Then $$35(1-f)+37f=35.60$$, so $$f=0.300$$, or $$30.0\%$$. The samples have different neutron distributions, not different atomic numbers. Neutral atoms of both isotopes therefore have the same ground-state electron configuration; a change in average mass does not imply a change in valence electrons.
 :::
 ::::
 
-::::frq{id=chem-atomicstrucprop-2}
-8. Sterling silver contains silver and copper. In a released AP Chemistry question, students compared atomic radii using Coulomb's law. (Adapted from College Board, [2024 AP Chemistry FRQ 3](https://apcentral.collegeboard.org/media/pdf/ap24-frq-chemistry.pdf).)
+::::problem
+5. Dissolve $$2.50\ \mathrm{g}$$ of $$\mathrm{CuSO_4\cdot5H_2O}$$, molar mass $$250.\ \mathrm{g/mol}$$, to make $$100.0\ \mathrm{mL}$$ solution. Dilute a $$15.0\ \mathrm{mL}$$ portion to $$60.0\ \mathrm{mL}$$. What is the final copper(II) concentration?
 
-   $$(A)$$ Identify which atom has the larger atomic radius: $$\text{Ag}$$ or $$\text{Cu}$$.
-
-   $$(B)$$ Use shell structure and Coulomb's law to justify your answer.
-
-   $$(C)$$ Explain why comparing only nuclear charge is not enough to predict the radius in this case.
-
-   $$(D)$$ **Original extension.** Compare the radii of $$\text{Cu}^+$$ and $$\text{Cu}^{2+}$$. State their ground-state electron configurations and explain why nuclear charge alone cannot explain their difference.
+   (A) $$0.0100\ M$$<br>
+   (B) $$0.0250\ M$$<br>
+   (C) $$0.0625\ M$$<br>
+   (D) $$0.100\ M$$
 
 :::solution
-$$(A)$$ $$\text{Ag}$$ has the larger atomic radius.
-
-$$(B)$$ Silver's valence electrons occupy a higher principal energy level than copper's valence electrons. Copper is in period 4, while silver is in period 5, so the outer electrons in silver are farther from the nucleus. By Coulomb's law, attraction decreases as distance increases:
+The hydrate supplies $$2.50/250.=0.0100\ \mathrm{mol}$$ copper ions, giving a 0.100 M stock. The transferred portion contains $$0.100(0.0150)=0.00150\ \mathrm{mol}$$ copper ions. Dividing by 0.0600 L gives 0.0250 M. Waters of hydration contribute to the solid's molar mass but do not multiply the copper amount.
 
 $$
-F\propto \frac{q_1q_2}{r^2}.
+\boxed{\text{B}}.
 $$
+:::
+::::
 
-Silver also has more inner electrons, which increases shielding. The greater distance and shielding make the attraction between the nucleus and valence electrons weaker, so the atomic radius is larger.
+::::problem
+6. Neutral X and Y have valence configurations $$3s^2$$ and $$3s^23p^1$$, respectively. Which paired prediction is correct?
 
-$$(C)$$ Silver has more protons than copper, which by itself would increase attraction. But the valence electrons in silver are also farther from the nucleus and more shielded. Radius depends on the balance of nuclear charge, shielding, and distance, not nuclear charge alone. On the AP exam, a complete explanation should explicitly compare both the attractive force from the nucleus and the distance/shielding effect.
+   (A) Y has both the higher first ionization energy and larger usual cation<br>
+   (B) X has the smaller neutral atom and smaller usual cation<br>
+   (C) X has the higher first ionization energy, but Y has the smaller usual cation<br>
+   (D) Y has the higher first ionization energy, but X has the smaller usual cation
 
-$$(D)$$ The configurations are $$[\text{Ar}]3d^{10}$$ and $$[\text{Ar}]3d^9$$, respectively; the $$4s$$ electrons are removed before $$3d$$ electrons. Both ions have $$29$$ protons, so nuclear charge is unchanged. Removing another electron reduces electron-electron repulsion and allows the remaining electron cloud to contract. Thus $$\text{Cu}^{2+}$$ is smaller. These ions are not isoelectronic, so an isoelectronic-series argument would not apply.
+:::solution
+X is Mg and Y is Al. The first electron removed from Al occupies the higher-energy, less penetrating 3p subshell, so its first ionization energy is lower than Mg's. The usual ions, magnesium(II) and aluminum(III), both have 10 electrons; aluminum's greater nuclear charge makes its ion smaller. Different comparisons require different electron configurations.
+
+$$
+\boxed{\text{C}}.
+$$
+:::
+::::
+
+### FRQ
+
+::::frq{id=chem-atomicstrucprop-challenge-1}
+7. A hypothetical element X forms singly charged ions with mass-spectrum peaks at $$m/z=78.0$$ and $$80.0$$, with relative intensities 100 and 25. Assume equal detector response. A molecular compound of X and fluorine contains 57.9% X by mass and has molar mass $$135.4\ \mathrm{g/mol}$$. Use $$M_F=19.0\ \mathrm{g/mol}$$ and $$N_A=6.022\times10^{23}\ \mathrm{mol^{-1}}$$.
+
+   $$(A)$$ Determine the isotope abundances and X's average atomic mass.
+
+   $$(B)$$ Determine the empirical and molecular formulas of the compound from the composition data.
+
+   $$(C)$$ Find the number of molecules containing the heavier X isotope in a 0.6770 g sample. Determine the masses of its two isotope-specific molecular ions, treating fluorine as mass 19.0.
+
+   $$(D)$$ Predict the relative molecular-ion peak intensities and explain how doubly charged ions would change their positions.
+
+:::solution
+$$(A)$$ Normalize by the total intensity, 125. The abundances are $$100/125=80.0\%$$ and $$25/125=20.0\%$$. The average is $$0.800(78.0)+0.200(80.0)=78.4\ \mathrm{amu}$$. A peak normalized to 100 is not a statement that every atom has that mass.
+
+$$(B)$$ For 100 g, $$57.9/78.4=0.7385\ \mathrm{mol}$$ X and $$42.1/19.0=2.216\ \mathrm{mol}$$ F give approximately a 1:3 ratio. The empirical formula is $$\mathrm{XF_3}$$, with mass $$78.4+3(19.0)=135.4\ \mathrm{g/mol}$$. This matches the measured molar mass, so the multiplier is one and the molecular formula is also $$\mathrm{XF_3}$$. The isotope-weighted average, rather than either individual isotope mass, is used for the bulk sample.
+
+$$(C)$$ Total compound amount is $$0.6770/135.4=0.005000\ \mathrm{mol}$$. One X atom occurs in each molecule, so 20.0% of molecules contain the heavier isotope: $$N=0.200(0.005000)(6.022\times10^{23})=6.02\times10^{20}$$ molecules. Individual molecular ions have masses $$78.0+57.0=135.0$$ and $$80.0+57.0=137.0\ \mathrm{amu}$$, not the average formula mass.
+
+$$(D)$$ With one X atom per molecule, the isotope fractions remain 80.0% and 20.0%, so equal-response peak intensities retain a 4:1 ratio. Singly charged peaks occur at 135.0 and 137.0; doubly charged versions would occur at $$m/z=67.5$$ and $$68.5$$. Charge changes peak position without changing isotope mass. Comparing intensities across charge states would require knowing their relative formation and detector responses.
+:::
+::::
+
+::::frq{id=chem-atomicstrucprop-challenge-2}
+8. A period-3 element Y has subshell electron counts $$2,2,6,2,1$$ in order of decreasing binding energy. A metal surface has work function $$\Phi=3.00\times10^{-19}\ \mathrm{J}$$. Use $$h=6.63\times10^{-34}\ \mathrm{J\,s}$$ and $$c=3.00\times10^8\ \mathrm{m/s}$$.
+
+   $$(A)$$ Identify Y and its usual cation's electron configuration. Predict whether that cation or magnesium(II) is smaller, and justify.
+
+   $$(B)$$ Explain why Y can have a lower first ionization energy than magnesium despite its larger nuclear charge, then predict where Y's largest early successive-ionization jump occurs.
+
+   $$(C)$$ Calculate the maximum electron kinetic energy when the surface is illuminated at $$400.\ \mathrm{nm}$$ and determine the longest wavelength that can eject electrons.
+
+   $$(D)$$ Equal-energy pulses of 400 nm and 800 nm light strike the surface. Compare photon counts and decide which pulse ejects electrons in the single-photon model.
+
+:::solution
+$$(A)$$ The counts give $$1s^22s^22p^63s^23p^1$$, totaling 13 electrons: aluminum. Removing the three valence electrons gives $$\mathrm{Al^{3+}}:[\mathrm{Ne}]$$. Both aluminum(III) and magnesium(II) have 10 electrons, but aluminum has 13 protons instead of 12. Its greater nuclear attraction contracts the same occupied electron shells more strongly, so aluminum(III) is smaller.
+
+$$(B)$$ Aluminum's first removed electron is in 3p, which is higher in energy and less penetrating than magnesium's 3s electron. That subshell difference makes removal easier despite the larger proton count. After aluminum loses three valence electrons, removing a fourth electron disrupts the neon-like core. The large jump is therefore between the third and fourth ionization energies, not between the first and second.
+
+$$(C)$$ Photon energy is $$hc/\lambda=(6.63\times10^{-34})(3.00\times10^8)/(4.00\times10^{-7})=4.97\times10^{-19}\ \mathrm{J}$$. Subtracting the work function gives $$K_{max}=1.97\times10^{-19}\ \mathrm{J}$$. At threshold, $$hc/\lambda_0=\Phi$$, so $$\lambda_0=6.63\times10^{-7}\ \mathrm{m}=663\ \mathrm{nm}$$. Longer wavelengths carry too little energy per photon.
+
+$$(D)$$ At fixed pulse energy, photon count is proportional to wavelength, so the 800 nm pulse contains twice as many photons. Its photon energy is only $$2.49\times10^{-19}\ \mathrm{J}$$, below the work function. It ejects no electrons in the stated model, while 400 nm photons can eject electrons. Greater photon count cannot compensate for insufficient energy per individual photon.
 :::
 ::::

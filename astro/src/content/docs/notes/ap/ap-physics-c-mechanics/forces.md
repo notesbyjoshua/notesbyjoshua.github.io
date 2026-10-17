@@ -47,7 +47,7 @@ Third-law forces act on different objects, so they never cancel for one object. 
 
 ### Free-body diagrams
 
-A **free-body diagram** is a force diagram for one object or one chosen system. It is the MOST important thing to do when solving force problems. It should show only external forces acting on that object/system, not forces the object applies to something else. Forces are treated as vectors and can be composed accordingly. An example of a free-body diagram is shown below:
+A **free-body diagram** is a force diagram for one object or one chosen system. Start a force problem by drawing one, showing only external forces acting on the chosen object or system, not forces it applies to something else. Add the forces as vectors. An example of a free-body diagram is shown below:
 
 ```tikz
 \usepackage{tikz}
@@ -159,7 +159,7 @@ $$
 f_k = \mu_k F_N.
 $$
 
-$$\mu_s$$ and $$\mu_k$$ are the coefficient of static friction and kinetic friction, respectively. Usually these values will be given, and determining them (without any other information) requires experimentation. An important note is that static friction is not always equal to $$\mu_sF_N$$; that expression gives the maximum possible static friction before slipping begins. Usually $$\mu_s > \mu_k$$.
+$$\mu_s$$ and $$\mu_k$$ are the coefficients of static and kinetic friction, respectively. Problems usually give these values; otherwise, determining them without additional information requires an experiment. Static friction is not always equal to $$\mu_sF_N$$; that expression gives the maximum possible static friction before slipping begins. Usually $$\mu_s > \mu_k$$.
 
 ### Spring force
 

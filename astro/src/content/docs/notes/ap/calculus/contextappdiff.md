@@ -9,14 +9,14 @@ sidebar:
 
 ## Rates of change in context
 
-If $$Q(t)$$ is a quantity depending on time, then:
+Many contextual problems describe how a system changes over time. If $$Q(t)$$ is a quantity depending on time, then:
 
 - $$Q'(t)$$ is the instantaneous rate of change of $$Q$$,
 - units of $$Q'(t)$$ are units of $$Q$$ per unit of $$t$$.
 
 Always interpret both sign and units and give sufficient context if necessary.
 
-Many contextual problems also distinguish between average and instantaneous rates of change. The average rate on $$[a,b]$$ is the slope of the secant line:
+Many contextual problems distinguish between average and instantaneous rates of change. The average rate on $$[a,b]$$ is the slope of the secant line:
 
 $$
 \frac{Q(b)-Q(a)}{b-a},
@@ -30,16 +30,14 @@ $$
 
 If you are trying to figure out a mean or average, use average rate of change, but if you are trying to find your speed or rate of change at a specific moment, use derivatives.
 
-### Contextual interpretation the derivative
-
-A derivative value is not just a number. A complete interpretation usually needs:
+To interpret a derivative in a word problem, include these 4 components:
 
 - the quantity changing,
 - the input value or time,
 - the direction of change if the sign matters,
 - correct units.
 
-If $$H(t)$$ is height in meters and $$H'(3)=-2$$, then at $$t=3$$ the height is decreasing at $$2$$ meters per unit of time. The negative sign means the height is going down; the magnitude $$2$$ describes the speed of that change.
+For example, if $$H(t)$$ is height in meters and $$H'(3)=-2$$, then at $$t=3$$ the height is decreasing at $$2$$ meters per unit of time. The negative sign means the height is going down, and the magnitude $$2$$ describes the speed of that change.
 
 <div class="theorem-box">
 
@@ -53,54 +51,79 @@ Notice that this is a rate, not a total: it does not say there are $$40$$ fish, 
 
 </div>
 
-### Related quantities and hidden variables
+### Estimating a rate from measurements
 
-Contextual problems often include more variables than you actually need. The goal is to write one equation connecting the changing quantities, then identify which rate the question asks for.
+When a table gives amounts rather than rates, a difference quotient estimates the derivative. Use nearby inputs on both sides of the requested input when they are available. The quotient still measures change in output divided by change in input, so its units do not depend on how the table is arranged.
 
-:::strategy
-- define every variable before differentiating,
-- record which variables are changing,
-- keep constants as constants,
-- substitute numerical values after differentiating.
-:::
-
-If the independent variable is time, every changing quantity gets a rate such as $$dx/dt$$, $$dV/dt$$, or $$dA/dt$$.
+A symmetric difference quotient often cancels some of the error from using a secant line, but it is still an estimate. A table alone does not tell you exactly how the function behaves between measurements. Even equal endpoint values do not prove that the function was constant between them.
 
 <div class="theorem-box">
 
-**Example.** A circular puddle has radius $$r$$ feet, and its area is increasing at $$12$$ square feet per minute. How fast is the radius increasing when $$r=3$$?
-
-Start with the relationship between area and radius:
+**Example.** A tank's volume is measured in liters:
 
 $$
-A=\pi r^2.
+\begin{array}{c|ccc}
+t\text{ (minutes)}&4&5&6\\\hline
+V(t)\text{ (liters)}&210&201&188
+\end{array}
 $$
 
-Differentiate with respect to time:
+Estimate $$V'(5)$$, interpret the answer, and decide whether the measurements suggest that the rate of change is increasing or decreasing.
+
+Use the measurements on either side of $$t=5$$:
 
 $$
-\frac{dA}{dt}=2\pi r\frac{dr}{dt}.
+V'(5)\approx\frac{V(6)-V(4)}{6-4}
+=\frac{188-210}{2}=-11.
 $$
 
-Now substitute the given values:
+At five minutes, the volume is decreasing at approximately eleven liters per minute. This does not mean the tank contains negative water or that eleven liters have left over the entire experiment.
+
+The adjacent secant slopes are
 
 $$
-12=2\pi(3)\frac{dr}{dt}.
+\frac{201-210}{5-4}=-9,
+\qquad
+\frac{188-201}{6-5}=-13.
 $$
 
-So
-
-$$
-\frac{dr}{dt}=\frac{12}{6\pi}=\frac{2}{\pi}.
-$$
-
-The radius is increasing at $$\frac{2}{\pi}$$ feet per minute.
+The later average rate is more negative, suggesting that $$V'$$ is decreasing and the volume is falling more rapidly. These three measurements support that interpretation, but they do not by themselves prove $$V''<0$$ at every intermediate time.
 
 </div>
 
----
+### Composing rates and checking units
 
-## Interpreting graphs in context
+If a quantity depends on another changing quantity, chain rule can be used to connect the rates. Suppose temperature depends on height, and height depends on time. Then temperature depends on time through height:
+
+$$
+\frac{dT}{dt}=\frac{dT}{dh}\frac{dh}{dt}.
+$$
+
+The units explain the relationship. Degrees per meter multiplied by meters per second gives degrees per second. A negative temperature gradient and a negative vertical velocity produce a positive temperature rate: descending through colder air above can make the measured temperature rise. The derivative $$dT/dh$$ is a rate with respect to height, not automatically a rate with respect to time. Multiplying by $$dh/dt$$ is the step that accounts for how quickly the object moves through the changing environment.
+
+<div class="theorem-box">
+
+**Example.** A probe measures temperature $$T(h)=20-0.006h$$ degrees Celsius at altitude $$h$$ meters. At one instant it is descending at $$8$$ meters per second. Find the temperature rate experienced by the probe.
+
+The environmental temperature gradient and the probe's vertical velocity are
+
+$$
+\frac{dT}{dh}=-0.006,
+\qquad
+\frac{dh}{dt}=-8.
+$$
+
+Therefore,
+
+$$
+\frac{dT}{dt}=(-0.006)(-8)=0.048.
+$$
+
+The probe experiences a temperature increase of $$0.048$$ degrees Celsius per second at that instant. The temperature model assumes that temperature depends only on altitude; an independently changing weather pattern would require additional information.
+
+</div>
+
+### Interpreting graphs in context
 
 Given a graph of a function $$f$$:
 
@@ -125,6 +148,41 @@ Problems will often use and expect certain words:
 - changing more rapidly compares derivative magnitudes or second derivatives depending on context.
 :::
 
+<div class="theorem-box">
+
+**Example.** A graph of $$P'(t)$$, the rate of change of a lake's fish population in fish per year, is given by $$P'(t)=(t-1)(t-5)$$ for $$0\le t\le6$$ years. Determine when the population is growing, when it is declining, and when it is declining most rapidly. Explain what happens at $$t=3$$.
+
+The graph below represents the rate, not the population:
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle, xmin=-0.3, xmax=6.4, ymin=-5.5, ymax=6.5,
+  xtick={0,1,3,5,6}, ytick={-4,0,5},
+  grid=both, grid style={gray!15},
+  width=9cm, height=5.5cm,
+  xlabel=$t$, ylabel=$P'(t)$,
+]
+\addplot[blue, very thick, samples=120, domain=0:6] {(x-1)*(x-5)};
+\addplot[only marks, mark=*, mark size=1.8pt, red!75!black] coordinates {(1,0) (3,-4) (5,0)};
+\draw[gray!65, dashed] (axis cs:3,0) -- (axis cs:3,-4);
+\node[red!75!black, anchor=north] at (axis cs:3,-4.15) {most negative rate};
+\end{axis}
+\end{tikzpicture}
+```
+
+The derivative is positive on $$(0,1)$$ and $$(5,6)$$, so the population grows there. It is negative on $$(1,5)$$, so the population declines there.
+
+The most rapid decline occurs at the lowest value of the derivative graph, $$P'(3)=-4$$. At three years, the population is decreasing at four fish per year. This is not a minimum of the population: it continues falling until time five.
+
+Before three years the derivative graph is decreasing; afterward it is increasing. Thus $$P$$ is concave down before three and concave up afterward. Between three and five, the population is still falling, but its rate is becoming less negative, so the decline is slowing.
+
+The derivative changes from positive to negative at one, giving a local population maximum, and from negative to positive at five, giving a local population minimum. The actual population values cannot be read from this derivative graph without an initial population.
+
+</div>
+
 ---
 
 ## Straight line motion
@@ -145,13 +203,13 @@ $$
 \lvert v(t)\rvert
 $$
 
-Acceleration:
+Acceleration is defined as
 
 $$
 a(t)=v'(t)
 $$
 
-tells how velocity is changing. Speed increases when velocity and acceleration point in the same direction, because the velocity value is moving farther from zero. Speed decreases when velocity and acceleration have opposite signs.
+and tells us how velocity is changing. Speed increases when velocity and acceleration point in the same direction, because the velocity value is moving farther from zero. Speed decreases when velocity and acceleration have opposite signs.
 
 For straight-line motion, AP problems often ask for all of the following from one model:
 
@@ -220,124 +278,46 @@ At $$t=4$$ the velocity is $$+9$$ m/s and the acceleration is $$+12$$ m/s$$^2$$.
 
 </div>
 
----
+### A complete motion sign chart
 
-## Marginal analysis and economics
+To determine when a particle speeds up, combine the zeros of velocity and acceleration in one interval chart. Zeros of velocity separate possible direction changes, while zeros of acceleration separate changes in how velocity develops. Neither list alone answers all of the motion questions.
 
-In business-style applications:
-
-- $$C(x)$$ is cost,
-- $$R(x)$$ is revenue,
-- $$P(x)=R(x)-C(x)$$ is profit,
-- $$C'(x)$$, $$R'(x)$$, and $$P'(x)$$ are marginal cost, revenue, and profit.
-- $$\overline C(x)=\frac{C(x)}{x}$$ is average cost per item.
-
-For example, $$C'(100)=7$$ means that near $$100$$ items, producing one more item increases cost by about $$7$$ dollars.
-
-The average cost function is useful when a problem asks for cost per item instead of total cost. To minimize average cost, differentiate $$\overline C(x)$$ and look for critical points. A common relationship at an interior minimum is
+Away from rest, differentiating speed gives a useful explanation:
 
 $$
-C'(x)=\overline C(x),
+\frac{d}{dt}\lvert v(t)\rvert
+=
+\begin{cases}
+a(t),&v(t)>0,\\
+-a(t),&v(t)<0.
+\end{cases}
 $$
 
-which means the marginal cost equals the average cost.
-
-Break-even and optimization language often uses the same functions:
-
-- profit is positive when $$R(x)>C(x)$$,
-- break-even points occur when $$R(x)=C(x)$$,
-- profit is maximized where $$P'(x)=0$$ or at an endpoint of the feasible domain.
-- at an interior profit maximum, $$P'(x)=0$$ means $$R'(x)=C'(x)$$.
-
-:::key{name="Profit condition"}
-When profit is maximized at an interior point and the second derivative/shape confirms a maximum, marginal revenue equals marginal cost:
-
-$$
-R'(x)=C'(x).
-$$
-:::
+Thus $$v(t)a(t)>0$$ means increasing speed and $$v(t)a(t)<0$$ means decreasing speed. At an instant when velocity is zero, use the behavior on each side instead of dividing by the speed.
 
 <div class="theorem-box">
 
-**Example.** Suppose cost and revenue are modeled by
+**Example.** A particle has velocity $$v(t)=(t-1)^2(t-4)$$ for $$0\le t\le5$$. Find its direction changes and its intervals of speeding up and slowing down.
+
+The velocity vanishes at $$t=1$$ and $$t=4$$. Because the squared factor is positive away from $$t=1$$, velocity is negative before $$4$$ and positive after $$4$$. The particle stops at $$1$$ without changing direction, then changes from leftward to rightward motion at $$4$$.
+
+Differentiate before building the combined chart:
 
 $$
-C(x)=0.02x^2+4x+300,
-\qquad
-R(x)=20x,
+a(t)=2(t-1)(t-4)+(t-1)^2
+=3(t-1)(t-3).
 $$
 
-where $$x$$ is the number of items sold. Find the marginal profit at $$x=200$$ and interpret it.
+The important inputs are now $$1,3,4$$:
 
-Profit is revenue minus cost:
+| Time interval | Velocity | Acceleration | Speed |
+| --- | --- | --- | --- |
+| Before $$1$$ | Negative | Positive | Decreasing |
+| Between $$1$$ and $$3$$ | Negative | Negative | Increasing |
+| Between $$3$$ and $$4$$ | Negative | Positive | Decreasing |
+| Between $$4$$ and $$5$$ | Positive | Positive | Increasing |
 
-$$
-P(x)=R(x)-C(x)=20x-(0.02x^2+4x+300).
-$$
-
-Simplify:
-
-$$
-P(x)=-0.02x^2+16x-300.
-$$
-
-Differentiate:
-
-$$
-P'(x)=-0.04x+16.
-$$
-
-Evaluate at $$x=200$$:
-
-$$
-P'(200)=-0.04(200)+16=8.
-$$
-
-At a production level of $$200$$ items, profit is increasing at about $$8$$ dollars per additional item. This means producing and selling one more item near that level is expected to increase profit by about $$8$$ dollars.
-
-</div>
-
-<div class="theorem-box">
-
-**Example.** A company sells $$x$$ items at price $$p(x)=50-0.02x$$ dollars per item, and its cost is $$C(x)=1000+10x$$ dollars. Find the marginal revenue and marginal profit when $$x=500$$.
-
-Revenue is price times quantity:
-
-$$
-R(x)=x(50-0.02x)=50x-0.02x^2.
-$$
-
-Profit is revenue minus cost:
-
-$$
-P(x)=R(x)-C(x)=50x-0.02x^2-(1000+10x).
-$$
-
-Simplify:
-
-$$
-P(x)=40x-0.02x^2-1000.
-$$
-
-Differentiate:
-
-$$
-R'(x)=50-0.04x,
-\qquad
-P'(x)=40-0.04x.
-$$
-
-Evaluate at $$x=500$$:
-
-$$
-R'(500)=50-0.04(500)=30,
-$$
-
-$$
-P'(500)=40-0.04(500)=20.
-$$
-
-At $$500$$ items, revenue is increasing by about $$30$$ dollars per additional item, and profit is increasing by about $$20$$ dollars per additional item.
+The particle slows down on $$(0,1)$$ and $$(3,4)$$, and speeds up on $$(1,3)$$ and $$(4,5)$$. In particular, positive acceleration on $$(3,4)$$ makes the negative velocity approach zero, so it reduces speed.
 
 </div>
 
@@ -345,7 +325,7 @@ At $$500$$ items, revenue is increasing by about $$30$$ dollars per additional i
 
 ## Related rates
 
-In a related rates problem, write an equation connecting quantities that change together. These equations often come from:
+Related rates are the crux of contextual derivative problems. Often in a related rates problem, two (or more) quantities change together, and you need to find the rate of change of one when the other is changing as well. The trick is to write an equation connecting quantities that change together, then implicitly differentiate. These equations often come from:
 
 - Pythagorean theorem,
 - volume formulas,
@@ -362,7 +342,7 @@ $$
 2x\frac{dx}{dt}+2y\frac{dy}{dt}=0.
 $$
 
-Do not plug in the numerical values before differentiating. The equation must still show how the variables are changing.
+Do not plug in the numerical values before differentiating, and ALWAYS remember to do chain rule on everything!
 
 :::strategy
 1. Draw and label a diagram.
@@ -466,51 +446,247 @@ When the radius is $$5$$ cm, it is increasing at about $$0.318$$ centimeters per
 
 </div>
 
-### Rate in, rate out, and accumulation
+### The implicit function theorem shortcut
 
-If a quantity changes because something enters and leaves, then:
+The implicit function theorem (IFT) gives a useful way to organize a related-rates calculation. Write the constraint as $$F(x,y)=0$$ and define two partial derivatives: $$F_x$$ means differentiate with respect to $$x$$ while holding $$y$$ constant, and $$F_y$$ means differentiate with respect to $$y$$ while holding $$x$$ constant.
 
-$$
-\text{net change rate} = \text{rate in} - \text{rate out}.
-$$
-
-If $$R(t)$$ is the rate entering a tank and $$L(t)$$ is the rate leaving, then:
-
-$$
-V'(t) = R(t) - L(t).
-$$
+If these partial derivatives are continuous near a point on the constraint and $$F_y\ne0$$ there, the IFT guarantees that the nearby branch can be written as a differentiable function $$y=y(x)$$. Its slope is $$dy/dx=-F_x/F_y$$. A precise statement is given in the [NIST reference on the implicit function theorem](https://dlmf.nist.gov/1.5#i).
 
 <div class="theorem-box">
 
-**Example.** Water enters a tank at a constant rate $$R(t)=8$$ gallons per minute, and leaves at a rate $$L(t)=t$$ gallons per minute, where $$t$$ is in minutes. Find $$V'(10)$$ and state whether the volume is rising or falling at that instant.
-
-The net rate of change of volume is the rate in minus the rate out:
+**Proof (Implicit related-rates formula).** If both coordinates depend on time, differentiate the constraint along their motion:
 
 $$
-V'(t)=R(t)-L(t)=8-t.
+F_x\frac{dx}{dt}+F_y\frac{dy}{dt}=0.
 $$
 
-Evaluate at $$t=10$$:
+Solving for the requested rate gives
 
 $$
-V'(10)=8-10=-2\ \text{gallons per minute}.
+\frac{dy}{dt}=-\frac{F_x}{F_y}\frac{dx}{dt},
+\qquad F_y\ne0.
 $$
 
-At $$t=10$$ minutes the volume is changing at $$-2$$ gallons per minute. The negative sign means more water is leaving than entering, so the volume is falling at that instant.
+This is the usual implicit differentiation calculation, with its coefficients organized using partial derivatives.
+
+</div>
+
+For the ladder constraint $$F=x^2+y^2-100$$, the partial derivatives are $$F_x=2x$$ and $$F_y=2y$$. The shortcut immediately gives $$y'=-(x/y)x'$$, which agrees with the expanded calculation above.
+
+If the constraint explicitly depends on time, use $$F(x,y,t)=0$$ and include that contribution:
+
+$$
+\frac{dy}{dt}
+=-\frac{F_x(dx/dt)+F_t}{F_y}.
+$$
+
+Here $$F_t$$ means differentiate the explicit time dependence while holding the other variables fixed. If $$F_y=0$$, do not divide by it or automatically declare an infinite rate; return to the undivided equation to determine what the constraint allows.
+
+### Related quantities and hidden variables
+
+Contextual problems often include more variables than you actually need. The goal is to write one equation connecting the changing quantities, then identify which rate the question asks for.
+
+:::strategy
+- define every variable before differentiating,
+- record which variables are changing,
+- keep constants as constants,
+- substitute numerical values after differentiating.
+:::
+
+If the independent variable is time, every changing quantity gets a rate such as $$dx/dt$$, $$dV/dt$$, or $$dA/dt$$.
+
+<div class="theorem-box">
+
+**Example.** A circular puddle has radius $$r$$ feet, and its area is increasing at $$12$$ square feet per minute. How fast is the radius increasing when $$r=3$$?
+
+Start with the relationship between area and radius:
+
+$$
+A=\pi r^2.
+$$
+
+Differentiate with respect to time:
+
+$$
+\frac{dA}{dt}=2\pi r\frac{dr}{dt}.
+$$
+
+Now substitute the given values:
+
+$$
+12=2\pi(3)\frac{dr}{dt}.
+$$
+
+So
+
+$$
+\frac{dr}{dt}=\frac{12}{6\pi}=\frac{2}{\pi}.
+$$
+
+The radius is increasing at $$\frac{2}{\pi}$$ feet per minute.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A changing rectangle has positive side lengths $$x$$ and $$y$$, in meters, constrained by $$2x^2+xy+3y^2=24$$. When $$x=3$$ and $$y=1$$, the side $$x$$ is increasing at two meters per second. Find the rate of change of $$y$$ and of the area. If $$x$$ continues increasing at that constant rate near this instant, also find $$y''$$.
+
+Let $$F=2x^2+xy+3y^2-24$$. Its partial derivatives are
+
+$$
+F_x=4x+y,\qquad F_y=x+6y.
+$$
+
+At the requested instant, $$F_y=9\ne0$$, so
+
+$$
+y'=-\frac{4x+y}{x+6y}x'
+=-\frac{13}{9}(2)=-\frac{26}{9}
+\text{ meters per second}.
+$$
+
+The area is $$A=xy$$. Both sides change, so use the product rule:
+
+$$
+A'=x'y+xy'
+=2(1)+3\left(-\frac{26}{9}\right)
+=-\frac{20}{3}
+\text{ square meters per second}.
+$$
+
+The rectangle's area decreases even though one side grows. The decrease in the other side has the greater effect at this instant.
+
+For the second rate, keep the first derivative equation in an undivided form:
+
+$$
+(4x+y)x'+(x+6y)y'=0.
+$$
+
+Differentiating again gives
+
+$$
+4(x')^2+2x'y'+6(y')^2
++(4x+y)x''+(x+6y)y''=0.
+$$
+
+Because $$x'$$ is constant, $$x''=0$$. Substitute the values:
+
+$$
+16-\frac{104}{9}+\frac{4056}{81}+9y''=0,
+\qquad
+y''=-\frac{1472}{243}
+\text{ meters per second squared}.
+$$
+
+The negative second derivative means that $$y'$$ is becoming more negative, so the side is shrinking at an increasing rate.
+
+</div>
+
+### Eliminating a changing geometric variable
+
+A container's full dimensions are fixed, but the dimensions of its contents may change. In a cone, the water's surface radius changes with the water depth. Treating that radius as constant would describe a cylinder instead.
+
+Similar triangles often remove this extra variable. Write the radius-to-height ratio using the full cone, solve for the water radius in terms of water depth, and substitute into the volume equation. The resulting single-variable equation captures both changes at once.
+
+<div class="theorem-box">
+
+**Example.** An inverted conical tank is $$12$$ meters tall with top radius $$4$$ meters. Water enters at $$3$$ cubic meters per minute and leaks out at $$h/4$$ cubic meters per minute, where $$h$$ is the water depth. Find the rate of change of depth when $$h=6$$, and determine how that depth rate changes as the water rises through that level.
+
+Similar triangles give
+
+$$
+\frac rh=\frac4{12},
+\qquad
+r=\frac h3.
+$$
+
+Substitute before differentiating:
+
+$$
+V=\frac13\pi r^2h=\frac{\pi h^3}{27},
+\qquad
+\frac{dV}{dt}=\frac{\pi h^2}{9}\frac{dh}{dt}.
+$$
+
+The net volume rate is $$3-h/4$$, so
+
+$$
+\frac{dh}{dt}
+=\frac{9(3-h/4)}{\pi h^2}.
+$$
+
+At depth $$6$$,
+
+$$
+\frac{dh}{dt}=\frac{9(3-6/4)}{36\pi}
+=\frac{3}{8\pi}\text{ meters per minute}.
+$$
+
+To analyze the depth rate, regard it as a function $$q(h)$$:
+
+$$
+q(h)=\frac9\pi\left(3h^{-2}-\frac14h^{-1}\right),
+\qquad
+q'(h)=\frac9\pi\left(-6h^{-3}+\frac14h^{-2}\right).
+$$
+
+At $$h=6$$, $$q'(6)=-3/(16\pi)$$. Since $$h'>0$$ there, the chain rule gives
+
+$$
+\frac{d^2h}{dt^2}=q'(6)h'
+=-\frac9{128\pi^2}.
+$$
+
+The water level is rising, but its upward rate is decreasing. Both the increasing surface area and the increasing leak rate contribute to that behavior.
+
+</div>
+
+### Angles, shadows, and the requested rate
+
+A related-rates equation must use the variable the question actually asks for. A common type of problem is the shadow problem. In a shadow problem, shadow length and the distance from a lamp to the shadow's tip are different quantities. In a tracking problem, an angular rate is different from the speed of the tracked object.
+
+For angle problems, trigonometry often gives the easiest relation (with everything in radians, of course). After differentiating, determine any missing side lengths or trig values from the geometry at the requested instant.
+
+<div class="theorem-box">
+
+**Example.** A camera is $$30$$ meters from a straight road. A cyclist rides along the road at $$8$$ meters per second, moving away from the nearest point to the camera. Let $$\theta$$ be the angle between the camera's perpendicular line to the road and its line of sight. Find $$d\theta/dt$$ when the cyclist is $$40$$ meters along the road from the nearest point.
+
+Let $$x$$ be the cyclist's distance along the road. The right triangle gives
+
+$$
+\tan\theta=\frac x{30}.
+$$
+
+Differentiate with respect to time:
+
+$$
+\sec^2\theta\frac{d\theta}{dt}
+=\frac1{30}\frac{dx}{dt}.
+$$
+
+At $$x=40$$, the line-of-sight distance is $$50$$, so $$\sec\theta=50/30=5/3$$. Therefore,
+
+$$
+\frac{25}{9}\frac{d\theta}{dt}=\frac8{30},
+\qquad
+\frac{d\theta}{dt}=\frac{12}{125}.
+$$
+
+The camera rotates at $$12/125$$ radians per second. Its angular rate will not remain constant even though the cyclist's road speed does, because the same road displacement subtends a smaller angle at larger distances.
 
 </div>
 
 ---
 
-## Linearization
+## Local linear approximations
 
 Sometimes, we can use derivatives to estimate functions. Let $$L(x)$$ be the estimated value of $$f(x)$$. Near $$x=a$$ define $$L(x)$$ as,
 
 $$
-L(x) = f(a) + f'(a)(x-a).
+L(x) = f(a) + f'(a)(x-a),
 $$
 
-For small changes in the input value (as long as the value stays near $$a$$), $$L(x)$$ basically equals $$f(x)$$ for all intensive purposes. Scientists (especiallty physicists) and mathematicians use the process of linearization to simplify hard equations into much simpler ones.
+which is the point-slope form for the tangent line. For inputs near $$a$$, the tangent line often gives a useful estimate of $$f(x)$$. The estimate is exact at $$a$$ and matches the derivative there, but its accuracy depends on how much the graph bends over the interval being used.
 
 <div class="theorem-box">
 
@@ -536,9 +712,54 @@ Linearization is a local approximation near $$a$$. Farther away, the tangent lin
 
 </div>
 
+The two views below show $$f(x)=\sqrt{x}$$ and its tangent $$L(x)=1+(x-1)/2$$ at $$a=1$$. The left view shows the curve bending away from the line. In the closer view, their heights are almost identical because their value and slope agree at the base point.
+
+```tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{tikzpicture}
+\begin{axis}[
+  at={(0cm,0cm)}, anchor=south west,
+  axis lines=left, xmin=0, xmax=4, ymin=0, ymax=2.7,
+  xtick={0,1,2,3,4}, ytick={0,1,2},
+  grid=both, grid style={gray!15},
+  width=6.4cm, height=5cm, title={Wider view},
+  xlabel=$x$, ylabel=$y$,
+  legend style={at={(0.03,0.97)}, anchor=north west, font=\small},
+]
+\addplot[blue, very thick, samples=160, domain=0:4] {sqrt(x)};
+\addlegendentry{$f(x)=\sqrt{x}$}
+\addplot[red!75!black, thick, domain=0:4] {1+(x-1)/2};
+\addlegendentry{$L(x)$}
+\addplot[only marks, mark=*, mark size=1.6pt] coordinates {(1,1)};
+\end{axis}
+\begin{axis}[
+  at={(7.1cm,0cm)}, anchor=south west,
+  axis lines=left, xmin=0.8, xmax=1.2, ymin=0.89, ymax=1.11,
+  xtick={0.8,1,1.2}, ytick={0.9,1,1.1},
+  grid=both, grid style={gray!15},
+  width=6.4cm, height=5cm, title={Near the base point},
+  xlabel=$x$, ylabel=$y$,
+]
+\addplot[blue, very thick, samples=100, domain=0.8:1.2] {sqrt(x)};
+\addplot[red!75!black, thick, dashed, domain=0.8:1.2] {1+(x-1)/2};
+\addplot[only marks, mark=*, mark size=1.6pt] coordinates {(1,1)};
+\end{axis}
+\end{tikzpicture}
+```
+
+The error is not generally zero. Differentiability says it becomes small compared with the input change:
+
+$$
+\lim_{h\to0}
+\frac{f(a+h)-[f(a)+f'(a)h]}h=0.
+$$
+
+Thus the tangent captures the first-order change near $$a$$. A large slope alone does not make linearization inaccurate; what matters is how much the slope changes over the interval being used.
+
 <div class="theorem-box">
 
-**Example.** Use a linearization to estimate $$\sqrt{27}$$.
+**Example.** Estimate $$\sqrt{27}$$.
 
 Let $$f(x)=\sqrt{x}$$ and choose the nearby easy point $$a=25$$, since $$\sqrt{25}=5$$. The derivative is
 
@@ -562,6 +783,54 @@ So $$\sqrt{27}\approx 5.2$$. The true value is about $$5.196$$, so the linear es
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** The upper branch of $$x^2+xy+y^2=7$$ passes through $$(1,2)$$. Use linearization to estimate the branch's height at $$x=1.04$$, then determine whether the estimate is too high or too low.
+
+Differentiate the constraint:
+
+$$
+2x+y+xy'+2yy'=0,
+\qquad
+y'=-\frac{2x+y}{x+2y}.
+$$
+
+At $$(1,2)$$ the slope is $$-4/5$$, so the tangent estimate is
+
+$$
+L(x)=2-\frac45(x-1).
+$$
+
+Therefore,
+
+$$
+y(1.04)\approx L(1.04)=2-\frac45(0.04)=1.968.
+$$
+
+To establish the direction of error, differentiate the undivided derivative equation again:
+
+$$
+2+2y'+2(y')^2+(x+2y)y''=0.
+$$
+
+Hence
+
+$$
+y''=-\frac{2[1+y'+(y')^2]}{x+2y}.
+$$
+
+The numerator inside the brackets is always positive because
+
+$$
+1+y'+(y')^2=\left(y'+\frac12\right)^2+\frac34.
+$$
+
+On the upper branch, $$x+2y=\sqrt{28-3x^2}>0$$ throughout $$[1,1.04]$$. Thus $$y''<0$$ there: the branch is concave down and lies below its tangent. The estimate $$1.968$$ is an overestimate.
+
+This approximation requires only a convenient point and the local slope. Finding an explicit formula for the whole branch is unnecessary.
+
+</div>
+
 ### Differential notation and small changes
 
 <div class="theorem-box">
@@ -572,11 +841,11 @@ $$
 dy=f'(x)\,dx.
 $$
 
-This is equivalent to $$f'(x)=\frac{dy}{dx}$$, combining two well known derivative notations (Think of it like treating $$dy$$ and $$dx$$ as variables).
+Here $$dx$$ is a chosen input change and $$dy$$ is the corresponding change predicted by the tangent line. At a fixed base point, $$dy$$ depends linearly on $$dx$$. This is consistent with derivative notation, but $$dy$$ need not equal the actual change in the function.
 
 </div>
 
-The differential models the approximate change in $$y$$ caused by a infinitesimal small change $$dx$$ in $$x$$. This is the same idea as linearization, written in a compact way:
+The differential models the change in $$y$$ caused by a small change $$dx$$ in $$x$$. This is the same idea as linearization, written in a compact way:
 
 $$
 \Delta y\approx dy=f'(a)\Delta x.
@@ -602,15 +871,169 @@ $$
 
 The same method estimates how measurement errors affect calculated quantities in physics.
 
+The distinction is easiest to see on the graph. Starting from $$(a,f(a))$$, $$dy$$ measures the vertical change along the tangent line after a horizontal move $$dx=\Delta x$$. The actual change $$\Delta y$$ measures the vertical change along the curve over that same move. Their difference is exactly the error in the predicted final height:
+
+$$
+\Delta y-dy=f(a+\Delta x)-L(a+\Delta x).
+$$
+
+For a linear function, these changes agree for every input change. For a nonlinear function, they generally agree only approximately near the base point. The notation $$dy$$ does not assert that this approximation is exact or that the chosen change must literally be infinitesimal.
+
+<div class="theorem-box">
+
+**Example.** Let $$y=x^3$$. When $$x$$ changes from $$2$$ to $$1.9$$, find $$dx$$, $$dy$$, and $$\Delta y$$. Compare the predicted and actual final outputs.
+
+The input change is $$dx=\Delta x=-0.1$$. The derivative at the starting point is $$f'(2)=3(2)^2=12$$, so
+
+$$
+dy=12(-0.1)=-1.2.
+$$
+
+The actual change uses the function values:
+
+$$
+\Delta y=f(1.9)-f(2)=1.9^3-8=-1.141.
+$$
+
+The tangent predicts a final output of $$8-1.2=6.8$$, while the actual output is $$6.859$$. Their difference is
+
+$$
+\Delta y-dy=0.059.
+$$
+
+Both changes are negative, but the tangent predicts a larger decrease. Expanding the exact change at $$a=2$$ explains the discrepancy:
+
+$$
+(2+h)^3-8=12h+6h^2+h^3.
+$$
+
+The differential retains $$12h$$; the omitted terms give $$6(-0.1)^2+(-0.1)^3=0.059$$.
+
+</div>
+
+### Error measurement
+
+In the real world, measurements and approximations have error. Absolute error measures the size of the discrepancy in the original units, while relative error compares that discrepancy with a reference value. If $$Q_{\mathrm{est}}$$ is an estimate and $$Q_{\mathrm{ref}}\ne0$$ is the reference, the formulas are
+
+$$
+E_{\mathrm{abs}}=\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert,
+\qquad
+E_{\mathrm{rel}}=
+\frac{\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert}
+{\lvert Q_{\mathrm{ref}}\rvert},
+\qquad
+E_{\mathrm{percent}}=100E_{\mathrm{rel}}\%.
+$$
+
+When an exact value is known, use it as the reference. When estimating propagated measurement uncertainty in $$Q=f(x)$$, use the nominal value $$Q_0=f(a)$$ and estimate
+
+$$
+E_{\mathrm{abs}}\approx\lvert f'(a)\rvert\lvert dx\rvert,
+\qquad
+E_{\mathrm{rel}}\approx
+\frac{\lvert f'(a)\rvert\lvert dx\rvert}{\lvert f(a)\rvert},
+\qquad
+E_{\mathrm{percent}}\approx
+100\frac{\lvert f'(a)\rvert\lvert dx\rvert}{\lvert f(a)\rvert}\%.
+$$
+
+Relative and percentage error are undefined when the reference is zero. Absolute error still makes sense. The type of error used often depends on the magnitude of the object being measured: an error of one cubic centimeter is substantial for a tiny ball and negligible for a large planet.
+
+Concavity determines the direction of a tangent estimate when the concavity has one sign throughout the interval between the base point and the target. A concave-up graph lies above its tangent, so linearization underestimates. A concave-down graph lies below its tangent, so linearization overestimates.
+
+<div class="theorem-box">
+
+**Example.** A spherical ball has measured radius $$10$$ centimeters with possible measurement error $$0.02$$ centimeters. Estimate the largest resulting volume error and its percentage. If the true radius is $$10.02$$, determine whether the differential underestimates or overestimates the true increase.
+
+At $$r=10$$,
+
+$$
+\lvert dV\rvert\approx4\pi(10)^2(0.02)=8\pi
+\text{ cubic centimeters}.
+$$
+
+The relative error estimate is
+
+$$
+\frac{\lvert dV\rvert}{V}\approx3\frac{0.02}{10}=0.006,
+$$
+
+or approximately $$0.6\%$$. Since $$V''(r)=8\pi r>0$$ for positive radii, the tangent estimate underestimates the actual increase from $$10$$ to $$10.02$$. The error allowance is approximately symmetric, while the exact volume changes for positive and negative radius errors are not.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** A hollow sphere has a fixed inner radius of $$9$$ centimeters. Its outer radius is measured as $$10$$ centimeters with possible error $$0.02$$ centimeters. Estimate the maximum absolute and percentage uncertainty in the material volume. Then estimate the outer-radius tolerance needed to keep the volume within $$0.5\%$$ of its nominal value, and compare it with an exact tolerance.
+
+Only the outer radius changes, so the material volume is
+
+$$
+V(R)=\frac{4\pi}{3}(R^3-9^3),
+\qquad
+V_0=V(10)=\frac{1084\pi}{3}.
+$$
+
+The inner radius is fixed, making its derivative contribution zero. Therefore,
+
+$$
+V'(R)=4\pi R^2,
+\qquad
+\lvert dV\rvert=400\pi(0.02)=8\pi
+\text{ cubic centimeters}.
+$$
+
+The relative uncertainty estimate is
+
+$$
+\frac{\lvert dV\rvert}{V_0}
+=\frac{8\pi}{1084\pi/3}
+=\frac6{271}\approx0.02214.
+$$
+
+Thus the estimated percentage uncertainty is about $$2.21\%$$. This exceeds that of a solid sphere with the same outer-radius error because the same absolute volume change is compared with a smaller amount of material.
+
+Let $$\delta$$ be the allowed outer-radius error. The differential estimate requires
+
+$$
+\frac{400\pi\delta}{1084\pi/3}\le0.005,
+\qquad
+\delta\le\frac{271}{60000}
+\approx0.0045167\text{ cm}.
+$$
+
+This is a first-order tolerance estimate, not an exact guarantee. Since $$V$$ is increasing and convex for positive radii, the positive radius error produces the larger absolute volume deviation. An exact symmetric tolerance therefore satisfies
+
+$$
+\frac{V(10+\delta)-V(10)}{V(10)}\le0.005,
+$$
+
+or
+
+$$
+\frac{(10+\delta)^3-1000}{271}\le0.005.
+$$
+
+Solving gives
+
+$$
+\delta\le\sqrt[3]{1001.355}-10
+\approx0.0045146\text{ cm}.
+$$
+
+The exact allowance is slightly smaller because the differential underestimates the increase for a positive radius error. When a problem asks for a rigorous tolerance rather than an estimate, that small distinction matters.
+
+</div>
+
 ---
 
 ## L'Hôpital's Rule
 
-When algebra does not resolve an indeterminate limit, L'Hôpital's Rule may help, provided its conditions are met.
+You may remember solving indeterminate limits (limits involving $$\frac{0}{0}$$, $$\frac{\infty}{\infty}$$, etc.) in Unit 1, where you had to do some tedious algebra to simplify. However, we learn a simpler way to solve, known as L'Hôpital's Rule.
 
 <div class="theorem-box">
 
-**Theorem (L'Hôpital's Rule).** If a limit produces $$0/0$$ or $$\infty/\infty$$ and the hypotheses are satisfied, then
+**Theorem (L'Hôpital's Rule).** For a quotient with form $$0/0$$ or $$\infty/\infty$$, the conditions below allow us to replace the quotient by a quotient of derivatives:
 
 $$
 \lim_{x \to a} \frac{f(x)}{g(x)}
@@ -618,81 +1041,27 @@ $$
 \lim_{x \to a} \frac{f'(x)}{g'(x)}
 $$
 
-provided the new limit exists in a usable way.
+The word *hypotheses* means the assumptions needed before the theorem can be used. For a one-sided limit toward a finite input $$a$$, check:
 
-Here, "the hypotheses are satisfied" means the functions are differentiable near the input value, the denominator is not becoming unusable in the derivative step, and the original limit really has one of the indeterminate forms $$0/0$$ or $$\infty/\infty$$. Do not use L'Hopital's Rule just because a quotient looks complicated.
+1. **An allowed original form.** Both $$f(x)$$ and $$g(x)$$ approach zero, or their magnitudes both approach infinity. A nonzero number divided by zero is not an allowed indeterminate form.
+2. **Differentiability near the target.** Both functions are differentiable throughout a one-sided interval next to $$a$$. They need not be defined or differentiable at $$a$$ itself. A *punctured* interval simply excludes that target input.
+3. **Nonzero denominator and denominator derivative.** The quotient must be defined near $$a$$, and $$g'(x)\ne0$$ on the interval where the rule is being applied. It is acceptable for $$g'(x)$$ to approach zero, provided it does not equal zero at nearby inputs.
+4. **A derivative-quotient limit.** The limit of $$f'(x)/g'(x)$$ must exist as a finite real number, positive infinity, or negative infinity. That is the value inherited by the original quotient.
 
-</div>
+For a two-sided limit, these conditions must support both one-sided calculations, and their results must agree. For a limit at infinity, use a sufficiently far-out interval instead of a punctured interval around a finite input.
 
-<div class="theorem-box">
-
-**Proof (L'Hôpital's Rule).** Here is the idea for the $$0/0$$ case. Suppose $$f(a)=g(a)=0$$, and suppose $$f$$ and $$g$$ satisfy the needed continuity and differentiability conditions near $$a$$, with $$g'(x)\ne0$$.
-
-Cauchy's Mean Value Theorem is a two-function version of the Mean Value Theorem. Instead of comparing one function's average rate to one derivative, it compares the average rates of two functions:
-
-For $$x\ne a$$, it gives a number $$c$$ between $$a$$ and $$x$$ such that
-
-$$
-\frac{f(x)-f(a)}{g(x)-g(a)}
-=
-\frac{f'(c)}{g'(c)}.
-$$
-
-Since $$f(a)=g(a)=0$$, this becomes
-
-$$
-\frac{f(x)}{g(x)}=\frac{f'(c)}{g'(c)}.
-$$
-
-As $$x\to a$$, the point $$c$$ also moves toward $$a$$. If
-
-$$
-\lim_{u\to a}\frac{f'(u)}{g'(u)}=L,
-$$
-
-then
-
-$$
-\lim_{x\to a}\frac{f(x)}{g(x)}=L.
-$$
-
-The $$\infty/\infty$$ case is proved with a similar Cauchy Mean Value Theorem argument, but the hypotheses are more technical.
+The proof for L'Hôpital's Rule uses Cauchy's Mean Value Theorem, which will not be covered in AP Calc.
 
 </div>
 
-If one round of L'Hôpital's cancellations doesn't get rid of the indeterminate forms, you can always continuing applying it until you get an example!
+For example, $$g(x)=x^2$$ has $$g'(x)=2x$$. Although $$g'(0)=0$$, its derivative is nonzero on each punctured side of zero, so this does not prevent using the rule for an appropriate quotient as $$x\to0$$.
 
-<div class="theorem-box">
+By contrast, applying the rule to $$\lim_{x\to0}(x+1)/(x+2)$$ would give a derivative quotient of one, while direct substitution gives the correct limit $$1/2$$. The original form is neither $$0/0$$ nor $$\infty/\infty$$, so that derivative calculation has no justification.
 
-**Example.** Evaluate $$\displaystyle\lim_{x\to0}\frac{e^x-1}{x}.$$
+You can use L'Hôpital's Rule more than once! After each application, check the new quotient again. Another application is justified only if the new quotient still has an allowed indeterminate form and satisfies the hypotheses. If the derivative quotient fails to have a limit, the original limit may still exist, so an unsuccessful application does not prove divergence.
 
-Direct substitution gives $$\frac{e^0-1}{0}=\frac{0}{0}$$, an indeterminate form, so L'Hopital's Rule applies. Differentiate the numerator and denominator separately:
-
-$$
-\lim_{x\to0}\frac{e^x-1}{x}=\lim_{x\to0}\frac{e^x}{1}.
-$$
-
-Now substitution works:
-
-$$
-\lim_{x\to0}\frac{e^x}{1}=e^0=1.
-$$
-
-So the limit equals $$1$$.
-
-</div>
-
-L'Hôpital's Rule requires a quotient with an indeterminate form:
-
-$$
-\frac{0}{0}
-\quad\text{or}\quad
-\frac{\infty}{\infty}.
-$$
-
-It does not apply just because a fraction is present. Check the original form first.
-
-For other indeterminate forms, rewrite before using the rule. For instance, products, differences, and powers may need algebra or logarithms before they become a quotient form.
+Note that this only applies to indeterminate forms (specifically $$\frac{0}{0}$$ and $$\frac{\infty}{\infty}$$). If the limit is NOT indeterminate, you CANNOT apply L'Hôpital's Rule.
+For indeterminate forms that are not $$\frac{0}{0}$$ and $$\frac{\infty}{\infty}$$, you have to rewrite the limit before using the rule. For instance, products, differences, and powers may need algebra or logarithms before they become a quotient form.
 
 Common rewrites:
 
@@ -775,6 +1144,76 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** Find the real parameter $$c$$ for which the two-sided limit
+
+$$
+\lim_{x\to0}
+\left(\frac{e^{\tan x-cx^2}}{1+\sin x}\right)^{1/x^3}
+$$
+
+exists as a finite, nonzero number, and evaluate it using L'Hôpital's Rule.
+
+The base approaches one and is positive near zero, while the exponent becomes unbounded. Take a logarithm before differentiating. If the expression is $$Y(x)$$, then
+
+$$
+\ln Y(x)
+=\frac{\tan x-cx^2-\ln(1+\sin x)}{x^3}.
+$$
+
+Let the numerator be $$N(x)$$. Both numerator and denominator approach zero. Work on each side of zero separately until the parameter is determined. A first application on either side gives
+
+$$
+\lim_{x\to0^\pm}\ln Y(x)
+=\lim_{x\to0^\pm}
+\frac{\sec^2x-2cx-\dfrac{\cos x}{1+\sin x}}{3x^2}.
+$$
+
+This is still $$0/0$$ for every $$c$$. To differentiate the remaining quotient in the numerator, simplify its derivative:
+
+$$
+\frac{d}{dx}\left(\frac{\cos x}{1+\sin x}\right)
+=\frac{-\sin x(1+\sin x)-\cos^2x}{(1+\sin x)^2}
+=-\frac1{1+\sin x}.
+$$
+
+The second application therefore gives
+
+$$
+\lim_{x\to0^\pm}\ln Y(x)
+=\lim_{x\to0^\pm}
+\frac{2\sec^2x\tan x-2c+\dfrac1{1+\sin x}}{6x}.
+$$
+
+The numerator now approaches $$1-2c$$. If $$c\ne1/2$$, it approaches a nonzero constant while the denominator changes sign at zero. The one-sided logarithmic limits are opposite signed infinities, so one side of $$Y$$ approaches zero and the other grows without bound. There is no finite, nonzero two-sided limit.
+
+For $$c=1/2$$, the second derivative quotient is again $$0/0$$. Apply the rule once more:
+
+$$
+\lim_{x\to0}\ln Y(x)
+=\lim_{x\to0}
+\frac{
+4\sec^2x\tan^2x+2\sec^4x
+-\dfrac{\cos x}{(1+\sin x)^2}
+}{6}
+=\frac{0+2-1}{6}=\frac16.
+$$
+
+The denominator derivatives $$3x^2$$ and $$6x$$ are nonzero on either punctured side, and the last denominator is six. All functions used are differentiable sufficiently near zero, with $$1+\sin x>0$$, so each application meets the conditions.
+
+Finally, exponentiate the logarithmic limit:
+
+$$
+c=\frac12,
+\qquad
+\lim_{x\to0}Y(x)=e^{1/6}.
+$$
+
+The parameter cancels the quadratic contribution before the cubic scale in the exponent can produce a finite answer. Differentiating the original powered expression directly would hide this cancellation.
+
+</div>
+
 ## Tips for the exam
 
 Contextual derivative questions are translation problems first and calculus problems second. Before differentiating, decide what each symbol measures and what its derivative would mean.
@@ -784,7 +1223,6 @@ Contextual derivative questions are translation problems first and calculus prob
 - Velocity: $$v(t)=s'(t)$$, measured in distance per time.
 - Acceleration: $$a(t)=v'(t)=s''(t)$$, measured in distance per time squared.
 - Rate in/out: positive and negative contributions to a total amount.
-- Marginal cost/revenue/profit: derivative of the corresponding business function.
 :::
 
 When writing interpretations:
@@ -797,4 +1235,22 @@ When writing interpretations:
 
 :::exam{topic="Context wording"}
 AP free-response scoring usually expects a complete sentence with units. A correct number without context can lose the interpretation point.
+:::
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Average rate | $$[Q(b)-Q(a)]/(b-a)$$ |
+| Composed rates | $$dQ/dt=(dQ/dx)(dx/dt)$$ |
+| Motion | $$v=s',\quad a=v',\quad\text{speed}=\lvert v\rvert$$ |
+| Speed changes away from rest | $$va>0:\text{ speeding up};\quad va<0:\text{ slowing down}$$ |
+| Net rate | $$V'=\text{rate in}-\text{rate out}$$ |
+| Implicit rate shortcut | $$y'=-(F_x/F_y)x',\quad F(x,y)=0,\quad F_y\ne0$$ |
+| Explicit time in a constraint | $$y'=-[F_x\,x'+F_t]/F_y,\quad F(x,y,t)=0,\quad F_y\ne0$$ |
+| Linearization | $$f(a+\Delta x)\approx f(a)+f'(a)\Delta x$$ |
+| Predicted and actual changes | $$dy=f'(a)\Delta x,\quad\Delta y=f(a+\Delta x)-f(a)$$ |
+| Approximation error | $$\Delta y-dy=f(a+\Delta x)-L(a+\Delta x)$$ |
+| Propagated absolute uncertainty | $$\lvert\Delta y\rvert\approx\lvert dy\rvert=\lvert f'(a)\rvert\lvert\Delta x\rvert$$ |
+| Relative and percentage error | $$E_{\mathrm{rel}}=\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert/\lvert Q_{\mathrm{ref}}\rvert,\quad E_{\mathrm{percent}}=100E_{\mathrm{rel}}\%,\quad Q_{\mathrm{ref}}\ne0$$ |
+| L'Hôpital | $$\lim f/g=\lim f'/g'\quad\text{only under the stated hypotheses}$$ |
 :::

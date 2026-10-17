@@ -47,7 +47,7 @@ Trade could increase Native bargaining power when several European buyers compet
 
 European goods changed relationships within Native communities as well. Access to firearms could strengthen one group relative to its neighbors. Demand for furs encouraged hunting for distant markets and sometimes depleted animal populations. These changes could intensify conflict without making Native people passive victims of commerce; communities continued to make strategic choices within increasingly constrained circumstances.
 
-French settlers and Native peoples in the Great Lakes region sometimes developed negotiated customs for exchange and diplomacy. Historians describe such arrangements as a **middle ground**, where neither side initially possessed complete control and each adapted to the expectations of the other. Cooperation depended on maintaining that balance. Growing settler populations or a decisive imperial victory could undermine the need to negotiate.
+French settlers and Native peoples in the Great Lakes region sometimes developed negotiated customs for exchange and diplomacy. Historians describe such arrangements as a **middle ground**, where neither side initially possessed complete control and each adapted to the expectations of the other. Cooperation depended on maintaining that balance, which growing settler populations or a decisive imperial victory could disrupt by reducing the need to negotiate.
 
 ### Comparing colonial priorities
 

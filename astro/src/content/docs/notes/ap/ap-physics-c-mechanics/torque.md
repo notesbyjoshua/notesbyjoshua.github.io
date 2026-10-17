@@ -41,7 +41,7 @@ $$
 \omega_f^2 = \omega_i^2 + 2\alpha(\theta_f-\theta_i).
 $$
 
-As you can see, $$\theta$$ maps to $$x$$, $$\omega$$ maps to $$v$$, and $$\alpha$$ maps to $$a$$. Fittingly, all of the rotational variables are named the same as their translational counterparts with the addition of "angular." The equations are the rotational equivalent of the Big 5 equations from Unit 1. Radians are dimensionless in SI, but keeping them visible helps avoid mixing angular and linear quantities.
+Here, $$\theta$$ corresponds to $$x$$, $$\omega$$ to $$v$$, and $$\alpha$$ to $$a$$. Each rotational variable takes the name of its translational counterpart with "angular" added. The equations are the rotational equivalent of the Big 5 equations from Unit 1. Radians are dimensionless in SI, but keeping them visible helps avoid mixing angular and linear quantities.
 
 ### Connecting Linear and Angular Motion
 
@@ -177,7 +177,7 @@ where $$r_{\perp}$$ is the lever arm, the perpendicular distance from the axis t
 \end{tikzpicture}
 ```
 
-There are two equivalent ways to read $$\tau = rF\sin\theta$$, and switching between them is often the key to a clean solution:
+There are two equivalent ways to read $$\tau = rF\sin\theta$$. Choose whichever matches the distances or force components you know:
 
 - **Lever arm (perpendicular distance).** Group the trig with $$r$$: $$\tau = F(r\sin\theta) = F\,r_\perp$$. Extend the force's line of action into an infinite line and drop a perpendicular from the axis onto it. That perpendicular distance is the lever arm $$r_\perp$$. Sliding the force back and forth along its own line of action never changes the torque, because the lever arm is unchanged.
 - **Perpendicular component of force.** Group the trig with $$F$$: $$\tau = r(F\sin\theta) = r\,F_\perp$$. Here $$F_\perp = F\sin\theta$$ is the component of the force perpendicular to $$\vec r$$. Only the part of the force that is "across" the radius twists the body; the part along $$\vec r$$ (toward or away from the axis) does nothing.

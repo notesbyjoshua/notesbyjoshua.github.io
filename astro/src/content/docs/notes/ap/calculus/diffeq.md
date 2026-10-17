@@ -7,7 +7,7 @@ sidebar:
 
 ## Introduction to differential equations
 
-A differential equation usually does not tell you the value of a function directly. Instead, it tells you how the function changes. That is why differential equations show up whenever the important information is a rate: population growth, cooling, radioactive decay, motion, spread of a disease, charging a capacitor, or any situation where the future depends on the current state.
+A differential equation usually describes how a function changes rather than giving its value directly. This makes differential equations useful when the known information is a rate: population growth, cooling, radioactive decay, motion, spread of a disease, charging a capacitor, or any situation where the future depends on the current state.
 
 For example, saying
 
@@ -34,6 +34,46 @@ However, a solution to a differential equation may be valid only on an interval,
 
 When solving an initial value problem, the interval of validity is usually the largest interval containing the initial input where the solution and differential equation both make sense.
 
+### Verifying a proposed solution
+
+Solving an equation and verifying a solution are different tasks. To verify, calculate the proposed function's derivative, substitute the proposed function wherever the equation contains $$y$$, and show the two sides agree throughout the stated interval. Then check the initial condition separately.
+
+A function may satisfy the differential equation while failing the initial condition. It may also satisfy both at a single input without satisfying the equation nearby. A solution must work on an interval, not merely at the point where its value is specified.
+
+<div class="theorem-box">
+
+**Example.** Determine whether $$y(x)=2e^{-x}+x-1$$ solves $$y'+y=x$$ with $$y(0)=1$$.
+
+The derivative is
+
+$$
+y'(x)=-2e^{-x}+1.
+$$
+
+Substitute both expressions into the differential equation:
+
+$$
+y'+y=(-2e^{-x}+1)+(2e^{-x}+x-1)=x.
+$$
+
+The identity holds for every real $$x$$. Also,
+
+$$
+y(0)=2+0-1=1.
+$$
+
+Thus the function satisfies both requirements and is a solution on the entire real line. The exponential terms cancel because the homogeneous part of the equation is $$y'+y=0$$, while the polynomial terms account for the forcing term $$x$$.
+
+</div>
+
+### Translating a verbal rate law
+
+"Proportional to" identifies multiplication by a constant. A growth rate proportional to the current population gives $$P'=kP$$. A cooling rate proportional to the difference between the object's temperature and room temperature gives $$T'=-k(T-T_{\mathrm{room}})$$ for a positive cooling constant.
+
+Choose the sign so the equation matches the physical behavior. For an object hotter than its room, $$T-T_{\mathrm{room}}>0$$ and cooling requires a negative derivative. For a colder object, the same model predicts warming because that difference is negative.
+
+Check units when introducing the constant. In $$P'=kP$$, $$k$$ has units of inverse time. In a model $$P'=cP(L-P)$$, the constant $$c$$ instead has units of inverse population per time. The two logistic forms are equivalent only after their constants are related correctly.
+
 
 ---
 
@@ -41,7 +81,7 @@ When solving an initial value problem, the interval of validity is usually the l
 
 A slope field shows small line segments representing $$dy/dx$$ at many points.
 
-In a slope field, each small segment represents the slope assigned by the differential equation at that point. Solution curves should follow the little segments smoothly. They should not cross each other for the same initial value problem because one input-output point should determine one local direction.
+In a slope field, each small segment represents the slope assigned by the differential equation at that point. Solution curves should follow the little segments smoothly. When the equation satisfies a local uniqueness condition, distinct solution curves cannot cross at the same input-output point. A sufficient condition near that point is continuity of both $$f(x,y)$$ and its partial derivative with respect to $$y$$.
 
 To sketch a solution curve through an initial condition, start at the given point and move in the direction of the nearby line segments. Do not connect the segments with sharp corners; the solution should be a smooth curve whose tangent direction matches the field. You can reason about the solution without solving the differential equation by asking where slopes are positive, negative, zero, steep, or shallow.
 
@@ -69,6 +109,40 @@ To sketch a solution curve through an initial condition, start at the given poin
 \node[blue, anchor=west] at (2.2,0.45) {solutions follow slopes};
 \end{tikzpicture}
 ```
+
+---
+
+### Rows, columns, and zero-slope curves
+
+For $$y'=f(y)$$, the slope depends only on height, so every segment in a horizontal row has the same slope. For $$y'=g(x)$$, the slope depends only on the horizontal coordinate, so segments repeat in vertical columns. When both variables appear, neither repetition is guaranteed.
+
+The equation $$f(x,y)=0$$ identifies places where a solution has a horizontal tangent. It need not identify a constant solution. For $$y'=x-y$$, slopes are zero along the diagonal $$y=x$$, but the function $$y=x$$ itself has derivative one, so it does not solve the equation. A constant solution must remain on a horizontal line whose assigned slopes are zero everywhere.
+
+<div class="theorem-box">
+
+**Example.** For $$y'=y-x^2$$, describe the slope field and find the tangent line and concavity of the solution through $$(1,2)$$.
+
+Slopes are zero on the parabola $$y=x^2$$. Above that parabola, slopes are positive; below it, slopes are negative. These conclusions follow from comparing the height $$y$$ to $$x^2$$.
+
+At $$(1,2)$$,
+
+$$
+y'=2-1=1,
+$$
+
+so the tangent line is $$y-2=x-1$$. To determine concavity, differentiate along a solution:
+
+$$
+y''=y'-2x=y-x^2-2x.
+$$
+
+At the initial point, $$y''=2-1-2=-1$$, so the solution is concave down locally. Its tangent line gives an overestimate for nearby values as long as this concavity persists between the initial point and the target input.
+
+The parabola of horizontal segments is not a solution curve. Moving along that parabola would require derivative $$2x$$, which usually differs from the zero slopes assigned there.
+
+</div>
+
+The uniqueness condition matters. For example, $$y'=2\sqrt{y}$$ with $$y(0)=0$$ allows both the constant solution zero and a solution that remains zero until a chosen nonnegative time, then follows a translated square. The right side is not differentiable with respect to $$y$$ at zero, so the sufficient uniqueness condition fails. Ordinary polynomial and smooth exponential models generally do not have this ambiguity near their initial points.
 
 ---
 
@@ -112,7 +186,7 @@ $$
 (x_{n+1},y_{n+1})=(x_n+h,\ y_n+h f(x_n,y_n)).
 $$
 
-The important detail is that each step uses the slope at the **old** point, not at the new point. After taking the step, you recalculate the slope using the new estimated point.
+Each step uses the slope at the **old** point. Only after taking that step do you recalculate the slope at the new estimated point.
 
 <div class="theorem-box">
 
@@ -144,6 +218,37 @@ n & x_n & y_n & f(x_n,y_n) \\ \hline
 $$
 
 So Euler's method gives the approximation $$y(1)\approx 2.5$$.
+
+</div>
+
+---
+
+### Error direction and dependence on the estimated point
+
+Euler's method repeatedly replaces a curved solution by a tangent segment. For a forward step on a concave-up solution, the tangent lies below the true solution locally. On a concave-down solution, it lies above. To claim an overall error direction over several steps, the relevant solution region and the way later slopes respond to earlier errors must support that conclusion.
+
+In particular, the slope at a later step must be calculated using the estimated value $$y_n$$. Substituting an exact value from a separate formula changes the numerical method. Smaller steps generally improve the approximation for a smooth, well-behaved equation over a fixed interval, but halving a step is not a guarantee against every instability.
+
+<div class="theorem-box">
+
+**Example.** For $$y'=y^2$$ with $$y(0)=1$$, use two forward Euler steps of length $$1/4$$ to estimate $$y(1/2)$$. Compare with the exact solution and explain the error.
+
+At the starting point, the slope is one:
+
+$$
+y_1=1+\frac14(1)^2=\frac54.
+$$
+
+The second slope is the square of the new estimated value:
+
+$$
+y_2=\frac54+\frac14\left(\frac54\right)^2
+=\frac{105}{64}\approx1.640625.
+$$
+
+Separation gives $$y=1/(1-x)$$, so the exact value at $$1/2$$ is two. The Euler approximation is low.
+
+Along the positive solution, $$y''=2yy'=2y^3>0$$, so each forward tangent step lies below the corresponding exact solution starting at that step. Also, a smaller positive estimated height gives a smaller slope $$y^2$$, preserving the underestimate in subsequent steps. This explains the accumulated error rather than relying only on one tangent-line picture.
 
 </div>
 
@@ -225,7 +330,79 @@ $$
 
 ---
 
-## First-order linear differential equations
+### Equilibria lost during division
+
+Before dividing by $$h(y)$$ in $$y'=g(x)h(y)$$, solve $$h(y)=0$$. Each root can give a constant solution. These solutions cannot be recovered by assigning a finite value to an integration constant after the division has already excluded them.
+
+You only need one arbitrary constant when integrating the separated equation. Writing a different constant on each side is allowed, but their difference is still a single arbitrary constant. After exponentiating a logarithm, the resulting multiplicative constant can absorb a sign on an interval where the solution does not cross a zero.
+
+### Initial conditions select a branch and an interval
+
+An algebraic equation such as $$y^2=4-x^2$$ describes two branches. An initial value above the axis chooses the positive branch; an initial value below it chooses the negative branch. A solution cannot switch branches arbitrarily while still satisfying the original differential equation.
+
+<div class="theorem-box">
+
+**Example.** Solve $$y'=-x/y$$ with $$y(0)=-2$$, and state the largest interval of validity containing zero.
+
+Separate and integrate:
+
+$$
+y\,dy=-x\,dx,
+\qquad
+\frac{y^2}{2}=-\frac{x^2}{2}+C.
+$$
+
+The initial value gives
+
+$$
+y^2=4-x^2.
+$$
+
+Since the initial output is negative, the required branch is
+
+$$
+y=-\sqrt{4-x^2}.
+$$
+
+The radicand must be positive, not merely nonnegative, because the original differential equation divides by $$y$$. Thus the maximal interval is $$(-2,2)$$.
+
+The formula has values at the endpoints, but $$y=0$$ there makes the original equation undefined and the slopes unbounded. Including those endpoint values does not extend the solution as a differentiable solution of the stated equation.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Solve $$y'=2x(y-3)$$ with $$y(1)=5$$, and identify the equilibrium solution.
+
+The right side vanishes for the constant function $$y=3$$, so record that solution first. For other solutions, separate:
+
+$$
+\frac{dy}{y-3}=2x\,dx,
+\qquad
+\ln\lvert y-3\rvert=x^2+C.
+$$
+
+Exponentiating and absorbing the sign gives
+
+$$
+y=3+Ae^{x^2}.
+$$
+
+Use the initial value:
+
+$$
+5=3+Ae,
+\qquad
+A=\frac2e.
+$$
+
+The particular solution is $$y=3+2e^{x^2-1}$$ for all real inputs. It remains above three, as expected from its positive exponential term. Setting $$A=0$$ in this extended family recovers the equilibrium, but that recovery is valid because it is checked directly in the original equation.
+
+</div>
+
+---
+
+## First-order linear differential equations (extension)
 
 A first-order linear differential equation has the form
 
@@ -317,6 +494,54 @@ $$
 
 </div>
 
+### Why the integrating factor works
+
+The goal is to turn the left side into a product derivative. The product rule says
+
+$$
+(\mu y)'=\mu y'+\mu'y.
+$$
+
+Multiplying $$y'+Py=Q$$ by $$\mu$$ produces $$\mu y'+\mu Py$$ on the left. These expressions agree if $$\mu'=\mu P$$, whose nonzero solution is $$\mu=e^{\int P\,dx}$$. This is the reason for the exponential, rather than an unrelated formula to memorize.
+
+Put the differential equation into standard form before identifying $$P$$. If a coefficient multiplies $$y'$$, first divide by that coefficient on an interval where it is nonzero. That division may restrict the solution interval.
+
+<div class="theorem-box">
+
+**Example.** Solve $$xy'+y=x^2$$ with $$y(1)=2$$, and explain the domain restriction.
+
+On the positive interval containing the initial input, divide by $$x$$:
+
+$$
+y'+\frac1x y=x.
+$$
+
+The integrating factor is $$e^{\ln x}=x$$. Multiplying by it gives
+
+$$
+(xy)'=x^2.
+$$
+
+Integrate and apply the initial condition:
+
+$$
+xy=\frac{x^3}{3}+C,
+\qquad
+2=\frac13+C,
+\qquad C=\frac53.
+$$
+
+Thus
+
+$$
+y=\frac{x^2}{3}+\frac5{3x},
+\qquad x>0.
+$$
+
+This expression becomes unbounded as $$x\to0^+$$. Although the original undivided equation can be written at zero, this particular solution cannot be continued through zero as a finite differentiable function. The largest interval containing one is $$(0,\infty)$$.
+
+</div>
+
 ---
 
 ## Second derivative from a differential equation
@@ -379,7 +604,7 @@ $$
 \frac{d^2y}{dx^2}=1-2+1=0.
 $$
 
-The solution curve has zero second derivative at that point, so this test alone says the curve is an inflection point of the curve.
+The second derivative is zero there, so its value alone does not establish an inflection point. In fact, $$y=x-1$$ satisfies both the equation and the initial point. Since this equation has a unique solution through $$(2,1)$$, the solution is that straight line, with zero second derivative everywhere and no change in concavity.
 
 </div>
 
@@ -457,6 +682,62 @@ So $$10$$ grams remain. This matches the intuition that $$15$$ years is exactly 
 
 ---
 
+### Cooling toward a nonzero equilibrium
+
+Exponential behavior often applies to the difference from an equilibrium rather than to the original quantity. If the room stays at temperature $$A$$, Newton's cooling model is
+
+$$
+T'=-k(T-A),\qquad k>0.
+$$
+
+Let $$u=T-A$$. Because $$A$$ is constant, $$u'=T'=-ku$$, so
+
+$$
+T(t)=A+(T(0)-A)e^{-kt}.
+$$
+
+Only the temperature excess is multiplied by the exponential. Multiplying the entire initial temperature by an exponential would incorrectly predict cooling toward zero.
+
+<div class="theorem-box">
+
+**Example.** An object cools in a room held at $$20$$ degrees Celsius. Its initial temperature is $$100$$ degrees, and after ten minutes it is $$60$$ degrees. Under Newton's cooling model, find its temperature after twenty minutes and the time when it reaches $$30$$ degrees.
+
+The initial excess above room temperature is eighty:
+
+$$
+T(t)=20+80e^{-kt}.
+$$
+
+Using the ten-minute measurement,
+
+$$
+60=20+80e^{-10k},
+\qquad
+e^{-10k}=\frac12,
+\qquad
+k=\frac{\ln2}{10}.
+$$
+
+After twenty minutes, the excess has halved twice:
+
+$$
+T(20)=20+80\left(\frac12\right)^2=40.
+$$
+
+To reach thirty degrees,
+
+$$
+30=20+80e^{-kt}
+\quad\Longrightarrow\quad
+e^{-kt}=\frac18.
+$$
+
+Therefore $$t=30$$ minutes. The temperature excess has a ten-minute half-life, while the temperature itself does not.
+
+</div>
+
+---
+
 ## Equilibrium solutions and stability
 
 Equilibrium solutions are constant solutions where $$dy/dx = 0$$. For an autonomous differential equation
@@ -529,7 +810,7 @@ Behavior:
 
 - equilibrium solutions at $$y=0$$ and $$y=L$$,
 - growth is fastest near $$y=L/2$$,
-- solutions below $$L$$ increase toward $$L$$.
+- solutions with $$0<y<L$$ increase toward $$L$$ when $$k>0$$.
 
 <div class="theorem-box">
 
@@ -559,6 +840,138 @@ So the population grows fastest, at $$50$$ individuals per unit time, when it re
 
 ---
 
+### Deriving the logistic solution
+
+The factor $$1-y/L$$ reduces the per-capita growth rate as the population approaches the carrying capacity. When $$y$$ is small relative to $$L$$, this factor is near one and growth resembles unrestricted exponential growth. Near $$L$$, the factor approaches zero.
+
+Assume $$k>0$$, $$L>0$$, and first consider a nonequilibrium solution with $$0<y<L$$. Separate variables:
+
+$$
+\frac{dy}{y(1-y/L)}=k\,dt.
+$$
+
+The useful decomposition is
+
+$$
+\frac1{y(1-y/L)}
+=\frac1y+\frac1{L-y}.
+$$
+
+The second term integrates with a minus sign because the derivative of $$L-y$$ is negative one. Therefore,
+
+$$
+\ln\left\lvert\frac y{L-y}\right\rvert=kt+C.
+$$
+
+Solving for $$y$$ gives the standard form
+
+$$
+y(t)=\frac{L}{1+Ae^{-kt}},
+\qquad
+A=\frac{L-y_0}{y_0},
+\qquad y_0=y(0)>0.
+$$
+
+When $$0<y_0<L$$, the constant $$A$$ is positive, so the denominator decreases toward one and the population increases toward $$L$$. When $$y_0>L$$, the constant is negative and the positive-time population decreases toward $$L$$. The equilibrium $$y=0$$ must still be recorded separately; $$y=L$$ is obtained when $$A=0$$.
+
+### Locating the greatest growth rate
+
+Treat the growth rate as a function of population:
+
+$$
+G(y)=ky-\frac{k}{L}y^2.
+$$
+
+This is a downward-opening quadratic. Its maximum occurs at $$y=L/2$$, where $$G(y)=kL/4$$. That describes the largest possible positive growth rate in the model, but a particular solution may never pass through that population during the time interval being studied.
+
+Differentiating along a solution also gives
+
+$$
+y''=k\left(1-\frac{2y}{L}\right)y'.
+$$
+
+For a growing population between zero and $$L$$, the curve is concave up below $$L/2$$ and concave down above it. The inflection occurs when that particular population crosses half the carrying capacity.
+
+<div class="theorem-box">
+
+**Example.** A population satisfies $$P'=0.4P(1-P/1000)$$ and $$P(0)=100$$. Find the solution, the time of greatest growth for $$t\ge0$$, and the maximum rate.
+
+Here $$L=1000$$, $$k=0.4$$, and
+
+$$
+A=\frac{1000-100}{100}=9.
+$$
+
+Thus
+
+$$
+P(t)=\frac{1000}{1+9e^{-0.4t}}.
+$$
+
+The greatest growth occurs at population five hundred:
+
+$$
+500=\frac{1000}{1+9e^{-0.4t}}
+\quad\Longrightarrow\quad
+9e^{-0.4t}=1.
+$$
+
+Taking logarithms gives
+
+$$
+t=\frac{\ln9}{0.4}.
+$$
+
+At that time, $$P'=kL/4=100$$ individuals per unit time. The population begins below five hundred, so it actually reaches this rate in the future. Had the initial population already exceeded five hundred but remained below one thousand, its growth rate would decrease from the start, and its largest rate for $$t\ge0$$ would occur at the initial time.
+
+</div>
+
+### Matching qualitative and exact answers
+
+Before calculating, a logistic phase line predicts that an initial population between zero and capacity remains positive, rises, and approaches the capacity. The explicit formula should agree with all three predictions. A negative denominator, a curve crossing its equilibrium, or unbounded positive-time growth would indicate an algebra or sign error for this initial condition.
+
+For other separable models, the exact solution can reveal finite-time blow-up. The solution $$y=1/(1-x)$$ for $$y'=y^2$$ becomes unbounded at one, so a numerical table with rapidly increasing values near one is reflecting the model's behavior. Continuing a numerical method past that singularity does not extend the original solution through it.
+
+The phase line, slope field, initial condition, explicit solution, and numerical approximation describe the same rate law from different directions. Comparing them is a stronger check than substituting the initial point alone.
+
+### Inferring parameters from local measurements
+
+An initial rate can determine a model constant without solving the equation. After finding that constant, differentiating the rate law can predict whether the rate is increasing or decreasing at that same instant.
+
+For example, suppose $$P'=kP(1-P/100)$$, $$P(0)=20$$, and $$P'(0)=8$$. Substitution gives $$8=16k$$, so $$k=1/2$$. Along a solution,
+
+$$
+P''=k(1-2P/100)P'.
+$$
+
+At the initial time, $$P''(0)=(1/2)(0.6)(8)=2.4$$. The population is increasing, and its rate of increase is itself increasing. No explicit formula for $$P(t)$$ was needed for either conclusion.
+
+The derivative data and the function data have different roles. The initial population chooses a solution within the model family, while the initial rate identifies the parameter governing that family.
+
+### A threshold model with harvesting (extension)
+
+Adding a constant removal rate can change the qualitative behavior of a population model. Consider
+
+$$
+P'=P(4-P)-H,\qquad H\ge0.
+$$
+
+Equilibria solve $$P^2-4P+H=0$$, giving
+
+$$
+P=2\pm\sqrt{4-H}.
+$$
+
+For $$0<H<4$$ there are two positive equilibria. The rate is positive between them and negative outside them. The lower equilibrium is unstable: populations slightly below it fall, while populations slightly above it rise. The upper equilibrium is stable.
+
+At $$H=4$$, the equation becomes $$P'=-(P-2)^2$$. Rates are nonpositive on both sides of two. Populations above two approach it, while populations below two move away downward, so the equilibrium is semistable.
+
+For $$H>4$$ there are no equilibria and the modeled population decreases everywhere. If it reaches zero, continuing the formula to negative populations is no longer physically meaningful. The mathematical equation may continue, but the population interpretation stops at extinction.
+
+This example uses the same sign-chart method as the standard logistic equation. The new feature is that changing one parameter can remove a stable long-term population entirely.
+
+---
+
 ## Tips for the exam
 
 Differential equation questions often move among four representations:
@@ -578,4 +991,17 @@ Differential equation questions often move among four representations:
 
 :::exam{topic="Slope fields"}
 AP questions may ask for reasoning without solving the differential equation. Equilibrium solutions, slope signs, and whether solution curves move toward or away from an equilibrium can often be read directly from the slope field or from $$dy/dx$$.
+:::
+
+:::equations
+| Idea | Equation and conditions |
+| --- | --- |
+| Separable form | $$y'=g(x)h(y),\quad \int dy/h(y)=\int g(x)\,dx+C,\quad h(y)\ne0$$ |
+| Equilibria | $$h(y)=0\quad\text{must be checked before dividing}$$ |
+| Forward Euler | $$x_{n+1}=x_n+h,\quad y_{n+1}=y_n+h f(x_n,y_n)$$ |
+| Linear integrating factor | $$\mu=e^{\int P(x)\,dx},\quad(\mu y)'=\mu Q\quad\text{for }y'+Py=Q$$ |
+| Exponential model | $$y'=ky,\quad y=y_0e^{kt}$$ |
+| Cooling | $$T'=-k(T-A),\quad T=A+(T_0-A)e^{-kt},\quad k>0$$ |
+| Logistic model | $$y'=ky(1-y/L),\quad y=L/(1+Ae^{-kt}),\quad A=(L-y_0)/y_0$$ |
+| Logistic maximum rate | $$G_{\max}=kL/4\quad\text{at }y=L/2,\quad k,L>0$$ |
 :::

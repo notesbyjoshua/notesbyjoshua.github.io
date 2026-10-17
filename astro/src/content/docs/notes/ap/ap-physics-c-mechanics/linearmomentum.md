@@ -196,7 +196,7 @@ The wall pushes back on the stream with an average force of $$20\ \text{N}$$ opp
 
 ### Variable-Mass Systems
 
-Variable-mass problems are usually momentum problems where the mass of the object you are tracking changes with time. The key move is to remember that momentum is a product:
+In a variable-mass momentum problem, the mass of the object you are tracking changes with time. When differentiating momentum, remember that it is a product:
 
 $$
 \vec p=m\vec v.
@@ -550,7 +550,7 @@ $$
 Mv_0 = \frac{M}{2}(0) + \frac{M}{2}v_{2x} \;\Rightarrow\; v_{2x} = 2v_0.
 $$
 
-The second piece moves forward at twice the original speed. Crucially, the **center of mass continues on the original parabolic trajectory** as if no explosion happened, because the only external force is still gravity. The pieces fan out around that path; their CM lands exactly where the unexploded firework would have landed.
+The second piece moves forward at twice the original speed, while the **center of mass continues on the original parabolic trajectory** as if no explosion happened, because gravity remains the only external force. The pieces fan out around that path; their CM lands exactly where the unexploded firework would have landed.
 
 </div>
 

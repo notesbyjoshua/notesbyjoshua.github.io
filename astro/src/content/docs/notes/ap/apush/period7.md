@@ -38,7 +38,7 @@ Overseas expansion raised a different problem from simply admitting new states: 
 
 Supporters of expansion argued that industrial production needed overseas outlets and that a modern navy required bases and coaling stations. Some missionaries and political leaders treated spreading Christianity or American institutions as an obligation. These claims presented national advantage and moral purpose as compatible, even when the people being governed opposed U.S. control.
 
-The **Anti-Imperialist League** challenged annexation of the Philippines by invoking consent of the governed. Its coalition included people with very different views about race, business, and government. A businessman might fear the expense of empire, a labor leader might fear competition, and a reformer might object to denying self-government. Agreement against annexation did not imply agreement about equality.
+The **Anti-Imperialist League** invoked consent of the governed to challenge annexation of the Philippines, bringing together people with very different views about race, business, and government. A businessman might fear the expense of empire, a labor leader might fear competition, and a reformer might object to denying self-government. Agreement against annexation did not imply agreement about equality.
 
 The **Teller Amendment** had disclaimed an intention to annex Cuba during the war with Spain. The later Platt Amendment created substantial U.S. influence without formal annexation. Comparing the two shows how a commitment to independence could coexist with arrangements that limited another country's practical sovereignty.
 

@@ -168,7 +168,7 @@ $$
 P_{\text{avg}} = \tfrac12 \mu\, \omega^2 A^2 v.
 $$
 
-The key scalings to remember: power (and intensity) go as the **square of both amplitude and frequency**. Doubling the frequency at fixed amplitude quadruples the power transmitted.
+Power (and intensity) scales with the **square of both amplitude and frequency**. Doubling the frequency at fixed amplitude quadruples the power transmitted.
 
 The energy is split between **kinetic** energy (transverse motion) and **potential** energy (stretching of the string against tension). A useful fact for any traveling wave $$y = f(x - vt)$$: the kinetic and potential energy densities are *equal at every point and every instant*, because $$\partial y/\partial t = -v\,\partial y/\partial x$$ ties the two together. This equipartition fails for a standing wave, where energy sloshes back and forth between purely kinetic (string flat, moving fast) and purely potential (string maximally bent, momentarily at rest).
 

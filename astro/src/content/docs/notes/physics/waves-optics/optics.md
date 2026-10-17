@@ -9,7 +9,7 @@ sidebar:
 
 ## Introduction to optics
 
-Visible light is an electromagnetic wave with wavelength $$\lambda \sim 400\text{–}700\text{ nm}$$. This notes pages will separate optics into two parts: geometric optics and wave optics. Whether to treat it as rays or as waves depends on the size $$d$$ of the features it interacts with:
+Visible light is an electromagnetic wave with wavelength $$\lambda \sim 400\text{–}700\text{ nm}$$. These notes cover geometric optics and wave optics. Whether to treat it as rays or as waves depends on the size $$d$$ of the features it interacts with:
 
 :::conditions
 - $$\lambda \ll d$$: diffraction is negligible, light goes in straight rays — use **geometric optics** (mirrors, lenses, shadows).
@@ -526,7 +526,7 @@ The eye's relaxed near point is $$25\text{ cm}$$; angular magnification compares
 
 ## Huygens' principle
 
-Wave optics rests on **Huygens' principle**: every point on a wavefront acts as a source of secondary spherical wavelets, and the new wavefront is their envelope a moment later. This reproduces straight-line propagation, reflection, and refraction, and — crucially — explains why waves bend (diffract) around edges and through gaps.
+Wave optics rests on **Huygens' principle**: every point on a wavefront acts as a source of secondary spherical wavelets, and the new wavefront is their envelope a moment later. This reproduces straight-line propagation, reflection, and refraction, and explains why waves bend (diffract) around edges and through gaps.
 
 <div class="theorem-box">
 

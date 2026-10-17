@@ -24,7 +24,7 @@ sidebar:
 
 **Thomas Jefferson** favored an agrarian republic, lower federal spending, and a limited central government. In office, however, he sometimes used broad federal powers when he believed national interests required it.
 
-The **Louisiana Purchase** in 1803 roughly doubled U.S. territory. It secured control of New Orleans and encouraged western settlement. Jefferson questioned whether the Constitution explicitly authorized the purchase but accepted it through the treaty-making process. The **Lewis and Clark expedition** gathered information and built diplomatic contacts while depending heavily on Native knowledge and assistance.
+The **Louisiana Purchase** in 1803 roughly doubled U.S. territory, secured control of New Orleans, and encouraged western settlement. Jefferson questioned whether the Constitution explicitly authorized the purchase but accepted it through the treaty-making process. The **Lewis and Clark expedition** gathered information and built diplomatic contacts while depending heavily on Native knowledge and assistance.
 
 :::key{name="Principles and policy"}
 Jefferson's purchase illustrates a recurring pattern: leaders who favor limited government may expand federal action when facing opportunities or crises. Compare stated principles with the choices made in office.

@@ -142,8 +142,10 @@ https://notesbyjoshua.com/notes/physics/classical-continuum/advmech/
 https://notesbyjoshua.com/notes/physics/classical-continuum/fluiddynamics/
 https://notesbyjoshua.com/notes/physics/classical-continuum/thermodynamics/
 https://notesbyjoshua.com/notes/physics/eandm/
+https://notesbyjoshua.com/notes/physics/eandm/ac-circuits/
 https://notesbyjoshua.com/notes/physics/eandm/circuits/
 https://notesbyjoshua.com/notes/physics/eandm/conductors-capacitors/
+https://notesbyjoshua.com/notes/physics/eandm/electromagnetic-induction/
 https://notesbyjoshua.com/notes/physics/eandm/electrostatics/
 https://notesbyjoshua.com/notes/physics/eandm/magnetism/
 https://notesbyjoshua.com/notes/physics/modern-stellar/

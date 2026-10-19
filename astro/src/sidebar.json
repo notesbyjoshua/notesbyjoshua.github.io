@@ -716,6 +716,14 @@
               {
                 "label": "Magnetism",
                 "link": "/notes/physics/eandm/magnetism/"
+              },
+              {
+                "label": "Electromagnetic Induction",
+                "link": "/notes/physics/eandm/electromagnetic-induction/"
+              },
+              {
+                "label": "AC Circuits",
+                "link": "/notes/physics/eandm/ac-circuits/"
               }
             ]
           }

@@ -1,0 +1,42 @@
+---
+import Default from '@astrojs/starlight/components/TableOfContents.astro';
+---
+
+<heading-outline><Default /></heading-outline>
+
+<script>
+	class HeadingOutline extends HTMLElement {
+		private observer = new MutationObserver(() => this.schedule());
+		private frame = 0;
+		private schedule = () => {
+			cancelAnimationFrame(this.frame);
+			this.frame = requestAnimationFrame(() => this.keepCurrentVisible());
+		};
+		connectedCallback() {
+			this.observer.observe(this, { subtree: true, attributes: true, attributeFilter: ['aria-current'] });
+			window.addEventListener('resize', this.schedule);
+			this.schedule();
+		}
+		disconnectedCallback() {
+			this.observer.disconnect();
+			window.removeEventListener('resize', this.schedule);
+			cancelAnimationFrame(this.frame);
+		}
+		private keepCurrentVisible() {
+			const current = this.querySelector<HTMLAnchorElement>('a[aria-current="true"]');
+			const sidebar = this.closest<HTMLElement>('.right-sidebar');
+			if (!current || !sidebar || !current.getClientRects().length) return;
+			const bounds = sidebar.getBoundingClientRect();
+			const link = current.getBoundingClientRect();
+			const top = bounds.top + parseFloat(getComputedStyle(sidebar).paddingTop) + 12;
+			const bottom = bounds.bottom - 12;
+			const offset = link.top < top ? link.top - top : link.bottom > bottom ? link.bottom - bottom : 0;
+			if (offset) sidebar.scrollTo({ top: sidebar.scrollTop + offset, behavior: 'instant' });
+		}
+	}
+	customElements.define('heading-outline', HeadingOutline);
+</script>
+
+<style>
+	heading-outline { display: block; }
+</style>

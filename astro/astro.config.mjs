@@ -51,6 +51,7 @@ export default defineConfig({
 			lastUpdated: true,
 			favicon: '/assets/Images/favicon.jpeg',
 			components: {
+				TableOfContents: './src/components/TableOfContents.astro',
 				// Site-wide domain-migration announcement below the header.
 				Banner: './src/components/Banner.astro',
 				// Show an account indicator in the header (keeps social icons too).

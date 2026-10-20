@@ -21,6 +21,8 @@ $$
 
 Field lines are tangent to $$\vec B$$, with closer spacing representing a stronger field. They do not begin or end on magnetic charges. Around a straight wire they are circles; around a current loop they resemble the field of a bar magnet. They cannot cross where the field has a well-defined nonzero direction. The field exists between the drawn lines too, and a two-dimensional sketch only shows part of a three-dimensional field.
 
+Closed loops are common examples, but a field line can also extend to infinity. Gauss’s law rules out magnetic sources and sinks; it does not require every possible field line to be a finite closed curve. Time-dependent effects are developed separately in [Electromagnetic Induction](/notes/physics/eandm/electromagnetic-induction/) and [AC Circuits](/notes/physics/eandm/ac-circuits/).
+
 :::tip
 A dot $$\odot$$ means out of the page, like an arrowhead coming toward you. A cross $$\otimes$$ means into the page, like the tail of an arrow going away.
 
@@ -44,7 +46,7 @@ $$
 \mu_0\approx4\pi\times10^{-7}\ \text{T}\cdot\text{m/A}.
 $$
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/biot-savart.png" alt="A current element and displacement vector to an observation point, showing the perpendicular magnetic field contribution" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/biot-savart.svg" alt="A rightward current element and displacement vector to a point above the wire produce a magnetic field out of the page" loading="lazy" decoding="async" />
 
 Magnetic fields obey superposition. Add the contributions from every segment of the source circuit:
 
@@ -248,7 +250,7 @@ The field starts at zero, grows linearly inside, and then falls as $$1/r$$ outsi
 
 A tightly wound solenoid acts like many circular current loops stacked together. Define the turn density $$n=N/L$$, the number of turns per unit length.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/solenoid.png" alt="Solenoid winding with the right-hand grip rule relating current direction to the axial magnetic field" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/solenoid.svg" alt="Axial solenoid cross-section showing winding-current directions, the interior field, and a rectangular Amperian loop" loading="lazy" decoding="async" />
 
 <div class="theorem-box">
 
@@ -364,7 +366,7 @@ $$
 
 The forces can still produce a torque.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/loop-torque.png" alt="Opposite magnetic forces on the sides of a rectangular current loop forming a torque about its center" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/loop-torque.svg" alt="Edge-on loop with outward current on the left and inward current on the right, producing opposite vertical forces and a net torque" loading="lazy" decoding="async" />
 
 <div class="theorem-box">
 
@@ -390,7 +392,7 @@ The angle is measured from the normal, not from the plane of the loop. The torqu
 
 The opposite forces on a current loop can turn a rotor. With a fixed current direction, the magnetic torque tries to align the loop’s magnetic moment with the field; it does not keep driving the rotation in the same sense through a full turn.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/dc-motor.png" alt="DC motor with a current loop, brushes, and split-ring commutator between magnetic poles" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/dc-motor.svg" alt="Original schematic of a DC motor coil between poles with brushes and a split-ring commutator" loading="lazy" decoding="async" />
 
 A **split-ring commutator** reverses the current every half-turn. This reverses the loop’s magnetic moment at the appropriate time, keeping the driving torque in the same rotational direction. Inertia carries the rotor through the orientations where the torque is momentarily zero.
 
@@ -492,7 +494,7 @@ In materials such as iron, nickel, and cobalt, neighboring moments can strongly 
 
 An applied field favors domains oriented along it. Domain walls move and moments rotate, producing a much larger response than ordinary paramagnetism.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/domains.png" alt="Magnetic domains before, during, and after application of a magnetic field, showing increased alignment and remanence" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/domains.svg" alt="Schematic domain magnetizations before an applied field, aligned with a strong field, and partly retained afterward" loading="lazy" decoding="async" />
 
 - **Hard magnetic materials** resist demagnetization and can retain substantial alignment after the field is removed. They are useful for permanent magnets.
 - **Soft magnetic materials** are readily magnetized and demagnetized: their domain configuration changes under relatively small applied fields. This is not simply thermal randomization of all the moments.
@@ -507,7 +509,7 @@ In materials such as copper and water, the diamagnetic response dominates. It is
 
 A superconductor supports persistent current without electrical resistance. In the **Meissner state**, screening currents near its surface expel magnetic flux from the bulk, so $$\vec B\approx0$$ well inside. The field penetrates a thin surface layer rather than stopping at a mathematically sharp boundary.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/meissner.png" alt="Magnetic field lines diverted around a superconducting body by screening currents" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/meissner.svg" alt="Original field-line sketch showing flux diverted around the field-free bulk of a superconductor in the Meissner state" loading="lazy" decoding="async" />
 
 Type I superconductors lose superconductivity above a critical field. Type II superconductors also have a Meissner state below a lower critical field; between their lower and upper critical fields they enter a mixed state in which flux penetrates in vortices. Thus, “type II always freezes the field inside” is not a general rule. Zero resistance alone does not imply flux expulsion; the Meissner effect is an additional property. See the [superconductivity discussion in OpenStax](https://openstax.org/books/university-physics-volume-3/pages/9-8-superconductivity) for this distinction.
 
@@ -593,9 +595,11 @@ Ferromagnets can have a very large response, but a single constant $$\chi_m$$ or
 
 Increasing and then decreasing the applied field does not take a ferromagnet through the same sequence of domain configurations. A plot of $$M$$ against $$H$$, or $$B$$ against $$H$$, traces a **hysteresis loop**.
 
-<img class="note-img note-img--w480" src="/assets/physics/usapho/magnetism/hysteresis.png" alt="Magnetization versus field-strength hysteresis loop showing saturation, remanent magnetization, and coercive field" loading="lazy" decoding="async" />
+<img class="note-img note-img--w480" src="/assets/physics/usapho/em-original/hysteresis.svg" alt="Original magnetization-versus-field hysteresis sketch showing remanence, coercive fields, and saturation" loading="lazy" decoding="async" />
 
 At large fields, the magnetization approaches saturation. After the field returns to zero, some magnetization can remain: **remanence**. A reverse field is needed to reduce the magnetization to zero; its magnitude is the coercive field for the $$M$$–$$H$$ loop. Hard magnets have high coercivity, while soft magnets have low coercivity. Distinguish an $$M$$–$$H$$ graph from a $$B$$–$$H$$ graph when reading its intercepts.
+
+Cycling a core through a hysteresis loop also dissipates energy. The area of a $$B$$–$$H$$ loop gives loss per unit volume per cycle, whereas the graph above plots $$M$$ rather than $$B$$. The derivation from the coil’s electrical work is in [Hysteresis loss in an iron core](/notes/physics/eandm/ac-circuits/#hysteresis-loss-in-an-iron-core).
 
 ---
 

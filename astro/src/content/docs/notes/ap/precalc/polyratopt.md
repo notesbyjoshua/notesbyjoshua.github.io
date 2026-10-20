@@ -117,13 +117,7 @@ f(x)
 \end{aligned}
 $$
 
-The corresponding output is
-
-$$
-f\left(-\frac{b}{2a}\right),
-$$
-
-so the vertex is
+The corresponding output is $$f\left(-\frac{b}{2a}\right)$$, so the vertex is
 
 $$
 (-\frac{b}{2a},\,c-\frac{b^2}{4a}).
@@ -157,13 +151,7 @@ where the vertex is $$(h,k)$$.
 
 </div>
 
-If a function is built from this quadratic in a way that preserves order, the same input may still be optimal. For example,
-
-$$
-y=\sqrt{f(x)}
-$$
-
-is minimized at $$x=\frac12$$ because the square-root function is increasing, so the smallest legal value of $$f(x)$$ gives the smallest value of $$\sqrt{f(x)}$$.
+If a function is built from this quadratic in a way that preserves order, the same input may still be optimal. For example, $$y=\sqrt{f(x)}$$ is minimized at $$x=\frac12$$ because the square-root function is increasing, so the smallest legal value of $$f(x)$$ gives the smallest value of $$\sqrt{f(x)}$$.
 
 :::warning
 Always double-check your work for domain shifts or restrictions. A function like $$\sqrt{(x-2.5)^2-5}$$ does not have a minimum at $$x=2.5$$ since it is not in the domain! In this case, the minimum are always the zeroes of the quadratic.
@@ -205,13 +193,7 @@ When graphing a polynomial, use end behavior to sketch the broad shape, then mar
 
 The end behavior of a polynomial is controlled by its leading term. For large positive or negative values of $$x$$, the leading term eventually dominates the rest of the polynomial. The reason comes from calculus, and we will not go into detail on the explanations.
 
-For
-
-$$
-f(x)=a_nx^n+\cdots,
-$$
-
-use this table:
+For $$f(x)=a_nx^n+\cdots$$, use this table:
 
 | Degree | Leading coefficient | Left end | Right end |
 |---|---:|---:|---:|
@@ -220,13 +202,7 @@ use this table:
 | odd | positive | down | up |
 | odd | negative | up | down |
 
-For example,
-
-$$
-f(x)=-2x^{5}+7x^{2}-1
-$$
-
-has odd degree and negative leading coefficient, so
+For example, $$f(x)=-2x^{5}+7x^{2}-1$$ has odd degree and negative leading coefficient, so
 
 $$
 x\to -\infty \Rightarrow f(x)\to \infty,
@@ -251,21 +227,9 @@ Multiplicity tells you how the graph behaves near the $$x$$-intercept:
 - multiplicity $$1$$: crosses normally,
 - larger odd multiplicity: crosses while flattening or "wiggling" near the intercept.
 
-For example,
+For example, $$f(x)=(x-2)^3(x+1)(x+3)^2$$ has zeros $$2,-1,-3$$. The graph crosses at $$x=2$$ and $$x=-1$$, and bounces at $$x=-3$$.
 
-$$
-f(x)=(x-2)^3(x+1)(x+3)^2
-$$
-
-has zeros $$2,-1,-3$$. The graph crosses at $$x=2$$ and $$x=-1$$, and bounces at $$x=-3$$.
-
-The degree is
-
-$$
-3+1+2=6,
-$$
-
-so the maximum possible number of turning points is
+The degree is $$3+1+2=6$$, so the maximum possible number of turning points is
 
 $$
 6-1=5.
@@ -293,7 +257,7 @@ $$
 P(x)=(x-2)(2x^{3}+9x^{2}-20x-12).
 $$
 
-Factoring the cubic further (you can first divide by $$x-2$$ again and then factoring the resulting quadratic):
+Factoring the cubic further (you can first divide by $$x-2$$ again and then factor the resulting quadratic):
 
 $$
 2x^{3}+9x^{2}-20x-12
@@ -347,13 +311,7 @@ The **Remainder Theorem** says:
 
 If a polynomial $$f(x)$$ is divided by $$x-m$$, then the remainder is $$f(m)$$.
 
-Why? Polynomial division gives
-
-$$
-f(x)=(x-m)q(x)+r,
-$$
-
-where $$r$$ is a constant and $$q(x)$$ is another polynomial. Substitute $$x=m$$:
+Why? Polynomial division gives $$f(x)=(x-m)q(x)+r$$, where $$r$$ is a constant and $$q(x)$$ is another polynomial. Substitute $$x=m$$:
 
 $$
 f(m)=(m-m)q(m)+r=r.
@@ -379,13 +337,7 @@ So these statements all mean the same thing:
 The **Rational Root Theorem** helps list possible rational zeros.
 
 :::key{name="Rational Root Theorem"}
-If
-
-$$
-f(x)=a_nx^n+\cdots+a_1x+a_0
-$$
-
-has integer coefficients and $$\frac{p}{q}$$ is a rational zero in lowest terms, then
+If $$f(x)=a_nx^n+\cdots+a_1x+a_0$$ has integer coefficients and $$\frac{p}{q}$$ is a rational zero in lowest terms, then
 
 $$
 p\mid a_0
@@ -436,13 +388,7 @@ The more useful version for factoring is:
 
 A polynomial of degree $$n$$ has exactly $$n$$ complex zeros, counted with multiplicity.
 
-For example, the polynomial
-
-$$
-F(x)=(x^{2}-25)(x+1)^2(x^2+3)(2-3x)
-$$
-
-has degree
+For example, the polynomial $$F(x)=(x^{2}-25)(x+1)^2(x^2+3)(2-3x)$$ has degree
 
 $$
 2+2+2+1=7,
@@ -502,13 +448,7 @@ where $$f(x)$$ and $$g(x)$$ are polynomials and $$g(x)\ne 0$$.
 
 The domain excludes all real numbers that make the denominator zero.
 
-For example,
-
-$$
-R(x)=\frac{2x+3}{x-1}
-$$
-
-has domain
+For example, $$R(x)=\frac{2x+3}{x-1}$$ has domain
 
 $$
 x\ne 1.
@@ -516,13 +456,7 @@ $$
 
 ### Intercepts
 
-For
-
-$$
-R(x)=\frac{f(x)}{g(x)},
-$$
-
-the $$x$$-intercepts occur where $$f(x)=0$$ and the denominator is not zero (basically the zeros of the top polynomial). The $$y$$-intercept is $$R(0),$$ as long as $$0$$ is in the domain.
+For $$R(x)=\frac{f(x)}{g(x)}$$, the $$x$$-intercepts occur where $$f(x)=0$$ and the denominator is not zero (basically the zeros of the top polynomial). The $$y$$-intercept is $$R(0),$$ as long as $$0$$ is in the domain.
 
 ### Holes and vertical asymptotes
 
@@ -582,13 +516,7 @@ Thus the hole is at $$(2,-3).$$
 
 ### Horizontal asymptotes
 
-For
-
-$$
-R(x)=\frac{f(x)}{g(x)},
-$$
-
-a **horizontal asymptote** is the value of which $$y$$ approaches as $$x$$ approaches $$\infty$$. If $$y$$ approaches $$\pm \infty$$, it is NOT considered a horizontal asymptote!. To determine horizontal asymptotes, always compare the degree of the numerator and denominator.
+For $$R(x)=\frac{f(x)}{g(x)}$$, a **horizontal asymptote** is a horizontal line that the graph approaches as $$x$$ tends to positive or negative infinity. If $$y$$ grows without bound, there is no horizontal asymptote in that direction. To determine horizontal asymptotes, always compare the degree of the numerator and denominator.
 
 - If denominator degree is bigger, the horizontal asymptote is $$y=0$$.
 - If degrees are equal, the horizontal asymptote is the ratio of leading coefficients.
@@ -626,13 +554,7 @@ $$
 =x+2+\frac{5}{x-2}.
 $$
 
-Since
-
-$$
-\frac{5}{x-2}\to 0
-$$
-
-as $$x\to \pm\infty$$, the slant asymptote is
+Since $$\frac{5}{x-2}\to 0$$ as $$x\to \pm\infty$$, the slant asymptote is
 
 $$
 y=x+2.
@@ -680,13 +602,7 @@ The usual workflow is:
 
 What is the largest possible area of a rectangle with perimeter $$80\text{ cm}$$?
 
-Let the rectangle have length $$x$$ and width $$y$$. Since
-
-$$
-2x+2y=80,
-$$
-
-we get
+Let the rectangle have length $$x$$ and width $$y$$. Since $$2x+2y=80$$, we get
 
 $$
 y=40-x.
@@ -843,13 +759,7 @@ $$
 f(a)+f(b)-6=(ma+b)+(mb+b)-6=ma+mb+2b-6.
 $$
 
-Since these are equal for all $$a,b$$,
-
-$$
-b=2b-6,
-$$
-
-so $$b=6$$. Use $$f(4)=10$$:
+Since these are equal for all $$a,b$$, $$b=2b-6$$, so $$b=6$$. Use $$f(4)=10$$:
 
 $$
 4m+6=10,
@@ -885,11 +795,7 @@ $$
 2. A quadratic function has $$x$$-intercepts $$-1$$ and $$5$$ and passes through $$(0,10)$$. Find the function, its vertex, maximum/minimum value, and range.
 
 :::solution
-Since the zeros are $$-1$$ and $$5$$,
-
-$$
-q(x)=a(x+1)(x-5).
-$$
+Since the zeros are $$-1$$ and $$5$$, $$q(x)=a(x+1)(x-5)$$.
 
 Use $$(0,10)$$:
 
@@ -1071,13 +977,7 @@ The zeros are:
 - $$x=1$$, multiplicity $$2$$, bounces.
 - $$x=3$$, multiplicity $$3$$, crosses with flattening.
 
-The $$y$$-intercept is
-
-$$
-f(0)=-\frac12(4)(1)(-27)=54,
-$$
-
-so it is
+The $$y$$-intercept is $$f(0)=-\frac12(4)(1)(-27)=54$$, so it is
 
 $$
 \boxed{(0,54)}.
@@ -1239,11 +1139,7 @@ $$
 9. A polynomial $$f(x)$$ leaves remainder $$5$$ when divided by $$x-2$$ and remainder $$-4$$ when divided by $$x+1$$. Find the remainder when $$f(x)$$ is divided by $$(x-2)(x+1)$$.
 
 :::solution
-When dividing by $$(x-2)(x+1)$$, the remainder must be linear:
-
-$$
-R(x)=ax+b.
-$$
+When dividing by $$(x-2)(x+1)$$, the remainder must be linear: $$R(x)=ax+b$$.
 
 Since the remainder after division by $$x-2$$ is $$5$$,
 
@@ -1251,11 +1147,7 @@ $$
 R(2)=5.
 $$
 
-Since the remainder after division by $$x+1$$ is $$-4$$,
-
-$$
-R(-1)=-4.
-$$
+Since the remainder after division by $$x+1$$ is $$-4$$, $$R(-1)=-4$$.
 
 Thus
 
@@ -1265,13 +1157,7 @@ $$
 -a+b=-4.
 $$
 
-Subtract:
-
-$$
-3a=9,
-$$
-
-so $$a=3$$. Then $$b=-1$$. The remainder is
+Subtract: $$3a=9$$, so $$a=3$$. Then $$b=-1$$. The remainder is
 
 $$
 \boxed{3x-1}.
@@ -1344,13 +1230,7 @@ R(x)=\frac{(x-2)(x+1)}{x-3},
 \qquad x\ne -1,3.
 $$
 
-The canceled factor creates a hole at $$x=-1$$. Its $$y$$-value is
-
-$$
-\frac{(-1-2)(-1+1)}{-1-3}=0,
-$$
-
-so the hole is
+The canceled factor creates a hole at $$x=-1$$. Its $$y$$-value is $$\frac{(-1-2)(-1+1)}{-1-3}=0$$, so the hole is
 
 $$
 \boxed{(-1,0)}.
@@ -1387,13 +1267,7 @@ $$
 \boxed{(2,0)}.
 $$
 
-The $$y$$-intercept is
-
-$$
-R(0)=\frac{(-2)(1)^2}{(1)(-3)}=\frac23,
-$$
-
-so it is
+The $$y$$-intercept is $$R(0)=\frac{(-2)(1)^2}{(1)(-3)}=\frac23$$, so it is
 
 $$
 \boxed{\left(0,\frac23\right)}.
@@ -1523,11 +1397,7 @@ $$
 14. A machine's output is modeled by $$M(x)=\dfrac{150x}{x^2+25}$$ for $$x\ge 0$$. Use an algebraic method to find the maximum possible output and the input where it occurs.
 
 :::solution
-Let
-
-$$
-y=\frac{150x}{x^2+25}.
-$$
+Let $$y=\frac{150x}{x^2+25}$$.
 
 Then
 

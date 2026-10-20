@@ -5,11 +5,11 @@ sidebar:
   order: 7
 ---
 
----
-
 ## Laws of Sines and Cosines
 
-For a triangle with angles $$A,B,C$$ and opposite side lengths $$a,b,c$$:
+<div class="theorem-box">
+
+**Theorem.** For a triangle with angles $$A,B,C$$ and opposite side lengths $$a,b,c$$:
 
 $$
 \frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}.
@@ -20,7 +20,27 @@ This is the **Law of Sines**. It is useful when a triangle has an angle-side opp
 - **ASA** or **AAS**, when two angles and one side are known.
 - **SSA**, when two sides and a non-included angle are known.
 
-The area of a triangle can also be written using two sides and the included angle:
+</div>
+
+<div class="theorem-box">
+
+**Proof (Law of Sines).** Draw the triangle's circumcircle, with radius $$R$$. Side $$a=BC$$ is a chord. If the smaller central angle subtending this chord is $$\phi$$, bisecting the isosceles triangle formed by the two radii gives
+
+$$
+\frac a2=R\sin\frac\phi2.
+$$
+
+By the inscribed-angle theorem, $$A$$ is either $$\phi/2$$ or its supplement, depending on which arc contains $$A$$. These two angles have the same sine, so $$a=2R\sin A$$. The same argument for the other two chords gives $$b=2R\sin B$$ and $$c=2R\sin C$$. Therefore,
+
+$$
+\frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}=\frac{1}{2R}.
+$$
+
+This proof uses only circle geometry and right-triangle trigonometry.
+
+</div>
+
+An important collorary of the Law of Sines is that the area of a triangle can also be written using two sides and the included angle:
 
 $$
 K=\frac12ab\sin C=\frac12bc\sin A=\frac12ac\sin B.
@@ -28,55 +48,21 @@ $$
 
 <div class="theorem-box">
 
-**Proof (Area formula)** Drop an altitude from angle $$B$$ to side $$AC$$. This splits the triangle into two right triangles.
-
-Since side $$c$$ is adjacent to angle $$A$$ and the altitude is opposite angle $$A$$,
+**Proof (Area formula).** First take $$AC=b$$ as the base. The perpendicular height from $$B$$ is $$h=c\sin A$$, including when the altitude meets an extension of the base. Thus $$K=\frac12bh=\frac12bc\sin A$$. Now apply the Law of Sines:
 
 $$
-\sin A=\frac{h}{c}.
+\sin A=\frac ac\sin C=\frac ab\sin B.
 $$
 
-Thus,
+Substituting each expression into the same area formula gives
 
 $$
-h=c\sin A.
+K=\frac12bc\left(\frac ac\sin C\right)=\frac12ab\sin C,
+\qquad
+K=\frac12bc\left(\frac ab\sin B\right)=\frac12ac\sin B.
 $$
 
-Using the basic triangle area formula,
-
-$$
-K=\frac12(\text{base})(\text{height}),
-$$
-
-with base $$b$$ and height $$h$$ gives
-
-$$
-K=\frac12 b(c\sin A)=\frac12bc\sin A.
-$$
-
-By dropping different altitudes, the same reasoning gives
-
-$$
-K=\frac12ab\sin C=\frac12ac\sin B.
-$$
-
-</div>
-
-<div class="theorem-box">
-
-**Proof (Law of Sines).** Since the area of the same triangle can be written three ways,
-
-$$
-\frac12bc\sin A=\frac12ac\sin B=\frac12ab\sin C.
-$$
-
-Divide each expression by $$\frac12abc$$:
-
-$$
-\frac{\sin A}{a}=\frac{\sin B}{b}=\frac{\sin C}{c}.
-$$
-
-This is the Law of Sines.
+The altitude establishes one form; the Law of Sines proves that all three forms agree.
 
 </div>
 
@@ -84,7 +70,7 @@ The Law of Sines also has an extended version, which is not particularly importa
 
 <div class="theorem-box">
 
-**Extension.** Prove the extended Law of Sines: $$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R.$$
+**Extension.** Use the extended Law of Sines, $$a/\sin A=2R$$, and the area formula to prove $$K=abc/(4R)$$.
 
 </div>
 
@@ -98,17 +84,20 @@ $$
 h=b\sin A.
 $$
 
-Then:
+For an acute angle $$A$$:
 
 $$
 \begin{array}{c|c}
 \text{Condition} & \text{Number of triangles}\\
 \hline
 a<h & 0\\
-h\le a<b & 2\\
+a=h & 1\text{ (right triangle)}\\
+h<a<b & 2\\
 a\ge b & 1
 \end{array}
 $$
+
+If $$A\ge90^\circ$$, there is exactly one triangle when $$a>b$$ and no triangle when $$a\le b$$, because the side opposite a right or obtuse angle must be the longest.
 
 :::warning
 When using the Law of Sines, remember that $$\sin \theta=\sin(180^\circ-\theta)$$, so a possible second angle may need to be checked.
@@ -144,13 +133,7 @@ $$
 \sin B=\frac{15\sin45^\circ}{12}\approx 0.884.
 $$
 
-This gives one possible angle
-
-$$
-B\approx 62.1^\circ,
-$$
-
-and the second possible angle
+This gives one possible angle $$B\approx 62.1^\circ$$, and the second possible angle
 
 $$
 180^\circ-62.1^\circ=117.9^\circ.
@@ -160,9 +143,34 @@ Both angles create valid triangles because each leaves a positive value for angl
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** A triangle has $$A=30^\circ$$, $$a=6$$, and $$b=10$$. Find both possible lengths of $$c$$, then decide which triangle has perimeter greater than $$25$$.
+
+The altitude is $$h=10\sin30^\circ=5$$. Since $$5<6<10$$, two triangles are possible. Put $$A$$ at the origin, $$C$$ at $$(10,0)$$, and $$B$$ on the ray making $$30^\circ$$ with the positive $$x$$-axis, at distance $$c$$ from $$A$$. The distance $$BC=6$$ gives
+
+$$
+(c\cos30^\circ-10)^2+(c\sin30^\circ)^2=36.
+$$
+
+Expanding and completing the square,
+
+$$
+c^2-10\sqrt3c+64=0,
+\qquad (c-5\sqrt3)^2=11.
+$$
+
+Thus $$c=5\sqrt3\pm\sqrt{11}$$, approximately $$11.98$$ or $$5.34$$. Their perimeters are approximately $$27.98$$ and $$21.34$$, so only the longer choice meets the condition.
+
+As an angle check, the Law of Sines gives $$\sin B=5/6$$. The two possible angles are approximately $$56.44^\circ$$ and $$123.56^\circ$$, leaving positive third angles in both cases.
+
+</div>
+
 ### Law of Cosines
 
-The **Law of Cosines** relates all three sides of a triangle to one angle:
+<div class="theorem-box">
+
+**Theorem.** The **Law of Cosines** states that for a traingle with side lengths $$a$$, $$b$$, and $$c$$ (with oppposite angles $$A$$, $$B$$, and $$C$$, respectively):
 
 $$
 a^2=b^2+c^2-2bc\cos A.
@@ -185,11 +193,7 @@ Law of Cosines is useful for:
 - **SSS**, when all three sides are known.
 - **SAS**, when two sides and the included angle are known.
 
-To find an angle from three side lengths, rearrange the formula:
-
-$$
-\cos A=\frac{b^2+c^2-a^2}{2bc}.
-$$
+</div>
 
 <div class="theorem-box">
 
@@ -263,17 +267,51 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** In triangle $$ABC$$, $$AB=9$$, $$AC=13$$, and $$A=60^\circ$$. Point $$D$$ lies on $$BC$$, and $$AD$$ bisects $$A$$. Find $$BC$$ and $$AD$$ using both triangle laws.
+
+First use the Law of Cosines in the original triangle:
+
+$$
+BC^2=9^2+13^2-2(9)(13)\cos60^\circ=133,
+\qquad BC=\sqrt{133}.
+$$
+
+The Law of Sines then gives $$\sin B=13\sin60^\circ/\sqrt{133}$$. To select the correct inverse-sine angle, note that $$13^2<9^2+133$$, so $$B$$ is acute. Thus $$B\approx77.48^\circ$$. In triangle $$ABD$$, $$A=30^\circ$$ and $$\angle ADB=150^\circ-B$$. Applying the Law of Sines again,
+
+$$
+\frac{AD}{\sin B}=\frac9{\sin(150^\circ-B)},
+\qquad AD\approx9.21.
+$$
+
+For an exact answer, use $$\sin B=13\sqrt3/(2\sqrt{133})$$ and $$\cos B=5/(2\sqrt{133})$$ to get $$\sin(150^\circ-B)=11/\sqrt{133}$$. Therefore $$AD=117\sqrt3/22$$.
+
+</div>
+
 ---
 
 ## Vectors in the Plane
 
 A **scalar** is a quantity described by one number, such as temperature, length, or mass.
 
-A **vector** is a quantity described by both magnitude and direction, such as force or velocity.
+A **vector** is a quantity described by both magnitude and direction, such as force or velocity. They are usually bolded or denoted with arrows above them.
 
 Geometrically, a vector is drawn as a directed line segment. The starting point is the **initial point**, and the ending point is the **terminal point**.
 
-The magnitude of vector $$\overrightarrow{PQ}$$ is the length of the directed segment:
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\coordinate (P) at (0,0);
+\coordinate (Q) at (4,2);
+\draw[blue, very thick, ->] (P) -- (Q) node[midway, above left] {$\overrightarrow{PQ}$};
+\fill (P) circle (2pt) node[below left, align=center] {$P$\\initial point};
+\fill (Q) circle (2pt) node[above right, align=center] {$Q$\\terminal point};
+\end{tikzpicture}
+```
+
+The magnitude/norm of vector $$\overrightarrow{PQ}$$ is the length of the directed segment:
 
 $$
 \left\lvert \overrightarrow{PQ}\right \rvert.
@@ -281,9 +319,17 @@ $$
 
 Two vectors are equal if they have the same magnitude and the same direction, even if they are drawn in different locations. Basically, they are the same vector just translated.
 
-### Components
+A vector can be written as $$\mathbf v$$, $$\vec v$$, or $$\overrightarrow{PQ}$$. Its **component form** is $$\langle a,b\rangle$$, meaning a horizontal change of $$a$$ and a vertical change of $$b$$. For $$P=(x_1,y_1)$$ and $$Q=(x_2,y_2)$$,
 
-If a vector has magnitude $$\lvert \mathbf v \rvert$$ and direction angle $$\theta$$, then its horizontal and vertical components are
+$$
+\overrightarrow{PQ}=\langle x_2-x_1,y_2-y_1\rangle.
+$$
+
+The same vector can be written as a column $$\begin{pmatrix}a\\b\end{pmatrix}$$ or as $$a\mathbf i+b\mathbf j$$ using the standard unit vectors introduced below. Angle brackets distinguish vector components from the coordinates $$(a,b)$$ of a point; a position vector is the vector from the origin to that point.
+
+### Vector components
+
+If a vector has magnitude $$\lvert \mathbf v \rvert$$ and direction angle $$\theta$$, then it can be broken down into horizontal and vertical components, each of which are parallel to one of the axes:
 
 $$
 v_x=\lvert \mathbf v \rvert\cos\theta
@@ -305,17 +351,26 @@ $$
 
 **Proof (Component Definition).** Draw a vector $$\mathbf v$$ with direction angle $$\theta$$. Its horizontal and vertical components form a right triangle whose hypotenuse is $$\lvert \mathbf v \rvert$$.
 
-By right triangle trigonometry,
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{angles,arrows.meta,quotes}
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+\draw[->, gray!70] (-1,0) -- (5.2,0) node[right] {$x$};
+\draw[->, gray!70] (0,-1) -- (0,3.6) node[above] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (X) at (4,0);
+\coordinate (P) at (4,2.4);
+\draw[very thick, blue, ->] (O) -- (P) node[midway, above left] {$\mathbf v=\langle a,b\rangle$};
+\draw[orange!85!black, thick] (O) -- (4,0) node[midway, below] {$v_x = a$};
+\draw[orange!85!black, thick] (4,0) -- (P) node[midway, right] {$v_y = b$};
+\draw pic[draw, angle radius=0.55cm] {angle=X--O--P};
+\node at (1.05,0.24) {$\theta$};
+\draw[dashed, gray!70] (P) -- (4,0);
+\fill (P) circle (2pt) node[above right] {$(a,b)$};
+\end{tikzpicture}
+```
 
-$$
-\cos\theta=\frac{v_x}{\lvert \mathbf v \rvert}
-$$
-
-and
-
-$$
-\sin\theta=\frac{v_y}{\lvert \mathbf v \rvert}.
-$$
+By right triangle trigonometry, $$\cos\theta=\frac{v_x}{\lvert \mathbf v \rvert}$$ and $$\sin\theta=\frac{v_y}{\lvert \mathbf v \rvert}$$.
 
 Solving these equations gives
 
@@ -331,13 +386,7 @@ $$
 
 </div>
 
-For a vector
-
-$$
-\mathbf v=\langle a,b\rangle,
-$$
-
-the magnitude is
+For a vector $$\mathbf v=\langle a,b\rangle$$, the magnitude is
 
 $$
 \lvert \mathbf v \rvert=\sqrt{a^2+b^2}.
@@ -351,53 +400,42 @@ $$
 
 but the quadrant of the vector must be considered.
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{angles,arrows.meta,quotes}
-\begin{tikzpicture}[>=Stealth, scale=0.9]
-\draw[->, gray!70] (-1,0) -- (5.2,0) node[right] {$x$};
-\draw[->, gray!70] (0,-1) -- (0,3.6) node[above] {$y$};
-\coordinate (O) at (0,0);
-\coordinate (X) at (4,0);
-\coordinate (P) at (4,2.4);
-\draw[very thick, blue, ->] (O) -- (P) node[midway, above left] {$\mathbf v=\langle a,b\rangle$};
-\draw[orange!85!black, thick] (O) -- (4,0) node[midway, below] {$a$};
-\draw[orange!85!black, thick] (4,0) -- (P) node[midway, right] {$b$};
-\draw pic[draw, "$\theta$", angle radius=0.55cm] {angle=X--O--P};
-\draw[dashed, gray!70] (P) -- (4,0);
-\fill (P) circle (2pt) node[above right] {$(a,b)$};
-\end{tikzpicture}
-```
-
 <div class="theorem-box">
 
-**Example.**  A force has magnitude $$6.34$$ Newtons and direction angle $$175^\circ$$. Find the corresponding force vector.
+**Example.** A force points from $$P=(4,-2)$$ toward $$Q=(-2,6)$$ and has magnitude $$25\text{ N}$$. Find its components and direction angle measured counterclockwise from the positive $$x$$-axis.
 
-The components of the vector are
-
-$$
-F_x=6.34\cos175^\circ\approx -6.32
-$$
-
-and
+The displacement is $$\langle-6,8\rangle$$, whose magnitude is $$10$$. Scale this direction to length $$25$$:
 
 $$
-F_y=6.34\sin175^\circ\approx 0.55.
+\mathbf F=\frac{25}{10}\langle-6,8\rangle=\langle-15,20\rangle\text{ N}.
 $$
 
-So the vector is approximately
-
-$$
-\langle -6.32,0.55\rangle.
-$$
-
-The negative $$x$$-component makes sense because $$175^\circ$$ points mostly left.
+The vector lies in Quadrant II, so $$\theta=180^\circ-\tan^{-1}(4/3)\approx126.87^\circ$$. Checking $$\sqrt{(-15)^2+20^2}=25$$ confirms the magnitude.
 
 </div>
 
 ### Vector addition
 
-Vectors can be added geometrically by placing the initial point of one vector at the terminal point of the other. The resulting vector is called the **resultant**.
+Like numbers, vectors can be added too. Vectors can be added geometrically by placing the initial point of one vector at the terminal point of the other. The resulting vector is called the **resultant**.
+
+The **parallelogram method** starts both vectors at the same point. Translate each vector to the other's endpoint to complete a parallelogram; the diagonal from the shared initial point is the sum.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (U) at (3,0.4);
+\coordinate (V) at (1,2);
+\coordinate (S) at (4,2.4);
+\draw[blue, very thick, ->] (O) -- (U) node[midway, below] {$\mathbf u$};
+\draw[red!75!black, very thick, ->] (O) -- (V) node[midway, above left] {$\mathbf v$};
+\draw[blue, dashed, ->] (V) -- (S) node[midway, above] {$\mathbf u$};
+\draw[red!75!black, dashed, ->] (U) -- (S) node[midway, right] {$\mathbf v$};
+\draw[green!45!black, very thick, ->] (O) -- (S) node[pos=0.55, above left] {$\mathbf u+\mathbf v$};
+\fill (O) circle (1.8pt) node[below left] {$O$};
+\end{tikzpicture}
+```
 
 Vector addition is commutative:
 
@@ -420,19 +458,7 @@ $$
 
 To understand vector addition, remember that a vector $$\langle u_1,u_2\rangle$$ means "move $$u_1$$ units horizontally and $$u_2$$ units vertically."
 
-Adding
-
-$$
-\mathbf u=\langle u_1,u_2\rangle
-$$
-
-and
-
-$$
-\mathbf v=\langle v_1,v_2\rangle
-$$
-
-means doing both moves. Horizontally, the total movement is
+Adding $$\mathbf u=\langle u_1,u_2\rangle$$ and $$\mathbf v=\langle v_1,v_2\rangle$$ means doing both moves. Horizontally, the total movement is
 
 $$
 u_1+v_1.
@@ -450,15 +476,11 @@ $$
 \mathbf u+\mathbf v=\langle u_1+v_1,u_2+v_2\rangle.
 $$
 
+Vector subtraction is the same with one of the vectors having a negative sign before it.
+
 ### Scalar multiplication
 
-If
-
-$$
-\mathbf u=\langle u_1,u_2\rangle,
-$$
-
-then
+If $$\mathbf u=\langle u_1,u_2\rangle$$, then
 
 $$
 k\mathbf u=\langle ku_1,ku_2\rangle.
@@ -472,11 +494,33 @@ $$
 
 If $$k>0$$, the direction stays the same. If $$k<0$$, the direction is reversed.
 
+<div class="theorem-box">
+
+**Example.** A survey drone flies for $$3$$ minutes with ground velocity $$\langle4,1\rangle\text{ m/s}$$, then $$2$$ minutes with velocity $$\langle-1,3\rangle\text{ m/s}$$. Taking east and north as positive, find its net displacement and the constant velocity needed to return to its starting point in $$4$$ minutes.
+
+Convert times to seconds before multiplying:
+
+$$
+\Delta\mathbf r=180\langle4,1\rangle+120\langle-1,3\rangle
+=\langle600,540\rangle\text{ m}.
+$$
+
+The return displacement is the negative of this vector, so the required return velocity is
+
+$$
+\mathbf v=\frac{-\Delta\mathbf r}{240}
+=\left\langle-\frac52,-\frac94\right\rangle\text{ m/s}.
+$$
+
+Its speed is $$\sqrt{181}/4\approx3.36\text{ m/s}$$. Averaging the two outbound velocities without weighting by their travel times would give the wrong displacement.
+
+</div>
+
 ### Unit vectors
 
-A **unit vector** has magnitude $$1$$.
+A **unit vector** is any vector that has magnitude $$1$$.
 
-The standard unit vectors are
+The standard unit vectors, called basis vectors, are
 
 $$
 \mathbf i=\langle 1,0\rangle
@@ -494,27 +538,38 @@ $$
 \langle a,b\rangle=a\mathbf i+b\mathbf j.
 $$
 
-To find a unit vector in the direction of a nonzero vector $$\mathbf v$$, divide by its magnitude:
+To find a unit vector in the direction of a nonzero vector $$\mathbf v$$, we can divide by its magnitude:
 
 $$
 \mathbf u=\frac{\mathbf v}{\lvert \mathbf v \rvert}.
 $$
 
+<div class="theorem-box">
+
+**Example.** Find both unit vectors perpendicular to $$\mathbf v=\langle5,-12\rangle$$, then find the vector of magnitude $$26$$ in the same direction as $$\mathbf v$$.
+
+Rotating $$\langle a,b\rangle$$ by a right angle gives $$\langle-b,a\rangle$$, so perpendicular directions are $$\pm\langle12,5\rangle$$. Their magnitude is $$13$$, giving the unit vectors
+
+$$
+\pm\left\langle\frac{12}{13},\frac5{13}\right\rangle.
+$$
+
+For the original direction, normalize first and then scale:
+
+$$
+26\frac{\mathbf v}{\lvert\mathbf v\rvert}
+=26\frac{\langle5,-12\rangle}{13}=\langle10,-24\rangle.
+$$
+
+</div>
+
 ### Dot product
 
-For
+We have covered vector addition and subtraction, so how do we do vector multiplication? There are two ways to do multiplication, but we will only focus on the scalar version, known as the **dot product**.
 
-$$
-\mathbf A=\langle x_1,y_1\rangle
-$$
+For $$\mathbf A=\langle x_1,y_1\rangle$$ and $$\mathbf B=\langle x_2,y_2\rangle$$,
 
-and
-
-$$
-\mathbf B=\langle x_2,y_2\rangle,
-$$
-
-the **dot product** is
+the dot product is
 
 $$
 \mathbf A\cdot \mathbf B=x_1x_2+y_1y_2.
@@ -534,15 +589,11 @@ $$
 \cos\theta=\frac{\mathbf A\cdot \mathbf B}{\lvert \mathbf A \rvert \lvert \mathbf B \rvert}.
 $$
 
-The dot product is a method of multiplication of two vectors, and always returns a *scalar*. Another form of vector multiplication is the cross product, which will not be taught here.
+The dot product always returns a *scalar*. The other form of vector multiplication, the cross product, returns a vector and will not be taught here.
 
 <div class="theorem-box">
 
-**Proof (Dot product formula).** Let
-
-$$
-\mathbf A=\langle x_1,y_1\rangle,\qquad \mathbf B=\langle x_2,y_2\rangle.
-$$
+**Proof (Dot product formula).** Let $$\mathbf A=\langle x_1,y_1\rangle,\,\mathbf B=\langle x_2,y_2\rangle$$.
 
 The vector between their terminal points is
 
@@ -562,13 +613,7 @@ $$
 \lvert\mathbf A-\mathbf B\rvert^2=x_1^2+y_1^2+x_2^2+y_2^2-2(x_1x_2+y_1y_2).
 $$
 
-Since
-
-$$
-\lvert\mathbf A\rvert^2=x_1^2+y_1^2,\qquad \lvert\mathbf B\rvert^2=x_2^2+y_2^2,
-$$
-
-this becomes
+Since $$\lvert\mathbf A\rvert^2=x_1^2+y_1^2,\,\lvert\mathbf B\rvert^2=x_2^2+y_2^2$$, this becomes
 
 $$
 \lvert\mathbf A-\mathbf B\rvert^2=\lvert\mathbf A\rvert^2+\lvert\mathbf B\rvert^2-2(\mathbf A\cdot \mathbf B).
@@ -587,6 +632,14 @@ $$
 $$
 
 </div>
+
+### Components and projections along a vector
+
+The **scalar projection**, or **component of $$\mathbf A$$ along $$\mathbf B$$**, is the signed length of the part of $$\mathbf A$$ pointing in the direction of a nonzero $$\mathbf B$$. If their angle is $$\theta$$, this length is $$\lvert\mathbf A\rvert\cos\theta$$. It is negative when the vectors point more than $$90^\circ$$ apart.
+
+The **vector projection** has this signed length along the unit vector $$\mathbf B/\lvert\mathbf B\rvert$$. It gives the parallel part of $$\mathbf A$$; subtracting it from $$\mathbf A$$ leaves a vector perpendicular to $$\mathbf B$$.
+
+:::key{name="Dot product and projections"}
 
 Useful vector formulas that follow from the dot product include
 
@@ -618,19 +671,13 @@ $$
 \operatorname{proj}_{\mathbf B}\mathbf A=\frac{\mathbf A\cdot \mathbf B}{\lvert \mathbf B \rvert^2}\mathbf B.
 $$
 
+These projection formulas require $$\mathbf B\ne\mathbf0$$. The scalar projection is a number; the vector projection is a vector.
+
+:::
+
 <div class="theorem-box">
 
-**Example.** Find the angle between
-
-$$
-\mathbf A=\langle 3,4\rangle
-$$
-
-and
-
-$$
-\mathbf B=\langle 5,0\rangle.
-$$
+**Example.** Find the angle between $$\mathbf A=\langle 3,4\rangle$$ and $$\mathbf B=\langle 5,0\rangle$$.
 
 First,
 
@@ -658,11 +705,35 @@ $$
 
 </div>
 
+<div class="theorem-box">
+
+**Example.** Let $$\mathbf A=\langle7,1\rangle$$ and $$\mathbf B=\langle2,-1\rangle$$. Decompose $$\mathbf A$$ into parts parallel and perpendicular to $$\mathbf B$$, and find the point on the line $$L:\ (x,y)=(1,2)+t\mathbf B$$ closest to $$P=(8,3)$$.
+
+Since $$\mathbf A\cdot\mathbf B=13$$ and $$\mathbf B\cdot\mathbf B=5$$,
+
+$$
+\mathbf A_{\parallel}=\frac{13}{5}\langle2,-1\rangle
+=\left\langle\frac{26}{5},-\frac{13}{5}\right\rangle,
+\qquad
+\mathbf A_{\perp}=\left\langle\frac95,\frac{18}{5}\right\rangle.
+$$
+
+The perpendicular check is $$\mathbf A_{\perp}\cdot\mathbf B=18/5-18/5=0$$. Since $$P-(1,2)=\mathbf A$$, the closest point is the foot of this perpendicular:
+
+$$
+Q=(1,2)+\mathbf A_{\parallel}
+=\left(\frac{31}{5},-\frac35\right).
+$$
+
+The shortest distance is $$\lvert\mathbf A_{\perp}\rvert=9\sqrt5/5$$. Any other point on the line adds a nonzero parallel displacement to this perpendicular segment and is farther away.
+
+</div>
+
 ---
 
 ## Parametric Equations
 
-In a parametric equation, both $$x$$ and $$y$$ are written in terms of a third variable, usually $$t$$:
+Sometimes, we have systems that evolve with time. We can describe the motion of these systems using parametric equations. In a parametric equation, both $$x$$ and $$y$$ are written in terms of a third variable, usually $$t$$:
 
 $$
 x=f(t),\qquad y=g(t).
@@ -679,13 +750,7 @@ Parametric equations describe both:
 
 To eliminate the parameter, solve one equation for $$t$$ and substitute into the other equation.
 
-For example, if
-
-$$
-x=3t,
-$$
-
-then
+For example, if $$x=3t$$, then
 
 $$
 t=\frac{x}{3}.
@@ -693,102 +758,9 @@ $$
 
 Substituting this into the equation for $$y$$ gives a rectangular equation relating $$x$$ and $$y$$ directly.
 
-The rectangular equation may not show the full behavior of the parametric curve, because the parameter can restrict the domain or determine the direction of travel. Always indicate the allowed domain for $$t$$.
+The rectangular equation may not show the full behavior of the parametric curve, because the parameter can restrict the domain or determine the direction of travel. Always indicate the allowed domain for $$t$$, as well as the direction the graph is moving.
 
-<div class="theorem-box">
-
-**Example.** Consider
-
-$$
-x=3t,\qquad y=\frac12t^2.
-$$
-
-From the first equation,
-
-$$
-t=\frac{x}{3}.
-$$
-
-Substitute into the equation for $$y$$:
-
-$$
-y=\frac12\left(\frac{x}{3}\right)^2.
-$$
-
-So
-
-$$
-y=\frac{x^2}{18}.
-$$
-
-This is a parabola. However, if the parameter is restricted, such as $$0\le t\le 2$$, then the graph only includes the portion where
-
-$$
-0\le x\le 6.
-$$
-
-```tikz
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
-\begin{tikzpicture}
-\begin{axis}[
-  axis lines=middle, xmin=-0.5, xmax=7, ymin=-0.5, ymax=2.5,
-  xtick={0,3,6}, ytick={0,1,2},
-  grid=both, grid style={gray!18},
-  width=8.5cm, height=5.8cm,
-  xlabel=$x$, ylabel=$y$,
-]
-\addplot[blue, very thick, samples=120, domain=0:2]
-  ({3*x},{0.5*x^2});
-\addplot[->, orange!85!black, very thick] coordinates {(2.7,0.42) (3.45,0.68)};
-\addplot[only marks, mark=*, mark size=1.6pt, orange!85!black] coordinates {(0,0) (3,0.5) (6,2)};
-\end{axis}
-\end{tikzpicture}
-```
-
-</div>
-
-### Trig parametrizations
-
-The identity
-
-$$
-\sin^2 t+\cos^2 t=1
-$$
-
-is often used to eliminate a parameter from trig parametrizations.
-
-For a circle centered at the origin with radius $$a$$:
-
-$$
-x=a\cos t,\qquad y=a\sin t.
-$$
-
-Eliminating $$t$$ gives
-
-$$
-\left(\frac{x}{a}\right)^2+\left(\frac{y}{a}\right)^2=1,
-$$
-
-or
-
-$$
-x^2+y^2=a^2.
-$$
-
-For an ellipse centered at the origin:
-
-$$
-x=a\cos t,\qquad y=b\sin t.
-$$
-
-Eliminating $$t$$ gives
-
-$$
-\frac{x^2}{a^2}+\frac{y^2}{b^2}=1.
-$$
-
-Switching sine and cosine, or making one coefficient negative, can change where the graph starts and which direction it is traced, but the rectangular equation may stay the same.
+When dealing with trig, we cbn often use the identity $$\sin^2 t+\cos^2 t=1$$ (or equivalent expressions with the other trig functions) to eliminate the parameter
 
 :::strategy
 1. Isolate the two trig expressions (e.g. $$\cos t = \frac{x}{a}$$).
@@ -798,31 +770,33 @@ Switching sine and cosine, or making one coefficient negative, can change where 
 
 <div class="theorem-box">
 
-**Example.** For
+**Example.** Eliminate the parameter from $$x=t^2-1$$, $$y=t^3-t$$ for $$-2\le t\le1$$, and describe exactly which portions of the resulting curve are traced.
+
+Since $$y=t(t^2-1)=tx$$ and $$t^2=x+1$$, squaring gives
 
 $$
-x=-3\sin t,\qquad y=4\cos t,
+y^2=x^2(x+1).
 $$
 
-divide each equation by its coefficient:
+However, this equation alone includes points the parameter never reaches. The possible $$x$$ values are $$-1\le x\le3$$. For $$-1\le x\le0$$, both signs of $$t=\pm\sqrt{x+1}$$ occur, so both values $$y=\pm x\sqrt{x+1}$$ appear. For $$0<x\le3$$, only the negative parameter is allowed, so only $$y=-x\sqrt{x+1}$$ appears.
+
+As $$t$$ increases, the curve moves from $$(3,-6)$$ through $$(0,0)$$ at $$t=-1$$, then to $$(-1,0)$$ at $$t=0$$, and back to $$(0,0)$$ at $$t=1$$. Squaring preserved the equation but lost both the branch restriction and the repeated visit to the origin.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Eliminate the parameter from $$x=2+3\cos t$$, $$y=-1+2\sin t$$ for $$-\pi/2\le t\le\pi/3$$, and identify the arc and orientation.
+
+Isolate sine and cosine and square:
 
 $$
-\frac{x}{-3}=\sin t,\qquad \frac{y}{4}=\cos t.
+\frac{(x-2)^2}{9}+\frac{(y+1)^2}{4}=1.
 $$
 
-Now square and add:
+The full equation is an ellipse, but $$\cos t\ge0$$ on the allowed interval, so $$x\ge2$$. Also $$\sin t$$ increases from $$-1$$ to $$\sqrt3/2$$, so $$-3\le y\le\sqrt3-1$$. These restrictions select exactly the required arc of the right half of the ellipse.
 
-$$
-\left(\frac{x}{-3}\right)^2+\left(\frac{y}{4}\right)^2=\sin^2t+\cos^2t.
-$$
-
-So
-
-$$
-\frac{x^2}{9}+\frac{y^2}{16}=1.
-$$
-
-The graph is an ellipse centered at the origin.
+The motion starts at $$(2,-3)$$, passes through $$(5,-1)$$, and ends at $$(7/2,\sqrt3-1)$$. It follows the ellipse counterclockwise, even though $$x$$ first increases and then decreases.
 
 </div>
 
@@ -836,15 +810,68 @@ The graph is an ellipse centered at the origin.
 5. An alternative is to solve for the combined equation and then graph that equation on the **allowed domain** and then draw the direction arrows.
 :::
 
+::::problem
+**Parametric practice A.** For $$x=2t/(1+t^2)$$ and $$y=(1-t^2)/(1+t^2)$$, $$-1\le t\le2$$, eliminate the parameter. Identify the exact arc, endpoints, and direction, and sketch the graph.
+
+:::solution
+Combining squares gives $$x^2+y^2=1$$. Write $$\phi=2\tan^{-1}t$$; then $$x=\sin\phi$$ and $$y=\cos\phi$$. As $$t$$ increases, $$\phi$$ increases from $$-\pi/2$$ to $$2\tan^{-1}2$$. Because the coordinates are $$\sin\phi,\cos\phi$$ in that order, the curve moves clockwise from $$(-1,0)$$ through $$(0,1)$$ and $$(1,0)$$ to $$(4/5,-3/5)$$. The remainder of the unit circle is not traced.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth, scale=2]
+\draw[->, gray!70] (-1.4,0) -- (1.5,0) node[right] {$x$};
+\draw[->, gray!70] (0,-1.35) -- (0,1.45) node[above] {$y$};
+\draw[gray!50, dashed] (0,0) circle (1);
+\draw[blue, very thick, domain=-1:2, samples=161] plot ({2*\x/(1+\x*\x)},{(1-\x*\x)/(1+\x*\x)});
+\draw[blue, thick, ->] ({cos(60)},{sin(60)}) arc (60:40:1);
+\fill (-1,0) circle (0.9pt) node[below left] {$(-1,0)$};
+\fill (0.8,-0.6) circle (0.9pt) node[below right] {$(4/5,-3/5)$};
+\end{tikzpicture}
+```
+:::
+::::
+
+::::problem
+**Parametric practice B.** Sketch $$x=2\cos t$$, $$y=\sin(2t)$$ for $$0\le t\le2\pi$$. Eliminate the parameter, find every visit to the origin, and explain why the rectangular equation alone cannot specify the direction.
+
+:::solution
+Since $$y=2\sin t\cos t=x\sin t$$,
+
+$$
+y^2=x^2\left(1-\frac{x^2}{4}\right),\qquad -2\le x\le2.
+$$
+
+The origin occurs at $$t=\pi/2$$ and $$3\pi/2$$. The route is $$(2,0)\to(\sqrt2,1)\to(0,0)\to(-\sqrt2,-1)\to(-2,0)\to(-\sqrt2,1)\to(0,0)\to(\sqrt2,-1)\to(2,0)$$ at consecutive multiples of $$\pi/4$$. The equation gives the figure-eight point set, while the parameter gives the order and distinguishes the two passages through the crossing.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth, scale=1.35]
+\draw[->, gray!70] (-2.5,0) -- (2.6,0) node[right] {$x$};
+\draw[->, gray!70] (0,-1.4) -- (0,1.5) node[above] {$y$};
+\draw[blue, very thick, domain=0:360, samples=361] plot ({2*cos(\x)},{sin(2*\x)});
+\draw[blue, thick, ->, domain=25:40, samples=20] plot ({2*cos(\x)},{sin(2*\x)});
+\draw[blue, thick, ->, domain=205:220, samples=20] plot ({2*cos(\x)},{sin(2*\x)});
+\fill (2,0) circle (1.5pt) node[below right] {start};
+\end{tikzpicture}
+```
+:::
+::::
+
 ---
 
 ## Polar Coordinates
 
-In rectangular coordinates, a point is written as
+### Introduction to polar coordinates
+
+In rectangular coordinates, we write points as
 
 $$
 (x,y).
 $$
+
+When a problem is organized around distance from a fixed point and direction, polar coordinates often make the geometry shorter to describe. A circle centered at the origin becomes $$r=R$$, and rotating a point becomes adding an angle. Spirals, radial motion, and many symmetric curves are easier to express this way than as $$y=f(x)$$.
 
 In polar coordinates, a point is written as
 
@@ -854,10 +881,10 @@ $$
 
 where:
 
-- $$r$$ is the directed distance from the pole,
-- $$\theta$$ is the angle from the polar axis.
+- $$r$$ is the directed distance from the pole (the origin),
+- $$\theta$$ is the angle from the polar axis (the positive $$x$$-axis)
 
-The pole is the origin, and the polar axis is the positive $$x$$-axis. Polar coordinates are very useful when dealing with circular shapes.
+A negative radius means that you are going in the *opposite* direction of the angle.
 
 ```tikz
 \usepackage{tikz}
@@ -875,61 +902,18 @@ The pole is the origin, and the polar axis is the positive $$x$$-axis. Polar coo
 \fill (O) circle (2pt) node[below right] {pole};
 \fill[blue] (P) circle (2pt) node[above right] {$(r,\theta)$};
 \fill[red!75!black] (Q) circle (2pt) node[below left] {$(-r,\theta)$};
-\node[align=center, font=\small] at (-1.65,2.45) {negative radius\\plots opposite};
 \end{tikzpicture}
 ```
 
-### Multiple representations
-
-Every polar point has infinitely many representations.
-
-For any integer $$k$$,
-
-$$
-(r,\theta)=(r,\theta+2k\pi).
-$$
-
-A point can also be represented using a negative radius:
-
-$$
-(r,\theta)=(-r,\theta+(2k+1)\pi).
-$$
-
-A negative value of $$r$$ means the point is plotted in the direction opposite the angle $$\theta$$.
-
-<div class="theorem-box">
-
-**Example.** Find two points that are the same point as $$\left(4,\frac{\pi}{3}\right)$$.
-
-The polar points
-
-$$
-\left(4,\frac{\pi}{3}\right),\qquad
-\left(4,\frac{\pi}{3}+2\pi\right),\qquad
-\left(-4,\frac{4\pi}{3}\right)
-$$
-
-all represent the same point.
-
-The first two use the same radius and coterminal angles. The third uses a negative radius, so it points in the opposite direction from $$\frac{4\pi}{3}$$, which lands at angle $$\frac{\pi}{3}$$.
-
-</div>
-
 ### Converting between polar and rectangular form
 
-The main conversion formulas are
+To convert between polar and rectangular, we can use the following set of conversions:
 
 $$
-x=r\cos\theta
+x=r\cos\theta \text{ and } y=r\sin\theta.
 $$
 
-and
-
-$$
-y=r\sin\theta.
-$$
-
-Also,
+Also, we have
 
 $$
 x^2+y^2=r^2
@@ -941,31 +925,29 @@ $$
 \tan\theta=\frac{y}{x}.
 $$
 
-When converting from rectangular to polar form, use
-
-$$
-r=\sqrt{x^2+y^2}
-$$
-
-and choose $$\theta$$ based on the quadrant of the point.
-
 <div class="theorem-box">
 
-**Proof (Conversion formulas).** Prove the conversion formulas above.
+**Proof (Conversion formulas).** A polar point $$(r,\theta)$$ forms a right triangle with horizontal leg $$x$$, vertical leg $$y$$, and hypotenuse $$r$$.
 
-A polar point $$(r,\theta)$$ forms a right triangle with horizontal leg $$x$$, vertical leg $$y$$, and hypotenuse $$r$$.
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\draw[->, gray!70] (-0.5,0) -- (4.8,0) node[right] {$x$};
+\draw[->, gray!70] (0,-0.5) -- (0,3.6) node[above] {$y$};
+\draw[blue, very thick, ->] (0,0) -- (3.6,2.4) node[midway, above left] {$r$};
+\draw[orange!85!black, thick] (0,0) -- (3.6,0) node[midway, below] {$x=r\cos\theta$};
+\draw[orange!85!black, dashed, thick] (3.6,0) -- (3.6,2.4) node[midway, right] {$y=r\sin\theta$};
+\draw (3.35,0) -- (3.35,0.25) -- (3.6,0.25);
+\draw (0.65,0) arc (0:33.69:0.65);
+\node at (1.05,0.27) {$\theta$};
+\fill (3.6,2.4) circle (2pt) node[above right] {$P=(x,y)$};
+\end{tikzpicture}
+```
 
-By right triangle trig,
+The picture uses $$r>0$$ in Quadrant I. Signed components extend $$x=r\cos\theta$$ and $$y=r\sin\theta$$ to every quadrant and to negative $$r$$. At the pole, the angle is arbitrary; the ratio $$y/x$$ requires $$x\ne0$$.
 
-$$
-\cos\theta=\frac{x}{r}
-$$
-
-and
-
-$$
-\sin\theta=\frac{y}{r}.
-$$
+By right triangle trig, $$\cos\theta=\frac{x}{r}$$ and $$\sin\theta=\frac{y}{r}$$.
 
 Multiplying by $$r$$ gives
 
@@ -1023,9 +1005,64 @@ $$
 
 </div>
 
-### Polar equations
+However, as you may remember, trigonometry (which is used to convert from polar to cartesian and vice versa) is periodic, meaning that multiple angles can produce the same value. Thus, a polar point has infinitely many representations.
 
-To convert a polar equation into rectangular form, use:
+For any integer $$k$$,
+
+$$
+(r,\theta)=(r,\theta+2k\pi).
+$$
+
+A point can also be represented using a negative radius:
+
+$$
+(r,\theta)=(-r,\theta+(2k+1)\pi).
+$$
+
+<div class="theorem-box">
+
+**Example.** Find two points that are the same point as $$\left(4,\frac{\pi}{3}\right)$$.
+
+The polar points
+
+$$
+\left(4,\frac{\pi}{3}\right),\qquad
+\left(4,\frac{\pi}{3}+2\pi\right),\qquad
+\left(-4,\frac{4\pi}{3}\right)
+$$
+
+all represent the same point.
+
+The first two use the same radius and coterminal angles. The third uses a negative radius, so it points in the opposite direction from $$\frac{4\pi}{3}$$, which lands at angle $$\frac{\pi}{3}$$.
+
+</div>
+
+### Rotating points and curves
+
+To rotate a point counterclockwise through angle $$\alpha$$ about the pole, keep its radius and add the angle:
+
+$$
+(r,\theta)\longmapsto(r,\theta+\alpha).
+$$
+
+Clockwise rotation uses a negative $$\alpha$$. Combining this with the angle-sum identities gives the rectangular rule
+
+$$
+\begin{aligned}
+x'&=x\cos\alpha-y\sin\alpha,\\
+y'&=x\sin\alpha+y\cos\alpha.
+\end{aligned}
+$$
+
+For example, rotating $$(2,-1)$$ counterclockwise by $$\pi/2$$ gives $$(1,2)$$. For a whole polar curve $$r=f(\theta)$$, counterclockwise rotation by $$\alpha$$ instead gives $$r=f(\theta-\alpha)$$: a point at the new angle $$\theta$$ has the radius the old curve had at $$\theta-\alpha$$.
+
+:::warning
+Rotating a point adds $$\alpha$$ to its angle, while rotating a curve's equation replaces $$\theta$$ with $$\theta-\alpha$$. These are two descriptions of the same motion.
+:::
+
+### Converting equations
+
+Using the polar-Cartesian conversion formulas, we can swap between polar and rectangular forms of equations
 
 $$
 x=r\cos\theta,\qquad y=r\sin\theta,\qquad r^2=x^2+y^2.
@@ -1047,60 +1084,56 @@ $$
 
 <div class="theorem-box">
 
-**Example.** Convert
+**Example.** Convert $$r=\frac{6\cos\theta-4\sin\theta}{1+3\sin^2\theta}$$ to rectangular form and identify the curve.
+
+The denominator is always positive. Multiply by it and then by $$r$$ to create the coordinate substitutions:
 
 $$
-r\sin\left(\theta+\frac{\pi}{4}\right)=6
+\begin{aligned}
+r+3r\sin^2\theta&=6\cos\theta-4\sin\theta,\\
+r^2+3r^2\sin^2\theta&=6r\cos\theta-4r\sin\theta,\\
+x^2+4y^2&=6x-4y.
+\end{aligned}
 $$
 
-to rectangular form.
-
-Use the angle-sum identity:
+Completing the squares gives
 
 $$
-\sin\left(\theta+\frac{\pi}{4}\right)
-=\sin\theta\cos\frac{\pi}{4}+\cos\theta\sin\frac{\pi}{4}.
+(x-3)^2+4\left(y+\frac12\right)^2=10.
 $$
 
-So
+This is an ellipse centered at $$(3,-1/2)$$. Multiplying by $$r$$ can add the pole, so check it in the original equation: the numerator vanishes when $$\tan\theta=3/2$$, making $$r=0$$ valid. No extra point was added.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Convert $$(x-2)^2+(y+1)^2=5$$ to a single explicit polar equation, and explain what happens if you divide by $$r$$.
+
+Expand before substituting:
 
 $$
-r\left(\sin\theta\cdot\frac{\sqrt2}{2}+\cos\theta\cdot\frac{\sqrt2}{2}\right)=6.
+x^2+y^2-4x+2y=0
+\quad\Longrightarrow\quad
+r(r-4\cos\theta+2\sin\theta)=0.
 $$
 
-Distribute $$r$$:
+For nonzero $$r$$, the equation is $$r=4\cos\theta-2\sin\theta$$. This explicit equation still represents the pole, because some angles make its right side zero. It therefore traces the entire circle, including the point that division by $$r$$ temporarily excluded.
+
+The same equation can be written as
 
 $$
-\frac{\sqrt2}{2}r\sin\theta+\frac{\sqrt2}{2}r\cos\theta=6.
+r=2\sqrt5\cos(\theta+\alpha),\qquad
+\alpha=\tan^{-1}\frac12.
 $$
 
-Substitute $$r\sin\theta=y$$ and $$r\cos\theta=x$$:
-
-$$
-\frac{\sqrt2}{2}y+\frac{\sqrt2}{2}x=6.
-$$
-
-Multiply by $$\sqrt2$$:
-
-$$
-x+y=6\sqrt2.
-$$
+Its center is $$\sqrt5$$ units from the pole at angle $$-\alpha$$, matching $$(2,-1)$$. If you restrict to $$r\ge0$$, use an interval where $$\cos(\theta+\alpha)\ge0$$.
 
 </div>
 
 ### Distance in polar coordinates
 
-If two points are written in polar form as
-
-$$
-P(r_1,\theta_1)
-$$
-
-and
-
-$$
-Q(r_2,\theta_2),
-$$
+If two points are written in polar form as $$P(r_1,\theta_1)$$ and $$Q(r_2,\theta_2)$$,
 
 then the distance between them is
 
@@ -1134,7 +1167,25 @@ $$
 
 </div>
 
-### Circles in polar coordinates
+The polar distance formula uses only the two radii and their angle difference. If both points rotate by the same angle, their separation stays unchanged, and this is immediately visible because $$\theta_2-\theta_1$$ does not change. It also avoids expanding four separate sine and cosine coordinates. The algebraic formula remains valid for signed radii, although the triangle proof above first assumes nonnegative radii.
+
+<div class="theorem-box">
+
+**Example.** Two points move with polar coordinates $$P=(6,t)$$ and $$Q=(-4,2t)$$ for $$0\le t<2\pi$$. Find their minimum and maximum separation, and all times when their separation is $$2\sqrt{13}$$.
+
+Keep the negative radius when substituting:
+
+$$
+d^2=6^2+(-4)^2-2(6)(-4)\cos(2t-t)=52+48\cos t.
+$$
+
+Because $$-1\le\cos t\le1$$, the squared distance ranges from $$4$$ to $$100$$. The minimum is $$d=2$$ at $$t=\pi$$, and the maximum is $$d=10$$ at $$t=0$$. A negative radius does not mean a negative length; at $$t=0$$ the points are on opposite sides of the pole.
+
+Finally, $$d=2\sqrt{13}$$ means $$d^2=52$$, so $$\cos t=0$$. The requested times are $$t=\pi/2$$ and $$3\pi/2$$.
+
+</div>
+
+### Circles and lines in polar coordinates
 
 A circle with center $$(r_0,\theta_0)$$ and radius $$a$$ can be written using
 
@@ -1206,17 +1257,7 @@ $$
 
 <div class="theorem-box">
 
-**Example.** A line is tangent to the circle
-
-$$
-x^2+y^2=36
-$$
-
-at the point
-
-$$
-(-3,-3\sqrt3).
-$$
+**Example.** A line is tangent to the circle $$x^2+y^2=36$$ at the point $$(-3,-3\sqrt3).$$ Find the equation of the line.
 
 The circle has radius $$6$$, so the point of tangency is $$6$$ units from the origin. The point lies at angle $$\frac{4\pi}{3}$$, so the closest point on the tangent line to the pole is
 
@@ -1230,17 +1271,15 @@ $$
 6=r\cos\left(\theta-\frac{4\pi}{3}\right).
 $$
 
+You can also begin with the tangent $$x=6$$ at $$(6,0)$$. Its polar equation is $$r\cos\theta=6$$. Rotate the entire picture counterclockwise by $$4\pi/3$$, replacing $$\theta$$ with $$\theta-4\pi/3$$. This gives exactly $$r\cos(\theta-4\pi/3)=6$$, with the tangency point rotated to $$(-3,-3\sqrt3)$$.
+
 </div>
 
 ---
 
 ## Curves in Polar Coordinates
 
-A polar curve is written as
-
-$$
-r=f(\theta).
-$$
+When writing curves in polar form, we don't write it as $$y=f(x)$$. Instead, we use $$r=f(\theta)$$ (Sometimes functions are defined implicitly so $$r$$ and $$\theta$$ are correlated on the same side).
 
 :::strategy
 1. Make a table of $$\theta$$ and $$r$$ values, and draw a helper $$r$$ vs. $$\theta$$ graph if necessary.
@@ -1253,13 +1292,13 @@ However, it is also very helpful to know some of the most common types of polar 
 
 ### Spirals
 
-An equation like
+Spirals have equations in the form
 
 $$
 r=a\theta
 $$
 
-creates a spiral. As $$\theta$$ increases, $$r$$ changes, so the point moves farther from or closer to the pole.
+As $$\theta$$ increases, $$r$$ changes, so the point moves farther from or closer to the pole. These spirals are also known as Archimedian Spirals (as you may remember from *Spider-Man: No Way Home*).
 
 <div class="theorem-box">
 
@@ -1299,39 +1338,19 @@ A graph of the function is shown below:
 
 </div>
 
-### Cardioids and limacons
+### Cardioids and limaçons
 
-Equations of the form
-
-$$
-r=a+b\sin\theta
-$$
-
-or
+A limaçon is a type of curve with the equation
 
 $$
-r=a+b\cos\theta
+r=a+b\sin\theta \text{ or } r=a+b\cos\theta.
 $$
 
-create limacons.
+If a limaçon uses $$\sin$$, it is symmetrical over the $$y$$-axis, and if it uses $$\cos$$, it is symmetrical over the $$x$$-axis.
 
-If
+If $$\lvert a \rvert = \lvert b \rvert$$, the graph is a special curve known as a **cardioid**.
 
-$$
-\lvert a \rvert = \lvert b \rvert,
-$$
-
-the graph is a **cardioid**.
-
-If
-
-$$
-\lvert a \rvert < \lvert b \rvert
-$$
-
-the graph has an inner loop.
-
-If the equation uses sine, the main symmetry is usually vertical. If the equation uses cosine, the main symmetry is usually horizontal.
+If $$\lvert a \rvert < \lvert b \rvert$$, the graph has an inner loop.
 
 A list of common limacon shapes is shown below (note that a circle is technically a limacon as well):
 
@@ -1359,15 +1378,23 @@ A list of common limacon shapes is shown below (note that a circle is technicall
 
 **Example.** Graph $$r=2+4\cos\theta.$$
 
-Here $$a=2$$ and $$b=4$$. Since
-
-$$
-\lvert a \rvert < \lvert b \rvert,
-$$
-
-the graph is a limacon with an inner loop.
+Here $$a=2$$ and $$b=4$$. Since $$\lvert a \rvert < \lvert b \rvert$$, the graph is a limacon with an inner loop.
 
 Since the equation uses cosine, the graph has symmetry across the polar axis.
+
+The helper graph is the ordinary cosine graph $$r=2+4\cos\theta$$. Include the zeros as well as its maximum and minimum:
+
+| $$\theta$$ | $$r$$ | Polar-graph feature |
+|---|---|---|
+| $$0$$ | $$6$$ | Outer tip $$(6,0)$$ |
+| $$\pi/2$$ | $$2$$ | Point $$(0,2)$$ |
+| $$2\pi/3$$ | $$0$$ | First passage through the pole |
+| $$\pi$$ | $$-2$$ | Inner-loop tip $$(2,0)$$ |
+| $$4\pi/3$$ | $$0$$ | Second passage through the pole |
+| $$3\pi/2$$ | $$2$$ | Point $$(0,-2)$$ |
+| $$2\pi$$ | $$6$$ | Return to the outer tip |
+
+The interval $$2\pi/3<\theta<4\pi/3$$ has negative radius and traces the inner loop on the right of the pole.
 
 A graph of the function is shown below:
 
@@ -1396,14 +1423,30 @@ A graph of the function is shown below:
 Rose curves have the form
 
 $$
-r=a\sin(n\theta)
+r=a\sin(n\theta) \text{ or } r=a\cos(n\theta).
 $$
 
-or
+For positive integer $$n$$, a cosine rose is symmetric about the polar axis, and a sine rose is symmetric about the $$y$$-axis. A sine rose is also a rotated version of the corresponding cosine rose, since $$\sin(n\theta)=\cos(n(\theta-\pi/(2n)))$$. These need not be their only symmetry axes; for example, $$r=\sin(2\theta)$$ has diagonal petals and symmetry about both coordinate axes.
 
-$$
-r=a\cos(n\theta).
-$$
+```tikz
+\usepackage{tikz}
+\begin{tikzpicture}[scale=0.9]
+\begin{scope}
+\draw[->, gray!60] (-3.5,0) -- (3.6,0);
+\draw[->, gray!60] (0,-3.4) -- (0,3.6);
+\draw[blue, very thick, domain=0:180, samples=361] plot ({3*cos(3*\x)*cos(\x)},{3*cos(3*\x)*sin(\x)});
+\node at (0,4.1) {$r=3\cos(3\theta)$};
+\end{scope}
+\begin{scope}[xshift=8cm]
+\draw[->, gray!60] (-3.5,0) -- (3.6,0);
+\draw[->, gray!60] (0,-3.4) -- (0,3.6);
+\draw[red!75!black, very thick, domain=0:180, samples=361] plot ({3*sin(3*\x)*cos(\x)},{3*sin(3*\x)*sin(\x)});
+\node at (0,4.1) {$r=3\sin(3\theta)$};
+\end{scope}
+\end{tikzpicture}
+```
+
+The sine graph above is the cosine graph rotated counterclockwise by $$\pi/6$$. The petal-count rule below assumes $$n$$ is a positive integer.
 
 The number of petals depends on $$n$$:
 
@@ -1418,31 +1461,27 @@ $$
 
 The value $$\lvert a \rvert$$ controls the length of each petal.
 
-<div class="theorem-box">
-
-**Proof (Rose petal count formula).** The helper graph
-
-$$
-y=a\sin(n\theta)
-$$
-
-has period
-
-$$
-\frac{2\pi}{n}.
-$$
-
-For odd $$n$$, the negative radius portions trace the same petals that the positive radius portions already traced, so there are $$n$$ petals total.
-
-For even $$n$$, the negative radius portions trace new petals, so there are $$2n$$ petals total.
-
-</div>
+Why is the cases for the odd and even petals different? The helper graph $$y=a\sin(n\theta)$$ (and the cosine version as well) has period $$\frac{2\pi}{n}.$$ For odd $$n$$, the negative radius portions trace the same petals that the positive radius portions already traced, so there are $$n$$ petals total. For even $$n$$, the negative radius portions trace new petals, so there are $$2n$$ petals total.
 
 <div class="theorem-box">
 
 **Example.** Draw the rose curve $$r=4\sin(3\theta)$$.
 
 For this curve, the value of $$n$$ is $$3$$, which is odd. Therefore, the rose curve has $$3$$ petals, and each petal has length $$4$$.
+
+The helper graph $$r=4\sin(3\theta)$$ has period $$2\pi/3$$. These points track one complete positive petal and the beginning of a negative-radius petal:
+
+| $$\theta$$ | $$3\theta$$ | $$r$$ | What happens |
+|---|---|---|---|
+| $$0$$ | $$0$$ | $$0$$ | Start at the pole |
+| $$\pi/12$$ | $$\pi/4$$ | $$2\sqrt2$$ | Move outward |
+| $$\pi/6$$ | $$\pi/2$$ | $$4$$ | First petal tip |
+| $$\pi/4$$ | $$3\pi/4$$ | $$2\sqrt2$$ | Move inward |
+| $$\pi/3$$ | $$\pi$$ | $$0$$ | Complete the first petal |
+| $$\pi/2$$ | $$3\pi/2$$ | $$-4$$ | Tip on the ray $$\theta=3\pi/2$$ |
+| $$2\pi/3$$ | $$2\pi$$ | $$0$$ | Return to the pole |
+
+The remaining positive petal has its tip at $$\theta=5\pi/6$$. The interval $$0\le\theta\le\pi$$ traces all three petals once; continuing to $$2\pi$$ retraces them.
 
 To draw the rose, start at $$\theta=0$$ (point $$0,0$$) and start plotting points along a polar graph. Once you draw one petal, repeat for the other two petals and make sure they are evenly spread out.
 
@@ -1473,22 +1512,40 @@ A graph of the function is shown below:
 Lemniscates are figure-eight shaped curves. Common forms include
 
 $$
-r^2=a^2\cos(2\theta)
+r^2=a^2\cos(2\theta) \text{ and } r^2=a^2\sin(2\theta).
 $$
 
-and
+Since $$r^2$$ cannot be negative, only angles that make the right side nonnegative appear on the graph. The positive cosine form has loops along the $$x$$-axis, while the positive sine form has loops along $$\theta=\pi/4$$ and $$5\pi/4$$, on the line $$y=x$$. Each also has symmetry across the line perpendicular to its loop axis.
 
-$$
-r^2=a^2\sin(2\theta).
-$$
+What if we use $$-a^2$$ instead of $$a^2$$? This will rotate the graph $$\frac{\pi}{2}$$.
 
-Because $$r^2$$ cannot be negative, only angles that make the right side nonnegative appear on the graph.
+<div class="theorem-box">
+
+**Extension.** Prove the statement above.
+
+</div>
 
 <div class="theorem-box">
 
 **Example.** Graph $$r^2=9\sin(2\theta)$$.
 
 For this graph, the maximum value of $$r^2$$ is $$9$$, so the maximum value of $$r$$ is $$3$$.
+
+Use $$r=\sqrt{9\sin(2\theta)}$$ when the right side is nonnegative. The helper graph is $$r^2=9\sin(2\theta)$$, so remember to take a square root before plotting the radius:
+
+| $$\theta$$ | $$r^2$$ | Nonnegative $$r$$ |
+|---|---|---|
+| $$0$$ | $$0$$ | $$0$$ |
+| $$\pi/12$$ | $$9/2$$ | $$3/\sqrt2$$ |
+| $$\pi/4$$ | $$9$$ | $$3$$ |
+| $$5\pi/12$$ | $$9/2$$ | $$3/\sqrt2$$ |
+| $$\pi/2$$ | $$0$$ | $$0$$ |
+| $$3\pi/4$$ | $$-9$$ | No real point |
+| $$\pi$$ | $$0$$ | $$0$$ |
+| $$5\pi/4$$ | $$9$$ | $$3$$ |
+| $$3\pi/2$$ | $$0$$ | $$0$$ |
+
+Nonnegative radii on $$[0,\pi/2]$$ trace the first loop, and those on $$[\pi,3\pi/2]$$ trace the opposite loop. Choosing the negative square root places each point on the opposite loop and adds no new points to the full graph.
 
 The graph is a lemniscate. Since it uses $$\sin(2\theta)$$, its loops lie along the diagonal directions rather than directly on the polar axis.
 
@@ -1520,7 +1577,7 @@ A graph of the lemniscate is shown below:
 
 ## Complex Numbers
 
-A **complex number** has the form
+If you remember from algebra, a **complex number** is any number of the form
 
 $$
 z=a+bi,
@@ -1534,7 +1591,7 @@ $$
 
 The number $$a$$ is the **real part**, and $$b$$ is the **imaginary part**.
 
-The powers of $$i$$ repeat in a cycle:
+A key fact of $$i$$ that we will utilize is that the powers of $$i$$ repeat in a cycle:
 
 $$
 i^1=i,\qquad i^2=-1,\qquad i^3=-i,\qquad i^4=1.
@@ -1544,9 +1601,7 @@ After that, the pattern repeats every four powers.
 
 ### The complex plane
 
-Complex numbers can be graphed on the **complex plane**. The horizontal axis is the real axis, and the vertical axis is the imaginary axis.
-
-The complex number
+Complex numbers can be graphed on the **complex plane**. The horizontal axis is the real axis, and the vertical axis is the imaginary axis. This means that the complex number
 
 $$
 z=a+bi
@@ -1555,30 +1610,24 @@ $$
 corresponds to the point
 
 $$
-(a,b).
+(a,b)
 $$
 
-The magnitude, or **modulus**, of $$z$$ is
+in the plane. The magnitude, or **modulus** (also known as **norm**), of $$z$$ is
 
 $$
 \lvert z\rvert=\sqrt{a^2+b^2}.
 $$
 
-This is the distance from the origin to the point $$(a,b)$$.
+This is the distance from the origin to the point $$(a,b)$$, and is also the norm of the vector from the origin to that point.
 
-The **complex conjugate** of
-
-$$
-z=a+bi
-$$
-
-is defined as
+The **complex conjugate** of $$z=a+bi$$ is defined as
 
 $$
 \overline z=a-bi.
 $$
 
-Multiplying a complex number by its conjugate gives
+Conjugates have the interesting property that multiplying a complex number by its conjugate gives
 
 $$
 z\overline z=(a+bi)(a-bi)=a^2+b^2=\lvert z\rvert^2.
@@ -1586,7 +1635,7 @@ $$
 
 ### Operations with complex numbers
 
-To add or subtract complex numbers, combine real parts with real parts and imaginary parts with imaginary parts like vector components:
+To add or subtract complex numbers, we can combine real parts with real parts and imaginary parts with imaginary parts like vector components:
 
 $$
 (a+bi)+(c+di)=(a+c)+(b+d)i
@@ -1598,7 +1647,7 @@ $$
 (a+bi)-(c+di)=(a-c)+(b-d)i.
 $$
 
-To multiply, distribute and use $$i^2=-1$$:
+To multiply, we can FOIL and treat $$i$$ as a variable before substituting $$i^2=-1$$:
 
 $$
 (a+bi)(c+di)=ac+adi+bci+bdi^2.
@@ -1656,22 +1705,12 @@ $$
 
 Since $$a+bi$$ corresponds to the point $$(a,b)$$, a complex number can also be written using polar coordinates.
 
-Let
-
-$$
-r=\lvert z\rvert=\sqrt{a^2+b^2}.
-$$
+Let $$r=\lvert z\rvert=\sqrt{a^2+b^2}$$.
 
 Let $$\theta$$ be the angle the point makes with the positive real axis. Then
 
 $$
-a=r\cos\theta
-$$
-
-and
-
-$$
-b=r\sin\theta.
+a=r\cos\theta \text{ and } b=r\sin\theta.
 $$
 
 Therefore,
@@ -1698,19 +1737,21 @@ $$
 \operatorname{cis}\theta=\cos\theta+i\sin\theta.
 $$
 
-### Multiplying and dividing in polar form
+### Operations in polar form
 
-Suppose
-
-$$
-z_1=r_1(\cos\alpha+i\sin\alpha)
-$$
-
-and
+Polar form makes multiplication and division easier because it separates the change in magnitude from the change in angle. Addition and subtraction still combine rectangular components. If $$z_1=r_1\operatorname{cis}\alpha$$ and $$z_2=r_2\operatorname{cis}\beta$$, then
 
 $$
-z_2=r_2(\cos\beta+i\sin\beta).
+\begin{aligned}
+z_1\pm z_2
+&=(r_1\cos\alpha\pm r_2\cos\beta)\\
+&\quad+i(r_1\sin\alpha\pm r_2\sin\beta).
+\end{aligned}
 $$
+
+For example, $$2\operatorname{cis}(\pi/3)+2\operatorname{cis}(-\pi/3)=2$$, because the imaginary components cancel. You cannot add the moduli and angles separately: that would incorrectly give $$4\operatorname{cis}0=4$$. If a sum is needed in polar form, combine its components first, then find its modulus and quadrant.
+
+Suppose $$z_1=r_1(\cos\alpha+i\sin\alpha)$$ and $$z_2=r_2(\cos\beta+i\sin\beta)$$.
 
 Then
 
@@ -1730,8 +1771,6 @@ $$
 where $$z_2\ne 0$$.
 
 In words, when dividing, divide the moduli and subtract the angles.
-
-These two operations show why polar form for complex numbers is sometimes preferred.
 
 <div class="theorem-box">
 
@@ -1771,6 +1810,22 @@ $$
 z_1z_2=r_1r_2\left(\cos(\alpha+\beta)+i\sin(\alpha+\beta)\right).
 $$
 
+For example, multiplying $$z_1=2\operatorname{cis}(\pi/6)$$ by $$z_2=\frac32\operatorname{cis}(\pi/3)$$ stretches its vector by $$3/2$$ and rotates it by $$\pi/3$$. The product is $$3\operatorname{cis}(\pi/2)=3i$$. These are position vectors in the complex plane; the multiplication is complex multiplication, not a dot product.
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth, scale=1.15]
+\draw[->, gray!70] (-0.8,0) -- (3.2,0) node[right] {Re};
+\draw[->, gray!70] (0,-0.6) -- (0,3.8) node[above] {Im};
+\draw[blue, very thick, ->] (0,0) -- ({sqrt(3)},1) node[right] {$z_1$};
+\draw[orange!85!black, very thick, ->] (0,0) -- (0.75,{3*sqrt(3)/4}) node[above right] {$z_2$};
+\draw[green!45!black, very thick, ->] (0,0) -- (0,3) node[above left] {$z_1z_2=3i$};
+\draw[red!75!black, ->] ({2.5*cos(30)},{2.5*sin(30)}) arc (30:90:2.5);
+\node[red!75!black] at (1.65,2.65) {rotate by $\pi/3$};
+\end{tikzpicture}
+```
+
 </div>
 
 <div class="theorem-box">
@@ -1781,35 +1836,36 @@ $$
 
 <div class="theorem-box">
 
-**Example.** Multiply
+**Example.** Simplify $$Z=\frac{(\sqrt3+i)^4(1-i)^3}{(-2i)^2}$$ in polar and rectangular form, giving its argument in $$[0,2\pi)$$.
+
+The three bases are $$2\operatorname{cis}(\pi/6)$$, $$\sqrt2\operatorname{cis}(-\pi/4)$$, and $$2\operatorname{cis}(-\pi/2)$$. Repeated multiplication and division give
 
 $$
-z_1=3\left(\cos\frac{\pi}{6}+i\sin\frac{\pi}{6}\right)
+\lvert Z\rvert=\frac{2^4(\sqrt2)^3}{2^2}=8\sqrt2,
+\qquad
+\arg Z=4\frac\pi6-3\frac\pi4-2\left(-\frac\pi2\right)
+=\frac{11\pi}{12}.
 $$
 
-and
+Hence $$Z=8\sqrt2\operatorname{cis}(11\pi/12)$$. The angle-sum identities for $$11\pi/12=3\pi/4+\pi/6$$ give
 
 $$
-z_2=2\left(\cos\frac{\pi}{3}+i\sin\frac{\pi}{3}\right).
+Z=-4(\sqrt3+1)+4(\sqrt3-1)i.
 $$
 
-Multiply the moduli and add the angles:
-
-$$
-z_1z_2=6\left(\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\right)=6i.
-$$
+The quadrant is II, consistent with the negative real and positive imaginary components.
 
 </div>
 
 ### Exponential form of complex numbers
 
-Euler's formula states that
+You may have seen the famous identitiy $$e^{i\pi}=-1$$. This is a result of Euler's formula, which states that
 
 $$
 e^{i\theta}=\cos\theta+i\sin\theta
 $$
 
-A proof of this does require calculus/linear algebra and won't be discussed here.
+A proof of this does require calculus and won't be discussed here.
 
 Therefore, the polar form
 
@@ -1883,39 +1939,26 @@ $$
 
 <div class="theorem-box">
 
-**Example.** Write
+**Example.** Express $$Z=\frac{(-1+\sqrt3i)^5}{(1+i)^4(-i)}$$ in exponential and rectangular form, using a principal argument in $$(-\pi,\pi]$$.
+
+Use $$-1+\sqrt3i=2e^{2\pi i/3}$$, $$1+i=\sqrt2e^{\pi i/4}$$, and $$-i=e^{-\pi i/2}$$. Then
 
 $$
-z=-1+\sqrt3i
+Z=\frac{32e^{10\pi i/3}}{4e^{\pi i}e^{-\pi i/2}}
+=8e^{17\pi i/6}=8e^{5\pi i/6}.
 $$
 
-in polar form.
-
-First find the modulus:
-
-$$
-r=\sqrt{(-1)^2+(\sqrt3)^2}=2.
-$$
-
-The point $$(-1,\sqrt3)$$ is in Quadrant II. Since the reference angle is $$\frac{\pi}{3}$$,
-
-$$
-\theta=\frac{2\pi}{3}.
-$$
-
-Thus,
-
-$$
-z=2\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right).
-$$
+The principal argument is $$5\pi/6$$, and $$Z=8(-\sqrt3/2+i/2)=-4\sqrt3+4i$$. Subtracting $$2\pi$$ from an argument changes its representation but not the number.
 
 </div>
 
 ### De Moivre's Theorem
 
-:::key{name="De Moivre's Theorem"}
-If $$z=r(\cos\theta+i\sin\theta)$$, then for any positive integer $$n$$, $$z^n=r^n(\cos(n\theta)+i\sin(n\theta))$$.
-:::
+<div class="theorem-box">
+
+**Theorem.** If $$z=r(\cos\theta+i\sin\theta)$$ is nonzero, then for any integer $$n$$, $$z^n=r^n(\cos(n\theta)+i\sin(n\theta))$$. For $$z=0$$, use only positive integers $$n$$.
+
+</div>
 
 <div class="theorem-box">
 
@@ -1945,7 +1988,7 @@ $$
 z^n=r^n(\cos(n\theta)+i\sin(n\theta)),
 $$
 
-which is De Moivre's Theorem. To reverse De Moivre's Theorem (e.g. solve for roots of a complex number), just swap $$n$$ for $$\frac{1}{n}$$.
+which is De Moivre's Theorem for positive integers. For $$n=0$$ and $$z\ne0$$, both sides equal $$1$$. For negative integers, apply the positive-power rule to $$1/z=r^{-1}\operatorname{cis}(-\theta)$$; this requires $$z\ne0$$.
 
 </div>
 
@@ -1975,13 +2018,7 @@ $$
 (\sqrt2)^6=8
 $$
 
-and
-
-$$
-\frac{6\pi}{4}=\frac{3\pi}{2},
-$$
-
-we get
+and $$\frac{6\pi}{4}=\frac{3\pi}{2}$$, we get
 
 $$
 (1+i)^6=8\left(\cos\frac{3\pi}{2}+i\sin\frac{3\pi}{2}\right)=-8i.
@@ -1991,7 +2028,7 @@ $$
 
 ### Roots of complex numbers
 
-To solve
+What if we want to solve for roots of a number instead of raising it to a power? For an equation
 
 $$
 w^n=z,
@@ -2003,13 +2040,13 @@ $$
 z=r(\cos\theta+i\sin\theta).
 $$
 
-Since angles repeat every $$2\pi$$,
+Since angles repeat every $$2\pi$$ (very important!),
 
 $$
 z=r(\cos(\theta+2k\pi)+i\sin(\theta+2k\pi)).
 $$
 
-The $$n$$ complex roots are
+For nonzero $$z$$ and a positive integer $$n$$, the $$n$$ distinct complex roots are
 
 $$
 w_k=\sqrt[n]{r}\left(\cos\frac{\theta+2k\pi}{n}+i\sin\frac{\theta+2k\pi}{n}\right),
@@ -2021,41 +2058,26 @@ $$
 k=0,1,2,\ldots,n-1.
 $$
 
-This is just a classic example of De Moivre's Theorem.
+This is essentially the reverse of De Moivre's Theorem! If $$z=0$$, the only distinct solution is $$w=0$$, with multiplicity $$n$$.
 
 <div class="theorem-box">
 
-**Example.** Find the cube roots of $$8$$.
+**Example.** Solve $$(w-(1-i))^3=-8i$$, give every solution in rectangular form, and identify the solution in the upper half-plane.
 
-Write
-
-$$
-8=8(\cos0+i\sin0).
-$$
-
-The cube roots are
+Set $$u=w-(1-i)$$. Since $$-8i=8\operatorname{cis}(-\pi/2)$$,
 
 $$
-w_k=2\left(\cos\frac{0+2k\pi}{3}+i\sin\frac{0+2k\pi}{3}\right),
+u_k=2\operatorname{cis}\left(-\frac\pi6+\frac{2k\pi}{3}\right),
+\qquad k=0,1,2.
 $$
 
-where $$k=0,1,2$$.
-
-So the roots are
+These are $$\sqrt3-i$$, $$2i$$, and $$-\sqrt3-i$$. Add $$1-i$$ to each root to undo the translation:
 
 $$
-2,
+w=1+\sqrt3-2i,\qquad 1+i,\qquad 1-\sqrt3-2i.
 $$
 
-$$
-2\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right)=-1+\sqrt3i,
-$$
-
-and
-
-$$
-2\left(\cos\frac{4\pi}{3}+i\sin\frac{4\pi}{3}\right)=-1-\sqrt3i.
-$$
+Only $$1+i$$ has positive imaginary part. The three solutions lie on a circle of radius $$2$$ centered at $$1-i$$, rather than at the origin.
 
 </div>
 
@@ -2103,7 +2125,7 @@ These points all lie on the unit circle because each one has modulus $$1$$, and 
 
 ### Geometry of roots of unity
 
-The $$n$$th roots of unity are evenly spaced around the unit circle.
+For a positive integer $$n$$, the $$n$$th roots of unity are evenly spaced around the unit circle. After $$n$$ steps of angle $$2\pi/n$$, the total rotation is exactly $$2\pi$$.
 
 The angle between consecutive roots is
 
@@ -2178,7 +2200,6 @@ Geometrically, the solutions look like this:
 {
   \fill[red!80!black] \p circle (2pt) node[\pos] {\lab};
 }
-\node[align=center] at (0,-2.0) {fourth roots of unity on the unit circle};
 \end{tikzpicture}
 ```
 
@@ -2186,9 +2207,23 @@ Note that the rendering on the $$y$$-axis shows that it is real, but treat it li
 
 </div>
 
+#### What if the exponent is irrational?
+
+The phrase "the $$n$$th roots of unity" normally assumes $$n$$ is a positive integer, so $$z^n-1$$ is a polynomial with exactly $$n$$ roots. For an irrational exponent $$\alpha$$, complex exponentiation requires a choice of logarithm; the ordinary polynomial root-count rule no longer applies.
+
+For example, define a single value using $$z^\alpha=\exp(\alpha(\ln\lvert z\rvert+i\operatorname{Arg}z))$$ with $$-\pi<\operatorname{Arg}z\le\pi$$. Then $$z^\alpha=1$$ requires
+
+$$
+\lvert z\rvert=1,\qquad
+\operatorname{Arg}z=\frac{2\pi k}{\alpha}
+\quad\text{within the chosen argument interval}.
+$$
+
+For $$\alpha=\sqrt2$$, only $$k=0$$ fits, so this convention gives only $$z=1$$. If instead all possible logarithms are allowed, every $$e^{2\pi ik/\alpha}$$ is a possible solution for some logarithm. When $$\alpha$$ is irrational these points are all distinct: equality for two indices would force $$\alpha$$ to be rational. They do not form a finite regular polygon. This is why the integer assumption matters.
+
 ### Sum and product of roots of unity
 
-For $$n>1$$, the sum of all $$n$$th roots of unity is
+For a positive integer $$n>1$$, let $$\omega=e^{2\pi i/n}$$. Its powers $$1,\omega,\ldots,\omega^{n-1}$$ are all the distinct $$n$$th roots of unity, and their sum is
 
 $$
 1+\omega+\omega^2+\cdots+\omega^{n-1}=0.
@@ -2216,37 +2251,69 @@ Additionally, the product of the $$n$$th roots of unity is $$(-1)^{n+1}$$.
 
 <div class="theorem-box">
 
-**Extension.** Prove that the product of the $$n$$ roots of unity is $$(-1)^{n+1}$$. (Hint: Use dot product!)
+**Extension.** Prove that the product of the $$n$$ roots of unity is $$(-1)^{n+1}$$. (Hint: Add their arguments, or compare the constant term of $$z^n-1$$ with the product of its roots.)
 
 </div>
 
-### Roots of other complex numbers
+<div class="theorem-box">
 
-Roots of unity help organize roots of any nonzero complex number.
-
-If $$w$$ is one $$n$$th root of a complex number $$z$$, then all the other roots are
+**Example.** Let $$\omega=e^{2\pi i/7}$$. Without computing the six nonreal roots individually, find
 
 $$
-w,\quad w\omega,\quad w\omega^2,\quad \ldots,\quad w\omega^{n-1},
+S=\sum_{k=1}^{6}\frac1{1-\omega^k},
+\qquad
+P=\prod_{k=1}^{6}\lvert1-\omega^k\rvert.
 $$
 
-where
+Pair $$k$$ with $$7-k$$. Writing $$u=\omega^k$$, each pair contributes
 
 $$
-\omega=e^{2\pi i/n}.
+\frac1{1-u}+\frac1{1-u^{-1}}
+=\frac1{1-u}-\frac{u}{1-u}=1.
 $$
 
-Multiplying by $$\omega$$ rotates the root by
+There are three pairs, so $$S=3$$. For the product, factor the polynomial whose roots are all seventh roots of unity except $$1$$:
 
 $$
-\frac{2\pi}{n}
+1+z+z^2+\cdots+z^6=\prod_{k=1}^{6}(z-\omega^k).
 $$
 
-without changing its magnitude.
+Substituting $$z=1$$ gives $$\prod_{k=1}^{6}(1-\omega^k)=7$$. Taking moduli gives $$P=7$$. Geometrically, $$P$$ is the product of the six chord lengths from $$1$$ to the other vertices of the regular heptagon.
 
-So the $$n$$ roots of any nonzero complex number also form a regular $$n$$-gon centered at the origin. The sum of the roots is still $$0$$, while the product of the roots is $$(-1)^{n+1}\lvert z \rvert$$.
+</div>
 
 ---
+
+:::equations
+
+| Topic | Equation and conditions |
+|---|---|
+| Law of Sines | $$\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$$ for a nondegenerate triangle with circumradius $$R$$ |
+| Triangle area | $$K=\frac12ab\sin C=\frac12bc\sin A=\frac12ac\sin B$$ |
+| Law of Cosines | $$a^2=b^2+c^2-2bc\cos A$$, with cyclic versions for the other sides |
+| Vector from points | $$\overrightarrow{PQ}=\langle x_Q-x_P,y_Q-y_P\rangle$$ |
+| Vector magnitude and direction | $$\lvert\mathbf v\rvert=\sqrt{v_x^2+v_y^2}$$; $$\mathbf v=\langle\lvert\mathbf v\rvert\cos\theta,\lvert\mathbf v\rvert\sin\theta\rangle$$ |
+| Unit vector | $$\widehat{\mathbf v}=\mathbf v/\lvert\mathbf v\rvert,\quad\mathbf v\ne\mathbf0$$ |
+| Linear combination | $$a\mathbf u+b\mathbf v=\langle au_x+bv_x,au_y+bv_y\rangle$$ |
+| Dot product | $$\mathbf A\cdot\mathbf B=A_xB_x+A_yB_y=\lvert\mathbf A\rvert\lvert\mathbf B\rvert\cos\theta$$ |
+| Scalar and vector projection | $$\operatorname{comp}_{\mathbf B}\mathbf A=\dfrac{\mathbf A\cdot\mathbf B}{\lvert\mathbf B\rvert}$$; $$\operatorname{proj}_{\mathbf B}\mathbf A=\dfrac{\mathbf A\cdot\mathbf B}{\lvert\mathbf B\rvert^2}\mathbf B$$, $$\mathbf B\ne\mathbf0$$ |
+| Parametric curve | $$x=f(t),\ y=g(t)$$; retain the allowed $$t$$ interval, branch restrictions, and orientation |
+| Polar conversion | $$x=r\cos\theta,\ y=r\sin\theta,\ r^2=x^2+y^2$$; $$\tan\theta=y/x$$ when $$x\ne0$$, with quadrant checked |
+| Equivalent polar points | $$(r,\theta)\equiv(r,\theta+2k\pi)\equiv(-r,\theta+(2k+1)\pi),\quad k\in\mathbb Z$$ |
+| Counterclockwise rotation | Point: $$(r,\theta)\mapsto(r,\theta+\alpha)$$; curve: $$r=f(\theta-\alpha)$$ |
+| Rectangular rotation | $$x'=x\cos\alpha-y\sin\alpha,\quad y'=x\sin\alpha+y\cos\alpha$$ |
+| Polar distance | $$d^2=r_1^2+r_2^2-2r_1r_2\cos(\theta_2-\theta_1)$$, valid for signed radii |
+| Circle and line in polar | Circle: $$a^2=r^2+r_0^2-2rr_0\cos(\theta-\theta_0)$$; line: $$r\cos(\theta-\alpha)=d$$ |
+| Common polar curves | Spiral: $$r=a\theta$$; limaçon: $$r=a+b\cos\theta$$ or $$a+b\sin\theta$$; rose: $$r=a\cos(n\theta)$$ or $$a\sin(n\theta)$$ |
+| Rose petals | Positive integer $$n$$: $$n$$ petals if odd, $$2n$$ if even; petal length $$\lvert a\rvert$$ for $$a\ne0$$ |
+| Lemniscates | $$r^2=a^2\cos(2\theta)$$ or $$r^2=a^2\sin(2\theta)$$; the right side must be nonnegative |
+| Complex forms | $$z=a+bi=r\operatorname{cis}\theta=re^{i\theta},\quad r=\sqrt{a^2+b^2}$$ |
+| Complex multiplication/division | $$z_1z_2=r_1r_2\operatorname{cis}(\alpha+\beta)$$; $$z_1/z_2=(r_1/r_2)\operatorname{cis}(\alpha-\beta)$$, $$z_2\ne0$$ |
+| De Moivre | $$(r\operatorname{cis}\theta)^n=r^n\operatorname{cis}(n\theta)$$, integer $$n$$; nonzero base for $$n\le0$$ |
+| Complex roots | $$w_k=r^{1/n}\operatorname{cis}((\theta+2k\pi)/n)$$, $$k=0,\ldots,n-1$$, positive integer $$n$$ and $$r>0$$ |
+| Roots of unity | $$\omega_k=e^{2\pi ik/n}$$; sum $$0$$ for $$n>1$$; product $$(-1)^{n+1}$$ |
+
+:::
 
 ## Practice
 
@@ -2289,9 +2356,32 @@ Therefore, there are **two possible triangles**.
 ::::
 
 ::::problem
-2. A plane is flying above the ocean. The angle of depression to a submarine is $$24^\circ$$, and the angle of depression to a ship is $$17^\circ$$. The distance from the plane to the ship is $$5120$$ feet. Assuming the submarine and ship are in the same vertical plane as the airplane, find the distance between the submarine and the ship.
+2. A plane is flying above the ocean. The angle of depression to a submarine's periscope at the ocean surface is $$24^\circ$$, and the angle of depression to a ship is $$17^\circ$$. The distance from the plane to the ship is $$5120$$ feet. The periscope and ship are in the same vertical plane and on the same side of the point directly below the airplane. Find their horizontal separation.
 
 :::solution
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+\coordinate (P) at (0,2);
+\coordinate (U) at (4.49,0);
+\coordinate (S) at (6.54,0);
+\draw[blue!55] (-0.6,0) -- (7.3,0) node[right] {sea level};
+\draw[dashed, gray!70] (P) -- (7,2);
+\draw[dashed] (P) -- (0,0) node[midway, left] {$h$};
+\draw[orange!85!black, thick] (P) -- (U);
+\draw[blue, thick] (P) -- (S) node[pos=0.82, above right] {$5120$ ft};
+\draw (0.9,2) arc (0:-17:0.9);
+\node at (1.05,2.25) {$17^\circ$};
+\draw (1.4,2) arc (0:-24:1.4);
+\node at (1.55,1.08) {$24^\circ$};
+\fill (P) circle (2pt) node[above left] {plane};
+\fill (U) circle (2pt) node[below] {periscope};
+\fill (S) circle (2pt) node[below] {ship};
+\draw[<->] (4.49,-0.85) -- (6.54,-0.85) node[midway, below] {$d$};
+\end{tikzpicture}
+```
+
 The plane-to-ship distance is $$5120$$ ft, and the angle of depression to the ship is $$17^\circ$$. So the plane's height is
 
 $$
@@ -2322,6 +2412,28 @@ $$
 3. Two towns $$A$$ and $$B$$ are $$1.4$$ miles apart, with $$B$$ due east of $$A$$. A signal is detected on a bearing of $$S22^\circ E$$ from $$A$$ and $$S43^\circ W$$ from $$B$$. Draw a labeled diagram and find the distance from each town to the signal.
 
 :::solution
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4.2,0);
+\coordinate (S) at (1.269,-3.141);
+\draw[thick] (A) -- (B) node[midway, above] {$1.4$ miles (east)};
+\draw[blue, thick] (A) -- (S);
+\draw[red!75!black, thick] (B) -- (S);
+\draw[dashed, gray!70, ->] (A) -- (0,-2.5) node[below] {S};
+\draw[dashed, gray!70, ->] (B) -- (4.2,-2.5) node[below] {S};
+\draw (0,-0.9) arc (-90:-68:0.9);
+\node at (0.32,-1.65) {$22^\circ$};
+\draw (4.2,-0.9) arc (-90:-133:0.9);
+\node at (3.5,-1.35) {$43^\circ$};
+\fill (A) circle (2pt) node[above left] {$A$};
+\fill (B) circle (2pt) node[above right] {$B$};
+\fill (S) circle (2pt) node[below] {signal};
+\end{tikzpicture}
+```
+
 Place town $$A$$ at $$(0,0)$$ and town $$B$$ at $$(1.4,0)$$. The bearing $$S22^\circ E$$ from $$A$$ points down and right, while $$S43^\circ W$$ from $$B$$ points down and left.
 
 Solving the two bearing lines gives the signal at approximately
@@ -2430,13 +2542,7 @@ $$
 \theta\approx 4^\circ.
 $$
 
-For part (C), since
-
-$$
-\mathbf u+\mathbf v=\langle -7,4\rangle,
-$$
-
-a unit vector in that direction is
+For part (C), since $$\mathbf u+\mathbf v=\langle -7,4\rangle$$, a unit vector in that direction is
 
 $$
 \frac{\langle -7,4\rangle}{\sqrt{65}}
@@ -2449,6 +2555,21 @@ $$
 6. A plane is heading $$40^\circ$$ east of north at $$120$$ mph. A wind blows directly from the east at $$10$$ mph. Find the ground-speed vector, the ground speed, and the drift angle from the plane's intended heading.
 
 :::solution
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\draw[->, gray!70] (0,0) -- (4.2,0) node[right] {east};
+\draw[->, gray!70] (0,0) -- (0,4.6) node[above] {north};
+\draw[blue, very thick, ->] (0,0) -- (3.085,3.677) node[pos=0.62, right] {air velocity};
+\draw[red!75!black, very thick, ->] (3.085,3.677) -- (2.685,3.677);
+\node[red!75!black, above] at (2.9,3.95) {wind: $10$ mph west};
+\draw[green!45!black, very thick, ->] (0,0) -- (2.685,3.677) node[pos=0.8, above left] {ground velocity};
+\draw (0,0.8) arc (90:50:0.8);
+\node at (0.4,1.25) {$40^\circ$};
+\end{tikzpicture}
+```
+
 Let east be positive $$x$$ and north be positive $$y$$. A heading of $$40^\circ$$ east of north at $$120$$ mph has velocity
 
 $$
@@ -2480,18 +2601,12 @@ $$
 \tan^{-1}\left(\frac{67.13}{91.93}\right)\approx 36.1^\circ
 $$
 
-east of north. Since the intended heading was $$40^\circ$$ east of north, the drift angle is about
-
-$$
-40^\circ-36.1^\circ=3.9^\circ
-$$
-
-west of the intended heading.
+east of north. Since the intended heading was $$40^\circ$$ east of north, the drift angle is about $$40^\circ-36.1^\circ=3.9^\circ$$ west of the intended heading.
 :::
 ::::
 
 ::::problem
-7. A force of $$18$$ Newtons acts in the direction $$235^\circ$$ from the positive $$x$$-axis. Resolve the force into horizontal and vertical components. Then find the magnitude and direction of the vector obtained by adding this force to $$\langle 12,-5\rangle$$.
+7. A force of $$18$$ Newtons acts in the direction $$235^\circ$$ from the positive $$x$$-axis. Decompose the force into components and then find the magnitude and direction of the vector obtained by adding this force to $$\langle 12,-5\rangle$$.
 
 :::solution
 The force components are
@@ -2523,7 +2638,7 @@ $$
 ::::
 
 ::::problem
-8. A particle moves according to $$x(t)=2\cos t-\sin(2t),\qquad y(t)=6\sin t,$$ for $$0\le t\le 2\pi$$.
+8. A particle moves according to $$x(t)=2\cos t-\sin(2t),\,y(t)=6\sin t,$$ for $$0\le t\le 2\pi$$.
 
     $$(A)$$ Find all exact $$x$$-intercepts.
 
@@ -2544,11 +2659,7 @@ $$
 x(t)=2\cos t-2\sin t\cos t=2\cos t(1-\sin t).
 $$
 
-So $$x(t)=0$$ when
-
-$$
-\cos t=0\quad \text{or}\quad \sin t=1.
-$$
+So $$x(t)=0$$ when $$\cos t=0\,\text{or}\,\sin t=1$$.
 
 On $$0\le t\le 2\pi$$, this gives
 
@@ -2606,13 +2717,7 @@ $$
 9. Eliminate the parameter and describe the curve, including any domain restrictions and orientation: $$x=e^t$$, $$y=e^{2t}-3$$, $$-\ln2\le t\le \ln3.$$
 
 :::solution
-Since
-
-$$
-x=e^t,
-$$
-
-we have
+Since $$x=e^t$$, we have
 
 $$
 t=\ln x.
@@ -2660,25 +2765,29 @@ $$
 10. The curve $$x=4\cos t$$, $$y=-2\sin t$$ is traced for $$0\le t\le 2\pi$$. Eliminate the parameter, state where the curve starts, and determine the direction (clockwise or counterclockwise) the curve is traced in.
 
 :::solution
-From
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth, scale=0.85]
+\draw[->, gray!70] (-4.8,0) -- (5,0) node[right] {$x$};
+\draw[->, gray!70] (0,-2.8) -- (0,3) node[above] {$y$};
+\draw[blue, very thick] (0,0) ellipse (4 and 2);
+\draw[blue, thick, ->] (4,0) arc (0:-30:4 and 2);
+\draw[blue, thick, ->] (-4,0) arc (180:150:4 and 2);
+\fill (4,0) circle (2pt) node[above right] {$(4,0)$: start};
+\node[below left] at (-4,0) {$(-4,0)$};
+\node[above right] at (0,2) {$(0,2)$};
+\node[below right] at (0,-2) {$(0,-2)$};
+\end{tikzpicture}
+```
 
-$$
-x=4\cos t,
-$$
-
-we get
+From $$x=4\cos t$$, we get
 
 $$
 \cos t=\frac{x}{4}.
 $$
 
-From
-
-$$
-y=-2\sin t,
-$$
-
-we get
+From $$y=-2\sin t$$, we get
 
 $$
 \sin t=-\frac{y}{2}.
@@ -2761,7 +2870,7 @@ is a limacon with an inner loop because $$\lvert 2\rvert<\lvert 5\rvert$$. It is
 ]
 \addplot[blue, very thick, samples=500, domain=0:360]
   ({(2+5*cos(x))*cos(x)}, {(2+5*cos(x))*sin(x)});
-\addplot[only marks, mark=*, mark size=1.6pt, orange!85!black] coordinates {(7,0) (-3,0)};
+\addplot[only marks, mark=*, mark size=1.6pt, orange!85!black] coordinates {(7,0)};
 \end{axis}
 \end{tikzpicture}
 ```
@@ -2826,17 +2935,7 @@ is a lemniscate. Since $$\sin(2\theta)\ge0$$ in Quadrants I and III, its two loo
 12. Graph both $$r=2+2\cos\theta$$ and $$r=2-2\cos\theta$$. Then, find the number of intersection points.
 
 :::solution
-The curves are
-
-$$
-r=2+2\cos\theta
-$$
-
-and
-
-$$
-r=2-2\cos\theta.
-$$
+The curves are $$r=2+2\cos\theta$$ and $$r=2-2\cos\theta$$.
 
 Both are cardioids. The first opens to the right, and the second opens to the left.
 
@@ -2909,6 +3008,28 @@ intersection points.
   plane with the weather balloon, what is the distance between Martina and
   Carl, to the nearest tenth of a meter?
 :::solution
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[>=Stealth]
+\coordinate (M) at (0,0);
+\coordinate (B) at (3.47,2.52);
+\coordinate (C1) at (1.43,0);
+\coordinate (C2) at (5.51,0);
+\draw[gray!70] (-0.3,0) -- (6.3,0);
+\draw[blue, thick] (M) -- (B) node[midway, above left] {$7.8$ m};
+\draw[orange!85!black, thick, dashed] (B) -- (C1) node[pos=0.65, right] {$5.9$ m};
+\draw[green!45!black, thick] (B) -- (C2) node[midway, above right] {$5.9$ m};
+\draw (0.8,0) arc (0:36:0.8);
+\node at (1.05,0.3) {$36^\circ$};
+\fill (M) circle (2pt) node[below] {Martina};
+\fill (B) circle (2pt) node[above] {balloon};
+\fill (C1) circle (2pt) node[below] {$C_1$};
+\fill (C2) circle (2pt) node[below] {$C_2$};
+\node at (3,-0.85) {Two possible positions for Carl};
+\end{tikzpicture}
+```
+
 Let $$d$$ be the distance between Martina and Carl. The triangle has one side of length $$7.8$$ m, one side of length $$5.9$$ m, and the angle at Martina is $$36.0^\circ$$. By the Law of Cosines,
 
 $$
@@ -2950,7 +3071,7 @@ $$
 ::::
 
 ::::problem
-14. Let $$z_1=-2+2\sqrt3i,\qquad z_2=1-i.$$
+14. Let $$z_1=-2+2\sqrt3i,\,z_2=1-i.$$
 
     $$(A)$$ Write both numbers in polar form.
 
@@ -2959,23 +3080,13 @@ $$
     $$(C)$$ Compute $$z_1z_2$$ in polar form and rectangular form.
 
 :::solution
-For part (A), for
-
-$$
-z_1=-2+2\sqrt3i,
-$$
-
-the magnitude is
+For part (A), for $$z_1=-2+2\sqrt3i$$, the magnitude is
 
 $$
 \lvert z_1 \rvert=\sqrt{(-2)^2+(2\sqrt3)^2}=4.
 $$
 
-Since $$z_1$$ is in Quadrant II,
-
-$$
-\theta_1=120^\circ=\frac{2\pi}{3}.
-$$
+Since $$z_1$$ is in Quadrant II, $$\theta_1=120^\circ=\frac{2\pi}{3}$$.
 
 So
 
@@ -2983,13 +3094,7 @@ $$
 z_1=4\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right).
 $$
 
-For
-
-$$
-z_2=1-i,
-$$
-
-the magnitude is $$\sqrt2$$ and the angle is $$-45^\circ=-\frac{\pi}{4}$$. So
+For $$z_2=1-i$$, the magnitude is $$\sqrt2$$ and the angle is $$-45^\circ=-\frac{\pi}{4}$$. So
 
 $$
 z_2=\sqrt2\left(\cos\left(-\frac{\pi}{4}\right)+i\sin\left(-\frac{\pi}{4}\right)\right).
@@ -3022,10 +3127,10 @@ $$
 ::::
 
 ::::problem
-15. Use De Moivre's Theorem to find all fourth roots of $$16\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right).$$
+15. Solve $$(z-(1-i))^4=16\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right)$$. Give every solution in rectangular form, find their sum and product, and identify the solution with greatest real part.
 
 :::solution
-Write the complex number as
+First set $$w=z-(1-i)$$. The equation for $$w$$ has right side
 
 $$
 16\left(\cos\frac{2\pi}{3}+i\sin\frac{2\pi}{3}\right).
@@ -3058,17 +3163,29 @@ In rectangular form, these are
 $$
 \sqrt3+i,\quad -1+\sqrt3i,\quad -\sqrt3-i,\quad 1-\sqrt3i.
 $$
+
+Add $$1-i$$ to each value to recover the four solutions:
+
+$$
+z=1+\sqrt3,\quad (\sqrt3-1)i,\quad
+1-\sqrt3-2i,\quad 2-(1+\sqrt3)i.
+$$
+
+Their sum is $$4(1-i)=4-4i$$, since the four unshifted roots sum to zero. Their product is the constant term of the monic polynomial $$(z-(1-i))^4-16\operatorname{cis}(2\pi/3)$$:
+
+$$
+\prod z_k=(1-i)^4-16\operatorname{cis}\frac{2\pi}{3}
+=-4-(-8+8\sqrt3i)=4-8\sqrt3i.
+$$
+
+The largest real part is $$1+\sqrt3$$, attained by the real solution $$z=1+\sqrt3$$.
 :::
 ::::
 
 ::::problem
 16. (Bonus, Brahmagupta's and Bretschneider's formulas)
 
-Let $$ABCD$$ be a cyclic quadrilateral, meaning all four vertices lie on one circle. Let its side lengths be $$a,b,c,d$$, and let its semiperimeter be
-
-$$
-s=\frac12(a+b+c+d).
-$$
+Let $$ABCD$$ be a cyclic quadrilateral, meaning all four vertices lie on one circle. Let its side lengths be $$a,b,c,d$$, and let its semiperimeter be $$s=\frac12(a+b+c+d)$$.
 
 The goal is to prove the area of a cyclic quadrilateral is:
 
@@ -3095,17 +3212,7 @@ $$(F)$$ Explain why Bretschneider's formula turns into Brahmagupta's formula whe
 </div>
 
 :::solution
-For part (A), draw diagonal $$AC$$. The diagonal splits the quadrilateral into triangles $$ABC$$ and $$ADC$$. Using $$K=\frac12ab\sin C$$ for triangle area,
-
-$$
-[ABC]=\frac12ab\sin B
-$$
-
-and
-
-$$
-[ADC]=\frac12cd\sin D.
-$$
+For part (A), draw diagonal $$AC$$. The diagonal splits the quadrilateral into triangles $$ABC$$ and $$ADC$$. Using $$K=\frac12ab\sin C$$ for triangle area, $$[ABC]=\frac12ab\sin B$$ and $$[ADC]=\frac12cd\sin D$$.
 
 Therefore,
 
@@ -3119,17 +3226,7 @@ $$
 B+D=180^\circ.
 $$
 
-So
-
-$$
-D=180^\circ-B
-$$
-
-and
-
-$$
-\sin D=\sin(180^\circ-B)=\sin B.
-$$
+So $$D=180^\circ-B$$ and $$\sin D=\sin(180^\circ-B)=\sin B$$.
 
 Therefore,
 
@@ -3162,11 +3259,7 @@ $$
 2ab\cos B=a^2+b^2-c^2-d^2+2cd\cos D.
 $$
 
-For part (C), since $$D=180^\circ-B$$,
-
-$$
-\cos D=-\cos B.
-$$
+For part (C), since $$D=180^\circ-B$$, $$\cos D=-\cos B$$.
 
 Substitute into the result from part $$(C)$$:
 
@@ -3326,11 +3419,7 @@ $$
 16K^2=4(a^2b^2+c^2d^2-2abcd\cos(B+D))-(a^2+b^2-c^2-d^2)^2.
 $$
 
-Use
-
-$$
-\cos(B+D)=2\cos^2\left(\frac{B+D}{2}\right)-1.
-$$
+Use $$\cos(B+D)=2\cos^2\left(\frac{B+D}{2}\right)-1$$.
 
 Then
 
@@ -3349,13 +3438,7 @@ $$
 -16abcd\cos^2\left(\frac{B+D}{2}\right).
 $$
 
-Since
-
-$$
-4(a^2b^2+c^2d^2+2abcd)=4(ab+cd)^2,
-$$
-
-we get
+Since $$4(a^2b^2+c^2d^2+2abcd)=4(ab+cd)^2$$, we get
 
 $$
 16K^2=4(ab+cd)^2-(a^2+b^2-c^2-d^2)^2
@@ -3383,11 +3466,7 @@ $$
 
 This is Bretschneider's formula.
 
-For part (F), if $$ABCD$$ is cyclic, then opposite angles are supplementary:
-
-$$
-B+D=180^\circ.
-$$
+For part (F), if $$ABCD$$ is cyclic, then opposite angles are supplementary: $$B+D=180^\circ$$.
 
 Thus,
 

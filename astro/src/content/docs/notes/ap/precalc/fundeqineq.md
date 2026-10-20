@@ -103,13 +103,7 @@ $$
 
 Solving a **linear equation** is usually a matter of undoing operations until the variable is alone. The main danger is not algebraic difficulty; it is losing track of what operation you applied to both sides.
 
-For example,
-
-$$
-3x-7=11
-$$
-
-becomes
+For example, $$3x-7=11$$ becomes
 
 $$
 3x=18
@@ -119,7 +113,7 @@ $$
 
 Linear equations usually have one solution, but there are two special cases:
 
-- If the variables disappear and you get a *true* statement, such as $$0=0$$, the equation is true for all real $$x$$ that sastisfies the equation.
+- If the variables disappear and you get a *true* statement, such as $$0=0$$, the equation is true for all real $$x$$ in the original domain.
 - If the variables disappear and you get a *false* statement, such as $$0=5$$, there is no solution.
 
 ---
@@ -162,13 +156,7 @@ x^2+6x+5=0
 (x+3)^2=4.
 $$
 
-Then
-
-$$
-x+3=\pm 2,
-$$
-
-so $$x=-1$$ or $$x=-5$$.
+Then $$x+3=\pm 2$$, so $$x=-1$$ or $$x=-5$$.
 
 </div>
 
@@ -192,13 +180,7 @@ $$
 
 <div class="theorem-box">
 
-**Proof (Quadratic formula).** Let the quadratic be in the form of
-
-$$
-ax^2 + bx + c = 0
-$$
-
-with $$a\ne 0$$. Divide both sides by $$a$$:
+**Proof (Quadratic formula).** Let the quadratic be in the form of $$ax^2 + bx + c = 0$$ with $$a\ne 0$$. Divide both sides by $$a$$:
 
 $$
 x^2 + \frac{b}{a} x + \frac{c}{a} = 0
@@ -244,13 +226,7 @@ $$
 
 Rational equations contain variables in denominators. The first step is always domain restrictions: denominators cannot be $$0$$.
 
-For example, in
-
-$$
-\frac{x+2}{x-3}=\frac{5}{x-3},
-$$
-
-we must have $$x\ne 3$$ before doing anything else.
+For example, in $$\frac{x+2}{x-3}=\frac{5}{x-3}$$, we must have $$x\ne 3$$ before doing anything else.
 
 :::strategy
 1. State the restrictions.
@@ -279,13 +255,7 @@ Common factoring patterns include:
 - Difference of squares: $$x^2-9=(x-3)(x+3)$$.
 - Quadratic in form: $$x^4-5x^2+4=0$$.
 
-For a quadratic-in-form equation, substitute. If
-
-$$
-x^4-5x^2+4=0,
-$$
-
-let $$u=x^2$$. Then
+For a quadratic-in-form equation, substitute. If $$x^4-5x^2+4=0$$, let $$u=x^2$$. Then
 
 $$
 u^2-5u+4=0.
@@ -409,13 +379,7 @@ The process is careful, not mysterious:
 The check is not optional. Squaring both sides can create answers that solve the squared equation but not the original equation.
 :::
 
-For example, if a step gives
-
-$$
-x-\sqrt{x}=20,
-$$
-
-then isolating and squaring may produce candidates. Each candidate must still be substituted back into the original radical equation.
+For example, if a step gives $$x-\sqrt{x}=20$$, then isolating and squaring may produce candidates. Each candidate must still be substituted back into the original radical equation.
 
 ---
 
@@ -467,13 +431,7 @@ The short version:
 - "Less than" means between.
 - "Greater than" means outside.
 
-For example,
-
-$$
-\lvert 3x-2 \rvert \le 4
-$$
-
-means
+For example, $$\lvert 3x-2 \rvert \le 4$$ means
 
 $$
 -4\le 3x-2\le 4.
@@ -515,13 +473,7 @@ $$
 
 Multiplicity matters. A simple root usually changes the sign. An even-multiplicity root touches the axis and does not change the sign.
 
-For example,
-
-$$
-(x-1)^2(x+3)<0
-$$
-
-has critical numbers $$-3$$ and $$1$$. The squared factor is never negative and does not change sign at $$x=1$$, so the sign behavior is controlled mostly by $$x+3$$.
+For example, $$(x-1)^2(x+3)<0$$ has critical numbers $$-3$$ and $$1$$. The squared factor is never negative and does not change sign at $$x=1$$, so the sign behavior is controlled mostly by $$x+3$$.
 
 ---
 
@@ -552,33 +504,15 @@ Example: $$\sqrt{f(x)} < g(x)$$.
 
 Radical inequalities need more care than radical equations because squaring inequalities is only automatically safe when both sides are known to be nonnegative.
 
-Always begin with the domain. For an even root,
+Always begin with the domain. For an even root, $$\sqrt{f(x)}$$ requires $$f(x)\ge 0$$.
 
-$$
-\sqrt{f(x)}
-$$
-
-requires $$f(x)\ge 0$$.
-
-If the inequality is
-
-$$
-\sqrt{f(x)}\le g(x),
-$$
-
-then we also need $$g(x)\ge 0$$, because the left side is nonnegative. After those conditions are in place, squaring is safe:
+If the inequality is $$\sqrt{f(x)}\le g(x)$$, then we also need $$g(x)\ge 0$$, because the left side is nonnegative. After those conditions are in place, squaring is safe:
 
 $$
 f(x)\le g(x)^2.
 $$
 
-For
-
-$$
-\sqrt{f(x)}>g(x),
-$$
-
-split into cases:
+For $$\sqrt{f(x)}>g(x)$$, split into cases:
 
 - If $$g(x)<0$$, the inequality is automatically true wherever the radical exists.
 - If $$g(x)\ge 0$$, square both sides and solve $$f(x)>g(x)^2$$.
@@ -597,25 +531,13 @@ Symmetry asks what happens to a graph when you reflect or rotate it. The algebra
 - $$y$$-axis symmetry: if $$(x,y)$$ is on the graph, then $$(-x,y)$$ is also on the graph. Algebra test: replace $$x$$ with $$-x$$.
 - Origin symmetry: if $$(x,y)$$ is on the graph, then $$(-x,-y)$$ is also on the graph. Algebra test: replace both $$x$$ with $$-x$$ and $$y$$ with $$-y$$.
 
-For example, the graph of
-
-$$
-y=x^2
-$$
-
-has $$y$$-axis symmetry because replacing $$x$$ with $$-x$$ gives
+For example, the graph of $$y=x^2$$ has $$y$$-axis symmetry because replacing $$x$$ with $$-x$$ gives
 
 $$
 y=(-x)^2=x^2.
 $$
 
-The graph of
-
-$$
-y=x^3
-$$
-
-has origin symmetry because replacing both variables gives
+The graph of $$y=x^3$$ has origin symmetry because replacing both variables gives
 
 $$
 -y=(-x)^3=-x^3,
@@ -645,13 +567,7 @@ $$
 
 For distance $$0$$, there is only the origin: $$1$$ point.
 
-For each distance $$r\ge 1$$, the equation
-
-$$
-\lvert x \rvert +\lvert y \rvert =r
-$$
-
-has $$4r$$ integer points. Therefore the total number of points is
+For each distance $$r\ge 1$$, the equation $$\lvert x \rvert +\lvert y \rvert =r$$ has $$4r$$ integer points. Therefore the total number of points is
 
 $$
 1+\sum_{r=1}^{20}4r
@@ -802,11 +718,7 @@ $$
 5. Solve for $$x$$ in $$\mathbb{R}$$: $$9^x - 10\cdot 3^x + 9 = 0$$.
 
 :::solution
-Let
-
-$$
-u=3^x.
-$$
+Let $$u=3^x$$.
 
 Then $$9^x=(3^x)^2=u^2$$, so
 
@@ -961,13 +873,7 @@ $$
 8. Solve for $$x$$ in $$\mathbb{R}$$ and write the answer in interval notation: $$\lvert x - 2\rvert + \lvert x + 4\rvert \le 10$$.
 
 :::solution
-The expression
-
-$$
-\lvert x-2\rvert+\lvert x+4\rvert
-$$
-
-is the sum of the distances from $$x$$ to $$2$$ and from $$x$$ to $$-4$$. Break at $$x=-4$$ and $$x=2$$.
+The expression $$\lvert x-2\rvert+\lvert x+4\rvert$$ is the sum of the distances from $$x$$ to $$2$$ and from $$x$$ to $$-4$$. Break at $$x=-4$$ and $$x=2$$.
 
 If $$x<-4$$, then
 
@@ -1252,13 +1158,7 @@ $$
 15. Determine the symmetries of both graphs: $$f(x)=\dfrac{x^2}{x^2+1}$$ and $$g(x)=x\lvert x\rvert$$. For each, decide whether the graph has $$y$$-axis symmetry, $$x$$-axis symmetry, origin symmetry, or none.
 
 :::solution
-For
-
-$$
-f(x)=\frac{x^2}{x^2+1},
-$$
-
-test $$f(-x)$$:
+For $$f(x)=\frac{x^2}{x^2+1}$$, test $$f(-x)$$:
 
 $$
 f(-x)=\frac{(-x)^2}{(-x)^2+1}
@@ -1268,13 +1168,7 @@ $$
 
 So $$f$$ has $$y$$-axis symmetry. It does not have origin symmetry because $$f(-x)\ne -f(x)$$ in general, and it does not have $$x$$-axis symmetry because reflecting a nonzero function value across the $$x$$-axis would not stay on the graph of the same function.
 
-For
-
-$$
-g(x)=x\lvert x\rvert,
-$$
-
-test $$g(-x)$$:
+For $$g(x)=x\lvert x\rvert$$, test $$g(-x)$$:
 
 $$
 g(-x)=(-x)\lvert -x\rvert=-x\lvert x\rvert=-g(x).
@@ -1368,11 +1262,7 @@ $$
 
 Because $$x$$ and $$y$$ are integers, $$x'$$ is also an integer. The pair $$(x',y)$$ satisfies the same equation because $$x'$$ is the other root of the same quadratic.
 
-For part (C), suppose $$(x,y)$$ is a positive integer solution with
-
-$$
-x\ge y\ge 2.
-$$
+For part (C), suppose $$(x,y)$$ is a positive integer solution with $$x\ge y\ge 2$$.
 
 We first show $$x'>0$$. Since
 
@@ -1380,13 +1270,7 @@ $$
 x'=3y-x,
 $$
 
-it is enough to show $$x<3y$$. If $$x\ge 3y$$, then
-
-$$
-x^2-3xy+y^2+1>0,
-$$
-
-which contradicts the equation rewritten as
+it is enough to show $$x<3y$$. If $$x\ge 3y$$, then $$x^2-3xy+y^2+1>0$$, which contradicts the equation rewritten as
 
 $$
 x^2-3xy+y^2+1=0.

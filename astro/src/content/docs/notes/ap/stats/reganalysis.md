@@ -94,7 +94,7 @@ $$
 
 Here $$\beta_0$$ is the y-intercept, $$\beta_1$$ is the slope, and $$\epsilon$$ is the error term. The errors $$\epsilon$$ are what we hope stay small and behave reasonably once we estimate the line from data.
 
-From a sample, we write estimated coefficients (often $$b_0$$ and $$b_1$$, or $$\hat{\beta}_0$$ and $$\hat{\beta}_1$$) and a fitted line used for prediction. Note that $$\epsilon$$ is only included when you have to compare the experimental data with the model preictions.
+From a sample, we write estimated coefficients (often $$b_0$$ and $$b_1$$, or $$\hat{\beta}_0$$ and $$\hat{\beta}_1$$) and a fitted line used for prediction. The error term $$\epsilon$$ represents random variation around the population regression line. A residual is the observed difference between a data value and its fitted prediction; it estimates the corresponding error.
 
 ### Predicted values and residuals
 

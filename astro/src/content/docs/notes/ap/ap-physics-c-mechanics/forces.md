@@ -112,9 +112,9 @@ Weight points downward, toward Earth's center. Note that mass is not weight: mas
 
 ### Normal force
 
-The **normal force** is a contact force **perpendicular** to a surface and opposes gravity. It adjusts to prevent objects from passing through each other, but it is not automatically equal to $$mg$$. For example, on an incline or in an accelerating elevator, the normal force differs from the object's weight. Normally, you need to solve out force equations to get the normal force. The normal force acts along the entire surface of contact but is usually drawn out in the center of the contact plane.
+The **normal force** is a contact force **perpendicular** to a surface that pushes contacting objects apart. It adjusts to prevent objects from passing through each other, but it is not automatically equal to $$mg$$. For example, on an incline or in an accelerating elevator, the normal force differs from the object's weight. Normally, you need to solve out force equations to get the normal force. The normal force acts along the entire surface of contact but is usually drawn out in the center of the contact plane.
 
-A concrete case where $$F_N \ne mg$$: suppose you push down on a box resting on the floor with an extra downward force $$P$$ at some angle, or simply press straight down. The vertical equation with no vertical acceleration is $$F_N - mg - P = 0$$, so $$F_N = mg + P > mg$$. If instead you pull up on the box with a force $$P$$ (not enough to lift it), then $$F_N = mg - P < mg$$. The normal force only equals $$mg$$ in the special case of a horizontal surface with no other vertical forces and no vertical acceleration.
+A concrete case where $$F_N \ne mg$$: suppose you push down on a box resting on the floor with an extra force whose downward component is $$P$$. The vertical equation with no vertical acceleration is $$F_N - mg - P = 0$$, so $$F_N = mg + P > mg$$. If instead you pull up on the box with a force $$P$$ (not enough to lift it), then $$F_N = mg - P < mg$$. The normal force only equals $$mg$$ in the special case of a horizontal surface with no other vertical forces and no vertical acceleration.
 
 :::warning
 Always get $$F_N$$ from the perpendicular equation, never by assumption, because friction limits like $$\mu_s F_N$$ depend on it.
@@ -145,9 +145,9 @@ The free end therefore accelerates with twice the magnitude and opposite sign. U
 
 ### Friction
 
-**Friction** is a contact force that acts parallel to a surface that opposes relative motion or impending relative motion and will *always* point *opposite* to the direction of motion (e.g. when you are moving down a ramp friction points upwards). There are two types: static and kinetic friction.
+**Friction** is a contact force parallel to a surface that opposes slipping or impending slipping between the contacting surfaces (e.g. for an object sliding down a stationary ramp, friction points up the ramp). It need not oppose the object’s motion relative to the ground. There are two types: static and kinetic friction.
 
-Static friction is friction that prevents an object from moving, and adjusts up to a maximum value:
+Static friction prevents relative slipping between contacting surfaces and adjusts up to a maximum value:
 
 $$
 0 \le f_s \le f_{s,\text{max}} = \mu_s F_N.
@@ -194,7 +194,7 @@ Essentially, drag acts like a friction force for falling objects. At some point,
 ## Solving Newton's second law problems
 
 :::strategy
-1. Choose the object or system, then draw its free-body diagram. For acceleration, start with the whole system when its objects share an acceleration. Internal contact forces will cacel.
+1. Choose the object or system, then draw its free-body diagram. For acceleration, start with the whole system when its objects share an acceleration. Internal contact forces will cancel.
 2. If relevant, for tension or a contact force, isolate an object or subsystem on which that force is external and match the mass to the chosen system.
 3. Pick axes that simplify the motion (e.g. $$x$$/$$y$$, radial/centripetal, etc.).
 4. Write $$\sum F = ma$$ along each axis. Keep the algebra symbolic until the constraints and signs are settled, then check the units and whether the result agrees with the assumed direction of acceleration. Always include pseudo-forces if necessary.

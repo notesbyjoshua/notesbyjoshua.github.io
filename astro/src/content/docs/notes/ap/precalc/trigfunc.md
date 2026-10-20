@@ -43,13 +43,7 @@ For example, $$135^\circ$$ is a positive angle, while $$-45^\circ$$ is a negativ
 
 Degrees measure angles by splitting a full circle into $$360$$ equal parts. **Radians** measure angles by comparing arc length to radius, where one radian is the angle an arc length that measures out $$r$$ units.
 
-One full circle is
-
-$$
-360^\circ=2\pi\text{ radians}.
-$$
-
-so therefore
+One full circle is $$360^\circ=2\pi\text{ radians}$$, so
 
 $$
 180^\circ=\pi\text{ radians}.
@@ -180,11 +174,7 @@ $$
 
 **Example.** Find the radius of a circle whose arc length is $$6$$ meters and whose central angle is $$\frac14$$ radian.
 
-Use
-
-$$
-s=r\theta.
-$$
+Use $$s=r\theta$$.
 
 Then
 
@@ -218,11 +208,7 @@ $$
 
 **Example.** Find the area of a sector with radius $$6$$ and central angle $$\frac{5\pi}{6}$$.
 
-Use the sector area formula:
-
-$$
-A=\frac12r^2\theta.
-$$
+Use the sector area formula: $$A=\frac12r^2\theta$$.
 
 Then
 
@@ -285,11 +271,7 @@ $$
 30\pi\text{ rad/sec}.
 $$
 
-Now use $$v=r\omega$$:
-
-$$
-v=20(30\pi)=600\pi.
-$$
+Now use $$v=r\omega$$: $$v=20(30\pi)=600\pi$$.
 
 So the linear speed is
 
@@ -653,11 +635,7 @@ $$
 \theta+2\pi k,\qquad k\in\mathbb{Z}.
 $$
 
-For example, $$120^\circ$$ and $$-240^\circ$$ are coterminal because
-
-$$
-120^\circ-360^\circ=-240^\circ.
-$$
+For example, $$120^\circ$$ and $$-240^\circ$$ are coterminal because $$120^\circ-360^\circ=-240^\circ$$.
 
 All coterminal angles will have the same trig values, so usually we define the angles from $$0^\circ$$ to $$360^\circ$$ or from $$0$$ to $$2\pi$$ radians.
 
@@ -785,11 +763,7 @@ If one trig value is known, the Pythagorean identity and the quadrant can determ
 
 Since $$\beta$$ is in Quadrant II, cosine is negative and tangent is negative.
 
-Use
-
-$$
-\sin^2\beta+\cos^2\beta=1.
-$$
+Use $$\sin^2\beta+\cos^2\beta=1$$.
 
 Substitute $$\sin\beta=\frac14$$:
 
@@ -1004,11 +978,7 @@ $$
 
 **Example.** If $$\sin t=\frac23$$, find $$\sin(-t)$$.
 
-Since sine is odd,
-
-$$
-\sin(-t)=-\sin t.
-$$
+Since sine is odd, $$\sin(-t)=-\sin t$$.
 
 Therefore
 
@@ -1226,11 +1196,7 @@ $$
 2. A sector of a circle has perimeter $$40$$ cm and central angle $$\frac{5\pi}{6}$$. Find the radius, arc length, and area of the sector exactly.
 
 :::solution
-For a sector,
-
-$$
-P=2r+s.
-$$
+For a sector, $$P=2r+s$$.
 
 Since $$s=r\theta$$,
 
@@ -1238,11 +1204,7 @@ $$
 P=2r+r\theta=r(2+\theta).
 $$
 
-We are given $$P=40$$ and $$\theta=\frac{5\pi}{6}$$, so
-
-$$
-40=r\left(2+\frac{5\pi}{6}\right).
-$$
+We are given $$P=40$$ and $$\theta=\frac{5\pi}{6}$$, so $$40=r\left(2+\frac{5\pi}{6}\right)$$.
 
 Thus
 
@@ -1412,13 +1374,7 @@ $$
 5. Let $$\theta$$ be in Quadrant II and suppose $$\tan\theta=-\frac{8}{15}$$. Find exact values of $$\sin\theta$$, $$\cos\theta$$, $$\sec\theta$$, $$\csc\theta$$, and $$\cot\theta$$. Then evaluate $$\sin(\pi-\theta)$$ and $$\cos(\theta+\pi)$$.
 
 :::solution
-Since $$\theta$$ is in Quadrant II and
-
-$$
-\tan\theta=-\frac{8}{15},
-$$
-
-we can use a reference triangle with opposite side $$8$$, adjacent side $$-15$$, and hypotenuse
+Since $$\theta$$ is in Quadrant II and $$\tan\theta=-\frac{8}{15}$$, we can use a reference triangle with opposite side $$8$$, adjacent side $$-15$$, and hypotenuse
 
 $$
 \sqrt{8^2+15^2}=17.
@@ -1470,11 +1426,7 @@ $$
 6. Let $$P=(x,y)$$ be a point on the unit circle in Quadrant III. If $$x-y=\frac{\sqrt2}{2}$$, find $$P$$ and the angle $$\theta\in[0,2\pi)$$ whose terminal side passes through $$P$$.
 
 :::solution
-Since $$P=(x,y)$$ is on the unit circle,
-
-$$
-x^2+y^2=1.
-$$
+Since $$P=(x,y)$$ is on the unit circle, $$x^2+y^2=1$$.
 
 We are also given
 
@@ -1607,11 +1559,7 @@ $$
 8. Solve exactly on $$[0,4\pi)$$: $$2\sin^2x-\sin x-1=0.$$
 
 :::solution
-Let
-
-$$
-u=\sin x.
-$$
+Let $$u=\sin x$$.
 
 Then
 
@@ -1657,11 +1605,7 @@ $$
 9. Solve exactly on $$[0,2\pi)$$:$$2\cos^2x+\sqrt3\cos x-1=0.$$
 
 :::solution
-Let
-
-$$
-u=\cos x.
-$$
+Let $$u=\cos x$$.
 
 Then
 
@@ -1676,13 +1620,7 @@ u=\frac{-\sqrt3\pm\sqrt{3+8}}{4}
 =\frac{-\sqrt3\pm\sqrt{11}}{4}.
 $$
 
-The value
-
-$$
-\frac{-\sqrt3-\sqrt{11}}{4}
-$$
-
-is less than $$-1$$, so it is impossible for $$\cos x$$. Thus
+The value $$\frac{-\sqrt3-\sqrt{11}}{4}$$ is less than $$-1$$, so it is impossible for $$\cos x$$. Thus
 
 $$
 \cos x=\frac{\sqrt{11}-\sqrt3}{4}.
@@ -1837,17 +1775,7 @@ $$
 \boxed{\frac{1-\cos\theta}{\sin\theta}+\frac{\sin\theta}{1-\cos\theta}=2\csc\theta}.
 $$
 
-The original expression is undefined when
-
-$$
-\sin\theta=0
-$$
-
-or
-
-$$
-1-\cos\theta=0.
-$$
+The original expression is undefined when $$\sin\theta=0$$ or $$1-\cos\theta=0$$.
 
 On $$[0,2\pi)$$, this happens at
 
@@ -1974,17 +1902,7 @@ $$
 \boxed{OD=\sec\theta}.
 $$
 
-At the $$y$$-intercept, $$x=0$$, so
-
-$$
-y\sin\theta=1
-$$
-
-and
-
-$$
-y=\csc\theta.
-$$
+At the $$y$$-intercept, $$x=0$$, so $$y\sin\theta=1$$ and $$y=\csc\theta$$.
 
 Thus
 
@@ -2045,11 +1963,7 @@ $$
 15. On $$[0,2\pi)$$, solve the equation numerically to three decimal places: $$3\sin x-2\cos x=1.$$ (Hint: Try the substitution $$t=\tan(x/2)$$, and solve for $$x$$ using the $$\tan^{-1}$$ button on the calculator.)
 
 :::solution
-Use the substitution
-
-$$
-t=\tan\frac{x}{2}.
-$$
+Use the substitution $$t=\tan\frac{x}{2}$$.
 
 Then
 
@@ -2146,13 +2060,7 @@ $$
    $$(E)$$ Why does this method not produce the point $$(-1,0)$$ as the second intersection point? What slope would be needed to reach the point $$(1,0)$$?
 
 :::solution
-For part $$(A)$$, substitute
-
-$$
-y=m(x+1)
-$$
-
-into
+For part $$(A)$$, substitute $$y=m(x+1)$$ into
 
 $$
 x^2+y^2=1.

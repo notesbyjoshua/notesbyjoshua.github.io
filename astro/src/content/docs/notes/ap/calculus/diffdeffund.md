@@ -310,6 +310,10 @@ From a graph, differentiability fails at places where the tangent slope is not a
 
 **Theorem.** If $$f$$ is differentiable at $$x=a$$, then $$f$$ is continuous at $$x=a$$.
 
+</div>
+
+<div class="theorem-box">
+
 **Proof (Differentiability implies continuity).** Suppose $$f'(a)$$ exists. For $$x\ne a$$, rewrite the change in the function as
 
 $$

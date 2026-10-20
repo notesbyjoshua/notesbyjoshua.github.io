@@ -13,7 +13,7 @@ sidebar:
 
 - Nonzero digits are always significant.
 - **Leading zeros** (as in $$0.0045$$) are not significant; they only locate the decimal point. **Captive zeros** between nonzero digits are significant (e.g. $$1.05$$ has three significant figures).
-- **Trailing zeros** require care: if a decimal point is shown, trailing zeros are significant ($$12.0$$ has three); if there is no decimal, trailing zeros do not ocunt towards significant figures.
+- **Trailing zeros** require care: if a decimal point is shown, trailing zeros are significant ($$12.0$$ has three); without a decimal point or other precision information, trailing zeros in a whole number can be ambiguous. Scientific notation makes the intended significant figures clear.
 - **Exact numbers** (such as a counted dozen eggs or a defined conversion within a system) have effectively unlimited significant figures and do not limit your result.
 - For addition and subtraction, round the result to the same number of *decimal places* as the term with the fewest. For multiplication and division, round to the same number of *significant figures* as the factor with the fewest.
 
@@ -103,7 +103,7 @@ An **ion** is an atom or group of atoms with a net electric charge from gain or 
 
 ### Polyatomic ions
 
-**Polyatomic ions** are charged covalent units that behave as a single piece in **ionic compounds** due to their lower eneergy state compared to their individual atomic states: for example, nitrate ($$\text{NO}_3^-$$), sulfate ($$\text{SO}_4^{2-}$$), and ammonium ($$\text{NH}_4^+$$) are all good exmamples of polyatomic ions. These are the polyatomic ions you need to memorize for AP Chem:
+**Polyatomic ions** are charged covalent units that behave as a single piece in **ionic compounds** due to their lower energy state compared to their individual atomic states: for example, nitrate ($$\text{NO}_3^-$$), sulfate ($$\text{SO}_4^{2-}$$), and ammonium ($$\text{NH}_4^+$$) are all good examples of polyatomic ions. These are the polyatomic ions you need to memorize for AP Chem:
 
 
 | Polyatomic ion | Formula | Charge |
@@ -395,7 +395,7 @@ $$
 \lambda = \frac{h}{p} = \frac{h}{mv}
 $$
 
-for nonrelativistic speeds, demonstrating that any object has an intristic wavelength. However, at only quantum levels is this wavelength significant.
+for nonrelativistic speeds, demonstrating that any object has an intrinsic wavelength. However, this wavelength is usually only noticeable at microscopic scales.
 
 <div class="theorem-box">
 

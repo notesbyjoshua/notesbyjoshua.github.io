@@ -65,7 +65,7 @@ $$
 $$
 
 - **Rule 2 (whole sample space)**: If each possible outcome is listed exactly once, the sum of their probabilities is $$1$$.
-- **Rule 3 (impossibilility)**: An **impossible event** has probability $$0$$. A **sure event** (the entire sample space, or any event that must happen) has probability $$1$$.
+- **Rule 3 (impossibility)**: An **impossible event** has probability $$0$$. A **sure event** (the entire sample space, or any event that must happen) has probability $$1$$.
 - **Rule 4 (odds in favor)**: **Odds in favor** of an event $$A$$ compare the chance $$A$$ occurs to the chance it does not. With complement $$A'$$ (or $$A^C$$) for “not $$A$$,”
 
 $$

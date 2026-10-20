@@ -96,7 +96,7 @@ $$
 \overrightarrow{PQ}=\langle x_2-x_1,y_2-y_1,z_2-z_1\rangle.
 $$
 
-Unlike a point, a displacement vector can be moved without changing it. Its components tell us how much to move along each axis. For $$\mathbf u=\langle u_1,u_2,u_3\rangle$$ and $$\mathbf v=\langle v_1,v_2,v_3\rangle$$, we can add (and subtract) and scale the vectors compoment by component:
+Unlike a point, a displacement vector can be moved without changing it. Its components tell us how much to move along each axis. For $$\mathbf u=\langle u_1,u_2,u_3\rangle$$ and $$\mathbf v=\langle v_1,v_2,v_3\rangle$$, we can add (and subtract) and scale the vectors component by component:
 
 $$
 \mathbf u+\mathbf v=\langle u_1+v_1,u_2+v_2,u_3+v_3\rangle,

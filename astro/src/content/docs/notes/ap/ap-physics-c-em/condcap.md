@@ -155,7 +155,7 @@ $$
 C = \frac{Q}{\Delta V}=\frac{Q}{Ed}=\frac{\varepsilon_0 A}{d}.
 $$
 
-Edge effects are usually ignored in AP Physics C unless the problem explicitly metnions them.
+Edge effects are usually ignored in AP Physics C unless the problem explicitly mentions them.
 
 
 ```tikz

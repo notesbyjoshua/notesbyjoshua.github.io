@@ -222,11 +222,7 @@ $$
 
 Induction with inequalities follows the same three-step structure, but the algebra feels a little different. Instead of trying to transform one side into exactly the other side, you usually build a chain of inequalities.
 
-For example, suppose the induction hypothesis gives
-
-$$
-A_k \ge B_k.
-$$
+For example, suppose the induction hypothesis gives $$A_k \ge B_k$$.
 
 To prove the next case, you may start with $$A_{k+1}$$, rewrite it in terms of $$A_k$$, and then use the fact that $$A_k\ge B_k$$:
 
@@ -250,17 +246,7 @@ $$
 
 for all integers $$n\ge 4$$.
 
-**Base case**: $$n=4$$:
-
-$$
-2^{4}=16
-$$
-
-and
-
-$$
-4^{2}=16.
-$$
+**Base case**: $$n=4$$: $$2^{4}=16$$ and $$4^{2}=16$$.
 
 So $$2^{4}\ge 4^{2}$$ is true.
 
@@ -513,13 +499,7 @@ $$
 
 Limits describe the long-term behavior of a function. In this section, we only care about what happens as $$x$$ becomes very large positive or very large negative.
 
-For example,
-
-$$
-\lim_{x\to\infty}x^2=\infty
-$$
-
-means that $$x^2$$ grows without bound as $$x$$ moves farther and farther to the right. Similarly,
+For example, $$\lim_{x\to\infty}x^2=\infty$$ means that $$x^2$$ grows without bound as $$x$$ moves farther and farther to the right. Similarly,
 
 $$
 \lim_{x\to-\infty}x^2=\infty,
@@ -650,17 +630,7 @@ $$
 x-1+\frac{2}{x-2}.
 $$
 
-Since
-
-$$
-\lim_{x\to\infty}\frac{2}{x-2}=0
-$$
-
-and also
-
-$$
-\lim_{x\to-\infty}\frac{2}{x-2}=0,
-$$
+Since $$\lim_{x\to\infty}\frac{2}{x-2}=0$$ and also $$\lim_{x\to-\infty}\frac{2}{x-2}=0$$,
 
 the oblique asymptote is
 
@@ -692,13 +662,7 @@ $$
 \lim_{x\to\infty}\frac{\cos x}{x}=0.
 $$
 
-This is because
-
-$$
--1\le \cos x\le 1,
-$$
-
-so for $$x>0$$,
+This is because $$-1\le \cos x\le 1$$, so for $$x>0$$,
 
 $$
 -\frac{1}{x}\le \frac{\cos x}{x}\le \frac{1}{x}.
@@ -780,17 +744,7 @@ $$
 =x+2-\frac{5}{x+2}.
 $$
 
-Since
-
-$$
-\lim_{x\to\infty}\left(-\frac{5}{x+2}\right)=0
-$$
-
-and
-
-$$
-\lim_{x\to-\infty}\left(-\frac{5}{x+2}\right)=0,
-$$
+Since $$\lim_{x\to\infty}\left(-\frac{5}{x+2}\right)=0$$ and $$\lim_{x\to-\infty}\left(-\frac{5}{x+2}\right)=0$$,
 
 the graph approaches the line
 
@@ -804,17 +758,7 @@ $$
 4. Prove by induction that $$\sum_{k=1}^{n} k^3 = \frac{n^2 (n+1)^2}{4}$$ for all integers $$n \ge 1$$. Extension: This looks like the square of $$1 + 2 + ... + n = \frac{n(n+1)}{2}$$! Prove that this is true (you should not use induction here).
 
 :::solution
-**Base case**: $$n=1$$:
-
-$$
-\sum_{i=1}^{1} i^{3}=1^{3}=1
-$$
-
-and
-
-$$
-\frac{1^{2}(1+1)^{2}}{4}=\frac{1^{2}\cdot 2^{2}}{4}=1.
-$$
+**Base case**: $$n=1$$: $$\sum_{i=1}^{1} i^{3}=1^{3}=1$$ and $$\frac{1^{2}(1+1)^{2}}{4}=\frac{1^{2}\cdot 2^{2}}{4}=1$$.
 
 Since both sides are equal, the statement is true for $$n=1$$.
 
@@ -938,17 +882,7 @@ $$
 6. Prove by induction that $$2^{n}\ge n^{3}$$ for all integers $$n\ge 10$$.
 
 :::solution
-**Base case**: $$n=10$$:
-
-$$
-2^{10}=1024
-$$
-
-and
-
-$$
-10^{3}=1000.
-$$
+**Base case**: $$n=10$$: $$2^{10}=1024$$ and $$10^{3}=1000$$.
 
 Since $$1024\ge 1000$$, the inequality is true for $$n=10$$.
 
@@ -1185,11 +1119,7 @@ $$
 p=r,\qquad q=r^{2},\qquad z=r^{3}.
 $$
 
-The same value $$z$$ must work for both sequences, so
-
-$$
-r^{3}=1+3d.
-$$
+The same value $$z$$ must work for both sequences, so $$r^{3}=1+3d$$.
 
 This means $$r^{3}-1$$ must be divisible by $$3$$. Try the smallest possible integer values of $$r$$:
 
@@ -1217,11 +1147,7 @@ $$
 12. Find $$\sum_{i=5}^{100}(3i-2)$$.
 
 :::solution
-The terms of the sum form an arithmetic series. The first term occurs when $$i=5$$:
-
-$$
-a_{1}=3(5)-2=13.
-$$
+The terms of the sum form an arithmetic series. The first term occurs when $$i=5$$: $$a_{1}=3(5)-2=13$$.
 
 The last term occurs when $$i=100$$:
 
@@ -1415,11 +1341,7 @@ $$
 G(x)-xG(x)-x^2G(x)
 $$
 
-has constant term $$F_0=0$$, coefficient of $$x$$ equal to $$F_1=1$$, and for every $$n\ge 2$$ the coefficient of $$x^n$$ is
-
-$$
-F_n-F_{n-1}-F_{n-2}=0.
-$$
+has constant term $$F_0=0$$, coefficient of $$x$$ equal to $$F_1=1$$, and for every $$n\ge 2$$ the coefficient of $$x^n$$ is $$F_n-F_{n-1}-F_{n-2}=0$$.
 
 Thus
 
@@ -1494,13 +1416,7 @@ $$
 =(\alpha-\beta)x.
 $$
 
-Since
-
-$$
-\alpha-\beta=\sqrt5,
-$$
-
-we get
+Since $$\alpha-\beta=\sqrt5$$, we get
 
 $$
 \frac{1}{\sqrt5}\cdot

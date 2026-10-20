@@ -11,7 +11,7 @@ sidebar:
 
 ### London dispersion forces
 
-**London dispersion forces** arise from temporary electron fluctuations that create instantaneous dipoles, which in turn induce dipoles in neighbors. They are present in *every* substance (atoms and molecules). In nonpolar species they are often the only IMF and dominate cohesive energy. Strength grows with polarizability: larger electron clouds, higher molar mass in a homologous series, and greater surface area (e.g. linear versus branched alkanes) increase the amount of london disperson forces.
+**London dispersion forces** arise from temporary electron fluctuations that create instantaneous dipoles, which in turn induce dipoles in neighbors. They are present in *every* substance (atoms and molecules). In nonpolar species they are often the only IMF and dominate cohesive energy. Strength grows with polarizability: larger electron clouds, higher molar mass in a homologous series, and greater surface area (e.g. linear versus branched alkanes) increase the amount of London dispersion forces.
 
 <div class="theorem-box">
 
@@ -211,7 +211,7 @@ $$
 KE_{avg} = \frac{3}{2} k_B T
 $$
 
-with Boltzmann’s constant $$k_B = 1.38 \times 10^{-23} \text{ J/K}$$. Temperature in this model is proportional to the mean kinetic energy of random motion. In addition, if you are solving for velocity, the average RMS (root mean square, one way to taking an average) speed of the molcules is:
+with Boltzmann’s constant $$k_B = 1.38 \times 10^{-23} \text{ J/K}$$. Temperature in this model is proportional to the mean kinetic energy of random motion. In addition, if you are solving for velocity, the RMS (root mean square) speed of the molecules is:
 
 $$
 v_{RMS} = \sqrt{\frac{3RT}{M}}.

@@ -219,7 +219,7 @@ $$
 Implicit equations describe a relationship rather than a solved function, meaning that the $$x$$s and $$y$$s of the equation are not fully separated. To take $$\frac{dy}{dx}$$ of such function we can use implicit differentiation.
 
 :::tip
-When differentiating with respect to $$x$$, attach $$dy/dx$$ when the term you are differentiating includes $$y$$. Another way to think about it is that you are differentiating using $$\frac{d}{dx}$$, so any term with $$y$$ will have to add a $$y$$ to the fraction, meaing it will have to include a $$\frac{dy}{dx}$$ (or $$y'$$) term.
+When differentiating with respect to $$x$$, attach $$dy/dx$$ when the term you are differentiating includes $$y$$. Another way to think about it is that you are differentiating using $$\frac{d}{dx}$$, so any term with $$y$$ will have to add a $$y$$ to the fraction, meaning it will have to include a $$\frac{dy}{dx}$$ (or $$y'$$) term.
 
 - $$\frac{d}{dx}(y^2)=2y\frac{dy}{dx}$$
 - $$\frac{d}{dx}(\sin y)=\cos y\frac{dy}{dx}$$

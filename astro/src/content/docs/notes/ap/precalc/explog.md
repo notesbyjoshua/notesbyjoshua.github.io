@@ -23,21 +23,9 @@ b>0
 b\ne 1.
 $$
 
-The base $$b$$ is constant, and the variable is in the exponent. This is different from a power function like
+The base $$b$$ is constant, and the variable is in the exponent. This is different from a power function like $$y=x^n$$, where the base is variable and the exponent is constant.
 
-$$
-y=x^n,
-$$
-
-where the base is variable and the exponent is constant.
-
-We require $$b>0$$ because negative bases can break continuity over the real numbers. For example, with
-
-$$
-y=(-2)^x,
-$$
-
-integer inputs are fine, but many fractional inputs are not real-valued in a consistent way. We also exclude $$b=1$$ because
+We require $$b>0$$ because negative bases can break continuity over the real numbers. For example, with $$y=(-2)^x$$, integer inputs are fine, but many fractional inputs are not real-valued in a consistent way. We also exclude $$b=1$$ because
 
 $$
 y=1^x=1
@@ -47,13 +35,7 @@ is just a constant function, not exponential growth or decay.
 
 ### Growth and decay
 
-For
-
-$$
-y=b^x,
-$$
-
-there are two basic shapes:
+For $$y=b^x$$, there are two basic shapes:
 
 - If $$b>1$$, the function is increasing and represents **exponential growth**.
 - If $$0<b<1$$, the function is decreasing and represents **exponential decay**.
@@ -131,11 +113,7 @@ $$
 (-\infty,\infty).
 $$
 
-Since $$\frac12(4)^{x-3}>0$$ for every real $$x$$, the range is
-
-$$
-(2,\infty).
-$$
+Since $$\frac12(4)^{x-3}>0$$ for every real $$x$$, the range is $$(2,\infty)$$.
 
 The graph is shown below (the dashed line is the horizontal asymptote):
 
@@ -252,13 +230,7 @@ $$
 =\frac12\left(\frac12(e^{2x}+e^{-2x})+1\right).
 $$
 
-Since
-
-$$
-\cosh(2x)=\frac12(e^{2x}+e^{-2x}),
-$$
-
-we get
+Since $$\cosh(2x)=\frac12(e^{2x}+e^{-2x})$$, we get
 
 $$
 (\cosh x)^2=\frac12(\cosh(2x)+1).
@@ -282,7 +254,7 @@ $$
 y = \log_b x
 $$
 
-means "$$y$$ is the the exponent you put on $$b$$ to get $$x$$."
+means "$$y$$ is the exponent you put on $$b$$ to get $$x$$."
 
 In equation form:
 
@@ -371,13 +343,7 @@ $$
 
 ### Increasing and decreasing logs
 
-For
-
-$$
-y=\log_b x,
-$$
-
-the shape depends on the base:
+For $$y=\log_b x$$, the shape depends on the base:
 
 - If $$b>1$$, then $$\log_b x$$ is increasing.
 - If $$0<b<1$$, then $$\log_b x$$ is decreasing.
@@ -559,13 +525,7 @@ $$
 \log_{e^2}2=\frac{\ln 2}{\ln(e^2)}.
 $$
 
-Since
-
-$$
-\ln(e^2)=2,
-$$
-
-we get
+Since $$\ln(e^2)=2$$, we get
 
 $$
 \frac{\ln 2}{2}.
@@ -797,13 +757,7 @@ $$
 \boxed{y=3}.
 $$
 
-The $$y$$-intercept is
-
-$$
-f(0)=3-2\cdot 5=-7,
-$$
-
-so the $$y$$-intercept is
+The $$y$$-intercept is $$f(0)=3-2\cdot 5=-7$$, so the $$y$$-intercept is
 
 $$
 \boxed{(0,-7)}.
@@ -841,11 +795,7 @@ $$
 
 It is never increasing.
 
-To find the inverse, let
-
-$$
-y=3-2\cdot 5^{x+1}.
-$$
+To find the inverse, let $$y=3-2\cdot 5^{x+1}$$.
 
 Then
 
@@ -991,11 +941,7 @@ $$
 4\cdot 2^{2x}-10\cdot 2^x+1=0.
 $$
 
-Let
-
-$$
-u=2^x.
-$$
+Let $$u=2^x$$.
 
 Then
 
@@ -1033,11 +979,7 @@ $$
 4. Solve in $$\mathbb{R}$$: $$3^{2x}-28\cdot 3^x+27\le 0$$. Write the answer in interval notation.
 
 :::solution
-Let
-
-$$
-u=3^x.
-$$
+Let $$u=3^x$$.
 
 Since $$3^x>0$$, we need $$u>0$$. The inequality becomes
 
@@ -1123,11 +1065,7 @@ $$
 6. Solve in $$\mathbb{R}$$: $$e^x+e^{-x}=\frac{13}{6}.$$
 
 :::solution
-Let
-
-$$
-u=e^x.
-$$
+Let $$u=e^x$$.
 
 Then
 
@@ -1293,11 +1231,7 @@ $$
 \boxed{4\log_3\lvert x\rvert+\frac12\log_3(y-2)-3\log_3(x^2+1)-\log_3(5-y)}.
 $$
 
-For restrictions, the square root requires
-
-$$
-y-2\ge 0.
-$$
+For restrictions, the square root requires $$y-2\ge 0$$.
 
 But the full logarithm cannot have input $$0$$, so we need
 
@@ -1305,13 +1239,7 @@ $$
 y>2.
 $$
 
-Also, the denominator must not be zero and the argument must be positive. Since $$x^2+1>0$$ always, we need
-
-$$
-5-y>0,
-$$
-
-so
+Also, the denominator must not be zero and the argument must be positive. Since $$x^2+1>0$$ always, we need $$5-y>0$$, so
 
 $$
 y<5.
@@ -1385,17 +1313,7 @@ $$
 10. Solve in $$\mathbb{R}$$: $$\ln(x^2-5x+6)\le \ln(2x+3).$$
 
 :::solution
-First find the logarithm domain:
-
-$$
-x^2-5x+6>0
-$$
-
-and
-
-$$
-2x+3>0.
-$$
+First find the logarithm domain: $$x^2-5x+6>0$$ and $$2x+3>0$$.
 
 Factor:
 
@@ -1480,13 +1398,7 @@ $$
 16-4x>0.
 $$
 
-Thus
-
-$$
-x<4,
-$$
-
-so the domain is
+Thus $$x<4$$, so the domain is
 
 $$
 \boxed{(-\infty,4)}.
@@ -1540,13 +1452,7 @@ $$
 \boxed{(0,0)}.
 $$
 
-The $$y$$-intercept is also
-
-$$
-h(0)=\log_4(16)-2=2-2=0,
-$$
-
-so the $$y$$-intercept is
+The $$y$$-intercept is also $$h(0)=\log_4(16)-2=2-2=0$$, so the $$y$$-intercept is
 
 $$
 \boxed{(0,0)}.
@@ -1560,11 +1466,7 @@ $$
 
 It is never increasing.
 
-Now find the inverse. Let
-
-$$
-y=\log_4(16-4x)-2.
-$$
+Now find the inverse. Let $$y=\log_4(16-4x)-2$$.
 
 Then
 
@@ -1729,11 +1631,7 @@ $$
 13. Find the unique positive integer $$n$$ such that $$\log_2 (\log_{16} n) = \log_4 (\log_4 n)$$ (2020 AMC 12A).
 
 :::solution
-Let
-
-$$
-t=\log_4 n.
-$$
+Let $$t=\log_4 n$$.
 
 Then
 
@@ -1778,11 +1676,7 @@ $$
 t=4.
 $$
 
-Since $$t=\log_4 n$$,
-
-$$
-\log_4 n=4.
-$$
+Since $$t=\log_4 n$$, $$\log_4 n=4$$.
 
 Therefore
 
@@ -1804,11 +1698,7 @@ $$
 
 where $$a<b$$.
 
-For the logarithm to be defined,
-
-$$
-\frac{x-a}{b-x}>0.
-$$
+For the logarithm to be defined, $$\frac{x-a}{b-x}>0$$.
 
 Since $$a<b$$, this happens exactly when
 
@@ -1840,17 +1730,7 @@ $$
 x-a=b-x.
 $$
 
-Thus
-
-$$
-2x=a+b,
-$$
-
-and
-
-$$
-x=\frac{a+b}{2}.
-$$
+Thus $$2x=a+b$$, and $$x=\frac{a+b}{2}$$.
 
 The $$x$$-intercept is
 
@@ -2018,11 +1898,7 @@ $$
 =\frac{\ln 64}{\ln 4}.
 $$
 
-Since $$64=4^3$$,
-
-$$
-\frac{\ln 64}{\ln 4}=3.
-$$
+Since $$64=4^3$$, $$\frac{\ln 64}{\ln 4}=3$$.
 
 Therefore the product is
 
@@ -2118,25 +1994,9 @@ $$
 \boxed{\log_b x=\frac{1-\operatorname{EML}(0,x)}{1-\operatorname{EML}(0,b)}}.
 $$
 
-For part $$(D)$$, use
+For part $$(D)$$, use $$e^x=\operatorname{EML}(x,1)$$ and $$\ln z=1-\operatorname{EML}(0,z)$$.
 
-$$
-e^x=\operatorname{EML}(x,1)
-$$
-
-and
-
-$$
-\ln z=1-\operatorname{EML}(0,z).
-$$
-
-Since
-
-$$
-x+y=\ln(e^xe^y),
-$$
-
-we get
+Since $$x+y=\ln(e^xe^y)$$, we get
 
 $$
 \boxed{x+y=1-\operatorname{EML}\left(0,\operatorname{EML}(x,1)\operatorname{EML}(y,1)\right)}.
@@ -2174,17 +2034,7 @@ $$
 \right).
 $$
 
-Now simplify:
-
-$$
-\operatorname{EML}(x,1)=e^x
-$$
-
-and
-
-$$
-\operatorname{EML}(0,y)=1-\ln y.
-$$
+Now simplify: $$\operatorname{EML}(x,1)=e^x$$ and $$\operatorname{EML}(0,y)=1-\ln y$$.
 
 Therefore
 

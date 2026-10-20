@@ -13,13 +13,7 @@ A **function** assigns each input exactly **one** output. If $$f$$ is a function
 
 The **domain** is the set of all allowed inputs. The **range** is the set of all outputs the function actually produces.
 
-For example,
-
-$$
-f(x)=x^2+4x=x(x+4)
-$$
-
-has domain $$(-\infty,\infty)$$ because every real number can be substituted. To find the range, complete the square:
+For example, $$f(x)=x^2+4x=x(x+4)$$ has domain $$(-\infty,\infty)$$ because every real number can be substituted. To find the range, complete the square:
 
 $$
 f(x)=x^2+4x=(x+2)^2-4.
@@ -237,29 +231,11 @@ The reciprocal rule would approach $$1/2$$ near $$x=2$$ from the right, but it d
 
 ## Implicit Functions
 
-Some equations describe relationships between $$x$$ and $$y$$ without directly solving for $$y$$. These are called **implicit equations**. For example,
+Some equations describe relationships between $$x$$ and $$y$$ without directly solving for $$y$$. These are called **implicit equations**. For example, $$x^2+y^2=1$$ describes a circle, not a function of $$x$$, because many $$x$$-values have two possible $$y$$-values.
 
-$$
-x^2+y^2=1
-$$
+Sometimes an implicit equation can be solved for $$y$$, but it may produce multiple branches. If solving gives $$y=\pm\sqrt{1-x^2}$$, then the plus branch is the top half of the circle and the minus branch is the bottom half. Each branch is a function, but the whole circle is not.
 
-describes a circle, not a function of $$x$$, because many $$x$$-values have two possible $$y$$-values.
-
-Sometimes an implicit equation can be solved for $$y$$, but it may produce multiple branches. If solving gives
-
-$$
-y=\pm\sqrt{1-x^2},
-$$
-
-then the plus branch is the top half of the circle and the minus branch is the bottom half. Each branch is a function, but the whole circle is not.
-
-When an equation is complicated but quadratic in $$y$$, it can sometimes be rearranged into
-
-$$
-ay^2+by+c=0,
-$$
-
-where $$a$$, $$b$$, and $$c$$ may contain $$x$$. Then the quadratic formula gives
+When an equation is complicated but quadratic in $$y$$, it can sometimes be rearranged into $$ay^2+by+c=0$$, where $$a$$, $$b$$, and $$c$$ may contain $$x$$. Then the quadratic formula gives
 
 $$
 y=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
@@ -378,11 +354,7 @@ This measures the average rate of change from $$x$$ to $$x+h$$.
 
 <div class="theorem-box">
 
-**Example.** Let
-
-$$
-f(x)=2x^2-x+1.
-$$
+**Example.** Let $$f(x)=2x^2-x+1$$.
 
 Find the average rate of change from $$a$$ to $$x$$:
 
@@ -478,21 +450,9 @@ has vertex $$(h,k)$$ and axis of symmetry $$x=h$$.
 
 ### Square-root transformations
 
-For
+For $$y=a\sqrt{x-h}+k$$, the starting point is $$(h,k)$$. The basic domain is $$x\ge h$$ unless there is a reflection inside the radical. All transformations behave the same except it changes the domain/range of the radical.
 
-$$
-y=a\sqrt{x-h}+k,
-$$
-
-the starting point is $$(h,k)$$. The basic domain is $$x\ge h$$ unless there is a reflection inside the radical. All transformations behave the same except it changes the domain/range of the radical.
-
-For example,
-
-$$
-f(x)=\sqrt{-x+3}
-$$
-
-requires
+For example, $$f(x)=\sqrt{-x+3}$$ requires
 
 $$
 -x+3\ge 0
@@ -595,13 +555,7 @@ $$
 
 </div>
 
-For
-
-$$
-(g\circ f)(x)=g(f(x)),
-$$
-
-the domain would be different because $$f$$ is the inside function and the output of $$f$$ must be allowed inside the square root.
+For $$(g\circ f)(x)=g(f(x))$$, the domain would be different because $$f$$ is the inside function and the output of $$f$$ must be allowed inside the square root.
 
 ---
 
@@ -609,13 +563,7 @@ the domain would be different because $$f$$ is the inside function and the outpu
 
 Sometimes a complicated formula can be understood as one function inside another.
 
-For example,
-
-$$
-F(x)=(3x-2)^2
-$$
-
-can be written as
+For example, $$F(x)=(3x-2)^2$$ can be written as
 
 $$
 F(x)=h(g(x)),
@@ -655,7 +603,7 @@ $$
 g(f(x))=x
 $$
 
-for every $$x$$ in the domain of $$f$$. *BOTH* conditions must be sastisfied!
+for every $$x$$ in the domain of $$f$$. *BOTH* conditions must be satisfied!
 
 For example, let
 
@@ -702,7 +650,7 @@ The notation $$f^{-1}(x)$$ means "the inverse function of $$f$$." It does **not*
 4. Replace $$y$$ with $$f^{-1}(x)$$.
 :::
 
-It is very improtant to note that the domain of $$f$$ becomes the range of $$f^{-1}$$, and the range of $$f$$ becomes the domain of $$f^{-1}$$.
+It is very important to note that the domain of $$f$$ becomes the range of $$f^{-1}$$, and the range of $$f$$ becomes the domain of $$f^{-1}$$.
 
 <div class="theorem-box">
 
@@ -768,11 +716,7 @@ $$
 
 Graphically, injective functions pass the **horizontal line test**: every horizontal line intersects the graph at most once.
 
-A function is **surjective**, or **onto**, if every element of the target set is hit by the function. In other words, for every allowed output $$y$$ in the codomain, there is at least one input $$x$$ in the domain such that
-
-$$
-f(x)=y.
-$$
+A function is **surjective**, or **onto**, if every element of the target set is hit by the function. In other words, for every allowed output $$y$$ in the codomain, there is at least one input $$x$$ in the domain such that $$f(x)=y$$.
 
 Surjectivity depends on the codomain you choose. For example,
 
@@ -784,21 +728,9 @@ is not surjective as a function from $$\mathbb{R}$$ to $$\mathbb{R}$$, because n
 
 A function is **bijective** if it is both injective and surjective. This means every output in the codomain is hit exactly once. Bijective functions have inverse functions that undo them perfectly on the stated domain and codomain.
 
-For example,
+For example, $$y=x^2$$ is a function because it passes the vertical line test, but it is not injective on $$\mathbb{R}$$ because it fails the horizontal line test. Both $$x=2$$ and $$x=-2$$ give the same output $$4$$.
 
-$$
-y=x^2
-$$
-
-is a function because it passes the vertical line test, but it is not injective on $$\mathbb{R}$$ because it fails the horizontal line test. Both $$x=2$$ and $$x=-2$$ give the same output $$4$$.
-
-To make $$y=x^2$$ injective, restrict the domain. For example, on $$x\ge 0$$,
-
-$$
-f(x)=x^2
-$$
-
-is injective. If we define it as a function from $$[0,\infty)$$ to $$[0,\infty)$$, then it is also surjective, so it is bijective. Its inverse is
+To make $$y=x^2$$ injective, restrict the domain. For example, on $$x\ge 0$$, $$f(x)=x^2$$ is injective. If we define it as a function from $$[0,\infty)$$ to $$[0,\infty)$$, then it is also surjective, so it is bijective. Its inverse is
 
 $$
 f^{-1}(x)=\sqrt{x}.
@@ -953,11 +885,7 @@ $$
 3. Find the explicit form(s) for the relation $$(x^2+y^2)^2=4(x^2-y^2)$$.
 
 :::solution
-Let
-
-$$
-u=y^2.
-$$
+Let $$u=y^2$$.
 
 Then
 
@@ -1047,13 +975,7 @@ $$
 y^2-2xy+(x^2-4x-4)=0.
 $$
 
-Using the quadratic formula with
-
-$$
-a=1,\qquad b=-2x,\qquad c=x^2-4x-4,
-$$
-
-we get
+Using the quadratic formula with $$a=1,\,b=-2x,\,c=x^2-4x-4$$, we get
 
 $$
 y=\frac{-(-2x)\pm\sqrt{(-2x)^2-4(1)(x^2-4x-4)}}{2}.
@@ -1086,13 +1008,7 @@ $$
 y=x-2\sqrt{x+1}.
 $$
 
-Both branches require
-
-$$
-x+1\ge 0,
-$$
-
-so each branch has domain
+Both branches require $$x+1\ge 0$$, so each branch has domain
 
 $$
 \boxed{[-1,\infty)}.
@@ -1168,13 +1084,7 @@ $$
 :::solution
 On $$[-2,\infty)$$, the parabola starts at its vertex and increases. Therefore it passes the horizontal line test, so it is injective.
 
-Also,
-
-$$
-f(-2)=-4,
-$$
-
-and as $$x\to\infty$$, $$f(x)\to\infty$$. Therefore the range is
+Also, $$f(-2)=-4$$, and as $$x\to\infty$$, $$f(x)\to\infty$$. Therefore the range is
 
 $$
 [-4,\infty),
@@ -1299,11 +1209,7 @@ $$
 9. Find $$f^{-1}(3)$$ given that $$f(x)=\frac{3x+1}{2x+f(x)}$$.
 
 :::solution
-We want $$f^{-1}(3)$$, meaning we want the input $$x$$ for which
-
-$$
-f(x)=3.
-$$
+We want $$f^{-1}(3)$$, meaning we want the input $$x$$ for which $$f(x)=3$$.
 
 Use the given relation:
 
@@ -1343,11 +1249,7 @@ $$
 10. Let $$h(x)=\sqrt{4-\lvert x-1 \rvert}.$$ Find the domain and range of $$h$$, and describe the transformations from $$y=\sqrt{x}$$ as clearly as possible.
 
 :::solution
-For the domain, require
-
-$$
-4-\lvert x-1\rvert\ge 0.
-$$
+For the domain, require $$4-\lvert x-1\rvert\ge 0$$.
 
 Then
 
@@ -1367,11 +1269,7 @@ $$
 \boxed{\text{domain}=[-3,5]}.
 $$
 
-The largest value occurs when $$\lvert x-1\rvert=0$$:
-
-$$
-h(1)=\sqrt4=2.
-$$
+The largest value occurs when $$\lvert x-1\rvert=0$$: $$h(1)=\sqrt4=2$$.
 
 The smallest value occurs when $$\lvert x-1\rvert=4$$:
 
@@ -1444,17 +1342,7 @@ $$
 =\frac{1}{\sqrt{2x+5}-3}.
 $$
 
-For the domain, require
-
-$$
-2x+5\ge 0
-$$
-
-and also
-
-$$
-\sqrt{2x+5}-3\ne 0.
-$$
+For the domain, require $$2x+5\ge 0$$ and also $$\sqrt{2x+5}-3\ne 0$$.
 
 The first condition gives $$x\ge -\frac52$$. The second condition gives
 
@@ -1538,11 +1426,7 @@ Since two different inputs give the same output, the function does not have an i
 13. Let $$f(x)=\begin{cases}2x+a, & x<1,\\x^2+b, & 1\le x<3,\\cx-1, & x\ge 3.\end{cases}$$ Find $$a$$, $$b$$, and $$c$$ so that $$f$$ is continuous everywhere and $$f(0)=5$$.
 
 :::solution
-Since $$f(0)=5$$ and $$0<1$$, use the first piece:
-
-$$
-f(0)=2(0)+a=a.
-$$
+Since $$f(0)=5$$ and $$0<1$$, use the first piece: $$f(0)=2(0)+a=a$$.
 
 Thus
 
@@ -1628,11 +1512,7 @@ $$
 \boxed{\text{domain of }g=[-4,6]}.
 $$
 
-Since $$f$$ has range $$[-3,3]$$, the expression $$2f(x-1)$$ has range
-
-$$
-[-6,6].
-$$
+Since $$f$$ has range $$[-3,3]$$, the expression $$2f(x-1)$$ has range $$[-6,6]$$.
 
 Subtracting $$4$$ gives
 
@@ -1700,11 +1580,7 @@ $$
 g(f(a))=g(f(b)).
 $$
 
-Since $$g$$ is injective,
-
-$$
-f(a)=f(b).
-$$
+Since $$g$$ is injective, $$f(a)=f(b)$$.
 
 Since $$f$$ is injective,
 
@@ -1756,13 +1632,7 @@ $$
    (E) The solution in part (D) is the only solution for the rationals, but there exist infinitely more solutions for the reals! Why can't your proof in steps (A) - (D) extend to real numbers?
 
 :::solution
-We are given
-
-$$
-f(x+y)=f(x)+f(y)
-$$
-
-for rational inputs.
+We are given $$f(x+y)=f(x)+f(y)$$ for rational inputs.
 
 For part (A), set $$x=0$$ and $$y=0$$:
 
@@ -1822,11 +1692,7 @@ $$
 \boxed{f\left(\frac{x}{n}\right)=\frac{f(x)}{n}}.
 $$
 
-For part (D), let
-
-$$
-c=f(1).
-$$
+For part (D), let $$c=f(1)$$.
 
 For any rational number $$r=\frac{m}{n}$$,
 

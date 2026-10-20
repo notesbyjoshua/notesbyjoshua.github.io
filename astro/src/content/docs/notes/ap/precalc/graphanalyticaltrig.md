@@ -27,13 +27,7 @@ So both $$y=\sin x$$ and $$y=\cos x$$ have **period** $$2\pi$$.
 
 ### Sine
 
-For
-
-$$
-y=\sin x,
-$$
-
-the key facts are:
+For $$y=\sin x$$, the key facts are:
 
 - Domain: $$(-\infty,\infty)$$.
 - Range: $$[-1,1]$$.
@@ -51,13 +45,7 @@ The sine graph starts at the midline, reaches a maximum after one fourth of a pe
 
 ### Cosine
 
-For
-
-$$
-y=\cos x,
-$$
-
-the key facts are:
+For $$y=\cos x$$, the key facts are:
 
 - Domain: $$(-\infty,\infty)$$.
 - Range: $$[-1,1]$$.
@@ -100,17 +88,7 @@ The constants control the shape of the graph:
 - The range is $$[D-\lvert A \rvert,D+ \lvert A \rvert]$$.
 :::
 
-If the function is written as
-
-$$
-y=A\sin(Bx-C)+D
-$$
-
-or
-
-$$
-y=A\cos(Bx-C)+D,
-$$
+If the function is written as $$y=A\sin(Bx-C)+D$$ or $$y=A\cos(Bx-C)+D$$,
 
 factor the inside first:
 
@@ -224,13 +202,7 @@ A graph with many key points is shown below:
 
 Graphs are useful for understanding why trigonometric equations often have more than one solution.
 
-For example, solving
-
-$$
-\sin x=a
-$$
-
-on $$[0,2\pi)$$ means finding every point on one full sine cycle with height $$a$$. If $$-1<a<1$$ and $$a\ne 0$$, there are usually two solutions in one period.
+For example, solving $$\sin x=a$$ on $$[0,2\pi)$$ means finding every point on one full sine cycle with height $$a$$. If $$-1<a<1$$ and $$a\ne 0$$, there are usually two solutions in one period.
 
 Similarly,
 
@@ -288,21 +260,9 @@ The remaining trig graphs come from tangent, cotangent, secant, and cosecant.
 
 ### Tangent
 
-Since
+Since $$\tan x=\frac{\sin x}{\cos x}$$, tangent is undefined wherever $$\cos x=0$$.
 
-$$
-\tan x=\frac{\sin x}{\cos x},
-$$
-
-tangent is undefined wherever $$\cos x=0$$.
-
-For
-
-$$
-y=\tan x,
-$$
-
-the key facts are:
+For $$y=\tan x$$, the key facts are:
 
 - Domain: all real numbers except $$x=\frac{\pi}{2}+k\pi$$.
 - Range: $$(-\infty,\infty)$$.
@@ -388,21 +348,9 @@ A graph with many key points is shown below:
 
 ### Cotangent
 
-Since
+Since $$\cot x=\frac{\cos x}{\sin x}$$, cotangent is undefined wherever $$\sin x=0$$.
 
-$$
-\cot x=\frac{\cos x}{\sin x},
-$$
-
-cotangent is undefined wherever $$\sin x=0$$.
-
-For
-
-$$
-y=\cot x,
-$$
-
-the key facts are:
+For $$y=\cot x$$, the key facts are:
 
 - Domain: all real numbers except $$x=k\pi$$.
 - Range: $$(-\infty,\infty)$$.
@@ -424,21 +372,9 @@ $$
 
 ### Secant
 
-Since
+Since $$\sec x=\frac1{\cos x}$$, secant is undefined wherever $$\cos x=0$$.
 
-$$
-\sec x=\frac1{\cos x},
-$$
-
-secant is undefined wherever $$\cos x=0$$.
-
-For
-
-$$
-y=\sec x,
-$$
-
-the key facts are:
+For $$y=\sec x$$, the key facts are:
 
 - Domain: all real numbers except $$x=\frac{\pi}{2}+k\pi$$.
 - Range: $$(-\infty,-1]\cup[1,\infty)$$.
@@ -461,21 +397,9 @@ $$
 
 ### Cosecant
 
-Since
+Since $$\csc x=\frac1{\sin x}$$, cosecant is undefined wherever $$\sin x=0$$.
 
-$$
-\csc x=\frac1{\sin x},
-$$
-
-cosecant is undefined wherever $$\sin x=0$$.
-
-For
-
-$$
-y=\csc x,
-$$
-
-the key facts are:
+For $$y=\csc x$$, the key facts are:
 
 - Domain: all real numbers except $$x=k\pi$$.
 - Range: $$(-\infty,-1]\cup[1,\infty)$$.
@@ -504,17 +428,7 @@ The angle addition and subtraction formulas let us rewrite trig functions of sum
 
 <div class="theorem-box">
 
-**Proof (Angle addition formulas).** Let two points on the unit circle be
-
-$$
-P=(\cos A,\sin A)
-$$
-
-and
-
-$$
-Q=(\cos B,\sin B).
-$$
+**Proof (Angle addition formulas).** Let two points on the unit circle be $$P=(\cos A,\sin A)$$ and $$Q=(\cos B,\sin B)$$.
 
 The distance between them depends only on the angle between them, which is $$A-B$$. Using the distance formula:
 
@@ -803,13 +717,7 @@ $$
 
 **Example.** Find the exact value of $$\sin 105^\circ$$.
 
-Since
-
-$$
-105^\circ=\frac{210^\circ}{2},
-$$
-
-use the half-angle formula:
+Since $$105^\circ=\frac{210^\circ}{2}$$, use the half-angle formula:
 
 $$
 \sin\left(\frac{\theta}{2}\right)=\pm\sqrt{\frac{1-\cos\theta}{2}}.
@@ -822,13 +730,7 @@ $$
 =\sqrt{\frac{1-\cos210^\circ}{2}}.
 $$
 
-Because
-
-$$
-\cos210^\circ=-\frac{\sqrt3}{2},
-$$
-
-we get
+Because $$\cos210^\circ=-\frac{\sqrt3}{2}$$, we get
 
 $$
 \sin105^\circ
@@ -927,13 +829,7 @@ The other product-to-sum formulas come from adding or subtracting the sine addit
 
 <div class="theorem-box">
 
-**Example.** Rewrite
-
-$$
-\cos(5x)+\cos(3x)
-$$
-
-as a product.
+**Example.** Rewrite $$\cos(5x)+\cos(3x)$$ as a product.
 
 Use
 
@@ -1057,23 +953,13 @@ A function needs to be one-to-one in order to have an inverse function. The orig
 
 ### Inverse sine
 
-For inverse sine (arcsine),
-
-$$
-y=\sin^{-1}x
-$$
-
-means
+For inverse sine (arcsine), $$y=\sin^{-1}x$$ means
 
 $$
 \sin y=x.
 $$
 
-The restricted sine function for the standard arcsine function uses the interval
-
-$$
-\left[-\frac{\pi}{2},\frac{\pi}{2}\right].
-$$
+The restricted sine function for the standard arcsine function uses the interval $$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$$.
 
 So
 
@@ -1082,23 +968,13 @@ So
 
 ### Inverse cosine
 
-For inverse cosine (arccosine),
-
-$$
-y=\cos^{-1}x
-$$
-
-means
+For inverse cosine (arccosine), $$y=\cos^{-1}x$$ means
 
 $$
 \cos y=x.
 $$
 
-The restricted cosine function for the standard arccosine function uses the interval
-
-$$
-[0,\pi].
-$$
+The restricted cosine function for the standard arccosine function uses the interval $$[0,\pi]$$.
 
 So
 
@@ -1107,23 +983,13 @@ So
 
 ### Inverse tangent
 
-For inverse tangent (arctangent),
-
-$$
-y=\tan^{-1}x
-$$
-
-means
+For inverse tangent (arctangent), $$y=\tan^{-1}x$$ means
 
 $$
 \tan y=x.
 $$
 
-The restricted tangent function for the standard arctangent function uses the interval
-
-$$
-\left(-\frac{\pi}{2},\frac{\pi}{2}\right).
-$$
+The restricted tangent function for the standard arctangent function uses the interval $$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$$.
 
 So
 
@@ -1154,13 +1020,7 @@ $$
 Expressions like $$\sin^{-1}(\sin x)$$ do not always equal $$x$$, because the answer must be forced into the range of inverse sine, $$\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$$.
 :::
 
-When evaluating a composition such as
-
-$$
-\sin(\cos^{-1}x),
-$$
-
-draw a triangle or use an identity and always inverse trig functions represent angles. If $$\theta=\cos^{-1}x$$, then $$\cos\theta=x$$ and $$\theta$$ is in $$[0,\pi]$$. The sign of the final answer should match the quadrant allowed by the inverse trig function.
+When evaluating a composition such as $$\sin(\cos^{-1}x)$$, draw a triangle or use an identity, remembering that inverse trig functions represent angles. If $$\theta=\cos^{-1}x$$, then $$\cos\theta=x$$ and $$\theta$$ is in $$[0,\pi]$$. The sign of the final answer should match the quadrant allowed by the inverse trig function.
 
 <div class="theorem-box">
 
@@ -1176,13 +1036,7 @@ $$
 \theta=\cos^{-1}\frac35.
 $$
 
-Then
-
-$$
-\cos\theta=\frac35,
-$$
-
-and $$\theta$$ must be in $$[0,\pi]$$. Since cosine is positive, $$\theta$$ is in Quadrant I.
+Then $$\cos\theta=\frac35$$, and $$\theta$$ must be in $$[0,\pi]$$. Since cosine is positive, $$\theta$$ is in Quadrant I.
 
 Draw a right triangle with adjacent side $$3$$ and hypotenuse $$5$$. The opposite side is
 
@@ -1625,11 +1479,7 @@ A graph with many key points is shown below:
 5. Solve exactly on $$[0,4\pi)$$. Then sketch $$y=2\sin^2x-\sin x-1$$ on $$[0,4\pi)$$ and label all $$x$$-intercepts: $$2\sin^2x-\sin x-1=0.$$
 
 :::solution
-Let
-
-$$
-u=\sin x.
-$$
+Let $$u=\sin x$$.
 
 Then
 
@@ -1747,11 +1597,7 @@ $$
 \sin(2x)=-\frac12.
 $$
 
-Let $$u=2x$$. Since $$x\in[0,4\pi)$$,
-
-$$
-u\in[0,8\pi).
-$$
+Let $$u=2x$$. Since $$x\in[0,4\pi)$$, $$u\in[0,8\pi)$$.
 
 On $$[0,8\pi)$$, $$\sin u=-\frac12$$ at
 
@@ -1810,17 +1656,7 @@ t=\frac{4\pm\sqrt{16-4}}{2}
 =2\pm\sqrt3.
 $$
 
-Since
-
-$$
-\tan\left(\frac{\pi}{12}\right)=2-\sqrt3
-$$
-
-and
-
-$$
-\tan\left(\frac{5\pi}{12}\right)=2+\sqrt3,
-$$
+Since $$\tan\left(\frac{\pi}{12}\right)=2-\sqrt3$$ and $$\tan\left(\frac{5\pi}{12}\right)=2+\sqrt3$$,
 
 the solutions on $$[0,2\pi)$$ are
 
@@ -2060,11 +1896,7 @@ shows that zeros occur whenever either factor is zero. A sketch should mark the 
 11. Evaluate exactly: $$\sin\left(\cos^{-1}\frac35\right)+\cos\left(\sin^{-1}\left(-\frac5{13}\right)\right)+\tan\left(\cos^{-1}\left(-\frac45\right)\right).$$
 
 :::solution
-Let
-
-$$
-\alpha=\cos^{-1}\frac35.
-$$
+Let $$\alpha=\cos^{-1}\frac35$$.
 
 Then $$\cos\alpha=\frac35$$, and since $$\alpha\in[0,\pi]$$, $$\alpha$$ is in Quadrant I. Therefore
 
@@ -2096,11 +1928,7 @@ $$
 \cos\left(\sin^{-1}\left(-\frac5{13}\right)\right)=\frac{12}{13}.
 $$
 
-Finally, let
-
-$$
-\gamma=\cos^{-1}\left(-\frac45\right).
-$$
+Finally, let $$\gamma=\cos^{-1}\left(-\frac45\right)$$.
 
 Then $$\gamma\in[0,\pi]$$ and cosine is negative, so $$\gamma$$ is in Quadrant II. Hence
 
@@ -2147,11 +1975,7 @@ $$
 
 on $$[0,2\pi]$$.
 
-The tangent side is undefined when
-
-$$
-2x=\frac{\pi}{2}+k\pi.
-$$
+The tangent side is undefined when $$2x=\frac{\pi}{2}+k\pi$$.
 
 Thus
 
@@ -2175,11 +1999,7 @@ $$
 \left(\frac{7\pi}{4},2\pi\right].
 $$
 
-Let
-
-$$
-F(x)=\tan(2x)-\cos\left(\frac{x}{2}\right).
-$$
+Let $$F(x)=\tan(2x)-\cos\left(\frac{x}{2}\right)$$.
 
 On each of the five pieces, $$\tan(2x)$$ increases from $$-\infty$$ to $$\infty$$, except on the first and last pieces where one endpoint is finite. Also, $$\cos\left(\frac{x}{2}\right)$$ decreases from $$1$$ to $$-1$$ on $$[0,2\pi]$$.
 
@@ -2209,13 +2029,7 @@ $$
 13. Suppose $$\frac{\pi}{2}<\theta<\pi$$ and $$\cos\theta=-\frac35$$. Find exact values of $$\sin\left(\frac{\theta}{2}\right), \cos\left(\frac{\theta}{2}\right),$$ and $$\tan\left(\frac{\theta}{2}\right).$$
 
 :::solution
-We are given
-
-$$
-\frac{\pi}{2}<\theta<\pi,
-$$
-
-so $$\theta$$ is in Quadrant II. Therefore
+We are given $$\frac{\pi}{2}<\theta<\pi$$, so $$\theta$$ is in Quadrant II. Therefore
 
 $$
 \frac{\theta}{2}
@@ -2223,13 +2037,7 @@ $$
 
 is in Quadrant I.
 
-Since
-
-$$
-\cos\theta=-\frac35,
-$$
-
-the half-angle formulas give
+Since $$\cos\theta=-\frac35$$, the half-angle formulas give
 
 $$
 \sin\left(\frac{\theta}{2}\right)
@@ -2281,29 +2089,9 @@ $$
 14. Let $$x$$ and $$y$$ be real numbers such that $$\frac{\sin x}{\sin y} = 3$$ and $$\frac{\cos x}{\cos y} = \frac{1}{2}$$. The value of $$\frac{\sin 2x}{\sin 2y} + \frac{\cos 2x}{\cos 2y}$$ can be expressed in the form $$\frac{p}{q}$$, where $$p$$ and $$q$$ are relatively prime positive integers. Find $$p+q$$. (2014 AIME II)
 
 :::solution
-We are given
+We are given $$\frac{\sin x}{\sin y}=3$$ and $$\frac{\cos x}{\cos y}=\frac12$$.
 
-$$
-\frac{\sin x}{\sin y}=3
-$$
-
-and
-
-$$
-\frac{\cos x}{\cos y}=\frac12.
-$$
-
-So
-
-$$
-\sin x=3\sin y
-$$
-
-and
-
-$$
-\cos x=\frac12\cos y.
-$$
+So $$\sin x=3\sin y$$ and $$\cos x=\frac12\cos y$$.
 
 Let
 
@@ -2573,17 +2361,7 @@ $$
 ::::problem
 16. (Bonus, Viète's formula for $$\pi$$)
 
-Let
-
-$$
-a_1=\sqrt2
-$$
-
-and define
-
-$$
-a_{n+1}=\sqrt{2+a_n}.
-$$
+Let $$a_1=\sqrt2$$ and define $$a_{n+1}=\sqrt{2+a_n}$$.
 
 The nested radicals
 
@@ -2655,13 +2433,7 @@ $$
 2\cos\left(\frac{u}{2}\right)=\sqrt{2+2\cos u}.
 $$
 
-With
-
-$$
-u=\frac{\pi}{2^{n+1}},
-$$
-
-we get
+With $$u=\frac{\pi}{2^{n+1}}$$, we get
 
 $$
 a_{n+1}
@@ -2713,11 +2485,7 @@ $$
 P_N=\frac{1}{2^N\sin\left(\frac{\pi}{2^{N+1}}\right)}.
 $$
 
-For part $$(C)$$, let
-
-$$
-u_N=\frac{\pi}{2^{N+1}}.
-$$
+For part $$(C)$$, let $$u_N=\frac{\pi}{2^{N+1}}$$.
 
 Then
 

@@ -116,13 +116,7 @@ $$
 
 For a linear system, the **coefficient matrix** stores the coefficients of the variables. The **augmented matrix** also includes the constants on the right side.
 
-The order of the columns matters. If the columns are arranged as $$x,y,z$$, then every row must follow that same order. Missing variables get coefficient $$0$$. For example, $$3x+z=5$$ becomes
-
-$$
-3x+0y+z=5,
-$$
-
-so its coefficient row is
+The order of the columns matters. If the columns are arranged as $$x,y,z$$, then every row must follow that same order. Missing variables get coefficient $$0$$. For example, $$3x+z=5$$ becomes $$3x+0y+z=5$$, so its coefficient row is
 
 $$
 \begin{bmatrix}
@@ -172,17 +166,7 @@ Gaussian elimination is a systematic version of elimination. The main idea is to
 
 The reason this works is that each row in an augmented matrix is just one equation. If you replace an equation with a combination of equations that has the same information, the solution set stays the same.
 
-For example, suppose a solution satisfies both
-
-$$
-E_1:\quad x+y=5
-$$
-
-and
-
-$$
-E_2:\quad 2x-y=4.
-$$
+For example, suppose a solution satisfies both $$E_1:\,x+y=5$$ and $$E_2:\,2x-y=4$$.
 
 Then that same solution must also satisfy
 
@@ -242,13 +226,7 @@ x+2y-z=4\\
 \end{cases}
 $$
 
-The last equation gives $$z=3$$. Then the second equation gives
-
-$$
-3y+5(3)=21,
-$$
-
-so $$y=2$$. Then the first equation gives
+The last equation gives $$z=3$$. Then the second equation gives $$3y+5(3)=21$$, so $$y=2$$. Then the first equation gives
 
 $$
 x+2(2)-3=4,
@@ -328,13 +306,7 @@ $$
 \end{bmatrix},
 $$
 
-then use
-
-$$
-R_2\leftarrow R_2-3R_1,
-$$
-
-because $$6-3(2)=0$$.
+then use $$R_2\leftarrow R_2-3R_1$$, because $$6-3(2)=0$$.
 
 In general, you choose the multiple that makes
 
@@ -404,13 +376,7 @@ $$
 \right]
 $$
 
-Now use the second pivot, which is $$1$$, to eliminate the $$-3$$ below it. Since
-
-$$
--3+3(1)=0,
-$$
-
-use
+Now use the second pivot, which is $$1$$, to eliminate the $$-3$$ below it. Since $$-3+3(1)=0$$, use
 
 $$
 R_3\leftarrow R_3+3R_2.
@@ -482,13 +448,7 @@ $$
 \right]
 $$
 
-means
-
-$$
-0=5,
-$$
-
-so the system has **no solution**.
+means $$0=5$$, so the system has **no solution**.
 
 A row like
 
@@ -863,19 +823,11 @@ B=
 \end{bmatrix}.
 $$
 
-For $$A$$,
-
-$$
-\det(A)=1(6)-2(3)=0.
-$$
+For $$A$$, $$\det(A)=1(6)-2(3)=0$$.
 
 The second row is $$3$$ times the first row, so the two rows do not give independent information.
 
-For $$B$$,
-
-$$
-\det(B)=1(5)-2(3)=-1.
-$$
+For $$B$$, $$\det(B)=1(5)-2(3)=-1$$.
 
 This is nonzero, so $$B$$ is invertible and a system with coefficient matrix $$B$$ has exactly one solution.
 
@@ -1222,13 +1174,7 @@ $$
 x+2y-z=2.
 $$
 
-Therefore
-
-$$
-x+4-3=2,
-$$
-
-so $$x=1$$. The solution is
+Therefore $$x+4-3=2$$, so $$x=1$$. The solution is
 
 $$
 \boxed{(1,2,3)}.
@@ -1257,17 +1203,7 @@ x+2y-z=4\\
 \end{cases}
 $$
 
-Let $$z=t$$. Then
-
-$$
-x+2y=4+t
-$$
-
-and
-
-$$
-3x-y=1-t.
-$$
+Let $$z=t$$. Then $$x+2y=4+t$$ and $$3x-y=1-t$$.
 
 From the first equation,
 
@@ -1880,11 +1816,7 @@ $$
 :::solution
 Use the three points in $$f(x)=ax^2+bx+c$$.
 
-For $$(-1,6)$$:
-
-$$
-a-b+c=6.
-$$
+For $$(-1,6)$$: $$a-b+c=6$$.
 
 For $$(2,3)$$:
 
@@ -1892,11 +1824,7 @@ $$
 4a+2b+c=3.
 $$
 
-For $$(4,15)$$:
-
-$$
-16a+4b+c=15.
-$$
+For $$(4,15)$$: $$16a+4b+c=15$$.
 
 Subtract the first equation from the second:
 
@@ -1940,13 +1868,7 @@ $$
 b=-1-\frac75=-\frac{12}{5}.
 $$
 
-Use $$a-b+c=6$$:
-
-$$
-\frac75-\left(-\frac{12}{5}\right)+c=6,
-$$
-
-so
+Use $$a-b+c=6$$: $$\frac75-\left(-\frac{12}{5}\right)+c=6$$, so
 
 $$
 \frac{19}{5}+c=6,
@@ -2028,17 +1950,7 @@ $$
     $$
 
 :::solution
-Since
-
-$$
-x+y=8
-$$
-
-and
-
-$$
-xy=12,
-$$
+Since $$x+y=8$$ and $$xy=12$$,
 
 the numbers $$x$$ and $$y$$ are roots of the quadratic
 
@@ -2073,17 +1985,7 @@ $$
     $$
 
 :::solution
-The region is in the first quadrant and below both lines:
-
-$$
-x+2y=8
-$$
-
-and
-
-$$
-3x+y=9.
-$$
+The region is in the first quadrant and below both lines: $$x+2y=8$$ and $$3x+y=9$$.
 
 The intercepts on the axes are:
 
@@ -2199,23 +2101,13 @@ x+y=5
 \end{cases}
 $$
 
-Add the equations:
-
-$$
-3x=12,
-$$
-
-so $$x=4$$. Then $$y=1$$. The original point is
+Add the equations: $$3x=12$$, so $$x=4$$. Then $$y=1$$. The original point is
 
 $$
 \boxed{(4,1)}.
 $$
 
-Now let points on the original line be written as
-
-$$
-(x,y)=(x,2x+1).
-$$
+Now let points on the original line be written as $$(x,y)=(x,2x+1)$$.
 
 The transformed coordinates satisfy
 
@@ -2255,17 +2147,7 @@ $$
 T=0.10F+0.20T+80.
 $$
 
-Move internal demand terms to the left:
-
-$$
-0.80F-0.30T=110,
-$$
-
-and
-
-$$
--0.10F+0.80T=80.
-$$
+Move internal demand terms to the left: $$0.80F-0.30T=110$$, and $$-0.10F+0.80T=80$$.
 
 In matrix form:
 
@@ -2564,13 +2446,7 @@ $$
 M=\begin{bmatrix}2&1\\1&1\end{bmatrix},
 $$
 
-the trace is
-
-$$
-\operatorname{tr}(M)=3,
-$$
-
-and the determinant is
+the trace is $$\operatorname{tr}(M)=3$$, and the determinant is
 
 $$
 \det(M)=2(1)-1(1)=1.

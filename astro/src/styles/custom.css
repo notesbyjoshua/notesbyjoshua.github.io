@@ -1065,7 +1065,6 @@
 	.page-actions,
 	footer,
 	canvas.paper-canvas,
-	.doc-minimap,
 	.reference-sheet-drawer,
 	.solution-toggle {
 		display: none !important;

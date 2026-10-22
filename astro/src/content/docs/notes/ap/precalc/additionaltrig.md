@@ -5,7 +5,7 @@ sidebar:
   order: 7
 ---
 
-## Laws of Sines and Cosines
+## The Triangle Laws
 
 <div class="theorem-box">
 
@@ -170,7 +170,7 @@ As an angle check, the Law of Sines gives $$\sin B=5/6$$. The two possible angle
 
 <div class="theorem-box">
 
-**Theorem.** The **Law of Cosines** states that for a traingle with side lengths $$a$$, $$b$$, and $$c$$ (with oppposite angles $$A$$, $$B$$, and $$C$$, respectively):
+**Theorem.** The **Law of Cosines** states that for a triangle with side lengths $$a$$, $$b$$, and $$c$$ (with oppposite angles $$A$$, $$B$$, and $$C$$, respectively):
 
 $$
 a^2=b^2+c^2-2bc\cos A.
@@ -325,20 +325,14 @@ $$
 \overrightarrow{PQ}=\langle x_2-x_1,y_2-y_1\rangle.
 $$
 
-The same vector can be written as a column $$\begin{pmatrix}a\\b\end{pmatrix}$$ or as $$a\mathbf i+b\mathbf j$$ using the standard unit vectors introduced below. Angle brackets distinguish vector components from the coordinates $$(a,b)$$ of a point; a position vector is the vector from the origin to that point.
+The same vector can be written as a column $$\begin{pmatrix}a\\b\end{pmatrix}$$ using the standard unit vectors introduced below. Angle brackets distinguish vector components from the coordinates $$(a,b)$$ of a point. If not specified, a vector is assumed to start from the origin.
 
 ### Vector components
 
 If a vector has magnitude $$\lvert \mathbf v \rvert$$ and direction angle $$\theta$$, then it can be broken down into horizontal and vertical components, each of which are parallel to one of the axes:
 
 $$
-v_x=\lvert \mathbf v \rvert\cos\theta
-$$
-
-and
-
-$$
-v_y=\lvert \mathbf v\rvert \sin\theta.
+v_x=\lvert \mathbf v \rvert\cos\theta \qquad v_y=\lvert \mathbf v\rvert \sin\theta.
 $$
 
 Thus,
@@ -398,7 +392,7 @@ $$
 \tan\theta=\frac{b}{a},
 $$
 
-but the quadrant of the vector must be considered.
+but the quadrant of the vector must be considered for the angle.
 
 <div class="theorem-box">
 
@@ -437,7 +431,7 @@ The **parallelogram method** starts both vectors at the same point. Translate ea
 \end{tikzpicture}
 ```
 
-Vector addition is commutative:
+As seen in the picture above, vector addition is commutative:
 
 $$
 \mathbf u+\mathbf v=\mathbf v+\mathbf u.
@@ -458,17 +452,7 @@ $$
 
 To understand vector addition, remember that a vector $$\langle u_1,u_2\rangle$$ means "move $$u_1$$ units horizontally and $$u_2$$ units vertically."
 
-Adding $$\mathbf u=\langle u_1,u_2\rangle$$ and $$\mathbf v=\langle v_1,v_2\rangle$$ means doing both moves. Horizontally, the total movement is
-
-$$
-u_1+v_1.
-$$
-
-Vertically, the total movement is
-
-$$
-u_2+v_2.
-$$
+Adding $$\mathbf u=\langle u_1,u_2\rangle$$ and $$\mathbf v=\langle v_1,v_2\rangle$$ means doing both moves. Horizontally, the total movement is $$u_1+v_1.$$ Vertically, the total movement is $$u_2+v_2.$$
 
 So,
 
@@ -520,19 +504,13 @@ Its speed is $$\sqrt{181}/4\approx3.36\text{ m/s}$$. Averaging the two outbound 
 
 A **unit vector** is any vector that has magnitude $$1$$.
 
-The standard unit vectors, called basis vectors, are
+The standard unit vectors, called basis vectors, are the vectors
 
 $$
-\mathbf i=\langle 1,0\rangle
+\mathbf i=\langle 1,0\rangle \qquad \mathbf j=\langle 0,1\rangle.
 $$
 
-and
-
-$$
-\mathbf j=\langle 0,1\rangle.
-$$
-
-So
+So any vector can be written as
 
 $$
 \langle a,b\rangle=a\mathbf i+b\mathbf j.
@@ -543,6 +521,8 @@ To find a unit vector in the direction of a nonzero vector $$\mathbf v$$, we can
 $$
 \mathbf u=\frac{\mathbf v}{\lvert \mathbf v \rvert}.
 $$
+
+// talk a little bit about why we use unit vectors (to decompose vectors)
 
 <div class="theorem-box">
 
@@ -567,9 +547,7 @@ $$
 
 We have covered vector addition and subtraction, so how do we do vector multiplication? There are two ways to do multiplication, but we will only focus on the scalar version, known as the **dot product**.
 
-For $$\mathbf A=\langle x_1,y_1\rangle$$ and $$\mathbf B=\langle x_2,y_2\rangle$$,
-
-the dot product is
+For $$\mathbf A=\langle x_1,y_1\rangle$$ and $$\mathbf B=\langle x_2,y_2\rangle$$, the dot product is
 
 $$
 \mathbf A\cdot \mathbf B=x_1x_2+y_1y_2.
@@ -633,11 +611,15 @@ $$
 
 </div>
 
+// add a hard example problem
+
 ### Components and projections along a vector
 
 The **scalar projection**, or **component of $$\mathbf A$$ along $$\mathbf B$$**, is the signed length of the part of $$\mathbf A$$ pointing in the direction of a nonzero $$\mathbf B$$. If their angle is $$\theta$$, this length is $$\lvert\mathbf A\rvert\cos\theta$$. It is negative when the vectors point more than $$90^\circ$$ apart.
 
 The **vector projection** has this signed length along the unit vector $$\mathbf B/\lvert\mathbf B\rvert$$. It gives the parallel part of $$\mathbf A$$; subtracting it from $$\mathbf A$$ leaves a vector perpendicular to $$\mathbf B$$.
+
+Using these, we can define a couple of key formulas.
 
 :::key{name="Dot product and projections"}
 
@@ -703,6 +685,8 @@ $$
 \theta=\cos^{-1}\left(\frac35\right)\approx 53.1^\circ.
 $$
 
+// have this problem use the formulas you defined above
+
 </div>
 
 <div class="theorem-box">
@@ -748,7 +732,7 @@ Parametric equations describe both:
 
 ### Eliminating the parameter
 
-To eliminate the parameter, solve one equation for $$t$$ and substitute into the other equation.
+Often, we want to find an explicit form for a set of parametric equations, which we do by eliminating the parameter. To eliminate the parameter, solve one equation for $$t$$ and substitute into the other equation.
 
 For example, if $$x=3t$$, then
 
@@ -759,14 +743,6 @@ $$
 Substituting this into the equation for $$y$$ gives a rectangular equation relating $$x$$ and $$y$$ directly.
 
 The rectangular equation may not show the full behavior of the parametric curve, because the parameter can restrict the domain or determine the direction of travel. Always indicate the allowed domain for $$t$$, as well as the direction the graph is moving.
-
-When dealing with trig, we cbn often use the identity $$\sin^2 t+\cos^2 t=1$$ (or equivalent expressions with the other trig functions) to eliminate the parameter
-
-:::strategy
-1. Isolate the two trig expressions (e.g. $$\cos t = \frac{x}{a}$$).
-2. Use a version of the Pythagoren Identity (e.g. $$\cos^2 t + \sin^2 t = 1$$) to combine the two equations.
-3. State any domain restrictions on the graph and indicate orientation/direction.
-:::
 
 <div class="theorem-box">
 
@@ -782,7 +758,19 @@ However, this equation alone includes points the parameter never reaches. The po
 
 As $$t$$ increases, the curve moves from $$(3,-6)$$ through $$(0,0)$$ at $$t=-1$$, then to $$(-1,0)$$ at $$t=0$$, and back to $$(0,0)$$ at $$t=1$$. Squaring preserved the equation but lost both the branch restriction and the repeated visit to the origin.
 
+// make this harder and add a diagram for the problem
+
 </div>
+
+### Trig Substritutions
+
+When dealing with trig, we can often use the identity $$\sin^2 t+\cos^2 t=1$$ (or equivalent expressions with the other trig functions) to eliminate the parameter
+
+:::strategy
+1. Isolate the two trig expressions (e.g. $$\cos t = \frac{x}{a}$$).
+2. Use a version of the Pythagoren Identity (e.g. $$\cos^2 t + \sin^2 t = 1$$) to combine the two equations.
+3. State any domain restrictions on the graph and indicate orientation/direction.
+:::
 
 <div class="theorem-box">
 
@@ -797,6 +785,8 @@ $$
 The full equation is an ellipse, but $$\cos t\ge0$$ on the allowed interval, so $$x\ge2$$. Also $$\sin t$$ increases from $$-1$$ to $$\sqrt3/2$$, so $$-3\le y\le\sqrt3-1$$. These restrictions select exactly the required arc of the right half of the ellipse.
 
 The motion starts at $$(2,-3)$$, passes through $$(5,-1)$$, and ends at $$(7/2,\sqrt3-1)$$. It follows the ellipse counterclockwise, even though $$x$$ first increases and then decreases.
+
+// add the diagram
 
 </div>
 
@@ -859,30 +849,24 @@ The origin occurs at $$t=\pi/2$$ and $$3\pi/2$$. The route is $$(2,0)\to(\sqrt2,
 :::
 ::::
 
+// have these as examples and not like practice problems
+
 ---
 
 ## Polar Coordinates
 
 ### Introduction to polar coordinates
 
-In rectangular coordinates, we write points as
+In rectangular coordinates, we write points as $$(x,y).$$ However, often times we describe problems with curves or rotations, which can be hard with rectangular coordinaets. When dealing with rotation, we often think of circles, which we can utilize.  
 
-$$
-(x,y).
-$$
-
-When a problem is organized around distance from a fixed point and direction, polar coordinates often make the geometry shorter to describe. A circle centered at the origin becomes $$r=R$$, and rotating a point becomes adding an angle. Spirals, radial motion, and many symmetric curves are easier to express this way than as $$y=f(x)$$.
-
-In polar coordinates, a point is written as
-
-$$
-(r,\theta),
-$$
+In polar coordinates, a point is written as $$(r,\theta),$$
 
 where:
 
 - $$r$$ is the directed distance from the pole (the origin),
 - $$\theta$$ is the angle from the polar axis (the positive $$x$$-axis)
+
+// talk about polar coordinates, the polar plane, and circles
 
 A negative radius means that you are going in the *opposite* direction of the angle.
 
@@ -904,6 +888,8 @@ A negative radius means that you are going in the *opposite* direction of the an
 \fill[red!75!black] (Q) circle (2pt) node[below left] {$(-r,\theta)$};
 \end{tikzpicture}
 ```
+
+// draw the polar plane and make sure theta is outside the angle not inside the angle
 
 ### Converting between polar and rectangular form
 
@@ -1037,29 +1023,6 @@ The first two use the same radius and coterminal angles. The third uses a negati
 
 </div>
 
-### Rotating points and curves
-
-To rotate a point counterclockwise through angle $$\alpha$$ about the pole, keep its radius and add the angle:
-
-$$
-(r,\theta)\longmapsto(r,\theta+\alpha).
-$$
-
-Clockwise rotation uses a negative $$\alpha$$. Combining this with the angle-sum identities gives the rectangular rule
-
-$$
-\begin{aligned}
-x'&=x\cos\alpha-y\sin\alpha,\\
-y'&=x\sin\alpha+y\cos\alpha.
-\end{aligned}
-$$
-
-For example, rotating $$(2,-1)$$ counterclockwise by $$\pi/2$$ gives $$(1,2)$$. For a whole polar curve $$r=f(\theta)$$, counterclockwise rotation by $$\alpha$$ instead gives $$r=f(\theta-\alpha)$$: a point at the new angle $$\theta$$ has the radius the old curve had at $$\theta-\alpha$$.
-
-:::warning
-Rotating a point adds $$\alpha$$ to its angle, while rotating a curve's equation replaces $$\theta$$ with $$\theta-\alpha$$. These are two descriptions of the same motion.
-:::
-
 ### Converting equations
 
 Using the polar-Cartesian conversion formulas, we can swap between polar and rectangular forms of equations
@@ -1130,6 +1093,32 @@ $$
 Its center is $$\sqrt5$$ units from the pole at angle $$-\alpha$$, matching $$(2,-1)$$. If you restrict to $$r\ge0$$, use an interval where $$\cos(\theta+\alpha)\ge0$$.
 
 </div>
+
+
+### Rotating points and curves
+
+One of the main reasons to use polar coordinates is the ease of rotation. To rotate a point counterclockwise through angle $$\alpha$$ about the pole, keep its radius and add the angle:
+
+$$
+(r,\theta)\longmapsto(r,\theta+\alpha).
+$$
+
+Clockwise rotation uses a negative $$\alpha$$. Combining this with the angle-sum identities gives the rectangular rule
+
+$$
+\begin{aligned}
+x'&=x\cos\alpha-y\sin\alpha,\\
+y'&=x\sin\alpha+y\cos\alpha.
+\end{aligned}
+$$
+
+For example, rotating $$(2,-1)$$ counterclockwise by $$\pi/2$$ gives $$(1,2)$$. For a whole polar curve $$r=f(\theta)$$, counterclockwise rotation by $$\alpha$$ instead gives $$r=f(\theta-\alpha)$$: a point at the new angle $$\theta$$ has the radius the old curve had at $$\theta-\alpha$$.
+
+:::warning
+Rotating a point adds $$\alpha$$ to its angle, while rotating a curve's equation replaces $$\theta$$ with $$\theta-\alpha$$. These are two descriptions of the same motion.
+:::
+
+// add a hard problem (e.g. have a rectangular formula and rotating it or smth)
 
 ### Distance in polar coordinates
 
@@ -1278,6 +1267,8 @@ You can also begin with the tangent $$x=6$$ at $$(6,0)$$. Its polar equation is 
 ---
 
 ## Curves in Polar Coordinates
+
+// for the examples the helper tables should be horizontal and not vertical, and you should only have theta vs r and not 3theta vs r or smth like that
 
 When writing curves in polar form, we don't write it as $$y=f(x)$$. Instead, we use $$r=f(\theta)$$ (Sometimes functions are defined implicitly so $$r$$ and $$\theta$$ are correlated on the same side).
 
@@ -1812,19 +1803,6 @@ $$
 
 For example, multiplying $$z_1=2\operatorname{cis}(\pi/6)$$ by $$z_2=\frac32\operatorname{cis}(\pi/3)$$ stretches its vector by $$3/2$$ and rotates it by $$\pi/3$$. The product is $$3\operatorname{cis}(\pi/2)=3i$$. These are position vectors in the complex plane; the multiplication is complex multiplication, not a dot product.
 
-```tikz
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-\begin{tikzpicture}[>=Stealth, scale=1.15]
-\draw[->, gray!70] (-0.8,0) -- (3.2,0) node[right] {Re};
-\draw[->, gray!70] (0,-0.6) -- (0,3.8) node[above] {Im};
-\draw[blue, very thick, ->] (0,0) -- ({sqrt(3)},1) node[right] {$z_1$};
-\draw[orange!85!black, very thick, ->] (0,0) -- (0.75,{3*sqrt(3)/4}) node[above right] {$z_2$};
-\draw[green!45!black, very thick, ->] (0,0) -- (0,3) node[above left] {$z_1z_2=3i$};
-\draw[red!75!black, ->] ({2.5*cos(30)},{2.5*sin(30)}) arc (30:90:2.5);
-\node[red!75!black] at (1.65,2.65) {rotate by $\pi/3$};
-\end{tikzpicture}
-```
 
 </div>
 
@@ -2034,7 +2012,7 @@ $$
 w^n=z,
 $$
 
-write $$z$$ in polar form (or exponent form):
+we can start by writing $$z$$ in polar form (or exponent form):
 
 $$
 z=r(\cos\theta+i\sin\theta).

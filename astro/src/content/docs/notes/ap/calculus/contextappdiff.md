@@ -446,51 +446,15 @@ When the radius is $$5$$ cm, it is increasing at about $$0.318$$ centimeters per
 
 </div>
 
-### The implicit function theorem shortcut
-
-The implicit function theorem (IFT) gives a useful way to organize a related-rates calculation. Write the constraint as $$F(x,y)=0$$ and define two partial derivatives: $$F_x$$ means differentiate with respect to $$x$$ while holding $$y$$ constant, and $$F_y$$ means differentiate with respect to $$y$$ while holding $$x$$ constant.
-
-If these partial derivatives are continuous near a point on the constraint and $$F_y\ne0$$ there, the IFT guarantees that the nearby branch can be written as a differentiable function $$y=y(x)$$. Its slope is $$dy/dx=-F_x/F_y$$. A precise statement is given in the [NIST reference on the implicit function theorem](https://dlmf.nist.gov/1.5#i).
-
-<div class="theorem-box">
-
-**Proof (Implicit related-rates formula).** If both coordinates depend on time, differentiate the constraint along their motion:
-
-$$
-F_x\frac{dx}{dt}+F_y\frac{dy}{dt}=0.
-$$
-
-Solving for the requested rate gives
-
-$$
-\frac{dy}{dt}=-\frac{F_x}{F_y}\frac{dx}{dt},
-\qquad F_y\ne0.
-$$
-
-This is the usual implicit differentiation calculation, with its coefficients organized using partial derivatives.
-
-</div>
-
-For the ladder constraint $$F=x^2+y^2-100$$, the partial derivatives are $$F_x=2x$$ and $$F_y=2y$$. The shortcut immediately gives $$y'=-(x/y)x'$$, which agrees with the expanded calculation above.
-
-If the constraint explicitly depends on time, use $$F(x,y,t)=0$$ and include that contribution:
-
-$$
-\frac{dy}{dt}
-=-\frac{F_x(dx/dt)+F_t}{F_y}.
-$$
-
-Here $$F_t$$ means differentiate the explicit time dependence while holding the other variables fixed. If $$F_y=0$$, do not divide by it or automatically declare an infinite rate; return to the undivided equation to determine what the constraint allows.
-
 ### Related quantities and hidden variables
 
-Contextual problems often include more variables than you actually need. The goal is to write one equation connecting the changing quantities, then identify which rate the question asks for.
+Contextual problems often include more variables than you actually need. The goal is to write one equation connecting the changing quantities (kind of like chaining them together), then identify which rate the question asks for.
 
 :::strategy
-- define every variable before differentiating,
-- record which variables are changing,
-- keep constants as constants,
-- substitute numerical values after differentiating.
+- Define every variable before differentiating
+- Record which variables are changing,
+- Keep constants as constants
+- Substitute numerical values after differentiating.
 :::
 
 If the independent variable is time, every changing quantity gets a rate such as $$dx/dt$$, $$dV/dt$$, or $$dA/dt$$.
@@ -748,15 +712,6 @@ The two views below show $$f(x)=\sqrt{x}$$ and its tangent $$L(x)=1+(x-1)/2$$ at
 \end{tikzpicture}
 ```
 
-The error is not generally zero. Differentiability says it becomes small compared with the input change:
-
-$$
-\lim_{h\to0}
-\frac{f(a+h)-[f(a)+f'(a)h]}h=0.
-$$
-
-Thus the tangent captures the first-order change near $$a$$. A large slope alone does not make linearization inaccurate; what matters is how much the slope changes over the interval being used.
-
 <div class="theorem-box">
 
 **Example.** Estimate $$\sqrt{27}$$.
@@ -825,7 +780,7 @@ $$
 1+y'+(y')^2=\left(y'+\frac12\right)^2+\frac34.
 $$
 
-On the upper branch, $$x+2y=\sqrt{28-3x^2}>0$$ throughout $$[1,1.04]$$. Thus $$y''<0$$ there: the branch is concave down and lies below its tangent. The estimate $$1.968$$ is an overestimate.
+On the upper branch, $$x+2y=\sqrt{28-3x^2}>0$$ throughout $$[1,1.04]$$. Thus $$y''<0$$ there: the branch is moving more downward than a straight line (if $$y''=0$$, then the function is moving in a straight line because the derivative is constant). The estimate $$1.968$$ is thus an overestimate.
 
 This approximation requires only a convenient point and the local slope. Finding an explicit formula for the whole branch is unnecessary.
 
@@ -863,13 +818,13 @@ $$
 dy=f'(a)\Delta x.
 $$
 
-Differentials are especially useful for error estimates. If a measurement has possible error $$\Delta x$$, then the propagated output error is approximately
+Differentials are especially useful for error estimates. If a measurement changes by the signed amount $$dx=\Delta x$$, the resulting signed output error is approximately
 
 $$
-\lvert dy\rvert=\lvert f'(a)\rvert\lvert \Delta x\rvert.
+\Delta y\approx dy=f'(a)\,dx.
 $$
 
-The same method estimates how measurement errors affect calculated quantities in physics.
+The sign records the direction of the change. The same method estimates how measurement errors affect calculated quantities in physics.
 
 The distinction is easiest to see on the graph. Starting from $$(a,f(a))$$, $$dy$$ measures the vertical change along the tangent line after a horizontal move $$dx=\Delta x$$. The actual change $$\Delta y$$ measures the vertical change along the curve over that same move. Their difference is exactly the error in the predicted final height:
 
@@ -913,31 +868,41 @@ The differential retains $$12h$$; the omitted terms give $$6(-0.1)^2+(-0.1)^3=0.
 
 ### Error measurement
 
-In the real world, measurements and approximations have error. Absolute error measures the size of the discrepancy in the original units, while relative error compares that discrepancy with a reference value. If $$Q_{\mathrm{est}}$$ is an estimate and $$Q_{\mathrm{ref}}\ne0$$ is the reference, the formulas are
+For a variable $$x$$ with a small signed error $$dx$$, the relative error estimate is simply $$dx/x$$, and the percentage error estimate is $$100(dx/x)\%$$:
 
 $$
-E_{\mathrm{abs}}=\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert,
+\text{error in original units}=dx,
 \qquad
-E_{\mathrm{rel}}=
-\frac{\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert}
-{\lvert Q_{\mathrm{ref}}\rvert},
+\text{relative error}=\frac{dx}{x},
 \qquad
-E_{\mathrm{percent}}=100E_{\mathrm{rel}}\%.
+\text{percentage error}=100\frac{dx}{x}\%,
+\qquad x\ne0.
 $$
 
-When an exact value is known, use it as the reference. When estimating propagated measurement uncertainty in $$Q=f(x)$$, use the nominal value $$Q_0=f(a)$$ and estimate
+Here the denominator is the reference value, and $$dx$$ is the signed error relative to that value. A positive or negative error records which side of the reference the perturbed value lies on. When a measurement has symmetric uncertainty, use $$dx=\pm\varepsilon$$ to indicate both possible directions.
+
+For a calculated quantity $$y=f(x)$$, apply the same idea to the output:
 
 $$
-E_{\mathrm{abs}}\approx\lvert f'(a)\rvert\lvert dx\rvert,
+dy=f'(x)\,dx,
 \qquad
-E_{\mathrm{rel}}\approx
-\frac{\lvert f'(a)\rvert\lvert dx\rvert}{\lvert f(a)\rvert},
+\frac{dy}{y}=\frac{f'(x)}{f(x)}\,dx,
 \qquad
-E_{\mathrm{percent}}\approx
-100\frac{\lvert f'(a)\rvert\lvert dx\rvert}{\lvert f(a)\rvert}\%.
+\text{percentage error estimate}=100\frac{dy}{y}\%.
 $$
 
-Relative and percentage error are undefined when the reference is zero. Absolute error still makes sense. The type of error used often depends on the magnitude of the object being measured: an error of one cubic centimeter is substantial for a tiny ball and negligible for a large planet.
+The differential $$dy$$ estimates the actual error $$\Delta y$$, so $$dy/y$$ estimates $$\Delta y/y$$. Relative and percentage error are undefined when the reference is zero, although the error in the original units still makes sense. An error of one cubic centimeter is substantial for a tiny ball and negligible for a large planet.
+
+These formulas use **signed error**. The conventional term *absolute error* means the nonnegative size of an error; reporting a maximum uncertainty asks for that size. We will keep the sign in the calculations and report the positive endpoint when a maximum is requested.
+
+For a power relationship $$y=Cx^n$$ with nonzero $$x$$ and $$y$$, the relative-error formula simplifies further:
+
+$$
+\frac{dy}{y}=\frac{nCx^{n-1}\,dx}{Cx^n}
+=n\frac{dx}{x}.
+$$
+
+Thus the relative error in a sphere's volume is approximately three times the relative error in its radius.
 
 Concavity determines the direction of a tangent estimate when the concavity has one sign throughout the interval between the base point and the target. A concave-up graph lies above its tangent, so linearization underestimates. A concave-down graph lies below its tangent, so linearization overestimates.
 
@@ -945,20 +910,20 @@ Concavity determines the direction of a tangent estimate when the concavity has 
 
 **Example.** A spherical ball has measured radius $$10$$ centimeters with possible measurement error $$0.02$$ centimeters. Estimate the largest resulting volume error and its percentage. If the true radius is $$10.02$$, determine whether the differential underestimates or overestimates the true increase.
 
-At $$r=10$$,
+For a sphere, $$V=4\pi r^3/3$$, so $$dV/V=3\,dr/r$$. At $$r=10$$ with $$dr=\pm0.02$$,
 
 $$
-\lvert dV\rvert\approx4\pi(10)^2(0.02)=8\pi
+dV=4\pi(10)^2(\pm0.02)=\pm8\pi
 \text{ cubic centimeters}.
 $$
 
-The relative error estimate is
+The signed relative error estimate is
 
 $$
-\frac{\lvert dV\rvert}{V}\approx3\frac{0.02}{10}=0.006,
+\frac{dV}{V}=3\frac{\pm0.02}{10}=\pm0.006.
 $$
 
-or approximately $$0.6\%$$. Since $$V''(r)=8\pi r>0$$ for positive radii, the tangent estimate underestimates the actual increase from $$10$$ to $$10.02$$. The error allowance is approximately symmetric, while the exact volume changes for positive and negative radius errors are not.
+The estimated percentage error is therefore $$\pm0.6\%$$, with maximum size $$0.6\%$$ and maximum volume-error size $$8\pi$$ cubic centimeters. Since $$V''(r)=8\pi r>0$$ for positive radii, the tangent estimate underestimates the actual increase from $$10$$ to $$10.02$$. The differential allowance is symmetric, while the exact volume changes for positive and negative radius errors are not.
 
 </div>
 
@@ -979,19 +944,19 @@ The inner radius is fixed, making its derivative contribution zero. Therefore,
 $$
 V'(R)=4\pi R^2,
 \qquad
-\lvert dV\rvert=400\pi(0.02)=8\pi
+dV=400\pi(\pm0.02)=\pm8\pi
 \text{ cubic centimeters}.
 $$
 
 The relative uncertainty estimate is
 
 $$
-\frac{\lvert dV\rvert}{V_0}
-=\frac{8\pi}{1084\pi/3}
-=\frac6{271}\approx0.02214.
+\frac{dV}{V_0}
+=\frac{\pm8\pi}{1084\pi/3}
+=\pm\frac6{271}\approx\pm0.02214.
 $$
 
-Thus the estimated percentage uncertainty is about $$2.21\%$$. This exceeds that of a solid sphere with the same outer-radius error because the same absolute volume change is compared with a smaller amount of material.
+Thus the estimated percentage uncertainty is about $$\pm2.21\%$$, with maximum size $$2.21\%$$. This exceeds that of a solid sphere with the same outer-radius error because the same volume-error size is compared with a smaller amount of material.
 
 Let $$\delta$$ be the allowed outer-radius error. The differential estimate requires
 
@@ -1033,7 +998,7 @@ You may remember solving indeterminate limits (limits involving $$\frac{0}{0}$$,
 
 <div class="theorem-box">
 
-**Theorem (L'Hôpital's Rule).** For a quotient with form $$0/0$$ or $$\infty/\infty$$, the conditions below allow us to replace the quotient by a quotient of derivatives:
+**Theorem (L'Hôpital's Rule).** For a quotient with form $$0/0$$ or $$\infty/\infty$$ (sign does not matter), the conditions below allow us to replace the quotient by a quotient of derivatives:
 
 $$
 \lim_{x \to a} \frac{f(x)}{g(x)}
@@ -1044,19 +1009,126 @@ $$
 The word *hypotheses* means the assumptions needed before the theorem can be used. For a one-sided limit toward a finite input $$a$$, check:
 
 1. **An allowed original form.** Both $$f(x)$$ and $$g(x)$$ approach zero, or their magnitudes both approach infinity. A nonzero number divided by zero is not an allowed indeterminate form.
-2. **Differentiability near the target.** Both functions are differentiable throughout a one-sided interval next to $$a$$. They need not be defined or differentiable at $$a$$ itself. A *punctured* interval simply excludes that target input.
+2. **Differentiability and continuous derivatives.** The functions $$f$$ and $$g$$ are differentiable, and their derivatives $$f'$$ and $$g'$$ are continuous, throughout a one-sided interval next to $$a$$. These conditions are imposed near the target, not necessarily at $$a$$ itself. A *punctured* interval simply excludes that target input.
 3. **Nonzero denominator and denominator derivative.** The quotient must be defined near $$a$$, and $$g'(x)\ne0$$ on the interval where the rule is being applied. It is acceptable for $$g'(x)$$ to approach zero, provided it does not equal zero at nearby inputs.
-4. **A derivative-quotient limit.** The limit of $$f'(x)/g'(x)$$ must exist as a finite real number, positive infinity, or negative infinity. That is the value inherited by the original quotient.
+4. **A derivative-quotient limit.** The quotient of derivatives must approach a finite real number or a signed infinity:
 
-For a two-sided limit, these conditions must support both one-sided calculations, and their results must agree. For a limit at infinity, use a sufficiently far-out interval instead of a punctured interval around a finite input.
+$$
+\lim_{x\to a}\frac{f'(x)}{g'(x)}=L,
+\qquad
+L\in\mathbb R\cup\{-\infty,\infty\}.
+$$
 
-The proof for L'Hôpital's Rule uses Cauchy's Mean Value Theorem, which will not be covered in AP Calc.
+Then $$f(x)/g(x)$$ approaches that same $$L$$. An infinite limit describes unbounded behavior in one direction; an oscillating quotient with no limit does not satisfy this condition. Continuity of $$f'$$ and $$g'$$ is a sufficient extra assumption in the version above.
 
 </div>
 
-For example, $$g(x)=x^2$$ has $$g'(x)=2x$$. Although $$g'(0)=0$$, its derivative is nonzero on each punctured side of zero, so this does not prevent using the rule for an appropriate quotient as $$x\to0$$.
+For a two-sided limit, apply the theorem on each side and check that the results agree. For a limit at infinity, use a sufficiently far-out interval instead of an interval next to a finite input.
 
-By contrast, applying the rule to $$\lim_{x\to0}(x+1)/(x+2)$$ would give a derivative quotient of one, while direct substitution gives the correct limit $$1/2$$. The original form is neither $$0/0$$ nor $$\infty/\infty$$, so that derivative calculation has no justification.
+<div class="theorem-box">
+
+**Proof (L'Hôpital's Rule using local linear approximations).** For this basic zero-over-zero case, assume $$f(a)=g(a)=0$$, both functions are differentiable at $$a$$, their derivatives are continuous at $$a$$, and $$g'(a)\ne0$$.
+
+Near $$x=a$$, the tangent-line approximations are
+
+$$
+f(x)\approx f(a)+f'(a)(x-a)=f'(a)(x-a)
+$$
+
+and
+
+$$
+g(x)\approx g(a)+g'(a)(x-a)=g'(a)(x-a).
+$$
+
+Both contain the same input change, suggesting
+
+$$
+\frac{f(x)}{g(x)}
+\approx\frac{f'(a)(x-a)}{g'(a)(x-a)}
+=\frac{f'(a)}{g'(a)}.
+$$
+
+To justify passing from this approximation to an exact limit, write $$h=x-a$$ and retain the approximation errors:
+
+$$
+f(a+h)=f'(a)h+r_f(h),
+\qquad
+g(a+h)=g'(a)h+r_g(h).
+$$
+
+Differentiability means that each error becomes negligible compared with $$h$$:
+
+$$
+\lim_{h\to0}\frac{r_f(h)}h=0,
+\qquad
+\lim_{h\to0}\frac{r_g(h)}h=0.
+$$
+
+For nonzero $$h$$, divide the numerator and denominator by $$h$$. Since $$g'(a)\ne0$$, the resulting denominator approaches a nonzero number, so the quotient limit law gives
+
+$$
+\lim_{x\to a}\frac{f(x)}{g(x)}
+=\lim_{h\to0}
+\frac{f'(a)+r_f(h)/h}{g'(a)+r_g(h)/h}
+=\frac{f'(a)}{g'(a)}.
+$$
+
+Continuity of the derivatives at $$a$$ also gives
+
+$$
+\lim_{x\to a}\frac{f'(x)}{g'(x)}
+=\frac{f'(a)}{g'(a)}.
+$$
+
+The original quotient and the derivative quotient therefore have the same limit:
+
+$$
+\lim_{x\to a}\frac{f(x)}{g(x)}
+=\lim_{x\to a}\frac{f'(x)}{g'(x)}.
+$$
+
+But what if we have the $$\frac{\infty}{\infty}$$ case?
+
+Let $$u(x)=1/f(x)$$ and $$v(x)=1/g(x)$$, and extend them by $$u(a)=v(a)=0$$. Under the assumptions above, the zero-over-zero result already proved gives
+
+$$
+\lim_{x\to a}\frac{f(x)}{g(x)}
+=\lim_{x\to a}\frac{v(x)}{u(x)}
+=\frac{v'(a)}{u'(a)}=K,
+\qquad K\ne0.
+$$
+
+This is the ratio of the reciprocals' local linear approximations. To compare with the derivative quotient in L'Hôpital's Rule, differentiate the reciprocals:
+
+$$
+u'=-\frac{f'}{f^2},
+\qquad
+v'=-\frac{g'}{g^2}.
+$$
+
+Rearranging gives
+
+$$
+\frac{f'}{g'}
+=\frac{u'}{v'}\left(\frac{f}{g}\right)^2.
+$$
+
+Continuity and the nonzero reciprocal slopes now give
+
+$$
+\lim_{x\to a}\frac{f'(x)}{g'(x)}
+=\frac{u'(a)}{v'(a)}K^2
+=\frac1K K^2=K.
+$$
+
+Both quotients approach the same value. Note that a full, rigorous proof would require Cauchy's Mean Value Theorem which will not be covered here.
+
+</div>
+
+### Applying the rule
+
+Before each application, write the numerator limit and denominator limit separately to establish the indeterminate form. In routine worked examples, a full differentiability or continuity checklist is unnecessary; discuss those conditions explicitly when a domain restriction or other unusual feature makes them relevant.
 
 You can use L'Hôpital's Rule more than once! After each application, check the new quotient again. Another application is justified only if the new quotient still has an allowed indeterminate form and satisfies the hypotheses. If the derivative quotient fails to have a limit, the original limit may still exist, so an unsuccessful application does not prove divergence.
 
@@ -1081,7 +1153,17 @@ $$
 x\ln x=\frac{\ln x}{1/x}.
 $$
 
-Now the form is $$-\infty/\infty$$, so L'Hopital's Rule applies:
+Check the numerator and denominator separately:
+
+$$
+\lim_{x\to0^+}\ln x=-\infty,
+$$
+
+$$
+\lim_{x\to0^+}\frac1x=\infty.
+$$
+
+The form is $$-\infty/\infty$$, so L'Hopital's Rule applies:
 
 $$
 \lim_{x\to0^+}\frac{\ln x}{1/x}
@@ -1121,7 +1203,17 @@ $$
 \ln y=\frac{\ln(1+x)}{x}.
 $$
 
-The right side gives $$0/0$$ as $$x\to0^+$$, so use L'Hopital's Rule:
+For the logarithmic quotient, check
+
+$$
+\lim_{x\to0^+}\ln(1+x)=0,
+$$
+
+$$
+\lim_{x\to0^+}x=0.
+$$
+
+The form is $$0/0$$, so use L'Hopital's Rule:
 
 $$
 \lim_{x\to0^+}\frac{\ln(1+x)}{x}
@@ -1162,12 +1254,33 @@ $$
 =\frac{\tan x-cx^2-\ln(1+\sin x)}{x^3}.
 $$
 
-Let the numerator be $$N(x)$$. Both numerator and denominator approach zero. Work on each side of zero separately until the parameter is determined. A first application on either side gives
+Let the numerator be $$N(x)$$. Check the two limits:
+
+$$
+\lim_{x\to0}[\tan x-cx^2-\ln(1+\sin x)]=0,
+$$
+
+$$
+\lim_{x\to0}x^3=0.
+$$
+
+The form is $$0/0$$. Work on each side of zero separately until the parameter is determined. A first application on either side gives
 
 $$
 \lim_{x\to0^\pm}\ln Y(x)
 =\lim_{x\to0^\pm}
 \frac{\sec^2x-2cx-\dfrac{\cos x}{1+\sin x}}{3x^2}.
+$$
+
+Before applying the rule again, check the new numerator and denominator:
+
+$$
+\lim_{x\to0}\left[\sec^2x-2cx-\frac{\cos x}{1+\sin x}\right]
+=1-0-1=0,
+$$
+
+$$
+\lim_{x\to0}3x^2=0.
 $$
 
 This is still $$0/0$$ for every $$c$$. To differentiate the remaining quotient in the numerator, simplify its derivative:
@@ -1186,9 +1299,30 @@ $$
 \frac{2\sec^2x\tan x-2c+\dfrac1{1+\sin x}}{6x}.
 $$
 
-The numerator now approaches $$1-2c$$. If $$c\ne1/2$$, it approaches a nonzero constant while the denominator changes sign at zero. The one-sided logarithmic limits are opposite signed infinities, so one side of $$Y$$ approaches zero and the other grows without bound. There is no finite, nonzero two-sided limit.
+For the new quotient, the separate limits are
 
-For $$c=1/2$$, the second derivative quotient is again $$0/0$$. Apply the rule once more:
+$$
+\lim_{x\to0}\left[2\sec^2x\tan x-2c+\frac1{1+\sin x}\right]
+=1-2c,
+$$
+
+$$
+\lim_{x\to0}6x=0.
+$$
+
+If $$c\ne1/2$$, the numerator approaches a nonzero constant while the denominator changes sign at zero. The one-sided logarithmic limits are opposite signed infinities, so one side of $$Y$$ approaches zero and the other grows without bound. There is no finite, nonzero two-sided limit.
+
+For $$c=1/2$$, check explicitly that
+
+$$
+\lim_{x\to0}\left[2\sec^2x\tan x-1+\frac1{1+\sin x}\right]=0,
+$$
+
+$$
+\lim_{x\to0}6x=0.
+$$
+
+The form is $$0/0$$ again, so apply the rule once more:
 
 $$
 \lim_{x\to0}\ln Y(x)
@@ -1200,7 +1334,7 @@ $$
 =\frac{0+2-1}{6}=\frac16.
 $$
 
-The denominator derivatives $$3x^2$$ and $$6x$$ are nonzero on either punctured side, and the last denominator is six. All functions used are differentiable sufficiently near zero, with $$1+\sin x>0$$, so each application meets the conditions.
+The last quotient has denominator six, so direct substitution finishes the calculation.
 
 Finally, exponentiate the logarithmic limit:
 
@@ -1240,17 +1374,25 @@ AP free-response scoring usually expects a complete sentence with units. A corre
 :::equations
 | Idea | Equation and conditions |
 | --- | --- |
-| Average rate | $$[Q(b)-Q(a)]/(b-a)$$ |
+| Average rate | $$[Q(b)-Q(a)]/(b-a),\quad a\ne b$$ |
+| Instantaneous rate | $$Q'(t)=\lim_{h\to0}[Q(t+h)-Q(t)]/h$$ |
 | Composed rates | $$dQ/dt=(dQ/dx)(dx/dt)$$ |
 | Motion | $$v=s',\quad a=v',\quad\text{speed}=\lvert v\rvert$$ |
+| Speed derivative away from rest | $$\dfrac d{dt}\lvert v\rvert=\begin{cases}a,&v>0,\\-a,&v<0.\end{cases}$$ |
 | Speed changes away from rest | $$va>0:\text{ speeding up};\quad va<0:\text{ slowing down}$$ |
 | Net rate | $$V'=\text{rate in}-\text{rate out}$$ |
+| Ladder constraint, fixed length | $$x^2+y^2=L^2,\quad xx'+yy'=0$$ |
+| Circle area rate | $$A=\pi r^2,\quad A'=2\pi r\,r'$$ |
+| Sphere volume rate | $$V=\frac43\pi r^3,\quad V'=4\pi r^2r'$$ |
+| Cone volume and similar triangles | $$V=\frac13\pi r^2h,\quad r/h=R/H\quad\text{for a fixed cone of radius }R\text{ and height }H$$ |
 | Implicit rate shortcut | $$y'=-(F_x/F_y)x',\quad F(x,y)=0,\quad F_y\ne0$$ |
 | Explicit time in a constraint | $$y'=-[F_x\,x'+F_t]/F_y,\quad F(x,y,t)=0,\quad F_y\ne0$$ |
-| Linearization | $$f(a+\Delta x)\approx f(a)+f'(a)\Delta x$$ |
-| Predicted and actual changes | $$dy=f'(a)\Delta x,\quad\Delta y=f(a+\Delta x)-f(a)$$ |
+| Tangent-line model | $$L(x)=f(a)+f'(a)(x-a),\quad f(x)\approx L(x)\text{ near }a$$ |
+| Predicted and actual changes | $$dx=\Delta x,\quad dy=f'(a)\,dx,\quad\Delta y=f(a+dx)-f(a)$$ |
 | Approximation error | $$\Delta y-dy=f(a+\Delta x)-L(a+\Delta x)$$ |
-| Propagated absolute uncertainty | $$\lvert\Delta y\rvert\approx\lvert dy\rvert=\lvert f'(a)\rvert\lvert\Delta x\rvert$$ |
-| Relative and percentage error | $$E_{\mathrm{rel}}=\lvert Q_{\mathrm{est}}-Q_{\mathrm{ref}}\rvert/\lvert Q_{\mathrm{ref}}\rvert,\quad E_{\mathrm{percent}}=100E_{\mathrm{rel}}\%,\quad Q_{\mathrm{ref}}\ne0$$ |
-| L'Hôpital | $$\lim f/g=\lim f'/g'\quad\text{only under the stated hypotheses}$$ |
+| Signed relative and percentage error | $$E_{\mathrm{rel}}=dx/x,\quad E_{\mathrm{percent}}=100(dx/x)\%,\quad x\ne0$$ |
+| Propagated relative error | $$dy/y=[f'(x)/f(x)]\,dx,\quad y=f(x)\ne0$$ |
+| Power-law relative error | $$dy/y=n\,dx/x,\quad y=Cx^n,\quad x,y\ne0$$ |
+| Reciprocal rewrite | $$f/g=(1/g)/(1/f),\quad f,g\ne0$$ |
+| L'Hôpital, under its hypotheses | $$\lim_{x\to a}f(x)/g(x)=L,\quad L=\lim_{x\to a}f'(x)/g'(x)\in\mathbb R\cup\{-\infty,\infty\}$$ |
 :::

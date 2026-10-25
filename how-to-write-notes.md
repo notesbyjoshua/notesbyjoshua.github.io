@@ -247,16 +247,15 @@ topic, not a hyper-specific title.
 
 Inside a `::::problem` or `::::frq` block, put the answer directly in a
 `:::solution` directive. Do not nest a theorem box, another solution directive,
-or a separate disclosure inside it. The practice block already provides the
-solution styling and its show/hide button.
+or a separate disclosure inside it. Begin directly with the explanation, without
+a numbered solution heading or sub-label. The practice block already provides
+the solution styling and its show/hide button.
 
 ``` markdown
 ::::frq
 1. question here
 
 :::solution
-### Solution 1
-
 solution here
 
 $$

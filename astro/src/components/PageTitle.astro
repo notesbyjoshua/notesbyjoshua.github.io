@@ -115,7 +115,7 @@ const editHref = isNote && filePath ? `/admin/edit?path=${encodeURIComponent(`as
     // Practice solutions start hidden behind a "Show solution" toggle. Only
     // heading-style solutions (#### Solution) collapse — bold inline solutions
     // in notes stay visible, so this is gated on an actual heading.
-    if (match && match[1] === 'solution' && headingEl) {
+    if (match && match[1] === 'solution' && headingEl && !box.closest('[data-solution]')) {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'solution-toggle';

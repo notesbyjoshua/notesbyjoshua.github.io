@@ -245,7 +245,28 @@ topic, not a hyper-specific title.
 
 ### Practice solutions
 
-When writing solutions, always follow this format:
+Inside a `::::problem` or `::::frq` block, put the answer directly in a
+`:::solution` directive. Do not nest a theorem box, another solution directive,
+or a separate disclosure inside it. The practice block already provides the
+solution styling and its show/hide button.
+
+``` markdown
+::::frq
+1. question here
+
+:::solution
+### Solution 1
+
+solution here
+
+$$
+\boxed{answer(s) here}.
+$$
+:::
+::::
+```
+
+For a standalone solution outside a problem or FRQ block, use:
 
 ``` markdown
 <div class="theorem-box">

@@ -499,7 +499,7 @@ $$
 \frac{u'}{1+u^2}.
 $$
 
-Domain restrictions still matter after differentiating. The derivative of $$\arcsin x$$ becomes unbounded at $$x=\pm1$$, and the absolute value in the arcsec and arccsc formulas cannot be dropped without knowing the sign of the input.
+Domain restrictions still matter after differentiating. The derivative of $$\arcsin x$$ becomes unbounded at $$x=\pm1$$, and the absolute value in the arcsec and arccsc formulas cannot be dropped without knowing the sign of the input. An example proof for $$\arcsin x$$ is shown below.
 
 <div class="theorem-box">
 
@@ -1019,21 +1019,477 @@ Before moving on, make sure you can explain which rule is being used at each ste
 
 :::equations
 
-| Idea | Equation |
+| Idea | Equation and conditions |
 | --- | --- |
 | Chain rule | $$\dfrac{d}{dx}f(g(x))=f'(g(x))g'(x)$$ |
 | Three-layer chain | $$\dfrac{d}{dx}f(g(h(x)))=f'(g(h(x)))g'(h(x))h'(x)$$ |
 | Implicit power | $$\dfrac{d}{dx}(y^n)=ny^{n-1}\dfrac{dy}{dx}$$ |
 | Implicit product | $$\dfrac{d}{dx}(xy)=y+x\dfrac{dy}{dx}$$ |
-| Inverse-function derivative | $$(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))}$$ |
-| Arcsine derivative | $$\dfrac{d}{dx}\arcsin u=\dfrac{u'}{\sqrt{1-u^2}}$$ |
-| Arccosine derivative | $$\dfrac{d}{dx}\arccos u=-\dfrac{u'}{\sqrt{1-u^2}}$$ |
+| Inverse-function derivative | $$(f^{-1})'(x)=\dfrac{1}{f'(f^{-1}(x))},\quad f'(f^{-1}(x))\ne0$$ |
+| Arcsine derivative | $$\dfrac{d}{dx}\arcsin u=\dfrac{u'}{\sqrt{1-u^2}},\quad \lvert u\rvert<1$$ |
+| Arccosine derivative | $$\dfrac{d}{dx}\arccos u=-\dfrac{u'}{\sqrt{1-u^2}},\quad \lvert u\rvert<1$$ |
 | Arctangent derivative | $$\dfrac{d}{dx}\arctan u=\dfrac{u'}{1+u^2}$$ |
-| Arcsecant derivative | $$\dfrac{d}{dx}\operatorname{arcsec}u=\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}}$$ |
-| Arccosecant derivative | $$\dfrac{d}{dx}\operatorname{arccsc}u=-\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}}$$ |
+| Arcsecant derivative | $$\dfrac{d}{dx}\operatorname{arcsec}u=\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}},\quad \lvert u\rvert>1$$ |
+| Arccosecant derivative | $$\dfrac{d}{dx}\operatorname{arccsc}u=-\dfrac{u'}{\lvert u\rvert\sqrt{u^2-1}},\quad \lvert u\rvert>1$$ |
 | Arccotangent derivative | $$\dfrac{d}{dx}\operatorname{arccot}u=-\dfrac{u'}{1+u^2}$$ |
 | Variable power | $$\dfrac{d}{dx}[u(x)^{v(x)}]=u^v\left(v'\ln u+v\dfrac{u'}u\right),\quad u>0$$ |
 | Real-exponent power rule | $$\dfrac{d}{dx}(x^r)=rx^{r-1},\quad r\in\mathbb R,\ x>0$$ |
 | Higher derivatives | $$f^{(n)}(x)=\dfrac{d^nf}{dx^n}$$ |
 | Generalized product rule | $$\dfrac{d^n}{dx^n}(uv)=\displaystyle\sum_{k=0}^{n}\binom nk u^{(k)}v^{(n-k)}$$ |
 :::
+
+## Practice
+
+::::frq{id="calc-diffcomplex-1"}
+1. Differentiate and simplify:
+
+   $$
+   F(x)=\ln\left(1+\sin^2(3x)\right).
+   $$
+
+:::solution
+Differentiate the logarithm first, then the square, then the sine:
+
+$$
+F'(x)=\frac{1}{1+\sin^2(3x)}\cdot2\sin(3x)\cos(3x)\cdot3.
+$$
+
+Using $$2\sin(3x)\cos(3x)=\sin(6x)$$ gives
+
+$$
+\boxed{F'(x)=\frac{3\sin(6x)}{1+\sin^2(3x)}.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-2"}
+2. A differentiable function $$f\colon\mathbb R\to\mathbb R$$ has the following values:
+
+   | $$x$$ | $$f(x)$$ | $$f'(x)$$ |
+   | --- | --- | --- |
+   | $$-1$$ | $$3$$ | $$5$$ |
+   | $$1$$ | $$2$$ | $$-2$$ |
+   | $$2$$ | $$-1$$ | $$4$$ |
+
+   If $$H(x)=f(f(f(x)))$$, find $$H'(1)$$.
+
+:::solution
+The three layers contribute three derivative factors:
+
+$$
+H'(x)=f'(f(f(x)))f'(f(x))f'(x).
+$$
+
+Follow the inputs through the table before substituting derivative values. Since $$f(1)=2$$ and $$f(f(1))=f(2)=-1$$,
+
+$$
+H'(1)=f'(-1)f'(2)f'(1)=5(4)(-2).
+$$
+
+Therefore,
+
+$$
+\boxed{H'(1)=-40.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-3"}
+3. Find the equation of the tangent line at $$(0,1)$$ to the curve
+
+   $$
+   e^{xy}+xy^2+y^3=2.
+   $$
+
+:::solution
+Differentiate implicitly, applying the product rule inside the exponential and to $$xy^2$$:
+
+$$
+e^{xy}(y+xy')+y^2+2xyy'+3y^2y'=0.
+$$
+
+At $$(0,1)$$ this becomes
+
+$$
+1+1+3y'=0,
+\qquad y'=-\frac23.
+$$
+
+Using the point $$(0,1)$$, the tangent line is
+
+$$
+\boxed{y=1-\frac23x.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-4"}
+4. The curve
+
+   $$
+   y^2+xy-2x^2=x^3
+   $$
+
+   has more than one twice-differentiable branch through the origin. Find every possible tangent line there.
+
+:::solution
+Differentiate once:
+
+$$
+2yy'+y+xy'-4x=3x^2.
+$$
+
+Substituting the origin gives only $$0=0$$, so this equation does not determine the slope. Differentiate again before substituting:
+
+$$
+2(y')^2+2yy''+2y'+xy''-4=6x.
+$$
+
+Let $$m=y'(0)$$. At the origin,
+
+$$
+2m^2+2m-4=0,
+\qquad (m+2)(m-1)=0.
+$$
+
+Both slopes actually occur. The two smooth branches near $$0$$ are
+
+$$
+y=\frac{x}{2}\left(-1\pm\sqrt{9+4x}\right),
+$$
+
+whose derivatives at $$0$$ are $$1$$ and $$-2$$. Thus the tangent lines are
+
+$$
+\boxed{y=x\quad\text{and}\quad y=-2x.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-5"}
+5. Let $$g=f^{-1}$$, where
+
+   $$
+   f(x)=x+\ln x,
+   \qquad x>0.
+   $$
+
+   Find $$g'(2+\ln2)$$ exactly.
+
+:::solution
+Match the inverse input to an output of $$f$$:
+
+$$
+f(2)=2+\ln2,
+\qquad g(2+\ln2)=2.
+$$
+
+Since $$f'(x)=1+1/x>0$$ on $$x>0$$, the inverse derivative formula applies. Therefore,
+
+$$
+g'(2+\ln2)=\frac{1}{f'(2)}=\frac{1}{1+1/2}.
+$$
+
+Thus
+
+$$
+\boxed{g'(2+\ln2)=\frac23.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-6"}
+6. A twice-continuously-differentiable function $$f$$ has a local inverse $$g$$ near $$f(1)=3$$ and satisfies
+
+   $$
+   f'(1)=2,
+   \qquad f''(1)=-4.
+   $$
+
+   If $$H(x)=g(3+\ln x)$$ for $$x$$ near $$1$$, find $$H''(1)$$.
+
+:::solution
+Because $$g(3)=1$$, the first inverse derivative is
+
+$$
+g'(3)=\frac{1}{f'(1)}=\frac12.
+$$
+
+To obtain the second derivative, differentiate $$f(g(u))=u$$ twice:
+
+$$
+f'(g(u))g'(u)=1,
+$$
+
+$$
+f''(g(u))[g'(u)]^2+f'(g(u))g''(u)=0.
+$$
+
+At $$u=3$$,
+
+$$
+-4\left(\frac12\right)^2+2g''(3)=0,
+\qquad g''(3)=\frac12.
+$$
+
+Now differentiate the composite function twice:
+
+$$
+H'(x)=\frac{g'(3+\ln x)}x,
+\qquad
+H''(x)=\frac{g''(3+\ln x)-g'(3+\ln x)}{x^2}.
+$$
+
+Consequently,
+
+$$
+\boxed{H''(1)=\frac12-\frac12=0.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-7"}
+7. Using the principal inverse secant, let
+
+   $$
+   F(x)=\operatorname{arcsec}\left(-x^2-2\right).
+   $$
+
+   Find $$F'(1)$$ exactly.
+
+:::solution
+Let $$u=-x^2-2$$. The input always satisfies $$u\le-2$$, so the inverse-secant derivative is defined. Keep the absolute value in its denominator:
+
+$$
+F'(x)=\frac{-2x}{\lvert-x^2-2\rvert\sqrt{(-x^2-2)^2-1}}.
+$$
+
+At $$x=1$$, the inside function is $$-3$$, but its absolute value is $$3$$. Hence
+
+$$
+F'(1)=\frac{-2}{3\sqrt8}.
+$$
+
+Simplifying gives
+
+$$
+\boxed{F'(1)=-\frac{\sqrt2}{6}.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-8"}
+8. Let
+
+   $$
+   F(x)=\arcsin\left(\frac{2x}{1+x^2}\right),
+   $$
+
+   where $$\arcsin$$ takes values in $$[-\pi/2,\pi/2]$$. Determine every real input at which $$F$$ is not differentiable.
+
+:::solution
+The input of arcsine is defined and lies in $$[-1,1]$$ for every real $$x$$, since
+
+$$
+1-\left(\frac{2x}{1+x^2}\right)^2
+=\frac{(1-x^2)^2}{(1+x^2)^2}\ge0.
+$$
+
+Away from $$x=\pm1$$, the input lies strictly between $$-1$$ and $$1$$, so the composition is differentiable. The endpoints need a separate check; a zero denominator in the derivative formula alone is not enough to settle them.
+
+Set $$\theta=2\arctan x$$. Then $$-\pi<\theta<\pi$$ and
+
+$$
+\sin\theta=\frac{2x}{1+x^2}.
+$$
+
+Folding $$\theta$$ into the principal range of arcsine gives
+
+$$
+F(x)=
+\begin{cases}
+-\pi-2\arctan x,&x<-1,\\
+2\arctan x,&-1\le x\le1,\\
+\pi-2\arctan x,&x>1.
+\end{cases}
+$$
+
+These expressions agree at the joining points, but their slopes do not:
+
+$$
+F'_-(-1)=-1,\qquad F'_+(-1)=1,
+$$
+
+$$
+F'_-(1)=1,\qquad F'_+(1)=-1.
+$$
+
+Therefore the only nondifferentiable inputs are
+
+$$
+\boxed{x=-1\quad\text{and}\quad x=1.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-9"}
+9. For
+
+   $$
+   y(x)=(1+x^2)^{\arctan x},
+   $$
+
+   find $$y'(1)$$ exactly.
+
+:::solution
+The base $$1+x^2$$ is positive, so take logarithms:
+
+$$
+\ln y=(\arctan x)\ln(1+x^2).
+$$
+
+Differentiate using the product and chain rules:
+
+$$
+\frac{y'}y
+=\frac{\ln(1+x^2)}{1+x^2}
++\frac{2x\arctan x}{1+x^2}.
+$$
+
+At $$x=1$$, $$y(1)=2^{\pi/4}$$. Therefore,
+
+$$
+\boxed{y'(1)=2^{\pi/4}\left(\frac{\ln2}{2}+\frac\pi4\right).}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-10"}
+10. A differentiable positive function $$y(x)$$ satisfies
+
+    $$
+    x^{y(x)}=[y(x)]^x
+    $$
+
+    near $$x=2$$, with $$y(2)=4$$. Find $$y'(2)$$ exactly.
+
+:::solution
+Both bases are positive near the given point, so logarithms turn the two variable powers into products:
+
+$$
+y\ln x=x\ln y.
+$$
+
+Differentiate implicitly:
+
+$$
+y'\ln x+\frac yx=\ln y+\frac xy y'.
+$$
+
+Collect the terms containing $$y'$$:
+
+$$
+\left(\ln x-\frac xy\right)y'=\ln y-\frac yx.
+$$
+
+At $$(2,4)$$ the coefficient of $$y'$$ is $$\ln2-1/2\ne0$$, giving
+
+$$
+\boxed{y'(2)=\frac{\ln4-2}{\ln2-1/2}
+=\frac{4(\ln2-1)}{2\ln2-1}.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-11"}
+11. Let
+
+    $$
+    f(x)=\sin x\sin(2x).
+    $$
+
+    Find $$f^{(2026)}(0)$$ exactly.
+
+:::solution
+Use the product-to-sum identity before differentiating:
+
+$$
+f(x)=\frac12\left(\cos x-\cos(3x)\right).
+$$
+
+The derivative cycle gives
+
+$$
+\frac{d^n}{dx^n}\cos(kx)
+=k^n\cos\left(kx+\frac{n\pi}{2}\right).
+$$
+
+Since $$2026=4(506)+2$$, the cosine factor at $$x=0$$ is $$-1$$. Thus
+
+$$
+f^{(2026)}(0)=\frac12\left(-1+3^{2026}\right).
+$$
+
+Therefore,
+
+$$
+\boxed{f^{(2026)}(0)=\frac{3^{2026}-1}{2}.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-diffcomplex-12"}
+12. Let
+
+    $$
+    f(x)=\frac{1}{1-x-x^2}
+    $$
+
+    for $$x$$ near $$0$$. Find $$f^{(10)}(0)$$ exactly.
+
+:::solution
+Start from an identity that avoids repeated quotient-rule calculations:
+
+$$
+(1-x-x^2)f(x)=1.
+$$
+
+For $$n\ge2$$, differentiate $$n$$ times using Leibniz's rule, then evaluate at $$0$$. Only the zeroth, first, and second derivatives of the polynomial factor contribute:
+
+$$
+f^{(n)}(0)-n f^{(n-1)}(0)-n(n-1)f^{(n-2)}(0)=0.
+$$
+
+Define $$a_n=f^{(n)}(0)/n!$$ to remove the factorial factors. The recurrence becomes
+
+$$
+a_n=a_{n-1}+a_{n-2}.
+$$
+
+The original identity gives $$f(0)=1$$. Differentiating it once gives $$f'(0)=1$$, so $$a_0=a_1=1$$. Repeated addition now gives
+
+$$
+(a_2,a_3,\ldots,a_{10})=(2,3,5,8,13,21,34,55,89).
+$$
+
+Finally,
+
+$$
+\boxed{f^{(10)}(0)=89\cdot10!=322{,}963{,}200.}
+$$
+
+// we never learned Leibniz's rule so use a different problems
+
+:::
+::::

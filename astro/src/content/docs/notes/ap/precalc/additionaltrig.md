@@ -2061,7 +2061,7 @@ Only $$1+i$$ has positive imaginary part. The three solutions lie on a circle of
 
 ### Roots of unity
 
-The **$$n$$th roots of unity** are the complex numbers that solve
+The **$$n$$th roots of unity** are the complex numbers that solve the equation
 
 $$
 z^n=1.
@@ -2099,11 +2099,9 @@ $$
 z_k=e^{2k\pi i/n}.
 $$
 
-These points all lie on the unit circle because each one has modulus $$1$$, and form a regular $$n$$-gon.
-
 ### Geometry of roots of unity
 
-For a positive integer $$n$$, the $$n$$th roots of unity are evenly spaced around the unit circle. After $$n$$ steps of angle $$2\pi/n$$, the total rotation is exactly $$2\pi$$.
+For a positive integer $$n$$, the $$n$$th roots of unity are evenly spaced around the unit circle. This is because after $$n$$ steps of angle $$2\pi/n$$, the total rotation is exactly $$2\pi$$.
 
 The angle between consecutive roots is
 
@@ -2185,9 +2183,7 @@ Note that the rendering on the $$y$$-axis shows that it is real, but treat it li
 
 </div>
 
-#### What if the exponent is irrational?
-
-The phrase "the $$n$$th roots of unity" normally assumes $$n$$ is a positive integer, so $$z^n-1$$ is a polynomial with exactly $$n$$ roots. For an irrational exponent $$\alpha$$, complex exponentiation requires a choice of logarithm; the ordinary polynomial root-count rule no longer applies.
+What if $$n$$ is an irrational number? The phrase "the $$n$$th roots of unity" normally assumes $$n$$ is a positive integer, so $$z^n-1$$ is a polynomial with exactly $$n$$ roots. For an irrational exponent $$\alpha$$, complex exponentiation requires a choice of logarithm; the ordinary polynomial root-count rule no longer applies.
 
 For example, define a single value using $$z^\alpha=\exp(\alpha(\ln\lvert z\rvert+i\operatorname{Arg}z))$$ with $$-\pi<\operatorname{Arg}z\le\pi$$. Then $$z^\alpha=1$$ requires
 

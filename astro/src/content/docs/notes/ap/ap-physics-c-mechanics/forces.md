@@ -241,6 +241,56 @@ Both routes agree. Notice the system method gave $$a$$ instantly, but the tensio
 
 ---
 
+## Apparent weight and elevators
+
+:::mistakes
+- Apparent weightlessness means $$F_N=0$$, even while gravity acts.
+- Use the direction of acceleration to decide whether the scale reading increases or decreases. An elevator traveling upward while slowing down accelerates downward.
+- A negative calculated normal force means ordinary floor contact cannot persist: the floor cannot pull the person downward.
+:::
+
+A scale does not directly measure your weight, it insteads measures the **apparent weight**, which is the normal force applied to the scale. In an elevator (or any condition with nonzero acceleration),
+
+$$
+F_N - mg = ma
+$$
+
+if upward is positive.
+
+So,
+
+$$
+F_N = m(g + a).
+$$
+
+If the elevator accelerates upward, $$F_N > mg$$. If it accelerates downward, $$F_N < mg$$. In free fall, $$a = -g$$ and $$F_N = 0$$, so the object is weightless in the apparent-weight sense even though gravity still acts.
+
+<div class="theorem-box">
+
+**Example.** A person of mass $$m = 70\ \text{kg}$$ stands on a bathroom scale in an elevator. Find the reading when (a) the elevator accelerates upward at $$2.0\ \text{m/s}^2$$, and (b) the elevator accelerates downward at $$2.0\ \text{m/s}^2$$.
+
+Take up as positive. The scale reads $$F_N$$, where $$F_N - mg = ma$$, so $$F_N = m(g + a)$$.
+
+(a) Upward acceleration, $$a = +2.0\ \text{m/s}^2$$:
+
+$$
+F_N = 70(9.8 + 2.0) = 70(11.8) = 826\ \text{N}.
+$$
+
+The person feels heavier than their true weight $$mg = 686\ \text{N}$$.
+
+(b) Downward acceleration, $$a = -2.0\ \text{m/s}^2$$:
+
+$$
+F_N = 70(9.8 - 2.0) = 70(7.8) = 546\ \text{N}.
+$$
+
+The person feels lighter. Note the sign of $$a$$ is what matters, not the direction of motion: an elevator moving up but slowing down has $$a < 0$$ and gives the lighter reading.
+
+</div>
+
+---
+
 ## Inclined planes
 
 :::tip
@@ -446,9 +496,9 @@ The mass and $$g$$ both cancel, which is why this simple tilt test works regardl
 ## Connected objects and pulleys
 
 :::tip
-For a massless rope passing over ideal massless, frictionless pulleys, tension is the same along each continuous rope. Different ropes can have different tensions. Count every segment pulling directly on your chosen system.
+For a massless rope passing over ideal massless, frictionless pulleys, tension is the same along each continuous rope (which we assume is true for these types of problems). Different ropes can have different tensions, so count every segment pulling directly on your chosen system.
 
-A movable pulley supported by two vertical segments feels an upward force $$2T$$. For a combined load and pulley of mass $$M$$, write $$2T-Mg=Ma_y$$, taking up as positive. Only when $$a_y=0$$ does this give $$T=Mg/2$$.
+A movable pulley supported by two vertical segments feels an upward force $$2T$$ (since tension is the same throughout the string). For a combined load and pulley of mass $$M$$, write $$2T-Mg=Ma_y$$, taking up as positive. Only when $$a_y=0$$ does this give $$T=Mg/2$$.
 
 For a person pulling themselves up in a chair, count the rope's pull on both the chair and the person's hand. If each receives an upward tension $$T$$, the person-plus-chair system satisfies $$2T-Mg=Ma_y$$, where $$M$$ is their total mass.
 :::
@@ -528,55 +578,7 @@ As a check, if $$m_1 = m_2$$ the acceleration is zero and $$T = m_1 g$$, as expe
 
 For pulley systems with movable pulleys, the acceleration constraints may involve factors of 2. Write the string-length constraint (the length of the string is always constant) first, then differentiate with respect to time to relate velocities and accelerations.
 
----
-
-## Apparent weight and elevators
-
-:::mistakes
-- Apparent weightlessness means $$F_N=0$$, even while gravity acts.
-- Use the direction of acceleration to decide whether the scale reading increases or decreases. An elevator traveling upward while slowing down accelerates downward.
-- A negative calculated normal force means ordinary floor contact cannot persist: the floor cannot pull the person downward.
-:::
-
-A scale does not directly measure your weight, it insteads measures the **apparent weight**, which is the normal force applied to the scale. In an elevator (or any condition with nonzero acceleration),
-
-$$
-F_N - mg = ma
-$$
-
-if upward is positive.
-
-So,
-
-$$
-F_N = m(g + a).
-$$
-
-If the elevator accelerates upward, $$F_N > mg$$. If it accelerates downward, $$F_N < mg$$. In free fall, $$a = -g$$ and $$F_N = 0$$, so the object is weightless in the apparent-weight sense even though gravity still acts.
-
-<div class="theorem-box">
-
-**Example.** A person of mass $$m = 70\ \text{kg}$$ stands on a bathroom scale in an elevator. Find the reading when (a) the elevator accelerates upward at $$2.0\ \text{m/s}^2$$, and (b) the elevator accelerates downward at $$2.0\ \text{m/s}^2$$.
-
-Take up as positive. The scale reads $$F_N$$, where $$F_N - mg = ma$$, so $$F_N = m(g + a)$$.
-
-(a) Upward acceleration, $$a = +2.0\ \text{m/s}^2$$:
-
-$$
-F_N = 70(9.8 + 2.0) = 70(11.8) = 826\ \text{N}.
-$$
-
-The person feels heavier than their true weight $$mg = 686\ \text{N}$$.
-
-(b) Downward acceleration, $$a = -2.0\ \text{m/s}^2$$:
-
-$$
-F_N = 70(9.8 - 2.0) = 70(7.8) = 546\ \text{N}.
-$$
-
-The person feels lighter. Note the sign of $$a$$ is what matters, not the direction of motion: an elevator moving up but slowing down has $$a < 0$$ and gives the lighter reading.
-
-</div>
+// add a subsection about solving multi-pulley problems and mechanical advantage, and also the constancy of strings for the mechanical advantage section
 
 ---
 

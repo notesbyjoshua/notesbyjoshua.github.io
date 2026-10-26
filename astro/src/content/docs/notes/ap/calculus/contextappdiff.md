@@ -868,15 +868,12 @@ The differential retains $$12h$$; the omitted terms give $$6(-0.1)^2+(-0.1)^3=0.
 
 ### Error measurement
 
-For a variable $$x$$ with a small signed error $$dx$$, the relative error estimate is simply $$dx/x$$, and the percentage error estimate is $$100(dx/x)\%$$:
+For a variable $$x$$ with a small signed error $$dx$$, the relative error and percentage errors are defined as:
 
 $$
-\text{error in original units}=dx,
-\qquad
 \text{relative error}=\frac{dx}{x},
 \qquad
-\text{percentage error}=100\frac{dx}{x}\%,
-\qquad x\ne0.
+\text{percentage error}=100\frac{dx}{x}\%.
 $$
 
 Here the denominator is the reference value, and $$dx$$ is the signed error relative to that value. A positive or negative error records which side of the reference the perturbed value lies on. When a measurement has symmetric uncertainty, use $$dx=\pm\varepsilon$$ to indicate both possible directions.
@@ -1396,3 +1393,638 @@ AP free-response scoring usually expects a complete sentence with units. A corre
 | Reciprocal rewrite | $$f/g=(1/g)/(1/f),\quad f,g\ne0$$ |
 | L'Hôpital, under its hypotheses | $$\lim_{x\to a}f(x)/g(x)=L,\quad L=\lim_{x\to a}f'(x)/g'(x)\in\mathbb R\cup\{-\infty,\infty\}$$ |
 :::
+
+## Practice
+
+::::frq{id="calc-contextappdiff-1"}
+1. A particle's position in meters is $$s(t)=t^2$$, but an inaccurate clock displays $$\tau(t)=t+\frac12\sin t$$ seconds instead of the true time $$t$$. Here $$t\ge0$$ is the numerical value of true time in seconds. The observer defines acceleration using the displayed time. Find the difference between reported acceleration $$\frac{d^2s}{d\tau^2}$$ at $$t=3\pi/2$$ and the real acceleration of the particle.
+
+:::solution
+Since $$\tau'(t)=1+\frac12\cos t>0$$, differentiation with respect to the displayed time is well-defined and satisfies
+
+$$
+\frac d{d\tau}=\frac{1}{\tau'(t)}\frac d{dt}.
+$$
+
+Apply this twice, remembering that the clock's rate also changes:
+
+$$
+\frac{ds}{d\tau}=\frac{s'}{\tau'},
+\qquad
+\frac{d^2s}{d\tau^2}
+=\frac1{\tau'}\frac d{dt}\left(\frac{s'}{\tau'}\right)
+=\frac{s''\tau'-s'\tau''}{(\tau')^3}.
+$$
+
+At $$t=3\pi/2$$,
+
+$$
+s'=3\pi,\qquad s''=2,\qquad \tau'=1,\qquad \tau''=\frac12.
+$$
+
+The reported acceleration is therefore $$2-3\pi/2$$ meters per second squared, while the actual acceleration is $$2$$ meters per second squared. Taking the difference as reported minus actual gives
+
+$$
+\boxed{a_{\mathrm{reported}}-a_{\mathrm{actual}}
+=-\frac{3\pi}{2}\text{ m/s}^2.}
+$$
+
+The reported value is smaller by $$3\pi/2$$ meters per second squared; it even has the wrong sign.
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-2"}
+2. A particle moves along a line with velocity
+
+   $$
+   v(t)=\frac{(t-1)^2(t-3)}{t+1}
+   \qquad (0\le t\le4),
+   $$
+
+   measured in meters per second. Determine all open intervals on which the particle is speeding up, giving exact interval endpoints.
+
+:::solution
+The particle speeds up where velocity and acceleration have the same sign. Differentiating and factoring gives
+
+$$
+a(t)=v'(t)
+=\frac{2(t-1)(t^2-5)}{(t+1)^2}.
+$$
+
+The denominator is positive on the given interval. Velocity is negative before $$t=3$$ except at the stop $$t=1$$, while acceleration changes sign at $$1$$ and $$\sqrt5$$:
+
+| Interval | Sign of $$v$$ | Sign of $$a$$ | Speed |
+| --- | --- | --- | --- |
+| $$(0,1)$$ | Negative | Positive | Decreasing |
+| $$(1,\sqrt5)$$ | Negative | Negative | Increasing |
+| $$(\sqrt5,3)$$ | Negative | Positive | Decreasing |
+| $$(3,4)$$ | Positive | Positive | Increasing |
+
+Thus the requested intervals are
+
+$$
+\boxed{(1,\sqrt5)\cup(3,4).}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-3"}
+3. Two cars travel on perpendicular roads. Their positions relative to the intersection are $$(x(t),0)$$ and $$(0,y(t))$$, where $$x$$ and $$y$$ are signed distances in meters and $$t$$ is in seconds. Both cars maintain constant, but unknown, signed velocities $$u=x'(t)$$ and $$w=y'(t)$$. At $$t=0$$,
+
+   $$
+   x(0)=3,
+   \qquad y(0)=4.
+   $$
+
+   A sensor measures their separation $$D(t)$$ and reports
+
+   $$
+   D(0)=5,
+   \qquad D'(0)=-1,
+   \qquad D''(0)=\frac45,
+   $$
+
+   in the corresponding meter-second units. Determine every ordered pair $$(u,w)$$ consistent with these measurements.
+
+:::solution
+The separation satisfies
+
+$$
+D^2=x^2+y^2.
+$$
+
+Differentiate once and use the constant velocities:
+
+$$
+DD'=xu+yw.
+$$
+
+At $$t=0$$ this gives
+
+$$
+3u+4w=-5.
+$$
+
+Differentiate again. Since $$u'=w'=0$$,
+
+$$
+(D')^2+DD''=u^2+w^2.
+$$
+
+The measured values give
+
+$$
+u^2+w^2=1+5\left(\frac45\right)=5.
+$$
+
+Substitute $$w=(-5-3u)/4$$ into this equation:
+
+$$
+u^2+\frac{(5+3u)^2}{16}=5
+\quad\Longrightarrow\quad
+5u^2+6u-11=0.
+$$
+
+Factoring gives $$(5u+11)(u-1)=0$$. Substituting each root back into the linear equation yields
+
+$$
+\boxed{(u,w)=(1,-2)\quad\text{or}\quad
+\left(-\frac{11}{5},\frac25\right),}
+$$
+
+with both velocity components measured in meters per second.
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-4"}
+4. A lamp moves vertically above a fixed point on level ground. Its height is $$H(t)$$ meters. A person of height $$2$$ meters walks directly away from that point, with horizontal distance $$x(t)=8+\frac32t$$ for times near $$t=0$$, measured in seconds. If $$H(t)=6+kt$$, determine the value of $$k$$ that makes the shadow's tip instantaneously stationary at $$t=0$$.
+
+:::solution
+Let $$z(t)$$ be the ground distance from the point below the lamp to the shadow's tip. The shadow's length is then $$z-x$$. Similar triangles give
+
+$$
+\frac Hz=\frac2{z-x},
+\qquad (H-2)z=Hx.
+$$
+
+At $$t=0$$, $$H=6$$ and $$x=8$$, so $$4z=48$$ and $$z=12$$. Differentiate the relation before substituting the rates:
+
+$$
+H'z+(H-2)z'=H'x+Hx'.
+$$
+
+A stationary tip requires $$z'(0)=0$$. Using $$H'=k$$ and $$x'=3/2$$ gives
+
+$$
+12k+4(0)=8k+6\left(\frac32\right),
+\qquad 4k=9.
+$$
+
+Therefore,
+
+$$
+\boxed{k=\frac94\text{ m/s}.}
+$$
+
+The lamp must move upward to offset the person's outward motion.
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-5"}
+5. Water is pumped from an inverted conical tank into an upright cylindrical tank, with no loss. The cone has height $$6$$ meters and top radius $$3$$ meters; the cylinder has radius $$1$$ meter. Write $$h(t)$$ for the cone's water depth, $$z(t)$$ for the cylinder's water depth, and $$Q(t)>0$$ for the transfer rate in cubic meters per minute. Assume $$Q$$ is differentiable.
+
+   At a particular instant,
+
+   $$
+   h=2,
+   \qquad z=1,
+   \qquad Q=\pi.
+   $$
+
+   Find the exact value of $$\displaystyle\frac{d^2}{dt^2}(h+z)$$ at this instant, even though $$Q'$$ is not given.
+
+:::solution
+Similar triangles in the cone give $$r/h=3/6=1/2$$. The two water volumes are
+
+$$
+V_{\mathrm{cone}}=\frac13\pi\left(\frac h2\right)^2h
+=\frac{\pi h^3}{12},
+\qquad
+V_{\mathrm{cylinder}}=\pi z.
+$$
+
+Water leaves the cone and enters the cylinder at rate $$Q$$, so
+
+$$
+\frac{\pi h^2}{4}h'=-Q,
+\qquad \pi z'=Q.
+$$
+
+Thus $$h'=-4Q/(\pi h^2)$$ and $$z'=Q/\pi$$. In particular, $$h'=-1$$ at the requested instant.
+
+Add the two depth rates before differentiating again:
+
+$$
+(h+z)'=\frac Q\pi\left(1-\frac4{h^2}\right).
+$$
+
+The product and chain rules give
+
+$$
+(h+z)''
+=\frac{Q'}\pi\left(1-\frac4{h^2}\right)
++\frac Q\pi\frac{8h'}{h^3}.
+$$
+
+At $$h=2$$, the coefficient of the unknown $$Q'$$ is zero. The remaining term is
+
+$$
+\frac\pi\pi\frac{8(-1)}{2^3}=-1.
+$$
+
+Therefore,
+
+$$
+\boxed{\frac{d^2}{dt^2}(h+z)=-1\text{ m/min}^2.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-6"}
+6. A point moves on the circle
+
+   $$
+   x(t)^2+y(t)^2=25
+   $$
+
+   and passes through $$(5,0)$$ at $$t=0$$. Both coordinates are twice differentiable near $$0$$, with distances in meters and time in seconds. Given $$x'(0)=0$$ and $$x''(0)=-4$$, determine every possible value of $$y'(0)$$.
+
+:::solution
+Differentiate the constraint once:
+
+$$
+xx'+yy'=0.
+$$
+
+At the given instant, this is $$0=0$$ and gives no information about $$y'$$. Differentiate again without dividing by $$y$$:
+
+$$
+(x')^2+xx''+(y')^2+yy''=0.
+$$
+
+Substituting the data gives
+
+$$
+0+5(-4)+[y'(0)]^2+0=0,
+\qquad [y'(0)]^2=20.
+$$
+
+Both signs are possible. For example, the motions
+
+$$
+x(t)=5\cos\left(\frac{2t}{\sqrt5}\right),
+\qquad
+y(t)=\pm5\sin\left(\frac{2t}{\sqrt5}\right)
+$$
+
+satisfy the constraint and all the given initial data. Hence
+
+$$
+\boxed{y'(0)=\pm2\sqrt5\text{ m/s}.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-7"}
+7. Let $$y=f(x)$$ be the differentiable branch through $$(1,1)$$ of the curve
+
+   $$
+   e^{xy}+x^2y=e+1,
+   $$
+
+   and define $$p(x)=xf(x)$$. Estimate $$p$$ at $$x=1.1$$ using the point $$x=1$$.
+
+:::solution
+Use the quantity being estimated to simplify the constraint. Since $$p=xy$$ and $$x^2y=xp$$, the original equation becomes
+
+$$
+e^{p(x)}+xp(x)=e+1.
+$$
+
+Differentiate with respect to $$x$$:
+
+$$
+e^p p'+p+xp'=0,
+\qquad (e^p+x)p'=-p.
+$$
+
+At $$x=1$$, $$p(1)=1$$, so $$p'(1)=-1/(e+1)$$. The linearization is therefore
+
+$$
+L_p(x)=1-\frac{x-1}{e+1}.
+$$
+
+Using $$x=1.1$$ gives
+
+$$
+\boxed{p(1.1)\approx1-\frac{0.1}{e+1}\approx0.9731.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-8"}
+8. Construct a pair of functions $$f$$ and $$g$$ that are continuously differentiable near $$0$$, satisfy
+
+   $$
+   f(0)=g(0)=1,
+   \qquad
+   f'(0)=2,
+   \qquad
+   g'(0)=-2,
+   $$
+
+   and have the property
+
+   $$
+   \lim_{x\to0}\frac{f(x)g(x)-1}{x^2}=+\infty.
+   $$
+
+:::solution
+The linear terms in the product must cancel, but the remaining change needs to be larger than a quadratic term near $$0$$. A fractional power between $$1$$ and $$2$$ does this without destroying continuous differentiability.
+
+One choice is
+
+$$
+\boxed{f(x)=1+2x,\qquad
+g(x)=1-2x+\lvert x\rvert^{3/2}.}
+$$
+
+Both functions equal $$1$$ at $$0$$, and $$f'(0)=2$$. For $$g$$, the difference quotient gives
+
+$$
+g'(0)=\lim_{h\to0}\left(-2+\frac{\lvert h\rvert^{3/2}}h\right)=-2,
+$$
+
+because the magnitude of the second term is $$\sqrt{\lvert h\rvert}\to0$$. For $$x\ne0$$,
+
+$$
+g'(x)=-2+\frac32\operatorname{sgn}(x)\sqrt{\lvert x\rvert}
+\longrightarrow-2.
+$$
+
+Here $$\operatorname{sgn}(x)$$ is $$1$$ for positive $$x$$ and $$-1$$ for negative $$x$$ (basically denotes the sign of $$x$$). Thus $$g'$$ is continuous at $$0$$, and both functions are continuously differentiable near $$0$$.
+
+Finally, their product satisfies
+
+$$
+f(x)g(x)-1=-4x^2+(1+2x)\lvert x\rvert^{3/2}.
+$$
+
+For $$x\ne0$$,
+
+$$
+\frac{f(x)g(x)-1}{x^2}
+=-4+\frac{1+2x}{\sqrt{\lvert x\rvert}}
+\longrightarrow+\infty.
+$$
+
+The numerator $$1+2x$$ tends to the positive number $$1$$, so the divergence is positive from both sides.
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-9"}
+9. The true density of a solid cylinder is
+
+   $$
+   \rho=\frac{m}{\pi r^2h}.
+   $$
+
+   A shared calibration error affects the reported mass, radius, and height according to
+
+   $$
+   m_{\mathrm{meas}}=m(1+3\varepsilon),
+   \qquad
+   r_{\mathrm{meas}}=r(1+\varepsilon),
+   \qquad
+   h_{\mathrm{meas}}=h(1+\varepsilon),
+   $$
+
+   where $$-1/3<\varepsilon<1/3$$. Use differentials at $$\varepsilon=0$$ to estimate the signed percentage error in the calculated density when $$\varepsilon=0.01$$.
+
+:::solution
+Logarithmic differentiation of $$\rho=m/(\pi r^2h)$$ gives the first-order relative change
+
+$$
+\frac{d\rho}{\rho}=\frac{dm}{m}-2\frac{dr}{r}-\frac{dh}{h}.
+$$
+
+All three measurement changes come from the same calibration parameter. Relative to the true measurements at $$\varepsilon=0$$, they are
+
+$$
+\frac{dm}{m}=3\varepsilon,
+\qquad \frac{dr}{r}=\varepsilon,
+\qquad \frac{dh}{h}=\varepsilon.
+$$
+
+Consequently,
+
+$$
+\frac{d\rho}{\rho}=3\varepsilon-2\varepsilon-\varepsilon=0.
+$$
+
+The differential estimate of the signed percentage error is
+
+$$
+\boxed{0\%\text{ to first order}.}
+$$
+
+This does not mean that the exact density error is zero. In fact,
+
+$$
+\frac{\rho_{\mathrm{meas}}-\rho}{\rho}
+=\frac{1+3\varepsilon}{(1+\varepsilon)^3}-1
+=-\frac{\varepsilon^2(3+\varepsilon)}{(1+\varepsilon)^3}.
+$$
+
+At $$\varepsilon=0.01$$, the exact signed percentage error is about $$-0.0292\%$$. The first-order terms cancel, leaving an error that the differential approximation does not capture.
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-10"}
+10. Evaluate the limit exactly:
+
+    $$
+    \lim_{x\to0}\frac{\ln(1+3x)-3\sin x}{x^2}.
+    $$
+
+:::solution
+The logarithm is defined for all $$x$$ sufficiently close to $$0$$. First check the numerator and denominator separately:
+
+$$
+\lim_{x\to0}\left[\ln(1+3x)-3\sin x\right]=0.
+$$
+
+$$
+\lim_{x\to0}x^2=0.
+$$
+
+L'Hôpital's rule gives
+
+$$
+\lim_{x\to0}\frac{\ln(1+3x)-3\sin x}{x^2}
+=\lim_{x\to0}\frac{3/(1+3x)-3\cos x}{2x}.
+$$
+
+Before applying the rule again, check the new numerator and denominator:
+
+$$
+\lim_{x\to0}\left[\frac3{1+3x}-3\cos x\right]=0.
+$$
+
+$$
+\lim_{x\to0}2x=0.
+$$
+
+A second application now gives
+
+$$
+\lim_{x\to0}\frac{3/(1+3x)-3\cos x}{2x}
+=\lim_{x\to0}\frac{-9/(1+3x)^2+3\sin x}{2}
+=-\frac92.
+$$
+
+Therefore,
+
+$$
+\boxed{-\frac92.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-11"}
+11. For $$-1<x<1$$ with $$x\ne0$$, define
+
+    $$
+    U(x)=\left(\frac{1+x}{1-x}\right)^{1/(2x)},
+    \qquad
+    d(x)=1-\frac{\sin x}{x}.
+    $$
+
+    Evaluate the limit exactly:
+
+    $$
+    \lim_{x\to0}\left(\frac{U(x)}e\right)^{1/d(x)}.
+    $$
+
+:::solution
+The base $$U(x)/e$$ is positive, and $$d(x)\ne0$$ for the given nonzero inputs. Rewrite the expression as an exponential:
+
+$$
+\left(\frac{U(x)}e\right)^{1/d(x)}
+=\exp\left(\frac{\ln U(x)-1}{d(x)}\right).
+$$
+
+The exponent simplifies substantially before any differentiation:
+
+$$
+\frac{\ln U(x)-1}{d(x)}
+=\frac{\dfrac{\ln(1+x)-\ln(1-x)-2x}{2x}}
+{\dfrac{x-\sin x}{x}}
+=\frac{\ln(1+x)-\ln(1-x)-2x}{2(x-\sin x)}.
+$$
+
+Check the two limits separately:
+
+$$
+\lim_{x\to0}\left[\ln(1+x)-\ln(1-x)-2x\right]=0.
+$$
+
+$$
+\lim_{x\to0}2(x-\sin x)=0.
+$$
+
+Applying L'Hôpital's rule once gives
+
+$$
+\begin{aligned}
+\lim_{x\to0}\frac{\ln(1+x)-\ln(1-x)-2x}{2(x-\sin x)}
+&=\lim_{x\to0}\frac{1/(1+x)+1/(1-x)-2}{2(1-\cos x)}\\
+&=\lim_{x\to0}\frac{x^2}{(1-x^2)(1-\cos x)}.
+\end{aligned}
+$$
+
+There is no need to differentiate again. The half-angle identity gives
+
+$$
+\frac{x^2}{1-\cos x}
+=2\left(\frac{x/2}{\sin(x/2)}\right)^2
+\longrightarrow2.
+$$
+
+Since $$1/(1-x^2)\to1$$, the exponent tends to $$2$$. Continuity of the exponential function therefore gives
+
+$$
+\boxed{\lim_{x\to0}\left(\frac{U(x)}e\right)^{1/d(x)}=e^2.}
+$$
+
+:::
+::::
+
+::::frq{id="calc-contextappdiff-12"}
+12. Evaluate the limit exactly:
+
+    $$
+    \lim_{x\to\infty}\left[2\left(\sqrt{x^2+x}-x\right)e^{1/(4x)}\right]^{x^2}.
+    $$
+
+:::solution
+Rationalize the difference of the two large terms first. Since $$x>0$$,
+
+$$
+2\left(\sqrt{x^2+x}-x\right)
+=\frac{2x}{\sqrt{x^2+x}+x}
+=\frac2{\sqrt{1+1/x}+1}.
+$$
+
+Set $$t=1/x$$, so $$t\to0^+$$ and $$x^2=1/t^2$$. The expression becomes
+
+$$
+\left[\frac{2e^{t/4}}{1+\sqrt{1+t}}\right]^{1/t^2}
+=\exp\left(\frac{N(t)}{t^2}\right),
+$$
+
+where
+
+$$
+N(t)=\ln\left(\frac2{1+\sqrt{1+t}}\right)+\frac t4.
+$$
+
+Put $$r=\sqrt{1+t}$$ when differentiating. Then
+
+$$
+\begin{aligned}
+N'(t)
+&=\frac14-\frac{1}{2r(1+r)}\\
+&=\frac{r^2+r-2}{4r(1+r)}\\
+&=\frac{(r-1)(r+2)}{4r(1+r)}
+=\frac{t(r+2)}{4r(1+r)^2}.
+\end{aligned}
+$$
+
+The last step uses $$r-1=t/(r+1)$$. Now check the limits for L'Hôpital's rule:
+
+$$
+\lim_{t\to0^+}N(t)=0.
+$$
+
+$$
+\lim_{t\to0^+}t^2=0.
+$$
+
+One application, followed by cancellation of $$t$$, yields
+
+$$
+\lim_{t\to0^+}\frac{N(t)}{t^2}
+=\lim_{t\to0^+}\frac{N'(t)}{2t}
+=\lim_{t\to0^+}\frac{r+2}{8r(1+r)^2}
+=\frac3{32}.
+$$
+
+Returning to the exponential gives
+
+$$
+\boxed{e^{3/32}.}
+$$
+
+:::
+::::

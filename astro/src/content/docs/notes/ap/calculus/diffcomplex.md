@@ -709,7 +709,7 @@ v'(x)\ln(u(x))
 +v(x)\frac{u'(x)}{u(x)}.
 $$
 
-This contains both the derivative of the exponent and the derivative of the base. Treating $$v(x)$$ as a constant would miss the first term.
+This contains both the derivative of the exponent and the derivative of the base. Treating $$v(x)$$ as a constant would miss the first term, and treating $$u(x)$$ as a constant would miss the second term.
 
 After differentiating, remember that differentiating $$\ln y$$ gives
 
@@ -1450,46 +1450,71 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-12"}
-12. Let
+12. A positive function $$f$$ is three times differentiable near $$0$$ and satisfies
 
     $$
-    f(x)=\frac{1}{1-x-x^2}
+    f(x)+\ln(f(x))=1+x+x^2,
+    \qquad f(0)=1.
     $$
 
-    for $$x$$ near $$0$$. Find $$f^{(10)}(0)$$ exactly.
+    Find $$f'''(0)$$ exactly.
 
 :::solution
-Start from an identity that avoids repeated quotient-rule calculations:
+Differentiate the implicit equation using the chain rule:
 
 $$
-(1-x-x^2)f(x)=1.
+f'+\frac{f'}f=1+2x,
+\qquad
+\left(1+\frac1f\right)f'=1+2x.
 $$
 
-For $$n\ge2$$, differentiate $$n$$ times using Leibniz's rule, then evaluate at $$0$$. Only the zeroth, first, and second derivatives of the polynomial factor contribute:
+At $$x=0$$, $$f(0)=1$$, so
 
 $$
-f^{(n)}(0)-n f^{(n-1)}(0)-n(n-1)f^{(n-2)}(0)=0.
+2f'(0)=1,
+\qquad f'(0)=\frac12.
 $$
 
-Define $$a_n=f^{(n)}(0)/n!$$ to remove the factorial factors. The recurrence becomes
+Differentiate again, remembering that $$1/f$$ also depends on $$x$$:
 
 $$
-a_n=a_{n-1}+a_{n-2}.
+\left(1+\frac1f\right)f''-\frac{(f')^2}{f^2}=2.
 $$
 
-The original identity gives $$f(0)=1$$. Differentiating it once gives $$f'(0)=1$$, so $$a_0=a_1=1$$. Repeated addition now gives
+Substituting the known values at $$0$$ gives
 
 $$
-(a_2,a_3,\ldots,a_{10})=(2,3,5,8,13,21,34,55,89).
+2f''(0)-\frac14=2,
+\qquad f''(0)=\frac98.
 $$
 
-Finally,
+For the third derivative, apply the ordinary product and chain rules to the second-derivative equation:
 
 $$
-\boxed{f^{(10)}(0)=89\cdot10!=322{,}963{,}200.}
+\left(1+\frac1f\right)f'''
+-\frac{f'f''}{f^2}
+-\frac{2f'f''}{f^2}
++\frac{2(f')^3}{f^3}=0.
 $$
 
-// we never learned Leibniz's rule so use a different problems
+The two middle terms combine. At $$0$$,
+
+$$
+2f'''(0)-3\left(\frac12\right)\left(\frac98\right)
++2\left(\frac12\right)^3=0,
+$$
+
+so
+
+$$
+2f'''(0)=\frac{27}{16}-\frac14=\frac{23}{16}.
+$$
+
+Therefore,
+
+$$
+\boxed{f'''(0)=\frac{23}{32}.}
+$$
 
 :::
 ::::

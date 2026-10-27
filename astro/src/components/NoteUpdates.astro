@@ -1,0 +1,68 @@
+---
+import manifest from '../data/note-updates.json';
+
+interface Update { id: string; date: string; summary: string }
+const { filePath } = Astro.props as { filePath: string };
+const source = filePath.startsWith('astro/') ? filePath : `astro/${filePath}`;
+const updates: Update[] = (manifest.pages as Record<string, Update[]>)[source] ?? [];
+const latest = updates[0];
+const formatDate = (date: string) => new Date(date).toLocaleDateString('en-US', {
+  month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Los_Angeles',
+});
+---
+<div class="note-updates" data-note-updates data-pagefind-ignore data-page={source} data-revision={latest?.id ?? manifest.baseline}>
+  {latest && (
+    <>
+      <div class="update-unread" hidden>
+        <span>Updated since your last visit</span>
+        <button type="button" class="update-dismiss" aria-label="Dismiss update notice">Dismiss</button>
+      </div>
+      <details>
+        <summary>
+          <span>Updated <time datetime={latest.date}>{formatDate(latest.date)}</time> · {latest.summary}</span>
+          <span class="update-history-label">What changed?</span>
+        </summary>
+        <ol aria-label="Recent note updates">
+          {updates.map((update) => (
+            <li><time datetime={update.date}>{formatDate(update.date)}</time> — {update.summary}</li>
+          ))}
+        </ol>
+      </details>
+    </>
+  )}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-note-updates]').forEach((panel) => {
+    const key = `nbj:note-update:${panel.dataset.page}`;
+    const revision = panel.dataset.revision!;
+    const badge = panel.querySelector<HTMLElement>('.update-unread');
+    try {
+      const seen = localStorage.getItem(key);
+      if (badge && seen && seen !== revision) badge.hidden = false;
+      if (!seen) localStorage.setItem(key, revision);
+    } catch {}
+    const acknowledge = () => {
+      if (badge) badge.hidden = true;
+      try { localStorage.setItem(key, revision); } catch {}
+    };
+    panel.querySelector('details')?.addEventListener('toggle', (event) => {
+      if ((event.currentTarget as HTMLDetailsElement).open) acknowledge();
+    });
+    panel.querySelector('button')?.addEventListener('click', acknowledge);
+  });
+</script>
+
+<style>
+  .note-updates { color: var(--sl-color-gray-2); font-size: .875rem; }
+  .note-updates:has(details) { margin-top: .6rem; }
+  summary { cursor: pointer; }
+  summary > span:first-child { margin-inline-start: .25rem; }
+  .update-history-label { color: var(--sl-color-text-accent); margin-inline-start: .6rem; text-decoration: underline; }
+  ol { padding-inline-start: 1.4rem; }
+  li + li { margin-top: .4rem; }
+  .update-unread { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-bottom: .5rem; color: var(--sl-color-text-accent); }
+  .update-unread[hidden] { display: none; }
+  .update-dismiss { background: none; border: 1px solid currentColor; border-radius: .3rem; color: inherit; cursor: pointer; font: inherit; padding: .15rem .5rem; }
+  @media print { .note-updates { display: none; } }
+</style>

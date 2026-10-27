@@ -16,6 +16,7 @@ This repo is a Jekyll notes website. The agent's job is to help track note progr
 - Push backend/frontend changes and newly created notes unless the user explicitly says not to.
 - When editing existing note content, leave the changes uncommitted unless the user explicitly asks you to commit.
 - Keep commits focused on the requested work. Do not include unrelated generated churn or user changes.
+- Before committing note content, review the diff for reader-facing changes. The site automatically detects substantial changes, but small conceptual corrections may need `Note-Update: significant` and a concise `Note-Summary:` trailer in the commit message. Use `Note-Update: skip` for a formatting or wording cleanup that would otherwise trigger a notice. These overrides apply to all changed notes in the commit; keep changes separate when they need different overrides. See README.md for the detection rules. This does not override the instruction to leave existing note edits uncommitted unless asked.
 
 ## Notes Style
 

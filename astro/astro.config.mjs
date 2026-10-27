@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import starlight from '@astrojs/starlight';
 import remarkMath from 'remark-math';
 import remarkDirective from 'remark-directive';
@@ -10,6 +12,8 @@ import remarkTikz from './src/lib/markdown/remark-tikz.mjs';
 import rehypeCleanHeadingMath from './src/lib/markdown/rehype-clean-heading-math.mjs';
 import redirects from './src/redirects.json' with { type: 'json' };
 import notesSidebar from './src/sidebar.json' with { type: 'json' };
+
+execFileSync('python3', [fileURLToPath(new URL('./scripts/build_note_updates.py', import.meta.url))], { stdio: 'inherit' });
 
 // Make every sidebar group collapsed by default. Starlight always auto-expands
 // the group(s) containing the current page, so this gives proper accordion

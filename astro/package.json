@@ -13,6 +13,7 @@
     "deploy:commit-note": "supabase functions deploy commit-note --no-verify-jwt",
     "frq:manifest": "node scripts/build-frq-manifest.mjs",
     "check:notes": "python3 scripts/check_notes.py",
+    "test:note-updates": "python3 -m unittest discover -s scripts -p 'test_note_updates.py'",
     "lint": "python3 scripts/check_notes.py",
     "fix:notes": "python3 scripts/check_notes.py --fix"
   },

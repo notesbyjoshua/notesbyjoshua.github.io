@@ -47,6 +47,43 @@ publish — GitHub Actions builds and deploys automatically.
 4. Commit and push to `main` — the site rebuilds and the notes-completion report
    regenerates automatically.
 
+## Note update notices
+
+Each build checks commits after the baseline in `astro/scripts/note-updates.json`.
+Significant changes appear below the note title with a date, summary, and expandable
+history. Returning readers get a dismissible “Updated since your last visit” badge;
+viewing the history also clears it. This state is saved in that browser, without sign-in.
+The history keeps the ten latest significant updates for each page.
+
+The check compares note content, rather than relying on the commit subject. It ignores
+metadata-only edits, whitespace, formatting, and small prose changes. Changes to equations,
+diagrams, example/practice/solution counts, new or removed sections with at least 15
+changed word tokens, or substantial text trigger a notice. A text
+change is substantial when at least 100 word tokens change in total, or the net word
+count changes by at least 40. Each commit is checked separately; merged branches are
+compared against the merge's first parent so their changes appear once.
+
+This is a heuristic: it cannot reliably distinguish every wording change from a small
+conceptual correction. For exceptions, add trailers to the commit message:
+
+```text
+Correct the direction of the force
+
+Note-Update: significant
+Note-Summary: Corrected the direction of the force in the explanation.
+```
+
+Use `Note-Update: skip` to suppress a notice for a formatting-only cleanup that the
+check would otherwise flag. Overrides apply to every changed note in that commit.
+`Note-Summary:` can also supply a clearer summary for an automatically detected update.
+These trailers work with commits made through Git or the website editor.
+
+The generated manifest at `astro/src/data/note-updates.json` is ignored by Git and
+regenerated when Astro loads its config. A full Git checkout and Python 3 are required;
+CI fetches the complete history. Run `npm run test:note-updates` from `astro/` to test
+the classifier and history processing. Notifications start at the feature's baseline,
+so older edits do not appear as a backlog.
+
 ## Auth, roles, and data
 
 - Database schema + RLS policies: `astro/supabase/schema.sql` (run in the Supabase SQL editor).

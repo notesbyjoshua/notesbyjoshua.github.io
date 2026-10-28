@@ -54,7 +54,6 @@ const editHref = isNote && filePath ? `/admin/edit?path=${encodeURIComponent(`as
         <span class="bookmark-label">Bookmark</span>
       </button>
       <button class="highlight-btn" type="button" aria-pressed="false" hidden>
-        <span class="highlight-pen" aria-hidden="true">🖊</span>
         <span class="highlight-label">Highlight</span>
       </button>
       {showSheet && <ReferenceSheetDrawer label={sheet!.label} url={sheet!.url} />}

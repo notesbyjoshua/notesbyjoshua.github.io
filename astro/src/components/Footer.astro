@@ -13,7 +13,7 @@ const isNote = path.startsWith('/notes/');
 // sidebar siblings), computed at build time. filePath is project-root relative
 // (src/content/docs/notes/ap/chem/kinetics.md).
 const toUrl = (fp: string) =>
-  '/' + fp.replace(/^src\/content\/docs\//, '').replace(/\.md$/, '').replace(/\/index$/, '') + '/';
+  '/' + fp.replace(/^src\/content\/docs\//, '').replace(/\.mdx?$/, '').replace(/\/index$/, '') + '/';
 
 let related: { title: string; url: string }[] = [];
 const curFp = (Astro.locals as any).starlightRoute?.entry?.filePath as string | undefined;
@@ -26,7 +26,7 @@ if (isNote && curFp) {
       if (!fp || fp === curFp || !fp.startsWith(dir + '/')) return false;
       // Same directory only (no deeper nesting), and skip section landing pages.
       if (fp.slice(dir.length + 1).includes('/')) return false;
-      if (fp.endsWith('/index.md')) return false;
+      if (/\/index\.mdx?$/.test(fp)) return false;
       return !(d.data.title || '').endsWith(' Home');
     })
     .map((d) => ({ title: d.data.title || (d as any).filePath, url: toUrl((d as any).filePath) }))

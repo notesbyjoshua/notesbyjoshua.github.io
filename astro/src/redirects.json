@@ -34,5 +34,13 @@
   "/notes/ap/stats/catchi/": "/notes/ap/stats/infprop/",
   "/notes/ap/stats/quantslopes/": "/notes/ap/stats/reganalysis/",
   "/notes/math/multivariable-calculus/multiple-integrals-curvilinear/": "/notes/math/multivariable-calculus/multiple-integrals-cartesian/",
-  "/notes/math/multivariable-calculus/line-and-surface-integrals/": "/notes/math/multivariable-calculus/vector-analysis/"
+  "/notes/math/multivariable-calculus/line-and-surface-integrals/": "/notes/math/multivariable-calculus/vector-analysis/",
+  "/notes/ap/apush.mdx/": "/notes/ap/apush/",
+  "/notes/sat.mdx/": "/notes/sat/",
+  "/notes/sat/math.mdx/": "/notes/sat/math/",
+  "/notes/ap/precalculus.mdx/": "/notes/ap/precalculus/",
+  "/notes/chemistry.mdx/": "/notes/chemistry/",
+  "/notes/physics/modern-stellar/index.mdx/": "/notes/physics/modern-stellar/",
+  "/notes/ap/ap-physics-c-mechanics.mdx/": "/notes/ap/ap-physics-c-mechanics/",
+  "/notes/physics/eandm/index.mdx/": "/notes/physics/eandm/"
 }

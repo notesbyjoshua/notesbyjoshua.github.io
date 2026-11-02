@@ -1031,43 +1031,7 @@ AP questions may switch among $$f'(x)$$, $$y'$$, $$dy/dx$$, and verbal phrases l
 ## Practice
 
 ::::problem
-1. Interpret the limit as a derivative and then evaluate it exactly:
-
-   $$
-   \lim_{h\to0}\frac{(2+h)^{7/3}-2^{7/3}}{h}.
-   $$
-
-   State the function being differentiated and the input at which its derivative is evaluated.
-
-:::solution
-The limit has the form
-
-$$
-\lim_{h\to0}\frac{f(2+h)-f(2)}{h}
-$$
-
-for
-
-$$
-f(x)=x^{7/3}.
-$$
-
-Therefore, the limit equals $$f'(2)$$. By the power rule,
-
-$$
-f'(x)=\frac73x^{4/3}.
-$$
-
-Evaluating at $$x=2$$ gives
-
-$$
-\boxed{f'(2)=\frac73\,2^{4/3}=\frac{14\sqrt[3]{2}}{3}.}
-$$
-:::
-::::
-
-::::problem
-2. Let
+1. Let
 
    $$
    f(x)=
@@ -1125,7 +1089,7 @@ $$
 ::::
 
 ::::problem
-3. Define
+2. Define
 
    $$
    f(x)=\lvert x^2-4x+3\rvert.
@@ -1208,7 +1172,7 @@ $$
 ::::
 
 ::::problem
-4. Differentiable functions $$f$$ and $$g$$ satisfy
+3. Differentiable functions $$f$$ and $$g$$ satisfy
 
    $$
    \begin{array}{c|cccc}
@@ -1289,7 +1253,7 @@ $$
 ::::
 
 ::::problem
-5. Differentiate and simplify enough to identify every input where the derivative does not exist:
+4. Differentiate and simplify enough to identify every input where the derivative does not exist:
 
    $$
    y=\frac{(x^2+1)(e^x+\sin x)}{x^3}.
@@ -1334,7 +1298,7 @@ $$
 ::::
 
 ::::problem
-6. Let
+5. Let
 
    $$
    f(x)=\frac{x^2+1}{x-1}.
@@ -1404,7 +1368,7 @@ $$
 ::::
 
 ::::problem
-7. For $$a>0$$ with $$a\ne1$$, define
+6. For $$a>0$$ with $$a\ne1$$, define
 
    $$
    F_a(x)=\frac{\log_a x}{x},
@@ -1511,7 +1475,7 @@ $$
 ::::
 
 ::::problem
-8. Define
+7. Define
 
    $$
    p(x)=(x-1)\lvert x\rvert^{2/3}.
@@ -1604,7 +1568,7 @@ The graph is continuous at $$x=0$$, but its one-sided slopes become unbounded wi
 ::::
 
 ::::problem
-9. For $$a>0$$, let $$f(x)=a^x$$. The tangent line to the graph of $$f$$ at $$x=0$$ passes through the point $$(2,5)$$.
+8. For $$a>0$$, let $$f(x)=a^x$$. The tangent line to the graph of $$f$$ at $$x=0$$ passes through the point $$(2,5)$$.
 
    $$(A)$$ Find $$a$$ exactly.
 
@@ -1670,7 +1634,7 @@ $$
 ::::
 
 ::::problem
-10. Starting only from
+9. Starting only from
 
     $$
     \frac{d}{dx}(\sinh x)=\cosh x,
@@ -1716,7 +1680,7 @@ $$
 ::::
 
 ::::problem
-11. A particle moves along a line with position
+10. A particle moves along a line with position
 
     $$
     s(t)=t\ln t,
@@ -1785,7 +1749,7 @@ $$
 ::::
 
 ::::problem
-12. Suppose $$f$$ is differentiable at $$x=0$$, $$f(0)=0$$, and $$f'(0)=L$$. Define
+11. Suppose $$f$$ is differentiable at $$x=0$$, $$f(0)=0$$, and $$f'(0)=L$$. Define
 
     $$
     g(x)=
@@ -1892,5 +1856,69 @@ g'(0)\text{ exists exactly when }L=0,
 \qquad
 g'(0)=0\text{ in that case}.}
 $$
+:::
+::::
+
+::::frq{id="calc-diffdeffund-bonus-parabola-tangents"}
+12. (Bonus, A geometric property of a parabola)
+
+    Let $$A=(a,a^2)$$ and $$B=(b,b^2)$$ be distinct points on the parabola $$y=x^2$$. Their tangent lines intersect at $$T$$, and $$M$$ is the midpoint of the chord joining $$A$$ and $$B$$. Prove that the midpoint of the segment $$TM$$ lies on the parabola.
+
+:::solution
+The derivative of $$y=x^2$$ is $$2x$$. The tangent lines at $$A$$ and $$B$$ therefore have equations
+
+$$
+y-a^2=2a(x-a),
+\qquad
+y-b^2=2b(x-b),
+$$
+
+or
+
+$$
+y=2ax-a^2,
+\qquad
+y=2bx-b^2.
+$$
+
+At their intersection $$T$$, the two expressions for $$y$$ are equal:
+
+$$
+2(a-b)x=a^2-b^2=(a-b)(a+b).
+$$
+
+Because $$A$$ and $$B$$ are distinct, $$a\ne b$$. Dividing by $$2(a-b)$$ gives $$x=(a+b)/2$$. Substitution into either tangent line then gives
+
+$$
+T=\left(\frac{a+b}{2},ab\right).
+$$
+
+The midpoint of the chord $$AB$$ is
+
+$$
+M=\left(\frac{a+b}{2},\frac{a^2+b^2}{2}\right).
+$$
+
+The points $$T$$ and $$M$$ have the same $$x$$-coordinate. Their midpoint has coordinates
+
+$$
+\left(
+\frac{a+b}{2},
+\frac12\left[ab+\frac{a^2+b^2}{2}\right]
+\right)
+=
+\left(
+\frac{a+b}{2},
+\frac{(a+b)^2}{4}
+\right).
+$$
+
+Its second coordinate is the square of its first coordinate, so
+
+$$
+\boxed{\text{the midpoint of }TM\text{ lies on }y=x^2.}
+$$
+
+The derivative finds the tangent lines; the midpoint calculation then reveals a geometric property that holds for every pair of distinct points on the parabola.
 :::
 ::::

@@ -1417,6 +1417,21 @@ When a question asks you to justify existence, say why both sides approach the s
 
 ---
 
+:::equations
+
+| Idea | Equation and conditions |
+| --- | --- |
+| Two-sided limit | $$\lim_{x\to a}f(x)=L$$ when both one-sided limits equal $$L$$ |
+| Sum and product limits | $$\lim(f+g)=L+M,\quad\lim(fg)=LM$$ when $$\lim f=L$$ and $$\lim g=M$$ |
+| Quotient limit | $$\lim(f/g)=L/M,\quad M\ne0$$ |
+| Squeeze Theorem | $$u\le f\le v,\quad\lim_{x\to a}u=\lim_{x\to a}v=L\ \Longrightarrow\ \lim_{x\to a}f=L$$ |
+| Standard sine limit | $$\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$$, with angles in radians |
+| Standard cosine limit | $$\displaystyle\lim_{x\to0}\frac{1-\cos x}{x^2}=\frac12$$ |
+| Continuity at an input | $$\displaystyle\lim_{x\to a}f(x)=f(a)$$ |
+| Intermediate Value Theorem | If $$f$$ is continuous on $$[a,b]$$ and $$k$$ lies between $$f(a)$$ and $$f(b)$$, then $$f(c)=k$$ for some $$c\in[a,b]$$ |
+
+:::
+
 ## Practice
 
 ::::problem
@@ -1480,66 +1495,7 @@ $$
 ::::
 
 ::::problem
-2. Evaluate
-
-   $$
-   \lim_{x\to1}
-   \left(\frac{x^4-1}{x^3-1}\right)
-   \left(\frac{\sqrt{x+3}-2}{x-1}\right).
-   $$
-
-   Show enough algebra to explain why multiplying the two indeterminate factors does not prevent the limit from existing.
-
-:::solution
-Factor the polynomial expressions in the first quotient:
-
-$$
-\lim_{x\to1}\frac{x^4-1}{x^3-1}
-=
-\lim_{x\to1}
-\frac{(x-1)(x+1)(x^2+1)}{(x-1)(x^2+x+1)}.
-$$
-
-After canceling $$x-1$$,
-
-$$
-\lim_{x\to1}\frac{(x+1)(x^2+1)}{x^2+x+1}
-=
-\frac{(2)(2)}{3}
-=
-\frac43.
-$$
-
-For the radical quotient, multiply by the conjugate:
-
-$$
-\lim_{x\to1}\frac{\sqrt{x+3}-2}{x-1}
-=
-\lim_{x\to1}
-\frac{x+3-4}{(x-1)(\sqrt{x+3}+2)}.
-$$
-
-Canceling $$x-1$$ gives
-
-$$
-\lim_{x\to1}\frac1{\sqrt{x+3}+2}
-=
-\frac14.
-$$
-
-Each factor has a finite limit after simplification, so the product law applies:
-
-$$
-\boxed{\lim_{x\to1}
-\left(\frac{x^4-1}{x^3-1}\right)
-\left(\frac{\sqrt{x+3}-2}{x-1}\right)
-=\frac43\cdot\frac14=\frac13.}
-$$
-:::
-::::
-
-::::problem
-3. Evaluate the limit without using L'Hopital's Rule or a power-series expansion:
+2. Evaluate the limit without using L'Hopital's Rule or a power-series expansion:
 
    $$
    \lim_{x\to0}
@@ -1589,7 +1545,7 @@ $$
 ::::
 
 ::::problem
-4. Let $$\lfloor y\rfloor$$ denote the greatest integer less than or equal to $$y$$. Determine
+3. Let $$\lfloor y\rfloor$$ denote the greatest integer less than or equal to $$y$$. Determine
 
    $$
    \lim_{x\to0}x^2\left\lfloor\frac1x\right\rfloor.
@@ -1631,7 +1587,7 @@ $$
 ::::
 
 ::::problem
-5. Evaluate
+4. Evaluate
 
    $$
    \lim_{x\to-\infty}\left(\sqrt{9x^2-4x}+3x\right).
@@ -1678,7 +1634,7 @@ $$
 ::::
 
 ::::problem
-6. Consider
+5. Consider
 
    $$
    R(x)=\frac{ax^2+bx-6}{x^2+x-2}.
@@ -1728,7 +1684,7 @@ $$
 ::::
 
 ::::problem
-7. For positive constants $$a$$ and $$b$$, define
+6. For positive constants $$a$$ and $$b$$, define
 
    $$
    f(x)=
@@ -1795,7 +1751,7 @@ $$
 ::::
 
 ::::problem
-8. Use the formal epsilon-delta definition of a limit to prove
+7. Use the formal epsilon-delta definition of a limit to prove
 
    $$
    \lim_{x\to3}x^2=9.
@@ -1853,7 +1809,7 @@ $$
 ::::
 
 ::::problem
-9. Consider the functions
+8. Consider the functions
 
    $$
    r(x)=\frac1{x-1}
@@ -1927,7 +1883,7 @@ $$
 ::::
 
 ::::problem
-10. Decide whether each statement must be true. Prove every statement that is true and give a counterexample for every statement that is false.
+9. Decide whether each statement must be true. Prove every statement that is true and give a counterexample for every statement that is false.
 
     $$(A)$$ If $$\displaystyle\lim_{x\to a}[f(x)]^2=4$$, then $$\displaystyle\lim_{x\to a}f(x)$$ exists.
 
@@ -1992,7 +1948,7 @@ $$
 ::::
 
 ::::problem
-11. Let
+10. Let
 
     $$
     h(x)=\sqrt{\frac{x+1}{x-2}}+\frac{x^2-9}{x-3}.
@@ -2078,7 +2034,7 @@ $$
 ::::
 
 ::::problem
-12. Evaluate the limit without using L'Hopital's Rule:
+11. Evaluate the limit without using L'Hopital's Rule:
 
     $$
     \lim_{x\to\infty}x\left(\frac{\pi}{2}-\arctan x\right).
@@ -2124,5 +2080,53 @@ Therefore,
 $$
 \boxed{\lim_{x\to\infty}x\left(\frac{\pi}{2}-\arctan x\right)=1.}
 $$
+:::
+::::
+
+::::frq{id="calc-limits-bonus-horizontal-chords"}
+12. (Bonus, Horizontal chords)
+
+    A horizontal chord joins two points on a graph at the same height. Let $$f$$ be continuous on $$[0,1]$$, with $$f(0)=f(1)$$. Prove that for every integer $$n\ge2$$, the graph has a horizontal chord of horizontal length exactly $$1/n$$; that is, there is an $$x\in[0,1-1/n]$$ such that
+
+    $$
+    f\left(x+\frac1n\right)=f(x).
+    $$
+
+:::solution
+Fix an integer $$n\ge2$$ and define the difference between the two endpoint heights:
+
+$$
+g(x)=f\left(x+\frac1n\right)-f(x),
+\qquad 0\le x\le1-\frac1n.
+$$
+
+This function is continuous because both terms are continuous. A horizontal chord of the required length exists exactly when $$g(x)=0$$.
+
+Evaluate $$g$$ at the evenly spaced inputs $$0,1/n,\ldots,(n-1)/n$$. Their sum telescopes:
+
+$$
+\begin{aligned}
+\sum_{k=0}^{n-1}g\left(\frac kn\right)
+&=\sum_{k=0}^{n-1}
+\left[f\left(\frac{k+1}{n}\right)-f\left(\frac kn\right)\right]\\
+&=f(1)-f(0)=0.
+\end{aligned}
+$$
+
+If any summand is zero, its input already gives the required chord. Otherwise, the summands cannot all be positive or all be negative, because their sum is zero. Thus there are two inputs $$u$$ and $$v$$ in the domain of $$g$$ such that
+
+$$
+g(u)<0<g(v).
+$$
+
+By the Intermediate Value Theorem on the interval between those inputs, there is a point $$x$$ with $$g(x)=0$$. Therefore,
+
+$$
+\boxed{\text{For every integer }n\ge2,\quad
+\exists x\in[0,1-1/n]\text{ with }
+f(x+1/n)=f(x).}
+$$
+
+The finite sum forces two height differences to have opposite signs, while continuity fills the gap between them. Both ingredients are needed: the sampled differences alone need not include zero.
 :::
 ::::

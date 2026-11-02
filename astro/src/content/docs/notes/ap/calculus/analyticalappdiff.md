@@ -24,8 +24,8 @@ The Mean Value Theorem says that under the right smoothness conditions, some ins
 The hypotheses are essential:
 
 :::conditions
-- continuous on $$[a,b]$$,
-- differentiable on $$(a,b)$$.
+- Continuous on $$[a,b]$$
+- Differentiable on $$(a,b)$$
 :::
 
 If either hypothesis fails, the theorem may not apply, even if the conclusion happens to be true.
@@ -136,6 +136,8 @@ $$
 
 The value $$c=2$$ lies in $$(1,3)$$, so it is the value guaranteed by the theorem.
 
+// make this question harder
+
 </div>
 
 ---
@@ -158,7 +160,7 @@ for every $$x$$ in $$[a,b]$$.
 
 The proof for EVT is based in non-calculus fields like real analysis so it will not be shown here.
 
-The two conditions matter. The interval must be closed, so endpoints are included, and the function must be continuous, so it cannot jump over or miss its highest or lowest value. EVT tells you the extrema exist; it does not tell you where they are. Critical points and endpoints are how you find the candidates.
+The two conditions matter. The interval must be closed, so endpoints are included, and the function must be continuous, so it cannot jump over or miss its highest or lowest value. While EVT tells you the extrema exist, it does not tell you where they are. In order to find those points, we can use critical points and endpoints.
 
 <div class="theorem-box">
 
@@ -173,11 +175,29 @@ provided $$c$$ is in the domain of $$f$$.
 
 <div class="theorem-box">
 
-If $$f$$ has a local extremum at an interior point $$c$$ and $$f'(c)$$ exists, then
+**Theorem.** If $$f$$ has a local extremum at an interior point $$c$$ and $$f'(c)$$ exists, then
 
 $$
 f'(c)=0.
 $$
+
+</div>
+
+<div class="theorem-box">
+
+**Proof (Fermat's theorem).** Suppose $$f$$ has a local maximum at an interior point $$c$$ and is differentiable there. For sufficiently small positive $$h$$,
+
+$$
+\frac{f(c+h)-f(c)}h\le0,
+$$
+
+because the numerator is nonpositive. For sufficiently small negative $$h$$, the numerator is still nonpositive, but dividing by a negative denominator gives
+
+$$
+\frac{f(c+h)-f(c)}h\ge0.
+$$
+
+If the two-sided derivative exists, its value must be both nonpositive and nonnegative. Therefore $$f'(c)=0$$. At a local minimum, the inequalities reverse and give the same result.
 
 </div>
 
@@ -202,26 +222,6 @@ When justifying an absolute maximum or minimum, compare function values, not der
 :::warning
 A point where $$f'(c)=0$$ is not automatically a maximum or minimum. For example, $$f(x)=x^3$$ has $$f'(0)=0$$, but $$x=0$$ is not an extremum.
 :::
-
-### Why interior extrema give critical numbers
-
-<div class="theorem-box">
-
-**Proof (Fermat's theorem).** Suppose $$f$$ has a local maximum at an interior point $$c$$ and is differentiable there. For sufficiently small positive $$h$$,
-
-$$
-\frac{f(c+h)-f(c)}h\le0,
-$$
-
-because the numerator is nonpositive. For sufficiently small negative $$h$$, the numerator is still nonpositive, but dividing by a negative denominator gives
-
-$$
-\frac{f(c+h)-f(c)}h\ge0.
-$$
-
-If the two-sided derivative exists, its value must be both nonpositive and nonnegative. Therefore $$f'(c)=0$$. At a local minimum, the inequalities reverse and give the same result.
-
-</div>
 
 The interior condition allows changes to the left and right. At an endpoint, only one of those directions is available, so there is no reason for the derivative to be zero. For example, $$f(x)=x$$ reaches its maximum on $$[0,1]$$ at $$1$$ even though its slope is always one.
 
@@ -257,7 +257,7 @@ The first bound uses only the MVT. The equality argument uses the extra continui
 
 ---
 
-## Graphical meaning of derivatives
+## Using the derivative in graphs
 
 When looking at a function, its first derivative can tell you a lot about the direction:
 

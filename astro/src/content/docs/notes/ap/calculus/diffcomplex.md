@@ -1040,31 +1040,8 @@ Before moving on, make sure you can explain which rule is being used at each ste
 
 ## Practice
 
-::::frq{id="calc-diffcomplex-1"}
-1. Differentiate and simplify:
-
-   $$
-   F(x)=\ln\left(1+\sin^2(3x)\right).
-   $$
-
-:::solution
-Differentiate the logarithm first, then the square, then the sine:
-
-$$
-F'(x)=\frac{1}{1+\sin^2(3x)}\cdot2\sin(3x)\cos(3x)\cdot3.
-$$
-
-Using $$2\sin(3x)\cos(3x)=\sin(6x)$$ gives
-
-$$
-\boxed{F'(x)=\frac{3\sin(6x)}{1+\sin^2(3x)}.}
-$$
-
-:::
-::::
-
 ::::frq{id="calc-diffcomplex-2"}
-2. A differentiable function $$f\colon\mathbb R\to\mathbb R$$ has the following values:
+1. A differentiable function $$f\colon\mathbb R\to\mathbb R$$ has the following values:
 
    | $$x$$ | $$f(x)$$ | $$f'(x)$$ |
    | --- | --- | --- |
@@ -1097,7 +1074,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-3"}
-3. Find the equation of the tangent line at $$(0,1)$$ to the curve
+2. Find the equation of the tangent line at $$(0,1)$$ to the curve
 
    $$
    e^{xy}+xy^2+y^3=2.
@@ -1127,7 +1104,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-4"}
-4. The curve
+3. The curve
 
    $$
    y^2+xy-2x^2=x^3
@@ -1171,7 +1148,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-5"}
-5. Let $$g=f^{-1}$$, where
+4. Let $$g=f^{-1}$$, where
 
    $$
    f(x)=x+\ln x,
@@ -1204,7 +1181,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-6"}
-6. A twice-continuously-differentiable function $$f$$ has a local inverse $$g$$ near $$f(1)=3$$ and satisfies
+5. A twice-continuously-differentiable function $$f$$ has a local inverse $$g$$ near $$f(1)=3$$ and satisfies
 
    $$
    f'(1)=2,
@@ -1255,7 +1232,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-7"}
-7. Using the principal inverse secant, let
+6. Using the principal inverse secant, let
 
    $$
    F(x)=\operatorname{arcsec}\left(-x^2-2\right).
@@ -1286,7 +1263,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-8"}
-8. Let
+7. Let
 
    $$
    F(x)=\arcsin\left(\frac{2x}{1+x^2}\right),
@@ -1341,7 +1318,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-9"}
-9. For
+8. For
 
    $$
    y(x)=(1+x^2)^{\arctan x},
@@ -1374,7 +1351,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-10"}
-10. A differentiable positive function $$y(x)$$ satisfies
+9. A differentiable positive function $$y(x)$$ satisfies
 
     $$
     x^{y(x)}=[y(x)]^x
@@ -1412,7 +1389,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-11"}
-11. Let
+10. Let
 
     $$
     f(x)=\sin x\sin(2x).
@@ -1450,7 +1427,7 @@ $$
 ::::
 
 ::::frq{id="calc-diffcomplex-12"}
-12. A positive function $$f$$ is three times differentiable near $$0$$ and satisfies
+11. A positive function $$f$$ is three times differentiable near $$0$$ and satisfies
 
     $$
     f(x)+\ln(f(x))=1+x+x^2,
@@ -1516,5 +1493,65 @@ $$
 \boxed{f'''(0)=\frac{23}{32}.}
 $$
 
+:::
+::::
+
+::::frq{id="calc-diffcomplex-bonus-moving-mirror"}
+12. (Bonus, A moving mirror and the Doppler effect)
+
+    A stationary source at the origin emits light toward a mirror whose position is $$X(t)>0$$. The mirror moves along the same line, with $$\lvert X'(t)\rvert<c$$, where $$c$$ is the constant speed of light on both the outgoing and returning paths. Reflection is instantaneous.
+
+    A pulse emitted at time $$t_e$$ reflects at time $$s$$ and returns to the source at time $$t_r$$. Let $$v=X'(s)$$, positive when the mirror is moving away from the source. A steady emitted frequency $$f_0$$ is received with instantaneous frequency
+
+    $$
+    f_{\mathrm{rec}}=f_0\frac{dt_e}{dt_r}.
+    $$
+
+    Express $$f_{\mathrm{rec}}/f_0$$ entirely in terms of $$v$$ and $$c$$.
+
+:::solution
+The mirror must be evaluated at the time the pulse reaches it, not the time the pulse was emitted. On the outgoing path, the pulse travels distance $$c(s-t_e)$$, so
+
+$$
+c(s-t_e)=X(s).
+$$
+
+Regard the reflection time $$s$$ as a function of the emission time $$t_e$$. Differentiate the equation with respect to $$t_e$$:
+
+$$
+c\left(\frac{ds}{dt_e}-1\right)
+=X'(s)\frac{ds}{dt_e}.
+$$
+
+Using $$v=X'(s)$$ gives
+
+$$
+(c-v)\frac{ds}{dt_e}=c,
+\qquad
+\frac{ds}{dt_e}=\frac{c}{c-v}.
+$$
+
+After reflection, the pulse is already at position $$X(s)$$. Its return travel time is $$X(s)/c$$, so
+
+$$
+t_r=s+\frac{X(s)}c.
+$$
+
+Differentiate this second relation:
+
+$$
+\frac{dt_r}{dt_e}
+=\left(1+\frac vc\right)\frac{ds}{dt_e}
+=\left(1+\frac vc\right)\frac{c}{c-v}
+=\frac{c+v}{c-v}.
+$$
+
+Because $$\lvert v\rvert<c$$, this derivative is positive, so we can take its reciprocal to obtain $$dt_e/dt_r$$. Therefore,
+
+$$
+\boxed{\frac{f_{\mathrm{rec}}}{f_0}=\frac{c-v}{c+v}.}
+$$
+
+A receding mirror has $$v>0$$ and lowers the received frequency; an approaching mirror has $$v<0$$ and raises it. If $$v=0$$, the ratio is $$1$$, as expected. No constant-velocity assumption was needed: the relevant velocity is the mirror's velocity at reflection.
 :::
 ::::

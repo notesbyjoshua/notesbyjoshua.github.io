@@ -1539,43 +1539,8 @@ with both velocity components measured in meters per second.
 :::
 ::::
 
-::::frq{id="calc-contextappdiff-4"}
-4. A lamp moves vertically above a fixed point on level ground. Its height is $$H(t)$$ meters. A person of height $$2$$ meters walks directly away from that point, with horizontal distance $$x(t)=8+\frac32t$$ for times near $$t=0$$, measured in seconds. If $$H(t)=6+kt$$, determine the value of $$k$$ that makes the shadow's tip instantaneously stationary at $$t=0$$.
-
-:::solution
-Let $$z(t)$$ be the ground distance from the point below the lamp to the shadow's tip. The shadow's length is then $$z-x$$. Similar triangles give
-
-$$
-\frac Hz=\frac2{z-x},
-\qquad (H-2)z=Hx.
-$$
-
-At $$t=0$$, $$H=6$$ and $$x=8$$, so $$4z=48$$ and $$z=12$$. Differentiate the relation before substituting the rates:
-
-$$
-H'z+(H-2)z'=H'x+Hx'.
-$$
-
-A stationary tip requires $$z'(0)=0$$. Using $$H'=k$$ and $$x'=3/2$$ gives
-
-$$
-12k+4(0)=8k+6\left(\frac32\right),
-\qquad 4k=9.
-$$
-
-Therefore,
-
-$$
-\boxed{k=\frac94\text{ m/s}.}
-$$
-
-The lamp must move upward to offset the person's outward motion.
-
-:::
-::::
-
 ::::frq{id="calc-contextappdiff-5"}
-5. Water is pumped from an inverted conical tank into an upright cylindrical tank, with no loss. The cone has height $$6$$ meters and top radius $$3$$ meters; the cylinder has radius $$1$$ meter. Write $$h(t)$$ for the cone's water depth, $$z(t)$$ for the cylinder's water depth, and $$Q(t)>0$$ for the transfer rate in cubic meters per minute. Assume $$Q$$ is differentiable.
+4. Water is pumped from an inverted conical tank into an upright cylindrical tank, with no loss. The cone has height $$6$$ meters and top radius $$3$$ meters; the cylinder has radius $$1$$ meter. Write $$h(t)$$ for the cone's water depth, $$z(t)$$ for the cylinder's water depth, and $$Q(t)>0$$ for the transfer rate in cubic meters per minute. Assume $$Q$$ is differentiable.
 
    At a particular instant,
 
@@ -1636,7 +1601,7 @@ $$
 ::::
 
 ::::frq{id="calc-contextappdiff-6"}
-6. A point moves on the circle
+5. A point moves on the circle
 
    $$
    x(t)^2+y(t)^2=25
@@ -1682,7 +1647,7 @@ $$
 ::::
 
 ::::frq{id="calc-contextappdiff-7"}
-7. Let $$y=f(x)$$ be the differentiable branch through $$(1,1)$$ of the curve
+6. Let $$y=f(x)$$ be the differentiable branch through $$(1,1)$$ of the curve
 
    $$
    e^{xy}+x^2y=e+1,
@@ -1720,7 +1685,7 @@ $$
 ::::
 
 ::::frq{id="calc-contextappdiff-8"}
-8. Construct a pair of functions $$f$$ and $$g$$ that are continuously differentiable near $$0$$, satisfy
+7. Construct a pair of functions $$f$$ and $$g$$ that are continuously differentiable near $$0$$, satisfy
 
    $$
    f(0)=g(0)=1,
@@ -1781,7 +1746,7 @@ The numerator $$1+2x$$ tends to the positive number $$1$$, so the divergence is 
 ::::
 
 ::::frq{id="calc-contextappdiff-9"}
-9. The true density of a solid cylinder is
+8. The true density of a solid cylinder is
 
    $$
    \rho=\frac{m}{\pi r^2h}.
@@ -1840,7 +1805,7 @@ At $$\varepsilon=0.01$$, the exact signed percentage error is about $$-0.0292\%$
 ::::
 
 ::::frq{id="calc-contextappdiff-10"}
-10. Evaluate the limit exactly:
+9. Evaluate the limit exactly:
 
     $$
     \lim_{x\to0}\frac{\ln(1+3x)-3\sin x}{x^2}.
@@ -1892,7 +1857,7 @@ $$
 ::::
 
 ::::frq{id="calc-contextappdiff-11"}
-11. For $$-1<x<1$$ with $$x\ne0$$, define
+10. For $$-1<x<1$$ with $$x\ne0$$, define
 
     $$
     U(x)=\left(\frac{1+x}{1-x}\right)^{1/(2x)},
@@ -1961,7 +1926,7 @@ $$
 ::::
 
 ::::frq{id="calc-contextappdiff-12"}
-12. Evaluate the limit exactly:
+11. Evaluate the limit exactly:
 
     $$
     \lim_{x\to\infty}\left[2\left(\sqrt{x^2+x}-x\right)e^{1/(4x)}\right]^{x^2}.
@@ -2026,5 +1991,86 @@ $$
 \boxed{e^{3/32}.}
 $$
 
+:::
+::::
+
+::::frq{id="calc-contextappdiff-bonus-newton-iteration"}
+12. (Bonus, Newton's method)
+
+    Fix $$a>0$$ and choose any $$x_0>0$$. For each integer $$n\ge0$$, let $$x_{n+1}$$ be the $$x$$-intercept of the tangent line to
+
+    $$
+    y=x^2-a
+    $$
+
+    at the point $$(x_n,x_n^2-a)$$. Find a closed formula for $$x_n$$ in terms of $$a$$, $$x_0$$, and $$n$$, rather than only a recurrence.
+
+:::solution
+First use calculus to find the iteration. The tangent line at $$x_n$$ has slope $$2x_n$$, so its equation is
+
+$$
+y-(x_n^2-a)=2x_n(x-x_n).
+$$
+
+Its $$x$$-intercept satisfies
+
+$$
+0=x_n^2-a+2x_n(x_{n+1}-x_n),
+$$
+
+giving
+
+$$
+x_{n+1}=\frac{x_n^2+a}{2x_n}.
+$$
+
+Every iterate stays positive, so each subsequent tangent is well-defined. Finding a closed formula requires a different variable: let $$r=\sqrt a$$ and compare the distances to $$r$$ and $$-r$$. The recurrence gives
+
+$$
+x_{n+1}-r=\frac{(x_n-r)^2}{2x_n},
+\qquad
+x_{n+1}+r=\frac{(x_n+r)^2}{2x_n}.
+$$
+
+Divide these two identities:
+
+$$
+\frac{x_{n+1}-r}{x_{n+1}+r}
+=\left(\frac{x_n-r}{x_n+r}\right)^2.
+$$
+
+Thus, if
+
+$$
+q_n=\frac{x_n-r}{x_n+r},
+$$
+
+the nonlinear iteration becomes the simple squaring rule $$q_{n+1}=q_n^2$$. By induction,
+
+$$
+q_n=q_0^{\,2^n},
+\qquad q_0=\frac{x_0-r}{x_0+r}.
+$$
+
+Solving $$q_n=(x_n-r)/(x_n+r)$$ for $$x_n$$ gives the closed formula
+
+$$
+\boxed{
+x_n=\sqrt a\,\frac{1+q_0^{\,2^n}}{1-q_0^{\,2^n}},
+\qquad
+q_0=\frac{x_0-\sqrt a}{x_0+\sqrt a}.
+}
+$$
+
+Because $$x_0>0$$ and $$\sqrt a>0$$, we have $$\lvert q_0\rvert<1$$. The formula therefore shows that $$x_n\to\sqrt a$$. It also explains the rapid improvement: after the first iterate, each new error is the square of the previous error divided by $$2x_n$$.
+
+The iteration is a repeated composition of the map $$N(x)=(x+a/x)/2$$. Its derivative satisfies
+
+$$
+N'(x)=\frac12\left(1-\frac a{x^2}\right),
+\qquad N'(\sqrt a)=0,
+$$
+
+so the iteration map has a horizontal tangent at the desired root. The exact error identity above shows how that flatness leads to squared errors, without using a power series.
 :::
 ::::

@@ -1,6 +1,8 @@
 ---
 title: "Summations"
 description: "Math notes on summation notation, arithmetic and geometric series, telescoping sums, sigma rules, and common identities."
+status: developing
+progress: 72
 sidebar:
   order: 5
 ---
@@ -15,11 +17,9 @@ Topic plan:
 - Multiplicative functions, Dirichlet convolution, and Möbius inversion
 -->
 
----
+## Introduction
 
 These notes are adapted from Evan Chen's *Summations* handout. I placed the generating functions material on the [Recursion](/notes/math/algebra/recursion/) page, since that technique is especially useful for recurrence relations.
-
-## Introduction
 
 Olympiad-style summation problems usually fall into a few categories:
 
@@ -31,7 +31,7 @@ However, one idea that resonates through all three categories is **swapping the 
 
 <div class="theorem-box">
 
-**Theorem 1.1 (Swapping the Order of Summation).** Let $$f(a,b)$$ be a function. Then
+**Theorem 1.1 (Swapping the Order of Summation).** Let $$A,B$$ be finite sets and $$f(a,b)$$ a function on $$A\times B$$. Then
 
 $$
 \sum_{a \in A} \sum_{b \in B} f(a,b)
@@ -39,7 +39,7 @@ $$
 \sum_{b \in B} \sum_{a \in A} f(a,b).
 $$
 
-More generally, after a change of variables you can often rewrite a sum in a more useful form, such as
+For infinite sums, the same rearrangements are valid when all terms are nonnegative or the double sum is absolutely convergent. Under one of those conditions, grouping by $$k=a+b$$ gives
 
 $$
 \sum_{a \ge 0} \sum_{b \ge 0} f(a,b)
@@ -48,6 +48,49 @@ $$
 $$
 
 </div>
+
+## Summation Notation and Basic Series
+
+The notation $$\sum_{k=1}^n a_k$$ means $$a_1+\cdots+a_n$$. The index is a temporary variable, and both endpoints are included. Constants can be pulled out, and a sum of terms can be split into separate sums with the same bounds.
+
+For an arithmetic sequence with first term $$a$$ and common difference $$d$$, pairing the first and last terms gives
+
+$$
+\sum_{k=0}^{n-1}(a+kd)=\frac n2\bigl(2a+(n-1)d\bigr).
+$$
+
+For a geometric sequence, subtract a shifted copy of the sum:
+
+$$
+\sum_{k=0}^{n-1}ar^k=a\frac{1-r^n}{1-r},\qquad r\ne1.
+$$
+
+If $$r=1$$, the sum is $$na$$. For an infinite geometric series with $$\lvert r\rvert<1$$, the tail tends to zero and the sum is $$a/(1-r)$$.
+
+<div class="theorem-box">
+
+**Example.** Evaluate $$7+11+15+\cdots+99$$ and $$3+3/2+3/4+\cdots$$.
+
+The arithmetic sum has $$(99-7)/4+1=24$$ terms, so its value is $$24(7+99)/2=1272$$. The geometric sum has first term three and ratio one-half, with absolute value below one, so its value is $$3/(1-1/2)=6$$.
+
+</div>
+
+<div class="theorem-box">
+
+**Example.** Evaluate $$\sum_{k=1}^{100}1/[k(k+1)]$$.
+
+The decomposition $$1/[k(k+1)]=1/k-1/(k+1)$$ gives
+
+$$
+\left(1-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+
+\left(\frac1{100}-\frac1{101}\right)=\frac{100}{101}.
+$$
+
+Writing the first and last few terms makes the surviving boundary terms visible.
+
+</div>
+
+---
 
 ## Algebraic Manipulation
 
@@ -62,9 +105,11 @@ These are the most direct summation techniques, and they appear most often in AM
 
 ### Telescoping and Partial Fractions
 
-Often, when you have a polynomial in the denominator, it is easier to split it via partial fractions. Visit **placeholder, but precalc** for more information on partial fractions. Most of the time, if given an infinite sum, most terms should cancel or simplify in some sort.
+When the denominator factors, partial fractions can expose a difference whose middle terms cancel. First work with a finite partial sum, cancel its terms, and only then take a limit if the sum is infinite. A convergent series need not telescope, so check for a useful difference rather than assuming one exists.
 
-**Example 2.1 (Stanford 2011).** Evaluate
+<div class="theorem-box">
+
+**Example.** (Stanford 2011) Evaluate
 
 $$
 \sum_{n \ge 1} \frac{7n+32}{n(n+2)} \left(\frac34\right)^n.
@@ -96,9 +141,13 @@ $$
 = \frac{33}{2}.
 $$
 
+</div>
+
 ### Swapping the Order of Summation
 
-**Example 2.2.** A random permutation of $$\{1,2,\dots,n\}$$ has expected value $$1$$ for its number of fixed points.
+<div class="theorem-box">
+
+**Example.** A permutation of $$\{1,2,\dots,n\}$$ is chosen uniformly at random. Find the expected number of fixed points.
 
 The clean way to see this is not to count fixed points row by row over all permutations, but column by column. For each position, exactly $$(n-1)!$$ permutations fix that position, so the total number of fixed points over all $$n!$$ permutations is
 
@@ -112,13 +161,17 @@ $$
 \frac{n(n-1)!}{n!} = 1.
 $$
 
-**Example 2.3 (Linearity of Expectation).** If $$X$$ and $$Y$$ are random variables, then
+</div>
+
+<div class="theorem-box">
+
+**Proof (Linearity of expectation).** For random variables with finite expectations, prove that
 
 $$
 \mathbb E[X+Y] = \mathbb E[X] + \mathbb E[Y].
 $$
 
-**Proof.** Assume for simplicity that $$X$$ and $$Y$$ take nonnegative integer values. Then
+Assume for simplicity that $$X$$ and $$Y$$ take nonnegative integer values. Then
 
 $$
 \mathbb E[X+Y]
@@ -159,6 +212,8 @@ $$
 
 This is philosophically a double-summation argument.
 
+</div>
+
 <div class="theorem-box">
 
 **Lemma 2.4.** For every positive integer $$n$$,
@@ -169,9 +224,11 @@ $$
 
 </div>
 
-Note that $$\varphi$$ is Euler's totient function, look more in the **number theory** section (replace).
+Here $$\varphi(d)$$ counts integers in $$1,\ldots,d$$ coprime to $$d$$. See [Fermat's little theorem and orders](/notes/math/number-theory/fermat-euler-and-orders/) for its formula and uses.
 
-**Proof idea.** Look at the fractions
+<div class="theorem-box">
+
+**Proof (Totient divisor sum).** Look at the fractions
 
 $$
 \frac1n,\frac2n,\dots,\frac nn.
@@ -179,7 +236,11 @@ $$
 
 After reducing them, exactly $$\varphi(d)$$ of them have denominator $$d$$ for each divisor $$d \mid n$$. Since there are $$n$$ fractions total, the sum of those counts is $$n$$.
 
-**Example 2.5 (AMSP 2011 NT3 Exam).** Prove that
+</div>
+
+<div class="theorem-box">
+
+**Example.** (AMSP 2011 NT3 Exam) Prove that
 
 $$
 \sum_{k \ge 1} \varphi(k)\left\lfloor \frac{n}{k} \right\rfloor
@@ -212,11 +273,15 @@ $$
 \sum_{m=1}^n m = \frac{n(n+1)}{2}.
 $$
 
+</div>
+
 ### Roots of Unity Filters
 
 Suppose we want to keep only terms with index divisible by $$3$$ in a binomial sum. The basic idea is to build an indicator function using roots of unity.
 
-**Example 2.6.** Compute
+<div class="theorem-box">
+
+**Example.** Compute
 
 $$
 \sum_{k \ge 0} \binom{1000}{3k}.
@@ -259,6 +324,8 @@ $$
 = \frac13 \left[2^{1000} + \omega + \omega^2\right]
 = \frac13 \left(2^{1000}-1\right).
 $$
+
+</div>
 
 ### Problems
 
@@ -310,13 +377,17 @@ $$
 
 </div>
 
-**Proof idea.** Multiplication by $$a$$ permutes the nonzero residue classes modulo $$p$$, so
+<div class="theorem-box">
+
+**Proof (Fermat's little theorem).** Multiplication by $$a$$ permutes the nonzero residue classes modulo $$p$$, so
 
 $$
 a^{p-1}(p-1)! \equiv (p-1)! \pmod p.
 $$
 
 Cancel $$ (p-1)! $$.
+
+</div>
 
 <div class="theorem-box">
 
@@ -344,16 +415,22 @@ $$
 
 </div>
 
-**Proof sketch.** If $$g$$ is a primitive root modulo $$p$$, then
+<div class="theorem-box">
+
+**Proof (Power sums modulo a prime).** For negative exponents, use modular inverses. If $$g$$ is a primitive root modulo $$p$$, then
 
 $$
 1^m + 2^m + \cdots + (p-1)^m
-= 1 + g^m + g^{2m} + \cdots + g^{(p-2)m}.
+\equiv 1 + g^m + g^{2m} + \cdots + g^{(p-2)m} \pmod p.
 $$
 
 This is a geometric series. If $$p-1 \nmid m$$ then the denominator is nonzero modulo $$p$$ while the numerator vanishes.
 
-**Example 3.5 (Wolstenholme's Theorem).** If $$p>3$$ is prime, then
+</div>
+
+<div class="theorem-box">
+
+**Proof (Wolstenholme's theorem).** Prove that for a prime $$p>3$$,
 
 $$
 (p-1)! \left(1+\frac12+\cdots+\frac{1}{p-1}\right) \equiv 0 \pmod{p^2}.
@@ -392,6 +469,8 @@ $$
 
 which vanishes by Lemma 3.4.
 
+</div>
+
 <div class="theorem-box">
 
 **Lemma 3.6 (Harmonic Modulo $$p$$ Trick).** For $$k=1,2,\dots,p-1$$,
@@ -401,6 +480,8 @@ $$
 $$
 
 </div>
+
+The quantity $$\binom pk/p$$ is an integer for $$1\le k\le p-1$$. It equals $$\binom{p-1}{k-1}/k$$, interpreted using the inverse of $$k$$ modulo $$p$$. Since $$\binom{p-1}{k-1}\equiv(-1)^{k-1}\pmod p$$, the identity follows. There is no inverse of $$p$$ modulo $$p$$; the division by $$p$$ happens in the integers first.
 
 This converts harmonic-looking expressions into binomial expressions, which are often easier to manipulate.
 
@@ -438,12 +519,16 @@ This section puts that kind of divisor sum into a larger framework.
 
 ### Multiplicative Functions
 
-**Definition 4.1.** An arithmetic function is a function $$f:\mathbb N \to \mathbb C$$.
+**Definition 4.1.** An arithmetic function assigns a complex value to each positive integer. For multiplicative functions here, require $$f(1)=1$$.
 
 - It is **multiplicative** if $$f(mn)=f(m)f(n)$$ whenever $$\gcd(m,n)=1$$.
 - It is **completely multiplicative** if $$f(mn)=f(m)f(n)$$ for all positive integers $$m,n$$.
 
-**Example 4.2.** Completely multiplicative functions include:
+<div class="theorem-box">
+
+**Example.** Give examples of completely multiplicative arithmetic functions.
+
+The following functions work because substituting a product into each definition gives the product of the two values:
 
 - The identity function $$\operatorname{id}(n)=n$$.
 - The Dirichlet delta function
@@ -456,21 +541,31 @@ This section puts that kind of divisor sum into a larger framework.
   $$
 - The constant function $$1(n)=1$$.
 
-**Example 4.3.** Multiplicative but not completely multiplicative functions include:
+</div>
+
+<div class="theorem-box">
+
+**Example.** Give examples of arithmetic functions that are multiplicative but not completely multiplicative.
+
+Prime-factorization formulas show that these functions multiply on coprime inputs:
 
 - Euler's totient function $$\varphi$$.
 - The Möbius function
   $$
   \mu(n)=
   \begin{cases}
-  (-1)^m & \text{if } n \text{ has } m \text{ distinct prime factors}, \\
+  (-1)^m & \text{if } n \text{ is a product of } m \text{ distinct primes}, \\
   0 & \text{if } n \text{ is not squarefree}.
   \end{cases}
   $$
 - The divisor sum function $$\sigma(n)$$.
 - The divisor counting function $$\tau(n)$$.
 
+For example, $$\varphi(4)=2\ne\varphi(2)^2$$, $$\mu(4)=0\ne\mu(2)^2$$, $$\sigma(4)=7\ne\sigma(2)^2$$, and $$\tau(4)=3\ne\tau(2)^2$$. These checks explain why the stronger property fails.
+
 For multiplicative functions, it is enough to know the values on prime powers.
+
+</div>
 
 ### Dirichlet Convolution
 
@@ -486,13 +581,19 @@ $$
 (f*g)(n) = \sum_{de=n} f(d)g(e).
 $$
 
-**Example 4.4.** Verify the following:
+<div class="theorem-box">
 
-- $$1*1=\tau$$
-- $$1*\operatorname{id}=\sigma$$
-- $$\operatorname{id}*\operatorname{id}=n\tau$$
-- $$1*\varphi=\operatorname{id}$$
-- $$\delta*f=f$$ for any arithmetic function $$f$$
+**Example.** Verify the following:
+
+- Divisor count: $$1*1=\tau$$
+- Divisor sum: $$1*\operatorname{id}=\sigma$$
+- Weighted divisor count: $$\operatorname{id}*\operatorname{id}=n\tau$$
+- Totient sum: $$1*\varphi=\operatorname{id}$$
+- Identity: $$\delta*f=f$$ for any arithmetic function $$f$$
+
+For the first identity, every divisor contributes one. In the second, summing $$\operatorname{id}(n/d)$$ over divisors gives the sum of all divisors. In the third, every summand is $$d(n/d)=n$$ and there are $$\tau(n)$$ of them. The fourth is the totient divisor identity proved earlier. In the fifth, only $$d=1$$ contributes because $$\delta(d)=0$$ for every other divisor.
+
+</div>
 
 Useful properties:
 
@@ -504,7 +605,9 @@ Useful properties:
 
 **Exercise 4.5.** Prove that the convolution of multiplicative functions is multiplicative.
 
-**Example 4.6.** Reinterpret
+<div class="theorem-box">
+
+**Example.** Reinterpret
 
 $$
 \sum_{d \mid n} \varphi(d)=n
@@ -521,6 +624,8 @@ Both sides are multiplicative, so it is enough to check prime powers:
 $$
 1 + (p-1) + (p^2-p) + \cdots + (p^e-p^{e-1}) = p^e.
 $$
+
+</div>
 
 <div class="theorem-box">
 
@@ -550,13 +655,19 @@ Equivalently, if $$g=f*1$$ then $$f=g*\mu$$.
 
 </div>
 
-**Proof.** If $$g=f*1$$, then
+<div class="theorem-box">
+
+**Proof (Möbius inversion).** If $$g=f*1$$, then
 
 $$
 g*\mu = (f*1)*\mu = f*(1*\mu) = f*\delta = f.
 $$
 
-**Example 4.10 (IMO Shortlist 1989).** Define $$\{a_n\}_{n \ge 1}$$ by
+</div>
+
+<div class="theorem-box">
+
+**Example.** (IMO Shortlist 1989) Define $$\{a_n\}_{n \ge 1}$$ by
 
 $$
 \sum_{d \mid n} a_d = 2^n.
@@ -570,7 +681,15 @@ $$
 a_n = \sum_{d \mid n} \mu(n/d)\,2^d.
 $$
 
-From there, factor $$n$$ into prime powers and finish with divisibility arguments.
+To finish, let $$b_n$$ count binary strings of length $$n$$ whose smallest repeating block has length $$n$$. Every binary string of length $$n$$ is obtained by repeating a unique shortest block of length $$d\mid n$$, so
+
+$$
+2^n=\sum_{d\mid n}b_d.
+$$
+
+Möbius inversion gives the same formula for $$b_n$$ as for $$a_n$$, hence $$a_n=b_n$$. Rotate a string counted by $$b_n$$ cyclically. Its $$n$$ rotations are distinct, since an earlier return would give a shorter repeating block. These strings therefore split into groups of size $$n$$, proving $$n\mid a_n$$.
+
+</div>
 
 ### Problems
 
@@ -593,6 +712,121 @@ $$
 $$
 \mu(n)=\sum_{\substack{1 \le k \le n \\ \gcd(k,n)=1}} \cos\left(\frac{2\pi k}{n}\right).
 $$
+
+## Summation by Parts
+
+Telescoping can be extended to a product of two sequences. If $$A_k=a_1+\cdots+a_k$$ and $$A_0=0$$, then $$a_k=A_k-A_{k-1}$$. Substituting this difference and shifting indices gives **summation by parts**:
+
+$$
+\sum_{k=1}^n a_kb_k
+=A_nb_n+\sum_{k=1}^{n-1}A_k(b_k-b_{k+1}).
+$$
+
+This is useful when the partial sums of $$a_k$$ are simple even though the individual product is not. It separates oscillation, stored in $$A_k$$, from the gradual variation of $$b_k$$. Keep the boundary term; omitting it is the discrete version of forgetting an integration constant.
+
+For instance, take $$a_k=(-1)^{k-1}$$ and $$b_k=1/k$$. The partial sums $$A_k$$ are either zero or one. In the summation-by-parts expression, the differences $$1/k-1/(k+1)$$ are nonnegative and telescope, while $$A_n/n\to0$$. This proves convergence of the alternating harmonic series without claiming that the sum of the absolute values converges. The bounded oscillation is doing essential work.
+
+---
+
+## Polynomial and Weighted Geometric Sums
+
+A difference of nearby polynomial expressions lowers degree, which lets telescoping derive power sums. Let $$T_k=k(k+1)/2$$. Then $$T_k-T_{k-1}=k$$ and $$T_k+T_{k-1}=k^2$$, so
+
+$$
+T_k^2-T_{k-1}^2=k^3.
+$$
+
+Summing yields $$\sum_{k=1}^n k^3=[n(n+1)/2]^2$$. This proof explains why the sum of cubes is a square, rather than merely supplying a formula.
+
+Weighted geometric sums come from differentiating a finite geometric polynomial. Because the sum is finite, differentiating term by term requires no convergence argument.
+
+<div class="theorem-box">
+
+**Example.** Evaluate $$\sum_{k=1}^n k2^k$$.
+
+Start from $$1+t+\cdots+t^n=(1-t^{n+1})/(1-t)$$, differentiate, and multiply by $$t$$. The result is
+
+$$
+\sum_{k=1}^n kt^k
+=\frac{t-(n+1)t^{n+1}+nt^{n+2}}{(1-t)^2},
+\qquad t\ne1.
+$$
+
+At $$t=2$$ this becomes $$(n-1)2^{n+1}+2$$. Checking $$n=1$$ gives two, which confirms the boundary terms.
+
+</div>
+
+The same differentiation idea handles binomial weights. Write $$k^2=k(k-1)+k$$, so derivatives of $$(1+x)^n$$ give
+
+$$
+\sum_{k=0}^n k^2\binom nk
+=n(n-1)2^{n-2}+n2^{n-1}
+=n(n+1)2^{n-2}
+$$
+
+for $$n\ge1$$. More complicated polynomial weights can be expressed using falling factorials, which match repeated derivatives naturally.
+
+---
+
+## Floor Sums as Lattice-Point Counts
+
+The integer $$\lfloor N/d\rfloor$$ counts positive multiples of $$d$$ not exceeding $$N$$. It also counts positive integers $$b$$ with $$db\le N$$. Therefore
+
+$$
+\sum_{d=1}^N\left\lfloor\frac Nd\right\rfloor
+=\#\{(a,b)\in\mathbb Z_{>0}^2:ab\le N\}.
+$$
+
+This is a count under a hyperbola. Every point either has its first coordinate at most $$m=\lfloor\sqrt N\rfloor$$ or its second coordinate at most $$m$$; otherwise the product exceeds $$N$$. Points with both coordinates at most $$m$$ were counted twice.
+
+<div class="theorem-box">
+
+**Example.** Evaluate $$\sum_{d=1}^{100}\lfloor100/d\rfloor$$ using only ten floor evaluations.
+
+With $$m=10$$, symmetry of the lattice-point count gives
+
+$$
+\sum_{d=1}^{100}\left\lfloor\frac{100}{d}\right\rfloor
+=2\sum_{d=1}^{10}\left\lfloor\frac{100}{d}\right\rfloor-10^2.
+$$
+
+The ten values are $$100,50,33,25,20,16,14,12,11,10$$, totaling $$291$$. The answer is $$2(291)-100=482$$.
+
+</div>
+
+This method is also called the hyperbola method. Its advantage is structural: a sum with $$N$$ terms becomes one with roughly $$\sqrt N$$ terms. Another useful observation is that $$\lfloor N/d\rfloor$$ remains constant over intervals of consecutive $$d$$. If the current quotient is $$q$$, its last occurrence is $$\lfloor N/q\rfloor$$. Grouping those intervals is useful when a weight accompanies the floor.
+
+---
+
+## Choosing an Order of Summation
+
+Before exchanging two infinite sums, distinguish a formal coefficient calculation from a numerical sum. For a formal power series, it is enough that each coefficient receives finitely many contributions. For numerical sums, nonnegative terms or absolute convergence justify the rearrangement. Conditional convergence does not allow arbitrary exchanges.
+
+For a finite triangular region such as $$1\le i\le j\le n$$, sketch or describe the index set first. Summing over $$i$$ first uses $$j=i,\ldots,n$$, while summing over $$j$$ first uses $$i=1,\ldots,j$$. Writing rectangular bounds for a triangular region changes the sum.
+
+The most useful exchange is often motivated by a counting interpretation. A divisor sum suggests pairs with a fixed product; a convolution suggests pairs with a fixed sum; a floor suggests an inequality. Once the underlying pairs are clear, the new bounds follow from the same set of objects.
+
+---
+
+## Key Equations
+
+:::equations
+| Tool | Formula and conditions |
+| --- | --- |
+| Arithmetic sum | $$\sum_{k=0}^{n-1}(a+kd)=n(2a+(n-1)d)/2$$ |
+| Geometric sum | $$\sum_{k=0}^{n-1}ar^k=a(1-r^n)/(1-r)$$, $$r\ne1$$ |
+| Infinite geometric sum | $$\sum_{k\ge0}ar^k=a/(1-r)$$, $$\lvert r\rvert<1$$ |
+| Telescoping | $$\sum_{k=1}^n(b_k-b_{k+1})=b_1-b_{n+1}$$ |
+| Roots-of-unity filter | $$\frac1m\sum_{j=0}^{m-1}\omega^{jk}$$ equals one if $$m\mid k$$ and zero otherwise, for primitive $$m$$th root $$\omega$$ |
+| Totient divisor sum | $$\sum_{d\mid n}\varphi(d)=n$$ |
+| Modular power sum | $$\sum_{a=1}^{p-1}a^m\equiv-1$$ if $$p-1\mid m$$, otherwise $$0\pmod p$$; prime $$p$$, negative powers interpreted as inverses |
+| Dirichlet convolution | $$(f*g)(n)=\sum_{d\mid n}f(d)g(n/d)$$ |
+| Möbius inversion | $$g(n)=\sum_{d\mid n}f(d)\iff f(n)=\sum_{d\mid n}\mu(d)g(n/d)$$ |
+| Summation by parts | $$\sum_{k=1}^na_kb_k=A_nb_n+\sum_{k=1}^{n-1}A_k(b_k-b_{k+1})$$, $$A_k=\sum_{j=1}^ka_j$$ |
+| Cubes | $$\sum_{k=1}^nk^3=[n(n+1)/2]^2$$ |
+| Weighted geometric sum | $$\sum_{k=1}^nkr^k=[r-(n+1)r^{n+1}+nr^{n+2}]/(1-r)^2$$, $$r\ne1$$ |
+| Hyperbola method | $$\sum_{d=1}^N\lfloor N/d\rfloor=2\sum_{d=1}^m\lfloor N/d\rfloor-m^2$$, $$m=\lfloor\sqrt N\rfloor$$ |
+:::
 
 ## Author's Pick
 

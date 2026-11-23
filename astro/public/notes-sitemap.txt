@@ -145,6 +145,7 @@ https://notesbyjoshua.com/notes/physics/eandm/ac-circuits/
 https://notesbyjoshua.com/notes/physics/eandm/circuits/
 https://notesbyjoshua.com/notes/physics/eandm/conductors-capacitors/
 https://notesbyjoshua.com/notes/physics/eandm/electromagnetic-induction/
+https://notesbyjoshua.com/notes/physics/eandm/electromagnetic-waves/
 https://notesbyjoshua.com/notes/physics/eandm/electrostatics/
 https://notesbyjoshua.com/notes/physics/eandm/magnetism/
 https://notesbyjoshua.com/notes/physics/modern-stellar/
@@ -152,6 +153,8 @@ https://notesbyjoshua.com/notes/physics/modern-stellar/quantnucphys/
 https://notesbyjoshua.com/notes/physics/modern-stellar/relativity/
 https://notesbyjoshua.com/notes/physics/modern-stellar/stellarphys/
 https://notesbyjoshua.com/notes/physics/thermodynamics/
+https://notesbyjoshua.com/notes/physics/thermodynamics/boltzmann-distribution-and-heat-engines/
+https://notesbyjoshua.com/notes/physics/thermodynamics/entropy/
 https://notesbyjoshua.com/notes/physics/thermodynamics/thermodynamics/
 https://notesbyjoshua.com/notes/physics/toolkit/
 https://notesbyjoshua.com/notes/physics/toolkit/mathtricks/

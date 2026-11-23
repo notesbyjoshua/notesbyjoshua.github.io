@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 535 320" role="img"><title>Displacement current in a charging capacitor</title><rect width="535" height="320" rx="10" fill="#fff"/><g font-family="system-ui,sans-serif" font-size="16" fill="#172b40"><defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0l10 5L0 10z" fill="#ad382e"/></marker></defs>
+<path d="M25 160H348m56 0h94M348 95v130m56-130v130" fill="none" stroke="#334155" stroke-width="4"/>
+<ellipse cx="145" cy="160" rx="20" ry="88" fill="#dbeafe" fill-opacity=".7" stroke="#1e63a7" stroke-width="3"/>
+<path d="M145 72C250 72 370 42 376 101v118c-6 59-126 29-231 29" fill="none" stroke="#14816a" stroke-width="3" stroke-dasharray="7 4"/>
+<g fill="none" stroke="#ad382e" stroke-width="2.5" marker-end="url(#b)"><path d="M54 142h57"/><path d="M359 118h35"/><path d="M359 160h35"/><path d="M359 202h35"/></g>
+<text x="65" y="128" fill="#ad382e">I</text><text x="198" y="52" fill="#14816a">Bulging surface</text><text x="36" y="276" fill="#1e63a7">Flat surface and shared rim</text><text x="340" y="274">Capacitor</text><text x="351" y="87" fill="#ad382e">E</text></g></svg>

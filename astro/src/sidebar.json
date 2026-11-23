@@ -660,8 +660,16 @@
                 "link": "/notes/physics/thermodynamics/"
               },
               {
-                "label": "Thermodynamics",
+                "label": "Thermodynamics Introduction",
                 "link": "/notes/physics/thermodynamics/thermodynamics/"
+              },
+              {
+                "label": "Boltzmann Distribution and the Heat Engine",
+                "link": "/notes/physics/thermodynamics/boltzmann-distribution-and-heat-engines/"
+              },
+              {
+                "label": "Entropy",
+                "link": "/notes/physics/thermodynamics/entropy/"
               }
             ]
           },
@@ -733,6 +741,10 @@
               {
                 "label": "AC Circuits",
                 "link": "/notes/physics/eandm/ac-circuits/"
+              },
+              {
+                "label": "Maxwell’s Equations and Electromagnetic Waves",
+                "link": "/notes/physics/eandm/electromagnetic-waves/"
               }
             ]
           }

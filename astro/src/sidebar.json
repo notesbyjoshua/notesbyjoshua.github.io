@@ -608,145 +608,136 @@
         "link": "/notes/physics/"
       },
       {
-        "label": "Physics Competition Prep",
+        "label": "Problem-Solving Toolkit",
         "items": [
           {
-            "label": "Physics Competition Prep Home",
-            "link": "/notes/physics/usapho/"
+            "label": "Problem-Solving Toolkit Home",
+            "link": "/notes/physics/toolkit/"
           },
           {
-            "label": "Problem-Solving Toolkit",
-            "items": [
-              {
-                "label": "Problem-Solving Toolkit Home",
-                "link": "/notes/physics/toolkit/"
-              },
-              {
-                "label": "Math Tricks",
-                "link": "/notes/physics/toolkit/mathtricks/"
-              },
-              {
-                "label": "Uncertainty",
-                "link": "/notes/physics/toolkit/uncertainty/"
-              },
-              {
-                "label": "Problem Solving Techniques",
-                "link": "/notes/physics/toolkit/techniques/"
-              }
-            ]
+            "label": "Math Tricks",
+            "link": "/notes/physics/toolkit/mathtricks/"
           },
           {
-            "label": "Advanced Mechanics & Fluids",
-            "items": [
-              {
-                "label": "Advanced Mechanics & Fluids Home",
-                "link": "/notes/physics/advanced-mechanics-fluids/"
-              },
-              {
-                "label": "Advanced Mechanics",
-                "link": "/notes/physics/advanced-mechanics-fluids/advmech/"
-              },
-              {
-                "label": "Fluid Dynamics",
-                "link": "/notes/physics/advanced-mechanics-fluids/fluiddynamics/"
-              }
-            ]
+            "label": "Uncertainty",
+            "link": "/notes/physics/toolkit/uncertainty/"
           },
           {
-            "label": "Thermodynamics",
-            "items": [
-              {
-                "label": "Thermodynamics Home",
-                "link": "/notes/physics/thermodynamics/"
-              },
-              {
-                "label": "Thermodynamics Introduction",
-                "link": "/notes/physics/thermodynamics/thermodynamics/"
-              },
-              {
-                "label": "Boltzmann Distribution and the Heat Engine",
-                "link": "/notes/physics/thermodynamics/boltzmann-distribution-and-heat-engines/"
-              },
-              {
-                "label": "Entropy",
-                "link": "/notes/physics/thermodynamics/entropy/"
-              }
-            ]
+            "label": "Problem Solving Techniques",
+            "link": "/notes/physics/toolkit/techniques/"
+          }
+        ]
+      },
+      {
+        "label": "Advanced Mechanics & Fluids",
+        "items": [
+          {
+            "label": "Advanced Mechanics & Fluids Home",
+            "link": "/notes/physics/advanced-mechanics-fluids/"
           },
           {
-            "label": "Modern & Stellar Physics",
-            "items": [
-              {
-                "label": "Modern & Stellar Physics Home",
-                "link": "/notes/physics/modern-stellar/"
-              },
-              {
-                "label": "Modern Physics",
-                "link": "/notes/physics/modern-stellar/quantnucphys/"
-              },
-              {
-                "label": "Relativity",
-                "link": "/notes/physics/modern-stellar/relativity/"
-              },
-              {
-                "label": "Stellar Physics",
-                "link": "/notes/physics/modern-stellar/stellarphys/"
-              }
-            ]
+            "label": "Advanced Mechanics",
+            "link": "/notes/physics/advanced-mechanics-fluids/advmech/"
           },
           {
-            "label": "Waves & Optics",
-            "items": [
-              {
-                "label": "Waves & Optics Home",
-                "link": "/notes/physics/waves-optics/"
-              },
-              {
-                "label": "Waves",
-                "link": "/notes/physics/waves-optics/waves/"
-              },
-              {
-                "label": "Optics",
-                "link": "/notes/physics/waves-optics/optics/"
-              }
-            ]
+            "label": "Fluid Dynamics",
+            "link": "/notes/physics/advanced-mechanics-fluids/fluiddynamics/"
+          }
+        ]
+      },
+      {
+        "label": "Thermodynamics",
+        "items": [
+          {
+            "label": "Thermodynamics Home",
+            "link": "/notes/physics/thermodynamics/"
           },
           {
-            "label": "Electricity & Magnetism",
-            "items": [
-              {
-                "label": "Electricity & Magnetism Home",
-                "link": "/notes/physics/eandm/"
-              },
-              {
-                "label": "Electrostatics",
-                "link": "/notes/physics/eandm/electrostatics/"
-              },
-              {
-                "label": "Capacitors and Dielectrics",
-                "link": "/notes/physics/eandm/conductors-capacitors/"
-              },
-              {
-                "label": "Circuits",
-                "link": "/notes/physics/eandm/circuits/"
-              },
-              {
-                "label": "Magnetism",
-                "link": "/notes/physics/eandm/magnetism/"
-              },
-              {
-                "label": "Electromagnetic Induction",
-                "link": "/notes/physics/eandm/electromagnetic-induction/"
-              },
-              {
-                "label": "AC Circuits",
-                "link": "/notes/physics/eandm/ac-circuits/"
-              },
-              {
-                "label": "Maxwell’s Equations and Electromagnetic Waves",
-                "link": "/notes/physics/eandm/electromagnetic-waves/"
-              }
-            ]
+            "label": "Thermodynamics Introduction",
+            "link": "/notes/physics/thermodynamics/thermodynamics/"
+          },
+          {
+            "label": "Boltzmann Distribution and the Heat Engine",
+            "link": "/notes/physics/thermodynamics/boltzmann-distribution-and-heat-engines/"
+          },
+          {
+            "label": "Entropy",
+            "link": "/notes/physics/thermodynamics/entropy/"
+          }
+        ]
+      },
+      {
+        "label": "Modern & Stellar Physics",
+        "items": [
+          {
+            "label": "Modern & Stellar Physics Home",
+            "link": "/notes/physics/modern-stellar/"
+          },
+          {
+            "label": "Modern Physics",
+            "link": "/notes/physics/modern-stellar/quantnucphys/"
+          },
+          {
+            "label": "Relativity",
+            "link": "/notes/physics/modern-stellar/relativity/"
+          },
+          {
+            "label": "Stellar Physics",
+            "link": "/notes/physics/modern-stellar/stellarphys/"
+          }
+        ]
+      },
+      {
+        "label": "Waves & Optics",
+        "items": [
+          {
+            "label": "Waves & Optics Home",
+            "link": "/notes/physics/waves-optics/"
+          },
+          {
+            "label": "Waves",
+            "link": "/notes/physics/waves-optics/waves/"
+          },
+          {
+            "label": "Optics",
+            "link": "/notes/physics/waves-optics/optics/"
+          }
+        ]
+      },
+      {
+        "label": "Electricity & Magnetism",
+        "items": [
+          {
+            "label": "Electricity & Magnetism Home",
+            "link": "/notes/physics/eandm/"
+          },
+          {
+            "label": "Electrostatics",
+            "link": "/notes/physics/eandm/electrostatics/"
+          },
+          {
+            "label": "Capacitors and Dielectrics",
+            "link": "/notes/physics/eandm/conductors-capacitors/"
+          },
+          {
+            "label": "Circuits",
+            "link": "/notes/physics/eandm/circuits/"
+          },
+          {
+            "label": "Magnetism",
+            "link": "/notes/physics/eandm/magnetism/"
+          },
+          {
+            "label": "Electromagnetic Induction",
+            "link": "/notes/physics/eandm/electromagnetic-induction/"
+          },
+          {
+            "label": "AC Circuits",
+            "link": "/notes/physics/eandm/ac-circuits/"
+          },
+          {
+            "label": "Maxwell’s Equations and Electromagnetic Waves",
+            "link": "/notes/physics/eandm/electromagnetic-waves/"
           }
         ]
       }

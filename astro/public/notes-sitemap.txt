@@ -137,10 +137,9 @@ https://notesbyjoshua.com/notes/math/number-theory/prime-exponents-and-lte/
 https://notesbyjoshua.com/notes/math/number-theory/quadratic-residues-and-sums-of-squares/
 https://notesbyjoshua.com/notes/notes/
 https://notesbyjoshua.com/notes/physics/
-https://notesbyjoshua.com/notes/physics/classical-continuum/
-https://notesbyjoshua.com/notes/physics/classical-continuum/advmech/
-https://notesbyjoshua.com/notes/physics/classical-continuum/fluiddynamics/
-https://notesbyjoshua.com/notes/physics/classical-continuum/thermodynamics/
+https://notesbyjoshua.com/notes/physics/advanced-mechanics-fluids/
+https://notesbyjoshua.com/notes/physics/advanced-mechanics-fluids/advmech/
+https://notesbyjoshua.com/notes/physics/advanced-mechanics-fluids/fluiddynamics/
 https://notesbyjoshua.com/notes/physics/eandm/
 https://notesbyjoshua.com/notes/physics/eandm/ac-circuits/
 https://notesbyjoshua.com/notes/physics/eandm/circuits/
@@ -152,6 +151,8 @@ https://notesbyjoshua.com/notes/physics/modern-stellar/
 https://notesbyjoshua.com/notes/physics/modern-stellar/quantnucphys/
 https://notesbyjoshua.com/notes/physics/modern-stellar/relativity/
 https://notesbyjoshua.com/notes/physics/modern-stellar/stellarphys/
+https://notesbyjoshua.com/notes/physics/thermodynamics/
+https://notesbyjoshua.com/notes/physics/thermodynamics/thermodynamics/
 https://notesbyjoshua.com/notes/physics/toolkit/
 https://notesbyjoshua.com/notes/physics/toolkit/mathtricks/
 https://notesbyjoshua.com/notes/physics/toolkit/techniques/

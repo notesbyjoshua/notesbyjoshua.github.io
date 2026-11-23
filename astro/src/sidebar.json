@@ -636,23 +636,32 @@
             ]
           },
           {
-            "label": "Classical & Continuum Physics",
+            "label": "Advanced Mechanics & Fluids",
             "items": [
               {
-                "label": "Classical & Continuum Physics Home",
-                "link": "/notes/physics/classical-continuum/"
+                "label": "Advanced Mechanics & Fluids Home",
+                "link": "/notes/physics/advanced-mechanics-fluids/"
               },
               {
                 "label": "Advanced Mechanics",
-                "link": "/notes/physics/classical-continuum/advmech/"
+                "link": "/notes/physics/advanced-mechanics-fluids/advmech/"
               },
               {
                 "label": "Fluid Dynamics",
-                "link": "/notes/physics/classical-continuum/fluiddynamics/"
+                "link": "/notes/physics/advanced-mechanics-fluids/fluiddynamics/"
+              }
+            ]
+          },
+          {
+            "label": "Thermodynamics",
+            "items": [
+              {
+                "label": "Thermodynamics Home",
+                "link": "/notes/physics/thermodynamics/"
               },
               {
                 "label": "Thermodynamics",
-                "link": "/notes/physics/classical-continuum/thermodynamics/"
+                "link": "/notes/physics/thermodynamics/thermodynamics/"
               }
             ]
           },

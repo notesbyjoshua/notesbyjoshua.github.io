@@ -1062,7 +1062,7 @@ The key idea is that the perpendicular components are independent, just as in pr
 
 </div>
 
-You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/classical-continuum/advmech/).
+You can find more about relative motion on the [USAPhO section on mechanics](/notes/physics/advanced-mechanics-fluids/advmech/).
 
 ---
 
